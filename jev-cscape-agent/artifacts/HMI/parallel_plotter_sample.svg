@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" version="1.1">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <filter id="glow-alarm" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg-grad)" />
+  <!-- Header & Title Block -->
+  <g id="header-group">
+    <text x="50" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#F8FAFC">JEV Cscape HMI: Multi-Variable Parallel Coordinate Trajectory Plotter</text>
+    <text x="50" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#94A3B8">Dynamic Process Operating Corridor &amp; Real-Time Anomaly Vector Grounding (W093)</text>
+  </g>
+  <!-- Golden Operating Corridor Ribbon -->
+  <g id="corridor-group">
+    <polygon points="120.0,280.0 262.9,360.0 405.7,295.0 548.6,330.0 691.4,510.0 834.3,445.0 977.1,395.0 1120.0,340.0 1120.0,440.0 977.1,482.5 834.3,545.0 691.4,600.0 548.6,395.0 405.7,395.0 262.9,440.0 120.0,340.0" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,3" stroke-opacity="0.60" />
+  </g>
+  <!-- Process Dimension Vertical Axes -->
+  <g id="axes-group">
+    <line x1="120.0" y1="120.0" x2="120.0" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="114.0" y1="620.0" x2="126.0" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="110.0" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">0</text>
+    <line x1="114.0" y1="495.0" x2="126.0" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="114.0" y1="370.0" x2="126.0" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="110.0" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">250</text>
+    <line x1="114.0" y1="245.0" x2="126.0" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="114.0" y1="120.0" x2="126.0" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="110.0" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">500</text>
+    <line x1="112.0" y1="280.0" x2="128.0" y2="280.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="112.0" y1="340.0" x2="128.0" y2="340.0" stroke="#10B981" stroke-width="2.5" />
+    <rect x="65.0" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="120.0" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Temperature</text>
+    <text x="120.0" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">°C</text>
+    <rect x="65.0" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="120.0" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[280..340]</text>
+    <line x1="262.9" y1="120.0" x2="262.9" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="256.9" y1="620.0" x2="268.9" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="252.9" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">0</text>
+    <line x1="256.9" y1="495.0" x2="268.9" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="256.9" y1="370.0" x2="268.9" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="252.9" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">25</text>
+    <line x1="256.9" y1="245.0" x2="268.9" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="256.9" y1="120.0" x2="268.9" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="252.9" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">50</text>
+    <line x1="254.9" y1="360.0" x2="270.9" y2="360.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="254.9" y1="440.0" x2="270.9" y2="440.0" stroke="#10B981" stroke-width="2.5" />
+    <rect x="207.9" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="262.9" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Pressure</text>
+    <text x="262.9" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">bar</text>
+    <rect x="207.9" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="262.9" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[18..26]</text>
+    <line x1="405.7" y1="120.0" x2="405.7" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="399.7" y1="620.0" x2="411.7" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="395.7" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">0</text>
+    <line x1="399.7" y1="495.0" x2="411.7" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="399.7" y1="370.0" x2="411.7" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="395.7" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">50</text>
+    <line x1="399.7" y1="245.0" x2="411.7" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="399.7" y1="120.0" x2="411.7" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="395.7" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">100</text>
+    <line x1="397.7" y1="295.0" x2="413.7" y2="295.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="397.7" y1="395.0" x2="413.7" y2="395.0" stroke="#10B981" stroke-width="2.5" />
+    <rect x="350.7" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="405.7" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Level</text>
+    <text x="405.7" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">%</text>
+    <rect x="350.7" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="405.7" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[45..65]</text>
+    <line x1="548.6" y1="120.0" x2="548.6" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="542.6" y1="620.0" x2="554.6" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="538.6" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">0</text>
+    <line x1="542.6" y1="495.0" x2="554.6" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="542.6" y1="370.0" x2="554.6" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="538.6" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">500</text>
+    <line x1="542.6" y1="245.0" x2="554.6" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="542.6" y1="120.0" x2="554.6" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="538.6" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">1000</text>
+    <line x1="540.6" y1="330.0" x2="556.6" y2="330.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="540.6" y1="395.0" x2="556.6" y2="395.0" stroke="#10B981" stroke-width="2.5" />
+    <rect x="493.6" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="548.6" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Flow Rate</text>
+    <text x="548.6" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">L/min</text>
+    <rect x="493.6" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="548.6" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[450..580]</text>
+    <line x1="691.4" y1="120.0" x2="691.4" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="685.4" y1="620.0" x2="697.4" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="681.4" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">0</text>
+    <line x1="685.4" y1="495.0" x2="697.4" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="685.4" y1="370.0" x2="697.4" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="681.4" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">12</text>
+    <line x1="685.4" y1="245.0" x2="697.4" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="685.4" y1="120.0" x2="697.4" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="681.4" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">25</text>
+    <line x1="683.4" y1="510.0" x2="699.4" y2="510.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="683.4" y1="600.0" x2="699.4" y2="600.0" stroke="#10B981" stroke-width="2.5" />
+    <rect x="636.4" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="691.4" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Vibration</text>
+    <text x="691.4" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">mm/s</text>
+    <rect x="636.4" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="691.4" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[1..6]</text>
+    <line x1="834.3" y1="120.0" x2="834.3" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="828.3" y1="620.0" x2="840.3" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="824.3" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">0</text>
+    <line x1="828.3" y1="495.0" x2="840.3" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="828.3" y1="370.0" x2="840.3" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="824.3" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">50</text>
+    <line x1="828.3" y1="245.0" x2="840.3" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="828.3" y1="120.0" x2="840.3" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="824.3" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">100</text>
+    <line x1="826.3" y1="445.0" x2="842.3" y2="445.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="826.3" y1="545.0" x2="842.3" y2="545.0" stroke="#10B981" stroke-width="2.5" />
+    <rect x="779.3" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="834.3" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Viscosity</text>
+    <text x="834.3" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">cP</text>
+    <rect x="779.3" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="834.3" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[15..35]</text>
+    <line x1="977.1" y1="120.0" x2="977.1" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="971.1" y1="620.0" x2="983.1" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="967.1" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">600</text>
+    <line x1="971.1" y1="495.0" x2="983.1" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="971.1" y1="370.0" x2="983.1" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="967.1" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">1000</text>
+    <line x1="971.1" y1="245.0" x2="983.1" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="971.1" y1="120.0" x2="983.1" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="967.1" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">1400</text>
+    <line x1="969.1" y1="395.0" x2="985.1" y2="395.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="969.1" y1="482.5" x2="985.1" y2="482.5" stroke="#10B981" stroke-width="2.5" />
+    <rect x="922.1" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="977.1" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Density</text>
+    <text x="977.1" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">kg/m³</text>
+    <rect x="922.1" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="977.1" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[820..960]</text>
+    <line x1="1120.0" y1="120.0" x2="1120.0" y2="620.0" stroke="#475569" stroke-width="1.5" />
+    <line x1="1114.0" y1="620.0" x2="1126.0" y2="620.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="1110.0" y="624.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">0</text>
+    <line x1="1114.0" y1="495.0" x2="1126.0" y2="495.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="1114.0" y1="370.0" x2="1126.0" y2="370.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="1110.0" y="374.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">125</text>
+    <line x1="1114.0" y1="245.0" x2="1126.0" y2="245.0" stroke="#64748B" stroke-width="1.0" />
+    <line x1="1114.0" y1="120.0" x2="1126.0" y2="120.0" stroke="#64748B" stroke-width="1.0" />
+    <text x="1110.0" y="124.0" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#94A3B8">250</text>
+    <line x1="1112.0" y1="340.0" x2="1128.0" y2="340.0" stroke="#10B981" stroke-width="2.5" />
+    <line x1="1112.0" y1="440.0" x2="1128.0" y2="440.0" stroke="#10B981" stroke-width="2.5" />
+    <rect x="1065.0" y="78.0" width="110.0" height="32.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="1.0" />
+    <text x="1120.0" y="93.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Power</text>
+    <text x="1120.0" y="106.0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#38BDF8">kW</text>
+    <rect x="1065.0" y="632.0" width="110.0" height="20.0" rx="4" fill="#0B0F19" fill-opacity="0.90" stroke="#334155" stroke-width="0.8" />
+    <text x="1120.0" y="646.0" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#10B981">[90..140]</text>
+  </g>
+  <!-- Historical Trajectory Ghosting -->
+  <g id="history-group">
+  </g>
+  <!-- Current Active Trajectory -->
+  <g id="active-trajectory-group">
+    <path d="M 120.00,310.00 C 167.62,310.00 215.24,300.00 262.86,300.00 C 310.48,300.00 358.10,345.00 405.71,345.00 C 453.33,345.00 500.95,362.50 548.57,362.50 C 596.19,362.50 643.81,555.00 691.43,555.00 C 739.05,555.00 786.67,495.00 834.29,495.00 C 881.90,495.00 929.52,438.75 977.14,438.75 C 1024.76,438.75 1072.38,390.00 1120.00,390.00" fill="none" stroke="#EF4444" stroke-width="3.5" filter="url(#glow-alarm)" />
+    <circle cx="120.0" cy="310.0" r="5.0" fill="#10B981" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="98.0" y="288.0" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#10B981" stroke-width="0.8" />
+    <text x="120.0" y="299.0" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">310.0</text>
+    <circle cx="262.9" cy="300.0" r="5.0" fill="#EF4444" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="240.9" y="278.0" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#EF4444" stroke-width="0.8" />
+    <text x="262.9" y="289.0" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">32.0</text>
+    <circle cx="405.7" cy="345.0" r="5.0" fill="#10B981" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="383.7" y="323.0" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#10B981" stroke-width="0.8" />
+    <text x="405.7" y="334.0" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">55.0</text>
+    <circle cx="548.6" cy="362.5" r="5.0" fill="#10B981" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="526.6" y="340.5" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#10B981" stroke-width="0.8" />
+    <text x="548.6" y="351.5" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">515.0</text>
+    <circle cx="691.4" cy="555.0" r="5.0" fill="#10B981" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="669.4" y="533.0" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#10B981" stroke-width="0.8" />
+    <text x="691.4" y="544.0" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">3.2</text>
+    <circle cx="834.3" cy="495.0" r="5.0" fill="#10B981" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="812.3" y="473.0" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#10B981" stroke-width="0.8" />
+    <text x="834.3" y="484.0" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">25.0</text>
+    <circle cx="977.1" cy="438.8" r="5.0" fill="#10B981" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="955.1" y="416.8" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#10B981" stroke-width="0.8" />
+    <text x="977.1" y="427.8" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">890.0</text>
+    <circle cx="1120.0" cy="390.0" r="5.0" fill="#10B981" stroke="#0F172A" stroke-width="2.0" />
+    <rect x="1098.0" y="368.0" width="44" height="15" rx="3" fill="#0B0F19" fill-opacity="0.90" stroke="#10B981" stroke-width="0.8" />
+    <text x="1120.0" y="379.0" text-anchor="middle" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#F8FAFC">115.0</text>
+  </g>
+  <!-- Diagnostic HUD Scorecard -->
+  <g id="hud-scorecard" transform="translate(820, 20)">
+    <rect width="330" height="75" rx="6" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1.2" />
+    <rect x="15" y="15" width="80" height="22" rx="4" fill="#EF4444" fill-opacity="0.20" stroke="#EF4444" stroke-width="1.2" />
+    <text x="55" y="30" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#EF4444">CRITICAL</text>
+    <text x="110" y="26" font-family="Consolas, monospace" font-size="11" fill="#F8FAFC">D_inf: <tspan fill="#EF4444" font-weight="700">0.750</tspan>  D_2: 0.750  D_1: 0.750</text>
+    <text x="110" y="44" font-family="Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Worst Excursion: <tspan fill="#F8FAFC" font-weight="600">Pressure</tspan> (1/8 axes out)</text>
+    <text x="110" y="60" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B">WCAG 2.1 AAA Compliant (18.42:1 Contrast)</text>
+  </g>
+</svg>

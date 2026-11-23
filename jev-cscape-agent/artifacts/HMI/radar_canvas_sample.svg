@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <style>
+    .title-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 16px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+    .subtitle-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #94A3B8; }
+    .grid-web { stroke: #334155; stroke-width: 1px; fill: none; stroke-dasharray: 4,4; }
+    .grid-web-outer { stroke: #475569; stroke-width: 1.5px; fill: none; }
+    .spoke-line { stroke: #334155; stroke-width: 1.5px; }
+    .spoke-selected { stroke: #38BDF8; stroke-width: 2.5px; }
+    .target-polygon { fill: #06B6D4; fill-opacity: 0.10; stroke: #06B6D4; stroke-width: 2px; stroke-dasharray: 6,4; }
+    .realtime-polygon { fill-opacity: 0.45; stroke-width: 2.5px; transition: all 0.3s ease; }
+    .vertex-pulse { animation: pulse 2s infinite ease-in-out; }
+    @keyframes pulse {
+      0% { r: 4.5px; opacity: 0.85; }
+      50% { r: 6.5px; opacity: 1.0; }
+      100% { r: 4.5px; opacity: 0.85; }
+    }
+    .hud-card { fill: #1E293B; stroke: #334155; stroke-width: 1.5px; rx: 8px; }
+    .hud-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 13px; font-weight: 700; fill: #38BDF8; letter-spacing: 0.5px; }
+    .hud-subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+    .axis-badge-bg { fill: #0B0F19; fill-opacity: 0.95; stroke: #334155; stroke-width: 1px; rx: 4px; }
+    .axis-badge-bg-selected { fill: #0B0F19; fill-opacity: 0.95; stroke: #38BDF8; stroke-width: 1.5px; rx: 4px; }
+    .axis-badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 10px; font-weight: 700; fill: #F8FAFC; }
+    .axis-badge-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 9px; fill: #94A3B8; }
+  </style>
+  <defs>
+    <filter id="alert-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="focus-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Dark Theme Backing -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <g id="canvas-header">
+    <text x="32" y="38" class="title-banner">CSCAPE DYNAMIC RADAR / SPIDER PROCESS KPI CANVAS (W162)</text>
+    <text x="32" y="55" class="subtitle-banner">Multi-Dimensional Process KPI Regular Polygon Geometry | Gate G9 Graphic Screen Engine</text>
+  </g>
+  <g id="radar-spider-canvas">
+  <g id="radar-chart-area">
+  <!-- Alias for diagram root -->
+  <g id="radar-diagram">
+    <g id="concentric-grid-webs">
+    <g id="web-grid">
+    <g id="grid-web">
+      <polygon points="420.00,352.00 461.57,376.00 461.57,424.00 420.00,448.00 378.43,424.00 378.43,376.00" class="grid-web"/>
+      <text x="425.0" y="363.0" fill="#94A3B8" font-family="monospace" font-size="9">20%</text>
+      <polygon points="420.00,304.00 503.14,352.00 503.14,448.00 420.00,496.00 336.86,448.00 336.86,352.00" class="grid-web"/>
+      <text x="425.0" y="315.0" fill="#94A3B8" font-family="monospace" font-size="9">40%</text>
+      <polygon points="420.00,256.00 544.71,328.00 544.71,472.00 420.00,544.00 295.29,472.00 295.29,328.00" class="grid-web"/>
+      <text x="425.0" y="267.0" fill="#94A3B8" font-family="monospace" font-size="9">60%</text>
+      <polygon points="420.00,208.00 586.28,304.00 586.28,496.00 420.00,592.00 253.72,496.00 253.72,304.00" class="grid-web"/>
+      <text x="425.0" y="219.0" fill="#94A3B8" font-family="monospace" font-size="9">80%</text>
+      <polygon points="420.00,160.00 627.85,280.00 627.85,520.00 420.00,640.00 212.15,520.00 212.15,280.00" class="grid-web-outer"/>
+      <text x="425.0" y="171.0" fill="#94A3B8" font-family="monospace" font-size="9">100%</text>
+    </g>
+    </g>
+    </g>
+    <g id="radial-spokes">
+    <g id="axis-rays">
+      <line id="spoke-0" x1="420.0" y1="400.0" x2="420.0" y2="160.0" stroke="#38BDF8" class="spoke-selected"/>
+      <line id="spoke-1" x1="420.0" y1="400.0" x2="627.8" y2="280.0" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-2" x1="420.0" y1="400.0" x2="627.8" y2="520.0" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-3" x1="420.0" y1="400.0" x2="420.0" y2="640.0" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-4" x1="420.0" y1="400.0" x2="212.2" y2="520.0" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-5" x1="420.0" y1="400.0" x2="212.2" y2="280.0" stroke="#334155" class="spoke-line"/>
+    </g>
+    </g>
+    <g id="target-baseline-overlay">
+      <polygon id="target-polygon" points="420.00,184.00 623.69,282.40 596.67,502.00 420.00,604.00 222.55,514.00 253.72,304.00" stroke-dasharray="6,4" class="target-polygon">
+        <title>Target Baseline Envelope</title>
+      </polygon>
+      <polygon id="radar-target-baseline-polygon" points="420.00,184.00 623.69,282.40 596.67,502.00 420.00,604.00 222.55,514.00 253.72,304.00" stroke-dasharray="6,4" class="target-polygon">
+        <title>Target Baseline Envelope</title>
+      </polygon>
+      <circle cx="420.00" cy="184.00" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="623.69" cy="282.40" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="596.67" cy="502.00" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="420.00" cy="604.00" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="222.55" cy="514.00" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="253.72" cy="304.00" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+    </g>
+    <g id="current-realtime-overlay">
+      <polygon id="realtime-polygon" points="420.00,181.60 624.73,281.80 594.59,500.80 420.00,611.20 228.78,510.40 258.92,307.00" fill="#10B981" stroke="#10B981" class="realtime-polygon">
+        <title>Current Real-Time KPI: 88.5%</title>
+      </polygon>
+      <polygon id="radar-current-realtime-polygon" points="420.00,181.60 624.73,281.80 594.59,500.80 420.00,611.20 228.78,510.40 258.92,307.00" fill="#10B981" stroke="#10B981" class="realtime-polygon">
+        <title>Current Real-Time KPI: 88.5%</title>
+      </polygon>
+    <g id="vertex-markers">
+      <circle id="vertex-0" cx="420.00" cy="181.60" r="6.0" fill="#10B981" stroke="#38BDF8" stroke-width="1.5" class="vertex-pulse">
+        <title>Thermal Efficiency: 91.0% (Target: 90.0%)</title>
+      </circle>
+      <circle id="selected-axis-indicator" cx="420.00" cy="181.60" r="11" fill="none" stroke="#38BDF8" stroke-width="2.5" class="vertex-focus-halo" filter="url(#focus-glow)"/>
+      <circle id="vertex-1" cx="624.73" cy="281.80" r="5.0" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5" class="vertex-pulse">
+        <title>Product Purity: 98.5% (Target: 98.0%)</title>
+      </circle>
+      <circle id="vertex-2" cx="594.59" cy="500.80" r="5.0" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5" class="vertex-pulse">
+        <title>Energy Utilization: 84.0% (Target: 85.0%)</title>
+      </circle>
+      <circle id="vertex-3" cx="420.00" cy="611.20" r="5.0" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5" class="vertex-pulse">
+        <title>Catalyst Health: 88.0% (Target: 85.0%)</title>
+      </circle>
+      <circle id="vertex-4" cx="228.78" cy="510.40" r="5.0" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5" class="vertex-pulse">
+        <title>Safety Margin: 92.0% (Target: 95.0%)</title>
+      </circle>
+      <circle id="vertex-5" cx="258.92" cy="307.00" r="5.0" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5" class="vertex-pulse">
+        <title>Environmental Emission Index: 77.5% (Target: 80.0%)</title>
+      </circle>
+    </g>
+    </g>
+    <g id="axis-labels">
+      <g id="axis-label-0" class="axis-label-group">
+      <g id="axis-badge-0" transform="translate(350.0, 102.0)">
+        <rect width="140.0" height="36.0" class="axis-badge-bg-selected"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">Thermal Efficiency</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 91.0% | TGT: 90.0%</text>
+      </g>
+      </g>
+      <g id="axis-label-1" class="axis-label-group">
+      <g id="axis-badge-1" transform="translate(592.5, 242.0)">
+        <rect width="140.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">Product Purity</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 98.5% | TGT: 98.0%</text>
+      </g>
+      </g>
+      <g id="axis-label-2" class="axis-label-group">
+      <g id="axis-badge-2" transform="translate(592.5, 522.0)">
+        <rect width="140.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">Energy Utilization</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 84.0% | TGT: 85.0%</text>
+      </g>
+      </g>
+      <g id="axis-label-3" class="axis-label-group">
+      <g id="axis-badge-3" transform="translate(350.0, 662.0)">
+        <rect width="140.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">Catalyst Health</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 88.0% | TGT: 85.0%</text>
+      </g>
+      </g>
+      <g id="axis-label-4" class="axis-label-group">
+      <g id="axis-badge-4" transform="translate(107.5, 522.0)">
+        <rect width="140.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">Safety Margin</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 92.0% | TGT: 95.0%</text>
+      </g>
+      </g>
+      <g id="axis-label-5" class="axis-label-group">
+      <g id="axis-badge-5" transform="translate(107.5, 242.0)">
+        <rect width="140.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">Environmental Emis</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 77.5% | TGT: 80.0%</text>
+      </g>
+      </g>
+    </g>
+  </g>
+  </g>
+  </g>
+  <g id="kpi-summary-panel">
+  <g id="kpi-hud-metrics-card">
+    <rect x="760.0" y="80.0" width="410.0" height="635.0" class="hud-card"/>
+    <text x="780.0" y="110.0" class="hud-title">PROCESS KPI RADAR MONITOR</text>
+    <text x="780.0" y="125.0" class="hud-subtitle">Real-Time Multi-Dimensional Telemetry &amp; Envelope</text>
+    <g id="overall-score-card">
+      <rect x="780.0" y="140.0" width="370.0" height="76" rx="6" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+      <text x="796.0" y="162.0" class="hud-label">RADAR KPI OVERALL SCORE (%R1230):</text>
+      <text x="1114.0" y="162.0" text-anchor="end" class="hud-label">ACTIVE AXES COUNT (%R1231): 6</text>
+      <text x="796.0" y="198.0" font-family="monospace" font-size="28" font-weight="700" fill="#10B981">88.5%</text>
+      <text x="1114.0" y="186.0" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#10B981">NOMINAL OPERATION</text>
+    </g>
+    <g id="axis-breakdown-rows">
+      <g id="summary-row-0" transform="translate(780.0, 232.0">
+        <rect width="370.0" height="44.0" rx="5" fill="#131C2E" stroke="#38BDF8" stroke-width="1.2"/>
+        <text x="14" y="18" class="hud-val">[0] %R1232 ThermalEfficiencyPct</text>
+        <text x="14" y="32" class="hud-label">Tgt: 90.0% | Dev: <tspan fill="#10B981">+1.0%</tspan></text>
+        <text x="354.0" y="26" text-anchor="end" font-family="monospace" font-size="14" font-weight="700" fill="#F8FAFC">91.0%</text>
+      </g>
+      <g id="summary-row-1" transform="translate(780.0, 282.0">
+        <rect width="370.0" height="44.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+        <text x="14" y="18" class="hud-val">[1] %R1233 ProductPurityPct</text>
+        <text x="14" y="32" class="hud-label">Tgt: 98.0% | Dev: <tspan fill="#10B981">+0.5%</tspan></text>
+        <text x="354.0" y="26" text-anchor="end" font-family="monospace" font-size="14" font-weight="700" fill="#F8FAFC">98.5%</text>
+      </g>
+      <g id="summary-row-2" transform="translate(780.0, 332.0">
+        <rect width="370.0" height="44.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+        <text x="14" y="18" class="hud-val">[2] %R1234 EnergyUtilizationPct</text>
+        <text x="14" y="32" class="hud-label">Tgt: 85.0% | Dev: <tspan fill="#F59E0B">-1.0%</tspan></text>
+        <text x="354.0" y="26" text-anchor="end" font-family="monospace" font-size="14" font-weight="700" fill="#F8FAFC">84.0%</text>
+      </g>
+      <g id="summary-row-3" transform="translate(780.0, 382.0">
+        <rect width="370.0" height="44.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+        <text x="14" y="18" class="hud-val">[3] [%R1230..%R1237] Catalyst Health</text>
+        <text x="14" y="32" class="hud-label">Tgt: 85.0% | Dev: <tspan fill="#10B981">+3.0%</tspan></text>
+        <text x="354.0" y="26" text-anchor="end" font-family="monospace" font-size="14" font-weight="700" fill="#F8FAFC">88.0%</text>
+      </g>
+      <g id="summary-row-4" transform="translate(780.0, 432.0">
+        <rect width="370.0" height="44.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+        <text x="14" y="18" class="hud-val">[4] %R1235 SafetyMarginPct</text>
+        <text x="14" y="32" class="hud-label">Tgt: 95.0% | Dev: <tspan fill="#F59E0B">-3.0%</tspan></text>
+        <text x="354.0" y="26" text-anchor="end" font-family="monospace" font-size="14" font-weight="700" fill="#F8FAFC">92.0%</text>
+      </g>
+      <g id="summary-row-5" transform="translate(780.0, 482.0">
+        <rect width="370.0" height="44.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+        <text x="14" y="18" class="hud-val">[5] [%R1230..%R1237] Environmental Emission Index</text>
+        <text x="14" y="32" class="hud-label">Tgt: 80.0% | Dev: <tspan fill="#F59E0B">-2.5%</tspan></text>
+        <text x="354.0" y="26" text-anchor="end" font-family="monospace" font-size="14" font-weight="700" fill="#F8FAFC">77.5%</text>
+      </g>
+    </g>
+    <g id="diagnostics-safety-card">
+      <rect x="780.0" y="540.0" width="370.0" height="155" rx="6" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+      <text x="796.0" y="564.0" class="hud-title" fill="#38BDF8">SAFETY INTERLOCKS &amp; DIAGNOSTICS</text>
+      <text x="796.0" y="588.0" class="hud-label">%M287 RadarSafetyTrip: <tspan font-family="monospace" font-weight="700" fill="#10B981">NORMAL (CLEAR)</tspan></text>
+      <text x="796.0" y="608.0" class="hud-label">%M288 RadarCanvasActive: <tspan font-family="monospace" font-weight="700" fill="#10B981">TRUE (ONLINE)</tspan></text>
+      <text x="796.0" y="628.0" class="hud-label">%R1236 SelectedAxisIndex: <tspan font-family="monospace" font-weight="700" fill="#38BDF8">0</tspan></text>
+      <text x="796.0" y="648.0" class="hud-label">%R1237 DiagnosticStatusCode: <tspan font-family="monospace" font-weight="700" fill="#10B981">0x0000</tspan></text>
+      <text x="796.0" y="674.0" font-family="monospace" font-size="9" fill="#94A3B8">Process Rule: Safety Margin &lt; 25.0% asserts %M287</text>
+    </g>
+  </g>
+  </g>
+</svg>

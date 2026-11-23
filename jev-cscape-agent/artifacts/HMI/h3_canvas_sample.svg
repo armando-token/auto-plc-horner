@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 750" width="1200" height="750" style="background-color: #0D1117; font-family: monospace;">
+  <defs>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+  <!-- Hierarchical H3 Hexagonal Discrete Global Grid Layer -->
+  <g id="h3-hex-layer" class="h3-cells">
+    <polygon class="h3-cell" points="281.6,97.0 273.5,97.4 269.1,90.6 272.8,83.4 280.9,83.0 285.3,89.8" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="253.2" y="90.2" fill="#94A3B8" font-size="8">B2:#830554f</text>
+    <polygon class="h3-cell" points="763.8,91.8 755.7,92.2 751.4,85.3 755.1,78.1 763.2,77.8 767.5,84.6" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="735.5" y="85.0" fill="#94A3B8" font-size="8">B3:#830626f</text>
+    <polygon class="h3-cell" points="132.6,91.2 124.5,91.6 120.1,84.8 123.8,77.6 131.9,77.2 136.3,84.0" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="104.2" y="84.4" fill="#94A3B8" font-size="8">B4:#830869f</text>
+    <polygon class="h3-cell" points="450.1,113.2 442.0,113.6 437.6,106.8 441.3,99.6 449.4,99.2 453.8,106.0" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="421.7" y="106.4" fill="#94A3B8" font-size="8">B5:#830b0df</text>
+    <polygon class="h3-cell" points="914.0,103.3 905.9,103.6 901.5,96.8 905.2,89.6 913.3,89.2 917.7,96.1" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="885.6" y="96.4" fill="#94A3B8" font-size="8">B6:#830ceef</text>
+    <polygon class="h3-cell" points="615.0,95.2 606.9,95.6 602.6,88.8 606.3,81.6 614.4,81.2 618.7,88.0" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="586.7" y="88.4" fill="#94A3B8" font-size="8">B8:#8310d4f</text>
+    <polygon class="h3-cell" points="920.7,235.8 912.6,236.2 908.2,229.4 912.0,222.2 920.1,221.8 924.4,228.6" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="892.3" y="229.0" fill="#94A3B8" font-size="8">B19:#83274df</text>
+    <polygon class="h3-cell" points="611.2,230.7 603.1,231.0 598.7,224.2 602.4,217.0 610.5,216.6 614.9,223.5" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="582.8" y="223.8" fill="#94A3B8" font-size="8">B21:#832b36f</text>
+    <polygon class="h3-cell" points="437.3,246.8 429.2,247.2 424.8,240.4 428.6,233.2 436.6,232.8 441.0,239.6" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="408.9" y="240.0" fill="#94A3B8" font-size="8">B31:#833e5df</text>
+    <polygon class="h3-cell" points="109.0,233.9 100.9,234.3 96.5,227.5 100.2,220.3 108.3,219.9 112.7,226.7" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="80.6" y="227.1" fill="#94A3B8" font-size="8">B33:#8342cbf</text>
+    <polygon class="h3-cell" points="289.5,247.3 281.4,247.7 277.0,240.9 280.7,233.7 288.8,233.3 293.2,240.1" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="261.1" y="240.5" fill="#94A3B8" font-size="8">B36:#8348c8f</text>
+    <polygon class="h3-cell" points="775.0,248.2 766.9,248.6 762.5,241.7 766.3,234.5 774.3,234.2 778.7,241.0" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="746.6" y="241.4" fill="#94A3B8" font-size="8">B37:#834a86f</text>
+    <polygon class="h3-cell" points="269.5,370.6 261.5,371.0 257.1,364.2 260.8,357.0 268.9,356.6 273.3,363.4" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="241.2" y="363.8" fill="#94A3B8" font-size="8">B49:#83634df</text>
+    <polygon class="h3-cell" points="453.7,383.1 445.6,383.5 441.2,376.7 444.9,369.5 453.0,369.1 457.4,375.9" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="425.3" y="376.3" fill="#94A3B8" font-size="8">B52:#8369a0f</text>
+    <polygon class="h3-cell" points="919.0,382.7 910.9,383.0 906.5,376.2 910.2,369.0 918.3,368.6 922.7,375.5" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="890.6" y="375.8" fill="#94A3B8" font-size="8">B53:#836b84f</text>
+    <polygon class="h3-cell" points="137.0,374.5 128.9,374.9 124.5,368.1 128.2,360.9 136.3,360.5 140.7,367.3" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="108.6" y="367.7" fill="#94A3B8" font-size="8">B54:#836d30f</text>
+    <polygon class="h3-cell" points="613.0,389.3 604.9,389.7 600.6,382.8 604.3,375.6 612.4,375.3 616.7,382.1" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="584.7" y="382.5" fill="#94A3B8" font-size="8">B55:#836f4bf</text>
+    <polygon class="h3-cell" points="767.2,395.3 759.2,395.7 754.8,388.9 758.5,381.7 766.6,381.3 771.0,388.1" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="738.9" y="388.5" fill="#94A3B8" font-size="8">B71:#838eb5f</text>
+    <polygon class="h3-cell" points="452.2,506.7 444.1,507.1 439.7,500.3 443.5,493.1 451.5,492.7 455.9,499.5" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="423.8" y="499.9" fill="#94A3B8" font-size="8">B86:#83ad81f</text>
+    <polygon class="h3-cell" points="133.7,523.4 125.6,523.8 121.2,517.0 125.0,509.8 133.1,509.4 137.4,516.2" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="105.3" y="516.6" fill="#94A3B8" font-size="8">B88:#83b155f</text>
+    <polygon class="h3-cell" points="595.2,513.4 587.1,513.8 582.7,506.9 586.4,499.7 594.5,499.4 598.9,506.2" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="566.8" y="506.6" fill="#94A3B8" font-size="8">B89:#83b22bf</text>
+    <polygon class="h3-cell" points="296.2,521.6 288.1,522.0 283.7,515.2 287.5,508.0 295.6,507.6 299.9,514.4" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="267.8" y="514.8" fill="#94A3B8" font-size="8">B91:#83b731f</text>
+    <polygon class="h3-cell" points="752.4,511.5 744.3,511.9 739.9,505.1 743.6,497.9 751.7,497.5 756.1,504.3" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="724.0" y="504.7" fill="#94A3B8" font-size="8">B92:#83b909f</text>
+    <polygon class="h3-cell" points="913.6,510.4 905.5,510.8 901.1,503.9 904.9,496.7 912.9,496.4 917.3,503.2" fill="url(#hexGrad)" stroke="#0284C7" stroke-width="0.9" stroke-dasharray="3 2" />
+    <text x="885.2" y="503.6" fill="#94A3B8" font-size="8">B95:#83bee6f</text>
+  </g>
+  <!-- Query Reticle Overlay Layer -->
+  <g id="query-reticle-layer" class="range-reticle">
+    <circle cx="600.0" cy="375.0" r="180.0" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4 2" />
+  </g>
+  <!-- Equipment & Sensor Nodes Layer -->
+  <g id="nodes-layer">
+    <g id="sensor-1" class="sensor-node">
+      
+      <circle cx="124.2" cy="85.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="133.2" y="81.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-001</text>
+      <text x="133.2" y="93.8" fill="#94A3B8" font-size="8">[870869705f]</text>
+    </g>
+    <g id="sensor-2" class="sensor-node">
+      
+      <circle cx="273.3" cy="91.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="282.3" y="87.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-002</text>
+      <text x="282.3" y="99.7" fill="#94A3B8" font-size="8">[87055488df]</text>
+    </g>
+    <g id="sensor-3" class="sensor-node">
+      
+      <circle cx="447.1" cy="105.3" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="456.1" y="101.3" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-003</text>
+      <text x="456.1" y="113.3" fill="#94A3B8" font-size="8">[870b0d326f]</text>
+    </g>
+    <g id="sensor-4" class="sensor-node">
+      
+      <circle cx="611.8" cy="87.6" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="620.8" y="83.6" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-004</text>
+      <text x="620.8" y="95.6" fill="#94A3B8" font-size="8">[8710d41b1f]</text>
+    </g>
+    <g id="sensor-5" class="sensor-node">
+      
+      <circle cx="757.7" cy="85.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="766.7" y="81.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-005</text>
+      <text x="766.7" y="93.9" fill="#94A3B8" font-size="8">[87062684ef]</text>
+    </g>
+    <g id="sensor-6" class="sensor-node">
+      
+      <circle cx="911.6" cy="100.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="920.6" y="96.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-006</text>
+      <text x="920.6" y="108.2" fill="#94A3B8" font-size="8">[870cee964f]</text>
+    </g>
+    <g id="sensor-7" class="sensor-node">
+      
+      <circle cx="105.8" cy="228.5" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="114.8" y="224.5" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-007</text>
+      <text x="114.8" y="236.5" fill="#94A3B8" font-size="8">[8742cba15f]</text>
+    </g>
+    <g id="sensor-8" class="sensor-node">
+      
+      <circle cx="284.5" cy="238.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="293.5" y="234.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-008</text>
+      <text x="293.5" y="246.8" fill="#94A3B8" font-size="8">[8748c85a0f]</text>
+    </g>
+    <g id="sensor-9" class="sensor-node">
+      
+      <circle cx="431.6" cy="240.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="440.6" y="236.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-009</text>
+      <text x="440.6" y="248.2" fill="#94A3B8" font-size="8">[873e5d783f]</text>
+    </g>
+    <g id="sensor-10" class="sensor-node">
+      <circle cx="609.3" cy="222.7" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="609.3" cy="222.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="618.3" y="218.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-010</text>
+      <text x="618.3" y="230.7" fill="#94A3B8" font-size="8">[872b36d90f]</text>
+    </g>
+    <g id="sensor-11" class="sensor-node">
+      
+      <circle cx="769.2" cy="243.4" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="778.2" y="239.4" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-011</text>
+      <text x="778.2" y="251.4" fill="#94A3B8" font-size="8">[874a8689af]</text>
+    </g>
+    <g id="sensor-12" class="sensor-node">
+      
+      <circle cx="915.2" cy="227.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="924.2" y="223.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-012</text>
+      <text x="924.2" y="235.2" fill="#94A3B8" font-size="8">[87274d59ef]</text>
+    </g>
+    <g id="sensor-13" class="sensor-node">
+      
+      <circle cx="133.7" cy="370.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="142.7" y="366.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-013</text>
+      <text x="142.7" y="378.1" fill="#94A3B8" font-size="8">[876d30b19f]</text>
+    </g>
+    <g id="sensor-14" class="sensor-node">
+      
+      <circle cx="267.8" cy="362.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="276.8" y="358.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-014</text>
+      <text x="276.8" y="370.9" fill="#94A3B8" font-size="8">[87634ddacf]</text>
+    </g>
+    <g id="sensor-15" class="sensor-node">
+      <circle cx="450.4" cy="378.1" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="450.4" cy="378.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="459.4" y="374.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-015</text>
+      <text x="459.4" y="386.1" fill="#94A3B8" font-size="8">[8769a0a1cf]</text>
+    </g>
+    <g id="sensor-16" class="sensor-node">
+      <circle cx="609.2" cy="381.9" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="609.2" cy="381.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="618.2" y="377.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-016</text>
+      <text x="618.2" y="389.9" fill="#94A3B8" font-size="8">[876f4b186f]</text>
+    </g>
+    <g id="sensor-17" class="sensor-node">
+      <circle cx="761.1" cy="389.2" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="761.1" cy="389.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="770.1" y="385.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-017</text>
+      <text x="770.1" y="397.2" fill="#94A3B8" font-size="8">[878eb561ef]</text>
+    </g>
+    <g id="sensor-18" class="sensor-node">
+      
+      <circle cx="916.4" cy="376.6" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="925.4" y="372.6" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-018</text>
+      <text x="925.4" y="384.6" fill="#94A3B8" font-size="8">[876b84b8df]</text>
+    </g>
+    <g id="sensor-19" class="sensor-node">
+      
+      <circle cx="129.9" cy="516.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="138.9" y="512.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-019</text>
+      <text x="138.9" y="524.1" fill="#94A3B8" font-size="8">[87b155181f]</text>
+    </g>
+    <g id="sensor-20" class="sensor-node">
+      
+      <circle cx="290.9" cy="514.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="299.9" y="510.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-020</text>
+      <text x="299.9" y="522.8" fill="#94A3B8" font-size="8">[87b73109af]</text>
+    </g>
+    <g id="sensor-21" class="sensor-node">
+      
+      <circle cx="446.1" cy="498.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="455.1" y="494.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-021</text>
+      <text x="455.1" y="506.9" fill="#94A3B8" font-size="8">[87ad814e9f]</text>
+    </g>
+    <g id="sensor-22" class="sensor-node">
+      <circle cx="591.8" cy="506.2" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="591.8" cy="506.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="600.8" y="502.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-022</text>
+      <text x="600.8" y="514.2" fill="#94A3B8" font-size="8">[87b22bccaf]</text>
+    </g>
+    <g id="sensor-23" class="sensor-node">
+      
+      <circle cx="747.4" cy="504.5" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="756.4" y="500.5" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-023</text>
+      <text x="756.4" y="512.5" fill="#94A3B8" font-size="8">[87b9090a6f]</text>
+    </g>
+    <g id="sensor-24" class="sensor-node">
+      
+      <circle cx="908.0" cy="505.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="917.0" y="501.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-024</text>
+      <text x="917.0" y="513.8" fill="#94A3B8" font-size="8">[87bee68c8f]</text>
+    </g>
+  </g>
+  <!-- HUD Telemetry Scorecard -->
+  <g id="scorecard-layer" class="hud-telemetry-scorecard">
+    <rect x="15" y="15" width="510" height="74" rx="6" fill="#05080C" stroke="#334155" stroke-width="1.2" />
+    <text x="25" y="35" fill="#FFFFFF" font-size="12" font-weight="bold">DYNAMIC SPATIAL H3 HEXAGONAL DISCRETE GLOBAL GRID SCADA CANVAS [W315]</text>
+    <text x="25" y="55" fill="#CBD5E1" font-size="10">RES: 7 | ACTIVE CELLS: 24 | NODES: 24 | MATCHES: 5</text>
+    <text x="25" y="72" fill="#94A3B8" font-size="9">HAZARDS: 0 | DIAG: 0x0000 | REGS: %R2760..%R2767 | COILS: %M644..%M645</text>
+    <rect x="1020" y="15" width="165" height="28" rx="4" fill="#10B981" />
+    <text x="1103" y="33" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">INDEXING NOMINAL</text>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Phthalic Anhydride Reactor ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W203",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Phthalic Anhydride o-Xylene / Naphthalene Catalytic Fixed-Bed Reactor ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "PhthalicAnhydrideReactorSync POU verified cleanly; bound %R1640..%R1647 and %M382..%M384."
+      },
+      {
+        "stage": 2,
+        "check": "V2O5_TiO2_Oxidation_Kinetics_And_Arrhenius_Monotonicity",
+        "passed": true,
+        "details": "Kinetics verified: k1(360C)=1.6289e+01, k1(425C)=8.7415e+01, Ea1 error=2.33e-10 J/mol, runaway acceleration ratio k3/k1=2.42."
+      },
+      {
+        "stage": 3,
+        "check": "Exothermic_Reaction_Enthalpies_And_Thermal_Balances",
+        "passed": true,
+        "details": "Enthalpies verified: Q1=9456.7 kW (-1110 kJ/mol), Q2=2928.3 kW (-2340 kJ/mol), Q3=2860.0 kW (-4560 kJ/mol), uncooled dT_bed/dt=7056.82 \u00b0C/min."
+      },
+      {
+        "stage": 4,
+        "check": "Molten_Salt_Bath_Heat_Removal_And_Thermal_Coupling",
+        "passed": true,
+        "details": "Molten salt heat transfer verified: UA=430.0 kW/K, Q_salt(DeltaT=50C)=21500.0 kW, salt flow sensitivity verified."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "passed": true,
+        "details": "RK4 solver stable over 2.0s: C_oxylene=0.0025, C_o2=6.13, C_pan=0.3986, T_bed=424.4 \u00b0C, T_salt=375.0 \u00b0C."
+      },
+      {
+        "stage": 6,
+        "check": "Mass_And_Energy_Conservation_Residuals",
+        "passed": true,
+        "details": "Residuals verified: mass=2.40e-14 kg/s, elemental=2.40e-14 kg/s, enthalpy=1.00e-12 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xDB01..0xDB04), pre-alarm %M383, and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Emergency_Cold_N2_Ballast_Purge_Runaway_Mitigation",
+        "passed": true,
+        "details": "Emergency cold N2 purge mitigated runaway: T_bed cooled to 428.9 \u00b0C (< 440 \u00b0C), reaction power quenched to 0.00 kW."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Memory_Space_Integration_And_Anti_Ladder_Security",
+        "passed": true,
+        "details": "Registers %R1640..%R1647 & %M382..%M384 verified; ladder logic rejected cleanly via SecurityGuard."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1640..%R1647",
+      "discrete_coils": "%M382..%M384",
+      "values": {
+        "%R1640": 4250,
+        "%R1641": 3750,
+        "%R1642": 600,
+        "%R1643": 995,
+        "%R1644": 815,
+        "%R1645": 21500,
+        "%R1646": 1450,
+        "%R1647": 0,
+        "%M382": true,
+        "%M383": false,
+        "%M384": false
+      }
+    },
+    "timestamp": "2026-10-06T03:24:03Z"
+  }
+}

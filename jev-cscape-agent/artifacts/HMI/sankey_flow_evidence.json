@@ -1,0 +1,93 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Sankey Flow Diagram Vector Canvas verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W087",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Sankey Flow Diagram Vector Canvas Rasterizer",
+    "metrics": {
+      "total_inflow_kw": 1250.0,
+      "useful_outflow_kw": 1025.0,
+      "total_losses_kw": 225.0,
+      "efficiency_pct": 82.0,
+      "flue_loss_pct": 11.2,
+      "condenser_loss_pct": 6.8
+    },
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R480..%R487 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Flow_Conservation_Kirchhoff_Balance",
+        "passed": true,
+        "details": "First-Law nodal balance passed with max residual 0.00e+00 kW (< 1e-4)."
+      },
+      {
+        "stage": 3,
+        "check": "Node_Position_Zero_Overlap_Layout",
+        "passed": true,
+        "details": "All node columns partitioned with strictly non-overlapping vertical gaps (gap >= 16px)."
+      },
+      {
+        "stage": 4,
+        "check": "Ribbon_Bezier_Curve_Path_Syntax",
+        "passed": true,
+        "details": "Generated 10 B\u00e9zier ribbons with verified 'M', 'C', 'L', 'Z' command syntax."
+      },
+      {
+        "stage": 5,
+        "check": "SVG_XML_WellFormedness_ElementTree",
+        "passed": true,
+        "details": "Rendered SVG parsed cleanly by xml.etree.ElementTree (9158 bytes)."
+      },
+      {
+        "stage": 6,
+        "check": "WCAG_2.1_AAA_Contrast_Audit",
+        "passed": true,
+        "details": "Primary header contrast 17.5:1 and subtext contrast 7.2:1 exceed WCAG AAA threshold (> 7.0:1)."
+      },
+      {
+        "stage": 7,
+        "check": "Efficiency_And_Loss_Allocation_Sum_To_100",
+        "passed": true,
+        "details": "Useful efficiency (82.0%) + losses (11.2%, 6.8%) sum to 100.0%."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Mapping_Sync",
+        "passed": true,
+        "details": "Registers synced: %R480=17, %R481=12500 (1250.0 kW), %R482=10250, %R484=820 (82.0%)."
+      },
+      {
+        "stage": 9,
+        "check": "Conservation_Fault_Trip_And_Reset_Handshake",
+        "passed": true,
+        "details": "Flow imbalance tripped %R480 bit 1 and %M113 reset handshake cleared fault latch."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R480..%R487",
+      "discrete_coils": "%M112..%M113",
+      "values": {
+        "%R480": 17,
+        "%R481": 12500,
+        "%R482": 10250,
+        "%R483": 2250,
+        "%R484": 820,
+        "%R485": 112,
+        "%R486": 68,
+        "%R487": 0,
+        "%M112": true,
+        "%M113": false
+      }
+    },
+    "timestamp": "2026-10-03T01:34:03Z"
+  }
+}

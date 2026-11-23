@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 750" width="1200" height="750" style="background-color: #0D1117; font-family: monospace;">
+  <defs>
+    <linearGradient id="cellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.04" />
+    </linearGradient>
+  </defs>
+  <!-- Hierarchical Geohash Bounding Boxes Layer -->
+  <g id="geohash-grid-layer" class="geohash-cells">
+    <rect class="geohash-cell" x="112.5" y="515.6" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="116.5" y="526.6" fill="#94A3B8" font-size="8">#2c</text>
+    <rect class="geohash-cell" x="262.5" y="492.2" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="266.5" y="503.2" fill="#94A3B8" font-size="8">#3f</text>
+    <rect class="geohash-cell" x="412.5" y="492.2" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="416.5" y="503.2" fill="#94A3B8" font-size="8">#6f</text>
+    <rect class="geohash-cell" x="562.5" y="492.2" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="566.5" y="503.2" fill="#94A3B8" font-size="8">#7f</text>
+    <rect class="geohash-cell" x="450.0" y="375.0" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="454.0" y="386.0" fill="#94A3B8" font-size="8">#7p</text>
+    <rect class="geohash-cell" x="112.5" y="351.6" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="116.5" y="362.6" fill="#94A3B8" font-size="8">#8b</text>
+    <rect class="geohash-cell" x="75.0" y="210.9" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="79.0" y="221.9" fill="#94A3B8" font-size="8">#8w</text>
+    <rect class="geohash-cell" x="262.5" y="351.6" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="266.5" y="362.6" fill="#94A3B8" font-size="8">#9b</text>
+    <rect class="geohash-cell" x="262.5" y="234.4" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="266.5" y="245.4" fill="#94A3B8" font-size="8">#9v</text>
+    <rect class="geohash-cell" x="112.5" y="70.3" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="116.5" y="81.3" fill="#94A3B8" font-size="8">#bu</text>
+    <rect class="geohash-cell" x="262.5" y="70.3" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="266.5" y="81.3" fill="#94A3B8" font-size="8">#cu</text>
+    <rect class="geohash-cell" x="412.5" y="234.4" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="416.5" y="245.4" fill="#94A3B8" font-size="8">#dv</text>
+    <rect class="geohash-cell" x="412.5" y="93.8" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="416.5" y="104.8" fill="#94A3B8" font-size="8">#fg</text>
+    <rect class="geohash-cell" x="712.5" y="492.2" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="716.5" y="503.2" fill="#94A3B8" font-size="8">#kf</text>
+    <rect class="geohash-cell" x="600.0" y="375.0" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="604.0" y="386.0" fill="#94A3B8" font-size="8">#kp</text>
+    <rect class="geohash-cell" x="750.0" y="375.0" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="754.0" y="386.0" fill="#94A3B8" font-size="8">#mp</text>
+    <rect class="geohash-cell" x="900.0" y="492.2" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="904.0" y="503.2" fill="#94A3B8" font-size="8">#q4</text>
+    <rect class="geohash-cell" x="900.0" y="375.0" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="904.0" y="386.0" fill="#94A3B8" font-size="8">#qp</text>
+    <rect class="geohash-cell" x="600.0" y="210.9" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="604.0" y="221.9" fill="#94A3B8" font-size="8">#sn</text>
+    <rect class="geohash-cell" x="750.0" y="234.4" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="754.0" y="245.4" fill="#94A3B8" font-size="8">#tj</text>
+    <rect class="geohash-cell" x="600.0" y="70.3" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="604.0" y="81.3" fill="#94A3B8" font-size="8">#uh</text>
+    <rect class="geohash-cell" x="750.0" y="70.3" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="754.0" y="81.3" fill="#94A3B8" font-size="8">#vh</text>
+    <rect class="geohash-cell" x="900.0" y="210.9" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="904.0" y="221.9" fill="#94A3B8" font-size="8">#wn</text>
+    <rect class="geohash-cell" x="900.0" y="93.8" width="37.5" height="23.4" fill="url(#cellGrad)" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3 2" />
+    <text x="904.0" y="104.8" fill="#94A3B8" font-size="8">#y5</text>
+  </g>
+  <!-- Query Reticle Overlay Layer -->
+  <g id="query-reticle-layer" class="range-reticle">
+    <circle cx="600.0" cy="375.0" r="180.0" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4 2" />
+  </g>
+  <!-- Equipment & Sensor Nodes Layer -->
+  <g id="nodes-layer">
+    <g id="sensor-1" class="sensor-node">
+      
+      <circle cx="124.2" cy="85.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="133.2" y="81.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-001</text>
+      <text x="133.2" y="93.8" fill="#94A3B8" font-size="8">[bu66zv]</text>
+    </g>
+    <g id="sensor-2" class="sensor-node">
+      
+      <circle cx="273.3" cy="91.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="282.3" y="87.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-002</text>
+      <text x="282.3" y="99.7" fill="#94A3B8" font-size="8">[cu46c3]</text>
+    </g>
+    <g id="sensor-3" class="sensor-node">
+      
+      <circle cx="447.1" cy="105.3" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="456.1" y="101.3" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-003</text>
+      <text x="456.1" y="113.3" fill="#94A3B8" font-size="8">[fgx2hp]</text>
+    </g>
+    <g id="sensor-4" class="sensor-node">
+      
+      <circle cx="611.8" cy="87.6" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="620.8" y="83.6" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-004</text>
+      <text x="620.8" y="95.6" fill="#94A3B8" font-size="8">[uh682k]</text>
+    </g>
+    <g id="sensor-5" class="sensor-node">
+      
+      <circle cx="757.7" cy="85.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="766.7" y="81.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-005</text>
+      <text x="766.7" y="93.9" fill="#94A3B8" font-size="8">[vh3dsr]</text>
+    </g>
+    <g id="sensor-6" class="sensor-node">
+      
+      <circle cx="911.6" cy="100.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="920.6" y="96.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-006</text>
+      <text x="920.6" y="108.2" fill="#94A3B8" font-size="8">[y5drnz]</text>
+    </g>
+    <g id="sensor-7" class="sensor-node">
+      
+      <circle cx="105.8" cy="228.5" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="114.8" y="224.5" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-007</text>
+      <text x="114.8" y="236.5" fill="#94A3B8" font-size="8">[8wq844]</text>
+    </g>
+    <g id="sensor-8" class="sensor-node">
+      
+      <circle cx="284.5" cy="238.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="293.5" y="234.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-008</text>
+      <text x="293.5" y="246.8" fill="#94A3B8" font-size="8">[9vu9yh]</text>
+    </g>
+    <g id="sensor-9" class="sensor-node">
+      
+      <circle cx="431.6" cy="240.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="440.6" y="236.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-009</text>
+      <text x="440.6" y="248.2" fill="#94A3B8" font-size="8">[dvu046]</text>
+    </g>
+    <g id="sensor-10" class="sensor-node">
+      <circle cx="609.3" cy="222.7" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="609.3" cy="222.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="618.3" y="218.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-010</text>
+      <text x="618.3" y="230.7" fill="#94A3B8" font-size="8">[sn3zzq]</text>
+    </g>
+    <g id="sensor-11" class="sensor-node">
+      
+      <circle cx="769.2" cy="243.4" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="778.2" y="239.4" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-011</text>
+      <text x="778.2" y="251.4" fill="#94A3B8" font-size="8">[tjs5dg]</text>
+    </g>
+    <g id="sensor-12" class="sensor-node">
+      
+      <circle cx="915.2" cy="227.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="924.2" y="223.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-012</text>
+      <text x="924.2" y="235.2" fill="#94A3B8" font-size="8">[wn71zg]</text>
+    </g>
+    <g id="sensor-13" class="sensor-node">
+      
+      <circle cx="133.7" cy="370.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="142.7" y="366.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-013</text>
+      <text x="142.7" y="378.1" fill="#94A3B8" font-size="8">[8bhw8y]</text>
+    </g>
+    <g id="sensor-14" class="sensor-node">
+      
+      <circle cx="267.8" cy="362.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="276.8" y="358.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-014</text>
+      <text x="276.8" y="370.9" fill="#94A3B8" font-size="8">[9b90s0]</text>
+    </g>
+    <g id="sensor-15" class="sensor-node">
+      <circle cx="450.4" cy="378.1" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="450.4" cy="378.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="459.4" y="374.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-015</text>
+      <text x="459.4" y="386.1" fill="#94A3B8" font-size="8">[7pb5fb]</text>
+    </g>
+    <g id="sensor-16" class="sensor-node">
+      <circle cx="609.2" cy="381.9" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="609.2" cy="381.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="618.2" y="377.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-016</text>
+      <text x="618.2" y="389.9" fill="#94A3B8" font-size="8">[kp9ywf]</text>
+    </g>
+    <g id="sensor-17" class="sensor-node">
+      <circle cx="761.1" cy="389.2" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="761.1" cy="389.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="770.1" y="385.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-017</text>
+      <text x="770.1" y="397.2" fill="#94A3B8" font-size="8">[mp6kee]</text>
+    </g>
+    <g id="sensor-18" class="sensor-node">
+      
+      <circle cx="916.4" cy="376.6" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="925.4" y="372.6" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-018</text>
+      <text x="925.4" y="384.6" fill="#94A3B8" font-size="8">[qpgmze]</text>
+    </g>
+    <g id="sensor-19" class="sensor-node">
+      
+      <circle cx="129.9" cy="516.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="138.9" y="512.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-019</text>
+      <text x="138.9" y="524.1" fill="#94A3B8" font-size="8">[2cgxqt]</text>
+    </g>
+    <g id="sensor-20" class="sensor-node">
+      
+      <circle cx="290.9" cy="514.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="299.9" y="510.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-020</text>
+      <text x="299.9" y="522.8" fill="#94A3B8" font-size="8">[3fn11e]</text>
+    </g>
+    <g id="sensor-21" class="sensor-node">
+      
+      <circle cx="446.1" cy="498.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="455.1" y="494.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-021</text>
+      <text x="455.1" y="506.9" fill="#94A3B8" font-size="8">[6fxnve]</text>
+    </g>
+    <g id="sensor-22" class="sensor-node">
+      <circle cx="591.8" cy="506.2" r="14" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="591.8" cy="506.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="600.8" y="502.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-022</text>
+      <text x="600.8" y="514.2" fill="#94A3B8" font-size="8">[7fqkbk]</text>
+    </g>
+    <g id="sensor-23" class="sensor-node">
+      
+      <circle cx="747.4" cy="504.5" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="756.4" y="500.5" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-023</text>
+      <text x="756.4" y="512.5" fill="#94A3B8" font-size="8">[kfrrnn]</text>
+    </g>
+    <g id="sensor-24" class="sensor-node">
+      
+      <circle cx="908.0" cy="505.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="917.0" y="501.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-024</text>
+      <text x="917.0" y="513.8" fill="#94A3B8" font-size="8">[q43tqg]</text>
+    </g>
+  </g>
+  <!-- HUD Telemetry Scorecard -->
+  <g id="scorecard-layer" class="hud-telemetry-scorecard">
+    <rect x="15" y="15" width="480" height="74" rx="6" fill="#05080C" stroke="#334155" stroke-width="1.2" />
+    <text x="25" y="35" fill="#FFFFFF" font-size="12" font-weight="bold">DYNAMIC SPATIAL GEOHASH SCADA CANVAS [W309]</text>
+    <text x="25" y="55" fill="#CBD5E1" font-size="10">PRECISION: 6 | ACTIVE CELLS: 24 | NODES: 24 | MATCHES: 5</text>
+    <text x="25" y="72" fill="#94A3B8" font-size="9">HAZARDS: 0 | DIAG: 0x0000 | REGS: %R2700..%R2707 | COILS: %M630..%M631</text>
+    <rect x="1020" y="15" width="165" height="28" rx="4" fill="#10B981" />
+    <text x="1103" y="33" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">INDEXING NOMINAL</text>
+  </g>
+</svg>

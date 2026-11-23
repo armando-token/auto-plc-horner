@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_054",
+  "file_name": "scene_054.png",
+  "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step3_before_right_click_1791576231.png",
+  "split": "reserved",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "f4761d8757d2cc3507275bfbd1cf9f574b5304bed3dfa37b421a107d1a7afeb6",
+  "labels": {
+    "canvas_rect": [
+      124,
+      19,
+      1269,
+      541
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        280
+      ],
+      "canvas_nw": [
+        124,
+        19
+      ],
+      "canvas_se": [
+        1269,
+        541
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

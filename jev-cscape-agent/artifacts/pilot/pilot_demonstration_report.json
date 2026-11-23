@@ -1,0 +1,1180 @@
+{
+  "gate": "PILOT",
+  "work_package": "PILOT_DEMONSTRATION",
+  "title": "Integrated Closed-Loop Multi-Disciplinary Pilot Demonstration",
+  "verdict": "success",
+  "status": "success",
+  "error_code": null,
+  "timestamp_utc": "2026-10-02T19:52:11.752694+00:00",
+  "duration_s": 2.919,
+  "details": "Successfully completed 3000-cycle closed-loop pilot demonstration: pure ST POU validated, TwoTankCascadeModel regulated with PI controller, stochastic load disturbances absorbed, ISA-18.2 alarms verified with hysteresis, recipe loaded into %R registers, FastMCP JSON-RPC tools dispatched, zero memory leakage (<100KB), and zero hardware leakage.",
+  "invariants_verified": {
+    "iec_61131_3_pure_st_syntax": true,
+    "forbidden_ladder_rejection": true,
+    "two_tank_mass_conservation": true,
+    "closed_loop_setpoint_tracking": true,
+    "stochastic_disturbance_rejection": true,
+    "modbus_scaling_telemetry_valid": true,
+    "isa_18_2_alarm_monitoring_active": true,
+    "recipe_download_to_r_verified": true,
+    "fastmcp_jsonrpc_dispatch_passed": true,
+    "zero_memory_leak_lt_100kb": true,
+    "zero_hardware_leakage": true
+  },
+  "subsystems": {
+    "st_validation": {
+      "status": "success",
+      "pou_name": "PilotTwoTankLevelControl",
+      "pou_type": "PROGRAM",
+      "syntax_valid": true,
+      "variables_count": 17,
+      "bound_registers_count": 16,
+      "bound_registers": [
+        "%AI1",
+        "%AI2",
+        "%AI3",
+        "%AQ1",
+        "%AQ2",
+        "%R1",
+        "%R2",
+        "%R3",
+        "%R4",
+        "%R5",
+        "%Q1",
+        "%Q2",
+        "%M1",
+        "%M2",
+        "%M5",
+        "%M6"
+      ],
+      "statements_count": 21,
+      "ladder_rejection_tested": true
+    },
+    "simulation": {
+      "cycles_executed": 3000,
+      "dt_ms": 10.0,
+      "virtual_time_s": 30.0,
+      "initial_level_1": 20.0,
+      "initial_level_2": 20.0,
+      "final_level_1": 49.961,
+      "final_level_2": 31.648,
+      "steady_state_error_pct": 0.039,
+      "mass_balance_error": 8.668621376273222e-13,
+      "tank1_mass_balance_error": 8.952838470577262e-13,
+      "tank2_mass_balance_error": 2.4868995751603507e-14,
+      "total_inflow1_volume": 139.052,
+      "total_qout_volume": 97.443,
+      "stochastic_disturbance_applied": true,
+      "ou_drift_active": true,
+      "poisson_jumps_occurred": 0,
+      "step_disturbance_injected": true,
+      "periodic_snapshots": [
+        {
+          "cycle": 0,
+          "time_s": 0.01,
+          "level1_pct": 19.98,
+          "level2_pct": 20.0,
+          "inflow_rate1": 0.05,
+          "q12": 2.236,
+          "q_out": 2.239,
+          "actuator_inflow_pos": 0.5,
+          "mass_balance_error": 4.021089017314239e-15
+        },
+        {
+          "cycle": 200,
+          "time_s": 2.01,
+          "level1_pct": 25.54,
+          "level2_pct": 19.97,
+          "inflow_rate1": 10.0,
+          "q12": 2.523,
+          "q_out": 2.402,
+          "actuator_inflow_pos": 100.0,
+          "mass_balance_error": 9.769962616701378e-15
+        },
+        {
+          "cycle": 400,
+          "time_s": 4.01,
+          "level1_pct": 39.68,
+          "level2_pct": 20.56,
+          "inflow_rate1": 9.594,
+          "q12": 3.147,
+          "q_out": 2.479,
+          "actuator_inflow_pos": 95.9,
+          "mass_balance_error": 2.1316282072803006e-14
+        },
+        {
+          "cycle": 600,
+          "time_s": 6.01,
+          "level1_pct": 51.87,
+          "level2_pct": 22.26,
+          "inflow_rate1": 10.0,
+          "q12": 3.599,
+          "q_out": 2.507,
+          "actuator_inflow_pos": 100.0,
+          "mass_balance_error": 7.105427357601002e-14
+        },
+        {
+          "cycle": 800,
+          "time_s": 8.01,
+          "level1_pct": 64.25,
+          "level2_pct": 24.81,
+          "inflow_rate1": 10.0,
+          "q12": 4.006,
+          "q_out": 2.656,
+          "actuator_inflow_pos": 100.0,
+          "mass_balance_error": 5.684341886080802e-14
+        },
+        {
+          "cycle": 1000,
+          "time_s": 10.01,
+          "level1_pct": 74.89,
+          "level2_pct": 27.65,
+          "inflow_rate1": 8.314,
+          "q12": 4.326,
+          "q_out": 2.849,
+          "actuator_inflow_pos": 83.1,
+          "mass_balance_error": 4.405364961712621e-13
+        },
+        {
+          "cycle": 1200,
+          "time_s": 12.01,
+          "level1_pct": 79.86,
+          "level2_pct": 30.57,
+          "inflow_rate1": 5.564,
+          "q12": 4.468,
+          "q_out": 3.79,
+          "actuator_inflow_pos": 55.6,
+          "mass_balance_error": 4.263256414560601e-13
+        },
+        {
+          "cycle": 1400,
+          "time_s": 14.01,
+          "level1_pct": 74.1,
+          "level2_pct": 32.02,
+          "inflow_rate1": 0.0,
+          "q12": 4.305,
+          "q_out": 3.758,
+          "actuator_inflow_pos": 0.0,
+          "mass_balance_error": 4.831690603168681e-13
+        },
+        {
+          "cycle": 1600,
+          "time_s": 16.01,
+          "level1_pct": 65.74,
+          "level2_pct": 32.84,
+          "inflow_rate1": 0.0,
+          "q12": 4.055,
+          "q_out": 3.751,
+          "actuator_inflow_pos": 0.0,
+          "mass_balance_error": 5.329070518200751e-13
+        },
+        {
+          "cycle": 1800,
+          "time_s": 18.01,
+          "level1_pct": 57.9,
+          "level2_pct": 33.0,
+          "inflow_rate1": 0.049,
+          "q12": 3.806,
+          "q_out": 3.966,
+          "actuator_inflow_pos": 0.5,
+          "mass_balance_error": 6.536993168992922e-13
+        },
+        {
+          "cycle": 2000,
+          "time_s": 20.01,
+          "level1_pct": 51.47,
+          "level2_pct": 32.56,
+          "inflow_rate1": 1.062,
+          "q12": 3.588,
+          "q_out": 3.739,
+          "actuator_inflow_pos": 10.6,
+          "mass_balance_error": 5.897504706808832e-13
+        },
+        {
+          "cycle": 2200,
+          "time_s": 22.01,
+          "level1_pct": 48.01,
+          "level2_pct": 32.28,
+          "inflow_rate1": 2.484,
+          "q12": 3.465,
+          "q_out": 3.641,
+          "actuator_inflow_pos": 24.8,
+          "mass_balance_error": 7.958078640513122e-13
+        },
+        {
+          "cycle": 2400,
+          "time_s": 24.01,
+          "level1_pct": 47.24,
+          "level2_pct": 31.82,
+          "inflow_rate1": 3.536,
+          "q12": 3.436,
+          "q_out": 3.612,
+          "actuator_inflow_pos": 35.4,
+          "mass_balance_error": 9.521272659185342e-13
+        },
+        {
+          "cycle": 2600,
+          "time_s": 26.01,
+          "level1_pct": 47.98,
+          "level2_pct": 31.75,
+          "inflow_rate1": 4.008,
+          "q12": 3.463,
+          "q_out": 3.375,
+          "actuator_inflow_pos": 40.1,
+          "mass_balance_error": 9.379164112033322e-13
+        },
+        {
+          "cycle": 2800,
+          "time_s": 28.01,
+          "level1_pct": 49.11,
+          "level2_pct": 31.73,
+          "inflow_rate1": 4.033,
+          "q12": 3.504,
+          "q_out": 3.617,
+          "actuator_inflow_pos": 40.3,
+          "mass_balance_error": 1.0089706847793423e-12
+        },
+        {
+          "cycle": 2999,
+          "time_s": 30.0,
+          "level1_pct": 49.96,
+          "level2_pct": 31.65,
+          "inflow_rate1": 3.85,
+          "q12": 3.534,
+          "q_out": 3.627,
+          "actuator_inflow_pos": 38.5,
+          "mass_balance_error": 8.668621376273222e-13
+        }
+      ]
+    },
+    "modbus_bridge": {
+      "total_points": 5,
+      "good_count": 5,
+      "uncertain_count": 0,
+      "bad_count": 0,
+      "points": {
+        "TANK1_LEVEL": {
+          "channel": "%AI1",
+          "modbus_address": 30001,
+          "modbus_type": "INPUT",
+          "scaling": "LINEAR",
+          "raw_value": 15987,
+          "eu_value": 49.959375,
+          "eu_unit": "%",
+          "quality": "GOOD",
+          "quality_word": "0x00C0",
+          "quality_flags": [
+            "GOOD"
+          ],
+          "precision_loss": false,
+          "word_order": "LOW_WORD_FIRST",
+          "last_timestamp": 1790970731.7459533
+        },
+        "TANK2_LEVEL": {
+          "channel": "%AI2",
+          "modbus_address": 30002,
+          "modbus_type": "INPUT",
+          "scaling": "LINEAR",
+          "raw_value": 10128,
+          "eu_value": 31.65,
+          "eu_unit": "%",
+          "quality": "GOOD",
+          "quality_word": "0x00C0",
+          "quality_flags": [
+            "GOOD"
+          ],
+          "precision_loss": false,
+          "word_order": "LOW_WORD_FIRST",
+          "last_timestamp": 1790970731.7459533
+        },
+        "INFLOW_RATE1": {
+          "channel": "%AI3",
+          "modbus_address": 30003,
+          "modbus_type": "INPUT",
+          "scaling": "LINEAR",
+          "raw_value": 12323,
+          "eu_value": 3.8509375,
+          "eu_unit": "m3/h",
+          "quality": "GOOD",
+          "quality_word": "0x00C0",
+          "quality_flags": [
+            "GOOD"
+          ],
+          "precision_loss": false,
+          "word_order": "LOW_WORD_FIRST",
+          "last_timestamp": 1790970731.7459533
+        },
+        "INLET_VALVE_CMD": {
+          "channel": "%AQ1",
+          "modbus_address": 40001,
+          "modbus_type": "HOLDING",
+          "scaling": "LINEAR",
+          "raw_value": 12319,
+          "eu_value": 38.496875,
+          "eu_unit": "%",
+          "quality": "GOOD",
+          "quality_word": "0x00C0",
+          "quality_flags": [
+            "GOOD"
+          ],
+          "precision_loss": false,
+          "word_order": "LOW_WORD_FIRST",
+          "last_timestamp": 1790970731.7459533
+        },
+        "DISCHARGE_VALVE_CMD": {
+          "channel": "%AQ2",
+          "modbus_address": 40002,
+          "modbus_type": "HOLDING",
+          "scaling": "LINEAR",
+          "raw_value": 0,
+          "eu_value": 0.0,
+          "eu_unit": "%",
+          "quality": "GOOD",
+          "quality_word": "0x00C0",
+          "quality_flags": [
+            "GOOD"
+          ],
+          "precision_loss": false,
+          "word_order": "LOW_WORD_FIRST",
+          "last_timestamp": 1790970731.7459533
+        }
+      }
+    },
+    "recipe": {
+      "recipe_id": 1,
+      "recipe_name": "Standard Cascade Production Recipe",
+      "registers_written_count": 10,
+      "registers_verified_count": 10,
+      "download_verified": true,
+      "recipe_data": {
+        "%R1": 7500,
+        "%R2": 5000,
+        "%R3": 400,
+        "%R4": 150,
+        "%R5": 7000,
+        "%R6": 2500,
+        "%R7": 9000,
+        "%R8": 1000,
+        "%R9": 200,
+        "%R10": 1
+      }
+    },
+    "isa_alarms": {
+      "events_count": 4,
+      "events": [
+        {
+          "cycle": 0,
+          "timestamp_s": 0.01,
+          "tag": "TANK1_LEVEL",
+          "alarm_type": "LOW_LEVEL",
+          "state": "TRIPPED",
+          "priority": "MEDIUM",
+          "pv_pct": 19.98,
+          "threshold_pct": 25.0,
+          "message": "Tank 1 liquid level dropped below 25.0% low limit threshold."
+        },
+        {
+          "cycle": 220,
+          "timestamp_s": 2.21,
+          "tag": "TANK1_LEVEL",
+          "alarm_type": "LOW_LEVEL",
+          "state": "CLEARED",
+          "priority": "MEDIUM",
+          "pv_pct": 27.02,
+          "threshold_pct": 27.0,
+          "message": "Tank 1 liquid level recovered above 27.0% (cleared with hysteresis)."
+        },
+        {
+          "cycle": 898,
+          "timestamp_s": 8.99,
+          "tag": "TANK1_LEVEL",
+          "alarm_type": "HIGH_LEVEL",
+          "state": "TRIPPED",
+          "priority": "MEDIUM",
+          "pv_pct": 70.01,
+          "threshold_pct": 70.0,
+          "message": "Tank 1 liquid level exceeded 70.0% high limit threshold."
+        },
+        {
+          "cycle": 1545,
+          "timestamp_s": 15.46,
+          "tag": "TANK1_LEVEL",
+          "alarm_type": "HIGH_LEVEL",
+          "state": "CLEARED",
+          "priority": "MEDIUM",
+          "pv_pct": 67.99,
+          "threshold_pct": 68.0,
+          "message": "Tank 1 liquid level fell below 68.0% (cleared with hysteresis)."
+        }
+      ],
+      "alarm_types_monitored": [
+        "HIGH_LEVEL",
+        "LOW_LEVEL"
+      ],
+      "schmitt_trigger_hysteresis_verified": true
+    },
+    "fastmcp_dispatch": {
+      "tools_dispatched": [
+        "cscape_status",
+        "sim_inspect_registers"
+      ],
+      "all_calls_successful": true,
+      "cscape_status_result": {
+        "status": "success",
+        "error_code": null,
+        "details": "JEV Cscape operational status and gate ledger retrieved.",
+        "data": {
+          "agent_version": "0.1.0",
+          "provider_mode": {
+            "provider": "jev",
+            "mode": "offline/mock",
+            "has_api_key": false,
+            "details": "JEV_API_KEY environment variable missing; operating in local rule-based mock mode."
+          },
+          "gates_summary": {
+            "G0": "passed",
+            "G1": "passed",
+            "G2": "passed",
+            "G3": "passed",
+            "G4": "passed",
+            "G5": "passed",
+            "G6": "passed",
+            "G7": "passed",
+            "G8": "passed",
+            "G9": "passed",
+            "G10": "passed",
+            "G11": "passed",
+            "G12": "passed"
+          },
+          "backlog_count": 41
+        }
+      },
+      "sim_inspect_registers_result": {
+        "status": "success",
+        "error_code": null,
+        "details": "Inspected 100 registers.",
+        "data": {
+          "count": 100,
+          "nonzero_only": false,
+          "registers": [
+            {
+              "address": "%R1",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R2",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R3",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R4",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R5",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R6",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R7",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R8",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R9",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R10",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R11",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R12",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R13",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R14",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R15",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R16",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R17",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R18",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R19",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R20",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R21",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R22",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R23",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R24",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R25",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R26",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R27",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R28",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R29",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R30",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R31",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R32",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R33",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R34",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R35",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R36",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R37",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R38",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R39",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R40",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R41",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R42",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R43",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R44",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R45",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R46",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R47",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R48",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R49",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R50",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R51",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R52",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R53",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R54",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R55",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R56",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R57",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R58",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R59",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R60",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R61",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R62",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R63",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R64",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R65",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R66",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R67",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R68",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R69",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R70",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R71",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R72",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R73",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R74",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R75",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R76",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R77",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R78",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R79",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R80",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R81",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R82",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R83",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R84",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R85",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R86",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R87",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R88",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R89",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R90",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R91",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R92",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R93",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R94",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R95",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R96",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R97",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R98",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R99",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            },
+            {
+              "address": "%R100",
+              "value": 0,
+              "type": "INT",
+              "access": "RW",
+              "description": "General Holding Registers"
+            }
+          ]
+        }
+      }
+    },
+    "memory_telemetry": {
+      "tracemalloc_current_kb": 22.04,
+      "tracemalloc_peak_kb": 48.08,
+      "psutil_rss_growth_kb": 188.0,
+      "zero_memory_leak_verified": true
+    },
+    "hardware_safety": {
+      "com_ports_tested": 261,
+      "com_ports_blocked": 261,
+      "flasher_binaries_tested": 4,
+      "flasher_binaries_blocked": 4,
+      "download_commands_tested": 2,
+      "download_commands_blocked": 2,
+      "zero_hardware_leakage_verified": true
+    }
+  }
+}

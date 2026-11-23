@@ -1,0 +1,88 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "WirelessHART TDMA Network Manager & Mesh Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W127",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial WirelessHART TDMA Network Manager & Field Sensor Mesh Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed POUs 'WirelessHartNetworkManagerSync' and 'WirelessHartNetworkSync', verified bindings %R880..%R887 and %M205..%M206 with zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts, coils, and mnemonics strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "TDMA_10ms_Timeslot_Superframe_Timing_And_Channel_Hopping",
+        "passed": true,
+        "details": "Verified hopping formula (ch_0=11, ch_5_3=19), 10ms slot resolution, and collision guard."
+      },
+      {
+        "stage": 4,
+        "check": "Multi_Hop_Mesh_Routing_Table_And_Path_Redundancy",
+        "passed": true,
+        "details": "Verified 2-hop route [4, 2, 1], spatial redundancy (True), and avg RSSI (-70.0 dBm)."
+      },
+      {
+        "stage": 5,
+        "check": "WirelessHART_Payload_Encoding_Decoding_Cmd_1_3_9_48",
+        "passed": true,
+        "details": "Decoded Cmd 1 (PV=125.4), Cmd 3 (Loop=16.50mA), Cmd 9, and Cmd 48 diagnostics."
+      },
+      {
+        "stage": 6,
+        "check": "AES128_MIC_Integrity_Calculation_And_Tamper_Rejection",
+        "passed": true,
+        "details": "Verified 4-byte MIC generation, tamper interception with MICIntegrityError, and roundtrip deserialization."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Trips_0x9801_0x9802_0x9803_0x9804_And_Coils",
+        "passed": true,
+        "details": "Verified 0x9801 Superframe Timeout, 0x9802 MIC Alarm, 0x9804 Node Disconnect (%M206=TRUE, %M205=FALSE)."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scaled_Units",
+        "passed": true,
+        "details": "Verified %R880=0x000F, %R881=1, %R883=2500 (PV x10), %R884=755 (SV x10), %M205=TRUE."
+      },
+      {
+        "stage": 9,
+        "check": "Network_Manager_Simulation_Cycle_And_Fault_Recovery_Pipeline",
+        "passed": true,
+        "details": "Simulated TDMA cycles, engaged 0x9801 timeout trip (%M206=TRUE), recovered cleanly (%M205=TRUE, %M206=FALSE, %R887=0x0000)."
+      }
+    ],
+    "metrics": {
+      "max_nodes": 32,
+      "timeslot_duration_ms": 10,
+      "num_channels": 16,
+      "default_superframe_slots": 100,
+      "default_watchdog_timeout_s": 30.0
+    },
+    "register_map": {
+      "status_word": "%R880",
+      "active_nodes_count": "%R881",
+      "last_executed_command": "%R882",
+      "primary_variable_pv_scaled": "%R883",
+      "secondary_variable_sv_scaled": "%R884",
+      "average_mesh_rssi": "%R885",
+      "packet_counter": "%R886",
+      "diagnostic_event_code": "%R887",
+      "network_active_coil": "%M205",
+      "fault_trip_coil": "%M206"
+    },
+    "timestamp": "2026-10-04T19:04:29Z"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "gate": "G7",
+  "task": "GATE_G7_LADDER_ROUNDTRIP",
+  "timestamp_utc": "2026-10-10T21:51:37.497064+00:00",
+  "status": "success",
+  "cscape_version": "10.2 (Build 10.2.751.4)",
+  "contact_tag": "ALW_ON",
+  "coil_tag": "G3_TEST_VAR_01",
+  "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g7_ladder_roundtrip.csp",
+  "initial_sha256": "e3a04acf5bbd73da5115671c714379779adce32fd6a58da723e2ab7dbd1fd915",
+  "saved_sha256": "539f30be83889fdfd55ffb90a3394c3a6b4e4163ba0d861475fcebdb99d208e7",
+  "reopened_sha256": "539f30be83889fdfd55ffb90a3394c3a6b4e4163ba0d861475fcebdb99d208e7",
+  "cfbf_proof": {
+    "file_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g7_ladder_roundtrip.csp",
+    "saved_sha256": "539f30be83889fdfd55ffb90a3394c3a6b4e4163ba0d861475fcebdb99d208e7",
+    "initial_sha256": "e3a04acf5bbd73da5115671c714379779adce32fd6a58da723e2ab7dbd1fd915",
+    "sha_changed": true,
+    "contact_found": true,
+    "coil_found": true,
+    "network_count": 2,
+    "ladder_element_count": 2,
+    "variable_declared": true,
+    "base_p1_untouched": true,
+    "negative_control": {
+      "base_element_count": 0,
+      "base_network_count": 2,
+      "base_elements": []
+    },
+    "cfbf_delta": {
+      "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+      "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g7_ladder_roundtrip.csp",
+      "base_element_count": 0,
+      "roundtrip_element_count": 2,
+      "delta_element_count": 2,
+      "base_network_count": 2,
+      "roundtrip_network_count": 2,
+      "delta_network_count": 0,
+      "delta_contact_records": [
+        {
+          "index": 0,
+          "tag": "ALW_ON",
+          "row": 0,
+          "col": 0,
+          "opcode": 0,
+          "type": "CONTACT_NO",
+          "raw_tag": "!\b@ALW_ON@",
+          "prefix_hex": "000100000000000000"
+        }
+      ],
+      "delta_coil_records": [
+        {
+          "index": 1,
+          "tag": "G3_TEST_VAR_01",
+          "row": 0,
+          "col": 9,
+          "opcode": 2,
+          "type": "COIL_NO",
+          "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+          "prefix_hex": "0000020900000000000000"
+        }
+      ],
+      "elements_existing_only_in_roundtrip": [
+        {
+          "index": 0,
+          "tag": "ALW_ON",
+          "row": 0,
+          "col": 0,
+          "opcode": 0,
+          "type": "CONTACT_NO",
+          "raw_tag": "!\b@ALW_ON@",
+          "prefix_hex": "000100000000000000"
+        },
+        {
+          "index": 1,
+          "tag": "G3_TEST_VAR_01",
+          "row": 0,
+          "col": 9,
+          "opcode": 2,
+          "type": "COIL_NO",
+          "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+          "prefix_hex": "0000020900000000000000"
+        }
+      ]
+    },
+    "status": "success",
+    "contents_size": 281308,
+    "total_declarations": 62,
+    "base_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881"
+  },
+  "dialogs_encountered": [],
+  "screenshots": [
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_roundtrip_steps\\g7_step1_main_enabled.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_roundtrip_steps\\g7_step2_elements_placed.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_roundtrip_reopen_main.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_roundtrip_canvas.png"
+  ],
+  "error": null,
+  "base_p1_sha256_pre": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "reopen_main_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_roundtrip_reopen_main.png",
+  "reopen_canvas_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_roundtrip_canvas.png",
+  "sha_preserved_on_reopen": true,
+  "base_p1_sha256_post": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881"
+}

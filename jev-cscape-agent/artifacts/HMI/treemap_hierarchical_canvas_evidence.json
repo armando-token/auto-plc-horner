@@ -1,0 +1,88 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W237",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Treemap Hierarchical Nested SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Treemap_Geometry_And_Viewport_Parameter_Verification",
+        "passed": true,
+        "timing_ms": 0.16,
+        "details": "Verified 1200x750 viewport, dark industrial theme (#0B0F19/#161B22), and Squarified Treemap layout parameters."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_Structured_Text_POU_Validation",
+        "passed": true,
+        "timing_ms": 0.67,
+        "details": "Validated pure IEC 61131-3 ST POU 'TreemapHierarchicalCanvasSync' with STParser & SecurityGuard across %R1980..%R1987 and %M462..%M463."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.03,
+        "details": "Rejected 6 forbidden ladder logic constructs (contacts, coils, rungs, networks, mnemonics) with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Squarified_Treemap_Layout_Partition_And_Area_Conservation",
+        "passed": true,
+        "timing_ms": 1.19,
+        "details": "Verified squarified layout partition: sum of child tile areas matches bounding rectangle (747040.0 px^2) with exact planar conservation."
+      },
+      {
+        "stage": 5,
+        "check": "Standalone_W3C_SVG_Vector_Canvas_Generation",
+        "passed": true,
+        "timing_ms": 2.45,
+        "details": "Generated valid W3C SVG 1.1 graphic with <rect> tiles, badges, and WCAG 2.1 AAA compliance (badge 20.01:1, text 17.30:1) -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\treemap_hierarchical_canvas_sample.svg."
+      },
+      {
+        "stage": 6,
+        "check": "Critical_Tile_Health_Alarm_Injection",
+        "passed": true,
+        "timing_ms": 1.57,
+        "details": "Verified critical tile failure injection (40.0% < 70%) -> CriticalTileAlarmCount > 0 -> %M463 alarm active, and de-assertion on recovery."
+      },
+      {
+        "stage": 7,
+        "check": "Diagnostic_Fault_Handling",
+        "passed": true,
+        "timing_ms": 1.92,
+        "details": "Verified 0xF501 (Geometry Singularity), 0xF502 (Empty Tree), and nominal recovery resets in between."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 2.01,
+        "details": "Verified %R1980..%R1987 (20, 9850, 0, 600, 3, 0, worst_ar, 0) and %M462..%M463 (True, False) bit-exact with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycle_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 51.41,
+        "details": "Verified 100 deterministic scan cycles: 0 memory leak (steady 20 tiles), constant health index (98.50%), steady layout."
+      }
+    ],
+    "metrics": {
+      "total_treemap_tiles_count": 20,
+      "plant_overall_health_pct_scaled": 9850,
+      "critical_tile_alarm_count": 0,
+      "total_plant_weight_metric_scaled": 600,
+      "max_hierarchy_depth_tiers": 3,
+      "selected_tile_index": 0,
+      "diagnostic_code": "0x0000",
+      "wcag_badge_contrast": 20.01371665884987,
+      "wcag_text_contrast": 17.29838090011432
+    }
+  }
+}

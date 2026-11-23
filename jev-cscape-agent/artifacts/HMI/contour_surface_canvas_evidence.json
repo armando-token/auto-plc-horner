@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W246",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Contour Surface Heatmap SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_And_AST_Validation",
+        "passed": true,
+        "timing_ms": 0.74,
+        "details": "Validated pure IEC 61131-3 ST POU 'ContourSurfaceCanvasSync' with STParser & SecurityGuard across %R2070..%R2077 and %M483..%M484."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.03,
+        "details": "Rejected 6 forbidden ladder logic constructs (contacts, coils, rungs, networks, mnemonics) with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Canvas_Bounds_And_Viewport_Geometry_Verification",
+        "passed": true,
+        "timing_ms": 0.0,
+        "details": "Verified 1200x750 viewport, canvas bounds (x=20, y=86, w=1160, h=644), dark theme backing (#0B0F19/#161B22/#21262D), and boundary containment."
+      },
+      {
+        "stage": 4,
+        "check": "8x8_Sensor_Mesh_And_Bilinear_Spline_Interpolation",
+        "passed": true,
+        "timing_ms": 0.18,
+        "details": "Verified 8x8 sensor matrix (64 nodes), min=350.0 \u00b0C, peak=625.0 \u00b0C at (3,3), and continuous bilinear interpolation."
+      },
+      {
+        "stage": 5,
+        "check": "Marching_Squares_16_Case_Isoclines_And_6_Thermal_Levels",
+        "passed": true,
+        "timing_ms": 1.16,
+        "details": "Verified 6-level high-contrast thermal scale (#06B6D4..#EF4444) and 16-case marching squares isocline path generation."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Thermal_Gradient_And_Hotspot_Alarm_Assertion",
+        "passed": true,
+        "timing_ms": 1.61,
+        "details": "Verified %M484 alarm assertion when thermal gradient > 45 \u00b0C/m or peak > 650 \u00b0C, and clean nominal de-assertion."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Diagnostic_Codes",
+        "passed": true,
+        "timing_ms": 15.9,
+        "details": "Verified 0xF801 (Grid Dimension Invalid), 0xF802 (Insufficient Levels), 0xF803 (Degenerate Range), 0xF804 (Canvas Overflow), %R2077 latching, and clean recovery."
+      },
+      {
+        "stage": 8,
+        "check": "Standalone_W3C_SVG_Vector_Canvas_Renderer_And_XML_Validity",
+        "passed": true,
+        "timing_ms": 4.12,
+        "details": "Generated valid W3C SVG 1.1 vector graphic with paths, 64 sensor circles, quad heatmap fills, decoupled badges, and HUD -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\contour_surface_canvas_sample.svg."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Sync_And_100_Cycle_Soak_Stability",
+        "passed": true,
+        "timing_ms": 26.81,
+        "details": "Verified %R2070..%R2077 (8, 8, 6, 6250, 3500, 2842, 27, 0) and %M483..%M484, WCAG AAA (19.13:1 badge, 18.30:1 text), and 100-cycle soak stability."
+      }
+    ],
+    "metrics": {
+      "grid_dimension_x": 8,
+      "grid_dimension_y": 8,
+      "contour_levels_count": 6,
+      "peak_value_scaled": 6250,
+      "min_value_scaled": 3500,
+      "mean_gradient_magnitude_scaled": 2842,
+      "selected_cell_index": 27,
+      "diagnostic_code": "0x0000",
+      "contour_canvas_active": true,
+      "hotspot_gradient_alarm": false,
+      "wcag_badge_contrast": 19.128528613916593,
+      "wcag_text_contrast": 18.303168456436335
+    }
+  }
+}

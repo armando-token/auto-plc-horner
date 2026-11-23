@@ -1,0 +1,168 @@
+{
+  "session_summary": {
+    "total_events": 10,
+    "total_steps": 10,
+    "current_screen_id": 1,
+    "current_screen_name": "Main Overview",
+    "current_role": "ENGINEER",
+    "active_breadcrumbs": [
+      1
+    ]
+  },
+  "topology_verification": {
+    "total_screens": 7,
+    "total_transitions": 23,
+    "is_fully_reachable": true,
+    "unreachable_count": 0,
+    "dead_end_count": 0
+  },
+  "security_audit": {
+    "tested_roles": [
+      "VIEWER",
+      "OPERATOR",
+      "SUPERVISOR",
+      "ENGINEER",
+      "ADMIN"
+    ],
+    "denied_attempts": 2,
+    "successful_transitions": 8
+  },
+  "event_trail": [
+    {
+      "step_number": 1,
+      "timestamp": "2026-10-02T20:41:41.164048+00:00",
+      "action": "REJECTED",
+      "source_screen_id": 1,
+      "target_screen_id": 6,
+      "user_role": "VIEWER",
+      "status": "DENIED",
+      "reason": "User role 'VIEWER' lacks required permission 'SecurityLevel.SUPERVISOR' for Screen 6.",
+      "breadcrumb_stack": [
+        1
+      ]
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-10-02T20:41:41.164048+00:00",
+      "action": "NAVIGATE",
+      "source_screen_id": 1,
+      "target_screen_id": 2,
+      "user_role": "OPERATOR",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1,
+        2
+      ]
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-10-02T20:41:41.164048+00:00",
+      "action": "BACK",
+      "source_screen_id": 2,
+      "target_screen_id": 1,
+      "user_role": "OPERATOR",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1
+      ]
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-10-02T20:41:41.164048+00:00",
+      "action": "NAVIGATE",
+      "source_screen_id": 1,
+      "target_screen_id": 5,
+      "user_role": "OPERATOR",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1,
+        5
+      ]
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-10-02T20:41:41.166806+00:00",
+      "action": "REJECTED",
+      "source_screen_id": 5,
+      "target_screen_id": 7,
+      "user_role": "OPERATOR",
+      "status": "DENIED",
+      "reason": "User role 'OPERATOR' lacks required permission 'SecurityLevel.ENGINEER' for Screen 7.",
+      "breadcrumb_stack": [
+        1,
+        5
+      ]
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-10-02T20:41:41.166806+00:00",
+      "action": "BACK",
+      "source_screen_id": 5,
+      "target_screen_id": 1,
+      "user_role": "OPERATOR",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1
+      ]
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-10-02T20:41:41.166806+00:00",
+      "action": "NAVIGATE",
+      "source_screen_id": 1,
+      "target_screen_id": 6,
+      "user_role": "SUPERVISOR",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1,
+        6
+      ]
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-10-02T20:41:41.166806+00:00",
+      "action": "BACK",
+      "source_screen_id": 6,
+      "target_screen_id": 1,
+      "user_role": "SUPERVISOR",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1
+      ]
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-10-02T20:41:41.166806+00:00",
+      "action": "NAVIGATE",
+      "source_screen_id": 1,
+      "target_screen_id": 7,
+      "user_role": "ENGINEER",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1,
+        7
+      ]
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-10-02T20:41:41.166806+00:00",
+      "action": "HOME",
+      "source_screen_id": 7,
+      "target_screen_id": 1,
+      "user_role": "ENGINEER",
+      "status": "SUCCESS",
+      "reason": null,
+      "breadcrumb_stack": [
+        1
+      ]
+    }
+  ],
+  "exported_at_utc": "2026-10-02T20:41:41.166806+00:00"
+}

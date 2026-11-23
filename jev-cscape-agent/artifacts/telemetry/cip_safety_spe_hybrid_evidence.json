@@ -1,0 +1,104 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over SPE Hybrid Power and Data stages passed deterministically (PASSED 9/9 stages).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W298",
+    "gate": "G8",
+    "protocol": "ODVA CIP Safety Over Single-Pair Ethernet (SPE) Hybrid Power and Data (IEEE 802.3cg / IEEE 802.3bu SPoE)",
+    "standards": [
+      "IEEE 802.3cg 10BASE-T1L",
+      "IEEE 802.3bu SPoE / PoDL Classes 10-15",
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2590..%R2597",
+      "%M604..%M605"
+    ],
+    "sha256_digests": {
+      "pou_sha256": "16f83f5efca359ce76724c02718e1f30cb404be5183c9e84cf6fb78c2137cef4",
+      "stages_sha256": "d520632f2af138c5c85cde898ce874b212c90c6790325445d989892a63bd3921"
+    },
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python version, OS platform, and core dependencies",
+        "passed": true,
+        "timing_ms": 2552.044,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants",
+        "check": "Verify power classes (10-15), diagnostic codes (0xEE31-0xEE37), register offsets (%R2590..%R2597, %M604..%M605)",
+        "passed": true,
+        "timing_ms": 0.025,
+        "details": "Power classes (10..15), diagnostic codes (0xEE31..0xEE37), and register bindings (%R2590..%R2597, %M604..%M605) verified."
+      },
+      {
+        "stage": 3,
+        "name": "crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics and corruption detection",
+        "passed": true,
+        "timing_ms": 0.239,
+        "details": "CRC-S1=0x492D, CRC-S2=0x2494. Distinct, deterministic, single-bit corruption detected."
+      },
+      {
+        "stage": 4,
+        "name": "power_coordination_and_faults",
+        "check": "Verify under-voltage (0xEE31), over-current (0xEE32), high loop resistance (0xEE33), ground leakage (0xEE34)",
+        "passed": true,
+        "timing_ms": 1.727,
+        "details": "All 4 power fault modes tripped deterministically with correct diagnostic codes and clean recovery."
+      },
+      {
+        "stage": 5,
+        "name": "safety_connection",
+        "check": "Verify state machine transitions and packet timeout (0xEE35)",
+        "passed": true,
+        "timing_ms": 0.705,
+        "details": "State machine transitions (IDLE->CONNECTING->RUNNING->FAULT) verified. Watchdog timeout tripped 0xEE35."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "check": "Verify RegisterTable reads/writes and bitwise masks across %R2590..%R2597 and %M604..%M605",
+        "passed": true,
+        "timing_ms": 0.642,
+        "details": "Bit-exact synchronization verified across all 8 analog registers and 2 discrete coils."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "check": "Verify ST POU 'CipSafetySpeHybridSync' and LadderForbiddenError on ladder syntax",
+        "passed": true,
+        "timing_ms": 1.687,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "check": "Verify multi-cycle ILogicUnit execution (100 cycles)",
+        "passed": true,
+        "timing_ms": 110.01,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 3.9 KB."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "check": "Write deterministic evidence JSON with SHA-256 digests",
+        "passed": true,
+        "timing_ms": 0.155,
+        "details": "Cryptographic SHA-256 digests generated. ST POU digest: 16f83f5efca359ce..."
+      }
+    ]
+  }
+}

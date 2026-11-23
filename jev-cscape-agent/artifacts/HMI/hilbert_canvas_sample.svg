@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 750" width="1200" height="750" style="background-color: #0D1117; font-family: monospace;">
+  <defs>
+    <linearGradient id="curveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <!-- Spatial Grid (Order 3, Resolution 8x8) -->
+  <g id="grid-layer" class="grid-cells" stroke-width="0.5" stroke-opacity="0.25">
+    <line x1="0.0" y1="0" x2="0.0" y2="750" stroke="#1E293B" />
+    <line x1="150.0" y1="0" x2="150.0" y2="750" stroke="#1E293B" />
+    <line x1="300.0" y1="0" x2="300.0" y2="750" stroke="#1E293B" />
+    <line x1="450.0" y1="0" x2="450.0" y2="750" stroke="#1E293B" />
+    <line x1="600.0" y1="0" x2="600.0" y2="750" stroke="#1E293B" />
+    <line x1="750.0" y1="0" x2="750.0" y2="750" stroke="#1E293B" />
+    <line x1="900.0" y1="0" x2="900.0" y2="750" stroke="#1E293B" />
+    <line x1="1050.0" y1="0" x2="1050.0" y2="750" stroke="#1E293B" />
+    <line x1="0" y1="0.0" x2="1200" y2="0.0" stroke="#1E293B" />
+    <line x1="0" y1="93.8" x2="1200" y2="93.8" stroke="#1E293B" />
+    <line x1="0" y1="187.5" x2="1200" y2="187.5" stroke="#1E293B" />
+    <line x1="0" y1="281.2" x2="1200" y2="281.2" stroke="#1E293B" />
+    <line x1="0" y1="375.0" x2="1200" y2="375.0" stroke="#1E293B" />
+    <line x1="0" y1="468.8" x2="1200" y2="468.8" stroke="#1E293B" />
+    <line x1="0" y1="562.5" x2="1200" y2="562.5" stroke="#1E293B" />
+    <line x1="0" y1="656.2" x2="1200" y2="656.2" stroke="#1E293B" />
+  </g>
+  <!-- Space-Filling Curve Path (Points: 64) -->
+  <path id="hilbert-path" class="hilbert-curve-path" d="M 75.0,46.9 L 75.0,140.6 L 225.0,140.6 L 225.0,46.9 L 375.0,46.9 L 525.0,46.9 L 525.0,140.6 L 375.0,140.6 L 375.0,234.4 L 525.0,234.4 L 525.0,328.1 L 375.0,328.1 L 225.0,328.1 L 225.0,234.4 L 75.0,234.4 L 75.0,328.1 L 75.0,421.9 L 225.0,421.9 L 225.0,515.6 L 75.0,515.6 L 75.0,609.4 L 75.0,703.1 L 225.0,703.1 L 225.0,609.4 L 375.0,609.4 L 375.0,703.1 L 525.0,703.1 L 525.0,609.4 L 525.0,515.6 L 375.0,515.6 L 375.0,421.9 L 525.0,421.9 L 675.0,421.9 L 825.0,421.9 L 825.0,515.6 L 675.0,515.6 L 675.0,609.4 L 675.0,703.1 L 825.0,703.1 L 825.0,609.4 L 975.0,609.4 L 975.0,703.1 L 1125.0,703.1 L 1125.0,609.4 L 1125.0,515.6 L 975.0,515.6 L 975.0,421.9 L 1125.0,421.9 L 1125.0,328.1 L 1125.0,234.4 L 975.0,234.4 L 975.0,328.1 L 825.0,328.1 L 675.0,328.1 L 675.0,234.4 L 825.0,234.4 L 825.0,140.6 L 675.0,140.6 L 675.0,46.9 L 825.0,46.9 L 975.0,46.9 L 975.0,140.6 L 1125.0,140.6 L 1125.0,46.9" fill="none" stroke="url(#curveGrad)" stroke-width="1.8" stroke-linejoin="round" />
+  <g id="query-reticle-layer" class="range-reticle">
+    <circle cx="600.0" cy="375.0" r="160.0" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4 2" />
+  </g>
+  <!-- Equipment & Sensor Nodes -->
+  <g id="nodes-layer">
+    <g id="sensor-1" class="sensor-node">
+      
+      <circle cx="745.0" cy="75.8" r="6" fill="#EF4444" stroke="#DC2626" stroke-width="1.5" />
+      <text x="754.0" y="71.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-001</text>
+    </g>
+    <g id="sensor-2" class="sensor-node">
+      
+      <circle cx="366.0" cy="200.6" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="375.0" y="196.6" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-002</text>
+    </g>
+    <g id="sensor-3" class="sensor-node">
+      
+      <circle cx="845.9" cy="486.3" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="854.9" y="482.3" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-003</text>
+    </g>
+    <g id="sensor-4" class="sensor-node">
+      
+      <circle cx="1007.9" cy="114.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="1016.9" y="110.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-004</text>
+    </g>
+    <g id="sensor-5" class="sensor-node">
+      
+      <circle cx="518.8" cy="78.8" r="6" fill="#F59E0B" stroke="#D97706" stroke-width="1.5" />
+      <text x="527.8" y="74.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-005</text>
+    </g>
+    <g id="sensor-6" class="sensor-node">
+      
+      <circle cx="307.4" cy="378.4" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="316.4" y="374.4" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-006</text>
+    </g>
+    <g id="sensor-7" class="sensor-node">
+      
+      <circle cx="107.6" cy="185.3" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="116.6" y="181.3" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-007</text>
+    </g>
+    <g id="sensor-8" class="sensor-node">
+      <circle cx="755.9" cy="403.3" r="12" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="755.9" cy="403.3" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="764.9" y="399.3" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-008</text>
+    </g>
+    <g id="sensor-9" class="sensor-node">
+      
+      <circle cx="309.3" cy="431.2" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="318.3" y="427.2" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-009</text>
+    </g>
+    <g id="sensor-10" class="sensor-node">
+      
+      <circle cx="921.8" cy="64.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="930.8" y="60.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-010</text>
+    </g>
+    <g id="sensor-11" class="sensor-node">
+      
+      <circle cx="918.1" cy="499.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="927.1" y="495.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-011</text>
+    </g>
+    <g id="sensor-12" class="sensor-node">
+      
+      <circle cx="433.9" cy="158.0" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="442.9" y="154.0" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-012</text>
+    </g>
+    <g id="sensor-13" class="sensor-node">
+      
+      <circle cx="1075.5" cy="272.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="1084.5" y="268.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-013</text>
+    </g>
+    <g id="sensor-14" class="sensor-node">
+      
+      <circle cx="176.5" cy="120.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="185.5" y="116.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-014</text>
+    </g>
+    <g id="sensor-15" class="sensor-node">
+      
+      <circle cx="961.4" cy="440.3" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="970.4" y="436.3" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-015</text>
+    </g>
+    <g id="sensor-16" class="sensor-node">
+      
+      <circle cx="919.4" cy="519.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="928.4" y="515.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-016</text>
+    </g>
+    <g id="sensor-17" class="sensor-node">
+      
+      <circle cx="637.7" cy="673.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="646.7" y="669.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-017</text>
+    </g>
+    <g id="sensor-18" class="sensor-node">
+      <circle cx="473.7" cy="407.8" r="12" fill="#06B6D4" fill-opacity="0.25" />
+      <circle cx="473.7" cy="407.8" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="482.7" y="403.8" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-018</text>
+    </g>
+    <g id="sensor-19" class="sensor-node">
+      
+      <circle cx="942.6" cy="449.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="951.6" y="445.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-019</text>
+    </g>
+    <g id="sensor-20" class="sensor-node">
+      
+      <circle cx="976.2" cy="423.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="985.2" y="419.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-020</text>
+    </g>
+    <g id="sensor-21" class="sensor-node">
+      
+      <circle cx="812.8" cy="88.9" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="821.8" y="84.9" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-021</text>
+    </g>
+    <g id="sensor-22" class="sensor-node">
+      
+      <circle cx="317.0" cy="242.3" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="326.0" y="238.3" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-022</text>
+    </g>
+    <g id="sensor-23" class="sensor-node">
+      
+      <circle cx="163.0" cy="206.7" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="172.0" y="202.7" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-023</text>
+    </g>
+    <g id="sensor-24" class="sensor-node">
+      
+      <circle cx="185.0" cy="235.1" r="6" fill="#10B981" stroke="#059669" stroke-width="1.5" />
+      <text x="194.0" y="231.1" fill="#FFFFFF" font-size="9" font-weight="bold">EQ-024</text>
+    </g>
+  </g>
+  <!-- HUD Telemetry Scorecard -->
+  <g id="scorecard-layer" class="hud-telemetry-scorecard">
+    <rect x="15" y="15" width="460" height="70" rx="6" fill="#05080C" stroke="#334155" stroke-width="1.2" />
+    <text x="25" y="35" fill="#FFFFFF" font-size="12" font-weight="bold">SPACE-FILLING CURVE SCADA CANVAS [W306]</text>
+    <text x="25" y="55" fill="#CBD5E1" font-size="10">ORDER: 3 | RES: 8x8 | POINTS: 24 | MATCHES: 2</text>
+    <text x="25" y="72" fill="#94A3B8" font-size="9">LOCALITY RATIO: 1.00 | DIAG: 0x0000 | REGS: %R2670..%R2677</text>
+    <rect x="1020" y="15" width="165" height="28" rx="4" fill="#10B981" />
+    <text x="1103" y="33" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">INDEXING NOMINAL</text>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Modbus RTU RS-485 Engine verified cleanly (9/9 stages passed).",
+  "data": {
+    "work_package": "W169",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Modbus RTU Over RS-485 Half-Duplex Turnaround & Inter-Frame Silent Interval Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed ModbusRtuRs485Sync and alias with 10 registered bindings: ['%M303', '%M304', '%R1300', '%R1301', '%R1302', '%R1303', '%R1304', '%R1305', '%R1306', '%R1307']."
+      },
+      {
+        "stage": 2,
+        "check": "Baud_Rate_Support_And_Character_Timing_Calculations",
+        "passed": true,
+        "details": "Deterministic 11-bit character timing, t1.5, and t3.5 calculations verified across all standard baud rates."
+      },
+      {
+        "stage": 3,
+        "check": "Modbus_RTU_Frame_Serialization_Parsing_And_CRC16",
+        "passed": true,
+        "details": "Serialization, little-endian CRC-16 (0xA001/0xFFFF), and deserialization verified."
+      },
+      {
+        "stage": 4,
+        "check": "Half_Duplex_Directional_Transceiver_Control_And_Turnaround",
+        "passed": true,
+        "details": "RTS/DE/~RE transceiver transitions and 500 us turnaround delay verified."
+      },
+      {
+        "stage": 5,
+        "check": "Transceiver_Bus_State_Machine_Lifecycle",
+        "passed": true,
+        "details": "IDLE -> TRANSMIT -> TURNAROUND -> SILENT_INTERVAL_T35 -> IDLE state cycle verified."
+      },
+      {
+        "stage": 6,
+        "check": "Inter_Frame_Silent_Interval_Violation_Trapping",
+        "passed": true,
+        "details": "Premature transmission before 3.5 character silence trapped deterministically with 0xC201."
+      },
+      {
+        "stage": 7,
+        "check": "Direction_Contention_And_Turnaround_Collision_Trapping",
+        "passed": true,
+        "details": "Driver enable during turnaround line settling trapped deterministically with 0xC202."
+      },
+      {
+        "stage": 8,
+        "check": "CRC16_Mismatch_And_Character_Overrun_Trapping",
+        "passed": true,
+        "details": "Corrupted CRC (0xC203) and t1.5 character overrun (0xC204) trapped deterministically."
+      },
+      {
+        "stage": 9,
+        "check": "Closed_Loop_Scan_Cycle_And_Operator_Reset_Synchronization",
+        "passed": true,
+        "details": "ILogicUnit scan execution, manual operator reset handshake, and full memory synchronization verified."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1300..%R1307",
+      "discrete_coils": "%M303..%M304",
+      "values": {
+        "%R1300": 192,
+        "%R1301": 2005,
+        "%R1302": 500,
+        "%R1303": 2,
+        "%R1304": 1,
+        "%R1305": 512,
+        "%R1306": 256,
+        "%R1307": 0,
+        "%M303": true,
+        "%M304": false
+      }
+    },
+    "timestamp": "2026-10-05T05:07:03Z"
+  }
+}

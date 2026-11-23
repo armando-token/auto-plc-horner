@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "IEC 61131-3 SFC Execution Engine verified: Initial step, selection transitions, simultaneous divergence (AND fork), simultaneous convergence (AND join), standard action qualifiers (N, S, R, L, D, P), pure ST ladder construct rejection, and Horner OCS register space synchronization (%R250..%R253, %M51..%M53) passed.",
+  "data": {
+    "work_package": "W060",
+    "gate": "G4",
+    "timestamp_utc": "2026-10-02T21:30:44.194291+00:00",
+    "topology_verified": {
+      "steps_count": 5,
+      "transitions_count": 4,
+      "and_fork_verified": true,
+      "and_join_verified": true,
+      "completed_cycles": 1
+    },
+    "action_qualifiers_verified": [
+      "N",
+      "S",
+      "R",
+      "L",
+      "D",
+      "P"
+    ],
+    "security_invariants": {
+      "pure_st_enforced": true,
+      "ladder_construct_injection_blocked": true,
+      "fail_closed_error": "LadderForbiddenError"
+    },
+    "horner_ocs_register_map": {
+      "%R250": "Active Step Bitmask (16-bit word)",
+      "%R251": "Primary Active Step ID (1..16)",
+      "%R252": "Active Step Duration (deciseconds 0.1s)",
+      "%R253": "Total Completed SFC Cycles",
+      "%M51": "SFC Enable / Run Coil",
+      "%M52": "SFC Single-Step Manual Advance Trigger Coil",
+      "%M53": "SFC Reset to Initial Step Coil"
+    }
+  }
+}

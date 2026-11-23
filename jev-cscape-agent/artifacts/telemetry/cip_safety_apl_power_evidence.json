@@ -1,0 +1,174 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Ethernet-APL Intrinsically Safe Power Coordination stages passed deterministically (PASSED 9/9 stages).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W295",
+    "gate": "G8",
+    "protocol": "ODVA CIP Safety Over Ethernet-APL Intrinsically Safe Power Coordination (IEEE 802.3cg / IEC 60079-47 2-WISE)",
+    "standards": [
+      "IEEE 802.3cg 10BASE-T1L",
+      "IEC 60079-47 2-WISE",
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2560..%R2567",
+      "%M597..%M598"
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "init_and_power_classes",
+        "check": "IEEE 802.3cg / IEC 60079-47 2-WISE Power Classes (A, C, D) and Initial State",
+        "passed": true,
+        "timing_ms": 7.607,
+        "details": "Power Classes A (500mW spur), C (50W trunk), D (field switch spur) verified healthy."
+      },
+      {
+        "stage": 2,
+        "name": "dual_crc_validation",
+        "check": "ODVA CIP Safety Volume 5 Dual CRC (CRC-S1 poly 0x5935, CRC-S2 poly 0x755B) Validation",
+        "passed": true,
+        "timing_ms": 2.071,
+        "details": "Dual CRCs validated; CRC-S1 fault intercepted with 0xEE25, CRC-S2 fault with 0xEE26."
+      },
+      {
+        "stage": 3,
+        "name": "under_voltage_trip",
+        "check": "Bus Under-Voltage (< 9000 mV) Interception, Safe Output De-Energization, and Recovery",
+        "passed": true,
+        "timing_ms": 0.485,
+        "details": "Under-voltage trip 0xEE21 de-energized safe outputs; clear_faults recovered healthy operation."
+      },
+      {
+        "stage": 4,
+        "name": "over_current_trip",
+        "check": "Bus Over-Current (> 1500 mA) Trip, Safe De-Energization in < 5ms, and Recovery",
+        "passed": true,
+        "timing_ms": 0.485,
+        "details": "Over-current trip 0xEE22 executed de-energization in 1.20 ms (<5ms)."
+      },
+      {
+        "stage": 5,
+        "name": "ground_leakage_trip",
+        "check": "Ground Leakage Surveillance (> 10 mA), Fault Trip (0xEE23), and Recovery",
+        "passed": true,
+        "timing_ms": 0.468,
+        "details": "Ground leakage at 12.8 mA tripped 0xEE23 with status bit 3 set; restored cleanly."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_overload_and_inrush",
+        "check": "Thermal Overload (> 85 C, 0xEE24) and Inrush Limit Exceedance (> 1.25x, 0xEE27)",
+        "passed": true,
+        "timing_ms": 0.792,
+        "details": "Thermal overload (89 C) and inrush (1.4x) tripped corresponding diagnostic codes and status bits."
+      },
+      {
+        "stage": 7,
+        "name": "crowbar_and_fail_safe_deenergize",
+        "check": "Hardware Crowbar Circuit Clamp to 0V in < 5ms, Power Off, and Power On Cycling",
+        "passed": true,
+        "timing_ms": 0.638,
+        "details": "Crowbar clamped bus to 0V with bit 7 asserted; power cycling verified cleanly."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "Bit-Exact Horner OCS Register Space (%R2560..%R2567) and Coils (%M597..%M598)",
+        "passed": true,
+        "timing_ms": 0.625,
+        "details": "%R2560=0x0201, %R2561=50000mV, %R2562=500mA, %R2563=25000mW, %R2566=0x0003, %M597=True, %M598=False."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 6.546,
+        "details": "Pure ST POU verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "init_and_power_classes",
+        "check": "IEEE 802.3cg / IEC 60079-47 2-WISE Power Classes (A, C, D) and Initial State",
+        "passed": true,
+        "timing_ms": 7.607,
+        "details": "Power Classes A (500mW spur), C (50W trunk), D (field switch spur) verified healthy."
+      },
+      {
+        "stage": 2,
+        "name": "dual_crc_validation",
+        "check": "ODVA CIP Safety Volume 5 Dual CRC (CRC-S1 poly 0x5935, CRC-S2 poly 0x755B) Validation",
+        "passed": true,
+        "timing_ms": 2.071,
+        "details": "Dual CRCs validated; CRC-S1 fault intercepted with 0xEE25, CRC-S2 fault with 0xEE26."
+      },
+      {
+        "stage": 3,
+        "name": "under_voltage_trip",
+        "check": "Bus Under-Voltage (< 9000 mV) Interception, Safe Output De-Energization, and Recovery",
+        "passed": true,
+        "timing_ms": 0.485,
+        "details": "Under-voltage trip 0xEE21 de-energized safe outputs; clear_faults recovered healthy operation."
+      },
+      {
+        "stage": 4,
+        "name": "over_current_trip",
+        "check": "Bus Over-Current (> 1500 mA) Trip, Safe De-Energization in < 5ms, and Recovery",
+        "passed": true,
+        "timing_ms": 0.485,
+        "details": "Over-current trip 0xEE22 executed de-energization in 1.20 ms (<5ms)."
+      },
+      {
+        "stage": 5,
+        "name": "ground_leakage_trip",
+        "check": "Ground Leakage Surveillance (> 10 mA), Fault Trip (0xEE23), and Recovery",
+        "passed": true,
+        "timing_ms": 0.468,
+        "details": "Ground leakage at 12.8 mA tripped 0xEE23 with status bit 3 set; restored cleanly."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_overload_and_inrush",
+        "check": "Thermal Overload (> 85 C, 0xEE24) and Inrush Limit Exceedance (> 1.25x, 0xEE27)",
+        "passed": true,
+        "timing_ms": 0.792,
+        "details": "Thermal overload (89 C) and inrush (1.4x) tripped corresponding diagnostic codes and status bits."
+      },
+      {
+        "stage": 7,
+        "name": "crowbar_and_fail_safe_deenergize",
+        "check": "Hardware Crowbar Circuit Clamp to 0V in < 5ms, Power Off, and Power On Cycling",
+        "passed": true,
+        "timing_ms": 0.638,
+        "details": "Crowbar clamped bus to 0V with bit 7 asserted; power cycling verified cleanly."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "Bit-Exact Horner OCS Register Space (%R2560..%R2567) and Coils (%M597..%M598)",
+        "passed": true,
+        "timing_ms": 0.625,
+        "details": "%R2560=0x0201, %R2561=50000mV, %R2562=500mA, %R2563=25000mW, %R2566=0x0003, %M597=True, %M598=False."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 6.546,
+        "details": "Pure ST POU verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      }
+    ]
+  }
+}

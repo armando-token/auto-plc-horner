@@ -1,0 +1,99 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Rotary Kiln Clinkerization Thermal Reaction Kinetics & Bed Dynamics ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W137",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Rotary Kiln Clinkerization Dynamics ODE Simulator",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POUs RotaryKilnClinkerSync and RotaryKilnDynamicsSync bound %R980..%R987 and %M228..%M230."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Rejection",
+        "passed": true,
+        "details": "SecurityGuard rejected all 10 ladder logic contacts, coils, rungs, and mnemonics with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Clinkerization_Kinetics_And_Mineralogy",
+        "passed": true,
+        "details": "Kinetics verified: Alite=62.4% (>=60%), Free CaO=1.20% (<1.5%), Delta H=1780 kJ/kg."
+      },
+      {
+        "stage": 4,
+        "check": "Saeman_Bed_Transport_And_Heat_Transfer_Dynamics",
+        "passed": true,
+        "details": "Saeman transport verified: tau(2.5rpm)=1006.4s > tau(3.5rpm)=718.9s > tau(4.5rpm)=559.1s; Nominal drive torque=85.0 kNm (~85 kNm); Radiative & convective heat exchange active."
+      },
+      {
+        "stage": 5,
+        "check": "High_Order_RK4_With_6State_ODE_System",
+        "passed": true,
+        "details": "RK4 integration stable: T_burn=1437.5\u00b0C, T_calc=897.1\u00b0C, Alite=62.0%, Free CaO=1.32%."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Residuals verified < 1e-10: Total mass residual=0.000e+00 kg/s, Elemental Ca residual=0.000e+00 kg/s, Elemental Si residual=0.000e+00 kg/s."
+      },
+      {
+        "stage": 7,
+        "check": "Hotspot_Refractory_Trip_And_Drive_Lockout",
+        "passed": true,
+        "details": "Hotspot trip verified: %M229 asserted, %M228 cleared, %R987=0xA201."
+      },
+      {
+        "stage": 8,
+        "check": "High_Free_Lime_And_Drive_Overtorque_Diagnostics",
+        "passed": true,
+        "details": "Diagnostics verified: High free lime 0xA202 (%M230=TRUE)=True, Drive overtorque 0xA203 (%M228=FALSE)=True."
+      },
+      {
+        "stage": 9,
+        "check": "Combustion_Flameout_And_Horner_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Flameout verified (0xA204); Registers synced: %R980=14501, %R981=9192, %R982=850, %R983=350, %R984=625, %R985=121, %R986=4500, %R987=0x0000."
+      }
+    ],
+    "metrics": {
+      "burning_zone_temp_c": 1450.1318755492357,
+      "calcination_zone_temp_c": 919.1782213664229,
+      "drive_torque_knm": 85.02258685008667,
+      "rotation_speed_rpm": 3.5,
+      "clinker_alite_pct": 62.475823183088316,
+      "free_lime_pct": 1.2059381298884817,
+      "fuel_firing_rate_kgh": 450.0,
+      "residence_time_min": 11.98146345910818,
+      "total_mass_balance_residual_kg_s": 0.0,
+      "elemental_ca_residual_kg_s": 0.0,
+      "elemental_si_residual_kg_s": 0.0
+    },
+    "register_map": {
+      "analog_registers": "%R980..%R987",
+      "discrete_coils": "%M228..%M230",
+      "values": {
+        "%R980": 14501,
+        "%R981": 9192,
+        "%R982": 850,
+        "%R983": 350,
+        "%R984": 625,
+        "%R985": 121,
+        "%R986": 4500,
+        "%R987": 0,
+        "%M228": true,
+        "%M229": false,
+        "%M230": false
+      }
+    },
+    "timestamp": "2026-10-04T19:55:03Z"
+  }
+}

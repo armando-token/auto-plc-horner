@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Three-Phase Separator Simulator verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W092",
+    "gate": "Gate G7 / G4",
+    "component": "Three-Phase Separator Hydrodynamics & Interfacial Emulsion Layer Dynamics ODE Solver",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R530..%R537 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Stokes_Droplet_Settling_And_Rising_Velocities",
+        "passed": true,
+        "details": "Water settling v_w=6.719e-05 m/s (100 um), Oil rising v_o=2.268e-03 m/s (150 um)."
+      },
+      {
+        "stage": 3,
+        "check": "Emulsion_Pad_Coalescence_And_Demulsifier_Kinetics",
+        "passed": true,
+        "details": "Coalescence accelerated from 0.0083 1/s (Psi=3.00) to 0.0189 1/s (Psi=1.32) at 35 ppm."
+      },
+      {
+        "stage": 4,
+        "check": "Wire_Mesh_Demister_Pad_Separation_Efficiency",
+        "passed": true,
+        "details": "Demister capture efficiency 99.999% (>=99.8%), dP=0.08 mbar, v_g=0.44 m/s."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_ODE_Mass_Conservation_Residual",
+        "passed": true,
+        "details": "Mass conservation residual 1.42e-14 kg/s (< 1e-10 kg/s deterministic limit)."
+      },
+      {
+        "stage": 6,
+        "check": "Francis_Overflow_Weir_Spillover_Dynamics",
+        "passed": true,
+        "details": "Weir dry at 1.10 m (0 L/min), spilling 9571.0 L/min at 1.35 m crest."
+      },
+      {
+        "stage": 7,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers synced: %R530=600 mm, %R531=80 mm, %R533=799 kPa, %R537=0x00D1."
+      },
+      {
+        "stage": 8,
+        "check": "High_High_Emulsion_Pad_Alarm_Actuation",
+        "passed": true,
+        "details": "Emulsion pad thickness 280 mm successfully actuated coil %M123 and bit 2 of status word %R537."
+      },
+      {
+        "stage": 9,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts and coils strictly intercepted with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R530..%R537",
+      "discrete_coils": "%M123..%M125",
+      "values": {
+        "%R530": 600,
+        "%R531": 280,
+        "%R532": 646,
+        "%R533": 795,
+        "%R534": 88,
+        "%R535": 1,
+        "%R536": 5000,
+        "%R537": 213,
+        "%M123": true,
+        "%M124": false,
+        "%M125": true
+      }
+    },
+    "timestamp": "2026-10-03T02:07:38Z"
+  }
+}

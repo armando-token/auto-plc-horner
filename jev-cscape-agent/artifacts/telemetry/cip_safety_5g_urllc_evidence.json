@@ -1,0 +1,181 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W256 CIP Safety Over 5G URLLC Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W256",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety Over 5G URLLC (3GPP Rel-16/17 Delay-Critical GBR)",
+    "work_package": "W256",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x2F": "CIP Safety 5G URLLC Object"
+    },
+    "5qi_flow_id": 82,
+    "register_map": {
+      "%R2170": "Safe 5G URLLC State Machine (0..4)",
+      "%R2171": "5G RSRP (dBm)",
+      "%R2172": "5G SINR (dB)",
+      "%R2173": "URLLC Latency (us)",
+      "%R2174": "5G 5QI QoS Flow Identifier",
+      "%R2175": "5G Active Radio Beam / Carrier ID",
+      "%R2176": "Safety Transmit Sequence",
+      "%R2177": "5G URLLC Diagnostic Status Code",
+      "%M506": "5G URLLC Safety Link Healthy Coil",
+      "%M507": "5G URLLC Safety Stop Tripped Coil"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "FiveG_URLLC_Safety_Profile_And_Framing",
+        "check": "5G URLLC Safety Profile & Framing (Dual CRC-S1/S2, 5QI Flow ID)",
+        "passed": true,
+        "timing_ms": 0.712,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x2F), 5QI Flow ID (82), and Dual CRC-S1 (0x5935)/S2 (0x755B) framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 3.39,
+        "details": "POU 'CipSafety5gUrllcSync' validated with STParser and SecurityGuard, binding %R2170..%R2177 and %M506..%M507."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_FiveG_URLLC_Telemetry",
+        "check": "Nominal 5G URLLC Telemetry (RSRP -75 dBm, SINR 18 dB, Latency 950 us, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.617,
+        "details": "Nominal RSRP -75 dBm, SINR 18 dB, Latency 950 us, diagnostic 0x0000, %M506=True, and %M507=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "RSRP_Signal_Drop_And_Safe_Stop_Trip",
+        "check": "RSRP Signal Drop & Safe Stop Trip (0xEE21, %M507)",
+        "passed": true,
+        "timing_ms": 0.651,
+        "details": "RSRP signal drop (-110 dBm) tripped 0xEE21, asserted %M507, de-asserted %M506, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "SINR_Noise_Interference_Trip",
+        "check": "SINR Noise Interference Trip (0xEE22, %M507)",
+        "passed": true,
+        "timing_ms": 0.626,
+        "details": "SINR noise interference (0 dB < 3 dB limit) tripped 0xEE22, asserted %M507, de-asserted %M506, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "URLLC_Latency_Overrun_Trip",
+        "check": "URLLC Latency Overrun Trip (0xEE23, %M507)",
+        "passed": true,
+        "timing_ms": 0.649,
+        "details": "URLLC latency overrun (2500 us > 2000 us limit) & silence timeout tripped 0xEE23, asserted %M507, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2170..%R2177, %M506..%M507)",
+        "passed": true,
+        "timing_ms": 0.802,
+        "details": "Bit-exact %R2170..%R2177 and %M506..%M507 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 1310.211,
+        "details": "100 scan cycles executed without fault or drift, heap growth 1.02 KB (< 100 KB)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "FiveG_URLLC_Safety_Profile_And_Framing",
+        "check": "5G URLLC Safety Profile & Framing (Dual CRC-S1/S2, 5QI Flow ID)",
+        "passed": true,
+        "timing_ms": 0.712,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x2F), 5QI Flow ID (82), and Dual CRC-S1 (0x5935)/S2 (0x755B) framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 3.39,
+        "details": "POU 'CipSafety5gUrllcSync' validated with STParser and SecurityGuard, binding %R2170..%R2177 and %M506..%M507."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_FiveG_URLLC_Telemetry",
+        "check": "Nominal 5G URLLC Telemetry (RSRP -75 dBm, SINR 18 dB, Latency 950 us, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.617,
+        "details": "Nominal RSRP -75 dBm, SINR 18 dB, Latency 950 us, diagnostic 0x0000, %M506=True, and %M507=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "RSRP_Signal_Drop_And_Safe_Stop_Trip",
+        "check": "RSRP Signal Drop & Safe Stop Trip (0xEE21, %M507)",
+        "passed": true,
+        "timing_ms": 0.651,
+        "details": "RSRP signal drop (-110 dBm) tripped 0xEE21, asserted %M507, de-asserted %M506, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "SINR_Noise_Interference_Trip",
+        "check": "SINR Noise Interference Trip (0xEE22, %M507)",
+        "passed": true,
+        "timing_ms": 0.626,
+        "details": "SINR noise interference (0 dB < 3 dB limit) tripped 0xEE22, asserted %M507, de-asserted %M506, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "URLLC_Latency_Overrun_Trip",
+        "check": "URLLC Latency Overrun Trip (0xEE23, %M507)",
+        "passed": true,
+        "timing_ms": 0.649,
+        "details": "URLLC latency overrun (2500 us > 2000 us limit) & silence timeout tripped 0xEE23, asserted %M507, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2170..%R2177, %M506..%M507)",
+        "passed": true,
+        "timing_ms": 0.802,
+        "details": "Bit-exact %R2170..%R2177 and %M506..%M507 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 1310.211,
+        "details": "100 scan cycles executed without fault or drift, heap growth 1.02 KB (< 100 KB)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W222",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Contour Plot & 2D Scalar Field Isoline Gradient SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'ContourCanvasSync' and 'ContourPlotHmiSync' POUs with SecurityGuard & STParser across Horner registers %R1830..%R1837 and %M427..%M428."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "2D_Scalar_Field_Thermal_Distribution_And_Hotspot_Detection",
+        "passed": true,
+        "details": "Verified 32x24 grid resolution (768 nodes), Min = 120.0 \u00b0C, Max = 245.0 \u00b0C, Hotspot at (18.4, 12.6), and bilinear continuous interpolation."
+      },
+      {
+        "stage": 4,
+        "check": "Marching_Squares_16Case_Lookup_And_Linear_Interpolation",
+        "passed": true,
+        "details": "Verified Marching Squares 16-case lookup, linear interpolation edge intersections, and continuous path synthesis (394 total segments across 8 levels)."
+      },
+      {
+        "stage": 5,
+        "check": "Multi_Level_Isolines_And_Palette_Gradient_Mapping",
+        "passed": true,
+        "details": "Verified 8 monotonic isoline levels [133.9\u00b0C..231.1\u00b0C], Cool-to-Warm & Viridis gradient swatches, and numeric contour value badges."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Safety_Interlocks_Hotspot_Thermal_Alarm_Trip",
+        "passed": true,
+        "details": "Verified %M428 assertion on T_max > 235.0 \u00b0C, de-assertion on T_max <= 235.0 \u00b0C, 0xEE03 trip on T_max > 300.0 \u00b0C, and nominal recovery."
+      },
+      {
+        "stage": 7,
+        "check": "Diagnostic_Fault_Injection_Singularity_Grid_And_Render_Faults",
+        "passed": true,
+        "details": "Verified 0xEE01 (Scalar Field Singularity), 0xEE02 (Marching Squares Grid Fault), and 0xEE04 (SVG Render Fault) with %R1837 latching and nominal reset."
+      },
+      {
+        "stage": 8,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Layout",
+        "passed": true,
+        "details": "Verified standalone W3C SVG 1.1 with WCAG 2.1 AAA contrast (> 18:1), isoline paths (<path d='M... L...'/>), reticle crosshairs, HUD telemetry card, and legend -> artifacts\\HMI\\contour_canvas_sample.svg."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_ILogicUnit_Scan_Cycle",
+        "passed": true,
+        "details": "Verified %R1830..%R1837 (32, 24, 8, 2450, 1200, 184, 126, 0) and %M427..%M428 (True, True) with PrivilegeMode.SYSTEM and discrete ILogicUnit scan cycle execution."
+      }
+    ],
+    "metrics": {
+      "grid_resolution_width": 32,
+      "grid_resolution_height": 24,
+      "active_isoline_level_count": 8,
+      "max_field_value_c": 245.0,
+      "min_field_value_c": 120.0,
+      "hotspot_x_coordinate": 18.4,
+      "hotspot_y_coordinate": 12.6,
+      "hotspot_thermal_alarm_active": true,
+      "diagnostic_code": "0x0000",
+      "wcag_badge_contrast": 18.3,
+      "wcag_text_contrast": 18.09
+    }
+  }
+}

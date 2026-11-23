@@ -1,0 +1,22 @@
+{
+  "artifact_version": "1.0.0",
+  "archived_at_utc": "2026-10-08T21:10:00+00:00",
+  "gate": "G4",
+  "title": "Historical G4 JEV Run - FAILED (Wrong Invented Host)",
+  "status": "failed",
+  "error_code": "ERR_WRONG_INVENTED_HOST",
+  "details": "FAILED: Previous run used wrong invented host (https://api.controlnautas.com/v1/jev) and unmapped subdomain api.controlnautas.com which resulted in getaddrinfo failed. Megaplan 12.3 specifies Jev is TypeSafe (endpoint: https://api.typesafe.ai/v1/systemone, model: jev-latest). Old evidence marked FAILED.",
+  "failed_run_snapshot": {
+    "generated_at_utc": "2026-10-08T20:50:10.412116+00:00",
+    "endpoint_attempted": "https://api.controlnautas.com/v1/jev",
+    "model_id": "jev-industrial-expert-v1",
+    "call_status": "failed",
+    "socket_error": "URLError: <urlopen error [Errno 11001] getaddrinfo failed>",
+    "latency_ms": 204.85,
+    "verdict": "INVALID_HOST"
+  },
+  "safety_invariants": {
+    "zero_secrets_printed": true,
+    "hardware_lockout_active": true
+  }
+}

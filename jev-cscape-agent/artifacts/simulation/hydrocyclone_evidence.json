@@ -1,0 +1,83 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Hydrocyclone Desanding & Separation ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W128",
+    "gate": "Gate G7 / Gate G4",
+    "component": "Industrial Hydrocyclone Desanding & Multi-Phase Centrifugal Separation Dynamics ODE Simulator",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU validated; %R890..%R897 and %M207..%M209 bound into AST."
+      },
+      {
+        "stage": 2,
+        "check": "Rietema_Swirl_Velocity_And_Centrifugal_Acceleration",
+        "passed": true,
+        "details": "Swirl vortex velocity profile verified: v_outer=10.15 m/s < v_mid=13.48 m/s < v_inner=21.16 m/s; Centrifugal a_c=1029.4 m/s2 (G=105.0)."
+      },
+      {
+        "stage": 3,
+        "check": "Stokes_Centrifugal_Force_And_Rietema_Cut_Size_d50",
+        "passed": true,
+        "details": "Stokes scaling verified: F_c(80um)=4.55e-07 N = 8x F_c(40um); d50=25.6 um decreases to 18.1 um at double flow."
+      },
+      {
+        "stage": 4,
+        "check": "Flow_Split_Ratio_And_Lynch_Solids_Partition_Curve",
+        "passed": true,
+        "details": "Partition kinetics verified: Rf=0.102 (scales to 0.169 with larger apex); Recovery Es(coarse)=0.972 > Es(fine)=0.153."
+      },
+      {
+        "stage": 5,
+        "check": "High_Order_RK4_With_Adaptive_Substepping",
+        "passed": true,
+        "details": "RK4 integration stable: Q_in=0.0150 m3/s, P_in=184.8 kPa, d50=25.6 um, C_u=478.0 g/L, C_o=12.5 g/L."
+      },
+      {
+        "stage": 6,
+        "check": "Coupled_Solids_And_Liquid_Mass_Conservation_Residuals",
+        "passed": true,
+        "details": "Dual conservation verified: solids residual = 0.0000e+00 kg/s, liquid residual = 1.7347e-18 m3/s (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Roping_Boundary_Detection_And_Alarm",
+        "passed": true,
+        "details": "Roping safety verified: C_u=650.0 g/L triggers %M207 and diagnostic code 0x9901; spray umbrella collapsed."
+      },
+      {
+        "stage": 8,
+        "check": "Overpressure_And_Apex_Blockage_Trips_With_Flush",
+        "passed": true,
+        "details": "Safety trips verified: Overpressure (0x9902)=True, Blockage (0x9903)=True, Apex flush (%M209)=True."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_Anti_Ladder_Rejection",
+        "passed": true,
+        "details": "Registers synced: %R890=0x000F, %R891=540, %R892=1855, %R893=256, %R894=4785, %R895=140, %R896=1022, %R897=0; Anti-ladder rejection asserted."
+      }
+    ],
+    "metrics": {
+      "feed_flow_m3_s": 0.015,
+      "inlet_pressure_kpa": 185.50201041910782,
+      "cut_size_d50_um": 25.58539239742187,
+      "underflow_conc_g_l": 478.528388335683,
+      "overflow_conc_g_l": 14.039183580057497,
+      "split_ratio": 0.1021534737538961,
+      "solids_mass_residual_kg_s": 0.0,
+      "liquid_vol_residual_m3_s": 1.734723475976807e-18
+    },
+    "register_map": {
+      "analog_registers": "%R890..%R897",
+      "discrete_coils": "%M207..%M209"
+    },
+    "timestamp": "2026-10-04T19:02:29Z"
+  }
+}

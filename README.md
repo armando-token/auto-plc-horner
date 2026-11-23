@@ -31,6 +31,17 @@ The system bridges modern LLMs with legacy industrial automation software throug
 
 ---
 
+## JEV Autonomous Desktop-Tree Cscape Agent (`jev-cscape-agent/`)
+
+This repository also includes the full **JEV Cscape Agent** ([`jev-cscape-agent/`](jev-cscape-agent/README.md)), a 3-layer autonomous execution and validation architecture (**J-Layer** TypeSafe SystemOne JEV planning, **E-Layer** exclusive Win32/UIA desktop-tree & vision-grounded Cscape 10.2 GUI control, and **V-Layer** fail-closed hardware safety + Error Check `32826` + OLE2/CFBF `.csp` readback) verified end-to-end across Gates `G0`–`G12`:
+
+- **Technical Dossier & Capability Matrix (`G0`–`G11`)**: [`jev-cscape-agent/docs/G12/04_HORNER_TECHNICAL_DOSSIER.md`](jev-cscape-agent/docs/G12/04_HORNER_TECHNICAL_DOSSIER.md)
+- **G12 Delivery Package & Limitations**: [`jev-cscape-agent/docs/G12/README.md`](jev-cscape-agent/docs/G12/README.md) · [`03_LIMITATIONS_AND_STOP_RECOVER.md`](jev-cscape-agent/docs/G12/03_LIMITATIONS_AND_STOP_RECOVER.md)
+- **Industrial Case Study (`Estación de Bombeo 3B`, XL4 Prime)**: [`jev-cscape-agent/specs/SPEC_ESTACION_BOMBEO_3B.md`](jev-cscape-agent/specs/SPEC_ESTACION_BOMBEO_3B.md)
+- **Gate Governance & Master Plan**: [`jev-cscape-agent/MEGAPLAN_JEV_CSCAPE_WINDOWS.md`](jev-cscape-agent/MEGAPLAN_JEV_CSCAPE_WINDOWS.md) · [`jev-cscape-agent/STATUS.md`](jev-cscape-agent/STATUS.md)
+
+---
+
 ## Operational Governance & Safety Directives
 
 > [!CAUTION]

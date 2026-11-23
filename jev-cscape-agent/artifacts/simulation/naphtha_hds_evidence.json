@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Naphtha HDS Simulation Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W155",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Hydrotreating Fixed-Bed Naphtha Hydrodesulfurization (HDS) Multi-Reaction ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "NaphthaHdsSync and HydrotreaterReactorSync verified; %R1160..%R1167 and %M270..%M272 bound."
+      },
+      {
+        "stage": 2,
+        "check": "Langmuir_Hinshelwood_Reaction_Kinetics_And_Arrhenius_Monotonicity",
+        "passed": true,
+        "details": "Arrhenius & Langmuir-Hinshelwood verified: k_th(320\u00b0C)=8.0133e-01/s, k_th(360\u00b0C)=2.4739e+00/s, Ea error=3.78e-10 J/mol, H2S inhibition verified=True."
+      },
+      {
+        "stage": 3,
+        "check": "Exothermic_Heats_Of_Reaction_And_First_Law_Enthalpy_Balances",
+        "passed": true,
+        "details": "Exotherms verified: Q_HDS=169.0 kW (-65 kJ/mol H2), Q_Olefin=661.2 kW (-125 kJ/mol H2), Q_Total=830.2 kW, dT_bed/dt=0.78 \u00b0C/min."
+      },
+      {
+        "stage": 4,
+        "check": "Fixed_Bed_Hydrodynamics_And_Ergun_Bed_Differential_Pressure",
+        "passed": true,
+        "details": "Hydrodynamics verified: Delta P=650.0 mbar, u_liq=0.0187 m/s, u_gas=0.1740 m/s, high flow Delta P=958.5 mbar."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "passed": true,
+        "details": "RK4 solver verified over 2.0s: T_bed=354.9 \u00b0C, T_inlet=330.0 \u00b0C, P=45.0 bar, Product S=0.36 ppm."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: Mass residual=0.00e+00 kg/s (< 1e-10), Enthalpy residual=3.64e-12 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xB401, 0xB402, 0xB403, 0xB404) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1160=3300, %R1161=3550, %R1162=450, %R1163=250, %R1164=985, %R1165=5, %R1166=650, %R1167=0x0000, %M270=True, %M271=False, %M272=True."
+      },
+      {
+        "stage": 9,
+        "check": "Anti_Ladder_Security_Guard_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "Anti-ladder rejection verified; transient disturbance response stable over 5.0s."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1160..%R1167",
+      "discrete_coils": "%M270..%M272",
+      "values": {
+        "%R1160": 3300,
+        "%R1161": 3550,
+        "%R1162": 450,
+        "%R1163": 250,
+        "%R1164": 985,
+        "%R1165": 5,
+        "%R1166": 650,
+        "%R1167": 0,
+        "%M270": true,
+        "%M271": false,
+        "%M272": true
+      }
+    },
+    "timestamp": "2026-10-04T21:16:06Z"
+  }
+}

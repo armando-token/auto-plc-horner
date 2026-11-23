@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Parallel Coordinate Plotter verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W093",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Parallel Coordinate Multi-Variable Trajectory Plotter & Anomaly Corridor Rasterizer",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R540..%R547 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Affine_Min_Max_Normalization_And_Screen_Mapping",
+        "passed": true,
+        "details": "Midpoint 250 \u00b0C mapped to norm 0.50 and screen Y 370.0 px."
+      },
+      {
+        "stage": 3,
+        "check": "Golden_Operating_Corridor_Polygon_Ribbon",
+        "passed": true,
+        "details": "Closed 16-point polygon ribbon generated across all 8 dimensions."
+      },
+      {
+        "stage": 4,
+        "check": "Orthogonal_Cubic_Bezier_Spline_Tangents",
+        "passed": true,
+        "details": "7-segment cubic B\u00e9zier spline with horizontal entry/exit tangents generated."
+      },
+      {
+        "stage": 5,
+        "check": "Multi_Metric_Anomaly_Distance_Engine",
+        "passed": true,
+        "details": "Evaluated Normal (D=0.00), Warning (D=0.167), and Critical (D=0.750)."
+      },
+      {
+        "stage": 6,
+        "check": "Parametric_Corridor_Crossing_Root_Finding",
+        "passed": true,
+        "details": "Exact root found for corridor upper crossing at t* = 0.1774."
+      },
+      {
+        "stage": 7,
+        "check": "WCAG_2_1_AAA_Accessibility_Contrast",
+        "passed": true,
+        "details": "Text #F8FAFC against decoupled backing #0B0F19 has contrast 18.30:1 (>= 18:1 required)."
+      },
+      {
+        "stage": 8,
+        "check": "Standalone_W3C_SVG_XML_Well_Formedness",
+        "passed": true,
+        "details": "Rendered SVG 1.1 XML parsed cleanly with zero syntax or hierarchy errors."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers synced: %R540=1, %R541=750, %R546=2, %R547=0x0029, %M126=True, %M127=True."
+      }
+    ],
+    "contrast_ratio": "18.30:1",
+    "register_map": {
+      "analog_registers": "%R540..%R547",
+      "discrete_coils": "%M126..%M127",
+      "values": {
+        "%R540": 1,
+        "%R541": 750,
+        "%R542": 750,
+        "%R543": 750,
+        "%R544": 1,
+        "%R545": 640,
+        "%R546": 2,
+        "%R547": 41,
+        "%M126": true,
+        "%M127": true
+      }
+    },
+    "timestamp": "2026-10-03T02:07:39Z"
+  }
+}

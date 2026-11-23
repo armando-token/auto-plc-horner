@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_051",
+  "file_name": "scene_051.png",
+  "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step1_cscape_ready_1791684654.png",
+  "split": "reserved",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "cd04febebaadffd0fa64dedbdc99b42960818eb4a002b990c2a4b7cabe2bbf6e",
+  "labels": {
+    "canvas_rect": [
+      306,
+      14,
+      1269,
+      541
+    ],
+    "anchors": {
+      "canvas_center": [
+        787,
+        277
+      ],
+      "canvas_nw": [
+        306,
+        14
+      ],
+      "canvas_se": [
+        1269,
+        541
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

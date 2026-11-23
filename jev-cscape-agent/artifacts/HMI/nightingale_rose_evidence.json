@@ -1,0 +1,82 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Nightingale Rose / Polar Area Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W126",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Nightingale Rose / Polar Area Cyclic Operational Profile Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Security_Guard",
+        "passed": true,
+        "details": "Parsed NightingaleRoseSync with STParser; validated bound registers %R870..%R877, %M203..%M204; ladder intercepted."
+      },
+      {
+        "stage": 2,
+        "check": "Polar_Area_Sector_Partitioning_And_Sweep_Conservation",
+        "passed": true,
+        "details": "Partitioned 24 cyclic sectors; total angular sweep 6.2832 rad strictly conserved at 2*pi."
+      },
+      {
+        "stage": 3,
+        "check": "Square_Root_Radius_Area_Proportionality_Formulation",
+        "passed": true,
+        "details": "Verified Florence Nightingale r ~ sqrt(val) formulation: area ratio 4.00 strictly equals value ratio 4.00."
+      },
+      {
+        "stage": 4,
+        "check": "SVG_Arc_Sector_Path_Generation_Grammar",
+        "passed": true,
+        "details": "Generated valid W3C SVG petal path strictly conforming to 'M ... L ... A ... Z' grammar."
+      },
+      {
+        "stage": 5,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Graphical boundary contrast 6.21:1 (> 3:1) verified."
+      },
+      {
+        "stage": 6,
+        "check": "Cyclic_Operational_Profile_State_Machine_Transitions",
+        "passed": true,
+        "details": "Verified operational profile state transitions across Diurnal (24 sectors), Seasonal (12 sectors), and Batch (8 sectors)."
+      },
+      {
+        "stage": 7,
+        "check": "Peak_Anomaly_Detection_And_Trip_Assertion",
+        "passed": true,
+        "details": "Identified anomalous peak sector H14 (96.5 MW > 90.0 MW); %M203/%M204 asserted, diagnostic event 0x9701 logged."
+      },
+      {
+        "stage": 8,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone SVG; XML schema valid; diagnostic HUD header, polar rings, and petals verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Fault_Trips",
+        "passed": true,
+        "details": "%R870=0x0047, %R871=24 sectors, %R874=810 (81.0 MW); %M204 fault trip verified."
+      }
+    ],
+    "metrics": {
+      "total_sectors_count": 24,
+      "active_series_count": 2,
+      "total_cyclic_value_mw": 1412.5,
+      "peak_sector_id": "H14",
+      "peak_sector_value_mw": 81.0,
+      "text_contrast_ratio": 18.3,
+      "graphical_contrast_ratio": 6.21
+    },
+    "register_map": {
+      "analog_registers": "%R870..%R877",
+      "discrete_coils": "%M203..%M204"
+    },
+    "timestamp": "2026-10-04T18:53:37Z"
+  }
+}

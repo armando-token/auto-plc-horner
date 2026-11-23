@@ -1,0 +1,83 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Squarified Treemap Canvas verification passed and verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W117",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Squarified Treemap & Hierarchical Resource Allocation Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Security_Guard",
+        "passed": true,
+        "details": "Parsed TreemapCanvasSync with STParser; validated bound registers %R780..%R787, %M182..%M183; ladder intercepted."
+      },
+      {
+        "stage": 2,
+        "check": "Hierarchical_Resource_Tree_Construction_And_Aggregation",
+        "passed": true,
+        "details": "Constructed 4-level plant (4 units, 8 subsystems, 16 equipment); total power=1640.0 kW strictly conserved."
+      },
+      {
+        "stage": 3,
+        "check": "Squarified_Treemap_Layout_Aspect_Ratio_Optimization",
+        "passed": true,
+        "details": "Mean aspect ratio=1.65 (ceiling <= 2.5), max aspect=2.41; all 16 tiles positive."
+      },
+      {
+        "stage": 4,
+        "check": "Multi_Level_Nested_Bounding_Box_Containment_And_Padding",
+        "passed": true,
+        "details": "Verified strict geometric containment: Equipment in Subsystem, Subsystem in Unit, Unit in Plant canvas."
+      },
+      {
+        "stage": 5,
+        "check": "Heat_And_Power_Color_Grading_Engine",
+        "passed": true,
+        "details": "Thermal stress color scale mapped smoothly across 4 thermal stops (cold=#10B594, crit=#EF4A40)."
+      },
+      {
+        "stage": 6,
+        "check": "Anomaly_Detection_And_Overload_Outline_Pulsing",
+        "passed": true,
+        "details": "Overloaded equipment F-101 detected (98.5 \u00b0C >= 95.0 \u00b0C threshold); overload alarm asserted."
+      },
+      {
+        "stage": 7,
+        "check": "Standalone_W3C_SVG_11_Generation_And_HUD_Banner",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone SVG; XML schema valid; diagnostic HUD header and anomaly glow filters verified."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_21_AAA_Accessibility_And_Decoupled_Backing_Badges",
+        "passed": true,
+        "details": "Decoupled badge contrast=18.30:1 exceeds WCAG 2.1 AAA target (> 18:1); %R780 Bit 6 verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Diagnostic_Trips",
+        "passed": true,
+        "details": "%R780=0x00EF, %R781=16 nodes, %R782=16400 (1640 kW), %R785=985 (98.5 \u00b0C); %M182 and %M183 trip verified."
+      }
+    ],
+    "metrics": {
+      "total_leaf_nodes": 16,
+      "total_resource_kw": 1640.0,
+      "mean_aspect_ratio": 1.648,
+      "peak_node_id": "K-301",
+      "peak_node_kw": 190.0,
+      "max_thermal_stress_deg_c": 98.5,
+      "treemap_levels_count": 4,
+      "contrast_ratio": 18.3
+    },
+    "register_map": {
+      "analog_registers": "%R780..%R787",
+      "discrete_coils": "%M182..%M183"
+    },
+    "timestamp": "2026-10-04T02:55:29Z"
+  }
+}

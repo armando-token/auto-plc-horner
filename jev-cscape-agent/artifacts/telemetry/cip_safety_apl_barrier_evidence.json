@@ -1,0 +1,188 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Ethernet-APL Intrinsic Safety Power Barrier Monitor Engine (W319) stages passed deterministically (PASSED 9/9 stages).",
+  "work_package": "W319",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W319",
+    "gate": "G8",
+    "protocol": "Industrial ODVA CIP Safety Over Ethernet-APL Intrinsic Safety Power Barrier Monitor Engine (IEC 60079-11 / IEC 60079-47 / IEEE 802.3cg / IEC 61784-3-2)",
+    "standards": [
+      "ODVA CIP Safety Volume 5",
+      "IEC 60079-11 Intrinsic Safety",
+      "IEC 60079-47 2-WISE",
+      "IEEE 802.3cg-2019 10BASE-T1L",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2800..%R2807",
+      "%M653..%M654"
+    ],
+    "diagnostic_codes": {
+      "0x0000": "OK",
+      "0xEEA1": "ERR_OVERVOLTAGE_BARRIER",
+      "0xEEA2": "ERR_OVERCURRENT_EXCURSION",
+      "0xEEA3": "ERR_THERMAL_BARRIER_OVERHEAT",
+      "0xEEA4": "ERR_DUAL_CRC_SAFETY_FAULT",
+      "0xEEA5": "ERR_LEAKAGE_TO_SHIELD_FAULT"
+    },
+    "sha256_digests": {
+      "pou_sha256": "e01d46787a928290969308136d5109054d56c5f7bf4e430dc429c7b3c80d1100",
+      "stages_sha256": "da491d8969ea4260a1dbafcbcafd3c00c0bbad7f456fbcc332508edf6e1d715d"
+    },
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python runtime, OS platform, and core telemetry dependencies",
+        "passed": true,
+        "timing_ms": 303.984,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants_and_register_mappings",
+        "check": "Verify APL IS Barrier diagnostic codes (0xEEA1-0xEEA5), register offsets (%R2800..%R2807), coils (%M653..%M654)",
+        "passed": true,
+        "timing_ms": 0.042,
+        "details": "Class IDs (0x39, 0x3A, 0x3B, 0x49), registers %R2800..%R2807, coils %M653..%M654, and diagnostic codes (0x0000, 0xEEA1..0xEEA5) verified bit-exact."
+      },
+      {
+        "stage": 3,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics, bit-flip detection, and frame integrity",
+        "passed": true,
+        "timing_ms": 2.331,
+        "details": "CRC-S1=0x2A6E, CRC-S2=0x647F. Dual polynomial mathematics, 1-bit mutation sensitivity, and packet serialization round-trip verified."
+      },
+      {
+        "stage": 4,
+        "name": "apl_intrinsic_safety_power_profiles_and_telemetry",
+        "check": "Verify IEC 60079-47 2-WISE IS limits (15V / 215mA), power calculation (P=V*I), and nominal telemetry",
+        "passed": true,
+        "timing_ms": 0.367,
+        "details": "APL barrier profiles verified; 2-WISE IS engine operating at 2175 mW with zero faults."
+      },
+      {
+        "stage": 5,
+        "name": "overvoltage_and_overcurrent_barrier_trips",
+        "check": "Verify overvoltage trip (0xEEA1) and overcurrent excursion trip (0xEEA2) asserting fail-safe state and recovery",
+        "passed": true,
+        "timing_ms": 0.041,
+        "details": "Overvoltage (0xEEA1) and overcurrent excursion (0xEEA2) safety trips properly forced fail-safe state and recovered deterministically."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_overheat_and_shield_leakage_diagnostics",
+        "check": "Verify thermal overheat fault (0xEEA3), shield leakage fault (0xEEA5), and CRC safety trip (0xEEA4)",
+        "passed": true,
+        "timing_ms": 0.197,
+        "details": "Thermal overheat (0xEEA3), shield leakage (0xEEA5), and CRC mismatch (0xEEA4) verified with safe recovery."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "check": "Verify RegisterTable reads/writes, signed/unsigned masking across %R2800..%R2807 and coils %M653..%M654",
+        "passed": true,
+        "timing_ms": 0.633,
+        "details": "Bit-exact synchronization and 16-bit signed masking verified across %R2800..%R2807 and coils %M653..%M654."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "check": "Verify pure IEC 61131-3 ST POU 'CipSafetyAplBarrierSync' and strict rejection of ladder logic constructs",
+        "passed": true,
+        "timing_ms": 2.752,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "check": "Verify multi-cycle ILogicUnit scan execution (100 cycles), zero memory leaks, and emit evidence JSON",
+        "passed": true,
+        "timing_ms": 1202.884,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 5.4 KB."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python runtime, OS platform, and core telemetry dependencies",
+        "passed": true,
+        "timing_ms": 303.984,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants_and_register_mappings",
+        "check": "Verify APL IS Barrier diagnostic codes (0xEEA1-0xEEA5), register offsets (%R2800..%R2807), coils (%M653..%M654)",
+        "passed": true,
+        "timing_ms": 0.042,
+        "details": "Class IDs (0x39, 0x3A, 0x3B, 0x49), registers %R2800..%R2807, coils %M653..%M654, and diagnostic codes (0x0000, 0xEEA1..0xEEA5) verified bit-exact."
+      },
+      {
+        "stage": 3,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics, bit-flip detection, and frame integrity",
+        "passed": true,
+        "timing_ms": 2.331,
+        "details": "CRC-S1=0x2A6E, CRC-S2=0x647F. Dual polynomial mathematics, 1-bit mutation sensitivity, and packet serialization round-trip verified."
+      },
+      {
+        "stage": 4,
+        "name": "apl_intrinsic_safety_power_profiles_and_telemetry",
+        "check": "Verify IEC 60079-47 2-WISE IS limits (15V / 215mA), power calculation (P=V*I), and nominal telemetry",
+        "passed": true,
+        "timing_ms": 0.367,
+        "details": "APL barrier profiles verified; 2-WISE IS engine operating at 2175 mW with zero faults."
+      },
+      {
+        "stage": 5,
+        "name": "overvoltage_and_overcurrent_barrier_trips",
+        "check": "Verify overvoltage trip (0xEEA1) and overcurrent excursion trip (0xEEA2) asserting fail-safe state and recovery",
+        "passed": true,
+        "timing_ms": 0.041,
+        "details": "Overvoltage (0xEEA1) and overcurrent excursion (0xEEA2) safety trips properly forced fail-safe state and recovered deterministically."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_overheat_and_shield_leakage_diagnostics",
+        "check": "Verify thermal overheat fault (0xEEA3), shield leakage fault (0xEEA5), and CRC safety trip (0xEEA4)",
+        "passed": true,
+        "timing_ms": 0.197,
+        "details": "Thermal overheat (0xEEA3), shield leakage (0xEEA5), and CRC mismatch (0xEEA4) verified with safe recovery."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "check": "Verify RegisterTable reads/writes, signed/unsigned masking across %R2800..%R2807 and coils %M653..%M654",
+        "passed": true,
+        "timing_ms": 0.633,
+        "details": "Bit-exact synchronization and 16-bit signed masking verified across %R2800..%R2807 and coils %M653..%M654."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "check": "Verify pure IEC 61131-3 ST POU 'CipSafetyAplBarrierSync' and strict rejection of ladder logic constructs",
+        "passed": true,
+        "timing_ms": 2.752,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "check": "Verify multi-cycle ILogicUnit scan execution (100 cycles), zero memory leaks, and emit evidence JSON",
+        "passed": true,
+        "timing_ms": 1202.884,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 5.4 KB."
+      }
+    ]
+  }
+}

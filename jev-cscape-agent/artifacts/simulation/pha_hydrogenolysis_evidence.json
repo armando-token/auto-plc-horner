@@ -1,0 +1,164 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W305 PHA Hydrogenolysis & Diol Synthesis Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W305",
+    "gate": "G7",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "environment",
+        "passed": true,
+        "timing_ms": 0.01,
+        "details": "Python 3.12.10 on win32; dependencies verified: py_ok=True, deps_ok=True."
+      },
+      {
+        "stage": 2,
+        "name": "model_parameters",
+        "check": "model_parameters",
+        "passed": true,
+        "timing_ms": 0.435,
+        "details": "Kinetics (k1=3500.0, k2=12000.0, kd=0.0015), Ea1=48000.0 J/mol, Ea2=62000.0 J/mol, Ed=45000.0 J/mol, Henry K_H=0.0078 mol/(L*bar); %R2660..%R2667 and %M620..%M622 verified."
+      },
+      {
+        "stage": 3,
+        "name": "rk4_ode_mass_conservation",
+        "check": "rk4_ode_mass_conservation",
+        "passed": true,
+        "timing_ms": 3.305,
+        "details": "RK4 integration verified over 15 steps: carbon balance residual=0.00e+00 < 1e-10; C_feed (2.500 -> 2.493 mol/L), C_bdo=0.007 mol/L, C_buoh=0.0000 mol/L."
+      },
+      {
+        "stage": 4,
+        "name": "langmuir_hinshelwood_kinetics",
+        "check": "langmuir_hinshelwood_kinetics",
+        "passed": true,
+        "timing_ms": 1.338,
+        "details": "Langmuir-Hinshelwood rate acceleration verified: r1(160\u00b0C)=0.0025 -> r1(180\u00b0C)=0.0044 -> r1(200\u00b0C)=0.0076 mol/(L*s); deactivation rate: |da/dt|(210\u00b0C) > |da/dt|(170\u00b0C); activity decay (1.000 -> 1.000)."
+      },
+      {
+        "stage": 5,
+        "name": "safety_trip_hierarchy",
+        "check": "safety_trip_hierarchy",
+        "passed": true,
+        "timing_ms": 2.752,
+        "details": "Safety trips 0xF951 (thermal runaway), 0xF952 (H2 pressure drop), 0xF953 (hotspot rate), 0xF954 (catalyst deactivation) and strict priority hierarchy verified."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "check": "register_synchronization",
+        "passed": true,
+        "timing_ms": 0.72,
+        "details": "RegisterTable memory space verified (%R2660=0x0302, %R2661=1800, %R2662=500, %R2663=0, %R2664=1000, %R2665=1000, %R2666=0x0000, %R2667=0x002F); signed mask (-1711 == 0xF951) verified."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "check": "structured_text_validation",
+        "passed": true,
+        "timing_ms": 1.378,
+        "details": "Pure ST POU 'PhaHydrogenolysisSync' parsed successfully with correct register bindings; 4/4 ladder constructs rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "check": "scan_cycle_simulation",
+        "passed": true,
+        "timing_ms": 9.175,
+        "details": "Multi-cycle closed-loop simulation executed for 30 cycles; thermal excursion triggered trip 0xF951 and energized cooling jacket: T dropped by 49.3 \u00b0C (225.0 -> 175.7 \u00b0C), reactor stabilized."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "check": "evidence_emission",
+        "passed": true,
+        "timing_ms": 0.137,
+        "details": "Deterministic evidence emitted with SHA-256 digests (POU: 094c768b..., Model: 5a9afde1...)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "environment",
+        "passed": true,
+        "timing_ms": 0.01,
+        "details": "Python 3.12.10 on win32; dependencies verified: py_ok=True, deps_ok=True."
+      },
+      {
+        "stage": 2,
+        "name": "model_parameters",
+        "check": "model_parameters",
+        "passed": true,
+        "timing_ms": 0.435,
+        "details": "Kinetics (k1=3500.0, k2=12000.0, kd=0.0015), Ea1=48000.0 J/mol, Ea2=62000.0 J/mol, Ed=45000.0 J/mol, Henry K_H=0.0078 mol/(L*bar); %R2660..%R2667 and %M620..%M622 verified."
+      },
+      {
+        "stage": 3,
+        "name": "rk4_ode_mass_conservation",
+        "check": "rk4_ode_mass_conservation",
+        "passed": true,
+        "timing_ms": 3.305,
+        "details": "RK4 integration verified over 15 steps: carbon balance residual=0.00e+00 < 1e-10; C_feed (2.500 -> 2.493 mol/L), C_bdo=0.007 mol/L, C_buoh=0.0000 mol/L."
+      },
+      {
+        "stage": 4,
+        "name": "langmuir_hinshelwood_kinetics",
+        "check": "langmuir_hinshelwood_kinetics",
+        "passed": true,
+        "timing_ms": 1.338,
+        "details": "Langmuir-Hinshelwood rate acceleration verified: r1(160\u00b0C)=0.0025 -> r1(180\u00b0C)=0.0044 -> r1(200\u00b0C)=0.0076 mol/(L*s); deactivation rate: |da/dt|(210\u00b0C) > |da/dt|(170\u00b0C); activity decay (1.000 -> 1.000)."
+      },
+      {
+        "stage": 5,
+        "name": "safety_trip_hierarchy",
+        "check": "safety_trip_hierarchy",
+        "passed": true,
+        "timing_ms": 2.752,
+        "details": "Safety trips 0xF951 (thermal runaway), 0xF952 (H2 pressure drop), 0xF953 (hotspot rate), 0xF954 (catalyst deactivation) and strict priority hierarchy verified."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "check": "register_synchronization",
+        "passed": true,
+        "timing_ms": 0.72,
+        "details": "RegisterTable memory space verified (%R2660=0x0302, %R2661=1800, %R2662=500, %R2663=0, %R2664=1000, %R2665=1000, %R2666=0x0000, %R2667=0x002F); signed mask (-1711 == 0xF951) verified."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "check": "structured_text_validation",
+        "passed": true,
+        "timing_ms": 1.378,
+        "details": "Pure ST POU 'PhaHydrogenolysisSync' parsed successfully with correct register bindings; 4/4 ladder constructs rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "check": "scan_cycle_simulation",
+        "passed": true,
+        "timing_ms": 9.175,
+        "details": "Multi-cycle closed-loop simulation executed for 30 cycles; thermal excursion triggered trip 0xF951 and energized cooling jacket: T dropped by 49.3 \u00b0C (225.0 -> 175.7 \u00b0C), reactor stabilized."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "check": "evidence_emission",
+        "passed": true,
+        "timing_ms": 0.137,
+        "details": "Deterministic evidence emitted with SHA-256 digests (POU: 094c768b..., Model: 5a9afde1...)."
+      }
+    ],
+    "digests": {
+      "pou_sha256": "094c768be1332b3189bb75d1ae547762c0fb70033759ea484eff46efc35c160e",
+      "model_sha256": "5a9afde187156089f824dfd522d91f070aef0fa2e7b167611ec346c7509f262e"
+    },
+    "timestamp_utc": "2026-10-08T00:07:38Z"
+  }
+}

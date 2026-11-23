@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W219",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Dendrogram & Hierarchical Clustering SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'DendrogramCanvasSync' POU with SecurityGuard & STParser across Horner registers %R1800..%R1807 and %M420..%M421."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Canonical_32Node_Plant_Sensor_Topology_And_Metric_Invariants",
+        "passed": true,
+        "details": "Verified 32 plant sensors, symmetric 32x32 Euclidean distance matrix, strictly positive off-diagonal, and triangle inequality."
+      },
+      {
+        "stage": 4,
+        "check": "Hierarchical_Agglomerative_Clustering_And_Cophenetic_Correlation",
+        "passed": true,
+        "details": "Verified Ward HAC (31 merges, 63 nodes), strict branch monotonicity, and cophenetic correlation r = 92.26%."
+      },
+      {
+        "stage": 5,
+        "check": "Dynamic_Cluster_Cut_Threshold_And_k_Partitioning",
+        "passed": true,
+        "details": "Verified horizontal cut threshold partitioning: k=4 clusters at 1.50, k=1 at ceiling, k=32 at floor with complete leaf coverage."
+      },
+      {
+        "stage": 6,
+        "check": "Silhouette_Quality_And_Cluster_Degeneracy_Alarm_Trip",
+        "passed": true,
+        "details": "Verified nominal silhouette coefficient (0.84), degeneracy trip on k=1, %M421 assertion, and 0xEB01 status code latching."
+      },
+      {
+        "stage": 7,
+        "check": "Singularity_And_Threshold_Out_Of_Bounds_Guards",
+        "passed": true,
+        "details": "Verified 0xEB03 catch on negative threshold, and 0xEB02 fault handling on distance matrix singularity."
+      },
+      {
+        "stage": 8,
+        "check": "Dual_Pane_Standalone_W3C_SVG_XML_Validation_And_WCAG_21_AAA",
+        "passed": true,
+        "details": "Verified WCAG 2.1 AAA contrast (> 18:1), well-formed standalone XML SVG with stepped paths and 32x32 heat matrix -> artifacts\\HMI\\dendrogram_canvas_sample.svg."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_ILogicUnit_Scan_Cycle",
+        "passed": true,
+        "details": "Verified %R1800..%R1807 and %M420..%M421 with PrivilegeMode.SYSTEM and ILogicUnit scan cycle execution."
+      }
+    ]
+  }
+}

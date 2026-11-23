@@ -1,0 +1,49 @@
+{
+  "work_package": "W075",
+  "gate": "G9",
+  "component": "Cscape HMI Dynamic Vector Gauge & Polar Compass Dial",
+  "timestamp_utc": "2026-10-03T00:36:14.904438+00:00",
+  "overall_status": "success",
+  "registers": {
+    "%R360": 21,
+    "%R361": 7420,
+    "%R362": -246,
+    "%R363": 0,
+    "%R364": 1000,
+    "%R365": 7000,
+    "%R366": 8500,
+    "%R367": 10000,
+    "%M84": true,
+    "%M85": false
+  },
+  "checks": {
+    "radial_deflection_mapping": {
+      "status": "passed",
+      "angle_at_0_pct": -225.0,
+      "angle_at_50_pct": -90.0,
+      "angle_at_100_pct": 45.0
+    },
+    "polar_azimuth_mapping": {
+      "status": "passed",
+      "angle_at_east_25pct": 90.0,
+      "angle_at_south_50pct": 180.0
+    },
+    "multi_band_classification": {
+      "status": "passed",
+      "normal_band_detected": true,
+      "warning_band_detected": true,
+      "danger_band_detected": true
+    },
+    "peak_hold_and_reset": {
+      "status": "passed",
+      "peak_held_at_85pct": true,
+      "peak_cleared_on_handshake": true
+    },
+    "svg_export_and_xml_validity": {
+      "status": "passed",
+      "svg_file_path": "artifacts/HMI/gauge_sample.svg",
+      "byte_size": 4469,
+      "root_tag": "{http://www.w3.org/2000/svg}svg"
+    }
+  }
+}

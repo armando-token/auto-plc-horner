@@ -1,0 +1,154 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Security RBAC & Token Authorization Protocol Engine (W217) verified cleanly (9/9 stages passed).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "data": {
+    "work_package": "W217",
+    "standards": [
+      "ODVA CIP Networks Library Volume 8: CIP Security Specification",
+      "ODVA Volume 8 Table 5-2: Security Roles & Capability Bitmasks",
+      "IEC 61131-3 Structured Text"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Validation_And_Anti_Ladder_Interception",
+        "passed": true,
+        "details": "POU 'CipSecurityRbacSync' compiled with 11 registers; ladder injection rejected."
+      },
+      {
+        "stage": 2,
+        "check": "CIP_Security_Object_Models_Class_0x5D_And_0x5E_Resolution",
+        "passed": true,
+        "details": "Class 0x5D (9 attributes) and Class 0x5E (10 attributes) queried and read-only verified."
+      },
+      {
+        "stage": 3,
+        "check": "X509_Certificate_Hierarchy_And_CRL_Revocation_Validation",
+        "passed": true,
+        "details": "Trust chain (Root->Intermediate->Leaf), SAN, expired token, and CRL revocation (0xE904) verified."
+      },
+      {
+        "stage": 4,
+        "check": "Canonical_Roles_And_Capability_Bitmasks_Encoding_Decoding",
+        "passed": true,
+        "details": "Canonical Roles 1..5, bitmasks 0x01..0x10, and default capability matrices verified."
+      },
+      {
+        "stage": 5,
+        "check": "Signed_Bearer_Token_Generation_And_HMAC_SHA256_Verification",
+        "passed": true,
+        "details": "HMAC-SHA256 token claims validated; tampering and incorrect secret trip 0xE903."
+      },
+      {
+        "stage": 6,
+        "check": "Access_Control_Matrix_Enforcement_And_Unauthorized_Role_Rejection",
+        "passed": true,
+        "details": "Fine-grained permissions verified: unauthorized actions rejected with 0xE902."
+      },
+      {
+        "stage": 7,
+        "check": "Token_Expiration_Watchdog_And_Token_Blacklist_Enforcement",
+        "passed": true,
+        "details": "Revoked token attempt counted in %R1785; expired token purged and tripped with 0xE901."
+      },
+      {
+        "stage": 8,
+        "check": "Discrete_ILogicUnit_100_Cycle_Simulation_Execution",
+        "passed": true,
+        "details": "100 scan cycles executed cleanly; simulation time=1000.0ms."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Safety_Trips",
+        "passed": true,
+        "details": "%R1780..%R1787, %M415, %M416 mapped cleanly; 0xE901..0xE904 trips and reset verified."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Validation_And_Anti_Ladder_Interception",
+        "passed": true,
+        "details": "POU 'CipSecurityRbacSync' compiled with 11 registers; ladder injection rejected."
+      },
+      {
+        "stage": 2,
+        "check": "CIP_Security_Object_Models_Class_0x5D_And_0x5E_Resolution",
+        "passed": true,
+        "details": "Class 0x5D (9 attributes) and Class 0x5E (10 attributes) queried and read-only verified."
+      },
+      {
+        "stage": 3,
+        "check": "X509_Certificate_Hierarchy_And_CRL_Revocation_Validation",
+        "passed": true,
+        "details": "Trust chain (Root->Intermediate->Leaf), SAN, expired token, and CRL revocation (0xE904) verified."
+      },
+      {
+        "stage": 4,
+        "check": "Canonical_Roles_And_Capability_Bitmasks_Encoding_Decoding",
+        "passed": true,
+        "details": "Canonical Roles 1..5, bitmasks 0x01..0x10, and default capability matrices verified."
+      },
+      {
+        "stage": 5,
+        "check": "Signed_Bearer_Token_Generation_And_HMAC_SHA256_Verification",
+        "passed": true,
+        "details": "HMAC-SHA256 token claims validated; tampering and incorrect secret trip 0xE903."
+      },
+      {
+        "stage": 6,
+        "check": "Access_Control_Matrix_Enforcement_And_Unauthorized_Role_Rejection",
+        "passed": true,
+        "details": "Fine-grained permissions verified: unauthorized actions rejected with 0xE902."
+      },
+      {
+        "stage": 7,
+        "check": "Token_Expiration_Watchdog_And_Token_Blacklist_Enforcement",
+        "passed": true,
+        "details": "Revoked token attempt counted in %R1785; expired token purged and tripped with 0xE901."
+      },
+      {
+        "stage": 8,
+        "check": "Discrete_ILogicUnit_100_Cycle_Simulation_Execution",
+        "passed": true,
+        "details": "100 scan cycles executed cleanly; simulation time=1000.0ms."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Safety_Trips",
+        "passed": true,
+        "details": "%R1780..%R1787, %M415, %M416 mapped cleanly; 0xE901..0xE904 trips and reset verified."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "register_map": {
+      "%R1780": "ActiveSecurityProfile",
+      "%R1781": "AuthenticatedSessionCount",
+      "%R1782": "ActiveRoleBitmask",
+      "%R1783": "TokenRemainingLifetimeSec",
+      "%R1784": "AccessViolationCounter",
+      "%R1785": "RevokedTokenAttemptCounter",
+      "%R1786": "SecurityState",
+      "%R1787": "DiagnosticStatusCode",
+      "%M415": "CipSecurityRbacActive",
+      "%M416": "SecurityViolationTripActive"
+    },
+    "registers": {
+      "%R1780": 3,
+      "%R1781": 1,
+      "%R1782": 1,
+      "%R1783": 1200,
+      "%R1784": 3,
+      "%R1785": 0,
+      "%R1786": 2,
+      "%R1787": 0,
+      "%M415": true,
+      "%M416": false
+    },
+    "timestamp": "2026-10-06T07:19:31Z"
+  }
+}

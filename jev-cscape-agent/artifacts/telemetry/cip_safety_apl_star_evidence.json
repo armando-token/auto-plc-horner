@@ -1,0 +1,173 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Ethernet-APL Star Topology stages passed deterministically (PASSED 9/9 stages).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W289",
+    "gate": "G8",
+    "protocol": "ODVA CIP Safety Over Ethernet-APL Star Topology (10BASE-T1L / IEEE 802.3cg)",
+    "standards": [
+      "IEEE 802.3cg 10BASE-T1L",
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2500..%R2507",
+      "%M583..%M584"
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "init_and_topology",
+        "check": "APL Star Engine Initialization and Star Topology Baseline",
+        "passed": true,
+        "timing_ms": 0.294,
+        "details": "Node 1 initialized in OPERATIONAL state, 8 star nodes connected (mask=0xFF), latency=15us."
+      },
+      {
+        "stage": 2,
+        "name": "dual_crc_validation",
+        "check": "ODVA CIP Safety Volume 5 Dual CRC Checksum (CRC-S1 & CRC-S2) Validation",
+        "passed": true,
+        "timing_ms": 1.531,
+        "details": "CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) verified; corruptions intercepted with 0xEE13/0xEE14."
+      },
+      {
+        "stage": 3,
+        "name": "branch_link_loss",
+        "check": "Star Branch Link Drop Interception, Mask Update, and Recovery",
+        "passed": true,
+        "timing_ms": 0.482,
+        "details": "Node 3 branch drop cleared bit 2 (mask=0xFB), tripped 0xEE11; restored cleanly."
+      },
+      {
+        "stage": 4,
+        "name": "switch_root_failure",
+        "check": "Central APL Switch Root Port Failure, Fail-Safe Trip, and Switch Recovery",
+        "passed": true,
+        "timing_ms": 0.451,
+        "details": "Switch root DOWN tripped 0xEE12 with fail-safe active; switch restore re-established UP state."
+      },
+      {
+        "stage": 5,
+        "name": "fail_safe_deenergize",
+        "check": "Deterministic Safe State Fallback and Safe Outputs De-Energization",
+        "passed": true,
+        "timing_ms": 0.301,
+        "details": "Duplicate node ID 0xEE16 clamped outputs to 0x00, asserted coil %M584, set fail-safe bit in %R2506."
+      },
+      {
+        "stage": 6,
+        "name": "heartbeat_watchdog_timeout",
+        "check": "Star Node Heartbeat Surveillance and 200ms Watchdog Expiration",
+        "passed": true,
+        "timing_ms": 0.809,
+        "details": "Heartbeat silence elapsed 250ms tripped 0xEE15; feed_heartbeat restored healthy state."
+      },
+      {
+        "stage": 7,
+        "name": "horner_ocs_register_sync",
+        "check": "Bit-Exact Horner OCS Register Space (%R2500..%R2507) and Discrete Coils (%M583..%M584)",
+        "passed": true,
+        "timing_ms": 0.344,
+        "details": "%R2500=0x0201, %R2501=1, %R2502=0xFF, %R2506=0x000F, %M583=True, %M584=False."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 1.963,
+        "details": "Pure ST POU verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 9,
+        "name": "cyclic_scan_soak_100",
+        "check": "100 Cyclic Scan Soak Execution, Memory Leak & Latency Stability Surveillance",
+        "passed": true,
+        "timing_ms": 309.596,
+        "details": "100 scan cycles executed cleanly with 0 faults (peak memory: 7.6 KB, status: SUCCESS)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "init_and_topology",
+        "check": "APL Star Engine Initialization and Star Topology Baseline",
+        "passed": true,
+        "timing_ms": 0.294,
+        "details": "Node 1 initialized in OPERATIONAL state, 8 star nodes connected (mask=0xFF), latency=15us."
+      },
+      {
+        "stage": 2,
+        "name": "dual_crc_validation",
+        "check": "ODVA CIP Safety Volume 5 Dual CRC Checksum (CRC-S1 & CRC-S2) Validation",
+        "passed": true,
+        "timing_ms": 1.531,
+        "details": "CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) verified; corruptions intercepted with 0xEE13/0xEE14."
+      },
+      {
+        "stage": 3,
+        "name": "branch_link_loss",
+        "check": "Star Branch Link Drop Interception, Mask Update, and Recovery",
+        "passed": true,
+        "timing_ms": 0.482,
+        "details": "Node 3 branch drop cleared bit 2 (mask=0xFB), tripped 0xEE11; restored cleanly."
+      },
+      {
+        "stage": 4,
+        "name": "switch_root_failure",
+        "check": "Central APL Switch Root Port Failure, Fail-Safe Trip, and Switch Recovery",
+        "passed": true,
+        "timing_ms": 0.451,
+        "details": "Switch root DOWN tripped 0xEE12 with fail-safe active; switch restore re-established UP state."
+      },
+      {
+        "stage": 5,
+        "name": "fail_safe_deenergize",
+        "check": "Deterministic Safe State Fallback and Safe Outputs De-Energization",
+        "passed": true,
+        "timing_ms": 0.301,
+        "details": "Duplicate node ID 0xEE16 clamped outputs to 0x00, asserted coil %M584, set fail-safe bit in %R2506."
+      },
+      {
+        "stage": 6,
+        "name": "heartbeat_watchdog_timeout",
+        "check": "Star Node Heartbeat Surveillance and 200ms Watchdog Expiration",
+        "passed": true,
+        "timing_ms": 0.809,
+        "details": "Heartbeat silence elapsed 250ms tripped 0xEE15; feed_heartbeat restored healthy state."
+      },
+      {
+        "stage": 7,
+        "name": "horner_ocs_register_sync",
+        "check": "Bit-Exact Horner OCS Register Space (%R2500..%R2507) and Discrete Coils (%M583..%M584)",
+        "passed": true,
+        "timing_ms": 0.344,
+        "details": "%R2500=0x0201, %R2501=1, %R2502=0xFF, %R2506=0x000F, %M583=True, %M584=False."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 1.963,
+        "details": "Pure ST POU verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 9,
+        "name": "cyclic_scan_soak_100",
+        "check": "100 Cyclic Scan Soak Execution, Memory Leak & Latency Stability Surveillance",
+        "passed": true,
+        "timing_ms": 309.596,
+        "details": "100 scan cycles executed cleanly with 0 faults (peak memory: 7.6 KB, status: SUCCESS)."
+      }
+    ]
+  }
+}

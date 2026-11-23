@@ -1,0 +1,44 @@
+{
+  "artifact": "IEC 61131-3 ST Parser & Ladder Rejection Evidence",
+  "work_package": "W012",
+  "gate": "G1",
+  "timestamp_utc": "2026-10-01T22:15:00Z",
+  "status": "success",
+  "parser_module": "src/jev_cscape/iec/st_parser.py",
+  "test_module": "tests/test_st_parser.py",
+  "tests_passed": 16,
+  "capabilities": {
+    "pou_types_supported": [
+      "PROGRAM",
+      "FUNCTION_BLOCK",
+      "FUNCTION"
+    ],
+    "variable_scopes_supported": [
+      "VAR",
+      "VAR_INPUT",
+      "VAR_OUTPUT",
+      "VAR_IN_OUT",
+      "VAR_GLOBAL",
+      "VAR_TEMP"
+    ],
+    "iec_data_types": [
+      "BOOL", "SINT", "INT", "DINT", "LINT",
+      "USINT", "UINT", "UDINT", "ULINT",
+      "REAL", "LREAL", "TIME", "DATE",
+      "STRING", "BYTE", "WORD", "DWORD"
+    ],
+    "register_binding_verification": {
+      "matrix_integrated": true,
+      "channels_validated": ["%I", "%Q", "%M", "%D", "%K", "%AI", "%AQ", "%R", "%SR"]
+    }
+  },
+  "ladder_rejection_matrix": {
+    "ERR_LADDER_FORBIDDEN": {
+      "contacts": ["---[ ]---", "---[/]---"],
+      "coils": ["---( )---", "---(S)---", "---(R)---"],
+      "network_delimiters": ["RUNG", "NETWORK", "END_RUNG"],
+      "mnemonics": ["XIC", "XIO", "OTE", "OTL", "OTU"],
+      "action_on_detection": "Fail-closed rejection; zero disk mutation; return status: failed"
+    }
+  }
+}

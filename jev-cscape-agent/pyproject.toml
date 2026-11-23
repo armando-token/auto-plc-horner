@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-cscape-agent"
+version = "0.1.0"
+description = "Industrial Agent JEV: Autonomous Execution & Verification Architecture for Horner Cscape 10.2 Windows"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Armando Silva", email = "turismo@miwayki.co"}
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "pefile>=2024.8.26",
+    "psutil>=5.9.0",
+    "pywin32>=306",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+automation = [
+    "pywinauto>=0.6.8",
+]
+vision = [
+    "pillow>=10.0.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["src", "."]
+addopts = "-v --tb=short --basetemp=work/disposable/pytest_temp"
+

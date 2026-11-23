@@ -1,0 +1,143 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "VCM 1,2-Dichloroethane Thermal Pyrolysis Cracking ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W248",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Vinyl Chloride Monomer (VCM) 1,2-Dichloroethane (EDC) Thermal Pyrolysis Cracking ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "VcmPyrolysisSync POU verified cleanly with STParser & SecurityGuard; bound %R2090..%R2097 and %M487..%M489."
+      },
+      {
+        "stage": 2,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs, networks, mnemonics) intercepted cleanly with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "name": "VCM_Pyrolysis_Kinetics_And_Thermochemical_Enthalpies",
+        "check": "VCM_Pyrolysis_Kinetics_And_Thermochemical_Enthalpies",
+        "passed": true,
+        "details": "Kinetics verified: Delta_H1=71.0 kJ/mol, Delta_H2=96.0 kJ/mol, Delta_H3=-35.0 kJ/mol. Ea1 recovery err=3.78e-10 J/mol. Side cracking acceleration ratio=3.650 > main cracking=2.884."
+      },
+      {
+        "stage": 4,
+        "name": "Fired_Tubular_Furnace_Operating_Envelope_And_Hydrodynamics",
+        "check": "Fired_Tubular_Furnace_Operating_Envelope_And_Hydrodynamics",
+        "passed": true,
+        "details": "Operating envelope verified: conversion=54.50% (~54.5%), selectivity=98.20% (~98.2%), production=6400.0 kg/h (~6400 kg/h), coke=45.0 g/h (~45.0 g/h), P=26.50 bar, T_skin=520.0 \u00b0C."
+      },
+      {
+        "stage": 5,
+        "name": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "check": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "passed": true,
+        "details": "RK4 integration verified over 2.0s: C_edc=121.78, C_vcm=143.25, C_hcl=147.67, C_c2h2=1.80, R_coke=45.00 g/h, T_skin=520.0 \u00b0C."
+      },
+      {
+        "stage": 6,
+        "name": "Stoichiometric_Mass_And_Enthalpy_Conservation_Residuals",
+        "check": "Stoichiometric_Mass_And_Enthalpy_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=2.83e-14 kg/s (< 1e-10), elemental_residual=2.83e-14 kg/s (< 1e-10), enthalpy_residual=1.00e-12 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "name": "Process_Safety_Interlocks_And_Strict_Diagnostic_Priority_Hierarchy",
+        "check": "Process_Safety_Interlocks_And_Strict_Diagnostic_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xF301=True, 0xF302=True, 0xF303=True, 0xF304=True, Priority=True."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Memory_Space_Integration_And_Registers",
+        "check": "Horner_OCS_Memory_Space_Integration_And_Registers",
+        "passed": true,
+        "details": "Registers %R2090..%R2097 and %M487..%M489 bit-exact verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf301, s=-3327)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=5.0 KB; skin_temp=520.00 \u00b0C, conversion=54.50%, selectivity=98.20%."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "VcmPyrolysisSync POU verified cleanly with STParser & SecurityGuard; bound %R2090..%R2097 and %M487..%M489."
+      },
+      {
+        "stage": 2,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs, networks, mnemonics) intercepted cleanly with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "name": "VCM_Pyrolysis_Kinetics_And_Thermochemical_Enthalpies",
+        "check": "VCM_Pyrolysis_Kinetics_And_Thermochemical_Enthalpies",
+        "passed": true,
+        "details": "Kinetics verified: Delta_H1=71.0 kJ/mol, Delta_H2=96.0 kJ/mol, Delta_H3=-35.0 kJ/mol. Ea1 recovery err=3.78e-10 J/mol. Side cracking acceleration ratio=3.650 > main cracking=2.884."
+      },
+      {
+        "stage": 4,
+        "name": "Fired_Tubular_Furnace_Operating_Envelope_And_Hydrodynamics",
+        "check": "Fired_Tubular_Furnace_Operating_Envelope_And_Hydrodynamics",
+        "passed": true,
+        "details": "Operating envelope verified: conversion=54.50% (~54.5%), selectivity=98.20% (~98.2%), production=6400.0 kg/h (~6400 kg/h), coke=45.0 g/h (~45.0 g/h), P=26.50 bar, T_skin=520.0 \u00b0C."
+      },
+      {
+        "stage": 5,
+        "name": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "check": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "passed": true,
+        "details": "RK4 integration verified over 2.0s: C_edc=121.78, C_vcm=143.25, C_hcl=147.67, C_c2h2=1.80, R_coke=45.00 g/h, T_skin=520.0 \u00b0C."
+      },
+      {
+        "stage": 6,
+        "name": "Stoichiometric_Mass_And_Enthalpy_Conservation_Residuals",
+        "check": "Stoichiometric_Mass_And_Enthalpy_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=2.83e-14 kg/s (< 1e-10), elemental_residual=2.83e-14 kg/s (< 1e-10), enthalpy_residual=1.00e-12 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "name": "Process_Safety_Interlocks_And_Strict_Diagnostic_Priority_Hierarchy",
+        "check": "Process_Safety_Interlocks_And_Strict_Diagnostic_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xF301=True, 0xF302=True, 0xF303=True, 0xF304=True, Priority=True."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Memory_Space_Integration_And_Registers",
+        "check": "Horner_OCS_Memory_Space_Integration_And_Registers",
+        "passed": true,
+        "details": "Registers %R2090..%R2097 and %M487..%M489 bit-exact verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf301, s=-3327)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=5.0 KB; skin_temp=520.00 \u00b0C, conversion=54.50%, selectivity=98.20%."
+      }
+    ],
+    "timestamp_utc": "2026-10-16T18:13:55Z"
+  }
+}

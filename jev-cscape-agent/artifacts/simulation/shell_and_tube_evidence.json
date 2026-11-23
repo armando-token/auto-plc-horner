@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Shell-and-Tube Exchanger Simulator verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W095",
+    "gate": "Gate G7 / G4",
+    "component": "Multi-Pass Shell-and-Tube Heat Exchanger Dynamics & Tube Fouling ODE Solver",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R560..%R567 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "LMTD_And_F_Correction_Factor_Evaluation",
+        "passed": true,
+        "details": "LMTD=57.46 K, F=0.9847 (>= 0.75), Delta Tm=56.58 K verified without singularity."
+      },
+      {
+        "stage": 3,
+        "check": "Coupled_ODE_Energy_Conservation_Residual",
+        "passed": true,
+        "details": "Thermal energy conservation residual 1.46e-11 W (< 1e-10 W deterministic limit)."
+      },
+      {
+        "stage": 4,
+        "check": "Kern_Seaton_Asymptotic_Fouling_Kinetics",
+        "passed": true,
+        "details": "Asymptotic ceiling R_f_inf=349.4 um^2*K/W; dR_f/dt approaches 0 at steady-state."
+      },
+      {
+        "stage": 5,
+        "check": "Tube_Constriction_And_DP_Power_Surge",
+        "passed": true,
+        "details": "Bore narrowed 15.75 -> 11.75 mm; dP surged 180.0 -> 778.9 mbar."
+      },
+      {
+        "stage": 6,
+        "check": "High_Fouling_Alarm_Actuation",
+        "passed": true,
+        "details": "Fouling resistance 450 um^2*K/W actuated coil %M130 and Bit 5 of %R567."
+      },
+      {
+        "stage": 7,
+        "check": "Low_Duty_Thermal_Degradation_Trip",
+        "passed": true,
+        "details": "Thermal duty collapse successfully tripped coil %M131 and Bit 6 of %R567."
+      },
+      {
+        "stage": 8,
+        "check": "Clean_Exchanger_Baseline_Verification",
+        "passed": true,
+        "details": "Clean baseline condition (R_f=50, dP=180 mbar) asserted coil %M132 with zero faults."
+      },
+      {
+        "stage": 9,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts and coils strictly intercepted with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R560..%R567",
+      "discrete_coils": "%M130..%M132",
+      "values": {
+        "%R560": 950,
+        "%R561": 748,
+        "%R562": 200,
+        "%R563": 356,
+        "%R564": 2103,
+        "%R565": 50,
+        "%R566": 212,
+        "%R567": 3207,
+        "%M130": false,
+        "%M131": false,
+        "%M132": true
+      }
+    },
+    "timestamp": "2026-10-03T02:18:47Z"
+  }
+}

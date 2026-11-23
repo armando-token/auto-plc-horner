@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <style>
+    .title-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 16px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+    .subtitle-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #94A3B8; }
+    .panel-card { fill: #1E293B; stroke: #334155; stroke-width: 1.5px; rx: 6px; }
+    .panel-card-selected { fill: #1E293B; stroke: #38BDF8; stroke-width: 2.5px; rx: 6px; }
+    .panel-card-tripped { fill: #1E293B; stroke: #EF4444; stroke-width: 2.5px; rx: 6px; }
+    .panel-tag { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 12px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+    .panel-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .metric-value { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 14px; font-weight: 700; fill: #F8FAFC; }
+    .metric-unit { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .badge-bg { fill: #0B0F19; fill-opacity: 0.95; stroke: #334155; stroke-width: 1px; rx: 4px; }
+    .badge-bg-trip { fill: #0B0F19; fill-opacity: 0.95; stroke: #EF4444; stroke-width: 1.5px; rx: 4px; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 10px; font-weight: 700; }
+    .tick-line { stroke: #334155; stroke-width: 1px; stroke-dasharray: 4,4; }
+    .tick-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 9px; fill: #64748B; }
+    .golden-envelope { fill: #06B6D4; fill-opacity: 0.14; stroke: #06B6D4; stroke-width: 1.2px; stroke-dasharray: 4,3; }
+    .realtime-area { fill: #10B981; fill-opacity: 0.22; }
+    .realtime-line { stroke: #10B981; stroke-width: 2.2px; fill: none; }
+    .realtime-line-trip { stroke: #EF4444; stroke-width: 2.2px; fill: none; }
+    .realtime-area-trip { fill: #EF4444; fill-opacity: 0.25; }
+    .target-line { stroke: #06B6D4; stroke-width: 1.5px; stroke-dasharray: 3,3; }
+    .operating-point-pulse { animation: op-pulse 2s infinite ease-in-out; }
+    @keyframes op-pulse {
+      0% { r: 5px; opacity: 0.85; }
+      50% { r: 7.5px; opacity: 1.0; }
+      100% { r: 5px; opacity: 0.85; }
+    }
+    .hud-card { fill: #1E293B; stroke: #334155; stroke-width: 1.5px; rx: 8px; }
+    .hud-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 13px; font-weight: 700; fill: #38BDF8; letter-spacing: 0.5px; }
+    .hud-subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+  </style>
+  <defs>
+    <filter id="alert-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="focus-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Dark Theme Backing -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <g id="canvas-header">
+    <text x="30" y="38" class="title-banner">CSCAPE HMI DYNAMIC TRELLIS / SMALL MULTIPLES MULTI-STREAM CANVAS (W171)</text>
+    <text x="30" y="55" class="subtitle-banner">6-Unit Refinery Small Multiples Matrix Grid • Gate G9 Graphic Screen Engine / Gate G2 Live GUI</text>
+    <!-- System Status Decoupled Badge -->
+    <rect x="810" y="20" width="360" height="42" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="825" y="45" font-family="sans-serif" font-size="11px" font-weight="600" fill="#94A3B8">FLEET STATUS:</text>
+    <text x="1155" y="45" class="badge-text" fill="#10B981" text-anchor="end">FLEET NOMINAL OPERATION</text>
+  </g>
+  <g id="trellis-diagram">
+  <g id="trellis-grid">
+    <!-- Panel 0: Crude Distillation Unit (CDU) -->
+    <g id="trellis-panel-0" filter="url(#focus-glow)">
+      <rect x="30.0" y="80.0" width="250.0" height="308.0" class="panel-card-selected"/>
+      <text x="44.0" y="104.0" class="panel-tag">CDU-101</text>
+      <text x="44.0" y="118.0" class="panel-name">CDU • Atmospheric Overhead T</text>
+      <rect x="218.0" y="92.0" width="48" height="22" class="badge-bg"/>
+      <text x="242.0" y="107.0" class="badge-text" fill="#10B981" text-anchor="middle">OK</text>
+      <!-- Micro-Spark Chart Area -->
+      <rect x="44.0" y="132.0" width="222.0" height="200.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <line x1="44.0" y1="332.0" x2="266.0" y2="332.0" class="tick-line"/>
+      <line x1="44.0" y1="282.0" x2="266.0" y2="282.0" class="tick-line"/>
+      <line x1="44.0" y1="232.0" x2="266.0" y2="232.0" class="tick-line"/>
+      <line x1="44.0" y1="182.0" x2="266.0" y2="182.0" class="tick-line"/>
+      <line x1="44.0" y1="132.0" x2="266.0" y2="132.0" class="tick-line"/>
+      <!-- Golden Baseline Safe Envelope -->
+      <g id="panel-0-baseline-envelope">
+        <rect x="44.0" y="198.7" width="222.0" height="66.7" class="golden-envelope"/>
+        <line x1="44.0" y1="223.7" x2="266.0" y2="223.7" class="target-line"/>
+      </g>
+      <!-- Real-Time Micro-Spark Trajectory -->
+      <g id="panel-0-trajectory">
+        <path d="M 44.0,332.0 L 44.0,224.5 L 53.2,224.0 L 62.5,223.5 L 71.8,223.7 L 81.0,224.2 L 90.2,223.3 L 99.5,223.0 L 108.8,223.5 L 118.0,223.8 L 127.2,223.7 L 136.5,223.2 L 145.8,223.5 L 155.0,224.0 L 164.2,223.7 L 173.5,223.3 L 182.8,222.8 L 192.0,223.5 L 201.2,223.8 L 210.5,224.0 L 219.8,223.7 L 229.0,223.3 L 238.2,223.5 L 247.5,223.8 L 256.8,223.7 L 266.0,223.7 L 266.0,332.0 Z" class="realtime-area"/>
+        <path d="M 44.0,224.5 L 53.2,224.0 L 62.5,223.5 L 71.8,223.7 L 81.0,224.2 L 90.2,223.3 L 99.5,223.0 L 108.8,223.5 L 118.0,223.8 L 127.2,223.7 L 136.5,223.2 L 145.8,223.5 L 155.0,224.0 L 164.2,223.7 L 173.5,223.3 L 182.8,222.8 L 192.0,223.5 L 201.2,223.8 L 210.5,224.0 L 219.8,223.7 L 229.0,223.3 L 238.2,223.5 L 247.5,223.8 L 256.8,223.7 L 266.0,223.7" class="realtime-line"/>
+        <!-- Real-Time Operating Point Marker -->
+        <circle cx="266.0" cy="223.7" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5" class="operating-point-pulse"/>
+      </g>
+      <!-- Panel Telemetry Footer -->
+      <g id="panel-0-footer" transform="translate(44.0, 346.0)">
+        <text x="0" y="12" class="metric-value">365.0 <tspan class="metric-unit">°C</tspan></text>
+        <text x="222.0" y="12" text-anchor="end" font-family="monospace" font-size="10px" font-weight="700" fill="#10B981">Dev: +0.0%</text>
+        <text x="0" y="28" font-family="sans-serif" font-size="9px" fill="#94A3B8">Tgt: 365.0 | Safe: [340..380]</text>
+        <text x="222.0" y="28" text-anchor="end" font-family="sans-serif" font-size="9px" fill="#06B6D4">Stab: 98.8%</text>
+      </g>
+    </g>
+    <!-- Panel 1: Vacuum Distillation Unit (VDU) -->
+    <g id="trellis-panel-1">
+      <rect x="296.0" y="80.0" width="250.0" height="308.0" class="panel-card"/>
+      <text x="310.0" y="104.0" class="panel-tag">VDU-201</text>
+      <text x="310.0" y="118.0" class="panel-name">VDU • Vacuum Flash Zone Temp</text>
+      <rect x="484.0" y="92.0" width="48" height="22" class="badge-bg"/>
+      <text x="508.0" y="107.0" class="badge-text" fill="#10B981" text-anchor="middle">OK</text>
+      <!-- Micro-Spark Chart Area -->
+      <rect x="310.0" y="132.0" width="222.0" height="200.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <line x1="310.0" y1="332.0" x2="532.0" y2="332.0" class="tick-line"/>
+      <line x1="310.0" y1="282.0" x2="532.0" y2="282.0" class="tick-line"/>
+      <line x1="310.0" y1="232.0" x2="532.0" y2="232.0" class="tick-line"/>
+      <line x1="310.0" y1="182.0" x2="532.0" y2="182.0" class="tick-line"/>
+      <line x1="310.0" y1="132.0" x2="532.0" y2="132.0" class="tick-line"/>
+      <!-- Golden Baseline Safe Envelope -->
+      <g id="panel-1-baseline-envelope">
+        <rect x="310.0" y="177.5" width="222.0" height="81.8" class="golden-envelope"/>
+        <line x1="310.0" y1="219.3" x2="532.0" y2="219.3" class="target-line"/>
+      </g>
+      <!-- Real-Time Micro-Spark Trajectory -->
+      <g id="panel-1-trajectory">
+        <path d="M 310.0,332.0 L 310.0,220.7 L 319.2,220.2 L 328.5,219.6 L 337.8,219.3 L 347.0,218.7 L 356.2,219.1 L 365.5,219.5 L 374.8,218.9 L 384.0,218.5 L 393.2,219.3 L 402.5,219.8 L 411.8,219.1 L 421.0,218.4 L 430.2,218.9 L 439.5,219.6 L 448.8,219.3 L 458.0,218.7 L 467.2,219.1 L 476.5,219.5 L 485.8,218.9 L 495.0,219.3 L 504.2,219.6 L 513.5,219.1 L 522.8,219.3 L 532.0,219.3 L 532.0,332.0 Z" class="realtime-area"/>
+        <path d="M 310.0,220.7 L 319.2,220.2 L 328.5,219.6 L 337.8,219.3 L 347.0,218.7 L 356.2,219.1 L 365.5,219.5 L 374.8,218.9 L 384.0,218.5 L 393.2,219.3 L 402.5,219.8 L 411.8,219.1 L 421.0,218.4 L 430.2,218.9 L 439.5,219.6 L 448.8,219.3 L 458.0,218.7 L 467.2,219.1 L 476.5,219.5 L 485.8,218.9 L 495.0,219.3 L 504.2,219.6 L 513.5,219.1 L 522.8,219.3 L 532.0,219.3" class="realtime-line"/>
+        <!-- Real-Time Operating Point Marker -->
+        <circle cx="532.0" cy="219.3" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5" class="operating-point-pulse"/>
+      </g>
+      <!-- Panel Telemetry Footer -->
+      <g id="panel-1-footer" transform="translate(310.0, 346.0)">
+        <text x="0" y="12" class="metric-value">512.0 <tspan class="metric-unit">°C</tspan></text>
+        <text x="222.0" y="12" text-anchor="end" font-family="monospace" font-size="10px" font-weight="700" fill="#10B981">Dev: +0.0%</text>
+        <text x="0" y="28" font-family="sans-serif" font-size="9px" fill="#94A3B8">Tgt: 512.0 | Safe: [490..535]</text>
+        <text x="222.0" y="28" text-anchor="end" font-family="sans-serif" font-size="9px" fill="#06B6D4">Stab: 97.6%</text>
+      </g>
+    </g>
+    <!-- Panel 2: Fluid Catalytic Cracking (FCC) -->
+    <g id="trellis-panel-2">
+      <rect x="562.0" y="80.0" width="250.0" height="308.0" class="panel-card"/>
+      <text x="576.0" y="104.0" class="panel-tag">FCC-301</text>
+      <text x="576.0" y="118.0" class="panel-name">FCC • Reactor Riser Pressure</text>
+      <rect x="750.0" y="92.0" width="48" height="22" class="badge-bg"/>
+      <text x="774.0" y="107.0" class="badge-text" fill="#10B981" text-anchor="middle">OK</text>
+      <!-- Micro-Spark Chart Area -->
+      <rect x="576.0" y="132.0" width="222.0" height="200.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <line x1="576.0" y1="332.0" x2="798.0" y2="332.0" class="tick-line"/>
+      <line x1="576.0" y1="282.0" x2="798.0" y2="282.0" class="tick-line"/>
+      <line x1="576.0" y1="232.0" x2="798.0" y2="232.0" class="tick-line"/>
+      <line x1="576.0" y1="182.0" x2="798.0" y2="182.0" class="tick-line"/>
+      <line x1="576.0" y1="132.0" x2="798.0" y2="132.0" class="tick-line"/>
+      <!-- Golden Baseline Safe Envelope -->
+      <g id="panel-2-baseline-envelope">
+        <rect x="576.0" y="194.5" width="222.0" height="75.0" class="golden-envelope"/>
+        <line x1="576.0" y1="232.0" x2="798.0" y2="232.0" class="target-line"/>
+      </g>
+      <!-- Real-Time Micro-Spark Trajectory -->
+      <g id="panel-2-trajectory">
+        <path d="M 576.0,332.0 L 576.0,233.2 L 585.2,232.5 L 594.5,231.8 L 603.8,232.0 L 613.0,232.8 L 622.2,231.5 L 631.5,231.0 L 640.8,231.8 L 650.0,232.2 L 659.2,232.0 L 668.5,231.2 L 677.8,231.8 L 687.0,232.5 L 696.2,232.0 L 705.5,231.5 L 714.8,230.8 L 724.0,231.8 L 733.2,232.2 L 742.5,232.8 L 751.8,232.0 L 761.0,231.5 L 770.2,231.8 L 779.5,232.5 L 788.8,232.0 L 798.0,232.0 L 798.0,332.0 Z" class="realtime-area"/>
+        <path d="M 576.0,233.2 L 585.2,232.5 L 594.5,231.8 L 603.8,232.0 L 613.0,232.8 L 622.2,231.5 L 631.5,231.0 L 640.8,231.8 L 650.0,232.2 L 659.2,232.0 L 668.5,231.2 L 677.8,231.8 L 687.0,232.5 L 696.2,232.0 L 705.5,231.5 L 714.8,230.8 L 724.0,231.8 L 733.2,232.2 L 742.5,232.8 L 751.8,232.0 L 761.0,231.5 L 770.2,231.8 L 779.5,232.5 L 788.8,232.0 L 798.0,232.0" class="realtime-line"/>
+        <!-- Real-Time Operating Point Marker -->
+        <circle cx="798.0" cy="232.0" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5" class="operating-point-pulse"/>
+      </g>
+      <!-- Panel Telemetry Footer -->
+      <g id="panel-2-footer" transform="translate(576.0, 346.0)">
+        <text x="0" y="12" class="metric-value">120.0 <tspan class="metric-unit">kPa</tspan></text>
+        <text x="222.0" y="12" text-anchor="end" font-family="monospace" font-size="10px" font-weight="700" fill="#10B981">Dev: +0.0%</text>
+        <text x="0" y="28" font-family="sans-serif" font-size="9px" fill="#94A3B8">Tgt: 120.0 | Safe: [105..135]</text>
+        <text x="222.0" y="28" text-anchor="end" font-family="sans-serif" font-size="9px" fill="#06B6D4">Stab: 98.2%</text>
+      </g>
+    </g>
+    <!-- Panel 3: Hydrocracker Unit (HCU) -->
+    <g id="trellis-panel-3">
+      <rect x="30.0" y="404.0" width="250.0" height="308.0" class="panel-card"/>
+      <text x="44.0" y="428.0" class="panel-tag">HCU-401</text>
+      <text x="44.0" y="442.0" class="panel-name">HCU • 1st Stage Reactor Pres</text>
+      <rect x="218.0" y="416.0" width="48" height="22" class="badge-bg"/>
+      <text x="242.0" y="431.0" class="badge-text" fill="#10B981" text-anchor="middle">OK</text>
+      <!-- Micro-Spark Chart Area -->
+      <rect x="44.0" y="456.0" width="222.0" height="200.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <line x1="44.0" y1="656.0" x2="266.0" y2="656.0" class="tick-line"/>
+      <line x1="44.0" y1="606.0" x2="266.0" y2="606.0" class="tick-line"/>
+      <line x1="44.0" y1="556.0" x2="266.0" y2="556.0" class="tick-line"/>
+      <line x1="44.0" y1="506.0" x2="266.0" y2="506.0" class="tick-line"/>
+      <line x1="44.0" y1="456.0" x2="266.0" y2="456.0" class="tick-line"/>
+      <!-- Golden Baseline Safe Envelope -->
+      <g id="panel-3-baseline-envelope">
+        <rect x="44.0" y="518.5" width="222.0" height="75.0" class="golden-envelope"/>
+        <line x1="44.0" y1="556.0" x2="266.0" y2="556.0" class="target-line"/>
+      </g>
+      <!-- Real-Time Micro-Spark Trajectory -->
+      <g id="panel-3-trajectory">
+        <path d="M 44.0,656.0 L 44.0,556.5 L 53.2,555.8 L 62.5,556.0 L 71.8,556.2 L 81.0,555.5 L 90.2,555.8 L 99.5,556.8 L 108.8,556.0 L 118.0,555.2 L 127.2,555.8 L 136.5,556.2 L 145.8,555.5 L 155.0,556.0 L 164.2,556.5 L 173.5,555.8 L 182.8,555.5 L 192.0,556.0 L 201.2,556.2 L 210.5,555.8 L 219.8,556.0 L 229.0,556.5 L 238.2,555.8 L 247.5,555.5 L 256.8,556.0 L 266.0,556.0 L 266.0,656.0 Z" class="realtime-area"/>
+        <path d="M 44.0,556.5 L 53.2,555.8 L 62.5,556.0 L 71.8,556.2 L 81.0,555.5 L 90.2,555.8 L 99.5,556.8 L 108.8,556.0 L 118.0,555.2 L 127.2,555.8 L 136.5,556.2 L 145.8,555.5 L 155.0,556.0 L 164.2,556.5 L 173.5,555.8 L 182.8,555.5 L 192.0,556.0 L 201.2,556.2 L 210.5,555.8 L 219.8,556.0 L 229.0,556.5 L 238.2,555.8 L 247.5,555.5 L 256.8,556.0 L 266.0,556.0" class="realtime-line"/>
+        <!-- Real-Time Operating Point Marker -->
+        <circle cx="266.0" cy="556.0" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5" class="operating-point-pulse"/>
+      </g>
+      <!-- Panel Telemetry Footer -->
+      <g id="panel-3-footer" transform="translate(44.0, 670.0)">
+        <text x="0" y="12" class="metric-value">160.0 <tspan class="metric-unit">bar</tspan></text>
+        <text x="222.0" y="12" text-anchor="end" font-family="monospace" font-size="10px" font-weight="700" fill="#10B981">Dev: +0.0%</text>
+        <text x="0" y="28" font-family="sans-serif" font-size="9px" fill="#94A3B8">Tgt: 160.0 | Safe: [145..175]</text>
+        <text x="222.0" y="28" text-anchor="end" font-family="sans-serif" font-size="9px" fill="#06B6D4">Stab: 99.1%</text>
+      </g>
+    </g>
+    <!-- Panel 4: Continuous Catalytic Reformer (CCR) -->
+    <g id="trellis-panel-4">
+      <rect x="296.0" y="404.0" width="250.0" height="308.0" class="panel-card"/>
+      <text x="310.0" y="428.0" class="panel-tag">CCR-501</text>
+      <text x="310.0" y="442.0" class="panel-name">CCR • Reformate Octane Ratin</text>
+      <rect x="484.0" y="416.0" width="48" height="22" class="badge-bg"/>
+      <text x="508.0" y="431.0" class="badge-text" fill="#F59E0B" text-anchor="middle">WARN</text>
+      <!-- Micro-Spark Chart Area -->
+      <rect x="310.0" y="456.0" width="222.0" height="200.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <line x1="310.0" y1="656.0" x2="532.0" y2="656.0" class="tick-line"/>
+      <line x1="310.0" y1="606.0" x2="532.0" y2="606.0" class="tick-line"/>
+      <line x1="310.0" y1="556.0" x2="532.0" y2="556.0" class="tick-line"/>
+      <line x1="310.0" y1="506.0" x2="532.0" y2="506.0" class="tick-line"/>
+      <line x1="310.0" y1="456.0" x2="532.0" y2="456.0" class="tick-line"/>
+      <!-- Golden Baseline Safe Envelope -->
+      <g id="panel-4-baseline-envelope">
+        <rect x="310.0" y="516.0" width="222.0" height="80.0" class="golden-envelope"/>
+        <line x1="310.0" y1="556.0" x2="532.0" y2="556.0" class="target-line"/>
+      </g>
+      <!-- Real-Time Micro-Spark Trajectory -->
+      <g id="panel-4-trajectory">
+        <path d="M 310.0,656.0 L 310.0,556.0 L 319.2,555.0 L 328.5,554.0 L 337.8,555.0 L 347.0,553.0 L 356.2,554.0 L 365.5,552.0 L 374.8,553.0 L 384.0,551.0 L 393.2,552.0 L 402.5,550.0 L 411.8,551.0 L 421.0,550.0 L 430.2,549.0 L 439.5,550.0 L 448.8,549.0 L 458.0,548.0 L 467.2,549.0 L 476.5,548.0 L 485.8,548.0 L 495.0,547.8 L 504.2,547.7 L 513.5,547.6 L 522.8,547.6 L 532.0,547.6 L 532.0,656.0 Z" class="realtime-area"/>
+        <path d="M 310.0,556.0 L 319.2,555.0 L 328.5,554.0 L 337.8,555.0 L 347.0,553.0 L 356.2,554.0 L 365.5,552.0 L 374.8,553.0 L 384.0,551.0 L 393.2,552.0 L 402.5,550.0 L 411.8,551.0 L 421.0,550.0 L 430.2,549.0 L 439.5,550.0 L 448.8,549.0 L 458.0,548.0 L 467.2,549.0 L 476.5,548.0 L 485.8,548.0 L 495.0,547.8 L 504.2,547.7 L 513.5,547.6 L 522.8,547.6 L 532.0,547.6" class="realtime-line"/>
+        <!-- Real-Time Operating Point Marker -->
+        <circle cx="532.0" cy="547.6" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5" class="operating-point-pulse"/>
+      </g>
+      <!-- Panel Telemetry Footer -->
+      <g id="panel-4-footer" transform="translate(310.0, 670.0)">
+        <text x="0" y="12" class="metric-value">100.8 <tspan class="metric-unit">RON</tspan></text>
+        <text x="222.0" y="12" text-anchor="end" font-family="monospace" font-size="10px" font-weight="700" fill="#F59E0B">Dev: +4.2%</text>
+        <text x="0" y="28" font-family="sans-serif" font-size="9px" fill="#94A3B8">Tgt: 100.0 | Safe: [96..104]</text>
+        <text x="222.0" y="28" text-anchor="end" font-family="sans-serif" font-size="9px" fill="#06B6D4">Stab: 96.5%</text>
+      </g>
+    </g>
+    <!-- Panel 5: Hydroisomerization Dewaxing (HID) -->
+    <g id="trellis-panel-5">
+      <rect x="562.0" y="404.0" width="250.0" height="308.0" class="panel-card"/>
+      <text x="576.0" y="428.0" class="panel-tag">HID-601</text>
+      <text x="576.0" y="442.0" class="panel-name">HID • Catalyst Bed Reaction </text>
+      <rect x="750.0" y="416.0" width="48" height="22" class="badge-bg"/>
+      <text x="774.0" y="431.0" class="badge-text" fill="#10B981" text-anchor="middle">OK</text>
+      <!-- Micro-Spark Chart Area -->
+      <rect x="576.0" y="456.0" width="222.0" height="200.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <line x1="576.0" y1="656.0" x2="798.0" y2="656.0" class="tick-line"/>
+      <line x1="576.0" y1="606.0" x2="798.0" y2="606.0" class="tick-line"/>
+      <line x1="576.0" y1="556.0" x2="798.0" y2="556.0" class="tick-line"/>
+      <line x1="576.0" y1="506.0" x2="798.0" y2="506.0" class="tick-line"/>
+      <line x1="576.0" y1="456.0" x2="798.0" y2="456.0" class="tick-line"/>
+      <!-- Golden Baseline Safe Envelope -->
+      <g id="panel-5-baseline-envelope">
+        <rect x="576.0" y="506.0" width="222.0" height="100.0" class="golden-envelope"/>
+        <line x1="576.0" y1="556.0" x2="798.0" y2="556.0" class="target-line"/>
+      </g>
+      <!-- Real-Time Micro-Spark Trajectory -->
+      <g id="panel-5-trajectory">
+        <path d="M 576.0,656.0 L 576.0,557.5 L 585.2,556.5 L 594.5,555.8 L 603.8,556.0 L 613.0,556.8 L 622.2,555.5 L 631.5,555.2 L 640.8,555.8 L 650.0,556.2 L 659.2,556.0 L 668.5,555.5 L 677.8,555.8 L 687.0,556.5 L 696.2,556.0 L 705.5,555.5 L 714.8,555.0 L 724.0,555.8 L 733.2,556.2 L 742.5,556.8 L 751.8,556.0 L 761.0,555.5 L 770.2,555.8 L 779.5,556.5 L 788.8,556.0 L 798.0,556.0 L 798.0,656.0 Z" class="realtime-area"/>
+        <path d="M 576.0,557.5 L 585.2,556.5 L 594.5,555.8 L 603.8,556.0 L 613.0,556.8 L 622.2,555.5 L 631.5,555.2 L 640.8,555.8 L 650.0,556.2 L 659.2,556.0 L 668.5,555.5 L 677.8,555.8 L 687.0,556.5 L 696.2,556.0 L 705.5,555.5 L 714.8,555.0 L 724.0,555.8 L 733.2,556.2 L 742.5,556.8 L 751.8,556.0 L 761.0,555.5 L 770.2,555.8 L 779.5,556.5 L 788.8,556.0 L 798.0,556.0" class="realtime-line"/>
+        <!-- Real-Time Operating Point Marker -->
+        <circle cx="798.0" cy="556.0" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5" class="operating-point-pulse"/>
+      </g>
+      <!-- Panel Telemetry Footer -->
+      <g id="panel-5-footer" transform="translate(576.0, 670.0)">
+        <text x="0" y="12" class="metric-value">320.0 <tspan class="metric-unit">°C</tspan></text>
+        <text x="222.0" y="12" text-anchor="end" font-family="monospace" font-size="10px" font-weight="700" fill="#10B981">Dev: +0.0%</text>
+        <text x="0" y="28" font-family="sans-serif" font-size="9px" fill="#94A3B8">Tgt: 320.0 | Safe: [300..340]</text>
+        <text x="222.0" y="28" text-anchor="end" font-family="sans-serif" font-size="9px" fill="#06B6D4">Stab: 98.0%</text>
+      </g>
+    </g>
+  </g>
+  </g>
+  <!-- Right-Hand Fleet Health & Selected Unit HUD Card -->
+  <g id="trellis-hud-card">
+    <rect x="836.0" y="80.0" width="334.0" height="632.0" class="hud-card"/>
+    <text x="854.0" y="108.0" class="hud-title">FLEET HEALTH &amp; UNIT METRICS HUD</text>
+    <text x="854.0" y="124.0" class="hud-subtitle">Trellis Multi-Stream SCADA Telemetry • Gate G9 / G2</text>
+    <line x1="854.0" y1="132.0" x2="1152.0" y2="132.0" stroke="#334155" stroke-width="1"/>
+    <!-- Fleet Health Summary KPI Box -->
+    <g id="fleet-health-summary-box">
+      <rect x="854.0" y="144.0" width="298.0" height="76" rx="6" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+      <text x="866.0" y="164.0" class="hud-label">FLEET HEALTH SCORE (%R1320):</text>
+      <text x="1140.0" y="164.0" text-anchor="end" class="hud-label">ACTIVE PANELS (%R1321): 6</text>
+      <text x="866.0" y="200.0" font-family="monospace" font-size="28px" font-weight="700" fill="#10B981">96.2%</text>
+      <text x="1140.0" y="188.0" text-anchor="end" font-family="monospace" font-size="11px" font-weight="700" fill="#F8FAFC">MAX DEV (%R1326):</text>
+      <text x="1140.0" y="204.0" text-anchor="end" font-family="monospace" font-size="13px" font-weight="700" fill="#F59E0B">4.2%</text>
+    </g>
+    <!-- Primary 3 Panels Register Breakdown -->
+    <text x="854.0" y="242.0" font-family="sans-serif" font-size="11px" font-weight="700" fill="#06B6D4">REGISTER SCALED METRICS</text>
+    <line x1="854.0" y1="248.0" x2="1152.0" y2="248.0" stroke="#334155" stroke-width="1"/>
+    <g id="scaled-metrics-breakdown">
+      <g transform="translate(854.0, 258.0)">
+        <rect width="298.0" height="28" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+        <text x="10" y="18" class="hud-label">%R1323 CDU Overhead Temp</text>
+        <text x="288.0" y="18" text-anchor="end" class="hud-val">365.0 °C <tspan fill="#94A3B8">(3650)</tspan></text>
+      </g>
+      <g transform="translate(854.0, 292.0)">
+        <rect width="298.0" height="28" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+        <text x="10" y="18" class="hud-label">%R1324 VDU Flash Zone Temp</text>
+        <text x="288.0" y="18" text-anchor="end" class="hud-val">512.0 °C <tspan fill="#94A3B8">(5120)</tspan></text>
+      </g>
+      <g transform="translate(854.0, 326.0)">
+        <rect width="298.0" height="28" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+        <text x="10" y="18" class="hud-label">%R1325 FCC Riser Pressure</text>
+        <text x="288.0" y="18" text-anchor="end" class="hud-val">120.0 kPa <tspan fill="#94A3B8">(1200)</tspan></text>
+      </g>
+    </g>
+    <!-- Focused Selected Unit Card -->
+    <text x="854.0" y="380.0" font-family="sans-serif" font-size="11px" font-weight="700" fill="#3B82F6">FOCUSED UNIT [0] TELEMETRY</text>
+    <line x1="854.0" y1="386.0" x2="1152.0" y2="386.0" stroke="#334155" stroke-width="1"/>
+    <g id="focused-unit-card">
+      <rect x="854.0" y="394.0" width="298.0" height="126" rx="6" fill="#0B0F19" stroke="#3B82F6" stroke-width="1.2"/>
+      <text x="866.0" y="414.0" class="panel-tag" fill="#3B82F6">CDU-101: Crude Distillation Unit (CDU)</text>
+      <text x="866.0" y="432.0" class="hud-label">Current Operating Point: <tspan class="hud-val">365.0 °C</tspan></text>
+      <text x="866.0" y="450.0" class="hud-label">Baseline Target: <tspan class="hud-val">365.0 °C</tspan></text>
+      <text x="866.0" y="468.0" class="hud-label">Safe Operating Envelope: <tspan class="hud-val">[340.0 .. 380.0 °C]</tspan></text>
+      <text x="866.0" y="486.0" class="hud-label">24-Hour Stability Index: <tspan class="hud-val" fill="#06B6D4">98.8%</tspan></text>
+      <text x="866.0" y="504.0" class="hud-label">Operating Status: <tspan class="hud-val" fill="#10B981">NORMAL</tspan></text>
+    </g>
+    <!-- Process Safety Interlocks & Diagnostics Box -->
+    <g id="diagnostics-safety-card">
+      <rect x="854.0" y="536.0" width="298.0" height="158" rx="6" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+      <text x="866.0" y="560.0" class="hud-title" fill="#38BDF8">SAFETY INTERLOCKS &amp; DIAGNOSTICS</text>
+      <text x="866.0" y="584.0" class="hud-label">%M308 TrellisEnvelopeTrip: <tspan font-family="monospace" font-weight="700" fill="#10B981">NORMAL (CLEAR)</tspan></text>
+      <text x="866.0" y="604.0" class="hud-label">%M309 TrellisCanvasActive: <tspan font-family="monospace" font-weight="700" fill="#10B981">TRUE (ONLINE)</tspan></text>
+      <text x="866.0" y="624.0" class="hud-label">%R1322 SelectedPanelIndex: <tspan font-family="monospace" font-weight="700" fill="#3B82F6">0</tspan></text>
+      <text x="866.0" y="644.0" class="hud-label">%R1327 DiagnosticStatusCode: <tspan font-family="monospace" font-weight="700" fill="#10B981">0x0000</tspan></text>
+      <text x="866.0" y="666.0" font-family="sans-serif" font-size="9px" fill="#94A3B8">Process Rule: Operating point outside safe envelope asserts %M308</text>
+      <text x="866.0" y="680.0" font-family="sans-serif" font-size="9px" fill="#94A3B8">0xC401 Envelope Breach | 0xC402 Aspect Ratio | 0xC403 Render</text>
+    </g>
+  </g>
+</svg>

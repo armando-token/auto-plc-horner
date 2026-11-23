@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Fluidized Bed Reactor Simulator verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W089",
+    "gate": "Gate G7 / G4",
+    "component": "Fluidized Bed Reactor (FBR) Two-Phase Hydrodynamics & Catalytic Gasification ODE Solver",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R500..%R507 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Ergun_Minimum_Fluidization_Velocity",
+        "passed": true,
+        "details": "Ergun quadratic solution yielded U_mf = 0.0111 m/s (expected 0.005..0.05 m/s)."
+      },
+      {
+        "stage": 3,
+        "check": "Darton_Bubble_Dynamics_And_Bed_Expansion",
+        "passed": true,
+        "details": "Bed expanded from 1.74 m to 2.68 m (voidage 35.1%, d_b 28.2 cm)."
+      },
+      {
+        "stage": 4,
+        "check": "Kunii_Levenspiel_Interphase_Coefficients",
+        "passed": true,
+        "details": "Interphase mass exchange K_be = 0.40 1/s, heat exchange H_be = 340.8 W/(m3*K)."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_ODE_Mass_And_Energy_Conservation",
+        "passed": true,
+        "details": "Mass residual 0.00e+00 mol/s, energy residual 0.00e+00 W (< 1e-10)."
+      },
+      {
+        "stage": 6,
+        "check": "Cyclone_Separation_And_Solids_Return_Loop",
+        "passed": true,
+        "details": "Cyclone return 4874.4 kg/h (99.2%), loss 39.31 kg/h."
+      },
+      {
+        "stage": 7,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers synced: %R500=0x0081, %R501=65 (0.65 m/s), %R504=7802 (780.2 \u00b0C)."
+      },
+      {
+        "stage": 8,
+        "check": "Hotspot_Trip_And_Emergency_N2_Quench",
+        "passed": true,
+        "details": "Hotspot trip 860 \u00b0C actuated cold N2 quench, purged bed to defluidized state, and asserted alarms."
+      },
+      {
+        "stage": 9,
+        "check": "Alarm_Reset_Handshake_Clearing",
+        "passed": true,
+        "details": "Coil %M118 cleared latched alarms and self-reset to FALSE."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R500..%R507",
+      "discrete_coils": "%M116..%M118",
+      "values": {
+        "%R500": 33,
+        "%R501": 0,
+        "%R502": 1,
+        "%R503": 174,
+        "%R504": 7493,
+        "%R505": 1000,
+        "%R506": 655,
+        "%R507": 0,
+        "%M116": true,
+        "%M117": false,
+        "%M118": false
+      }
+    },
+    "timestamp": "2026-10-03T01:51:57Z"
+  }
+}

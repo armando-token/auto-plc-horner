@@ -1,0 +1,87 @@
+{
+  "audit_version": "1.0.0",
+  "audit_target": "Gate G1: False Success Dismantling & Honest Classification",
+  "timestamp_utc": "2026-10-01T22:05:00Z",
+  "status": "success",
+  "catalog_size": 13,
+  "h01_h13_matrix": {
+    "H01_SILENT_MOCK": {
+      "status": "dismantled",
+      "rule": "Mock/offline execution must explicitly declare 'mode': 'offline/mock'",
+      "enforcement_module": "src/jev_cscape/contracts/contract_validator.py",
+      "test_evidence": "tests/test_contract_validator.py::test_h01_silent_mock_detection"
+    },
+    "H02_GLOBAL_ALLOW_AS_OPEN": {
+      "status": "dismantled",
+      "rule": "Dismissing startup prompt alone cannot count as project open; window title and document node must be verified",
+      "enforcement_module": "src/jev_cscape/automation/lifecycle.py",
+      "test_evidence": "artifacts/logs/sample_project_open_evidence.json"
+    },
+    "H03_FAKE_ERROR_CHECK": {
+      "status": "dismantled",
+      "rule": "Compiler success cannot be claimed without reading MFC ListBox 372 compiler output lines",
+      "enforcement_module": "src/jev_cscape/contracts/contract_validator.py",
+      "test_evidence": "tests/test_contract_validator.py"
+    },
+    "H04_FAKE_ST_LD_CONVERSION": {
+      "status": "dismantled",
+      "rule": "ST->LD in-GUI conversion is architecturally absent in Cscape 10.2 (BLOCKED_NATIVE: DOCUMENT_ONLY)",
+      "enforcement_module": "src/jev_cscape/contracts/contract_validator.py",
+      "test_evidence": "tests/test_contract_validator.py::test_h04_fake_st_ld_conversion_blocked"
+    },
+    "H05_PHANTOM_HWND": {
+      "status": "dismantled",
+      "rule": "GUI window must have non-zero HWND, IsWindowVisible == True, and positive dimensions",
+      "enforcement_module": "src/jev_cscape/contracts/contract_validator.py",
+      "test_evidence": "tests/test_contract_validator.py::test_h05_phantom_hwnd_demoted"
+    },
+    "H06_BLIND_CLICK": {
+      "status": "dismantled",
+      "rule": "Win32 messages must assert post-condition UI state change or window dismissal",
+      "enforcement_module": "src/jev_cscape/automation/dialog_sweeper.py",
+      "test_evidence": "tests/test_dialog_sweeper.py::test_dismiss_tip_of_the_day"
+    },
+    "H07_PREMATURE_GATE_VICTORY": {
+      "status": "dismantled",
+      "rule": "Gates cannot be claimed complete without concrete on-disk deliverables and test logs",
+      "enforcement_module": "ops/gates.json",
+      "test_evidence": "ops/gates.json ledger verification"
+    },
+    "H08_SUBJECTIVE_STATUS": {
+      "status": "dismantled",
+      "rule": "Subjective terms (VERIFIED, 100%, PERFECT) strictly forbidden; canonical enum enforced",
+      "enforcement_module": "src/jev_cscape/contracts/__init__.py",
+      "test_evidence": "tests/test_contracts.py::test_agent_status_values"
+    },
+    "H09_UNCHECKED_FILE_LOCK": {
+      "status": "dismantled",
+      "rule": "Projects must be opened non-destructively in disposable sandbox with lock verification",
+      "enforcement_module": "src/jev_cscape/automation/lifecycle.py",
+      "test_evidence": "artifacts/logs/sample_project_open_evidence.json"
+    },
+    "H10_DIALOG_DEADLOCK": {
+      "status": "dismantled",
+      "rule": "Modal popups (#32770) swept non-intrusively in background without hijacking UI focus",
+      "enforcement_module": "src/jev_cscape/automation/dialog_sweeper.py",
+      "test_evidence": "tests/test_dialog_sweeper.py"
+    },
+    "H11_STRATON_RUNTIME_FALLBACK": {
+      "status": "dismantled",
+      "rule": "Zero Copa-Data Straton K5 files or processes permitted; active paths fail closed",
+      "enforcement_module": "src/jev_cscape/contracts/contract_validator.py",
+      "test_evidence": "tests/test_contract_validator.py::test_h11_straton_runtime_fallback_blocked"
+    },
+    "H12_SIMULATED_HARDWARE_SUCCESS": {
+      "status": "dismantled",
+      "rule": "Physical ports and downloads are hard-blocked; simulation cannot claim physical hardware success",
+      "enforcement_module": "src/jev_cscape/security/guard.py",
+      "test_evidence": "tests/test_security.py::test_physical_ports_blocked"
+    },
+    "H13_PARTIAL_POU_MARKED_FULL_SUCCESS": {
+      "status": "dismantled",
+      "rule": "Operations with warnings or uninitialized elements must be classified as PARTIAL",
+      "enforcement_module": "src/jev_cscape/contracts/contract_validator.py",
+      "test_evidence": "tests/test_contract_validator.py::test_h13_partial_marked_success_demoted_to_partial"
+    }
+  }
+}

@@ -1,0 +1,633 @@
+{
+  "gate": "G8",
+  "task": "GATE_G8_ACCEPTANCE_CAMPAIGN",
+  "cscape_version": "10.2 (Build 10.2.751.4)",
+  "timestamp_utc": "2026-10-13T05:26:17.710720+00:00",
+  "baseline_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "total_runs": 20,
+  "passed_runs": 0,
+  "failed_runs": 1,
+  "pass_rate": 0.0,
+  "pass_threshold_ratio": 0.95,
+  "pass_threshold_count": 19,
+  "pass_threshold_met": false,
+  "layouts_tested": [
+    "Layout A (Dual Column Metric - Vertical)",
+    "Layout B (Process Dashboard Pair - Horizontal)",
+    "Layout C (Matrix Grid Multi-Point - Reserved Diagonal)"
+  ],
+  "reserved_layout_included": true,
+  "min_bound_objects_per_project": 2,
+  "negative_controls": {
+    "wrong_binding_negative": {
+      "negative_test": "wrong_binding_negative",
+      "description": "Verification oracle must detect variable binding mismatch and fail closed with AssertionError.",
+      "expected_mismatch": "NONEXISTENT_VAR_FAIL_CLOSED",
+      "detected": true,
+      "error_caught": "FAIL_CLOSED: Binding readback mismatch! Expected 'NONEXISTENT_VAR_FAIL_CLOSED', got 'RTC_SEC'",
+      "status": "success"
+    },
+    "out_of_bounds_negative": {
+      "negative_test": "out_of_bounds_negative",
+      "description": "validate_canvas_coordinates must reject coordinates outside visible canvas with ValueError.",
+      "attempted_coords": [
+        [
+          9999,
+          9999
+        ],
+        [
+          -100,
+          -100
+        ],
+        [
+          100,
+          250
+        ],
+        [
+          800,
+          100
+        ]
+      ],
+      "detected": true,
+      "errors_caught": [
+        "FAIL_CLOSED: Placement X=9999 out of canvas bounds [345, 1267]!",
+        "FAIL_CLOSED: Placement X=-100 out of canvas bounds [345, 1267]!",
+        "FAIL_CLOSED: Placement X=100 out of canvas bounds [345, 1267]!",
+        "FAIL_CLOSED: Placement Y=100 out of canvas bounds [173, 345]!"
+      ],
+      "status": "success"
+    }
+  },
+  "runs": [
+    {
+      "run_idx": 1,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g8_acceptance_run_01.csp",
+      "layout_id": "A",
+      "layout_name": "Layout A (Dual Column Metric - Vertical)",
+      "layout_topology": "vertical",
+      "is_reserved": false,
+      "initial_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "saved_sha256": "8ca465b7db2d1c6000f61accb42414d9db7d8819117752e8389cdd3fe4610774",
+      "reopened_sha256": "8ca465b7db2d1c6000f61accb42414d9db7d8819117752e8389cdd3fe4610774",
+      "sha_changed": true,
+      "sha_preserved_on_reopen": true,
+      "objects_planned": [
+        {
+          "type": "Numeric Display",
+          "binding": "RTC_SEC",
+          "coords": [
+            746,
+            365
+          ],
+          "client_coords": [
+            402,
+            193
+          ],
+          "offset_x": -60,
+          "offset_y": 0
+        },
+        {
+          "type": "Numeric Display",
+          "binding": "RTC_MIN",
+          "coords": [
+            866,
+            365
+          ],
+          "client_coords": [
+            522,
+            193
+          ],
+          "offset_x": 60,
+          "offset_y": 0
+        }
+      ],
+      "placement": {
+        "status": "success",
+        "objects_planned": [
+          {
+            "type": "Numeric Display",
+            "binding": "RTC_SEC",
+            "coords": [
+              746,
+              365
+            ],
+            "client_coords": [
+              402,
+              193
+            ],
+            "offset_x": -60,
+            "offset_y": 0
+          },
+          {
+            "type": "Numeric Display",
+            "binding": "RTC_MIN",
+            "coords": [
+              866,
+              365
+            ],
+            "client_coords": [
+              522,
+              193
+            ],
+            "offset_x": 60,
+            "offset_y": 0
+          }
+        ],
+        "placed_results": [
+          {
+            "placed": true,
+            "target_var": "RTC_SEC",
+            "coords": [
+              746,
+              365
+            ],
+            "client_coords": [
+              402,
+              193
+            ],
+            "property_dialog_handled": true,
+            "status_bar_text": "  Screen: 1* Zoom: 120% 110, 128 112, 126   64 x 60 1 Objects"
+          },
+          {
+            "placed": true,
+            "target_var": "RTC_MIN",
+            "coords": [
+              866,
+              365
+            ],
+            "client_coords": [
+              522,
+              193
+            ],
+            "property_dialog_handled": true,
+            "status_bar_text": "  Screen: 1* Zoom: 120% 208, 126 208, 126   64 x 60 2 Objects"
+          }
+        ],
+        "status_bar_text": "  Screen: 1* Zoom: 120% 208, 126 208, 126   64 x 60 2 Objects",
+        "statusbar_parts": [
+          "",
+          "",
+          "Screen: 1*",
+          "Zoom: 120%",
+          "208, 126",
+          "208, 126   64 x 60",
+          "2 Objects"
+        ],
+        "statusbar_part6": "2 Objects",
+        "canvas_rect": [
+          344,
+          172,
+          1268,
+          558
+        ]
+      },
+      "cfbf_proof": {
+        "file_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g8_acceptance_run_01.csp",
+        "saved_sha256": "8ca465b7db2d1c6000f61accb42414d9db7d8819117752e8389cdd3fe4610774",
+        "initial_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+        "sha_changed": true,
+        "target_vars": [
+          "RTC_SEC",
+          "RTC_MIN"
+        ],
+        "target_vars_found": {
+          "RTC_SEC": true,
+          "RTC_MIN": true
+        },
+        "base_object_count": 0,
+        "roundtrip_object_count": 1,
+        "delta_object_count": 1,
+        "base_p1_untouched": true,
+        "negative_control": {
+          "file_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+          "exists": true,
+          "contents_size": 440769,
+          "graphics_offset": 404861,
+          "screen_id": 1,
+          "screen_width": 320,
+          "screen_height": 240,
+          "object_count": 0,
+          "target_vars_found": {
+            "RTC_SEC": false,
+            "RTC_MIN": false
+          },
+          "objects": []
+        },
+        "cfbf_delta": {
+          "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+          "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g8_acceptance_run_01.csp",
+          "base_object_count": 0,
+          "roundtrip_object_count": 1,
+          "delta_object_count": 1,
+          "base_target_vars_found": {
+            "RTC_SEC": false,
+            "RTC_MIN": false
+          },
+          "roundtrip_target_vars_found": {
+            "RTC_SEC": true,
+            "RTC_MIN": true
+          },
+          "new_objects": [
+            {
+              "type": "Numeric Display",
+              "binding": "RTC_SEC",
+              "offset": 245431
+            },
+            {
+              "type": "Numeric Display",
+              "binding": "RTC_MIN",
+              "offset": 245791
+            }
+          ]
+        },
+        "status": "failed",
+        "base_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881"
+      },
+      "reopen_verification": {
+        "reopened": true,
+        "screen_editor_active": true,
+        "status_bar_text": "  Screen: 1* Zoom: 120% 0, 41 No Obj 2 Objects",
+        "objects_verified": [
+          {
+            "coords": [
+              746,
+              365
+            ],
+            "expected_binding": "RTC_SEC",
+            "binding_read_back": "RTC_SEC"
+          },
+          {
+            "coords": [
+              866,
+              365
+            ],
+            "expected_binding": "RTC_MIN",
+            "binding_read_back": "RTC_MIN"
+          }
+        ],
+        "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G8\\acceptance_runs\\run_01_reopen.png",
+        "status": "success",
+        "statusbar_parts": [
+          "",
+          "",
+          "Screen: 1*",
+          "Zoom: 120%",
+          "0, 41",
+          "No Obj",
+          "2 Objects"
+        ],
+        "statusbar_part6": "2 Objects"
+      },
+      "status": "failed",
+      "screenshots": [
+        "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\edit_roundtrip_steps\\run_1_startup_main_disabled_1791869192.png",
+        "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\edit_roundtrip_steps\\reopen_startup_main_disabled_1791869297.png"
+      ],
+      "new_windows": [
+        {
+          "hwnd": 102237848,
+          "hwnd_hex": "0x6180698",
+          "class_name": "#32770",
+          "title": "Screen Thumbnails",
+          "parent_hwnd": 11667298,
+          "parent_hwnd_hex": "0xb20762",
+          "control_id": 0,
+          "rect": [
+            355,
+            164,
+            926,
+            617
+          ],
+          "client_rect": [
+            0,
+            0,
+            555,
+            414
+          ],
+          "is_visible": true,
+          "is_enabled": true,
+          "category": "Popup Dialog",
+          "context": "After Screen Thumbnail Activation"
+        },
+        {
+          "hwnd": 112461210,
+          "hwnd_hex": "0x6b4059a",
+          "class_name": "ComboLBox",
+          "title": "",
+          "parent_hwnd": 65548,
+          "parent_hwnd_hex": "0x1000c",
+          "control_id": 1000,
+          "rect": [
+            0,
+            21,
+            92,
+            101
+          ],
+          "client_rect": [
+            0,
+            0,
+            73,
+            78
+          ],
+          "is_visible": false,
+          "is_enabled": true,
+          "category": "Popup Dialog",
+          "context": "After Screen Thumbnail Activation"
+        },
+        {
+          "hwnd": 19728090,
+          "hwnd_hex": "0x12d06da",
+          "class_name": "#32770",
+          "title": "Screen Thumbnails",
+          "parent_hwnd": 5506950,
+          "parent_hwnd_hex": "0x540786",
+          "control_id": 0,
+          "rect": [
+            355,
+            164,
+            926,
+            617
+          ],
+          "client_rect": [
+            0,
+            0,
+            555,
+            414
+          ],
+          "is_visible": true,
+          "is_enabled": true,
+          "category": "Popup Dialog",
+          "context": "After Screen Thumbnail Activation"
+        },
+        {
+          "hwnd": 27789296,
+          "hwnd_hex": "0x1a807f0",
+          "class_name": "ComboLBox",
+          "title": "",
+          "parent_hwnd": 65548,
+          "parent_hwnd_hex": "0x1000c",
+          "control_id": 1000,
+          "rect": [
+            0,
+            21,
+            92,
+            101
+          ],
+          "client_rect": [
+            0,
+            0,
+            73,
+            78
+          ],
+          "is_visible": false,
+          "is_enabled": true,
+          "category": "Popup Dialog",
+          "context": "After Screen Thumbnail Activation"
+        }
+      ],
+      "screen_thumbnail_dialog_controls": [
+        {
+          "source": "live_window",
+          "hwnd": 100795532,
+          "hwnd_hex": "0x602048c",
+          "parent_hwnd": 102237848,
+          "parent_hwnd_hex": "0x6180698",
+          "class_name": "Static",
+          "control_id": 1409,
+          "title": "",
+          "rect": [
+            378,
+            203,
+            908,
+            552
+          ],
+          "client_rect": [
+            0,
+            0,
+            530,
+            349
+          ],
+          "width": 530,
+          "height": 349,
+          "client_width": 530,
+          "client_height": 349,
+          "is_visible": false,
+          "is_enabled": true,
+          "style_hex": "0x40000007",
+          "ex_style_hex": "0x4"
+        },
+        {
+          "source": "live_window",
+          "hwnd": 107021144,
+          "hwnd_hex": "0x6610358",
+          "parent_hwnd": 102237848,
+          "parent_hwnd_hex": "0x6180698",
+          "class_name": "Button",
+          "control_id": 1142,
+          "title": "<< Previous",
+          "rect": [
+            389,
+            575,
+            472,
+            598
+          ],
+          "client_rect": [
+            0,
+            0,
+            83,
+            23
+          ],
+          "width": 83,
+          "height": 23,
+          "client_width": 83,
+          "client_height": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "style_hex": "0x50010001",
+          "ex_style_hex": "0x4"
+        },
+        {
+          "source": "live_window",
+          "hwnd": 60229198,
+          "hwnd_hex": "0x397064e",
+          "parent_hwnd": 102237848,
+          "parent_hwnd_hex": "0x6180698",
+          "class_name": "Static",
+          "control_id": 1144,
+          "title": "Screens",
+          "rect": [
+            480,
+            580,
+            528,
+            596
+          ],
+          "client_rect": [
+            0,
+            0,
+            48,
+            16
+          ],
+          "width": 48,
+          "height": 16,
+          "client_width": 48,
+          "client_height": 16,
+          "is_visible": true,
+          "is_enabled": true,
+          "style_hex": "0x50020001",
+          "ex_style_hex": "0x4"
+        },
+        {
+          "source": "live_window",
+          "hwnd": 58459670,
+          "hwnd_hex": "0x37c0616",
+          "parent_hwnd": 102237848,
+          "parent_hwnd_hex": "0x6180698",
+          "class_name": "Button",
+          "control_id": 1143,
+          "title": "Next >>",
+          "rect": [
+            636,
+            575,
+            726,
+            598
+          ],
+          "client_rect": [
+            0,
+            0,
+            90,
+            23
+          ],
+          "width": 90,
+          "height": 23,
+          "client_width": 90,
+          "client_height": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "style_hex": "0x50010000",
+          "ex_style_hex": "0x4"
+        },
+        {
+          "source": "live_window",
+          "hwnd": 89130530,
+          "hwnd_hex": "0x5500622",
+          "parent_hwnd": 102237848,
+          "parent_hwnd_hex": "0x6180698",
+          "class_name": "Button",
+          "control_id": 2,
+          "title": "Cancel",
+          "rect": [
+            735,
+            575,
+            810,
+            598
+          ],
+          "client_rect": [
+            0,
+            0,
+            75,
+            23
+          ],
+          "width": 75,
+          "height": 23,
+          "client_width": 75,
+          "client_height": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "style_hex": "0x50010000",
+          "ex_style_hex": "0x4"
+        },
+        {
+          "source": "live_window",
+          "hwnd": 84672912,
+          "hwnd_hex": "0x50c0190",
+          "parent_hwnd": 102237848,
+          "parent_hwnd_hex": "0x6180698",
+          "class_name": "Button",
+          "control_id": 1,
+          "title": "OK",
+          "rect": [
+            821,
+            575,
+            892,
+            598
+          ],
+          "client_rect": [
+            0,
+            0,
+            71,
+            23
+          ],
+          "width": 71,
+          "height": 23,
+          "client_width": 71,
+          "client_height": 23,
+          "is_visible": true,
+          "is_enabled": true,
+          "style_hex": "0x50010000",
+          "ex_style_hex": "0x4"
+        },
+        {
+          "source": "live_window",
+          "hwnd": 5965514,
+          "hwnd_hex": "0x5b06ca",
+          "parent_hwnd": 102237848,
+          "parent_hwnd_hex": "0x6180698",
+          "class_name": "ComboBox",
+          "control_id": 2487,
+          "title": "",
+          "rect": [
+            531,
+            577,
+            623,
+            598
+          ],
+          "client_rect": [
+            0,
+            0,
+            92,
+            21
+          ],
+          "width": 92,
+          "height": 21,
+          "client_width": 92,
+          "client_height": 21,
+          "is_visible": true,
+          "is_enabled": true,
+          "style_hex": "0x50010202",
+          "ex_style_hex": "0x4"
+        },
+        {
+          "source": "live_window",
+          "hwnd": 105120666,
+          "hwnd_hex": "0x644039a",
+          "parent_hwnd": 5965514,
+          "parent_hwnd_hex": "0x5b06ca",
+          "class_name": "Edit",
+          "control_id": 1001,
+          "title": "",
+          "rect": [
+            534,
+            580,
+            603,
+            595
+          ],
+          "client_rect": [
+            0,
+            0,
+            69,
+            15
+          ],
+          "width": 69,
+          "height": 15,
+          "client_width": 69,
+          "client_height": 15,
+          "is_visible": true,
+          "is_enabled": true,
+          "style_hex": "0x50000300",
+          "ex_style_hex": "0x0"
+        }
+      ]
+    }
+  ],
+  "status": "failed"
+}

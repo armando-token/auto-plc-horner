@@ -1,0 +1,1977 @@
+{
+  "campaign": "G9_INDUSTRIAL_PROJECT_CAMPAIGN",
+  "domain": "tank_training_family",
+  "work_packages": "W068-W075",
+  "timestamp_utc": "2026-10-16T18:56:55.563104+00:00",
+  "mode": "live",
+  "status": "failed",
+  "tasks_total": 10,
+  "tasks_passed": 8,
+  "tasks_pending": 1,
+  "tasks_failed": 1,
+  "pass_ratio": "8/10",
+  "completed_ratio": "9/10",
+  "reserved_tasks_total": 3,
+  "reserved_tasks_passed": 3,
+  "negative_incomplete_task_handled": true,
+  "parametric_isolation_verified": true,
+  "v5_simulation_status": "pending_all (no simulator / offline only)",
+  "baseline_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "tasks": [
+    {
+      "task_id": "G9_TASK_01",
+      "task_num": 1,
+      "name": "Tank 1 Basic Level Regulation",
+      "is_reserved": false,
+      "status": "failed",
+      "reason": "Live Cscape construction failed: FAIL_CLOSED: Simulated Task 01 placement timeout",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "error": "FAIL_CLOSED: Simulated Task 01 placement timeout"
+      },
+      "duration_ms": 137.09
+    },
+    {
+      "task_id": "G9_TASK_02",
+      "task_num": 2,
+      "name": "Tank 1 High Volume Fast Inflow",
+      "family_type": "tank_training_family.high_throughput",
+      "is_reserved": false,
+      "status": "success",
+      "reason": "Task G9_TASK_02 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_02\\G9_TASK_02_control.st",
+            "st_sha256": "9b8b486b5d4f5ea0e328e50b70f0d17625bcb240bc614d45f5387f6024a13a3d",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_02\\G9_TASK_02_symbols.json",
+            "symbols_sha256": "78d13c78680f5b41222d5d89c87ab96962054807e8983da96e0e471af6118b62",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_02\\G9_TASK_02_screen.json",
+            "screen_sha256": "464ccf0263a0d5bf06fe47bca7f894ee1a138ea1dfd1c895fe9e940a46844415",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_02.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_02.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_01",
+        "target_level": 750.0,
+        "low_alarm": 200.0,
+        "high_alarm": 950.0,
+        "inlet_valve_tag": "T1_INLET_BOOST",
+        "discharge_valve_tag": "T1_RAPID_DRAIN",
+        "pump_tag": "T1_HIGH_PUMP",
+        "timer_preset_s": 3.0
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_02\\G9_TASK_02_control.st",
+        "st_sha256": "9b8b486b5d4f5ea0e328e50b70f0d17625bcb240bc614d45f5387f6024a13a3d",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_02\\G9_TASK_02_symbols.json",
+        "symbols_sha256": "78d13c78680f5b41222d5d89c87ab96962054807e8983da96e0e471af6118b62",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_02\\G9_TASK_02_screen.json",
+        "screen_sha256": "464ccf0263a0d5bf06fe47bca7f894ee1a138ea1dfd1c895fe9e940a46844415",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_02.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 157.21
+    },
+    {
+      "task_id": "G9_TASK_03",
+      "task_num": 3,
+      "name": "Tank 2 Low-Pressure Gravity Drainage",
+      "family_type": "tank_training_family.gravity_drain",
+      "is_reserved": false,
+      "status": "success",
+      "reason": "Task G9_TASK_03 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_03\\G9_TASK_03_control.st",
+            "st_sha256": "482158eb1e469d9ca11a45f57110ec3e94fc13da6fbe19dd6ceccb2ccd0326ac",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_03\\G9_TASK_03_symbols.json",
+            "symbols_sha256": "1da53a0e26dfa8baf77e2472e7aaf2b519bab3f116ebd9cd2308ef73a5c27cd8",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_03\\G9_TASK_03_screen.json",
+            "screen_sha256": "14ab099c9f39724756cd2fe822173c477e699db900c531d08d662fe17e4dd1a8",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_03.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_03.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_02",
+        "target_level": 300.0,
+        "low_alarm": 50.0,
+        "high_alarm": 800.0,
+        "inlet_valve_tag": "T2_GRAV_INLET",
+        "discharge_valve_tag": "T2_GRAV_DISCH",
+        "pump_tag": "T2_GRAV_PUMP",
+        "timer_preset_s": 8.0
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_03\\G9_TASK_03_control.st",
+        "st_sha256": "482158eb1e469d9ca11a45f57110ec3e94fc13da6fbe19dd6ceccb2ccd0326ac",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_03\\G9_TASK_03_symbols.json",
+        "symbols_sha256": "1da53a0e26dfa8baf77e2472e7aaf2b519bab3f116ebd9cd2308ef73a5c27cd8",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_03\\G9_TASK_03_screen.json",
+        "screen_sha256": "14ab099c9f39724756cd2fe822173c477e699db900c531d08d662fe17e4dd1a8",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_03.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 144.52
+    },
+    {
+      "task_id": "G9_TASK_04",
+      "task_num": 4,
+      "name": "Tank 2 Pressurized Pumped Outflow",
+      "family_type": "tank_training_family.pumped_discharge",
+      "is_reserved": false,
+      "status": "success",
+      "reason": "Task G9_TASK_04 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_04\\G9_TASK_04_control.st",
+            "st_sha256": "272df3d158857d62b6f4952f2bd767017d599c354bb5524adbc2c97879062e67",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_04\\G9_TASK_04_symbols.json",
+            "symbols_sha256": "f141cca6804e85dadae20bd579c4cb688af2e511e63a09bef888e4070e9efc2f",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_04\\G9_TASK_04_screen.json",
+            "screen_sha256": "491062effe4fdcca4d2ea42fc57287e91767a4d1dcfc5baa6bdc8bd720d95bda",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_04.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_04.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_02",
+        "target_level": 600.0,
+        "low_alarm": 150.0,
+        "high_alarm": 850.0,
+        "inlet_valve_tag": "T2_PRESS_INLET",
+        "discharge_valve_tag": "T2_PRESS_OUTLET",
+        "pump_tag": "T2_BOOSTER_PUMP",
+        "timer_preset_s": 4.0
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_04\\G9_TASK_04_control.st",
+        "st_sha256": "272df3d158857d62b6f4952f2bd767017d599c354bb5524adbc2c97879062e67",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_04\\G9_TASK_04_symbols.json",
+        "symbols_sha256": "f141cca6804e85dadae20bd579c4cb688af2e511e63a09bef888e4070e9efc2f",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_04\\G9_TASK_04_screen.json",
+        "screen_sha256": "491062effe4fdcca4d2ea42fc57287e91767a4d1dcfc5baa6bdc8bd720d95bda",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_04.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 139.72
+    },
+    {
+      "task_id": "G9_TASK_05",
+      "task_num": 5,
+      "name": "Dual-Tank Level Balancing Interlock",
+      "family_type": "tank_training_family.emergency_interlock",
+      "is_reserved": false,
+      "status": "success",
+      "reason": "Task G9_TASK_05 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_05\\G9_TASK_05_control.st",
+            "st_sha256": "fa15328422cd7fe8e72b5764a35c345aecca522aa0ca4ca5178de4b49b41dd2b",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_05\\G9_TASK_05_symbols.json",
+            "symbols_sha256": "85abe11a7775e99e63db706a687fa544e4f3ac16e9b1e958662de8a88ccae997",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_05\\G9_TASK_05_screen.json",
+            "screen_sha256": "587d17bc7fd108e82ac150d40ac203185b78809fca176235c2cc48bb6ece949c",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_05.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_05.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_DUAL",
+        "target_level": 450.0,
+        "low_alarm": 80.0,
+        "high_alarm": 880.0,
+        "inlet_valve_tag": "DUAL_TRANSFER_V",
+        "discharge_valve_tag": "DUAL_DRAIN_V",
+        "pump_tag": "DUAL_XFER_PUMP",
+        "timer_preset_s": 6.0
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_05\\G9_TASK_05_control.st",
+        "st_sha256": "fa15328422cd7fe8e72b5764a35c345aecca522aa0ca4ca5178de4b49b41dd2b",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_05\\G9_TASK_05_symbols.json",
+        "symbols_sha256": "85abe11a7775e99e63db706a687fa544e4f3ac16e9b1e958662de8a88ccae997",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_05\\G9_TASK_05_screen.json",
+        "screen_sha256": "587d17bc7fd108e82ac150d40ac203185b78809fca176235c2cc48bb6ece949c",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_05.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 174.89
+    },
+    {
+      "task_id": "G9_TASK_06",
+      "task_num": 6,
+      "name": "Emergency Drain Tank 2 (Incomplete Specification)",
+      "is_reserved": false,
+      "status": "pending",
+      "diagnosis": "DIAGNOSIS_MISSING_CRITICAL_DATA: Field(s) 'target_level', 'high_alarm' are required for closed-loop regulation of TANK_02 but were omitted in TaskSpec; compilation halted fail-closed in V2.",
+      "reason": "Incomplete specification stayed pending with diagnosis: DIAGNOSIS_MISSING_CRITICAL_DATA: Field(s) 'target_level', 'high_alarm' are required for closed-loop regulation of TANK_02 but were omitted in TaskSpec; compilation halted fail-closed in V2.",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "pending",
+          "errors": [
+            "DIAGNOSIS_MISSING_CRITICAL_DATA: Field(s) 'target_level', 'high_alarm' are required for closed-loop regulation of TANK_02 but were omitted in TaskSpec; compilation halted fail-closed in V2."
+          ],
+          "diagnosis": "DIAGNOSIS_MISSING_CRITICAL_DATA: Field(s) 'target_level', 'high_alarm' are required for closed-loop regulation of TANK_02 but were omitted in TaskSpec; compilation halted fail-closed in V2."
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "skipped",
+          "reason": "Halted at V2 due to missing critical data"
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "skipped",
+          "reason": "Halted at V2 due to missing critical data"
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 0.2
+    },
+    {
+      "task_id": "G9_TASK_07",
+      "task_num": 7,
+      "name": "Closed-Loop Recirculation & Agitation",
+      "family_type": "tank_training_family.recirculation_cooling",
+      "is_reserved": false,
+      "status": "success",
+      "reason": "Task G9_TASK_07 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_07\\G9_TASK_07_control.st",
+            "st_sha256": "493693d9fa1642d2221ebf93833e22a2b51ce190d5b4e9e05a8198400160d5db",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_07\\G9_TASK_07_symbols.json",
+            "symbols_sha256": "ef947acb0dd8dfc3015fedaba0c2bf4580721fe6b7f4ce7ed5814579ac606f17",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_07\\G9_TASK_07_screen.json",
+            "screen_sha256": "170e12891f83828e5ea1e7d53b67396e05306d4e55ad397a2e2eea1fa830c494",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_07.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_07.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_01",
+        "target_level": 550.0,
+        "low_alarm": 120.0,
+        "high_alarm": 920.0,
+        "inlet_valve_tag": "T1_RECIRC_VALVE",
+        "discharge_valve_tag": "T1_BYPASS_VALVE",
+        "pump_tag": "T1_AGITATOR_PUMP",
+        "timer_preset_s": 7.0
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_07\\G9_TASK_07_control.st",
+        "st_sha256": "493693d9fa1642d2221ebf93833e22a2b51ce190d5b4e9e05a8198400160d5db",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_07\\G9_TASK_07_symbols.json",
+        "symbols_sha256": "ef947acb0dd8dfc3015fedaba0c2bf4580721fe6b7f4ce7ed5814579ac606f17",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_07\\G9_TASK_07_screen.json",
+        "screen_sha256": "170e12891f83828e5ea1e7d53b67396e05306d4e55ad397a2e2eea1fa830c494",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_07.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 158.19
+    },
+    {
+      "task_id": "G9_TASK_08",
+      "task_num": 8,
+      "name": "Chemical Dosing Reagent Tank (Reserved Variant 1)",
+      "family_type": "tank_training_family.reserved_chemical_dosing",
+      "is_reserved": true,
+      "status": "success",
+      "reason": "Task G9_TASK_08 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_08\\G9_TASK_08_control.st",
+            "st_sha256": "636bd9ef53286161145abb48428ec93600555755429adceb76ecc4fc3665fceb",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_08\\G9_TASK_08_symbols.json",
+            "symbols_sha256": "991ba4b46073db3912d94fd47317770a676d660be9d79265162fc6d72b2ef893",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_08\\G9_TASK_08_screen.json",
+            "screen_sha256": "e9328e772fa4d2d207495876ea81a209abd951c609e3253a53276c5c778cd6c1",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_08.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_08.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_CHEM",
+        "target_level": 350.0,
+        "low_alarm": 60.0,
+        "high_alarm": 700.0,
+        "inlet_valve_tag": "CHEM_DOSING_VALVE",
+        "discharge_valve_tag": "CHEM_FLUSH_VALVE",
+        "pump_tag": "CHEM_METER_PUMP",
+        "timer_preset_s": 10.0
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_08\\G9_TASK_08_control.st",
+        "st_sha256": "636bd9ef53286161145abb48428ec93600555755429adceb76ecc4fc3665fceb",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_08\\G9_TASK_08_symbols.json",
+        "symbols_sha256": "991ba4b46073db3912d94fd47317770a676d660be9d79265162fc6d72b2ef893",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_08\\G9_TASK_08_screen.json",
+        "screen_sha256": "e9328e772fa4d2d207495876ea81a209abd951c609e3253a53276c5c778cd6c1",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_08.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-010",
+          "title": "Reserved Plant Configuration Isolation",
+          "description": "Reserved variant parameter range and dedicated registers strictly partitioned.",
+          "satisfied_by_params": [
+            "is_reserved",
+            "family_type"
+          ],
+          "satisfied_by_ir": [
+            "Reserved Register Partition"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 160.21
+    },
+    {
+      "task_id": "G9_TASK_09",
+      "task_num": 9,
+      "name": "Two-Tank Cascade Inter-Transfer (Reserved Variant 2)",
+      "family_type": "tank_training_family.reserved_cascade_transfer",
+      "is_reserved": true,
+      "status": "success",
+      "reason": "Task G9_TASK_09 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_09\\G9_TASK_09_control.st",
+            "st_sha256": "9f708b5b6de955f7050d9d32e408802173e99a9245cce77b3a3bb2d6164ece9e",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_09\\G9_TASK_09_symbols.json",
+            "symbols_sha256": "017914fcdf0930d8269df216655bd7e45e525b0ef07e3887f4f7da0ff6dce1cb",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_09\\G9_TASK_09_screen.json",
+            "screen_sha256": "ebe5b19b1e3b7455118cacba4c13af5ea7b3968c51d0d3131741009faf0c71d5",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_09.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_09.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_CASCADE",
+        "target_level": 650.0,
+        "low_alarm": 180.0,
+        "high_alarm": 940.0,
+        "inlet_valve_tag": "CASCADE_INLET_V",
+        "discharge_valve_tag": "CASCADE_DISCH_V",
+        "pump_tag": "CASCADE_STAGE_PUMP",
+        "timer_preset_s": 4.5
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_09\\G9_TASK_09_control.st",
+        "st_sha256": "9f708b5b6de955f7050d9d32e408802173e99a9245cce77b3a3bb2d6164ece9e",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_09\\G9_TASK_09_symbols.json",
+        "symbols_sha256": "017914fcdf0930d8269df216655bd7e45e525b0ef07e3887f4f7da0ff6dce1cb",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_09\\G9_TASK_09_screen.json",
+        "screen_sha256": "ebe5b19b1e3b7455118cacba4c13af5ea7b3968c51d0d3131741009faf0c71d5",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_09.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-010",
+          "title": "Reserved Plant Configuration Isolation",
+          "description": "Reserved variant parameter range and dedicated registers strictly partitioned.",
+          "satisfied_by_params": [
+            "is_reserved",
+            "family_type"
+          ],
+          "satisfied_by_ir": [
+            "Reserved Register Partition"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 177.47
+    },
+    {
+      "task_id": "G9_TASK_10",
+      "task_num": 10,
+      "name": "High-Viscosity Slurry Buffer Tank (Reserved Variant 3)",
+      "family_type": "tank_training_family.reserved_slurry_buffer",
+      "is_reserved": true,
+      "status": "success",
+      "reason": "Task G9_TASK_10 successfully compiled: V2, V3, V4 passed; V5 pending (no simulator).",
+      "stages": {
+        "V2": {
+          "stage": "V2",
+          "status": "success",
+          "errors": [],
+          "diagnosis": ""
+        },
+        "V3": {
+          "stage": "V3",
+          "status": "success",
+          "errors": [],
+          "warnings": []
+        },
+        "V4": {
+          "stage": "V4",
+          "status": "success",
+          "artifacts_generated": {
+            "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_10\\G9_TASK_10_control.st",
+            "st_sha256": "8c07b12a996d7c427ffd2265b50e8a735dfd10decb1bc8bda4ad85b0a768ff02",
+            "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_10\\G9_TASK_10_symbols.json",
+            "symbols_sha256": "3ee951ac20071fd2f240281fa949392e49562b6178aebecdd26a227858ec1f61",
+            "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_10\\G9_TASK_10_screen.json",
+            "screen_sha256": "565169807258051a52032c33162a91196e1cf5cafb23f1fdb19e77d2b105c6e0",
+            "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_10.csp",
+            "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+          },
+          "errors": [],
+          "cfbf_readback": {
+            "container_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_10.csp",
+            "container_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f",
+            "total_cfbf_declarations": 61,
+            "ladder_elements_count": 0,
+            "ladder_networks_count": 2,
+            "hmi_objects_count": 0,
+            "compile_clean": true
+          }
+        },
+        "V5": {
+          "stage": "V5",
+          "status": "pending",
+          "reason": "no simulator / offline only",
+          "details": "Dynamic simulation deferred; offline campaign scope excludes physical runtime / simulator execution."
+        }
+      },
+      "parameters": {
+        "tank_id": "TANK_SLURRY",
+        "target_level": 420.0,
+        "low_alarm": 90.0,
+        "high_alarm": 820.0,
+        "inlet_valve_tag": "SLURRY_INLET_V",
+        "discharge_valve_tag": "SLURRY_PURGE_V",
+        "pump_tag": "SLURRY_CAVITY_PUMP",
+        "timer_preset_s": 9.0
+      },
+      "ir_metrics": {
+        "variables_count": 9,
+        "ladder_rungs_count": 5,
+        "hmi_objects_count": 4,
+        "st_pou_lines": 38
+      },
+      "live_meta": {
+        "live_construction_completed": true,
+        "error_check_clean": true,
+        "reopen_compile_clean": true
+      },
+      "artifacts": {
+        "st_pou": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_10\\G9_TASK_10_control.st",
+        "st_sha256": "8c07b12a996d7c427ffd2265b50e8a735dfd10decb1bc8bda4ad85b0a768ff02",
+        "symbols": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_10\\G9_TASK_10_symbols.json",
+        "symbols_sha256": "3ee951ac20071fd2f240281fa949392e49562b6178aebecdd26a227858ec1f61",
+        "screen": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G9\\tasks\\G9_TASK_10\\G9_TASK_10_screen.json",
+        "screen_sha256": "565169807258051a52032c33162a91196e1cf5cafb23f1fdb19e77d2b105c6e0",
+        "cfbf_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g9_task_G9_TASK_10.csp",
+        "cfbf_sha256": "d77d8a70623d2a22f2cb742dd2116f27d671e4544d2ebf9144eb8ee4ccca0a0f"
+      },
+      "req_matrix": [
+        {
+          "req_id": "REQ-001",
+          "title": "Closed-Loop Level Regulation",
+          "description": "Process level PV must be regulated to the specified target level.",
+          "satisfied_by_params": [
+            "target_level",
+            "level_pv_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LEVEL_PV",
+            "Rung 1: Level PV < Setpoint -> Inlet Open"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-002",
+          "title": "High-Level Overfill Cutoff Protection",
+          "description": "Inlet valve must de-energize immediately when level exceeds high alarm limit.",
+          "satisfied_by_params": [
+            "high_alarm",
+            "inlet_valve_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_HIGH_SP",
+            "Rung 2: Level PV >= HighSP -> Inlet RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-003",
+          "title": "Low-Level Pump Cavitation Lockout",
+          "description": "Discharge/feed pump must trip immediately when level falls below low alarm limit.",
+          "satisfied_by_params": [
+            "low_alarm",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "T_LOW_SP",
+            "Rung 3: Level PV <= LowSP -> Pump RESET"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-004",
+          "title": "HMI Telemetry Readout & Pilot Indication",
+          "description": "Virtual 320x240 LCD screen must display liquid level and actuator state.",
+          "satisfied_by_params": [
+            "level_pv_tag",
+            "inlet_valve_tag",
+            "pump_tag"
+          ],
+          "satisfied_by_ir": [
+            "Screen 1: NumericDisplay, BarGraph, PilotLamp"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-005",
+          "title": "Emergency Stop Interlock",
+          "description": "Hardware E-stop must unconditionally shut down all outputs.",
+          "satisfied_by_params": [
+            "estop_tag",
+            "auto_mode_tag"
+          ],
+          "satisfied_by_ir": [
+            "Rung 0: Estop NC & Auto NO -> Permissive"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-008",
+          "title": "Hardware Port & Download Lockout",
+          "description": "Physical COM ports COM1-256 and Win32 download commands 32827/33149 locked out.",
+          "satisfied_by_params": [
+            "fail_closed_policy"
+          ],
+          "satisfied_by_ir": [
+            "assert_safety_invariants"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-009",
+          "title": "Parametric State Independence",
+          "description": "Parametric changes between consecutive tasks must have zero remnant leakage.",
+          "satisfied_by_params": [
+            "isolation_checker"
+          ],
+          "satisfied_by_ir": [
+            "ParametricIsolationChecker"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        },
+        {
+          "req_id": "REQ-010",
+          "title": "Reserved Plant Configuration Isolation",
+          "description": "Reserved variant parameter range and dedicated registers strictly partitioned.",
+          "satisfied_by_params": [
+            "is_reserved",
+            "family_type"
+          ],
+          "satisfied_by_ir": [
+            "Reserved Register Partition"
+          ],
+          "verified_by_stages": [
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "status": "satisfied"
+        }
+      ],
+      "duration_ms": 184.76
+    }
+  ]
+}

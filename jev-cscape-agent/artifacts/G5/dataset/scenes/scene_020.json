@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_020",
+  "file_name": "scene_020.png",
+  "original_source": "artifacts\\G7\\sb_placement_step2_after_rung.png",
+  "split": "train",
+  "scene_type": "ladder_editor",
+  "category": "LADDER",
+  "dimensions": {
+    "width": 1278,
+    "height": 27
+  },
+  "sha256": "77552d4a35cedb0487dbab762cd5cc51eed5ef71e651a8c33b2bbf3bb1c2ba16",
+  "labels": {
+    "canvas_rect": [
+      63,
+      1,
+      1215,
+      2
+    ],
+    "anchors": {
+      "canvas_center": [
+        639,
+        1
+      ],
+      "canvas_nw": [
+        63,
+        1
+      ],
+      "canvas_se": [
+        1215,
+        2
+      ],
+      "status_bar_roi": [
+        0,
+        3,
+        1278,
+        27
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

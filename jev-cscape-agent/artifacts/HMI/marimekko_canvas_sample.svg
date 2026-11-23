@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <filter id="focus-glow" x="-20%" y="-20%" width="140%" height="140%">      <feGaussianBlur stdDeviation="4" result="blur" />      <feComposite in="SourceGraphic" in2="blur" operator="over" />    </filter>
+    <filter id="alarm-glow" x="-30%" y="-30%" width="160%" height="160%">      <feGaussianBlur stdDeviation="6" result="blur" />      <feComposite in="SourceGraphic" in2="blur" operator="over" />    </filter>
+  </defs>
+  <rect id="canvas-backdrop" width="1200" height="750" fill="#0F172A"/>
+  <g id="diagnostic-hud" role="banner">
+    <rect x="30" y="20" width="1140" height="72" rx="8" fill="#0B0F19" fill-opacity="0.94" stroke="#334155" stroke-width="1.5"/>
+    <text x="50" y="46" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="16" font-weight="700" letter-spacing="1">CSCAPE HMI DYNAMIC MARIMEKKO / MOSAIC ALLOCATION CANVAS</text>
+    <text x="50" y="68" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="12">WP: W135 | Gate G9/G2 | Active Column: Category 1 | Total Area: 100.0% | WCAG 2.1 AAA Compliant</text>
+    <g id="anomaly-alarm-indicator" transform="translate(900, 32)">
+      <rect x="0" y="0" width="250" height="48" rx="6" fill="#0B0F19" stroke="#27AE60" stroke-width="1.5"/>
+      <circle cx="20" cy="24" r="8" fill="#27AE60" filter="none"/>
+      <text x="36" y="22" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="10" font-weight="700">STATUS BEACON</text>
+      <text x="36" y="37" fill="#27AE60" font-family="Segoe UI, monospace" font-size="10" font-weight="700">INTERLOCKS NOMINAL</text>
+    </g>
+  </g>
+  <g id="mosaic-matrix">
+    <rect id="plot-backdrop" x="110.0" y="140.0" width="980.0" height="470.0" fill="#0A0E1A" stroke="#334155" stroke-width="1"/>
+    <g id="axis-y-cumulative">
+      <line x1="110.0" y1="610.0" x2="1090.0" y2="610.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="98.0" y="614.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="end">0%</text>
+      <line x1="110.0" y1="492.5" x2="1090.0" y2="492.5" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="98.0" y="496.5" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="end">25%</text>
+      <line x1="110.0" y1="375.0" x2="1090.0" y2="375.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="98.0" y="379.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="end">50%</text>
+      <line x1="110.0" y1="257.5" x2="1090.0" y2="257.5" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="98.0" y="261.5" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="end">75%</text>
+      <line x1="110.0" y1="140.0" x2="1090.0" y2="140.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="98.0" y="144.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="end">100%</text>
+      <text x="55.0" y="375.0" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="12" font-weight="700" transform="rotate(-90 55.0 375.0)" text-anchor="middle">Segment Sub-Allocation (%)</text>
+    </g>
+    <g id="axis-x-cumulative">
+      <line x1="110.0" y1="140.0" x2="110.0" y2="610.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="110.0" y="630.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="middle">0%</text>
+      <line x1="306.0" y1="140.0" x2="306.0" y2="610.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="306.0" y="630.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="middle">20%</text>
+      <line x1="502.0" y1="140.0" x2="502.0" y2="610.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="502.0" y="630.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="middle">40%</text>
+      <line x1="698.0" y1="140.0" x2="698.0" y2="610.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="698.0" y="630.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="middle">60%</text>
+      <line x1="894.0" y1="140.0" x2="894.0" y2="610.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="894.0" y="630.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="middle">80%</text>
+      <line x1="1090.0" y1="140.0" x2="1090.0" y2="610.0" stroke="#334155" stroke-dasharray="3,3" stroke-width="0.8"/>
+      <text x="1090.0" y="630.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11" text-anchor="middle">100%</text>
+      <text x="600.0" y="646.0" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="12" font-weight="700" text-anchor="middle">Cumulative Category Budget / Throughput Allocation (%)</text>
+    </g>
+    <g id="marimekko-columns">
+      <g id="col-header-0">
+        <text x="330.5" y="130.0" fill="#38BDF8" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Reactor Units (45.0%)</text>
+      </g>
+      <rect id="cell-c0-s0" x="110.0" y="328.0" width="441.0" height="282.0" fill="#1E88E5" fill-opacity="0.90" stroke="#0F172A" stroke-width="2"/>
+      <rect x="240.5" y="448.0" width="180.0" height="42.0" rx="4" fill="#0B0F19" fill-opacity="0.88"/>
+      <text x="330.5" y="465.0" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Bulk Synthesis</text>
+      <text x="330.5" y="481.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="10" text-anchor="middle">h=60.0% | area=27.0%</text>
+      <rect id="cell-c0-s1" x="110.0" y="140.0" width="441.0" height="188.0" fill="#00897B" fill-opacity="0.90" stroke="#0F172A" stroke-width="2"/>
+      <rect x="240.5" y="213.0" width="180.0" height="42.0" rx="4" fill="#0B0F19" fill-opacity="0.88"/>
+      <text x="330.5" y="230.0" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Catalytic Refine</text>
+      <text x="330.5" y="246.0" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="10" text-anchor="middle">h=40.0% | area=18.0%</text>
+      <rect id="active-column-focus" x="108.0" y="138.0" width="445.0" height="474.0" rx="3" fill="none" stroke="#38BDF8" stroke-width="3" filter="url(#focus-glow)"/>
+      <g id="col-header-1">
+        <text x="722.5" y="130.0" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Steam &amp; Power (35.0%)</text>
+      </g>
+      <rect id="cell-c1-s0" x="551.0" y="375.0" width="343.0" height="235.0" fill="#FFB300" fill-opacity="0.90" stroke="#0F172A" stroke-width="2"/>
+      <rect x="632.5" y="471.5" width="180.0" height="42.0" rx="4" fill="#0B0F19" fill-opacity="0.88"/>
+      <text x="722.5" y="488.5" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">HP Steam</text>
+      <text x="722.5" y="504.5" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="10" text-anchor="middle">h=50.0% | area=17.5%</text>
+      <rect id="cell-c1-s1" x="551.0" y="140.0" width="343.0" height="235.0" fill="#F4511E" fill-opacity="0.90" stroke="#0F172A" stroke-width="2"/>
+      <rect x="632.5" y="236.5" width="180.0" height="42.0" rx="4" fill="#0B0F19" fill-opacity="0.88"/>
+      <text x="722.5" y="253.5" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Electric Drives</text>
+      <text x="722.5" y="269.5" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="10" text-anchor="middle">h=50.0% | area=17.5%</text>
+      <g id="col-header-2">
+        <text x="992.0" y="130.0" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Effluent &amp; Recycle (20.0%)</text>
+      </g>
+      <rect id="cell-c2-s0" x="894.0" y="281.0" width="196.0" height="329.0" fill="#8E24AA" fill-opacity="0.90" stroke="#0F172A" stroke-width="2"/>
+      <rect x="902.0" y="424.5" width="180.0" height="42.0" rx="4" fill="#0B0F19" fill-opacity="0.88"/>
+      <text x="992.0" y="441.5" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Solvent Stripping</text>
+      <text x="992.0" y="457.5" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="10" text-anchor="middle">h=70.0% | area=14.0%</text>
+      <rect id="cell-c2-s1" x="894.0" y="140.0" width="196.0" height="141.0" fill="#1E88E5" fill-opacity="0.90" stroke="#0F172A" stroke-width="2"/>
+      <rect x="902.0" y="189.5" width="180.0" height="42.0" rx="4" fill="#0B0F19" fill-opacity="0.88"/>
+      <text x="992.0" y="206.5" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle">Sludge Treatment</text>
+      <text x="992.0" y="222.5" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="10" text-anchor="middle">h=30.0% | area=6.0%</text>
+    </g>
+  </g>
+  <g id="register-space-hud">
+    <rect x="30" y="655" width="1140" height="75" rx="8" fill="#0B0F19" fill-opacity="0.94" stroke="#334155" stroke-width="1.5"/>
+    <text x="45" y="675" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="12" font-weight="700">HORNER OCS REGISTER SPACE (%R960..%R967, %M224..%M225)</text>
+    <text x="45" y="693" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11">%R960 [Cat1Width]=450 (45.0%)  |  %R961 [Cat2Width]=350 (35.0%)  |  %R962 [Cat3Width]=200 (20.0%)  |  %R963 [Seg1Height]=600 (60.0%)  |  %R964 [Seg2Height]=400 (40.0%)</text>
+    <text x="45" y="711" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11">%R965 [TotalArea]=1000 (100.0%)  |  %R966 [ActiveCol]=0  |  %R967 [DiagCode]=0x0000  |  %M224 [ImbalanceTrip]=0 (NOMINAL)  |  %M225 [Normalized]=1 (NORMALIZED)</text>
+  </g>
+</svg>

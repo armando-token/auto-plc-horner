@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="750" viewBox="0 0 1200 750" version="1.1">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", sans-serif; }
+        .canvas-bg { fill: #0F172A; }
+        .hud-card { fill: #0B0F19; stroke: #334155; stroke-width: 1.5; rx: 8px; }
+        .hud-title { font-size: 13px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.8px; }
+        .hud-subtitle { font-size: 10px; font-weight: 500; fill: #94A3B8; }
+        .hud-label { font-size: 10px; font-weight: 600; fill: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; }
+        .hud-val { font-family: monospace; font-size: 12px; font-weight: 700; fill: #F8FAFC; }
+        .grid-ring { fill: none; stroke: #334155; stroke-width: 1.0; stroke-dasharray: 4,4; }
+        .grid-ring-outer { fill: none; stroke: #475569; stroke-width: 1.5; }
+        .spoke-line { stroke: #334155; stroke-width: 1.2; stroke-dasharray: 2,2; }
+        .spoke-selected { stroke: #38BDF8; stroke-width: 2.0; }
+        .target-polygon { fill: rgba(6, 182, 212, 0.06); stroke: #06B6D4; stroke-width: 1.8; stroke-dasharray: 6,4; }
+        .realtime-polygon { stroke-width: 2.2; transition: all 0.3s ease; }
+        .axis-badge-bg { fill: #0B0F19; stroke: #334155; stroke-width: 1.0; rx: 4px; }
+        .axis-badge-bg-selected { fill: #131C2E; stroke: #38BDF8; stroke-width: 1.8; rx: 4px; }
+        .axis-badge-text { font-size: 10px; font-weight: 700; fill: #F8FAFC; }
+        .axis-badge-sub { font-family: monospace; font-size: 9px; fill: #94A3B8; }
+      ]]>
+    </style>
+    <filter id="spectral-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="focus-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="1200" height="750" class="canvas-bg" />
+  <g id="canvas-header" transform="translate(30, 24)">
+    <text x="0" y="16" font-size="16" font-weight="800" fill="#F8FAFC" letter-spacing="0.5px">HORNER OCS DYNAMIC POLAR / RADAR SPECTRAL SIGNATURE SCADA</text>
+    <text x="0" y="32" font-size="11" font-weight="500" fill="#94A3B8">ISO 10816-3 Machinery Health Diagnostic &amp; Multi-Axis Harmonic Envelope Engine | WP W186</text>
+    <g id="header-status-badges" transform="translate(760.0, 2)">
+      <rect x="0" y="0" width="130" height="26" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <circle cx="12" cy="13" r="4" fill="#10B981"/>
+      <text x="24" y="16" font-family="monospace" font-size="9" font-weight="700" fill="#F8FAFC">%M344 ONLINE</text>
+      <rect x="140" y="0" width="130" height="26" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <circle cx="152" cy="13" r="4" fill="#10B981"/>
+      <text x="164" y="16" font-family="monospace" font-size="9" font-weight="700" fill="#F8FAFC">%M343 NORMAL (CL</text>
+      <rect x="280" y="0" width="110" height="26" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <text x="290" y="16" font-family="monospace" font-size="9" font-weight="700" fill="#10B981">%R1477: 0x0000</text>
+    </g>
+  </g>
+  <g id="machine-train-selector">
+    <g id="train-tab-0" transform="translate(30.0, 65.0)">
+      <rect width="168.0" height="32.0" rx="5" fill="#131C2E" stroke="#38BDF8" stroke-width="1.2"/>
+      <text x="12" y="20" font-size="10" font-weight="700" fill="#F8FAFC">[0] PUMP_BFP_01A</text>
+    </g>
+    <g id="train-tab-1" transform="translate(208.0, 65.0)">
+      <rect width="168.0" height="32.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+      <text x="12" y="20" font-size="10" font-weight="500" fill="#94A3B8">[1] PUMP_CEP_02</text>
+    </g>
+    <g id="train-tab-2" transform="translate(386.0, 65.0)">
+      <rect width="168.0" height="32.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+      <text x="12" y="20" font-size="10" font-weight="500" fill="#94A3B8">[2] FAN_FDF_01</text>
+    </g>
+    <g id="train-tab-3" transform="translate(564.0, 65.0)">
+      <rect width="168.0" height="32.0" rx="5" fill="#0B0F19" stroke="#334155" stroke-width="1.2"/>
+      <text x="12" y="20" font-size="10" font-weight="500" fill="#94A3B8">[3] COMP_PAC_03</text>
+    </g>
+  </g>
+  <g id="polar-spectral-spider">
+  <g id="spectral-radar-canvas">
+  <g id="spider-radar-geometry">
+    <g id="polar-grid-rings">
+    <g id="concentric-grid-webs">
+      <circle cx="420.0" cy="405.0" r="57.5" class="grid-ring"/>
+      <polygon points="420.00,347.50 460.66,364.34 477.50,405.00 460.66,445.66 420.00,462.50 379.34,445.66 362.50,405.00 379.34,364.34" class="grid-ring"/>
+      <text x="426.0" y="358.5" fill="#94A3B8" font-family="monospace" font-size="9">25% ISO</text>
+      <circle cx="420.0" cy="405.0" r="115.0" class="grid-ring"/>
+      <polygon points="420.00,290.00 501.32,323.68 535.00,405.00 501.32,486.32 420.00,520.00 338.68,486.32 305.00,405.00 338.68,323.68" class="grid-ring"/>
+      <text x="426.0" y="301.0" fill="#94A3B8" font-family="monospace" font-size="9">50% ISO</text>
+      <circle cx="420.0" cy="405.0" r="172.5" class="grid-ring"/>
+      <polygon points="420.00,232.50 541.98,283.02 592.50,405.00 541.98,526.98 420.00,577.50 298.02,526.98 247.50,405.00 298.02,283.02" class="grid-ring"/>
+      <text x="426.0" y="243.5" fill="#94A3B8" font-family="monospace" font-size="9">75% ISO</text>
+      <circle cx="420.0" cy="405.0" r="230.0" class="grid-ring-outer"/>
+      <polygon points="420.00,175.00 582.63,242.37 650.00,405.00 582.63,567.63 420.00,635.00 257.37,567.63 190.00,405.00 257.37,242.37" class="grid-ring-outer"/>
+      <text x="426.0" y="186.0" fill="#94A3B8" font-family="monospace" font-size="9">100% ISO</text>
+    </g>
+    </g>
+    <g id="radial-spokes">
+    <g id="axis-rays">
+      <line id="spoke-0" x1="420.0" y1="405.0" x2="420.0" y2="175.0" stroke="#38BDF8" class="spoke-selected"/>
+      <line id="spoke-1" x1="420.0" y1="405.0" x2="582.6" y2="242.4" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-2" x1="420.0" y1="405.0" x2="650.0" y2="405.0" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-3" x1="420.0" y1="405.0" x2="582.6" y2="567.6" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-4" x1="420.0" y1="405.0" x2="420.0" y2="635.0" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-5" x1="420.0" y1="405.0" x2="257.4" y2="567.6" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-6" x1="420.0" y1="405.0" x2="190.0" y2="405.0" stroke="#334155" class="spoke-line"/>
+      <line id="spoke-7" x1="420.0" y1="405.0" x2="257.4" y2="242.4" stroke="#334155" class="spoke-line"/>
+    </g>
+    </g>
+    <g id="golden-baseline-signature">
+    <g id="golden-baseline-overlay">
+      <path id="golden-baseline-bezier" d="M 420.00,333.73 C 433.49,330.49 449.09,351.79 457.17,367.83 C 465.26,383.86 459.07,391.41 455.94,405.00 C 452.80,418.59 451.32,406.67 443.23,428.23 C 435.15,449.80 444.40,486.89 420.00,500.83 C 395.60,514.77 345.16,511.75 334.81,490.19 C 324.46,468.63 359.96,429.29 374.00,405.00 C 388.04,380.71 386.88,398.27 397.23,382.23 C 407.58,366.20 406.51,336.97 420.00,333.73 Z" fill="none" stroke="#06B6D4" stroke-width="1.8" stroke-dasharray="6,4" />
+      <polygon id="golden-baseline-polygon" points="420.00,333.73 457.17,367.83 455.94,405.00 443.23,428.23 420.00,500.83 334.81,490.19 374.00,405.00 397.23,382.23" class="target-polygon">
+        <title>Golden Baseline Signature Envelope</title>
+      </polygon>
+      <circle cx="420.00" cy="333.73" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="457.17" cy="367.83" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="455.94" cy="405.00" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="443.23" cy="428.23" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="420.00" cy="500.83" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="334.81" cy="490.19" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="374.00" cy="405.00" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+      <circle cx="397.23" cy="382.23" r="3" fill="#06B6D4" stroke="#0B0F19" stroke-width="1"/>
+    </g>
+    </g>
+    <g id="live-spectral-signature">
+    <g id="live-signature-overlay">
+    <g id="current-realtime-overlay">
+      <path id="live-signature-bezier" d="M 420.00,267.32 C 460.57,269.21 480.09,288.06 505.96,319.04 C 531.84,350.01 536.70,368.02 535.00,405.00 C 533.30,441.98 524.29,450.64 498.41,483.41 C 472.54,516.19 462.74,543.22 420.00,550.67 C 377.26,558.12 346.88,549.30 308.48,516.52 C 270.08,483.75 245.47,451.32 249.34,405.00 C 253.21,358.68 287.27,341.65 325.67,310.67 C 364.07,279.69 379.43,265.44 420.00,267.32 Z" fill="rgba(16, 185, 129, 0.25)" stroke="#10B981" class="realtime-polygon" filter="url(#spectral-glow)">
+        <title>Live Spectral Signature (Max Score: 74.2%)</title>
+      </path>
+      <polygon id="live-signature-polygon" points="420.00,267.32 505.96,319.04 535.00,405.00 498.41,483.41 420.00,550.67 308.48,516.52 249.34,405.00 325.67,310.67" fill="rgba(16, 185, 129, 0.25)" stroke="#10B981" class="realtime-polygon">
+        <title>Live Machine Vibration Polygon (Zone B: Acceptable (Unrestricted Operation))</title>
+      </polygon>
+    </g>
+    </g>
+    </g>
+    <g id="spectral-vertex-markers">
+    <g id="vertex-markers">
+      <circle id="vertex-0" cx="420.00" cy="267.32" r="6.0" fill="#10B981" stroke="#38BDF8" stroke-width="1.5">
+        <title>[0] Overall Vibration RMS: 4.25 mm/s (59.9% limit)</title>
+      </circle>
+      <circle id="selected-axis-indicator" cx="420.00" cy="267.32" r="11" fill="none" stroke="#38BDF8" stroke-width="2.2" filter="url(#focus-glow)"/>
+      <circle id="vertex-1" cx="505.96" cy="319.04" r="4.8" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5">
+        <title>[1] 1X Subharmonic Peak: 1.85 order (52.9% limit)</title>
+      </circle>
+      <circle id="vertex-2" cx="535.00" cy="405.00" r="4.8" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5">
+        <title>[2] 2X Shaft Harmonics: 1.60 mm/s (50.0% limit)</title>
+      </circle>
+      <circle id="vertex-3" cx="498.41" cy="483.41" r="4.8" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5">
+        <title>[3] Blade Pass Frequency (BPF): 1.35 mm/s (48.2% limit)</title>
+      </circle>
+      <circle id="vertex-4" cx="420.00" cy="550.67" r="4.8" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5">
+        <title>[4] Bearing Crest Factor: 3.80 ratio (63.3% limit)</title>
+      </circle>
+      <circle id="vertex-5" cx="308.48" cy="516.52" r="4.8" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5">
+        <title>[5] Acoustic Emission: 72.00 dBA (68.6% limit)</title>
+      </circle>
+      <circle id="vertex-6" cx="249.34" cy="405.00" r="4.8" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5">
+        <title>[6] High-Frequency Demodulation (HFE): 2.97 g-pk (74.2% limit)</title>
+      </circle>
+      <circle id="vertex-7" cx="325.67" cy="310.67" r="4.8" fill="#10B981" stroke="#F8FAFC" stroke-width="1.5">
+        <title>[7] Thermal Imbalance Gradient: 14.50 °C (58.0% limit)</title>
+      </circle>
+    </g>
+    </g>
+    <g id="axis-labels">
+      <g id="axis-label-0" transform="translate(348.0, 115.0)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg-selected"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[0] Overall Vibration </text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 4.2 mm/s | 60%</text>
+      </g>
+      <g id="axis-label-1" transform="translate(540.3, 194.7)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[1] 1X Subharmonic Pea</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 1.9 order | 53%</text>
+      </g>
+      <g id="axis-label-2" transform="translate(620.0, 387.0)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[2] 2X Shaft Harmonics</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 1.6 mm/s | 50%</text>
+      </g>
+      <g id="axis-label-3" transform="translate(540.3, 579.3)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[3] Blade Pass Frequen</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 1.4 mm/s | 48%</text>
+      </g>
+      <g id="axis-label-4" transform="translate(348.0, 659.0)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[4] Bearing Crest Fact</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 3.8 ratio | 63%</text>
+      </g>
+      <g id="axis-label-5" transform="translate(155.7, 579.3)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[5] Acoustic Emission</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 72.0 dBA | 69%</text>
+      </g>
+      <g id="axis-label-6" transform="translate(76.0, 387.0)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[6] High-Frequency Dem</text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 3.0 g-pk | 74%</text>
+      </g>
+      <g id="axis-label-7" transform="translate(155.7, 194.7)">
+        <rect width="144.0" height="36.0" class="axis-badge-bg"/>
+        <circle cx="10" cy="18" r="4" fill="#10B981"/>
+        <text x="20" y="15" class="axis-badge-text">[7] Thermal Imbalance </text>
+        <text x="20" y="28" class="axis-badge-sub">ACT: 14.5 °C | 58%</text>
+      </g>
+    </g>
+  </g>
+  </g>
+  </g>
+  <g id="machinery-health-hud">
+  <g id="iso-10816-hud-card">
+    <rect x="760.0" y="65.0" width="415.0" height="655.0" class="hud-card"/>
+    <text x="780.0" y="91.0" class="hud-title">ISO 10816 MACHINERY HEALTH HUD</text>
+    <text x="780.0" y="105.0" class="hud-subtitle">Dynamic Polar Multi-Axis Spectral Signature Telemetry</text>
+    <g id="overall-score-card">
+      <rect x="778.0" y="117.0" width="379.0" height="76" rx="6" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+      <text x="792.0" y="137.0" class="hud-label">HEALTH SCORE (%R1476):</text>
+      <text x="1127.0" y="137.0" text-anchor="end" class="hud-label">VIB RMS (%R1470): 4.25 mm/s</text>
+      <text x="792.0" y="173.0" font-family="monospace" font-size="28" font-weight="700" fill="#10B981">89.5%</text>
+      <text x="1127.0" y="163.0" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#10B981">NORMAL OPERATION</text>
+      <text x="1127.0" y="179.0" text-anchor="end" font-family="monospace" font-size="9" fill="#94A3B8">Zone B: Acceptable</text>
+    </g>
+    <g id="spectral-axis-breakdown-rows">
+      <g id="summary-row-0" transform="translate(778.0, 203.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#131C2E" stroke="#38BDF8" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[0] VIB_RMS (60%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 2.20 | Dev: <tspan fill="#F59E0B">+2.05 mm/s</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">4.25 mm/s</text>
+      </g>
+      <g id="summary-row-1" transform="translate(778.0, 244.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[1] HARMONIC_1X (53%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 0.80 | Dev: <tspan fill="#F59E0B">+1.05 order</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">1.85 order</text>
+      </g>
+      <g id="summary-row-2" transform="translate(778.0, 285.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[2] HARMONIC_2X (50%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 0.50 | Dev: <tspan fill="#F59E0B">+1.10 mm/s</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">1.60 mm/s</text>
+      </g>
+      <g id="summary-row-3" transform="translate(778.0, 326.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[3] BPF_FLOW (48%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 0.40 | Dev: <tspan fill="#F59E0B">+0.95 mm/s</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">1.35 mm/s</text>
+      </g>
+      <g id="summary-row-4" transform="translate(778.0, 367.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[4] CREST_FACTOR (63%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 2.50 | Dev: <tspan fill="#F59E0B">+1.30 ratio</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">3.80 ratio</text>
+      </g>
+      <g id="summary-row-5" transform="translate(778.0, 408.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[5] ACOUSTIC_EMISSION (69%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 55.00 | Dev: <tspan fill="#F59E0B">+17.00 dBA</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">72.00 dBA</text>
+      </g>
+      <g id="summary-row-6" transform="translate(778.0, 449.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[6] HFE_DEMOD (74%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 0.80 | Dev: <tspan fill="#F59E0B">+2.17 g-pk</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">2.97 g-pk</text>
+      </g>
+      <g id="summary-row-7" transform="translate(778.0, 490.0)">
+        <rect width="379.0" height="36.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+        <text x="12" y="16" class="hud-val">[7] THERMAL_GRADIENT (58%)</text>
+        <text x="12" y="28" class="hud-subtitle">Base: 3.50 | Dev: <tspan fill="#F59E0B">+11.00 °C</tspan></text>
+        <text x="367.0" y="22" text-anchor="end" font-family="monospace" font-size="13" font-weight="700" fill="#F8FAFC">14.50 °C</text>
+      </g>
+    </g>
+    <g id="diagnostics-safety-card">
+      <rect x="778.0" y="537.0" width="379.0" height="170" rx="6" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+      <text x="792.0" y="559.0" class="hud-title" fill="#38BDF8">SAFETY INTERLOCKS &amp; DIAGNOSTICS</text>
+      <text x="792.0" y="581.0" class="hud-label">%M343 MachineryVibrationTrip: <tspan font-family="monospace" font-weight="700" fill="#10B981">NORMAL (CLEAR)</tspan></text>
+      <text x="792.0" y="601.0" class="hud-label">%M344 SpectralCanvasActive: <tspan font-family="monospace" font-weight="700" fill="#10B981">TRUE (ONLINE)</tspan></text>
+      <text x="792.0" y="621.0" class="hud-label">%R1471 MaxSpectralAxisScore: <tspan font-family="monospace" font-weight="700" fill="#38BDF8">74.2% (742)</tspan></text>
+      <text x="792.0" y="641.0" class="hud-label">%R1474 BearingCrestFactor: <tspan font-family="monospace" font-weight="700" fill="#38BDF8">3.8 (38)</tspan></text>
+      <text x="792.0" y="661.0" class="hud-label">%R1477 DiagnosticStatusCode: <tspan font-family="monospace" font-weight="700" fill="#10B981">0x0000</tspan></text>
+      <text x="792.0" y="685.0" font-family="monospace" font-size="9" fill="#94A3B8">Rule: Axis &gt;= 100% asserts %M343 (0xD301). Crest &gt;= 4.5 warns 0xD302.</text>
+    </g>
+  </g>
+  </g>
+</svg>

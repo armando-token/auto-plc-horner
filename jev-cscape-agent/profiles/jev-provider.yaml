@@ -1,0 +1,34 @@
+# profiles/jev-provider.yaml - Jev TypeSafe Provider Configuration (Megaplan 12.3)
+# STRICT DIRECTIVE: ZERO SECRETS IN GIT. Credentials must be supplied via environment variables.
+
+provider_metadata:
+  name: "typesafe-jev-provider"
+  version: "1.0.0"
+  description: "Provider profile for JEV TypeSafe SystemOne reasoning engine (Megaplan 12.3)"
+
+authentication:
+  auth_type: "bearer_token"
+  token_env_var: "JEV_API_KEY"
+  token_status: "dynamic_env_lookup"
+  # Hardcoded credentials strictly forbidden in repository files.
+
+endpoints:
+  base_url: "https://api.typesafe.ai/v1/systemone"
+  timeout_seconds: 30
+  retry_count: 3
+  backoff_factor: 1.5
+
+runtime_parameters:
+  model_id: "jev-latest"
+  temperature: 0.1
+  max_tokens: 4096
+  fail_closed_mode: true
+  grounding_policy: "strict_evidence_gated"
+
+agent_contract:
+  enforce_four_state_status: true
+  allowed_statuses:
+    - "success"
+    - "failed"
+    - "blocked"
+    - "inconclusive"

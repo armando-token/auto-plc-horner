@@ -1,0 +1,164 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W302 Supercritical CO2 PHA Extraction & Precipitation Autoclave Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W302",
+    "gate": "G7",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "environment",
+        "passed": true,
+        "timing_ms": 0.014,
+        "details": "Python 3.12.10 on win32; dependencies verified: py_ok=True, platform_ok=True, deps_ok=True."
+      },
+      {
+        "stage": 2,
+        "name": "model_parameters",
+        "check": "model_parameters",
+        "passed": true,
+        "timing_ms": 0.32,
+        "details": "Thermodynamics verified: Tc=304.13K, Pc=73.77bar, rho_c=467.6kg/m^3; Chrastil parameters k=3.8, a=-3400.0, b=-12.5; register bindings %R2630..%R2637 and %M613..%M615 confirmed."
+      },
+      {
+        "stage": 3,
+        "name": "rk4_ode_mass_conservation",
+        "check": "rk4_ode_mass_conservation",
+        "passed": true,
+        "timing_ms": 5.595,
+        "details": "RK4 integration verified over 18 steps: polymer mass conservation residual=0.00e+00 < 1e-10; M_cell (500.0 -> 426.3 g), C_sol=2.823 g/L, M_precip=17.262 g."
+      },
+      {
+        "stage": 4,
+        "name": "supercritical_density_and_solubility",
+        "check": "supercritical_density_and_solubility",
+        "passed": true,
+        "timing_ms": 0.261,
+        "details": "Chrastil solubility monotonic curve verified across [400.0..950.0 kg/m^3] -> [0.78..20.76 g/L]; nominal supercritical (250 bar, 50\u00b0C: rho=830.1kg/m^3, S=12.44g/L) vs depressurized separator (50 bar, 35\u00b0C: rho=121.0kg/m^3, S=0.005g/L), solubility drop=100.0%."
+      },
+      {
+        "stage": 5,
+        "name": "safety_trip_hierarchy",
+        "check": "safety_trip_hierarchy",
+        "passed": true,
+        "timing_ms": 2.609,
+        "details": "Safety trips 0xF941 (over-pressure), 0xF942 (subcritical loss), 0xF943 (thermal degradation), 0xF944 (clogging) and strict priority hierarchy dominance verified."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "check": "register_synchronization",
+        "passed": true,
+        "timing_ms": 0.519,
+        "details": "RegisterTable memory space verified (%R2630=0x0203, %R2631=2500, %R2632=500, %R2633=8301, %R2634=124, %R2635=0, %R2636=0x0000, %R2637=0x003F); signed bitwise mask (-1727 == 0xF941) verified."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "check": "structured_text_validation",
+        "passed": true,
+        "timing_ms": 1.597,
+        "details": "Pure ST POU 'PhaSupercriticalExtractionSync' parsed cleanly with correct bindings; 4/4 ladder constructs rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "check": "scan_cycle_simulation",
+        "passed": true,
+        "timing_ms": 42.168,
+        "details": "Multi-cycle closed loop scan executed for 30 cycles; over-pressure excursion (380 bar) triggered 0xF941 and actuated PRV: pressure safely vented by 130.0 bar down to 250.0 bar, reseat confirmed."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "check": "evidence_emission",
+        "passed": true,
+        "timing_ms": 0.147,
+        "details": "Deterministic evidence emitted with SHA-256 digests (POU: 2ed609f3..., Model: ee8846c4...)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "environment",
+        "passed": true,
+        "timing_ms": 0.014,
+        "details": "Python 3.12.10 on win32; dependencies verified: py_ok=True, platform_ok=True, deps_ok=True."
+      },
+      {
+        "stage": 2,
+        "name": "model_parameters",
+        "check": "model_parameters",
+        "passed": true,
+        "timing_ms": 0.32,
+        "details": "Thermodynamics verified: Tc=304.13K, Pc=73.77bar, rho_c=467.6kg/m^3; Chrastil parameters k=3.8, a=-3400.0, b=-12.5; register bindings %R2630..%R2637 and %M613..%M615 confirmed."
+      },
+      {
+        "stage": 3,
+        "name": "rk4_ode_mass_conservation",
+        "check": "rk4_ode_mass_conservation",
+        "passed": true,
+        "timing_ms": 5.595,
+        "details": "RK4 integration verified over 18 steps: polymer mass conservation residual=0.00e+00 < 1e-10; M_cell (500.0 -> 426.3 g), C_sol=2.823 g/L, M_precip=17.262 g."
+      },
+      {
+        "stage": 4,
+        "name": "supercritical_density_and_solubility",
+        "check": "supercritical_density_and_solubility",
+        "passed": true,
+        "timing_ms": 0.261,
+        "details": "Chrastil solubility monotonic curve verified across [400.0..950.0 kg/m^3] -> [0.78..20.76 g/L]; nominal supercritical (250 bar, 50\u00b0C: rho=830.1kg/m^3, S=12.44g/L) vs depressurized separator (50 bar, 35\u00b0C: rho=121.0kg/m^3, S=0.005g/L), solubility drop=100.0%."
+      },
+      {
+        "stage": 5,
+        "name": "safety_trip_hierarchy",
+        "check": "safety_trip_hierarchy",
+        "passed": true,
+        "timing_ms": 2.609,
+        "details": "Safety trips 0xF941 (over-pressure), 0xF942 (subcritical loss), 0xF943 (thermal degradation), 0xF944 (clogging) and strict priority hierarchy dominance verified."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "check": "register_synchronization",
+        "passed": true,
+        "timing_ms": 0.519,
+        "details": "RegisterTable memory space verified (%R2630=0x0203, %R2631=2500, %R2632=500, %R2633=8301, %R2634=124, %R2635=0, %R2636=0x0000, %R2637=0x003F); signed bitwise mask (-1727 == 0xF941) verified."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "check": "structured_text_validation",
+        "passed": true,
+        "timing_ms": 1.597,
+        "details": "Pure ST POU 'PhaSupercriticalExtractionSync' parsed cleanly with correct bindings; 4/4 ladder constructs rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "check": "scan_cycle_simulation",
+        "passed": true,
+        "timing_ms": 42.168,
+        "details": "Multi-cycle closed loop scan executed for 30 cycles; over-pressure excursion (380 bar) triggered 0xF941 and actuated PRV: pressure safely vented by 130.0 bar down to 250.0 bar, reseat confirmed."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "check": "evidence_emission",
+        "passed": true,
+        "timing_ms": 0.147,
+        "details": "Deterministic evidence emitted with SHA-256 digests (POU: 2ed609f3..., Model: ee8846c4...)."
+      }
+    ],
+    "digests": {
+      "pou_sha256": "2ed609f3d51f6b89162d70dabda893221c015977015097f5d4b59784cde1987b",
+      "model_sha256": "ee8846c48a44853000434c677570497bbff9c9a3e9080bb14214be4bf91d55ed"
+    },
+    "timestamp_utc": "2026-10-07T23:14:09Z"
+  }
+}

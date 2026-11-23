@@ -1,0 +1,63 @@
+{
+  "status": "blocked",
+  "error_code": "CSCAPE_GUI_EDIT_BLOCKED_NATIVE",
+  "timestamp_utc": "2026-10-08T22:31:00.000000+00:00",
+  "task": "REAL_G3_CONCRETE_FIELD_EDIT_RUN",
+  "mission": "Attempt real in-GUI edit on fresh copy of test_sandbox.csp, Save As new file, close, reopen, read back",
+  "source_file": {
+    "path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+    "sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+    "status": "UNTOUCHED_IMMUTABLE",
+    "size_bytes": 7680,
+    "format": "CFBF_OLE2",
+    "streams": ["Contents"],
+    "logic_type": "ADVANCED_LADDER",
+    "target_hardware": "Horner Model 2001"
+  },
+  "can_edit_concrete_field": false,
+  "verdict": "BLOCKED",
+  "findings": {
+    "copy_sha_differs_from_source": false,
+    "concrete_field_edited": null,
+    "value_read_back": null,
+    "read_back_equals_new_value": false
+  },
+  "blockers": [
+    {
+      "id": "BLOCKER_1_MFC_GDI_CANVAS_NO_UIA_CONTROLS",
+      "category": "GUI_ARCHITECTURE",
+      "summary": "Owner-Drawn Non-Standard MFC GDI Canvas (Zero Win32/UIA Edit Controls)",
+      "technical_details": "test_sandbox.csp is an Advanced Ladder project. In Cscape 10.2 (Build 10.2.751.4), ladder rungs, coils, contacts, and math blocks (%R0001 = %R0001 * 1103515245) are rendered on an owner-drawn custom MFC GDI canvas (CLogicView inside MDIClient). The view does not host or expose Win32 Edit, RichEdit, or Scintilla controls, nor does it implement Windows UI Automation (UIA) ValuePattern, TextPattern, or accessible element trees. There are zero window handles, controls, or accessible endpoints through which rung text or variables can be inspected or mutated programmatically."
+    },
+    {
+      "id": "BLOCKER_2_ZERO_PROGRAMMATIC_MUTATION_API",
+      "category": "PLATFORM_LIMITATION",
+      "summary": "Zero Native Programmatic Mutation API (BLOCKED_NATIVE: DOCUMENT_ONLY)",
+      "technical_details": "Cscape 10.2 contains zero CLI parameters, COM/OLE automation interfaces, IPC mechanisms, or DLL exports to mutate or inject ladder rungs or project variables. As audited in CAPABILITY_MATRIX.md (Row 202) and AGENTS.md (Section 3.4), programmatic mutation of native project logic is classified as BLOCKED_NATIVE."
+    },
+    {
+      "id": "BLOCKER_3_NO_ST_TO_LADDER_CONVERSION",
+      "category": "CONVERSION_BARRIER",
+      "summary": "No ST-to-Ladder (ST->LD) Conversion in Cscape 10.2",
+      "technical_details": "While pure IEC 61131-3 Structured Text POUs can be parsed and validated offline in software (STParser rejecting ladder logic with ERR_LADDER_FORBIDDEN), test_sandbox.csp is a legacy Advanced Ladder container. Cscape 10.2 maintains an architectural separation between its Advanced Ladder engine and IEC 61131-3 engine, offering zero native conversion between ST and Ladder."
+    },
+    {
+      "id": "BLOCKER_4_MFC_NULL_POINTER_DEREFERENCE_CRASH",
+      "category": "RUNTIME_INSTABILITY",
+      "summary": "Deterministic MFC Null-Pointer Dereference Crash (0xC0000005 at 0x001a3a60 / 0x002383e2)",
+      "technical_details": "When synthetic keystrokes, WM_COMMAND messages (e.g. ID_FILE_SUMMARYINFO 32809, ID_PROGRAM_IONAMES 32835), or modal transition messages are dispatched into Cscape's MFC message loop, Cscape's internal command routing attempts to resolve the active document/view pointer. The instruction at RVA 0x1a3a60 (VA 0x5a3a60: 8B 36 -> MOV ESI, DWORD PTR [ESI]) and RVA 0x2383e2 (VA 0x6383e2: 8B 88 7C 5C 00 00 -> MOV ECX, DWORD PTR [EAX + 5C7Ch]) dereferences NULL, triggering an unhandled hardware read access violation (0xC0000005). Windows Application Error events (Index 5440, 5453, 5460) confirm repeated termination under STATUS_ACCESS_VIOLATION."
+    },
+    {
+      "id": "BLOCKER_5_LEGACY_HARDWARE_TARGET_MODAL_LOCK",
+      "category": "CONTAINER_INCOMPATIBILITY",
+      "summary": "Legacy Target Hardware Model 2001 Incompatibility Modal Dialog",
+      "technical_details": "test_sandbox.csp targets legacy Horner Model 2001 hardware. Attempting an interactive Save As triggers a modal warning dialog ('The Loaded file was created with older Cscape Version...'), which blocks message pumps and prevents automated file persistence without manual operator intervention."
+    }
+  ],
+  "safety_invariants": {
+    "jev_api_calls_made": 0,
+    "hardware_ports_accessed": 0,
+    "download_commands_dispatched": 0,
+    "source_file_modified": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Rotary Calciner Simulation Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W116",
+    "gate": "Gate G7 / G4",
+    "component": "Rotary Calciner Solid Mineral Kinetics & Counter-Current Heat Transfer Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified cleanly; %R770..%R777 and %M179..%M181 bound into AST."
+      },
+      {
+        "stage": 2,
+        "check": "Solid_Mineral_Arrhenius_Calcination_Kinetics",
+        "passed": true,
+        "details": "Arrhenius kinetics verified: k(800\u00b0C)=0.0010/s, k(900\u00b0C)=0.0052/s, k(950\u00b0C)=0.0108/s, Ea error=3.78e-10 J/mol."
+      },
+      {
+        "stage": 3,
+        "check": "Shrinking_Core_Model_And_Stoichiometric_Mass_Conservation",
+        "passed": true,
+        "details": "Shrinking core & mass balance verified: rx(0)=0.0100/s, rx(1)=0.0000/s, mass conservation residual=0.00e+00 kg/s, ratio error=0.00e+00."
+      },
+      {
+        "stage": 4,
+        "check": "Counter_Current_Rotary_Drum_Heat_Transfer_Balances",
+        "passed": true,
+        "details": "Heat transfer verified: Q_rad_gb=1013.4 kW, Q_conv_gb=93.8 kW, Q_contact_wb=235.2 kW, endothermic cooling penalty=2.7601 K/s."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 2.0s: X_calc=95.00%, T_bed=922.6\u00b0C, T_wall=1092.3\u00b0C, Draft=-49.8 Pa, Product=0.054 kg."
+      },
+      {
+        "stage": 6,
+        "check": "Refractory_Wall_OverTemp_Trip_Interlock",
+        "passed": true,
+        "details": "Refractory over-temp interlock (%M179=TRUE, %R777=0x8D01, burner tripped) verified."
+      },
+      {
+        "stage": 7,
+        "check": "Under_Calcination_Alarm_Interlock",
+        "passed": true,
+        "details": "Under-calcination alarm (%M180=TRUE, %R777=0x8D02) verified at X_calc=88.0%."
+      },
+      {
+        "stage": 8,
+        "check": "Draft_Loss_Trip_Interlock",
+        "passed": true,
+        "details": "Draft loss trip (%M181=TRUE, %R777=0x8D03, burner tripped) verified on ID fan loss."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Registers_Synchronization_And_Anti_Ladder_Rejection",
+        "passed": true,
+        "details": "Registers verified: %R771=9204, %R772=5126, %R773=11508, %R774=946, %R775=18502, %R776=-45, %R777=0. Anti-ladder rejected."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R770..%R777",
+      "discrete_coils": "%M179..%M181",
+      "values": {
+        "%R770": 143,
+        "%R771": 9204,
+        "%R772": 5126,
+        "%R773": 11508,
+        "%R774": 946,
+        "%R775": 18502,
+        "%R776": -45,
+        "%R777": 0,
+        "%M179": false,
+        "%M180": false,
+        "%M181": false
+      }
+    },
+    "timestamp": "2026-10-04T02:54:56Z"
+  }
+}

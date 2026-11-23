@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "DNP3 IEEE 1815-2012 protocol verification: 5/5 checks passed.",
+  "data": {
+    "protocol": "DNP3 / IEEE 1815-2012",
+    "tests": [
+      {
+        "check": "CRC16_DNP_Standard_Check_Vector",
+        "expected": "0xEA82",
+        "actual": "0xEA82",
+        "passed": true
+      },
+      {
+        "check": "Pure_ST_POU_Validation",
+        "pou_name": "Dnp3TelemetryParser",
+        "passed": true
+      },
+      {
+        "check": "Data_Link_Framing_Roundtrip",
+        "wire_bytes_len": 19,
+        "passed": true
+      },
+      {
+        "check": "Outstation_Read_Analog_Point",
+        "analog_pv_scaled": 5000,
+        "status_word": 3,
+        "passed": true
+      },
+      {
+        "check": "CROB_Select_Before_Operate",
+        "select_passed": true,
+        "operate_passed": true,
+        "passed": true
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R310..%R315",
+      "discrete_coils": "%M72..%M73"
+    },
+    "timestamp": 1790986659.370657
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Real-Time SCADA Process Event Logger & Syslog RFC 5424 Serializer verified: RFC 5424 formatting, parameter escaping, forward-secure SHA-256 hash chaining, token-bucket rate limiting with emergency bypass, chatter de-duplication, pure ST boundary enforcement, and Horner OCS register space synchronization (%R260..%R264, %M56..%M57) passed.",
+  "data": {
+    "work_package": "W062",
+    "gate": "G8",
+    "timestamp_utc": "2026-10-02T21:44:32.326287+00:00",
+    "rfc_5424_spec": {
+      "default_facility": "LOCAL0 (16)",
+      "default_app_name": "jev-scada",
+      "default_hostname": "cscape-ocs",
+      "version": 1,
+      "escaping_rules": [
+        "\\\\",
+        "\\\"",
+        "\\]"
+      ],
+      "bom_prefix_on_unicode": true
+    },
+    "cryptographic_chain": {
+      "hash_algorithm": "SHA-256",
+      "genesis_anchor": "6cdd61ff965ac1e87eea74091d5c842ecab71480ebebf87aa1315b04f5a73950",
+      "chain_valid": true,
+      "total_events_chained": 3,
+      "head_hash": "1c5a9acd4989d87178bbbb8b05000fc73da80e7a395af2b63eb819c6ff848e5b"
+    },
+    "rate_limiter_and_dedup": {
+      "token_bucket_capacity": 20.0,
+      "token_bucket_refill_rate": 5.0,
+      "emergency_bypass_active": true,
+      "dedup_window_s": 0.05,
+      "suppressed_events": 1,
+      "dropped_events": 0
+    },
+    "security_invariants": {
+      "offline_mock_mode": true,
+      "pure_st_enforced": true,
+      "ladder_construct_injection_blocked": true,
+      "com_ports_accessed": 0,
+      "downloads_attempted": 0
+    },
+    "horner_ocs_register_map": {
+      "%R260": "Syslog Engine Status Word (Active, Hash Valid, Rate-Limited, Deduped)",
+      "%R261:%R262": "32-bit Cumulative Logged Event Counter (UDINT)",
+      "%R263": "Rate-Limited Dropped Events Counter (16-bit UINT)",
+      "%R264": "De-duplication Suppressed Events Counter (16-bit UINT)",
+      "%M56": "Syslog Logger Enable Coil",
+      "%M57": "Syslog Reset / Recalibrate Handshake Coil"
+    },
+    "serialized_sample_events": [
+      "<134>1 2026-10-02T21:44:32.311881Z cscape-ocs jev-scada 1001 SYSTEM_BOOT [chain@48577 seq=\"1\" prev=\"6cdd61ff965ac1e8\" curr=\"46287c959b9095df\"][origin@48577 firmware=\"10.2.751.4\" build=\"x86_release\"] Horner OCS Controller System Initialized cleanly.",
+      "<132>1 2026-10-02T21:44:32.311881Z cscape-ocs jev-scada 1001 TEMP_HIGH [chain@48577 seq=\"2\" prev=\"46287c959b9095df\" curr=\"ba327ea715ad36c3\"][sensor@48577 tag=\"%R100\" val=\"85.5\"] Coolant temperature exceeded threshold: 85.5 C [zone=\"heater_bank_1\"].",
+      "<129>1 2026-10-02T21:44:32.320807Z cscape-ocs jev-scada 1001 ESTOP_ASSERTED [chain@48577 seq=\"3\" prev=\"ba327ea715ad36c3\" curr=\"1c5a9acd4989d871\"] Emergency Stop Palm Button asserted on Operator Console 1."
+    ]
+  }
+}

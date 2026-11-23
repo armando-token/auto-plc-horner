@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Historical Data Logger verified: O(1) circular ring buffer, deadband filtering (absolute & percent-of-span), SDT compaction, heartbeat override, alarm trip zero-distortion bypass, and Horner register synchronization (%R240..%R244, %M45..%M47) passed.",
+  "data": {
+    "work_package": "W058",
+    "gate": "G8",
+    "timestamp_utc": "2026-10-02T21:28:06.205802+00:00",
+    "ring_buffer": {
+      "capacity": 50000,
+      "current_occupancy": 12,
+      "cumulative_samples": 12,
+      "dropped_count": 0,
+      "memory_profile_100k_pts": "< 12 MB (slots=True frozen dataclass)"
+    },
+    "compaction_mechanisms_verified": [
+      "Absolute Deadband (|x_curr - x_last| >= delta_abs)",
+      "Percent-of-Span Deadband (|x_curr - x_last| / Span >= delta_pct)",
+      "Swinging Door Trending (SDT) corridor tracking",
+      "Heartbeat Maximum Logging Interval (T_max override)",
+      "Alarm Trip Point Bypass (zero distortion on critical boundaries)",
+      "Discrete Bit Transition Immediate Capture"
+    ],
+    "horner_ocs_register_map": {
+      "%R240": "Ring Buffer Current Occupancy",
+      "%R241:%R242": "Cumulative Logged Samples (32-bit UDINT LOW_WORD_FIRST)",
+      "%R243": "Samples Overwritten / Dropped",
+      "%R244": "Compaction Ratio * 100",
+      "%M45": "Logging Enable / Run State",
+      "%M46": "Flush / Export Handshake Coil",
+      "%M47": "Clear Buffer Handshake Coil"
+    },
+    "sample_csv_path": "artifacts/telemetry/sample_telemetry_history.csv",
+    "sample_csv_records": 12
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "work_package": "W073",
+  "gate": "G8",
+  "protocol": "IEC 60870-5-104:2006",
+  "timestamp_utc": "2026-10-03T00:32:54.963935+00:00",
+  "overall_status": "success",
+  "registers": {
+    "%R340": 7,
+    "%R341": 3,
+    "%R342": 9,
+    "%R343": 45,
+    "%R344": 5000,
+    "%R345": 2,
+    "%M79": true,
+    "%M80": false
+  },
+  "checks": {
+    "cp56time2a_codec": {
+      "status": "passed",
+      "encoded_bytes_hex": "24772d8fc30a1a",
+      "decoded_iso": "2026-10-03T15:45:30.500000",
+      "byte_length": 7
+    },
+    "startdt_handshake": {
+      "status": "passed",
+      "startdt_active": true,
+      "frames_sent": 1
+    },
+    "general_interrogation": {
+      "status": "passed",
+      "frames_returned": 5,
+      "frame_types": [
+        "S",
+        "I",
+        "I",
+        "I",
+        "I"
+      ]
+    },
+    "sbo_select_operate": {
+      "status": "passed",
+      "single_cmd_status": 2,
+      "status_word_hex": "0x0007"
+    },
+    "spontaneous_event": {
+      "status": "passed",
+      "asdu_type_id": 30,
+      "cause_of_transmission": 3,
+      "ioa": 1001,
+      "value": true,
+      "timestamp": "2026-10-03T00:32:54.963000"
+    }
+  }
+}

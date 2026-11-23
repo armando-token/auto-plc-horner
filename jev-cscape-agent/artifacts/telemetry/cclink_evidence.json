@@ -1,0 +1,88 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CC-Link IE Field 1 Gbit/s Cyclic Token Ring Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W112",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "CC-Link IE Field Cyclic Token Ring Protocol Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed POU 'CCLinkIESync', verified bindings %R730..%R737 and %M170..%M171 with zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "Deterministic_Token_Passing_And_Rotation_Frame_Validation",
+        "passed": true,
+        "details": "Token ring rotated deterministically across 4 stations (4 frames, scan time 250 us)."
+      },
+      {
+        "stage": 3,
+        "check": "Cyclic_Process_Data_Transmission_And_Double_Buffering",
+        "passed": true,
+        "details": "Double-buffered RX/RY/RWw/RWr cyclic transfer verified with zero torn reads/writes."
+      },
+      {
+        "stage": 4,
+        "check": "Station_Configuration_And_48_Station_Active_Masks",
+        "passed": true,
+        "details": "Configured 6 nodes across 48-station space: Low=0x8001, Mid=0x8001, High=0x8001."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_Ring_Loopback_Fault_Recovery_Latency",
+        "passed": true,
+        "details": "Loopback engaged within 4.2 ms (< 10 ms) on cable break; token cycle maintained 4/4 stations."
+      },
+      {
+        "stage": 6,
+        "check": "Slave_Disconnection_Diagnostic_Event_Code_0x8901",
+        "passed": true,
+        "details": "3 missed cycles dropped station 4: code 0x8901, SLAVE_OFFLINE_ALARM active, %M171 tripped."
+      },
+      {
+        "stage": 7,
+        "check": "Duplicate_Station_Collision_Detection_Event_Code_0x8904",
+        "passed": true,
+        "details": "Duplicate station 2 registration intercepted with code 0x8904 and fail-closed lockout."
+      },
+      {
+        "stage": 8,
+        "check": "Cyclic_Scan_Jitter_Surveillance_Event_Code_0x8903",
+        "passed": true,
+        "details": "Scan time 270 us (+8.0% jitter) triggered CYCLIC_OVERRUN (0x8903) and cleared on recovery."
+      },
+      {
+        "stage": 9,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts, coils, and mnemonics strictly intercepted with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "metrics": {
+      "link_speed_bps": 1000000000,
+      "nominal_scan_time_us": 250,
+      "loopback_recovery_ms": 4.2,
+      "total_cyclic_frames": 35,
+      "configured_stations": 4
+    },
+    "register_map": {
+      "status_word": "%R730",
+      "configured_stations_count": "%R731",
+      "active_mask_low": "%R732",
+      "active_mask_mid": "%R733",
+      "active_mask_high": "%R734",
+      "link_scan_time_us": "%R735",
+      "total_cyclic_frames": "%R736",
+      "diagnostic_event_code": "%R737",
+      "normal_active_coil": "%M170",
+      "fault_trip_coil": "%M171"
+    },
+    "timestamp": "2026-10-04T01:19:20Z"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "PET polycondensation 9-stage engineering verification passed successfully.",
+  "data": {
+    "work_package": "W236",
+    "module": "jev_cscape.simulation.pet_polycondensation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "elapsed_ms": 40.13,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Reactor_Physics_And_Thermochemical_Constants",
+        "check": "Reactor_Physics_And_Thermochemical_Constants",
+        "passed": true,
+        "details": "Kinetics verified: k1(265C)=0.1410, k1(278C)=0.2128, k1(290C)=0.3058, Ea1 error=1.46e-10 J/mol, Delta_H1=+24 kJ/mol, nominal 278.0 \u00b0C, 1.0 mbar, IV 0.720."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "PetPolycondensationSync POU verified cleanly with STParser & SecurityGuard; bound %R1970..%R1977 and %M459..%M461."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=98.85% (> 98.5%), IV=0.720 dL/g (~0.720), production=2200.0 kg/h (~2200 kg/h)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: mass=0.00e+00 kg/s, elemental=0.00e+00 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Degradation_And_Vacuum_Loss_Injections",
+        "check": "Thermal_Degradation_And_Vacuum_Loss_Injections",
+        "passed": true,
+        "details": "0xF001 over-temp (> 298 \u00b0C) and 0xF002 vacuum loss (> 5.0 mbar) injections verified, %M461 purge open."
+      },
+      {
+        "stage": 7,
+        "name": "Acetaldehyde_Surge_And_Catalyst_Deactivation_Injections",
+        "check": "Acetaldehyde_Surge_And_Catalyst_Deactivation_Injections",
+        "passed": true,
+        "details": "0xF003 acetaldehyde (> 80 ppm) and 0xF004 deactivation (> 5.0%) injections verified, pre-alarm %M460 verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers %R1970..%R1977 and coils %M459..%M461 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed: bounded state (T=277.96\u00b0C, Conv=99.15%), 0 memory leak, deterministic scan cycles."
+      }
+    ]
+  }
+}

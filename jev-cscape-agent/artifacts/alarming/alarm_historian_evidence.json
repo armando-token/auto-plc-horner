@@ -1,0 +1,256 @@
+{
+  "event_audit_trail": [
+    {
+      "event_id": "EVT-000001",
+      "message": "Boiler Feed Pump Low Suction Pressure",
+      "severity": "CRITICAL",
+      "state_transition": "NORMAL -> UNACKNOWLEDGED",
+      "tag": "PAL_101",
+      "timestamp_utc": "2026-10-02T19:28:30.249193Z",
+      "value": true
+    },
+    {
+      "event_id": "EVT-000002",
+      "message": "Reactor High Temperature Trip",
+      "severity": "HIGH",
+      "state_transition": "NORMAL -> UNACKNOWLEDGED",
+      "tag": "TAH_201",
+      "timestamp_utc": "2026-10-02T19:28:30.249193Z",
+      "value": 125
+    },
+    {
+      "event_id": "EVT-000003",
+      "message": "Alarm PAL_101 acknowledged by OPERATOR_1: Inspecting suction strainer",
+      "severity": "CRITICAL",
+      "state_transition": "UNACKNOWLEDGED -> ACKNOWLEDGED",
+      "tag": "PAL_101",
+      "timestamp_utc": "2026-10-02T19:28:30.249193Z",
+      "value": true
+    },
+    {
+      "event_id": "EVT-000004",
+      "message": "Alarm PAL_101 returned to normal",
+      "severity": "CRITICAL",
+      "state_transition": "ACKNOWLEDGED -> NORMAL",
+      "tag": "PAL_101",
+      "timestamp_utc": "2026-10-02T19:28:30.249193Z",
+      "value": false
+    },
+    {
+      "event_id": "EVT-000005",
+      "message": "Alarm TAH_201 returned to normal",
+      "severity": "HIGH",
+      "state_transition": "UNACKNOWLEDGED -> RTN_UNACK",
+      "tag": "TAH_201",
+      "timestamp_utc": "2026-10-02T19:28:30.249193Z",
+      "value": 110
+    },
+    {
+      "event_id": "EVT-000006",
+      "message": "Cooling Water Low Flow Switch",
+      "severity": "LOW",
+      "state_transition": "NORMAL -> UNACKNOWLEDGED",
+      "tag": "FSL_401",
+      "timestamp_utc": "2026-10-02T19:28:30.249193Z",
+      "value": true
+    },
+    {
+      "event_id": "EVT-000007",
+      "message": "Alarm LAL_301 shelved: Sensor replacement scheduled",
+      "severity": "MEDIUM",
+      "state_transition": "NORMAL -> SHELVED",
+      "tag": "LAL_301",
+      "timestamp_utc": "2026-10-02T19:28:30.249193Z",
+      "value": null
+    }
+  ],
+  "isa_18_2_verification": {
+    "features_verified": [
+      "Horner OCS RegisterTable memory integration (%M, %I, %Q, %R, %R.x)",
+      "Microsecond ISO 8601 UTC event timestamping",
+      "Circular FIFO ring buffer with 5,000 capacity and overflow retention",
+      "On-delay debouncing (delay_ms)",
+      "Deadband hysteresis on analog thresholds (high and low alarms)",
+      "Multi-tier priority filtering (LOW, MEDIUM, HIGH, CRITICAL)",
+      "Unacknowledged and active alarm count summaries",
+      "Deterministic JSON serialization and file export"
+    ],
+    "severities_implemented": [
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "CRITICAL"
+    ],
+    "states_implemented": [
+      "NORMAL",
+      "UNACKNOWLEDGED",
+      "ACKNOWLEDGED",
+      "RTN_UNACK",
+      "SHELVED"
+    ],
+    "transitions_verified": [
+      "NORMAL -> UNACKNOWLEDGED (Trip)",
+      "UNACKNOWLEDGED -> ACKNOWLEDGED (Acknowledge)",
+      "ACKNOWLEDGED -> NORMAL (Clear)",
+      "UNACKNOWLEDGED -> RTN_UNACK (Clear before ack)",
+      "RTN_UNACK -> NORMAL (Acknowledge after clear)",
+      "RTN_UNACK -> UNACKNOWLEDGED (Re-trip before ack)",
+      "NORMAL / UNACK / ACK / RTN_UNACK -> SHELVED (Shelve)",
+      "SHELVED -> UNACKNOWLEDGED (Unshelve with active condition)",
+      "SHELVED -> NORMAL (Unshelve with normal condition)",
+      "SHELVED -> AUTO_EXPIRED (Auto-unshelving via duration_s)"
+    ]
+  },
+  "runtime_state": {
+    "FSL_401": {
+      "accumulated_delay_ms": 30.0,
+      "accumulated_off_delay_ms": 0.0,
+      "acknowledged_by": null,
+      "active_condition": true,
+      "current_value": true,
+      "definition": {
+        "bound_bit": "%I1",
+        "deadband": 0.0,
+        "delay_ms": 30.0,
+        "description": "Cooling Water Low Flow Switch",
+        "off_delay_ms": 0.0,
+        "severity": "LOW",
+        "tag": "FSL_401",
+        "trigger_high": true,
+        "trigger_level": 1.0
+      },
+      "last_ack_utc": null,
+      "last_clear_utc": null,
+      "last_shelve_utc": null,
+      "last_transition_utc": "2026-10-02T19:28:30.249193Z",
+      "last_trip_utc": "2026-10-02T19:28:30.249193Z",
+      "shelve_duration_s": null,
+      "shelve_expires_utc": null,
+      "shelve_previous_state": null,
+      "shelve_reason": null,
+      "state": "UNACKNOWLEDGED"
+    },
+    "LAL_301": {
+      "accumulated_delay_ms": 0.0,
+      "accumulated_off_delay_ms": 0.0,
+      "acknowledged_by": null,
+      "active_condition": false,
+      "current_value": null,
+      "definition": {
+        "bound_bit": "%R101",
+        "deadband": 2.0,
+        "delay_ms": 0.0,
+        "description": "Condensate Low Level",
+        "off_delay_ms": 0.0,
+        "severity": "MEDIUM",
+        "tag": "LAL_301",
+        "trigger_high": false,
+        "trigger_level": 15.0
+      },
+      "last_ack_utc": null,
+      "last_clear_utc": null,
+      "last_shelve_utc": "2026-10-02T19:28:30.249193Z",
+      "last_transition_utc": "2026-10-02T19:28:30.249193Z",
+      "last_trip_utc": null,
+      "shelve_duration_s": 1800.0,
+      "shelve_expires_utc": "2026-10-02T19:58:30.249193Z",
+      "shelve_previous_state": "NORMAL",
+      "shelve_reason": "Sensor replacement scheduled",
+      "state": "SHELVED"
+    },
+    "PAL_101": {
+      "accumulated_delay_ms": 0.0,
+      "accumulated_off_delay_ms": 0.0,
+      "acknowledged_by": "OPERATOR_1",
+      "active_condition": false,
+      "current_value": false,
+      "definition": {
+        "bound_bit": "%M1",
+        "deadband": 0.0,
+        "delay_ms": 0.0,
+        "description": "Boiler Feed Pump Low Suction Pressure",
+        "off_delay_ms": 0.0,
+        "severity": "CRITICAL",
+        "tag": "PAL_101",
+        "trigger_high": true,
+        "trigger_level": 1.0
+      },
+      "last_ack_utc": "2026-10-02T19:28:30.249193Z",
+      "last_clear_utc": "2026-10-02T19:28:30.249193Z",
+      "last_shelve_utc": null,
+      "last_transition_utc": "2026-10-02T19:28:30.249193Z",
+      "last_trip_utc": "2026-10-02T19:28:30.249193Z",
+      "shelve_duration_s": null,
+      "shelve_expires_utc": null,
+      "shelve_previous_state": null,
+      "shelve_reason": null,
+      "state": "NORMAL"
+    },
+    "TAH_201": {
+      "accumulated_delay_ms": 0.0,
+      "accumulated_off_delay_ms": 0.0,
+      "acknowledged_by": null,
+      "active_condition": false,
+      "current_value": 110,
+      "definition": {
+        "bound_bit": "%R100",
+        "deadband": 5.0,
+        "delay_ms": 0.0,
+        "description": "Reactor High Temperature Trip",
+        "off_delay_ms": 0.0,
+        "severity": "HIGH",
+        "tag": "TAH_201",
+        "trigger_high": true,
+        "trigger_level": 120.0
+      },
+      "last_ack_utc": null,
+      "last_clear_utc": "2026-10-02T19:28:30.249193Z",
+      "last_shelve_utc": null,
+      "last_transition_utc": "2026-10-02T19:28:30.249193Z",
+      "last_trip_utc": "2026-10-02T19:28:30.249193Z",
+      "shelve_duration_s": null,
+      "shelve_expires_utc": null,
+      "shelve_previous_state": null,
+      "shelve_reason": null,
+      "state": "RTN_UNACK"
+    }
+  },
+  "standard": "ANSI/ISA-18.2-2016",
+  "status": "success",
+  "summary_metrics": {
+    "acknowledged_count": 0,
+    "active_count": 3,
+    "buffer": {
+      "capacity": 5000,
+      "current_size": 7,
+      "overflow_count": 0,
+      "total_recorded": 7
+    },
+    "counts_by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "LOW": 1,
+      "MEDIUM": 1
+    },
+    "counts_by_state": {
+      "ACKNOWLEDGED": 0,
+      "NORMAL": 1,
+      "RTN_UNACK": 1,
+      "SHELVED": 1,
+      "UNACKNOWLEDGED": 1
+    },
+    "normal_count": 1,
+    "rtn_unack_count": 1,
+    "shelved_count": 1,
+    "total_registered": 4,
+    "unacknowledged_count": 2
+  },
+  "test_summary": {
+    "coverage_pct": 96,
+    "failed": 0,
+    "passed": 38,
+    "total_tests": 38
+  },
+  "timestamp_utc": "2026-10-02T19:28:30.251202Z",
+  "work_package": "W028"
+}

@@ -1,0 +1,114 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 stages passed deterministically for W267 Delaunay-Voronoi SCADA Canvas.",
+  "data": {
+    "work_package": "W267",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Delaunay-Voronoi Dual Mesh Triangulation SCADA Canvas",
+    "duration_ms": 117.57,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "registers": {
+      "%R2280": 185,
+      "%R2281": 11,
+      "%R2282": 32,
+      "%R2283": 54,
+      "%R2284": 420,
+      "%R2285": 985,
+      "%R2286": 1,
+      "%R2287": 0
+    },
+    "coils": {
+      "%M532": true,
+      "%M533": false
+    },
+    "artifacts": {
+      "evidence_path": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\delaunay_voronoi_canvas_evidence.json",
+      "sample_svg_path": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\delaunay_voronoi_canvas_sample.svg"
+    },
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Bowyer_Watson_Delaunay_Triangulation_And_Circumcircle_Invariants",
+        "check": "Bowyer_Watson_Delaunay_Triangulation_And_Circumcircle_Invariants",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 2.8000001329928637,
+        "details": "Generated 54 Delaunay triangle faces across 32 sensor nodes; 0 circumcircle violations verified (mean quality rho=0.802)."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 2.0334001164883375,
+        "details": "Validated pure ST POU DelaunayVoronoiCanvasSync with STParser; bound %R2280..%R2287 and %M532..%M533 verified."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.040800077840685844,
+        "details": "Rejected all 8/8 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Voronoi_Dual_Polygonal_Cell_Extraction_And_Area_Conservation",
+        "check": "Voronoi_Dual_Polygonal_Cell_Extraction_And_Area_Conservation",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 2.2108000703155994,
+        "details": "Extracted 32 Voronoi cells; Shoelace area sum=480000.00 px^2, domain=480000.00 px^2, residual=5.820766e-11 px^2."
+      },
+      {
+        "stage": 5,
+        "name": "WCAG_AAA_Color_Contrast_Compliance",
+        "check": "WCAG_AAA_Color_Contrast_Compliance",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.02759997732937336,
+        "details": "Decoupled badge contrast 20.01:1 (>= 18:1), secondary text 13.48:1 (>= 7:1), theme primary 18.92:1 (>= 7:1)."
+      },
+      {
+        "stage": 6,
+        "name": "Colinear_Degeneracy_And_Boundary_Fault_Injections",
+        "check": "Colinear_Degeneracy_And_Boundary_Fault_Injections",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 21.506099961698055,
+        "details": "Verified 0x7901 colinear degeneracy fault and 0x7902 boundary fault assertions on %M533 and recovery to 0x0000."
+      },
+      {
+        "stage": 7,
+        "name": "Interactive_Sensor_Field_Node_Selection_And_Gradient_Tracking",
+        "check": "Interactive_Sensor_Field_Node_Selection_And_Gradient_Tracking",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 4.735900089144707,
+        "details": "Selected sensor #14; verified directional gradient 18.9 \u00b0C/m, cell #11, barycentric partition of unity."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 6.621200125664473,
+        "details": "Synchronized registers %R2280..%R2287 and coils %M532..%M533; executed ILogicUnit discrete scan step cycle 1."
+      },
+      {
+        "stage": 9,
+        "name": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "check": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 77.54730014130473,
+        "details": "Exported high-res W3C SVG 1.1 canvas sample (34925 chars) with valid visual grounding nodes."
+      }
+    ]
+  }
+}

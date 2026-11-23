@@ -1,0 +1,45 @@
+{
+  "profile_version": "1.0.0",
+  "generated_at_utc": "2026-10-01T21:00:00Z",
+  "operating_system": {
+    "caption": "Microsoft Windows 11 Enterprise",
+    "version": "10.0.26200",
+    "build_number": "26200",
+    "architecture": "64-bit",
+    "kernel_type": "Windows_NT"
+  },
+  "hardware": {
+    "cpu_architecture": "AMD64",
+    "total_visible_memory_kb": 8336220,
+    "total_visible_memory_gb": 8.14,
+    "free_physical_memory_kb": 3487552,
+    "free_physical_memory_gb": 3.41,
+    "system_drive": {
+      "drive_letter": "C:",
+      "filesystem": "NTFS",
+      "total_bytes": 136845430784,
+      "used_bytes": 69738721280,
+      "free_bytes": 67106717696,
+      "total_gb": 127.45,
+      "free_gb": 62.5
+    }
+  },
+  "interactive_session": {
+    "user_name": "ArmandoSilva",
+    "user_domain": "AzureAD",
+    "window_station": "WinSta0",
+    "active_desktop": "Default",
+    "is_interactive": true,
+    "display": {
+      "resolution_width": 1280,
+      "resolution_height": 760,
+      "dpi": 96,
+      "scaling_percentage": 100.0
+    }
+  },
+  "security_audit": {
+    "secrets_included": false,
+    "credentials_included": false,
+    "tokens_included": false
+  }
+}

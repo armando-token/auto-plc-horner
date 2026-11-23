@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W309 Geohash Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W309",
+    "gate": "G9",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment_and_platform_check",
+        "passed": true,
+        "timing_ms": 0.006,
+        "details": "Python 3.12.10 on win32; jev_cscape simulation, parser, and W309 modules verified."
+      },
+      {
+        "stage": 2,
+        "name": "geohash_constants_and_register_mappings",
+        "passed": true,
+        "timing_ms": 0.007,
+        "details": "Horner OCS %R2700..%R2707, %M630..%M631, diagnostic codes 0x0000/0x8420, and Base32 verified."
+      },
+      {
+        "stage": 3,
+        "name": "pure_python_geohash_encoding_and_decoding_bijection",
+        "passed": true,
+        "timing_ms": 0.21,
+        "details": "Bijective round-trips verified across precisions 1..8; Base32 illegal char and domain bounds enforced."
+      },
+      {
+        "stage": 4,
+        "name": "geohash_8_neighbor_spatial_adjacency",
+        "passed": true,
+        "timing_ms": 1.221,
+        "details": "8-neighbor spatial adjacency, boundary coincidence (delta < 1e-7), and reciprocity verified."
+      },
+      {
+        "stage": 5,
+        "name": "spatial_proximity_hazard_and_collision_trip",
+        "passed": true,
+        "timing_ms": 1.336,
+        "details": "Spatial proximity collision trip, coil %M631 alarm latch, and nominal reset verified."
+      },
+      {
+        "stage": 6,
+        "name": "register_table_synchronization_and_signed_masks",
+        "passed": true,
+        "timing_ms": 1.114,
+        "details": "Horner OCS %R2700..%R2707 and %M630..%M631 synchronized; signed 16-bit masks and 0x8420 verified."
+      },
+      {
+        "stage": 7,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.428,
+        "details": "Pure ST POU 'GeohashCanvasSync' AST validated; ladder contacts, coils, rungs, and mnemonics strictly rejected."
+      },
+      {
+        "stage": 8,
+        "name": "svg_scada_canvas_rasterization_and_wcag_contrast",
+        "passed": true,
+        "timing_ms": 1.105,
+        "details": "W3C SVG 1.1 generated with valid XML layers; WCAG AAA contrast ratio verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 9,
+        "name": "multi_cycle_simulation_soak_and_evidence_emission",
+        "passed": true,
+        "timing_ms": 0.769,
+        "details": "Multi-cycle closed loop scan (5 cycles) and deterministic cryptographic evidence manifest generated."
+      }
+    ],
+    "svg_sample_path": "artifacts/HMI/geohash_canvas_sample.svg",
+    "svg_sha256": "05efcc60b3adba38b54bec6a763ee1344fe6e0720ef02620937234f29c1bb4b6",
+    "evidence_sha256": "afa681cfe2cdc367b0c8c8ca2fb867c3d67e79d0184a9bc96bd8f4fb8f3da112"
+  }
+}

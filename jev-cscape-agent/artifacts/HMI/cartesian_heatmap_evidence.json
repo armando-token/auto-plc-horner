@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Cartesian Heatmap Rasterizer verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W090",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Cartesian Heatmap & Thermal Dispersion Matrix Rasterizer",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R510..%R517 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Node_Mesh_Matrix_Geometry_16x8",
+        "passed": true,
+        "details": "128 nodes verified (16 cols x 8 rows, dx=0.2667m, dy=0.2857m)."
+      },
+      {
+        "stage": 3,
+        "check": "Bilinear_Spatial_Interpolation_Accuracy",
+        "passed": true,
+        "details": "Bilinear interpolation exact at node (305.04 \u00b0C) and cell centroid (326.66 \u00b0C vs 326.66 \u00b0C)."
+      },
+      {
+        "stage": 4,
+        "check": "Gradient_Vector_Field_And_Stress_Calculation",
+        "passed": true,
+        "details": "Central difference gradient field evaluated, peak gradient |nabla_T|_max = 366.88 \u00b0C/m."
+      },
+      {
+        "stage": 5,
+        "check": "Colormap_RGB_Interpolation_Pipelines",
+        "passed": true,
+        "details": "Turbo, Thermal Iron, and Viridis palettes interpolated smoothly across [0, 1] range."
+      },
+      {
+        "stage": 6,
+        "check": "Marching_Squares_Isothermal_Contours",
+        "passed": true,
+        "details": "Extracted 29 vector line segments across 3 isotherm thresholds."
+      },
+      {
+        "stage": 7,
+        "check": "WCAG_AAA_Decoupled_Backing_Badge_Contrast",
+        "passed": true,
+        "details": "Decoupled backing badge contrast ratio = 18.30:1 (exceeds WCAG AAA 7:1 threshold)."
+      },
+      {
+        "stage": 8,
+        "check": "Hotspot_Reticle_And_Thermal_Alarm_Interlock",
+        "passed": true,
+        "details": "Peak node (10, 4) @ 880.0 \u00b0C triggered HOT_SPOT_ALARM in %R510 (0x00E7) with reticle lock."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Registers_And_SVG_Vector_Canvas",
+        "passed": true,
+        "details": "Rendered W3C SVG 1.1 canvas (60469 bytes) and synchronized Horner registers %R510..%R517."
+      }
+    ],
+    "contrast_ratio_aaa": "18.30:1",
+    "register_map": {
+      "analog_registers": "%R510..%R517",
+      "discrete_coils": "%M119..%M120",
+      "values": {
+        "%R510": 231,
+        "%R511": 8800,
+        "%R512": 3050,
+        "%R513": 5522,
+        "%R514": 3669,
+        "%R515": 10,
+        "%R516": 4,
+        "%R517": 0,
+        "%M119": true,
+        "%M120": false
+      }
+    },
+    "timestamp": "2026-10-03T01:53:25Z"
+  }
+}

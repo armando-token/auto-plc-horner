@@ -1,0 +1,877 @@
+{
+  "gate": "G7",
+  "task": "GATE_G7_10_RUN_LADDER_CAMPAIGN",
+  "timestamp_start_utc": "2026-10-10T23:41:27.308814+00:00",
+  "timestamp_end_utc": "2026-10-10T23:49:49.156155+00:00",
+  "overall_status": "success",
+  "cscape_version": "10.2 (Build 10.2.751.4)",
+  "runs_planned": 10,
+  "runs_executed": 10,
+  "runs_passed": 10,
+  "runs_failed": 0,
+  "baseline_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "safety_invariants_verified": true,
+  "cfbf_readback_match_required": true,
+  "runs": [
+    {
+      "run_idx": 1,
+      "timestamp_utc": "2026-10-10T23:41:27.317548+00:00",
+      "status": "success",
+      "contact_cmd": 1000,
+      "contact_type": "CONTACT_NO",
+      "contact_tag": "ALW_ON",
+      "coil_cmd": 1002,
+      "coil_type": "COIL_NO",
+      "coil_tag": "G3_TEST_VAR_01",
+      "readback_contact_type": "CONTACT_NO",
+      "readback_contact_tag": "ALW_ON",
+      "readback_coil_type": "COIL_NO",
+      "readback_coil_tag": "G3_TEST_VAR_01",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_01.csp",
+      "initial_sha256": "e3a04acf5bbd73da5115671c714379779adce32fd6a58da723e2ab7dbd1fd915",
+      "saved_sha256": "22a2aa3f507045320d4d354d62e0633d91aaf413b50a0ace8c7b7985cbd4abd1",
+      "reopened_sha256": "22a2aa3f507045320d4d354d62e0633d91aaf413b50a0ace8c7b7985cbd4abd1",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_01_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_01.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "ALW_ON",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\b@ALW_ON@",
+            "header_hex": "000100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "020900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "ALW_ON",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\b@ALW_ON@",
+            "header_hex": "000100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "020900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 2,
+      "timestamp_utc": "2026-10-10T23:42:18.151701+00:00",
+      "status": "success",
+      "contact_cmd": 1001,
+      "contact_type": "CONTACT_NC",
+      "contact_tag": "ALW_OFF",
+      "coil_cmd": 1002,
+      "coil_type": "COIL_NO",
+      "coil_tag": "G3_TEST_VAR_02",
+      "readback_contact_type": "CONTACT_NC",
+      "readback_contact_tag": "ALW_OFF",
+      "readback_coil_type": "COIL_NO",
+      "readback_coil_tag": "G3_TEST_VAR_02",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_02.csp",
+      "initial_sha256": "0228433079dc2c6cc9886761ef3b8307275a1716977dda46e656d718a0f5fea8",
+      "saved_sha256": "33c92277ab448812ad527fc61073b6d2e1bce6fcd6c0718dd72f0c28ef90ac71",
+      "reopened_sha256": "33c92277ab448812ad527fc61073b6d2e1bce6fcd6c0718dd72f0c28ef90ac71",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_02_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_02.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "ALW_OFF",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\t@ALW_OFF@",
+            "header_hex": "010100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_02",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_02@",
+            "header_hex": "020900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "ALW_OFF",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\t@ALW_OFF@",
+            "header_hex": "010100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_02",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_02@",
+            "header_hex": "020900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 3,
+      "timestamp_utc": "2026-10-10T23:43:08.563877+00:00",
+      "status": "success",
+      "contact_cmd": 1000,
+      "contact_type": "CONTACT_NO",
+      "contact_tag": "FST_SCN",
+      "coil_cmd": 37690,
+      "coil_type": "COIL_SET",
+      "coil_tag": "G3_TEST_VAR_03",
+      "readback_contact_type": "CONTACT_NO",
+      "readback_contact_tag": "FST_SCN",
+      "readback_coil_type": "COIL_SET",
+      "readback_coil_tag": "G3_TEST_VAR_03",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_03.csp",
+      "initial_sha256": "76fd039c5ebd95a79061a25489511812a32a7d1a94217d17fbfb2104219a1348",
+      "saved_sha256": "79a1ea5a918ed1188ed12bb7e28227071e280f0cde328c84c9d10a2febe2ba79",
+      "reopened_sha256": "79a1ea5a918ed1188ed12bb7e28227071e280f0cde328c84c9d10a2febe2ba79",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_03_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_03.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "FST_SCN",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\t@FST_SCN@",
+            "header_hex": "000100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_03",
+            "row": 0,
+            "col": 9,
+            "opcode": 12,
+            "opcode_hex": "0x0c",
+            "type": "COIL_SET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_03@",
+            "header_hex": "0c0900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "FST_SCN",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\t@FST_SCN@",
+            "header_hex": "000100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_03",
+            "row": 0,
+            "col": 9,
+            "opcode": 12,
+            "opcode_hex": "0x0c",
+            "type": "COIL_SET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_03@",
+            "header_hex": "0c0900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 4,
+      "timestamp_utc": "2026-10-10T23:43:58.531838+00:00",
+      "status": "success",
+      "contact_cmd": 1001,
+      "contact_type": "CONTACT_NC",
+      "contact_tag": "SYS_DISABLE",
+      "coil_cmd": 37691,
+      "coil_type": "COIL_RESET",
+      "coil_tag": "G3_TEST_VAR_01",
+      "readback_contact_type": "CONTACT_NC",
+      "readback_contact_tag": "SYS_DISABLE",
+      "readback_coil_type": "COIL_RESET",
+      "readback_coil_tag": "G3_TEST_VAR_01",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_04.csp",
+      "initial_sha256": "0d02926f01b9ed69b4c9ec3087d4a3cf6f9b540437ab02f13a84f0d21decebb3",
+      "saved_sha256": "7c332582fab57202790ddab189ed86957aec9fd044f4d1bf5a2e5dbe2aa5d62f",
+      "reopened_sha256": "7c332582fab57202790ddab189ed86957aec9fd044f4d1bf5a2e5dbe2aa5d62f",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_04_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_04.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "SYS_DISABLE",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\r@SYS_DISABLE@",
+            "header_hex": "010100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 13,
+            "opcode_hex": "0x0d",
+            "type": "COIL_RESET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "0d0900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "SYS_DISABLE",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\r@SYS_DISABLE@",
+            "header_hex": "010100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 13,
+            "opcode_hex": "0x0d",
+            "type": "COIL_RESET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "0d0900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 5,
+      "timestamp_utc": "2026-10-10T23:44:47.977545+00:00",
+      "status": "success",
+      "contact_cmd": 1000,
+      "contact_type": "CONTACT_NO",
+      "contact_tag": "T_100MS",
+      "coil_cmd": 37687,
+      "coil_type": "COIL_NC",
+      "coil_tag": "G3_TEST_VAR_02",
+      "readback_contact_type": "CONTACT_NO",
+      "readback_contact_tag": "T_100MS",
+      "readback_coil_type": "COIL_NC",
+      "readback_coil_tag": "G3_TEST_VAR_02",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_05.csp",
+      "initial_sha256": "c7572cc694d94fcda1e03a91b2bf799df2f898395c26c7564f0ec72b48161c27",
+      "saved_sha256": "2da006cdcf463685bbfad955bc4f027da5c27178b4f9e3f3a21c93bcdf20e82a",
+      "reopened_sha256": "2da006cdcf463685bbfad955bc4f027da5c27178b4f9e3f3a21c93bcdf20e82a",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_05_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_05.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "T_100MS",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\t@T_100MS@",
+            "header_hex": "000100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_02",
+            "row": 0,
+            "col": 9,
+            "opcode": 9,
+            "opcode_hex": "0x09",
+            "type": "COIL_NC",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_02@",
+            "header_hex": "090900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "T_100MS",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\t@T_100MS@",
+            "header_hex": "000100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_02",
+            "row": 0,
+            "col": 9,
+            "opcode": 9,
+            "opcode_hex": "0x09",
+            "type": "COIL_NC",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_02@",
+            "header_hex": "090900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 6,
+      "timestamp_utc": "2026-10-10T23:45:37.571943+00:00",
+      "status": "success",
+      "contact_cmd": 1001,
+      "contact_type": "CONTACT_NC",
+      "contact_tag": "SYS_ACK",
+      "coil_cmd": 1002,
+      "coil_type": "COIL_NO",
+      "coil_tag": "G3_TEST_VAR_03",
+      "readback_contact_type": "CONTACT_NC",
+      "readback_contact_tag": "SYS_ACK",
+      "readback_coil_type": "COIL_NO",
+      "readback_coil_tag": "G3_TEST_VAR_03",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_06.csp",
+      "initial_sha256": "5309f9ceaabe3432b9c65aaacb5a7863e4a34975bd2411566aa61f7f31355cbf",
+      "saved_sha256": "e9287866302f9fd5c2347c36cd7f7df6c958afcf6415965df6b79a8f69e7e42a",
+      "reopened_sha256": "e9287866302f9fd5c2347c36cd7f7df6c958afcf6415965df6b79a8f69e7e42a",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_06_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_06.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "SYS_ACK",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\t@SYS_ACK@",
+            "header_hex": "010100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_03",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_03@",
+            "header_hex": "020900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "SYS_ACK",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\t@SYS_ACK@",
+            "header_hex": "010100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_03",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_03@",
+            "header_hex": "020900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 7,
+      "timestamp_utc": "2026-10-10T23:46:27.733876+00:00",
+      "status": "success",
+      "contact_cmd": 1000,
+      "contact_type": "CONTACT_NO",
+      "contact_tag": "T_10MS",
+      "coil_cmd": 37690,
+      "coil_type": "COIL_SET",
+      "coil_tag": "G3_TEST_VAR_01",
+      "readback_contact_type": "CONTACT_NO",
+      "readback_contact_tag": "T_10MS",
+      "readback_coil_type": "COIL_SET",
+      "readback_coil_tag": "G3_TEST_VAR_01",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_07.csp",
+      "initial_sha256": "8d04e0f43757986ab370e7bb8959173fac8ff4488457e80065942fa46ab485a1",
+      "saved_sha256": "e33d8f5bbdfe226721fdfb53c72b302975be03fb32eb41e92977a14b66275cc1",
+      "reopened_sha256": "e33d8f5bbdfe226721fdfb53c72b302975be03fb32eb41e92977a14b66275cc1",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_07_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_07.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "T_10MS",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\b@T_10MS@",
+            "header_hex": "000100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 12,
+            "opcode_hex": "0x0c",
+            "type": "COIL_SET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "0c0900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "T_10MS",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\b@T_10MS@",
+            "header_hex": "000100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 12,
+            "opcode_hex": "0x0c",
+            "type": "COIL_SET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "0c0900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 8,
+      "timestamp_utc": "2026-10-10T23:47:18.395778+00:00",
+      "status": "success",
+      "contact_cmd": 1001,
+      "contact_type": "CONTACT_NC",
+      "contact_tag": "T_SEC",
+      "coil_cmd": 37691,
+      "coil_type": "COIL_RESET",
+      "coil_tag": "G3_TEST_VAR_02",
+      "readback_contact_type": "CONTACT_NC",
+      "readback_contact_tag": "T_SEC",
+      "readback_coil_type": "COIL_RESET",
+      "readback_coil_tag": "G3_TEST_VAR_02",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_08.csp",
+      "initial_sha256": "39bf2586f6e7c5d5b9dc51a3e40a1c32d37b69034907ae092ab735ceb6e4a178",
+      "saved_sha256": "bec7f675fa86931a54a9b1800866570710359ff3fea55a101f79c3004bcf3eb0",
+      "reopened_sha256": "bec7f675fa86931a54a9b1800866570710359ff3fea55a101f79c3004bcf3eb0",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_08_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_08.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "T_SEC",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\u0007@T_SEC@",
+            "header_hex": "010100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_02",
+            "row": 0,
+            "col": 9,
+            "opcode": 13,
+            "opcode_hex": "0x0d",
+            "type": "COIL_RESET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_02@",
+            "header_hex": "0d0900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "T_SEC",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\u0007@T_SEC@",
+            "header_hex": "010100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_02",
+            "row": 0,
+            "col": 9,
+            "opcode": 13,
+            "opcode_hex": "0x0d",
+            "type": "COIL_RESET",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_02@",
+            "header_hex": "0d0900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 9,
+      "timestamp_utc": "2026-10-10T23:48:08.764682+00:00",
+      "status": "success",
+      "contact_cmd": 1000,
+      "contact_type": "CONTACT_NO",
+      "contact_tag": "ALW_ON",
+      "coil_cmd": 37687,
+      "coil_type": "COIL_NC",
+      "coil_tag": "G3_TEST_VAR_03",
+      "readback_contact_type": "CONTACT_NO",
+      "readback_contact_tag": "ALW_ON",
+      "readback_coil_type": "COIL_NC",
+      "readback_coil_tag": "G3_TEST_VAR_03",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_09.csp",
+      "initial_sha256": "59c6590d41f399e3c48a2dc55d178ba8cf1943f40f12358c2598427e40aa1f78",
+      "saved_sha256": "25787a82c1febc24e5405e59256122fd8ab59b6a67a1ab938faef4eeeeea9993",
+      "reopened_sha256": "25787a82c1febc24e5405e59256122fd8ab59b6a67a1ab938faef4eeeeea9993",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_09_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_09.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "ALW_ON",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\b@ALW_ON@",
+            "header_hex": "000100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_03",
+            "row": 0,
+            "col": 9,
+            "opcode": 9,
+            "opcode_hex": "0x09",
+            "type": "COIL_NC",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_03@",
+            "header_hex": "090900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "ALW_ON",
+            "row": 0,
+            "col": 1,
+            "opcode": 0,
+            "opcode_hex": "0x00",
+            "type": "CONTACT_NO",
+            "category": "CONTACT",
+            "raw_tag": "!\b@ALW_ON@",
+            "header_hex": "000100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_03",
+            "row": 0,
+            "col": 9,
+            "opcode": 9,
+            "opcode_hex": "0x09",
+            "type": "COIL_NC",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_03@",
+            "header_hex": "090900000000000000"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "run_idx": 10,
+      "timestamp_utc": "2026-10-10T23:48:59.200898+00:00",
+      "status": "success",
+      "contact_cmd": 1001,
+      "contact_type": "CONTACT_NC",
+      "contact_tag": "ALW_OFF",
+      "coil_cmd": 1002,
+      "coil_type": "COIL_NO",
+      "coil_tag": "G3_TEST_VAR_01",
+      "readback_contact_type": "CONTACT_NC",
+      "readback_contact_tag": "ALW_OFF",
+      "readback_coil_type": "COIL_NO",
+      "readback_coil_tag": "G3_TEST_VAR_01",
+      "plan_match": true,
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_10.csp",
+      "initial_sha256": "0eeb6ada7764747eb4d73dc9994e3c92c23608f53dc276356254ad9b9fb788ef",
+      "saved_sha256": "1317e1508fabefc244466cc098a343464b3e55489bf350ba9c8faadce1c5a724",
+      "reopened_sha256": "1317e1508fabefc244466cc098a343464b3e55489bf350ba9c8faadce1c5a724",
+      "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\campaign_runs\\run_10_reopen.png",
+      "cfbf_delta": {
+        "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+        "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\campaign_run_g7_10.csp",
+        "base_element_count": 0,
+        "roundtrip_element_count": 2,
+        "delta_element_count": 2,
+        "base_network_count": 2,
+        "roundtrip_network_count": 2,
+        "delta_network_count": 0,
+        "delta_contact_records": [
+          {
+            "index": 0,
+            "tag": "ALW_OFF",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\t@ALW_OFF@",
+            "header_hex": "010100000000000000"
+          }
+        ],
+        "delta_coil_records": [
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "020900000000000000"
+          }
+        ],
+        "elements_existing_only_in_roundtrip": [
+          {
+            "index": 0,
+            "tag": "ALW_OFF",
+            "row": 0,
+            "col": 1,
+            "opcode": 1,
+            "opcode_hex": "0x01",
+            "type": "CONTACT_NC",
+            "category": "CONTACT",
+            "raw_tag": "!\t@ALW_OFF@",
+            "header_hex": "010100000000000000"
+          },
+          {
+            "index": 1,
+            "tag": "G3_TEST_VAR_01",
+            "row": 0,
+            "col": 9,
+            "opcode": 2,
+            "opcode_hex": "0x02",
+            "type": "COIL_NO",
+            "category": "COIL",
+            "raw_tag": "!\u0010@G3_TEST_VAR_01@",
+            "header_hex": "020900000000000000"
+          }
+        ]
+      },
+      "error": null
+    }
+  ]
+}

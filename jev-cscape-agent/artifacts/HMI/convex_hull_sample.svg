@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    <filter id="glow-alarm" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- SCADA Dark Theme Backdrop -->
+  <rect width="1200" height="750" fill="#0F172A" />
+
+  <!-- Coordinate Grid Mesh -->
+  <g id="grid-mesh" stroke="#1E293B" stroke-width="1.0" stroke-dasharray="4,4">
+    <line x1="100" y1="80" x2="100" y2="690" />
+    <line x1="200" y1="80" x2="200" y2="690" />
+    <line x1="300" y1="80" x2="300" y2="690" />
+    <line x1="400" y1="80" x2="400" y2="690" />
+    <line x1="500" y1="80" x2="500" y2="690" />
+    <line x1="600" y1="80" x2="600" y2="690" />
+    <line x1="700" y1="80" x2="700" y2="690" />
+    <line x1="800" y1="80" x2="800" y2="690" />
+    <line x1="900" y1="80" x2="900" y2="690" />
+    <line x1="1000" y1="80" x2="1000" y2="690" />
+    <line x1="1100" y1="80" x2="1100" y2="690" />
+    <line x1="60" y1="120" x2="1140" y2="120" />
+    <line x1="60" y1="200" x2="1140" y2="200" />
+    <line x1="60" y1="280" x2="1140" y2="280" />
+    <line x1="60" y1="360" x2="1140" y2="360" />
+    <line x1="60" y1="440" x2="1140" y2="440" />
+    <line x1="60" y1="520" x2="1140" y2="520" />
+    <line x1="60" y1="600" x2="1140" y2="600" />
+    <line x1="60" y1="680" x2="1140" y2="680" />
+  </g>
+
+  <!-- Header HUD Status Bar -->
+  <g id="header-hud">
+    <rect x="50" y="20" width="1100" height="50" rx="6" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1.0" />
+    <text x="75" y="52" font-family="Segoe UI, monospace" font-size="16" font-weight="700" fill="#FFFFFF">CSCAPE HMI: CONVEX HULL MULTI-CLUSTER SPATIAL ENCLOSURE</text>
+    <text x="750" y="52" font-family="Segoe UI, monospace" font-size="12" fill="#94A3B8">Points: <tspan fill="#FFFFFF" font-weight="700">25</tspan> | Clusters: <tspan fill="#FFFFFF" font-weight="700">3</tspan> | Outliers: <tspan fill="#EF4444" font-weight="700">1</tspan></text>
+  </g>
+
+  <!-- Cluster Enclosure Polygons and Scatter Points -->
+  <!-- Zone 1: Zone 1: Feed & Conditioning -->
+  <g id="cluster-zone-1">
+    <!-- Padded Boundary: Zone 1 -->
+    <polygon points="162.3,213.7 231.5,158.3 1027.7,1026.8 180.5,298.5" fill="#3B82F6" fill-opacity="0.08" stroke="#3B82F6" stroke-width="1.2" stroke-dasharray="6,4" stroke-opacity="0.4" />
+    <!-- Enclosure Boundary: Zone 1 -->
+    <polygon points="180.0,220.0 230.0,180.0 999.0,999.0 195.0,290.0" fill="#3B82F6" fill-opacity="0.22" stroke="#3B82F6" stroke-width="2.5" filter="url(#drop-shadow)" />
+    <!-- Centroid: Zone 1 -->
+    <circle cx="313.2" cy="326.6" r="7" fill="#3B82F6" fill-opacity="0.3" stroke="#3B82F6" stroke-width="1.8" />
+    <line x1="309.2" y1="326.6" x2="317.2" y2="326.6" stroke="#3B82F6" stroke-width="1.5" />
+    <line x1="313.2" y1="322.6" x2="313.2" y2="330.6" stroke="#3B82F6" stroke-width="1.5" />
+    <circle cx="180.0" cy="220.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="210.0" cy="260.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="250.0" cy="210.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="230.0" cy="180.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="270.0" cy="250.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="195.0" cy="290.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="260.0" cy="290.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="225.0" cy="240.0" r="4.5" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="999.0" cy="999.0" r="6.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow-alarm)" />
+    <circle cx="999.0" cy="999.0" r="11" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="2,2" />
+    <!-- Zone Summary Badge: Zone 1 -->
+    <rect x="248.2" y="278.6" width="130" height="26" rx="4" fill="#0B0F19" fill-opacity="0.94" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="313.2" y="295.6" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">Z1: R_rms=342.4px</text>
+  </g>
+
+  <!-- Zone 2: Zone 2: Reaction & Synthesis -->
+  <g id="cluster-zone-2">
+    <!-- Padded Boundary: Zone 2 -->
+    <polygon points="561.7,352.9 644.4,297.8 673.9,342.0 696.8,387.8 683.1,456.0 587.5,456.0" fill="#10B981" fill-opacity="0.08" stroke="#10B981" stroke-width="1.2" stroke-dasharray="6,4" stroke-opacity="0.4" />
+    <!-- Enclosure Boundary: Zone 2 -->
+    <polygon points="580.0,360.0 640.0,320.0 660.0,350.0 680.0,390.0 670.0,440.0 600.0,440.0" fill="#10B981" fill-opacity="0.22" stroke="#10B981" stroke-width="2.5" filter="url(#drop-shadow)" />
+    <!-- Centroid: Zone 2 -->
+    <circle cx="635.6" cy="386.2" r="7" fill="#10B981" fill-opacity="0.3" stroke="#10B981" stroke-width="1.8" />
+    <line x1="631.6" y1="386.2" x2="639.6" y2="386.2" stroke="#10B981" stroke-width="1.5" />
+    <line x1="635.6" y1="382.2" x2="635.6" y2="390.2" stroke="#10B981" stroke-width="1.5" />
+    <circle cx="580.0" cy="360.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="620.0" cy="410.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="660.0" cy="350.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="640.0" cy="320.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="680.0" cy="390.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="600.0" cy="440.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="670.0" cy="440.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="635.0" cy="380.0" r="4.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2" />
+    <!-- Zone Summary Badge: Zone 2 -->
+    <rect x="570.6" y="338.2" width="130" height="26" rx="4" fill="#0B0F19" fill-opacity="0.94" stroke="#10B981" stroke-width="1.2" />
+    <text x="635.6" y="355.2" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">Z2: R_rms=51.4px</text>
+  </g>
+
+  <!-- Zone 3: Zone 3: Separation & Polishing -->
+  <g id="cluster-zone-3">
+    <!-- Padded Boundary: Zone 3 -->
+    <polygon points="941.7,232.9 1024.4,177.8 1053.9,222.0 1076.8,267.8 1063.1,336.0 967.5,336.0" fill="#F59E0B" fill-opacity="0.08" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="6,4" stroke-opacity="0.4" />
+    <!-- Enclosure Boundary: Zone 3 -->
+    <polygon points="960.0,240.0 1020.0,200.0 1040.0,230.0 1060.0,270.0 1050.0,320.0 980.0,320.0" fill="#F59E0B" fill-opacity="0.22" stroke="#F59E0B" stroke-width="2.5" filter="url(#drop-shadow)" />
+    <!-- Centroid: Zone 3 -->
+    <circle cx="1015.6" cy="266.2" r="7" fill="#F59E0B" fill-opacity="0.3" stroke="#F59E0B" stroke-width="1.8" />
+    <line x1="1011.6" y1="266.2" x2="1019.6" y2="266.2" stroke="#F59E0B" stroke-width="1.5" />
+    <line x1="1015.6" y1="262.2" x2="1015.6" y2="270.2" stroke="#F59E0B" stroke-width="1.5" />
+    <circle cx="960.0" cy="240.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="1000.0" cy="290.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="1040.0" cy="230.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="1020.0" cy="200.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="1060.0" cy="270.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="980.0" cy="320.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="1050.0" cy="320.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="1015.0" cy="260.0" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.2" />
+    <!-- Zone Summary Badge: Zone 3 -->
+    <rect x="950.6" y="218.2" width="130" height="26" rx="4" fill="#0B0F19" fill-opacity="0.94" stroke="#F59E0B" stroke-width="1.2" />
+    <text x="1015.6" y="235.2" font-family="Segoe UI, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">Z3: R_rms=51.4px</text>
+  </g>
+
+  <!-- Footer Telemetry Status Banner -->
+  <g id="footer-status">
+    <rect x="50" y="700" width="1100" height="35" rx="5" fill="#0B0F19" stroke="#EF4444" stroke-width="1.5" />
+    <text x="600.0" y="722" font-family="Segoe UI, monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#EF4444">CRITICAL: 1 PROCESS OUTLIER(S) DETECTED - CHECK SYSTEM COILS %M379 / %M148</text>
+  </g>
+</svg>

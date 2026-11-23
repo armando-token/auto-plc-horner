@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Modbus Gateway Protocol Engine (W223) passed all 9 stages in 31.12 ms.",
+  "data": {
+    "work_package": "W223",
+    "gate": "G8/G4",
+    "stages": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Validation",
+        "passed": true,
+        "details": "POU 'CipModbusSync' verified clean; 10 registers bound; anti-ladder verified."
+      },
+      {
+        "stage": 2,
+        "check": "Protocol_Constants_And_Enum_Integrity",
+        "passed": true,
+        "details": "Class 0x44, Modbus FCs (01..16), CIP Services (0E, 10), and diagnostic codes verified."
+      },
+      {
+        "stage": 3,
+        "check": "Endianness_Conversions_And_Word_Swapping",
+        "passed": true,
+        "details": "16-bit byte swaps, 32-bit dword swaps, and IEEE-754 floats validated across Big/Little endian."
+      },
+      {
+        "stage": 4,
+        "check": "Crc16_And_Lrc_Checksum_Validation",
+        "passed": true,
+        "details": "CRC-16=0xCDC5 and LRC=0xF2 deterministically verified; corruptions rejected."
+      },
+      {
+        "stage": 5,
+        "check": "Function_Code_To_CIP_Service_Translation",
+        "passed": true,
+        "details": "FC 01, 02, 03, 04, 05, 06, 16 mapped to CIP Get/Set Attribute Single and List."
+      },
+      {
+        "stage": 6,
+        "check": "Request_Response_FIFO_Queuing_And_Flow",
+        "passed": true,
+        "details": "FIFO depth tracked (2); 2 transactions successfully enqueued and processed."
+      },
+      {
+        "stage": 7,
+        "check": "Timeout_Surveillance_And_Exception_Handling",
+        "passed": true,
+        "details": "Timeout (0xEF03, %M430), Illegal FC (0xEF01), Illegal Address (0xEF02), CRC fault (0xEF04) verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Channel_Synchronization",
+        "passed": true,
+        "details": "Registers %R1840..%R1847 & %M429..%M430 verified with signed mask (0xEF03)."
+      },
+      {
+        "stage": 9,
+        "check": "ILogicUnit_100Cycle_Simulation_And_Reset",
+        "passed": true,
+        "details": "100 scan cycles executed cleanly (1.00 s); reset restored operational state."
+      }
+    ],
+    "stages_passed": 9,
+    "total_stages": 9,
+    "elapsed_ms": 31.12
+  }
+}

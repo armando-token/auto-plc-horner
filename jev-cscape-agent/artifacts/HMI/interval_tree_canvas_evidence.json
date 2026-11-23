@@ -1,0 +1,148 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W300 Interval Tree Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W300",
+    "gate": "G9",
+    "quick_mode": false,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "passed": true,
+        "timing_ms": 0.289,
+        "details": "Spatial Interval Tree canvas initialized over [1200.0x750.0] domain."
+      },
+      {
+        "stage": 2,
+        "name": "interval_structures",
+        "passed": true,
+        "timing_ms": 0.057,
+        "details": "Augmented AVL IntervalTree verified with root max_high=80.0."
+      },
+      {
+        "stage": 3,
+        "name": "range_queries",
+        "passed": true,
+        "timing_ms": 0.021,
+        "details": "Range overlap query matched [1, 2, 3]; point containment at 35.0 verified."
+      },
+      {
+        "stage": 4,
+        "name": "spatial_2d_projection",
+        "passed": true,
+        "timing_ms": 0.099,
+        "details": "Dual orthogonal 2D decomposition and pairwise collision detection verified."
+      },
+      {
+        "stage": 5,
+        "name": "svg_rendering_and_wcag",
+        "passed": true,
+        "timing_ms": 6.101,
+        "details": "W3C SVG 1.1 vector graphic rendered with valid XML; WCAG AAA contrast=20.07:1 >= 18:1."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "passed": true,
+        "timing_ms": 0.228,
+        "details": "Horner OCS register space %R2610..%R2617 and %M609..%M610 verified bit-exact."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "passed": true,
+        "timing_ms": 2.517,
+        "details": "IntervalTreeCanvasSync pure ST AST validated; ladder logic constructs rejected."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "passed": true,
+        "timing_ms": 3.727,
+        "details": "Deterministic scan cycle simulation completed 20 cycles without drift."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "passed": true,
+        "timing_ms": 0.004,
+        "details": "Deterministic evidence manifest generated with cryptographic SHA-256 integrity."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "passed": true,
+        "timing_ms": 0.289,
+        "details": "Spatial Interval Tree canvas initialized over [1200.0x750.0] domain."
+      },
+      {
+        "stage": 2,
+        "name": "interval_structures",
+        "passed": true,
+        "timing_ms": 0.057,
+        "details": "Augmented AVL IntervalTree verified with root max_high=80.0."
+      },
+      {
+        "stage": 3,
+        "name": "range_queries",
+        "passed": true,
+        "timing_ms": 0.021,
+        "details": "Range overlap query matched [1, 2, 3]; point containment at 35.0 verified."
+      },
+      {
+        "stage": 4,
+        "name": "spatial_2d_projection",
+        "passed": true,
+        "timing_ms": 0.099,
+        "details": "Dual orthogonal 2D decomposition and pairwise collision detection verified."
+      },
+      {
+        "stage": 5,
+        "name": "svg_rendering_and_wcag",
+        "passed": true,
+        "timing_ms": 6.101,
+        "details": "W3C SVG 1.1 vector graphic rendered with valid XML; WCAG AAA contrast=20.07:1 >= 18:1."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "passed": true,
+        "timing_ms": 0.228,
+        "details": "Horner OCS register space %R2610..%R2617 and %M609..%M610 verified bit-exact."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "passed": true,
+        "timing_ms": 2.517,
+        "details": "IntervalTreeCanvasSync pure ST AST validated; ladder logic constructs rejected."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "passed": true,
+        "timing_ms": 3.727,
+        "details": "Deterministic scan cycle simulation completed 20 cycles without drift."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "passed": true,
+        "timing_ms": 0.004,
+        "details": "Deterministic evidence manifest generated with cryptographic SHA-256 integrity."
+      }
+    ],
+    "artifacts": {
+      "evidence_path": "artifacts\\HMI\\interval_tree_canvas_evidence.json",
+      "svg_path": "artifacts\\HMI\\interval_tree_canvas_sample.svg",
+      "svg_sha256": "5b6d38cfdd7a55bfc50479e298f2ac5d77970a017ae9ea027082d0464b9232c9",
+      "evidence_sha256": "74f4d7747471e06f6996840a753c57829537695c5201c772fc558fc21260f7cc"
+    }
+  }
+}

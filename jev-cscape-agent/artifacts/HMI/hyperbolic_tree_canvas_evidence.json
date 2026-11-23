@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W213",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Hyperbolic Tree / Poincar\u00e9 Disk SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'HyperbolicTreeCanvasSync' POU with SecurityGuard & STParser across Horner registers %R1740..%R1747 and %M406..%M407."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Complex_Poincare_Disk_Coordinate_Space_And_Boundary",
+        "passed": true,
+        "details": "Verified ComplexPoint arithmetic, strict unit disk boundary containment (|z| < 1.0), and radius clamping."
+      },
+      {
+        "stage": 4,
+        "check": "Mobius_Transformations_Inversion_And_Singularity_Guards",
+        "passed": true,
+        "details": "Verified disk automorphism T_a(a)=0, identity T_0(z)=z, inverse reconstruction, and singularity guards."
+      },
+      {
+        "stage": 5,
+        "check": "Hyperbolic_Distance_Metric_Invariants",
+        "passed": true,
+        "details": "Verified d(u,v) metric properties: d(u,u)=0, symmetry, triangle inequality, and 2*artanh formula."
+      },
+      {
+        "stage": 6,
+        "check": "Geodesic_Arc_Circle_Geometry_And_Orthogonality",
+        "passed": true,
+        "details": "Verified geodesic circle center/radius math, boundary circle orthogonality (|c|^2 - R^2 = 1), and diameter lines."
+      },
+      {
+        "stage": 7,
+        "check": "Hierarchical_Tree_Traversal_Layout_And_Health",
+        "passed": true,
+        "details": "Verified 29 refinery nodes across 4 tiers, acyclic graph, wedge layout, and bottom-up health propagation."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_AAA_Contrast_And_W3C_SVG_XML_Parsing",
+        "passed": true,
+        "details": "Verified decoupled badge contrast (> 18:1), text contrast (> 7:1), and valid XML SVG -> artifacts\\HMI\\hyperbolic_tree_canvas_sample.svg."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_Scan_Cycle",
+        "passed": true,
+        "details": "Verified %R1740..%R1747 and %M406..%M407 with PrivilegeMode.SYSTEM and ILogicUnit scan cycle."
+      }
+    ]
+  }
+}

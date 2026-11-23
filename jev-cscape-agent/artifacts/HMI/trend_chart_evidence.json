@@ -1,0 +1,54 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Cscape HMI Historical Trend Chart verification completed: 7/7 checks passed.",
+  "data": {
+    "timestamp_utc": "2026-10-03T00:08:25.225510+00:00",
+    "tests_run": 7,
+    "tests_passed": 7,
+    "test_results": [
+      {
+        "name": "buffer_sample_ingestion",
+        "status": "pass"
+      },
+      {
+        "name": "dropout_partitioning",
+        "status": "pass"
+      },
+      {
+        "name": "catmull_rom_spline_generation",
+        "status": "pass"
+      },
+      {
+        "name": "svg_vector_export",
+        "status": "pass"
+      },
+      {
+        "name": "register_table_sync",
+        "status": "pass"
+      },
+      {
+        "name": "buffer_reset_handshake",
+        "status": "pass"
+      },
+      {
+        "name": "pure_st_boundary_enforcement",
+        "status": "pass"
+      }
+    ],
+    "svg_artifact": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\trend_chart_sample.svg",
+    "svg_size_bytes": 13908,
+    "register_mapping": {
+      "status_word": "%R300",
+      "sample_count": "%R301",
+      "pen1_latest_pv": "%R302",
+      "pen2_latest_pv": "%R303",
+      "time_span_s": "%R304",
+      "grid_divisions": "%R305",
+      "sample_interval_ms": "%R306",
+      "frame_counter": "%R307",
+      "enable_coil": "%M70",
+      "reset_coil": "%M71"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Dynamic Box-and-Whisker Distribution & Outlier Quartile SCADA Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W168",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Box-and-Whisker Distribution & Outlier Quartile SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'BoxWhiskerCanvasSync' and 'ProcessQuartileDistributionHmiSync' with SecurityGuard & STParser across Horner registers %R1290..%R1297 and %M301..%M302."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Five_Process_Batch_Streams_Statistical_Distribution_Geometry",
+        "passed": true,
+        "details": "Verified 5 side-by-side vertical batch streams (CDU, FCC, HC, CCR, DCU) and Tukey five-number summary calculation (Min, Q1, Median, Q3, Max, IQR)."
+      },
+      {
+        "stage": 4,
+        "check": "Dual_Rendering_Geometry_Synthesis_Baseline_Vs_RealTime",
+        "passed": true,
+        "details": "Verified dual rendering geometry: Golden Baseline muted cyan contour vs Real-Time emerald green filled box with whiskers, caps, and median line."
+      },
+      {
+        "stage": 5,
+        "check": "Process_Safety_Interlock_Extreme_Outlier_Breach_Trip",
+        "passed": true,
+        "details": "Verified 0xC101 BOX_ERR_EXTREME_OUTLIER_BREACH trip and %M301 coil assertion when outlier detected beyond 3.0*IQR extreme fence."
+      },
+      {
+        "stage": 6,
+        "check": "Diagnostic_Faults_IQR_Expansion_And_Render_Fault",
+        "passed": true,
+        "details": "Verified 0xC102 IQR expansion fault (>200% baseline span), 0xC103 render fault latching, and clean nominal restoration."
+      },
+      {
+        "stage": 7,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone W3C SVG 1.1; XML valid; dark theme backing, 5 side-by-side stream box plots, baseline contours, filled boxes, pulsing outlier circles, and right-hand quartile HUD card verified."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Theme text 17.06:1 (> 7:1), Graphical SCADA colors (7.04:1..7.35:1 > 3:1) verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scan_Cycle",
+        "passed": true,
+        "details": "%R1290=5120, %R1291=140, %R1292=0, %R1293=3650, %R1294=5120, %R1295=1650, %R1296=1, %R1297=0; %M301=False, %M302=True; discrete scan cycle verified."
+      }
+    ],
+    "metrics": {
+      "num_streams": 5,
+      "selected_stream_index": 1,
+      "selected_stream_median_scaled": 5120,
+      "selected_stream_iqr_scaled": 140,
+      "outlier_count": 0,
+      "stream1_median_scaled": 3650,
+      "stream2_median_scaled": 5120,
+      "stream3_median_scaled": 1650,
+      "wcag_badge_contrast": 18.3,
+      "wcag_theme_contrast": 17.06
+    }
+  }
+}

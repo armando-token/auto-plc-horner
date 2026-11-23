@@ -1,0 +1,562 @@
+{
+  "artifact": "Gate G6 Offline Acceptance Evidence",
+  "gate": "G6",
+  "work_package": "W025",
+  "verdict": "passed",
+  "timestamp_utc": "2026-10-10T06:29:26.277574+00:00",
+  "metrics": {
+    "queries_total": 30,
+    "queries_passed": 30,
+    "queries_failed": 0,
+    "query_recall_percent": 100.0,
+    "recall_threshold_percent": 90.0,
+    "plans_total": 5,
+    "plans_passed": 5,
+    "plans_failed": 0,
+    "plan_accuracy_percent": 100.0,
+    "gate_g6_offline_passed": true
+  },
+  "query_results": [
+    {
+      "case_id": "Q01",
+      "category": "FACTUAL",
+      "question": "What is the exact Win32 command ID for Error Check (compilation) in Horner Cscape 10.2?",
+      "ground_truth": "ID_PROGRAM_ERRORCHECK = 32826 (accelerator Ctrl+F7) dispatches logic compilation.",
+      "required_keywords": [
+        "32826",
+        "errorcheck"
+      ],
+      "source": "profiles/cscape-reference.yaml:45 & src/jev_cscape/automation/navigation_map.py:65",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q01] [PASS] What is the exact Win32 command ID for Error Check (compilatio... -> ID_PROGRAM_ERRORCHECK = 32826 (accelerator Ctrl+F7) dispatches logic compilation. | Source: profiles/cscape-reference.yaml:45 & src/jev_cscape/automation/navigation_map.py:65"
+    },
+    {
+      "case_id": "Q02",
+      "category": "FACTUAL",
+      "question": "What are the blocked Win32 download command IDs in Cscape 10.2 under fail-closed safety policy?",
+      "ground_truth": "Win32 download commands ID_PROGRAM_DOWNLOAD (32827) and ID_CONTROLLER_DOWNLOAD (33149) are permanently blocked.",
+      "required_keywords": [
+        "32827",
+        "33149",
+        "blocked"
+      ],
+      "source": "profiles/cscape-reference.yaml:50-58 & src/jev_cscape/security/command_interceptor.py:18",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q02] [PASS] What are the blocked Win32 download command IDs in Cscape 10.2... -> Win32 download commands ID_PROGRAM_DOWNLOAD (32827) and ID_CONTROLLER_DOWNLOAD (33... | Source: profiles/cscape-reference.yaml:50-58 & src/jev_cscape/security/command_interceptor.py:18"
+    },
+    {
+      "case_id": "Q03",
+      "category": "FACTUAL",
+      "question": "What native project container file formats are supported by Horner Cscape 10.2?",
+      "ground_truth": "Cscape 10.2 natively supports .csp (Single File CFBF / OLE2) and .cpj (Multi-File Container) formats.",
+      "required_keywords": [
+        ".csp",
+        ".cpj",
+        "cfbf"
+      ],
+      "source": "profiles/cscape-reference.yaml:34-41 & AGENTS.md:Section 1",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q03] [PASS] What native project container file formats are supported by Ho... -> Cscape 10.2 natively supports .csp (Single File CFBF / OLE2) and .cpj (Multi-File ... | Source: profiles/cscape-reference.yaml:34-41 & AGENTS.md:Section 1"
+    },
+    {
+      "case_id": "Q04",
+      "category": "FACTUAL",
+      "question": "How many canonical FastMCP tools are registered in the Gate G6 FastMCP tool registry?",
+      "ground_truth": "The Gate G6 FastMCP tool registry defines and manages exactly 16 canonical tools (including cscape_doctor, gui_inspect, and security_verify_manifest).",
+      "required_keywords": [
+        "16",
+        "tools",
+        "cscape_doctor",
+        "security_verify_manifest"
+      ],
+      "source": "docs/MULTI_AGENT_PARITY.md:22 & src/jev_cscape/agents/registry.py:32",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q04] [PASS] How many canonical FastMCP tools are registered in the Gate G6... -> The Gate G6 FastMCP tool registry defines and manages exactly 16 canonical tools (... | Source: docs/MULTI_AGENT_PARITY.md:22 & src/jev_cscape/agents/registry.py:32"
+    },
+    {
+      "case_id": "Q05",
+      "category": "FACTUAL",
+      "question": "What is the strict 4-state engineering contract enum returned by all tools and subagents?",
+      "ground_truth": "Every tool execution and subagent response strictly returns status: success | failed | blocked | inconclusive.",
+      "required_keywords": [
+        "success",
+        "failed",
+        "blocked",
+        "inconclusive"
+      ],
+      "source": "AGENTS.md:Section 3.1 & src/jev_cscape/contracts/contract_validator.py:12",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q05] [PASS] What is the strict 4-state engineering contract enum returned ... -> Every tool execution and subagent response strictly returns status: success | fail... | Source: AGENTS.md:Section 3.1 & src/jev_cscape/contracts/contract_validator.py:12"
+    },
+    {
+      "case_id": "Q06",
+      "category": "FACTUAL",
+      "question": "What OCS register memory type maps to Horner Analog Inputs and what is its typical range?",
+      "ground_truth": "%AI (Analog Inputs) represents 16-bit signed analog input channels with standard 0-32000 counts.",
+      "required_keywords": [
+        "%ai",
+        "analog input",
+        "32000"
+      ],
+      "source": "src/jev_cscape/automation/channel_matrix.py:115 & docs/OPERATOR_REFERENCE_MANUAL.md:Section 3",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q06] [PASS] What OCS register memory type maps to Horner Analog Inputs and... -> %AI (Analog Inputs) represents 16-bit signed analog input channels with standard 0... | Source: src/jev_cscape/automation/channel_matrix.py:115 & docs/OPERATOR_REFERENCE_MANUAL.md:Section 3"
+    },
+    {
+      "case_id": "Q07",
+      "category": "FACTUAL",
+      "question": "What OCS register memory type maps to Horner Analog Outputs for proportional valve actuation?",
+      "ground_truth": "%AQ (Analog Outputs) represents 16-bit signed analog output channels with standard 0-32000 counts.",
+      "required_keywords": [
+        "%aq",
+        "analog output",
+        "32000"
+      ],
+      "source": "src/jev_cscape/automation/channel_matrix.py:126 & docs/OPERATOR_REFERENCE_MANUAL.md:Section 3",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q07] [PASS] What OCS register memory type maps to Horner Analog Outputs fo... -> %AQ (Analog Outputs) represents 16-bit signed analog output channels with standard... | Source: src/jev_cscape/automation/channel_matrix.py:126 & docs/OPERATOR_REFERENCE_MANUAL.md:Section 3"
+    },
+    {
+      "case_id": "Q08",
+      "category": "FACTUAL",
+      "question": "What OCS register memory type maps to Horner 16-bit Holding / General Purpose analog words?",
+      "ground_truth": "%R (Holding Registers) represents general-purpose 16-bit analog words (%R1 through %R9999).",
+      "required_keywords": [
+        "%r",
+        "holding",
+        "9999"
+      ],
+      "source": "src/jev_cscape/automation/channel_matrix.py:137 & src/jev_cscape/simulation/register_table.py:38",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q08] [PASS] What OCS register memory type maps to Horner 16-bit Holding / ... -> %R (Holding Registers) represents general-purpose 16-bit analog words (%R1 through... | Source: src/jev_cscape/automation/channel_matrix.py:137 & src/jev_cscape/simulation/register_table.py:38"
+    },
+    {
+      "case_id": "Q09",
+      "category": "FACTUAL",
+      "question": "What OCS register memory types map to discrete Digital Inputs and Digital Outputs?",
+      "ground_truth": "%I maps to discrete Digital Inputs (1-bit contacts) and %Q maps to discrete Digital Outputs (1-bit coils).",
+      "required_keywords": [
+        "%i",
+        "%q",
+        "digital input",
+        "digital output"
+      ],
+      "source": "src/jev_cscape/automation/channel_matrix.py:44-65 & AGENTS.md:Section 2.5",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q09] [PASS] What OCS register memory types map to discrete Digital Inputs ... -> %I maps to discrete Digital Inputs (1-bit contacts) and %Q maps to discrete Digita... | Source: src/jev_cscape/automation/channel_matrix.py:44-65 & AGENTS.md:Section 2.5"
+    },
+    {
+      "case_id": "Q10",
+      "category": "FACTUAL",
+      "question": "What error code is raised when ladder logic constructs are injected into an IEC 61131-3 Structured Text (.st) POU?",
+      "ground_truth": "Ladder constructs in ST POUs are intercepted fail-closed with error code ERR_LADDER_FORBIDDEN via LadderForbiddenError.",
+      "required_keywords": [
+        "err_ladder_forbidden",
+        "ladderforbiddenerror"
+      ],
+      "source": "src/jev_cscape/iec/st_parser.py:55 & AGENTS.md:Section 2.4",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q10] [PASS] What error code is raised when ladder logic constructs are inj... -> Ladder constructs in ST POUs are intercepted fail-closed with error code ERR_LADDE... | Source: src/jev_cscape/iec/st_parser.py:55 & AGENTS.md:Section 2.4"
+    },
+    {
+      "case_id": "Q11",
+      "category": "FACTUAL",
+      "question": "What companion DLL in Cscape 10.2 handles Structured Text editing and exports K5ExecuteCommand?",
+      "ground_truth": "W5EditST.dll provides the Cscape IEC Structured Text editor and exports K5ExecuteCommand and K5GetClassName.",
+      "required_keywords": [
+        "w5editst.dll",
+        "k5executecommand"
+      ],
+      "source": "profiles/cscape-reference.yaml:69-74 & AGENTS.md:Section 2.2",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q11] [PASS] What companion DLL in Cscape 10.2 handles Structured Text edit... -> W5EditST.dll provides the Cscape IEC Structured Text editor and exports K5ExecuteC... | Source: profiles/cscape-reference.yaml:69-74 & AGENTS.md:Section 2.2"
+    },
+    {
+      "case_id": "Q12",
+      "category": "FACTUAL",
+      "question": "What companion DLL in Cscape 10.2 handles Ladder Logic editing and exports K5ExecuteCommand?",
+      "ground_truth": "W5EditLD.dll provides the Cscape Ladder Logic editor and exports K5ExecuteCommand and K5GetClassName.",
+      "required_keywords": [
+        "w5editld.dll",
+        "k5executecommand"
+      ],
+      "source": "profiles/cscape-reference.yaml:75-80 & AGENTS.md:Section 2.2",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q12] [PASS] What companion DLL in Cscape 10.2 handles Ladder Logic editing... -> W5EditLD.dll provides the Cscape Ladder Logic editor and exports K5ExecuteCommand ... | Source: profiles/cscape-reference.yaml:75-80 & AGENTS.md:Section 2.2"
+    },
+    {
+      "case_id": "Q13",
+      "category": "FACTUAL",
+      "question": "What Win32 window class and control ID represent the compiler output ListBox in Cscape 10.2?",
+      "ground_truth": "Compiler diagnostics are presented in Win32 class ListBox with Control ID 372 within Output Window 45011.",
+      "required_keywords": [
+        "listbox",
+        "372",
+        "45011"
+      ],
+      "source": "src/jev_cscape/automation/output_scraper.py:25 & docs/ARCHITECTURE_OVERVIEW.md:Section 4",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q13] [PASS] What Win32 window class and control ID represent the compiler ... -> Compiler diagnostics are presented in Win32 class ListBox with Control ID 372 with... | Source: src/jev_cscape/automation/output_scraper.py:25 & docs/ARCHITECTURE_OVERVIEW.md:Section 4"
+    },
+    {
+      "case_id": "Q14",
+      "category": "FACTUAL",
+      "question": "What Win32 window class and control ID represent the Project Navigator tree in Cscape 10.2?",
+      "ground_truth": "Project Navigator is hosted in Win32 class SysTreeView32 with Control ID 300 within dockable pane 45012.",
+      "required_keywords": [
+        "systreeview32",
+        "300",
+        "45012"
+      ],
+      "source": "src/jev_cscape/automation/navigator_walker.py:8 & docs/ARCHITECTURE_OVERVIEW.md:Section 4",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q14] [PASS] What Win32 window class and control ID represent the Project N... -> Project Navigator is hosted in Win32 class SysTreeView32 with Control ID 300 withi... | Source: src/jev_cscape/automation/navigator_walker.py:8 & docs/ARCHITECTURE_OVERVIEW.md:Section 4"
+    },
+    {
+      "case_id": "Q15",
+      "category": "FACTUAL",
+      "question": "What standard IEC 61131-3 Function Blocks are implemented in the pure-software simulation engine?",
+      "ground_truth": "Standard Function Blocks implemented include timers TON, TOF, TP and counters CTU, CTD, CTUD.",
+      "required_keywords": [
+        "ton",
+        "tof",
+        "tp",
+        "ctu",
+        "ctd",
+        "ctud"
+      ],
+      "source": "src/jev_cscape/simulation/standard_blocks.py:15 & AGENTS.md:Section 2.4",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q15] [PASS] What standard IEC 61131-3 Function Blocks are implemented in t... -> Standard Function Blocks implemented include timers TON, TOF, TP and counters CTU,... | Source: src/jev_cscape/simulation/standard_blocks.py:15 & AGENTS.md:Section 2.4"
+    },
+    {
+      "case_id": "Q16",
+      "category": "FACTUAL",
+      "question": "What companion controller flashing utilities are strictly locked out under fail-closed security?",
+      "ground_truth": "Companion flasher binaries PGMUpdateUtility.exe, DfuSeCommand.exe, STMFlashLoader.exe, and WinJTAG.exe are blocked.",
+      "required_keywords": [
+        "pgmupdateutility.exe",
+        "dfusecommand.exe",
+        "stmflashloader.exe",
+        "winjtag.exe"
+      ],
+      "source": "src/jev_cscape/security/guard.py:45 & profiles/cscape-reference.yaml:94-110",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q16] [PASS] What companion controller flashing utilities are strictly lock... -> Companion flasher binaries PGMUpdateUtility.exe, DfuSeCommand.exe, STMFlashLoader.... | Source: src/jev_cscape/security/guard.py:45 & profiles/cscape-reference.yaml:94-110"
+    },
+    {
+      "case_id": "Q17",
+      "category": "FACTUAL",
+      "question": "What range of physical communication ports is permanently blocked by the SecurityGuard?",
+      "ground_truth": "Physical communication ports COM1 through COM256 (\\\\.\\COM*, /dev/tty*) are fail-closed blocked.",
+      "required_keywords": [
+        "com1",
+        "com256",
+        "blocked"
+      ],
+      "source": "src/jev_cscape/security/guard.py:35 & AGENTS.md:Section 4",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q17] [PASS] What range of physical communication ports is permanently bloc... -> Physical communication ports COM1 through COM256 (\\\\.\\COM*, /dev/tty*) are fail-cl... | Source: src/jev_cscape/security/guard.py:35 & AGENTS.md:Section 4"
+    },
+    {
+      "case_id": "Q18",
+      "category": "FACTUAL",
+      "question": "What desktop window station and desktop name are required for live Cscape GUI automation?",
+      "ground_truth": "Live Cscape GUI automation must run exclusively on the interactive desktop winsta0\\Default.",
+      "required_keywords": [
+        "winsta0\\default",
+        "interactive"
+      ],
+      "source": "AGENTS.md:Section 2.3 & src/jev_cscape/automation/lifecycle.py:30",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q18] [PASS] What desktop window station and desktop name are required for ... -> Live Cscape GUI automation must run exclusively on the interactive desktop winsta0... | Source: AGENTS.md:Section 2.3 & src/jev_cscape/automation/lifecycle.py:30"
+    },
+    {
+      "case_id": "Q19",
+      "category": "FACTUAL",
+      "question": "What is the exact Horner APG Cscape build version targeted by the autonomous agent?",
+      "ground_truth": "The autonomous agent targets Horner APG Cscape 10.2 (Build 10.2.751.4) 32-bit x86 PE binary.",
+      "required_keywords": [
+        "10.2",
+        "10.2.751.4"
+      ],
+      "source": "profiles/cscape-reference.yaml:9 & AGENTS.md:Section 1",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q19] [PASS] What is the exact Horner APG Cscape build version targeted by ... -> The autonomous agent targets Horner APG Cscape 10.2 (Build 10.2.751.4) 32-bit x86 ... | Source: profiles/cscape-reference.yaml:9 & AGENTS.md:Section 1"
+    },
+    {
+      "case_id": "Q20",
+      "category": "FACTUAL",
+      "question": "What Namur standard defines the 4-20mA sensor fault detection thresholds used in Horner P1 scaling?",
+      "ground_truth": "Namur NE43 defines sensor failure limits: Under-range < 3.8mA (3040 counts) and Over-range > 20.5mA (16400 counts).",
+      "required_keywords": [
+        "namur ne43",
+        "3.8ma",
+        "20.5ma"
+      ],
+      "source": "src/jev_cscape/telemetry/scaling_bridge.py:40 & STATUS.md:W027",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q20] [PASS] What Namur standard defines the 4-20mA sensor fault detection ... -> Namur NE43 defines sensor failure limits: Under-range < 3.8mA (3040 counts) and Ov... | Source: src/jev_cscape/telemetry/scaling_bridge.py:40 & STATUS.md:W027"
+    },
+    {
+      "case_id": "Q21",
+      "category": "VERSION_NOT_FOUND",
+      "question": "Does Cscape 10.2 support native in-GUI conversion of Structured Text POUs to Ladder Logic?",
+      "ground_truth": "NOT_FOUND / UNSUPPORTED: Cscape 10.2 contains zero GUI menus, accelerators, or DLL exports for ST->LD conversion (BLOCKED_NATIVE: DOCUMENT_ONLY).",
+      "required_keywords": [
+        "not_found",
+        "unsupported",
+        "blocked_native",
+        "zero gui menus"
+      ],
+      "source": "profiles/cscape-reference.yaml:65 & AGENTS.md:Section 3.4",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q21] [PASS] Does Cscape 10.2 support native in-GUI conversion of Structure... -> NOT_FOUND / UNSUPPORTED: Cscape 10.2 contains zero GUI menus, accelerators, or DLL... | Source: profiles/cscape-reference.yaml:65 & AGENTS.md:Section 3.4"
+    },
+    {
+      "case_id": "Q22",
+      "category": "VERSION_NOT_FOUND",
+      "question": "Where can the legacy Straton K5 standalone project template appli.k5p be executed in active code?",
+      "ground_truth": "NOT_FOUND / QUARANTINED: Standalone Straton K5 files (appli.k5p, appli.CPO, K5DBXS.INI) are permanently quarantined in quarantine/straton_k5_legacy/ with zero active code paths permitted.",
+      "required_keywords": [
+        "quarantined",
+        "quarantine/straton_k5_legacy/",
+        "zero active code paths"
+      ],
+      "source": "AGENTS.md:Section 3.3 & STATUS.md:G0",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q22] [PASS] Where can the legacy Straton K5 standalone project template ap... -> NOT_FOUND / QUARANTINED: Standalone Straton K5 files (appli.k5p, appli.CPO, K5DBXS... | Source: AGENTS.md:Section 3.3 & STATUS.md:G0"
+    },
+    {
+      "case_id": "Q23",
+      "category": "VERSION_NOT_FOUND",
+      "question": "What is the command line switch to flash controller firmware via Cscape CLI?",
+      "ground_truth": "NOT_FOUND / BLOCKED: Direct hardware flashing switches (/d, /download, /flash, /burn, /write-flash) are strictly prohibited and blocked with HardwareLockoutError.",
+      "required_keywords": [
+        "blocked",
+        "hardwarelockouterror",
+        "prohibited"
+      ],
+      "source": "src/jev_cscape/security/guard.py:37-53 & AGENTS.md:Section 4",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q23] [PASS] What is the command line switch to flash controller firmware v... -> NOT_FOUND / BLOCKED: Direct hardware flashing switches (/d, /download, /flash, /bu... | Source: src/jev_cscape/security/guard.py:37-53 & AGENTS.md:Section 4"
+    },
+    {
+      "case_id": "Q24",
+      "category": "VERSION_NOT_FOUND",
+      "question": "What API endpoint allows direct cloud upload of .csp project files to Horner Remote Cloud?",
+      "ground_truth": "NOT_FOUND / UNSUPPORTED: Cscape 10.2 has no remote cloud upload bridge; all operations are strictly local/offline with zero external cloud connectivity.",
+      "required_keywords": [
+        "not_found",
+        "unsupported",
+        "strictly local",
+        "zero push"
+      ],
+      "source": "AGENTS.md:Section 5 & STATUS.md:Safety Mode",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q24] [PASS] What API endpoint allows direct cloud upload of .csp project f... -> NOT_FOUND / UNSUPPORTED: Cscape 10.2 has no remote cloud upload bridge; all operat... | Source: AGENTS.md:Section 5 & STATUS.md:Safety Mode"
+    },
+    {
+      "case_id": "Q25",
+      "category": "VERSION_NOT_FOUND",
+      "question": "How do you configure Straton runtime processes T5RTI or T5SIMUL for simulation in Cscape 10.2?",
+      "ground_truth": "NOT_FOUND / QUARANTINED: External runtime processes T5RTI and T5SIMUL are quarantined; simulation uses pure-software in-memory SimulationBackend.EMULATED.",
+      "required_keywords": [
+        "quarantined",
+        "pure-software",
+        "simulationbackend.emulated"
+      ],
+      "source": "AGENTS.md:Section 2.5, 3.3",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q25] [PASS] How do you configure Straton runtime processes T5RTI or T5SIMU... -> NOT_FOUND / QUARANTINED: External runtime processes T5RTI and T5SIMUL are quaranti... | Source: AGENTS.md:Section 2.5, 3.3"
+    },
+    {
+      "case_id": "Q26",
+      "category": "VERSION_NOT_FOUND",
+      "question": "What menu path in Cscape 10.2 allows opening legacy Cscape 9.x .pgm binary files directly?",
+      "ground_truth": "NOT_FOUND / UNSUPPORTED: Cscape 10.2 exclusively uses .csp and .cpj CFBF project containers; legacy 9.x .pgm direct binary loading is not supported in the active pipeline.",
+      "required_keywords": [
+        "not_found",
+        "unsupported",
+        ".csp",
+        ".cpj"
+      ],
+      "source": "profiles/cscape-reference.yaml:33-42",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q26] [PASS] What menu path in Cscape 10.2 allows opening legacy Cscape 9.x... -> NOT_FOUND / UNSUPPORTED: Cscape 10.2 exclusively uses .csp and .cpj CFBF project c... | Source: profiles/cscape-reference.yaml:33-42"
+    },
+    {
+      "case_id": "Q27",
+      "category": "VERSION_NOT_FOUND",
+      "question": "How can an autonomous agent connect directly to hardware port COM1 for online monitoring?",
+      "ground_truth": "NOT_FOUND / BLOCKED: Physical serial ports COM1 through COM256 are permanently blocked under fail-closed hardware lockout; connection attempts raise SecurityError.",
+      "required_keywords": [
+        "blocked",
+        "fail-closed",
+        "securityerror",
+        "lockout"
+      ],
+      "source": "AGENTS.md:Section 4 & src/jev_cscape/security/guard.py:35",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q27] [PASS] How can an autonomous agent connect directly to hardware port ... -> NOT_FOUND / BLOCKED: Physical serial ports COM1 through COM256 are permanently blo... | Source: AGENTS.md:Section 4 & src/jev_cscape/security/guard.py:35"
+    },
+    {
+      "case_id": "Q28",
+      "category": "VERSION_NOT_FOUND",
+      "question": "What FastMCP tool name triggers downloading compiled logic to a physical Horner OCS PLC?",
+      "ground_truth": "NOT_FOUND / BLOCKED: Zero physical download tools exist in the FastMCP registry; all physical downloads are permanently locked out and prohibited by design.",
+      "required_keywords": [
+        "not_found",
+        "zero physical download tools",
+        "locked out"
+      ],
+      "source": "docs/MULTI_AGENT_PARITY.md:Section 2 & src/jev_cscape/agents/registry.py",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q28] [PASS] What FastMCP tool name triggers downloading compiled logic to ... -> NOT_FOUND / BLOCKED: Zero physical download tools exist in the FastMCP registry; a... | Source: docs/MULTI_AGENT_PARITY.md:Section 2 & src/jev_cscape/agents/registry.py"
+    },
+    {
+      "case_id": "Q29",
+      "category": "VERSION_NOT_FOUND",
+      "question": "Where is the external Python mcp runtime package imported in jev_cscape.agents?",
+      "ground_truth": "NOT_FOUND / ZERO_DEPENDENCY: FastMCP tool parity and JSON-RPC 2.0 server are fully self-contained standard Python library implementations with zero external mcp package imports.",
+      "required_keywords": [
+        "zero external mcp",
+        "standard python",
+        "zero_dependency"
+      ],
+      "source": "docs/MULTI_AGENT_PARITY.md:Section 1 & tests/test_fastmcp_parity.py:8",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q29] [PASS] Where is the external Python mcp runtime package imported in j... -> NOT_FOUND / ZERO_DEPENDENCY: FastMCP tool parity and JSON-RPC 2.0 server are fully... | Source: docs/MULTI_AGENT_PARITY.md:Section 1 & tests/test_fastmcp_parity.py:8"
+    },
+    {
+      "case_id": "Q30",
+      "category": "VERSION_NOT_FOUND",
+      "question": "What remote git repository URL is configured for pushing milestone checkpoints?",
+      "ground_truth": "NOT_FOUND / ZERO_REMOTES: Git remotes count is strictly 0 (zero remotes); remote pushes are permanently prohibited under zero push policy.",
+      "required_keywords": [
+        "zero remotes",
+        "zero push",
+        "prohibited"
+      ],
+      "source": "AGENTS.md:Section dual-root & STATUS.md:Safety Mode",
+      "recall_matched": true,
+      "status": "success",
+      "summary_line": "[Q30] [PASS] What remote git repository URL is configured for pushing miles... -> NOT_FOUND / ZERO_REMOTES: Git remotes count is strictly 0 (zero remotes); remote p... | Source: AGENTS.md:Section dual-root & STATUS.md:Safety Mode"
+    }
+  ],
+  "plan_results": [
+    {
+      "case_id": "P01",
+      "plan_type": "COMPATIBLE",
+      "name": "Tank Level Closed-Loop Control Plan",
+      "description": "Standard closed-loop tank level regulation using P1 controller, analog level measurement, and valve actuation.",
+      "source": "src/jev_cscape/iec/st_parser.py:97 & src/jev_cscape/simulation/plant_model.py",
+      "expected_status": "success",
+      "expected_error_code": null,
+      "actual_status": "success",
+      "actual_error_code": null,
+      "passed": true,
+      "summary_line": "[P01] [PASS] Plan: Tank Level Closed-Loop Control Plan (COMPATIBLE) -> Status: success (code: NONE) | Source: src/jev_cscape/iec/st_parser.py:97 & src/jev_cscape/simulation/plant_model.py"
+    },
+    {
+      "case_id": "P02",
+      "plan_type": "COMPATIBLE",
+      "name": "Namur NE43 Sensor Alarms & ESD Trip Plan",
+      "description": "Dual-threshold alarm and safety shutdown latch conforming to Namur NE43 analog sensor bounds.",
+      "source": "src/jev_cscape/telemetry/scaling_bridge.py:40 & src/jev_cscape/simulation/standard_blocks.py",
+      "expected_status": "success",
+      "expected_error_code": null,
+      "actual_status": "success",
+      "actual_error_code": null,
+      "passed": true,
+      "summary_line": "[P02] [PASS] Plan: Namur NE43 Sensor Alarms & ESD Trip Plan (COMPATIBLE) -> Status: success (code: NONE) | Source: src/jev_cscape/telemetry/scaling_bridge.py:40 & src/jev_cscape/simulation/standard_blocks.py"
+    },
+    {
+      "case_id": "P03",
+      "plan_type": "INCOMPATIBLE",
+      "name": "Ladder Logic Injection in ST POU",
+      "description": "Attempt to inject legacy ladder contacts, coils, and rung structures into pure Structured Text source.",
+      "source": "src/jev_cscape/iec/st_parser.py:104 & AGENTS.md:Section 2.4",
+      "expected_status": "failed",
+      "expected_error_code": "ERR_LADDER_FORBIDDEN",
+      "actual_status": "failed",
+      "actual_error_code": "ERR_LADDER_FORBIDDEN",
+      "passed": true,
+      "summary_line": "[P03] [PASS] Plan: Ladder Logic Injection in ST POU (INCOMPATIBLE) -> Status: failed (code: ERR_LADDER_FORBIDDEN) | Source: src/jev_cscape/iec/st_parser.py:104 & AGENTS.md:Section 2.4"
+    },
+    {
+      "case_id": "P04",
+      "plan_type": "INCOMPATIBLE",
+      "name": "Hardware Port COM3 Download & Flash",
+      "description": "Attempt to execute physical download over serial port COM3 and trigger controller firmware burn.",
+      "source": "src/jev_cscape/security/guard.py:35 & AGENTS.md:Section 4",
+      "expected_status": "blocked",
+      "expected_error_code": "FAIL_CLOSED_HARDWARE_LOCKOUT",
+      "actual_status": "blocked",
+      "actual_error_code": "FAIL_CLOSED_HARDWARE_LOCKOUT",
+      "passed": true,
+      "summary_line": "[P04] [PASS] Plan: Hardware Port COM3 Download & Flash (INCOMPATIBLE) -> Status: blocked (code: FAIL_CLOSED_HARDWARE_LOCKOUT) | Source: src/jev_cscape/security/guard.py:35 & AGENTS.md:Section 4"
+    },
+    {
+      "case_id": "P05",
+      "plan_type": "MISSING_DATA",
+      "name": "Unspecified Controller & Floating Signals",
+      "description": "Plan request lacking target controller hardware model, channel address bindings, and signal definitions.",
+      "source": "src/jev_cscape/automation/p1_selection.py:53 & src/jev_cscape/contracts/contract_validator.py",
+      "expected_status": "inconclusive",
+      "expected_error_code": "MISSING_REQUIRED_DATA",
+      "actual_status": "inconclusive",
+      "actual_error_code": "MISSING_REQUIRED_DATA",
+      "passed": true,
+      "summary_line": "[P05] [PASS] Plan: Unspecified Controller & Floating Signals (MISSING_DATA) -> Status: inconclusive (code: MISSING_REQUIRED_DATA) | Source: src/jev_cscape/automation/p1_selection.py:53 & src/jev_cscape/contracts/contract_validator.py"
+    }
+  ],
+  "safety_invariants": {
+    "fail_closed_hardware_lockout": true,
+    "physical_com_ports_blocked": "COM1..COM256",
+    "download_command_ids_blocked": [
+      32827,
+      33149
+    ],
+    "companion_flashers_blocked": [
+      "PGMUpdateUtility.exe",
+      "DfuSeCommand.exe",
+      "STMFlashLoader.exe",
+      "WinJTAG.exe"
+    ],
+    "pure_st_enforced": true,
+    "straton_k5_quarantined": true,
+    "zero_external_mcp_runtime": true,
+    "zero_git_remotes": true
+  },
+  "evidence_sha256": "391058ca2c1796d478a39fd327f98a5e0b6ff8145f5f7d52417cba8e94aa350e"
+}

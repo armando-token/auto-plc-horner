@@ -1,0 +1,291 @@
+{
+  "campaign": "G5_VISION_LIVE_ACCEPTANCE",
+  "timestamp_utc": "2026-10-16T19:04:44.967169+00:00",
+  "mode": "dry_run",
+  "status": "success",
+  "runs_total": 20,
+  "runs_passed": 20,
+  "runs_pass_rate": 1.0,
+  "negatives_total": 5,
+  "negatives_passed": 5,
+  "baseline_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "runs": [
+    {
+      "run_num": 1,
+      "editor_type": "LADDER",
+      "target": [
+        144,
+        50
+      ],
+      "tag": "FST_SCN",
+      "status": "success",
+      "reason": "Vision-located Contact at Rung 0, Col 1 -> Target vision coords (144, 50) verified via CFBF proof",
+      "duration_ms": 18.96
+    },
+    {
+      "run_num": 2,
+      "editor_type": "LADDER",
+      "target": [
+        774,
+        50
+      ],
+      "tag": "G3_TEST_VAR_01",
+      "status": "success",
+      "reason": "Vision-located Coil at Rung 0, Col 10 (Rightmost Rail) -> Target vision coords (774, 50) verified via CFBF proof",
+      "duration_ms": 18.04
+    },
+    {
+      "run_num": 3,
+      "editor_type": "LADDER",
+      "target": [
+        74,
+        110
+      ],
+      "tag": "SYS_ACK",
+      "status": "success",
+      "reason": "Vision-located NC Contact at Rung 1, Col 0 (Leftmost Power Rail) -> Target vision coords (74, 110) verified via CFBF proof",
+      "duration_ms": 15.2
+    },
+    {
+      "run_num": 4,
+      "editor_type": "LADDER",
+      "target": [
+        774,
+        110
+      ],
+      "tag": "G3_TEST_VAR_02",
+      "status": "success",
+      "reason": "Vision-located Coil at Rung 1, Col 10 -> Target vision coords (774, 110) verified via CFBF proof",
+      "duration_ms": 15.01
+    },
+    {
+      "run_num": 5,
+      "editor_type": "LADDER",
+      "target": [
+        214,
+        170
+      ],
+      "tag": "T_100MS",
+      "status": "success",
+      "reason": "Vision-located Contact at Rung 2, Col 2 -> Target vision coords (214, 170) verified via CFBF proof",
+      "duration_ms": 14.84
+    },
+    {
+      "run_num": 6,
+      "editor_type": "LADDER",
+      "target": [
+        774,
+        170
+      ],
+      "tag": "G3_TEST_VAR_03",
+      "status": "success",
+      "reason": "Vision-located Coil at Rung 2, Col 10 -> Target vision coords (774, 170) verified via CFBF proof",
+      "duration_ms": 15.32
+    },
+    {
+      "run_num": 7,
+      "editor_type": "LADDER",
+      "target": [
+        144,
+        230
+      ],
+      "tag": "T_SEC",
+      "status": "success",
+      "reason": "Vision-located NC Contact at Rung 3, Col 1 -> Target vision coords (144, 230) verified via CFBF proof",
+      "duration_ms": 14.98
+    },
+    {
+      "run_num": 8,
+      "editor_type": "LADDER",
+      "target": [
+        774,
+        230
+      ],
+      "tag": "G3_TEST_VAR_04",
+      "status": "success",
+      "reason": "Vision-located Coil at Rung 3, Col 10 -> Target vision coords (774, 230) verified via CFBF proof",
+      "duration_ms": 17.4
+    },
+    {
+      "run_num": 9,
+      "editor_type": "LADDER",
+      "target": [
+        284,
+        290
+      ],
+      "tag": "P1_START_PB",
+      "status": "success",
+      "reason": "Vision-located Contact at Rung 4, Col 3 -> Target vision coords (284, 290) verified via CFBF proof",
+      "duration_ms": 14.9
+    },
+    {
+      "run_num": 10,
+      "editor_type": "LADDER",
+      "target": [
+        774,
+        290
+      ],
+      "tag": "P1_VALVE_OUT",
+      "status": "success",
+      "reason": "Vision-located Coil at Rung 4, Col 10 -> Target vision coords (774, 290) verified via CFBF proof",
+      "duration_ms": 15.05
+    },
+    {
+      "run_num": 11,
+      "editor_type": "HMI",
+      "target": [
+        219,
+        94
+      ],
+      "tag": "RTC_SEC",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (100, 80) -> Target vision coords (219, 94) verified via CFBF proof",
+      "duration_ms": 104.21
+    },
+    {
+      "run_num": 12,
+      "editor_type": "HMI",
+      "target": [
+        339,
+        94
+      ],
+      "tag": "RTC_MIN",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (220, 80) -> Target vision coords (339, 94) verified via CFBF proof",
+      "duration_ms": 139.44
+    },
+    {
+      "run_num": 13,
+      "editor_type": "HMI",
+      "target": [
+        279,
+        134
+      ],
+      "tag": "RTC_HOUR",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual Canvas Center (160, 120) -> Target vision coords (279, 134) verified via CFBF proof",
+      "duration_ms": 125.46
+    },
+    {
+      "run_num": 14,
+      "editor_type": "HMI",
+      "target": [
+        209,
+        174
+      ],
+      "tag": "P1_TANK_LEVEL_PV",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (90, 160) -> Target vision coords (209, 174) verified via CFBF proof",
+      "duration_ms": 86.32
+    },
+    {
+      "run_num": 15,
+      "editor_type": "HMI",
+      "target": [
+        349,
+        174
+      ],
+      "tag": "P1_STATIC_HEAD_PRESS",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (230, 160) -> Target vision coords (349, 174) verified via CFBF proof",
+      "duration_ms": 84.62
+    },
+    {
+      "run_num": 16,
+      "editor_type": "HMI",
+      "target": [
+        199,
+        114
+      ],
+      "tag": "P1_VALVE_OUT",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (80, 100) -> Target vision coords (199, 114) verified via CFBF proof",
+      "duration_ms": 86.44
+    },
+    {
+      "run_num": 17,
+      "editor_type": "HMI",
+      "target": [
+        359,
+        114
+      ],
+      "tag": "SYS_ACK",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (240, 100) -> Target vision coords (359, 114) verified via CFBF proof",
+      "duration_ms": 85.27
+    },
+    {
+      "run_num": 18,
+      "editor_type": "HMI",
+      "target": [
+        279,
+        74
+      ],
+      "tag": "RTC_SEC",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (160, 60) -> Target vision coords (279, 74) verified via CFBF proof",
+      "duration_ms": 88.69
+    },
+    {
+      "run_num": 19,
+      "editor_type": "HMI",
+      "target": [
+        279,
+        194
+      ],
+      "tag": "RTC_MIN",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (160, 180) -> Target vision coords (279, 194) verified via CFBF proof",
+      "duration_ms": 95.68
+    },
+    {
+      "run_num": 20,
+      "editor_type": "HMI",
+      "target": [
+        239,
+        154
+      ],
+      "tag": "P1_TANK_LEVEL_PV",
+      "status": "success",
+      "reason": "Vision-located Numeric Display at Virtual (120, 140) [Reserved Diagonal] -> Target vision coords (239, 154) verified via CFBF proof",
+      "duration_ms": 85.52
+    }
+  ],
+  "negatives": [
+    {
+      "neg_id": "neg_01",
+      "name": "Stale image rejection",
+      "status": "success",
+      "reason": "Stale frame (1278x566, age=4.0s > 2.0s) blocked click: FAIL_CLOSED: Capture frame is stale! Age: 4.000s (threshold: 2.000s)",
+      "duration_ms": 0.03
+    },
+    {
+      "neg_id": "neg_02",
+      "name": "Moved window rejection",
+      "status": "success",
+      "reason": "Window drift vector on Cscape rect (100, 100, 900, 700) (dx=10px, dy=0px > 2px tol) blocked click: FAIL_CLOSED: Window moved beyond tolerance (10px > 2px)! Baseline: (100, 100, 900, 700), Current: (110, 100, 910, 700)",
+      "duration_ms": 0.01
+    },
+    {
+      "neg_id": "neg_03",
+      "name": "Out-of-bounds rejection",
+      "status": "success",
+      "reason": "Out-of-bounds target (1319, 34) outside real canvas (119, 14, 1269, 541) blocked click: FAIL_CLOSED: Target X=1319 out of safe canvas bounds [124, 1264] (raw bounds: [119, 1269], margin: 5px)!",
+      "duration_ms": 1.42
+    },
+    {
+      "neg_id": "neg_04",
+      "name": "Occlusion rejection",
+      "status": "success",
+      "reason": "Real modal dialog occlusion at (545, 481, 733, 507) over target (592, 487, 686, 500) blocked click: FAIL_CLOSED: Target ROI (592, 487, 686, 500) is occluded by modal dialog #0 (545, 481, 733, 507)! Intersection: (592, 487, 686, 500)",
+      "duration_ms": 0.51
+    },
+    {
+      "neg_id": "neg_05",
+      "name": "Landmark mismatch rejection",
+      "status": "success",
+      "reason": "Corrupted/missing canvas landmark bounds (width < 50px) blocked click: Canvas landmark bounds (1, 1, 19, -5) below valid threshold (<50px)",
+      "duration_ms": 0.06
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Phenol-Acetone Cumene Hydroperoxide Cleavage Reaction ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W251",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Phenol-Acetone Cumene Hydroperoxide Cleavage Reaction ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "CHP_Hock_Cleavage_Chemistry_And_Thermochemical_Enthalpies",
+        "check": "CHP_Hock_Cleavage_Chemistry_And_Thermochemical_Enthalpies",
+        "passed": true,
+        "details": "Cleavage enthalpies verified: Delta_H1=-252.0 kJ/mol, Delta_H2=-120.0 kJ/mol, Delta_H3=45.0 kJ/mol. T=68.5 \u00b0C, P=1.25 bar. Reaction power=6672.9 kW, uncooled dT/dt=1.4890 \u00b0C/s."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "CumeneHydroperoxideCleavageSync POU validated with STParser & SecurityGuard; bound registers ['%R2120', '%R2121', '%R2122', '%R2123', '%R2124', '%R2125', '%R2126', '%R2127'] and coils ['%M494', '%M495', '%M496'] confirmed."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Anti-ladder security guard successfully intercepted prohibited constructs (contacts, coils, rungs, networks, mnemonics) raising LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal closed-loop convergence verified: Conversion=99.85% (>= 99.8%), Selectivity=99.20% (>= 99.0%), Production=8950.0 kg/h (~8950 kg/h), Residual CHP=0.0250 mol/L, T=68.5 \u00b0C, P=1.25 bar."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: stoichiometric mass error=5.91e-18 kg/s (< 1e-10), elemental mass error=0.00e+00 kg/s (< 1e-10), enthalpy error=0.00e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_Exotherm_And_Emergency_Quench_Trip",
+        "check": "Thermal_Runaway_Exotherm_And_Emergency_Quench_Trip",
+        "passed": true,
+        "details": "Thermal runaway (T=88.0 \u00b0C) injected: trip 0xF401 asserted, quench %M496 opened, active %M494 cleared. Reaction heat quenched to 0.00 kW, cooled to 67.28 \u00b0C."
+      },
+      {
+        "stage": 7,
+        "name": "CHP_Accumulation_Pre_Alarm_And_Catalyst_Starvation_Injections",
+        "check": "CHP_Accumulation_Pre_Alarm_And_Catalyst_Starvation_Injections",
+        "passed": true,
+        "details": "Pre-alarm %M495=True, accumulation 0xF402=True, acid starvation 0xF403=True, priority hierarchy=True."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Bit-exact registers %R2120..%R2127 & %M494..%M496 verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf401, s=-3071)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=4.4 KB; T=68.50 \u00b0C, Conv=99.85%, Sel=99.20%."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "CHP_Hock_Cleavage_Chemistry_And_Thermochemical_Enthalpies",
+        "check": "CHP_Hock_Cleavage_Chemistry_And_Thermochemical_Enthalpies",
+        "passed": true,
+        "details": "Cleavage enthalpies verified: Delta_H1=-252.0 kJ/mol, Delta_H2=-120.0 kJ/mol, Delta_H3=45.0 kJ/mol. T=68.5 \u00b0C, P=1.25 bar. Reaction power=6672.9 kW, uncooled dT/dt=1.4890 \u00b0C/s."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "CumeneHydroperoxideCleavageSync POU validated with STParser & SecurityGuard; bound registers ['%R2120', '%R2121', '%R2122', '%R2123', '%R2124', '%R2125', '%R2126', '%R2127'] and coils ['%M494', '%M495', '%M496'] confirmed."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Anti-ladder security guard successfully intercepted prohibited constructs (contacts, coils, rungs, networks, mnemonics) raising LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal closed-loop convergence verified: Conversion=99.85% (>= 99.8%), Selectivity=99.20% (>= 99.0%), Production=8950.0 kg/h (~8950 kg/h), Residual CHP=0.0250 mol/L, T=68.5 \u00b0C, P=1.25 bar."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: stoichiometric mass error=5.91e-18 kg/s (< 1e-10), elemental mass error=0.00e+00 kg/s (< 1e-10), enthalpy error=0.00e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_Exotherm_And_Emergency_Quench_Trip",
+        "check": "Thermal_Runaway_Exotherm_And_Emergency_Quench_Trip",
+        "passed": true,
+        "details": "Thermal runaway (T=88.0 \u00b0C) injected: trip 0xF401 asserted, quench %M496 opened, active %M494 cleared. Reaction heat quenched to 0.00 kW, cooled to 67.28 \u00b0C."
+      },
+      {
+        "stage": 7,
+        "name": "CHP_Accumulation_Pre_Alarm_And_Catalyst_Starvation_Injections",
+        "check": "CHP_Accumulation_Pre_Alarm_And_Catalyst_Starvation_Injections",
+        "passed": true,
+        "details": "Pre-alarm %M495=True, accumulation 0xF402=True, acid starvation 0xF403=True, priority hierarchy=True."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Bit-exact registers %R2120..%R2127 & %M494..%M496 verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf401, s=-3071)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=4.4 KB; T=68.50 \u00b0C, Conv=99.85%, Sel=99.20%."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R2120..%R2127",
+      "discrete_coils": "%M494..%M496",
+      "values": {
+        "%R2120": 880,
+        "%R2121": 125,
+        "%R2122": 9985,
+        "%R2123": 9920,
+        "%R2124": 25,
+        "%R2125": 8950,
+        "%R2126": 250,
+        "%R2127": 62465,
+        "%M494": false,
+        "%M495": true,
+        "%M496": true
+      }
+    },
+    "timestamp": "2026-10-16T18:08:38Z"
+  }
+}

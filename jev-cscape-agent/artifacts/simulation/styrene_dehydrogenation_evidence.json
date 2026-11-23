@@ -1,0 +1,160 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Styrene Dehydrogenation Catalytic Radial-Flow Reactor ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W245",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Ethylbenzene Dehydrogenation to Styrene Monomer Catalytic Radial-Flow Reactor ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Dehydrogenation_Physics_And_Thermochemical_Constants_Verification",
+        "check": "Dehydrogenation_Physics_And_Thermochemical_Constants_Verification",
+        "passed": true,
+        "details": "Kinetics verified: k1(560C)=2.2214, k1(620C)=5.3172, Ea1 err=1.46e-11 J/mol, Delta_H1=121.0 kJ/mol, T_inlet=620.0 \u00b0C, steam:EB ratio=8.5:1 nominal operating envelope."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "StyreneDehydrogenationSync POU verified cleanly with STParser & SecurityGuard; bound %R2060..%R2067 and %M480..%M482."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs, mnemonics) intercepted cleanly with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state converged: conversion=68.50% (>= 68.0%), selectivity=92.40% (>= 92.0%), production=4200.0 kg/h (~4200 kg/h), bed_temp=575.0 \u00b0C, P=0.45 bar."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: mass=1.00e-14 kg/s, elemental=1.00e-14 kg/s, enthalpy=1.00e-15 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Overtemp_And_Vacuum_Loss_Injections",
+        "check": "Thermal_Overtemp_And_Vacuum_Loss_Injections",
+        "passed": true,
+        "details": "0xF201 overtemp (> 660 \u00b0C) and 0xF202 vacuum loss (> 1.20 bar) injections verified; asserted emergency trip %M482 and cleared %M480."
+      },
+      {
+        "stage": 7,
+        "name": "Steam_Starvation_And_Selectivity_Degradation_Injections",
+        "check": "Steam_Starvation_And_Selectivity_Degradation_Injections",
+        "passed": true,
+        "details": "0xF203 steam starvation (< 6.0:1) and 0xF204 selectivity degradation (< 85%) verified; pre-alarm %M481 asserted without trip at ratio 6.5:1."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers %R2060..%R2067 and %M480..%M482 bit-exact verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf201, s=-3583)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=8.1 KB; bed_temp=575.00 \u00b0C, conversion=68.51%, selectivity=92.37%."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Dehydrogenation_Physics_And_Thermochemical_Constants_Verification",
+        "check": "Dehydrogenation_Physics_And_Thermochemical_Constants_Verification",
+        "passed": true,
+        "details": "Kinetics verified: k1(560C)=2.2214, k1(620C)=5.3172, Ea1 err=1.46e-11 J/mol, Delta_H1=121.0 kJ/mol, T_inlet=620.0 \u00b0C, steam:EB ratio=8.5:1 nominal operating envelope."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "StyreneDehydrogenationSync POU verified cleanly with STParser & SecurityGuard; bound %R2060..%R2067 and %M480..%M482."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs, mnemonics) intercepted cleanly with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state converged: conversion=68.50% (>= 68.0%), selectivity=92.40% (>= 92.0%), production=4200.0 kg/h (~4200 kg/h), bed_temp=575.0 \u00b0C, P=0.45 bar."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: mass=1.00e-14 kg/s, elemental=1.00e-14 kg/s, enthalpy=1.00e-15 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Overtemp_And_Vacuum_Loss_Injections",
+        "check": "Thermal_Overtemp_And_Vacuum_Loss_Injections",
+        "passed": true,
+        "details": "0xF201 overtemp (> 660 \u00b0C) and 0xF202 vacuum loss (> 1.20 bar) injections verified; asserted emergency trip %M482 and cleared %M480."
+      },
+      {
+        "stage": 7,
+        "name": "Steam_Starvation_And_Selectivity_Degradation_Injections",
+        "check": "Steam_Starvation_And_Selectivity_Degradation_Injections",
+        "passed": true,
+        "details": "0xF203 steam starvation (< 6.0:1) and 0xF204 selectivity degradation (< 85%) verified; pre-alarm %M481 asserted without trip at ratio 6.5:1."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers %R2060..%R2067 and %M480..%M482 bit-exact verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf201, s=-3583)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=8.1 KB; bed_temp=575.00 \u00b0C, conversion=68.51%, selectivity=92.37%."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R2060..%R2067",
+      "discrete_coils": "%M480..%M482",
+      "values": {
+        "%R2060": 6200,
+        "%R2061": 6850,
+        "%R2062": 9240,
+        "%R2063": 850,
+        "%R2064": 6650,
+        "%R2065": 45,
+        "%R2066": 4200,
+        "%R2067": 61953,
+        "%M480": false,
+        "%M481": false,
+        "%M482": true
+      }
+    },
+    "timestamp": "2026-10-06T20:49:47Z"
+  }
+}

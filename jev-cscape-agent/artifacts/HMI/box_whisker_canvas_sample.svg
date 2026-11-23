@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <filter id="hud-card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="focus-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#3B82F6" flood-opacity="0.8"/>
+    </filter>
+    <filter id="outlier-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#EF4444" flood-opacity="0.9"/>
+    </filter>
+    <style>
+      .scada-title { font-family: "Segoe UI", Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #F8FAFC; }
+      .scada-sub { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .stream-tag { font-family: "Consolas", monospace; font-size: 12px; font-weight: 700; fill: #F8FAFC; text-anchor: middle; }
+      .stream-name { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #94A3B8; text-anchor: middle; }
+      .axis-label { font-family: "Consolas", monospace; font-size: 10px; fill: #94A3B8; text-anchor: end; }
+      .hud-title { font-family: "Segoe UI", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #F8FAFC; }
+      .hud-label { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .hud-val { font-family: "Consolas", monospace; font-size: 12px; font-weight: 600; fill: #F8FAFC; text-anchor: end; }
+      .badge-text { font-family: "Consolas", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; }
+      .outlier-pulse { animation: outlier-keyframe 1.4s infinite ease-in-out; }
+      @keyframes outlier-keyframe {
+        0% { r: 5px; opacity: 1.0; }
+        50% { r: 8px; opacity: 0.6; }
+        100% { r: 5px; opacity: 1.0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Industrial Dark Viewport Background -->
+  <rect id="canvas-background" width="1200" height="750" fill="#0F172A"/>
+
+  <!-- Header & SCADA Title -->
+  <g id="canvas-header">
+    <text x="30" y="38" class="scada-title">DYNAMIC BOX-AND-WHISKER DISTRIBUTION &amp; OUTLIER QUARTILE SCADA CANVAS</text>
+    <text x="30" y="56" class="scada-sub">Work Package W168 • Gate G9 Graphic HMI &amp; Animation Screen Engine / Gate G2 Live GUI • Pure ST &amp; OCS %R1290..%R1297</text>
+    <!-- System Status Decoupled Badge -->
+    <rect x="820" y="20" width="350" height="42" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="835" y="45" font-family="Segoe UI, sans-serif" font-size="11px" font-weight="600" fill="#94A3B8">SYSTEM STATUS:</text>
+    <text x="1155" y="45" class="badge-text" fill="#10B981" text-anchor="end">NOMINAL OPERATION</text>
+  </g>
+
+  <!-- Plot Region & Legend -->
+  <g id="box-plot-area">
+    <rect x="60" y="80" width="750" height="570" rx="6" fill="#1E293B" fill-opacity="0.4" stroke="#334155" stroke-width="1"/>
+    <!-- Legend -->
+    <g id="plot-legend" transform="translate(80, 102)">
+      <!-- Golden Baseline Legend -->
+      <rect x="0" y="-8" width="16" height="12" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <line x1="0" y1="-2" x2="16" y2="-2" stroke="#06B6D4" stroke-width="2"/>
+      <text x="24" y="2" font-family="Segoe UI, sans-serif" font-size="11px" fill="#06B6D4">Golden Baseline (Muted Cyan Contour)</text>
+      <!-- Real-Time Sample Batch Legend -->
+      <rect x="260" y="-8" width="16" height="12" fill="#10B981" fill-opacity="0.35" stroke="#10B981" stroke-width="1.5"/>
+      <line x1="260" y1="-2" x2="276" y2="-2" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="284" y="2" font-family="Segoe UI, sans-serif" font-size="11px" fill="#10B981">Real-Time Batch (Emerald Filled Box)</text>
+      <!-- Outlier Legend -->
+      <circle cx="510" cy="-2" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
+      <text x="522" y="2" font-family="Segoe UI, sans-serif" font-size="11px" fill="#EF4444">Pulsing Outlier (&gt;1.5/3.0*IQR)</text>
+    </g>
+    <!-- Axis Graduation Reference Gridlines -->
+    <g id="grid-lines">
+      <line x1="80" y1="620.0" x2="790" y2="620.0" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="500.0" x2="790" y2="500.0" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="380.0" x2="790" y2="380.0" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="260.0" x2="790" y2="260.0" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="140.0" x2="790" y2="140.0" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+
+    <!-- 5 Process Batch Stream Box Plots -->
+    <g id="stream-box-plots">
+      <!-- Stream 0: Crude Distillation Feed Temp -->
+      <g id="stream-column-0">
+        <rect x="40.0" y="120.0" width="120" height="550.0" rx="4" fill="#0B0F19" fill-opacity="0.3" stroke="none"/>
+        <line x1="100.0" y1="620.0" x2="100.0" y2="140.0" stroke="#475569" stroke-width="1"/>
+        <text x="100.0" y="136.0" class="stream-tag">CDU-FEED-T101</text>
+        <text x="100.0" y="642.0" class="stream-name">Crude Distillation</text>
+        <text x="100.0" y="658.0" font-family="Consolas, monospace" font-size="11px" font-weight="700" fill="#F8FAFC" text-anchor="middle">365.0 °C</text>
+        <!-- Golden Baseline Contour -->
+        <g id="baseline-stream-0" opacity="0.85">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="100.0" y1="524.0" x2="100.0" y2="428.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="100.0" y1="332.0" x2="100.0" y2="236.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- End Cap Min -->
+          <line x1="78.0" y1="524.0" x2="122.0" y2="524.0" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- End Cap Max -->
+          <line x1="78.0" y1="236.0" x2="122.0" y2="236.0" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- Baseline Box Contour (Q1 to Q3) -->
+          <rect x="62.0" y="332.0" width="76.0" height="96.0" fill="#06B6D4" fill-opacity="0.06" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- Baseline Median Line -->
+          <line x1="62.0" y1="380.0" x2="138.0" y2="380.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="2,2"/>
+        </g>
+        <!-- Real-Time Sample Batch Distribution -->
+        <g id="realtime-stream-0">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="100.0" y1="504.8" x2="100.0" y2="418.4" stroke="#10B981" stroke-width="2"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="100.0" y1="341.6" x2="100.0" y2="255.2" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Min -->
+          <line x1="81.0" y1="504.8" x2="119.0" y2="504.8" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Max -->
+          <line x1="81.0" y1="255.2" x2="119.0" y2="255.2" stroke="#10B981" stroke-width="2"/>
+          <!-- Real-Time Filled Box (Q1 to Q3) -->
+          <rect x="66.0" y="341.6" width="68.0" height="76.8" fill="#10B981" fill-opacity="0.38" stroke="#10B981" stroke-width="2"/>
+          <!-- Solid Median Line -->
+          <line x1="66.0" y1="380.0" x2="134.0" y2="380.0" stroke="#FFFFFF" stroke-width="2.5"/>
+        </g>
+      </g>
+      <!-- Stream 1: FCC Riser Reactor Exit Temp -->
+      <g id="stream-column-1">
+        <rect x="215.0" y="120.0" width="120" height="550.0" rx="4" fill="#0B0F19" fill-opacity="0.7" filter="url(#focus-glow)" stroke="#3B82F6" stroke-width="2"/>
+        <line x1="275.0" y1="620.0" x2="275.0" y2="140.0" stroke="#475569" stroke-width="1"/>
+        <text x="275.0" y="136.0" class="stream-tag">FCC-RISER-T204</text>
+        <text x="275.0" y="642.0" class="stream-name">FCC Riser Reactor </text>
+        <text x="275.0" y="658.0" font-family="Consolas, monospace" font-size="11px" font-weight="700" fill="#F8FAFC" text-anchor="middle">512.0 °C</text>
+        <!-- Golden Baseline Contour -->
+        <g id="baseline-stream-1" opacity="0.85">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="275.0" y1="543.2" x2="275.0" y2="476.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="275.0" y1="341.6" x2="275.0" y2="255.2" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- End Cap Min -->
+          <line x1="253.0" y1="543.2" x2="297.0" y2="543.2" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- End Cap Max -->
+          <line x1="253.0" y1="255.2" x2="297.0" y2="255.2" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- Baseline Box Contour (Q1 to Q3) -->
+          <rect x="237.0" y="341.6" width="76.0" height="134.4" fill="#06B6D4" fill-opacity="0.06" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- Baseline Median Line -->
+          <line x1="237.0" y1="408.8" x2="313.0" y2="408.8" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="2,2"/>
+        </g>
+        <!-- Real-Time Sample Batch Distribution -->
+        <g id="realtime-stream-1">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="275.0" y1="514.4" x2="275.0" y2="476.0" stroke="#10B981" stroke-width="2"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="275.0" y1="341.6" x2="275.0" y2="274.4" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Min -->
+          <line x1="256.0" y1="514.4" x2="294.0" y2="514.4" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Max -->
+          <line x1="256.0" y1="274.4" x2="294.0" y2="274.4" stroke="#10B981" stroke-width="2"/>
+          <!-- Real-Time Filled Box (Q1 to Q3) -->
+          <rect x="241.0" y="341.6" width="68.0" height="134.4" fill="#10B981" fill-opacity="0.38" stroke="#10B981" stroke-width="2"/>
+          <!-- Solid Median Line -->
+          <line x1="241.0" y1="408.8" x2="309.0" y2="408.8" stroke="#FFFFFF" stroke-width="2.5"/>
+        </g>
+        <!-- Outlier Points for Stream 1 -->
+        <g id="outliers-stream-1">
+          <circle id="outlier-1-0" class="outlier-pulse" cx="275.0" cy="159.2" r="6" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.5">
+            <animate attributeName="r" values="5;8;5" dur="1.4s" repeatCount="indefinite"/>
+            <title>Outlier: 538.0 °C (MILD >1.5*IQR)</title>
+          </circle>
+        </g>
+      </g>
+      <!-- Stream 2: Hydrocracker Reaction Pressure -->
+      <g id="stream-column-2">
+        <rect x="390.0" y="120.0" width="120" height="550.0" rx="4" fill="#0B0F19" fill-opacity="0.3" stroke="none"/>
+        <line x1="450.0" y1="620.0" x2="450.0" y2="140.0" stroke="#475569" stroke-width="1"/>
+        <text x="450.0" y="136.0" class="stream-tag">HC-REACT-P302</text>
+        <text x="450.0" y="642.0" class="stream-name">Hydrocracker React</text>
+        <text x="450.0" y="658.0" font-family="Consolas, monospace" font-size="11px" font-weight="700" fill="#F8FAFC" text-anchor="middle">165.0 bar</text>
+        <!-- Golden Baseline Contour -->
+        <g id="baseline-stream-2" opacity="0.85">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="450.0" y1="524.0" x2="450.0" y2="428.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="450.0" y1="332.0" x2="450.0" y2="236.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- End Cap Min -->
+          <line x1="428.0" y1="524.0" x2="472.0" y2="524.0" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- End Cap Max -->
+          <line x1="428.0" y1="236.0" x2="472.0" y2="236.0" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- Baseline Box Contour (Q1 to Q3) -->
+          <rect x="412.0" y="332.0" width="76.0" height="96.0" fill="#06B6D4" fill-opacity="0.06" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- Baseline Median Line -->
+          <line x1="412.0" y1="380.0" x2="488.0" y2="380.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="2,2"/>
+        </g>
+        <!-- Real-Time Sample Batch Distribution -->
+        <g id="realtime-stream-2">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="450.0" y1="504.8" x2="450.0" y2="418.4" stroke="#10B981" stroke-width="2"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="450.0" y1="341.6" x2="450.0" y2="255.2" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Min -->
+          <line x1="431.0" y1="504.8" x2="469.0" y2="504.8" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Max -->
+          <line x1="431.0" y1="255.2" x2="469.0" y2="255.2" stroke="#10B981" stroke-width="2"/>
+          <!-- Real-Time Filled Box (Q1 to Q3) -->
+          <rect x="416.0" y="341.6" width="68.0" height="76.8" fill="#10B981" fill-opacity="0.38" stroke="#10B981" stroke-width="2"/>
+          <!-- Solid Median Line -->
+          <line x1="416.0" y1="380.0" x2="484.0" y2="380.0" stroke="#FFFFFF" stroke-width="2.5"/>
+        </g>
+      </g>
+      <!-- Stream 3: CCR Reformer Aromatics Octane RON -->
+      <g id="stream-column-3">
+        <rect x="565.0" y="120.0" width="120" height="550.0" rx="4" fill="#0B0F19" fill-opacity="0.3" stroke="none"/>
+        <line x1="625.0" y1="620.0" x2="625.0" y2="140.0" stroke="#475569" stroke-width="1"/>
+        <text x="625.0" y="136.0" class="stream-tag">CCR-OCTANE-AI401</text>
+        <text x="625.0" y="642.0" class="stream-name">CCR Reformer Aroma</text>
+        <text x="625.0" y="658.0" font-family="Consolas, monospace" font-size="11px" font-weight="700" fill="#F8FAFC" text-anchor="middle">98.5 RON</text>
+        <!-- Golden Baseline Contour -->
+        <g id="baseline-stream-3" opacity="0.85">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="625.0" y1="540.0" x2="625.0" y2="440.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="625.0" y1="280.0" x2="625.0" y2="200.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- End Cap Min -->
+          <line x1="603.0" y1="540.0" x2="647.0" y2="540.0" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- End Cap Max -->
+          <line x1="603.0" y1="200.0" x2="647.0" y2="200.0" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- Baseline Box Contour (Q1 to Q3) -->
+          <rect x="587.0" y="280.0" width="76.0" height="160.0" fill="#06B6D4" fill-opacity="0.06" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- Baseline Median Line -->
+          <line x1="587.0" y1="360.0" x2="663.0" y2="360.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="2,2"/>
+        </g>
+        <!-- Real-Time Sample Batch Distribution -->
+        <g id="realtime-stream-3">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="625.0" y1="500.0" x2="625.0" y2="420.0" stroke="#10B981" stroke-width="2"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="625.0" y1="300.0" x2="625.0" y2="220.0" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Min -->
+          <line x1="606.0" y1="500.0" x2="644.0" y2="500.0" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Max -->
+          <line x1="606.0" y1="220.0" x2="644.0" y2="220.0" stroke="#10B981" stroke-width="2"/>
+          <!-- Real-Time Filled Box (Q1 to Q3) -->
+          <rect x="591.0" y="300.0" width="68.0" height="120.0" fill="#10B981" fill-opacity="0.38" stroke="#10B981" stroke-width="2"/>
+          <!-- Solid Median Line -->
+          <line x1="591.0" y1="360.0" x2="659.0" y2="360.0" stroke="#FFFFFF" stroke-width="2.5"/>
+        </g>
+      </g>
+      <!-- Stream 4: Delayed Coker Vapor Exit -->
+      <g id="stream-column-4">
+        <rect x="740.0" y="120.0" width="120" height="550.0" rx="4" fill="#0B0F19" fill-opacity="0.3" stroke="none"/>
+        <line x1="800.0" y1="620.0" x2="800.0" y2="140.0" stroke="#475569" stroke-width="1"/>
+        <text x="800.0" y="136.0" class="stream-tag">DCU-VAPOR-T501</text>
+        <text x="800.0" y="642.0" class="stream-name">Delayed Coker Vapo</text>
+        <text x="800.0" y="658.0" font-family="Consolas, monospace" font-size="11px" font-weight="700" fill="#F8FAFC" text-anchor="middle">435.0 °C</text>
+        <!-- Golden Baseline Contour -->
+        <g id="baseline-stream-4" opacity="0.85">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="800.0" y1="543.2" x2="800.0" y2="447.2" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="800.0" y1="312.8" x2="800.0" y2="216.8" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- End Cap Min -->
+          <line x1="778.0" y1="543.2" x2="822.0" y2="543.2" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- End Cap Max -->
+          <line x1="778.0" y1="216.8" x2="822.0" y2="216.8" stroke="#06B6D4" stroke-width="1.5"/>
+          <!-- Baseline Box Contour (Q1 to Q3) -->
+          <rect x="762.0" y="312.8" width="76.0" height="134.4" fill="#06B6D4" fill-opacity="0.06" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- Baseline Median Line -->
+          <line x1="762.0" y1="380.0" x2="838.0" y2="380.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="2,2"/>
+        </g>
+        <!-- Real-Time Sample Batch Distribution -->
+        <g id="realtime-stream-4">
+          <!-- Whisker Bottom (Min to Q1) -->
+          <line x1="800.0" y1="504.8" x2="800.0" y2="428.0" stroke="#10B981" stroke-width="2"/>
+          <!-- Whisker Top (Q3 to Max) -->
+          <line x1="800.0" y1="332.0" x2="800.0" y2="255.2" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Min -->
+          <line x1="781.0" y1="504.8" x2="819.0" y2="504.8" stroke="#10B981" stroke-width="2"/>
+          <!-- End Cap Max -->
+          <line x1="781.0" y1="255.2" x2="819.0" y2="255.2" stroke="#10B981" stroke-width="2"/>
+          <!-- Real-Time Filled Box (Q1 to Q3) -->
+          <rect x="766.0" y="332.0" width="68.0" height="96.0" fill="#10B981" fill-opacity="0.38" stroke="#10B981" stroke-width="2"/>
+          <!-- Solid Median Line -->
+          <line x1="766.0" y1="380.0" x2="834.0" y2="380.0" stroke="#FFFFFF" stroke-width="2.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Statistical Process Capability & Quartile HUD Card -->
+  <g id="quartile-hud-card" filter="url(#hud-card-shadow)">
+    <!-- Card Background -->
+    <rect x="830" y="80" width="340" height="640" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <!-- Header Title -->
+    <text x="848" y="110" class="hud-title">PROCESS CAPABILITY &amp; QUARTILE HUD</text>
+    <text x="848" y="126" class="scada-sub">Gate G9 Real-Time Telemetry &amp; Statistical Bounds</text>
+    <line x1="848" y1="136" x2="1152" y2="136" stroke="#334155" stroke-width="1"/>
+    <!-- Selected Stream Badge -->
+    <rect x="848" y="144" width="304" height="42" rx="4" fill="#0B0F19" stroke="#3B82F6" stroke-width="1"/>
+    <text x="860" y="164" font-family="Segoe UI, sans-serif" font-size="11px" fill="#94A3B8">FOCUSED STREAM [1]:</text>
+    <text x="1140" y="164" class="hud-val" fill="#F8FAFC">FCC-RISER-T204</text>
+    <text x="860" y="178" font-family="Segoe UI, sans-serif" font-size="10px" fill="#3B82F6">FCC Riser Reactor Exit Temp</text>
+    <!-- Tukey Five-Number Summary Table -->
+    <text x="848" y="206" font-family="Segoe UI, sans-serif" font-size="11px" font-weight="700" fill="#06B6D4">TUKEY FIVE-NUMBER SUMMARY</text>
+    <line x1="848" y1="212" x2="1152" y2="212" stroke="#334155" stroke-width="1"/>
+    <text x="848" y="230" class="hud-label">Minimum (Min)</text>
+    <text x="1152" y="230" class="hud-val">501.0 °C</text>
+    <text x="848" y="248" class="hud-label">First Quartile (Q1 25%)</text>
+    <text x="1152" y="248" class="hud-val">505.0 °C</text>
+    <text x="848" y="266" class="hud-label">Median (Q2 50%)</text>
+    <text x="1152" y="266" class="hud-val">512.0 °C</text>
+    <text x="848" y="284" class="hud-label">Third Quartile (Q3 75%)</text>
+    <text x="1152" y="284" class="hud-val">519.0 °C</text>
+    <text x="848" y="302" class="hud-label">Maximum (Max)</text>
+    <text x="1152" y="302" class="hud-val">526.0 °C</text>
+    <text x="848" y="320" class="hud-label">Interquartile Span (IQR)</text>
+    <text x="1152" y="320" class="hud-val">14.0 °C</text>
+    <!-- Outlier Fences Analysis -->
+    <text x="848" y="348" font-family="Segoe UI, sans-serif" font-size="11px" font-weight="700" fill="#F59E0B">OUTLIER FENCES &amp; EXPANSION</text>
+    <line x1="848" y1="354" x2="1152" y2="354" stroke="#334155" stroke-width="1"/>
+    <text x="848" y="372" class="hud-label">Inner Fence (1.5*IQR)</text>
+    <text x="1152" y="372" class="hud-val">[484.0 .. 540.0]</text>
+    <text x="848" y="390" class="hud-label">Extreme Fence (3.0*IQR)</text>
+    <text x="1152" y="390" class="hud-val">[463.0 .. 561.0]</text>
+    <text x="848" y="408" class="hud-label">Stream Outliers Count</text>
+    <text x="1152" y="408" class="hud-val">1 detected</text>
+    <text x="848" y="426" class="hud-label">IQR Expansion Ratio</text>
+    <text x="1152" y="426" class="hud-val">1.00x (+0.0%)</text>
+    <!-- Safety Interlocks & Diagnostics -->
+    <text x="848" y="454" font-family="Segoe UI, sans-serif" font-size="11px" font-weight="700" fill="#EF4444">PROCESS SAFETY INTERLOCKS</text>
+    <line x1="848" y1="460" x2="1152" y2="460" stroke="#334155" stroke-width="1"/>
+    <text x="848" y="478" class="hud-label">Outlier Safety Trip (%M301)</text>
+    <text x="1152" y="478" class="hud-val" fill="#10B981">OK / NORMAL</text>
+    <text x="848" y="496" class="hud-label">Canvas Engine Active (%M302)</text>
+    <text x="1152" y="496" class="hud-val" fill="#10B981">TRUE</text>
+    <text x="848" y="514" class="hud-label">Diagnostic Code (%R1297)</text>
+    <text x="1152" y="514" class="hud-val" fill="#F8FAFC">0x0000</text>
+    <text x="848" y="532" class="hud-label">Selected Median x10 (%R1290)</text>
+    <text x="1152" y="532" class="hud-val" fill="#F8FAFC">5120</text>
+    <text x="848" y="550" class="hud-label">Selected IQR x10 (%R1291)</text>
+    <text x="1152" y="550" class="hud-val" fill="#F8FAFC">140</text>
+    <text x="848" y="568" class="hud-label">Total Outliers Count (%R1292)</text>
+    <text x="1152" y="568" class="hud-val" fill="#F8FAFC">0</text>
+  </g>
+</svg>

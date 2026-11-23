@@ -1,0 +1,57 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Symbol matrix & QR generator verification: 6/6 checks passed.",
+  "data": {
+    "symbologies": [
+      "Code 128",
+      "Code 39",
+      "QR Code Version 1",
+      "QR Code Version 2"
+    ],
+    "tests": [
+      {
+        "check": "Pure_ST_POU_Validation",
+        "pou_name": "BarcodeSymbolGenerator",
+        "passed": true
+      },
+      {
+        "check": "Code128_1D_Rasterization",
+        "payload": "JEV-2026",
+        "bits_len": 123,
+        "passed": true
+      },
+      {
+        "check": "Code39_1D_Rasterization",
+        "payload": "CSCAPE",
+        "bits_len": 103,
+        "passed": true
+      },
+      {
+        "check": "QRCode_2D_V1_Generation",
+        "payload": "BATCH-99",
+        "grid_dim": 21,
+        "passed": true
+      },
+      {
+        "check": "QRCode_2D_V2_Generation_And_SVG_Export",
+        "payload": "HORNER-OCS-W072",
+        "grid_dim": 25,
+        "exported_svg": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\qr_code_sample.svg",
+        "passed": true
+      },
+      {
+        "check": "Horner_OCS_Register_Handshake",
+        "status_word": 9,
+        "total_elements": 441,
+        "passed": true
+      }
+    ],
+    "sample_svg_path": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\qr_code_sample.svg",
+    "register_map": {
+      "analog_registers": "%R330..%R335",
+      "discrete_coils": "%M77..%M78"
+    },
+    "timestamp": 1790986882.6636326
+  }
+}

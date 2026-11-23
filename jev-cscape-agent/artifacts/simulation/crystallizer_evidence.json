@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Crystallizer PBE MOM ODE verification: 5/5 checks passed.",
+  "data": {
+    "model": "Batch Vacuum Evaporative Crystallizer (PBE Method of Moments)",
+    "tests": [
+      {
+        "check": "Pure_ST_POU_Validation",
+        "pou_name": "W083_CrystallizerPopulationBalance",
+        "passed": true
+      },
+      {
+        "check": "Forbidden_Ladder_Construct_Rejection",
+        "passed": true
+      },
+      {
+        "check": "Dynamic_Crystal_Growth_and_Evaporative_Cooling",
+        "initial_l10_um": 100.0,
+        "final_l10_um": 154.94897865573157,
+        "initial_mt": 8.27288,
+        "final_mt": 14.354719593443823,
+        "passed": true
+      },
+      {
+        "check": "Horner_OCS_Register_Mapping_Sync",
+        "R440_solute": 28280,
+        "R441_temp": 542,
+        "R443_l10": 1549,
+        "R447_status": 3,
+        "passed": true
+      },
+      {
+        "check": "Emergency_Fines_Dissolution_Override",
+        "passed": true
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R440..%R447",
+      "discrete_coils": "%M102..%M104"
+    },
+    "timestamp": 1790990312.3153114
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W282 Dynamic Medial Axis Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W282",
+    "gate": "G9",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "polygon_boundary_and_point_sampling",
+        "check": "polygon_boundary_and_point_sampling",
+        "passed": true,
+        "timing_ms": 1.67,
+        "details": "Polygon defined with 12 vertices (area=242000); 76 boundary sample points generated."
+      },
+      {
+        "stage": 2,
+        "name": "voronoi_and_medial_axis_extraction",
+        "check": "voronoi_and_medial_axis_extraction",
+        "passed": true,
+        "timing_ms": 678.77,
+        "details": "Extracted 74 interior Voronoi medial nodes and 73 raw branch segments."
+      },
+      {
+        "stage": 3,
+        "name": "maximal_inscribed_circle_radius_field",
+        "check": "maximal_inscribed_circle_radius_field",
+        "passed": true,
+        "timing_ms": 0.011,
+        "details": "Clearance radius field verified: Max MIC radius 178.5px, Min clearance 17.9px."
+      },
+      {
+        "stage": 4,
+        "name": "branch_pruning_and_noise_filtering",
+        "check": "branch_pruning_and_noise_filtering",
+        "passed": true,
+        "timing_ms": 804.784,
+        "details": "Noise filtering pruned spires: unpruned=73 -> pruned=65 branches; all nodes >= 45.0px."
+      },
+      {
+        "stage": 5,
+        "name": "bottleneck_and_clearance_violation_detection",
+        "check": "bottleneck_and_clearance_violation_detection",
+        "passed": true,
+        "timing_ms": 1929.653,
+        "details": "Bottleneck detector located 12 narrow chokes in neck (x in [450, 650]); asserts %M568."
+      },
+      {
+        "stage": 6,
+        "name": "degenerate_and_collinear_handling",
+        "check": "degenerate_and_collinear_handling",
+        "passed": true,
+        "timing_ms": 0.513,
+        "details": "Degenerate collinear, two-point, and zero-point inputs handled robustly with DIAG_ERR_DEGENERATE_GEOMETRY (0x8202)."
+      },
+      {
+        "stage": 7,
+        "name": "wcag_aaa_svg_canvas_rendering",
+        "check": "wcag_aaa_svg_canvas_rendering",
+        "passed": true,
+        "timing_ms": 1.61,
+        "details": "SVG parses cleanly; badge contrast 20.0:1 >= 18:1; branches & inscribed disks rendered."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 2996.87,
+        "details": "RegisterTable %R2430..%R2437 and coils %M567..%M568 synchronized bit-exact."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.924,
+        "details": "MedialAxisCanvasSync pure ST AST verified; ladder contacts rejected with LadderForbiddenError."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "polygon_boundary_and_point_sampling",
+        "check": "polygon_boundary_and_point_sampling",
+        "passed": true,
+        "timing_ms": 1.67,
+        "details": "Polygon defined with 12 vertices (area=242000); 76 boundary sample points generated."
+      },
+      {
+        "stage": 2,
+        "name": "voronoi_and_medial_axis_extraction",
+        "check": "voronoi_and_medial_axis_extraction",
+        "passed": true,
+        "timing_ms": 678.77,
+        "details": "Extracted 74 interior Voronoi medial nodes and 73 raw branch segments."
+      },
+      {
+        "stage": 3,
+        "name": "maximal_inscribed_circle_radius_field",
+        "check": "maximal_inscribed_circle_radius_field",
+        "passed": true,
+        "timing_ms": 0.011,
+        "details": "Clearance radius field verified: Max MIC radius 178.5px, Min clearance 17.9px."
+      },
+      {
+        "stage": 4,
+        "name": "branch_pruning_and_noise_filtering",
+        "check": "branch_pruning_and_noise_filtering",
+        "passed": true,
+        "timing_ms": 804.784,
+        "details": "Noise filtering pruned spires: unpruned=73 -> pruned=65 branches; all nodes >= 45.0px."
+      },
+      {
+        "stage": 5,
+        "name": "bottleneck_and_clearance_violation_detection",
+        "check": "bottleneck_and_clearance_violation_detection",
+        "passed": true,
+        "timing_ms": 1929.653,
+        "details": "Bottleneck detector located 12 narrow chokes in neck (x in [450, 650]); asserts %M568."
+      },
+      {
+        "stage": 6,
+        "name": "degenerate_and_collinear_handling",
+        "check": "degenerate_and_collinear_handling",
+        "passed": true,
+        "timing_ms": 0.513,
+        "details": "Degenerate collinear, two-point, and zero-point inputs handled robustly with DIAG_ERR_DEGENERATE_GEOMETRY (0x8202)."
+      },
+      {
+        "stage": 7,
+        "name": "wcag_aaa_svg_canvas_rendering",
+        "check": "wcag_aaa_svg_canvas_rendering",
+        "passed": true,
+        "timing_ms": 1.61,
+        "details": "SVG parses cleanly; badge contrast 20.0:1 >= 18:1; branches & inscribed disks rendered."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 2996.87,
+        "details": "RegisterTable %R2430..%R2437 and coils %M567..%M568 synchronized bit-exact."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.924,
+        "details": "MedialAxisCanvasSync pure ST AST verified; ladder contacts rejected with LadderForbiddenError."
+      }
+    ]
+  }
+}

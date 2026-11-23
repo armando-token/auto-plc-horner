@@ -1,0 +1,52 @@
+{
+  "work_package": "W078",
+  "gate": "G9",
+  "component": "Cscape HMI Interactive Data Table & Grid Column Virtualizer Rasterizer",
+  "timestamp_utc": "2026-10-03T00:49:07.127187+00:00",
+  "overall_status": "success",
+  "registers": {
+    "%R390": 21,
+    "%R391": 30,
+    "%R392": 5,
+    "%R393": 10,
+    "%R394": 8,
+    "%R395": 0,
+    "%R396": 0,
+    "%R397": 7,
+    "%M91": true,
+    "%M92": false
+  },
+  "checks": {
+    "virtual_scroll_pagination": {
+      "status": "passed",
+      "requested_12_actual": 12,
+      "requested_45_clamped_max": 20,
+      "virtual_scroll_active_bit": true
+    },
+    "multi_column_sorting": {
+      "status": "passed",
+      "desc_val_first": 133.75,
+      "desc_val_last": 25.0,
+      "asc_id_first": 1
+    },
+    "row_selection": {
+      "status": "passed",
+      "selected_row_index": 2,
+      "selected_valid_bit": true
+    },
+    "svg_export_and_wcag_aaa": {
+      "status": "passed",
+      "svg_file_path": "artifacts/HMI/table_sample.svg",
+      "byte_size": 14154,
+      "root_tag": "{http://www.w3.org/2000/svg}svg",
+      "wcag_aaa_badges_verified": true
+    },
+    "register_table_synchronization": {
+      "status": "passed",
+      "r390_status": 21,
+      "r391_total_rows": 30,
+      "r392_start_row": 5,
+      "r394_selected_row": 8
+    }
+  }
+}

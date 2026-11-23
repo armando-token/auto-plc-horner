@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <!-- Glow Filter for Radiant Live Flame -->
+    <filter id="flame-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Alert Pulse Halo Filter -->
+    <filter id="alert-halo" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#EF4444" flood-opacity="0.9"/>
+    </filter>
+    <!-- Live Flame Radial Shading Gradient -->
+    <radialGradient id="flame-thermal-gradient" cx="30%" cy="50%" r="70%" fx="20%" fy="50%">
+      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="0.98"/>
+      <stop offset="30%" stop-color="#F59E0B" stop-opacity="0.92"/>
+      <stop offset="65%" stop-color="#06B6D4" stop-opacity="0.80"/>
+      <stop offset="90%" stop-color="#1E3A8A" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.0"/>
+    </radialGradient>
+    <!-- Refractory Wall Gradient -->
+    <linearGradient id="refractory-wall-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <!-- Isotherm Palette Horizontal Color Bar -->
+    <linearGradient id="isotherm-colorbar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="25%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="75%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <style>
+      .title-text { font-family: Segoe UI, -apple-system, sans-serif; font-size: 16px; font-weight: 700; fill: #F8FAFC; }
+      .subtitle-text { font-family: Segoe UI, -apple-system, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .badge-text { font-family: Segoe UI, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #F8FAFC; }
+      .hud-header { font-family: Segoe UI, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+      .hud-sub { font-family: Segoe UI, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #94A3B8; letter-spacing: 0.3px; }
+      .hud-label { font-family: Segoe UI, -apple-system, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .hud-val { font-family: Consolas, monospace, sans-serif; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+      .isotherm-label { font-family: Consolas, monospace, sans-serif; font-size: 10px; font-weight: 600; fill: #F8FAFC; }
+      .sensor-temp-text { font-family: Consolas, monospace, sans-serif; font-size: 8px; fill: #94A3B8; text-anchor: middle; }
+      .btn-text { font-family: Segoe UI, -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #F8FAFC; text-anchor: middle; }
+      .btn-sub { font-family: Consolas, monospace, sans-serif; font-size: 8px; fill: #94A3B8; text-anchor: middle; }
+    </style>
+  </defs>
+  <!-- Canvas Background -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <!-- Canvas Header -->
+  <g id="canvas-header">
+    <text class="title-text" x="40" y="25">INDUSTRIAL FURNACE BURNER BANK - FLAME 3D CONTOUR &amp; COMBUSTION SCADA</text>
+    <text class="subtitle-text" x="40" y="43">Work Package W180 | Gate G9 Screen Engine / Gate G2 Live GUI | Horner OCS Sync %R1410..%R1417, %M329..%M330</text>
+    <!-- Telemetry Status Badge -->
+    <rect x="805" y="11" width="160" height="26" rx="4" fill="#0B0F19" stroke="#065F46" stroke-width="1.2"/>
+    <circle cx="818" cy="24" r="4.5" fill="#10B981"/>
+    <text class="badge-text" x="830" y="28">NORMAL COMBUSTION</text>
+    <!-- WCAG AAA Verification Badge -->
+    <rect x="975" y="11" width="185" height="26" rx="4" fill="#0B0F19" stroke="#059669" stroke-width="1.2"/>
+    <circle cx="988" cy="24" r="4.5" fill="#10B981"/>
+    <text class="badge-text" x="1000" y="28">WCAG 2.1 AAA &gt; 18:1 (OK)</text>
+  </g>
+  <!-- Industrial Furnace Radiant Firebox Chamber -->
+  <g id="combustion-firebox">
+    <!-- Refractory Lining Chamber Boundary -->
+    <rect x="50.0" y="80.0" width="720.0" height="530.0" rx="6" fill="url(#refractory-wall-grad)" stroke="#334155" stroke-width="2"/>
+    <!-- Chamber Dimension Axes & Ticks -->
+    <line x1="50.0" y1="345.0" x2="770.0" y2="345.0" stroke="#1E293B" stroke-width="1" stroke-dasharray="2,4"/>
+    <!-- Burner Throat & Swirl Vanes -->
+    <g id="burner-throat">
+      <rect x="60.0" y="295.0" width="40.0" height="100.0" rx="3" fill="#475569" stroke="#64748B" stroke-width="1.5"/>
+      <!-- Burner Fuel Injection Nozzle -->
+      <circle cx="80.0" cy="345.0" r="12" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="66.0" y1="315.0" x2="94.0" y2="375.0" stroke="#94A3B8" stroke-width="1"/>
+      <line x1="66.0" y1="375.0" x2="94.0" y2="315.0" stroke="#94A3B8" stroke-width="1"/>
+      <text x="66.0" y="287.0" font-family="Segoe UI, sans-serif" font-size="9px" font-weight="600" fill="#94A3B8">THROAT</text>
+    </g>
+    <!-- Pseudo-3D Thermal Elevation Wireframe Surface -->
+    <g id="pseudo-3d-wireframe">
+      <path d="M 154.4 126.2 L 233.1 123.0 L 311.9 125.1 L 390.6 131.3 L 469.4 138.2 L 548.1 143.4 L 626.9 146.4 L 705.6 147.6" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 172.2 L 233.1 168.0 L 311.9 171.4 L 390.6 180.5 L 469.4 190.5 L 548.1 197.9 L 626.9 201.9 L 705.6 203.7" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 219.1 L 233.1 214.1 L 311.9 218.8 L 390.6 230.5 L 469.4 243.2 L 548.1 252.5 L 626.9 257.6 L 705.6 259.7" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 269.8 L 233.1 264.2 L 311.9 269.7 L 390.6 283.0 L 469.4 297.4 L 548.1 307.9 L 626.9 313.5 L 705.6 315.9" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 326.3 L 233.1 320.8 L 311.9 326.2 L 390.6 339.5 L 469.4 353.8 L 548.1 364.2 L 626.9 369.9 L 705.6 372.2" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 388.6 L 233.1 383.6 L 311.9 388.2 L 390.6 399.8 L 469.4 412.4 L 548.1 421.6 L 626.9 426.6 L 705.6 428.7" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 454.5 L 233.1 450.4 L 311.9 453.7 L 390.6 462.5 L 469.4 472.3 L 548.1 479.6 L 626.9 483.6 L 705.6 485.3" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+      <path d="M 154.4 521.1 L 233.1 518.0 L 311.9 520.0 L 390.6 526.0 L 469.4 532.7 L 548.1 537.8 L 626.9 540.6 L 705.6 541.8" fill="none" stroke="#334155" stroke-width="0.8" stroke-dasharray="1,2" opacity="0.75"/>
+    </g>
+    <!-- Dual State 1: Golden Design Flame Contour (Dashed Cyan Boundary) -->
+    <g id="golden-design-flame">
+      <path d="M 135.00 345.00 C 135.00 301.54 156.95 238.09 167.93 214.62 C 178.90 191.16 189.88 203.75 200.86 204.19 C 211.83 204.63 222.81 211.24 233.78 217.28 C 244.76 223.32 255.73 232.06 266.71 240.43 C 277.69 248.80 288.66 258.39 299.64 267.51 C 310.61 276.62 321.59 286.16 332.57 295.14 C 343.54 304.11 354.52 313.04 365.49 321.35 C 376.47 329.66 398.42 337.12 398.42 345.00 C 398.42 352.88 376.47 360.34 365.49 368.65 C 354.52 376.96 343.54 385.89 332.57 394.86 C 321.59 403.84 310.61 413.38 299.64 422.49 C 288.66 431.61 277.69 441.20 266.71 449.57 C 255.73 457.94 244.76 466.68 233.78 472.72 C 222.81 478.76 211.83 485.37 200.86 485.81 C 189.88 486.25 178.90 498.84 167.93 475.38 C 156.95 451.91 135.00 388.46 135.00 345.00 Z" fill="none" stroke="#06B6D4" stroke-width="2.2" stroke-dasharray="6,4" opacity="0.9"/>
+      <!-- Golden Design Tag -->
+      <text x="590.0" y="115.0" font-family="Segoe UI, sans-serif" font-size="10px" font-weight="600" fill="#06B6D4">--- Golden Design Envelope</text>
+    </g>
+    <!-- Dual State 2: Live Combustion Flame Profile (Vibrant Gradient & Glow) -->
+    <g id="live-combustion-flame" filter="url(#flame-glow)">
+      <path d="M 135.00 345.00 C 135.00 294.25 162.02 220.16 175.53 192.75 C 189.04 165.35 202.54 180.05 216.05 180.57 C 229.56 181.08 243.07 188.80 256.58 195.85 C 270.09 202.90 283.60 213.11 297.11 222.88 C 310.61 232.66 324.12 243.86 337.63 254.51 C 351.14 265.15 364.65 276.29 378.16 286.77 C 391.67 297.25 405.18 307.68 418.68 317.39 C 432.19 327.09 459.21 335.80 459.21 345.00 C 459.21 354.20 432.19 362.91 418.68 372.61 C 405.18 382.32 391.67 392.75 378.16 403.23 C 364.65 413.71 351.14 424.85 337.63 435.49 C 324.12 446.14 310.61 457.34 297.11 467.12 C 283.60 476.89 270.09 487.10 256.58 494.15 C 243.07 501.20 229.56 508.92 216.05 509.43 C 202.54 509.95 189.04 524.65 175.53 497.25 C 162.02 469.84 135.00 395.75 135.00 345.00 Z" fill="url(#flame-thermal-gradient)" stroke="#F59E0B" stroke-width="1.5" opacity="0.95"/>
+    </g>
+    <!-- 5 Isothermal Temperature Contours -->
+    <g id="isothermal-contours">
+      <!-- Isotherm 800 °C -->
+      <path id="isotherm-800" d="M 135.00 345.00 C 135.00 294.25 162.02 220.16 175.53 192.75 C 189.04 165.35 202.54 180.05 216.05 180.57 C 229.56 181.08 243.07 188.80 256.58 195.85 C 270.09 202.90 283.60 213.11 297.11 222.88 C 310.61 232.66 324.12 243.86 337.63 254.51 C 351.14 265.15 364.65 276.29 378.16 286.77 C 391.67 297.25 405.18 307.68 418.68 317.39 C 432.19 327.09 459.21 335.80 459.21 345.00 C 459.21 354.20 432.19 362.91 418.68 372.61 C 405.18 382.32 391.67 392.75 378.16 403.23 C 364.65 413.71 351.14 424.85 337.63 435.49 C 324.12 446.14 310.61 457.34 297.11 467.12 C 283.60 476.89 270.09 487.10 256.58 494.15 C 243.07 501.20 229.56 508.92 216.05 509.43 C 202.54 509.95 189.04 524.65 175.53 497.25 C 162.02 469.84 135.00 395.75 135.00 345.00 Z" fill="none" stroke="#1E3A8A" stroke-width="1.6" stroke-dasharray="none" opacity="0.85"/>
+      <!-- Isotherm 1000 °C -->
+      <path id="isotherm-1000" d="M 135.00 345.00 C 135.00 301.54 156.95 238.09 167.93 214.62 C 178.90 191.16 189.88 203.75 200.86 204.19 C 211.83 204.63 222.81 211.24 233.78 217.28 C 244.76 223.32 255.73 232.06 266.71 240.43 C 277.69 248.80 288.66 258.39 299.64 267.51 C 310.61 276.62 321.59 286.16 332.57 295.14 C 343.54 304.11 354.52 313.04 365.49 321.35 C 376.47 329.66 398.42 337.12 398.42 345.00 C 398.42 352.88 376.47 360.34 365.49 368.65 C 354.52 376.96 343.54 385.89 332.57 394.86 C 321.59 403.84 310.61 413.38 299.64 422.49 C 288.66 431.61 277.69 441.20 266.71 449.57 C 255.73 457.94 244.76 466.68 233.78 472.72 C 222.81 478.76 211.83 485.37 200.86 485.81 C 189.88 486.25 178.90 498.84 167.93 475.38 C 156.95 451.91 135.00 388.46 135.00 345.00 Z" fill="none" stroke="#06B6D4" stroke-width="1.6" stroke-dasharray="none" opacity="0.85"/>
+      <!-- Isotherm 1200 °C -->
+      <path id="isotherm-1200" d="M 135.00 345.00 C 135.00 310.33 151.89 259.72 160.33 241.00 C 168.77 222.27 177.21 232.32 185.66 232.67 C 194.10 233.02 202.54 238.29 210.99 243.11 C 219.43 247.93 227.87 254.90 236.32 261.58 C 244.76 268.26 253.20 275.91 261.64 283.18 C 270.09 290.45 278.53 298.07 286.97 305.22 C 295.42 312.38 303.86 319.51 312.30 326.14 C 320.75 332.77 337.63 338.71 337.63 345.00 C 337.63 351.29 320.75 357.23 312.30 363.86 C 303.86 370.49 295.42 377.62 286.97 384.78 C 278.53 391.93 270.09 399.55 261.64 406.82 C 253.20 414.09 244.76 421.74 236.32 428.42 C 227.87 435.10 219.43 442.07 210.99 446.89 C 202.54 451.71 194.10 456.98 185.66 457.33 C 177.21 457.68 168.77 467.73 160.33 449.00 C 151.89 430.28 135.00 379.67 135.00 345.00 Z" fill="none" stroke="#F59E0B" stroke-width="1.6" stroke-dasharray="none" opacity="0.85"/>
+      <!-- Isotherm 1400 °C -->
+      <path id="isotherm-1400" d="M 135.00 345.00 C 135.00 322.30 146.82 289.17 152.73 276.91 C 158.64 264.66 164.55 271.23 170.46 271.46 C 176.37 271.69 182.28 275.14 188.19 278.30 C 194.10 281.45 200.01 286.02 205.92 290.39 C 211.83 294.76 217.74 299.77 223.65 304.53 C 229.56 309.29 235.47 314.27 241.38 318.96 C 247.29 323.65 253.20 328.31 259.11 332.65 C 265.02 336.99 276.84 340.88 276.84 345.00 C 276.84 349.12 265.02 353.01 259.11 357.35 C 253.20 361.69 247.29 366.35 241.38 371.04 C 235.47 375.73 229.56 380.71 223.65 385.47 C 217.74 390.23 211.83 395.24 205.92 399.61 C 200.01 403.98 194.10 408.55 188.19 411.70 C 182.28 414.86 176.37 418.31 170.46 418.54 C 164.55 418.77 158.64 425.34 152.73 413.09 C 146.82 400.83 135.00 367.70 135.00 345.00 Z" fill="none" stroke="#FB923C" stroke-width="1.6" stroke-dasharray="none" opacity="0.85"/>
+      <!-- Isotherm 1600 °C -->
+      <path id="isotherm-1600" d="M 135.00 345.00 C 135.00 328.85 144.95 305.26 149.92 296.54 C 154.89 287.81 159.86 292.49 164.84 292.66 C 169.81 292.82 174.78 295.28 179.76 297.52 C 184.73 299.77 189.70 303.02 194.68 306.13 C 199.65 309.24 204.62 312.80 209.59 316.19 C 214.57 319.58 219.54 323.13 224.51 326.47 C 229.49 329.80 234.46 333.12 239.43 336.21 C 244.40 339.30 254.35 342.07 254.35 345.00 C 254.35 347.93 244.40 350.70 239.43 353.79 C 234.46 356.88 229.49 360.20 224.51 363.53 C 219.54 366.87 214.57 370.42 209.59 373.81 C 204.62 377.20 199.65 380.76 194.68 383.87 C 189.70 386.98 184.73 390.23 179.76 392.48 C 174.78 394.72 169.81 397.18 164.84 397.34 C 159.86 397.51 154.89 402.19 149.92 393.46 C 144.95 384.74 135.00 361.15 135.00 345.00 Z" fill="none" stroke="#F8FAFC" stroke-width="2.5" stroke-dasharray="none" opacity="0.95"/>
+    </g>
+    <!-- 8x8 Thermal Sensor Nodes Matrix -->
+    <g id="sensor-nodes-matrix">
+      <circle cx="154.4" cy="126.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="123.0" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="311.9" cy="125.1" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="131.3" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="469.4" cy="138.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="143.4" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="626.9" cy="146.4" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="147.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="154.4" cy="172.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="168.0" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="233.1" y="163.0">1187°</text>
+      <circle cx="311.9" cy="171.4" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="180.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="390.6" y="175.5">911°</text>
+      <circle cx="469.4" cy="190.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="197.9" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="548.1" y="192.9">524°</text>
+      <circle cx="626.9" cy="201.9" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="203.7" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="705.6" y="198.7">396°</text>
+      <circle cx="154.4" cy="219.1" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="214.1" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="311.9" cy="218.8" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="230.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="469.4" cy="243.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="252.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="626.9" cy="257.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="259.7" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="154.4" cy="269.8" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="264.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="233.1" y="259.2">1550°</text>
+      <circle cx="311.9" cy="269.7" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="283.0" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="390.6" y="278.0">1132°</text>
+      <circle cx="469.4" cy="297.4" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="307.9" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="548.1" y="302.9">580°</text>
+      <circle cx="626.9" cy="313.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="315.9" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="705.6" y="310.9">402°</text>
+      <circle cx="154.4" cy="326.3" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="320.8" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="311.9" cy="326.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="339.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="469.4" cy="353.8" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="364.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="626.9" cy="369.9" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="372.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="154.4" cy="388.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="383.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="233.1" y="378.6">1396°</text>
+      <circle cx="311.9" cy="388.2" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="399.8" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="390.6" y="394.8">1037°</text>
+      <circle cx="469.4" cy="412.4" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="421.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="548.1" y="416.6">552°</text>
+      <circle cx="626.9" cy="426.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="428.7" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <text class="sensor-temp-text" x="705.6" y="423.7">395°</text>
+      <circle cx="154.4" cy="454.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="450.4" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="311.9" cy="453.7" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="462.5" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="469.4" cy="472.3" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="479.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="626.9" cy="483.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="485.3" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="154.4" cy="521.1" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="233.1" cy="518.0" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="311.9" cy="520.0" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="390.6" cy="526.0" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="469.4" cy="532.7" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="548.1" cy="537.8" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="626.9" cy="540.6" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <circle cx="705.6" cy="541.8" r="3" fill="#0B0F19" stroke="#475569" stroke-width="1"/>
+      <!-- Hotspot Target Reticle -->
+      <g id="hotspot-reticle">
+        <circle cx="233.1" cy="264.2" r="9" fill="none" stroke="#F8FAFC" stroke-width="1.8"/>
+        <circle cx="233.1" cy="264.2" r="2" fill="#F8FAFC"/>
+        <line x1="219.1" y1="264.2" x2="223.1" y2="264.2" stroke="#F8FAFC" stroke-width="1.5"/>
+        <line x1="243.1" y1="264.2" x2="247.1" y2="264.2" stroke="#F8FAFC" stroke-width="1.5"/>
+        <line x1="233.1" y1="250.2" x2="233.1" y2="254.2" stroke="#F8FAFC" stroke-width="1.5"/>
+        <line x1="233.1" y1="274.2" x2="233.1" y2="278.2" stroke="#F8FAFC" stroke-width="1.5"/>
+        <rect x="245.1" y="244.2" width="80" height="18" rx="3" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+        <text class="hud-val" x="249.1" y="257.2" fill="#F8FAFC">PFT: 1550 °C</text>
+      </g>
+    </g>
+    <!-- Interactive Burner Selector Bank (B0..B7) -->
+    <g id="burner-selector">
+      <text class="hud-sub" x="50.0" y="619.0">BURNER BANK SELECTOR (%R1412):</text>
+      <g id="btn-burner-B0">
+        <rect x="50.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#0F2847" stroke="#38BDF8" stroke-width="2.0"/>
+        <circle cx="60.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="78.0" y="639.0">B0</text>
+        <text class="btn-sub" x="73.0" y="651.0">1550°</text>
+      </g>
+      <g id="btn-burner-B1">
+        <rect x="104.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1.0"/>
+        <circle cx="114.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="132.0" y="639.0">B1</text>
+        <text class="btn-sub" x="127.0" y="651.0">1547°</text>
+      </g>
+      <g id="btn-burner-B2">
+        <rect x="158.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1.0"/>
+        <circle cx="168.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="186.0" y="639.0">B2</text>
+        <text class="btn-sub" x="181.0" y="651.0">1545°</text>
+      </g>
+      <g id="btn-burner-B3">
+        <rect x="212.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1.0"/>
+        <circle cx="222.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="240.0" y="639.0">B3</text>
+        <text class="btn-sub" x="235.0" y="651.0">1542°</text>
+      </g>
+      <g id="btn-burner-B4">
+        <rect x="266.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1.0"/>
+        <circle cx="276.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="294.0" y="639.0">B4</text>
+        <text class="btn-sub" x="289.0" y="651.0">1540°</text>
+      </g>
+      <g id="btn-burner-B5">
+        <rect x="320.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1.0"/>
+        <circle cx="330.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="348.0" y="639.0">B5</text>
+        <text class="btn-sub" x="343.0" y="651.0">1537°</text>
+      </g>
+      <g id="btn-burner-B6">
+        <rect x="374.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1.0"/>
+        <circle cx="384.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="402.0" y="639.0">B6</text>
+        <text class="btn-sub" x="397.0" y="651.0">1535°</text>
+      </g>
+      <g id="btn-burner-B7">
+        <rect x="428.0" y="625.0" width="46.0" height="32.0" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1.0"/>
+        <circle cx="438.0" cy="635.0" r="3.5" fill="#10B981"/>
+        <text class="btn-text" x="456.0" y="639.0">B7</text>
+        <text class="btn-sub" x="451.0" y="651.0">1532°</text>
+      </g>
+      <!-- Flame Elongation Slider Widget -->
+      <g id="flame-elongation-slider">
+        <text class="hud-sub" x="502.0" y="619.0">FLAME ELONGATION: 1.00x (4.20m)</text>
+        <rect x="502.0" y="635.0" width="268.0" height="8" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+        <!-- Slider Active Fill -->
+        <rect x="502.0" y="635.0" width="89.33333333333333" height="8" rx="4" fill="#F59E0B"/>
+        <!-- Slider Thumb -->
+        <circle cx="591.3333333333334" cy="639.0" r="8" fill="#F8FAFC" stroke="#334155" stroke-width="1.5"/>
+        <text class="hud-sub" x="502.0" y="655.0">0.5x</text>
+        <text class="hud-sub" x="750.0" y="655.0">2.0x</text>
+      </g>
+    </g>
+  </g>
+  <!-- Right-Hand Combustion Efficiency & Emissions HUD Card -->
+  <g id="telemetry-hud" transform="translate(805, 65)">
+    <rect width="355" height="650" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <!-- HUD Card Header -->
+    <text class="hud-header" x="20" y="26">COMBUSTION EFFICIENCY &amp; EMISSIONS HUD</text>
+    <text class="hud-sub" x="20" y="42">Real-Time Furnace Thermal Telemetry</text>
+    <line x1="20" y1="52" x2="335" y2="52" stroke="#334155" stroke-width="1"/>
+    <!-- Burner Bank Summary Table -->
+    <text class="hud-sub" x="20" y="70">BURNER BANK STATUS</text>
+    <text class="hud-sub" x="100" y="70">PFT (°C)</text>
+    <text class="hud-sub" x="180" y="70">STAB (%)</text>
+    <text class="hud-sub" x="260" y="70">STATUS</text>
+    <rect x="20" y="73" width="315" height="20" rx="3" fill="#0B0F19" stroke="#38BDF8" stroke-width="1"/>
+    <circle cx="28" cy="83" r="3.5" fill="#10B981"/>
+    <text class="hud-val" x="38" y="86">B0 *</text>
+    <text class="hud-val" x="100" y="86">1550</text>
+    <text class="hud-val" x="180" y="86">96.5</text>
+    <text class="hud-val" x="260" y="86" fill="#10B981">OK</text>
+    <rect x="20" y="96" width="315" height="20" rx="3" fill="#0B0F19" stroke="none" stroke-width="1"/>
+    <circle cx="28" cy="106" r="3.5" fill="#10B981"/>
+    <text class="hud-val" x="38" y="109">B1</text>
+    <text class="hud-val" x="100" y="109">1548</text>
+    <text class="hud-val" x="180" y="109">96.1</text>
+    <text class="hud-val" x="260" y="109" fill="#10B981">OK</text>
+    <rect x="20" y="119" width="315" height="20" rx="3" fill="#0B0F19" stroke="none" stroke-width="1"/>
+    <circle cx="28" cy="129" r="3.5" fill="#10B981"/>
+    <text class="hud-val" x="38" y="132">B2</text>
+    <text class="hud-val" x="100" y="132">1545</text>
+    <text class="hud-val" x="180" y="132">95.7</text>
+    <text class="hud-val" x="260" y="132" fill="#10B981">OK</text>
+    <rect x="20" y="142" width="315" height="20" rx="3" fill="#0B0F19" stroke="none" stroke-width="1"/>
+    <circle cx="28" cy="152" r="3.5" fill="#10B981"/>
+    <text class="hud-val" x="38" y="155">B3</text>
+    <text class="hud-val" x="100" y="155">1542</text>
+    <text class="hud-val" x="180" y="155">96.5</text>
+    <text class="hud-val" x="260" y="155" fill="#10B981">OK</text>
+    <line x1="20" y1="180" x2="335" y2="180" stroke="#334155" stroke-width="1"/>
+    <text class="hud-sub" x="20" y="188">SELECTED BURNER (B0) THERMAL METRICS</text>
+    <rect x="20" y="196" width="315" height="76" rx="4" fill="#0B0F19" stroke="#38BDF8" stroke-width="1"/>
+    <text class="hud-label" x="30" y="213">Peak Flame Temp (PFT):</text>
+    <text class="hud-val" x="200" y="213" fill="#F8FAFC">1550.0 °C (%R1410: 1550)</text>
+    <text class="hud-label" x="30" y="230">Flame Stability Index:</text>
+    <text class="hud-val" x="200" y="230">96.5 % (%R1413: 965)</text>
+    <text class="hud-label" x="30" y="247">Burner Symmetry Score:</text>
+    <text class="hud-val" x="200" y="247">92.0 % (%R1414: 920)</text>
+    <text class="hud-label" x="30" y="264">Combustion Efficiency:</text>
+    <text class="hud-val" x="200" y="264" fill="#10B981">94.8 % (%R1416: 948)</text>
+    <line x1="20" y1="282" x2="335" y2="282" stroke="#334155" stroke-width="1"/>
+    <text class="hud-sub" x="20" y="290">HORNER OCS REGISTERS &amp; SAFETY INTERLOCKS</text>
+    <text class="hud-sub" x="20" y="308">%R1410</text>
+    <text class="hud-label" x="72" y="308">PeakFlameTempScaled:</text>
+    <text class="hud-val" x="210" y="308" fill="#F8FAFC">1550 (1550 °C)</text>
+    <text class="hud-sub" x="20" y="326">%R1411</text>
+    <text class="hud-label" x="72" y="326">ActiveBurnersCount:</text>
+    <text class="hud-val" x="210" y="326" fill="#F8FAFC">8</text>
+    <text class="hud-sub" x="20" y="344">%R1412</text>
+    <text class="hud-label" x="72" y="344">SelectedBurnerIndex:</text>
+    <text class="hud-val" x="210" y="344" fill="#F8FAFC">0 (B0)</text>
+    <text class="hud-sub" x="20" y="362">%R1413</text>
+    <text class="hud-label" x="72" y="362">FlameStabilityIndexScaled:</text>
+    <text class="hud-val" x="210" y="362" fill="#F8FAFC">965 (96.5%)</text>
+    <text class="hud-sub" x="20" y="380">%R1414</text>
+    <text class="hud-label" x="72" y="380">BurnerSymmetryScoreScaled:</text>
+    <text class="hud-val" x="210" y="380" fill="#F8FAFC">920 (92.0%)</text>
+    <text class="hud-sub" x="20" y="398">%R1415</text>
+    <text class="hud-label" x="72" y="398">FlameLengthMetersScaled:</text>
+    <text class="hud-val" x="210" y="398" fill="#F8FAFC">420 (4.20 m)</text>
+    <text class="hud-sub" x="20" y="416">%R1416</text>
+    <text class="hud-label" x="72" y="416">CombustionEfficiencyScaled:</text>
+    <text class="hud-val" x="210" y="416" fill="#F8FAFC">948 (94.8%)</text>
+    <text class="hud-sub" x="20" y="434">%R1417</text>
+    <text class="hud-label" x="72" y="434">DiagnosticStatusCode:</text>
+    <text class="hud-val" x="210" y="434" fill="#F8FAFC">0x0000</text>
+    <text class="hud-sub" x="20" y="452">%M329</text>
+    <text class="hud-label" x="72" y="452">FlameoutTrip:</text>
+    <text class="hud-val" x="210" y="452" fill="#F8FAFC">NORMAL (0)</text>
+    <text class="hud-sub" x="20" y="470">%M330</text>
+    <text class="hud-label" x="72" y="470">FlameCanvasActive:</text>
+    <text class="hud-val" x="210" y="470" fill="#F8FAFC">ACTIVE (1)</text>
+    <line x1="20" y1="490" x2="335" y2="490" stroke="#334155" stroke-width="1"/>
+    <!-- Dual-State Legend -->
+    <line x1="24" y1="504" x2="48" y2="504" stroke="#06B6D4" stroke-width="2" stroke-dasharray="4,2"/>
+    <text class="hud-sub" x="56" y="507">Cyan Dash: Golden Design CFD Envelope</text>
+    <rect x="24" y="514" width="24" height="6" fill="#F59E0B" rx="1"/>
+    <text class="hud-sub" x="56" y="521">Glowing Fill: Real-Time Live Flame Profile</text>
+    <!-- Isotherm Spectrum Colorbar -->
+    <rect x="24" y="532" width="307" height="10" rx="3" fill="url(#isotherm-colorbar-grad)"/>
+    <text class="hud-sub" x="24" y="552">800°C</text>
+    <text class="hud-sub" x="100" y="552">1000°C</text>
+    <text class="hud-sub" x="180" y="552">1200°C</text>
+    <text class="hud-sub" x="245" y="552">1400°C</text>
+    <text class="hud-sub" x="300" y="552">1600°C</text>
+  </g>
+</svg>

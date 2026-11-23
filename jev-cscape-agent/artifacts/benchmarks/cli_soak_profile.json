@@ -1,0 +1,162 @@
+{
+  "work_package": "W045",
+  "gate": "G10",
+  "timestamp_utc": "2026-10-02T20:31:19Z",
+  "result": {
+    "status": "success",
+    "error_code": null,
+    "details": "CLI soak profiler successfully completed 50 iterations across 4 subcommands: net growth 91.24 KB (< 350.0 KB budget), avg latency 30.40ms.",
+    "data": {
+      "total_iterations": 50,
+      "total_wall_time_sec": 1.592,
+      "average_latency_ms": 30.401,
+      "failed_iterations": 0,
+      "contract_statuses_seen": {
+        "success": 50
+      },
+      "start_memory_kb": 0.0,
+      "end_memory_kb": 91.24,
+      "net_growth_kb": 91.24,
+      "peak_memory_kb": 1427.5,
+      "memory_budget_kb": 350.0,
+      "is_memory_leak_free": true,
+      "iterations_summary": [
+        {
+          "iteration": 1,
+          "command": "doctor",
+          "duration_ms": 19.76,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 99105,
+          "peak_mem_bytes": 112281
+        },
+        {
+          "iteration": 2,
+          "command": "status",
+          "duration_ms": 10.939,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 182072,
+          "peak_mem_bytes": 327247
+        },
+        {
+          "iteration": 3,
+          "command": "scale-point",
+          "duration_ms": 12.634,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 272116,
+          "peak_mem_bytes": 327247
+        },
+        {
+          "iteration": 4,
+          "command": "scale-point",
+          "duration_ms": 9.226,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 274075,
+          "peak_mem_bytes": 327247
+        },
+        {
+          "iteration": 5,
+          "command": "audit-safety",
+          "duration_ms": 95.792,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 352536,
+          "peak_mem_bytes": 966168
+        },
+        {
+          "iteration": 46,
+          "command": "doctor",
+          "duration_ms": 16.285,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 400178,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 47,
+          "command": "status",
+          "duration_ms": 10.275,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 474574,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 48,
+          "command": "scale-point",
+          "duration_ms": 8.93,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 561333,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 49,
+          "command": "scale-point",
+          "duration_ms": 12.44,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 561639,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 50,
+          "command": "audit-safety",
+          "duration_ms": 107.728,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 634787,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 46,
+          "command": "doctor",
+          "duration_ms": 16.285,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 400178,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 47,
+          "command": "status",
+          "duration_ms": 10.275,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 474574,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 48,
+          "command": "scale-point",
+          "duration_ms": 8.93,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 561333,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 49,
+          "command": "scale-point",
+          "duration_ms": 12.44,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 561639,
+          "peak_mem_bytes": 1461760
+        },
+        {
+          "iteration": 50,
+          "command": "audit-safety",
+          "duration_ms": 107.728,
+          "exit_code": 0,
+          "contract_status": "success",
+          "current_mem_bytes": 634787,
+          "peak_mem_bytes": 1461760
+        }
+      ]
+    }
+  }
+}

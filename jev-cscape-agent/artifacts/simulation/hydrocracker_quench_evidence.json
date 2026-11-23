@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Hydrocracking Heavy Gas Oil Trickle-Bed Hydrodynamics & Cracking Quench ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W176",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Hydrocracking Heavy Gas Oil Trickle-Bed Hydrodynamics & Cracking Quench ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1370..%R1377 and %M319..%M321 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "Hydrocracker_Trickle_Bed_Hydrodynamics_And_Quench_Mechanics",
+        "passed": true,
+        "details": "Hydrodynamics verified: u_L=0.0108 m/s, u_G=0.1257 m/s, eps_L=0.242, T_quench_mix=388.00\u00b0C, Quench cooling Delta T=25.00\u00b0C."
+      },
+      {
+        "stage": 3,
+        "check": "Hydrocracking_Reaction_Kinetics_And_Exothermic_Heat",
+        "passed": true,
+        "details": "Kinetics verified: k_crack(413C)=0.0360/s, Delta H_hc=-42 kJ/mol, Bed 1 Exotherm Delta T=18.0\u00b0C (nominal 18.0\u00b0C), Q_rxn=37502.2 kW."
+      },
+      {
+        "stage": 4,
+        "check": "Middle_Distillates_Product_Yields",
+        "passed": true,
+        "details": "Yields verified: Diesel=61.5%, Kerosene/Jet=24.5%, Bed1_inlet=395.0\u00b0C, Bed2_inlet=388.0\u00b0C, P=160.0 bar, Quench=4.5 kg/s."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_High_Order_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: T_bed1=413.00\u00b0C, T_bed2=403.00\u00b0C, y_diesel=0.615, y_kero=0.245, T_quench_mix=388.00\u00b0C."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=0.000e+00 kg/s (< 1e-10), elemental_residual=0.000e+00 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xC901, 0xC902, 0xC903, 0xC904) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1370=3950, %R1371=3880, %R1372=1600, %R1373=45, %R1374=615, %R1375=245, %R1376=180, %R1377=0x0000, %M319=True, %M320=False, %M321=False."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Closed_Loop_Settling",
+        "passed": true,
+        "details": "Transient response to +5.0 \u00b0C disturbance verified cleanly over 8.0s: T_bed1=416.73\u00b0C, Permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1370..%R1377",
+      "discrete_coils": "%M319..%M321",
+      "values": {
+        "%R1370": 3950,
+        "%R1371": 3880,
+        "%R1372": 1600,
+        "%R1373": 45,
+        "%R1374": 615,
+        "%R1375": 245,
+        "%R1376": 180,
+        "%R1377": 0,
+        "%M319": true,
+        "%M320": false,
+        "%M321": false
+      }
+    },
+    "timestamp": "2026-10-05T05:57:06Z"
+  }
+}

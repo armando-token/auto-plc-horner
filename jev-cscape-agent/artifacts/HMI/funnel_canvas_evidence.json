@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Funnel / Pipeline Multi-Stage Yield & Conversion Loss Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W150",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Funnel / Pipeline Multi-Stage Yield & Conversion Loss Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Security_Guard",
+        "passed": true,
+        "details": "Parsed FunnelCanvasSync with STParser; validated bound registers %R1110..%R1117, %M259..%M260; ladder intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 2,
+        "check": "Funnel_Conversion_Geometry_And_Mass_Balance",
+        "passed": true,
+        "details": "Verified 4 progressive funnel stages, smooth cubic Bezier neck transitions, and narrowing pipe heights proportional to mass flow."
+      },
+      {
+        "stage": 3,
+        "check": "Process_Topology_And_Canonical_Yield_Pipeline",
+        "passed": true,
+        "details": "Verified 4 canonical stages (S1=1000, S2=925, S3=850, S4=820); Overall Yield=82.0% (820), Max Loss=7.5% (75), Bottleneck=Stage 2."
+      },
+      {
+        "stage": 4,
+        "check": "Process_Safety_Yield_Deficit_Excursion_Interlock",
+        "passed": true,
+        "details": "Verified 0xAF01 yield deficit excursion trip and %M259 coil assertion on yield deficit (<60% or single loss >25%); %R1117 latching verified."
+      },
+      {
+        "stage": 5,
+        "check": "Diagnostic_Fault_Stage_Inversion_And_Render_Fault",
+        "passed": true,
+        "details": "Verified 0xAF02 stage inversion mass conservation trip, 0xAF03 render fault latching, and clean nominal restoration."
+      },
+      {
+        "stage": 6,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone W3C SVG 1.1; XML valid; funnel body, neck transitions, drop-off loss callout badges, ring gauge, and telemetry HUD verified."
+      },
+      {
+        "stage": 7,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Theme text 17.06:1 (> 7:1), Graphical elements 7.04:1 (> 3:1) verified."
+      },
+      {
+        "stage": 8,
+        "check": "Bottleneck_Indicator_Ring_Gauge_And_Stage_Selector",
+        "passed": true,
+        "details": "Verified circular SVG efficiency ring gauge arc, bottleneck stage callout card, interactive stage selector, and excursion alert halo in SVG."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scan_Cycle",
+        "passed": true,
+        "details": "%R1110=1000, %R1111=925, %R1112=850, %R1113=820, %R1114=820, %R1115=75, %R1116=2, %R1117=0; %M259=False, %M260=True."
+      }
+    ],
+    "metrics": {
+      "feed_flow_kg_s": 100.0,
+      "product_yield_kg_s": 82.0,
+      "overall_yield_pct": 82.0,
+      "max_stage_loss_pct": 7.5,
+      "bottleneck_stage_index": 2,
+      "num_stages": 4,
+      "wcag_badge_contrast": 18.3,
+      "wcag_theme_contrast": 17.06,
+      "selected_stage_index": 1
+    }
+  }
+}

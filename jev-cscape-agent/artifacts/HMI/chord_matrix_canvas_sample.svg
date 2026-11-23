@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <style>
+    .title-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 15px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+    .subtitle-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #94A3B8; }
+    .unit-arc { stroke: #0B0F19; stroke-width: 2.0; cursor: pointer; transition: opacity 0.2s; }
+    .unit-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 700; fill: #F8FAFC; }
+    .unit-sublabel { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 9.5px; fill: #94A3B8; }
+    .chord-baseline { stroke: #06B6D4; stroke-width: 1.5; stroke-dasharray: 4,3; fill: none; opacity: 0.60; }
+    .chord-live { stroke: #10B981; stroke-width: 1.2; fill-opacity: 0.75; cursor: pointer; transition: fill-opacity 0.2s; }
+    .chord-selected { stroke: #38BDF8; stroke-width: 2.5; filter: url(#selected-glow); }
+    .flux-arrow { fill: #38BDF8; opacity: 0.85; }
+    .hud-header { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 13px; font-weight: 700; fill: #38BDF8; letter-spacing: 0.5px; }
+    .hud-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10.5px; fill: #94A3B8; }
+    .hud-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+    .hud-badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 10px; font-weight: 700; fill: #F8FAFC; }
+  </style>
+  <defs>    <linearGradient id="live-grad-CDU->VDU" x1="688.0" y1="450.7" x2="281.5" y2="517.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-CDU->FCC" x1="665.8" y1="505.8" x2="265.7" y2="300.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-CDU->HCU" x1="642.6" y1="539.3" x2="532.5" y2="178.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-VDU->FCC" x1="372.8" y1="597.9" x2="297.3" y2="250.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-VDU->HCU" x1="322.0" y1="564.5" x2="570.0" y2="193.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-FCC->CDU" x1="247.9" y1="431.1" x2="605.3" y2="574.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-FCC->VDU" x1="245.5" y1="410.0" x2="255.5" y2="462.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-FCC->ALK" x1="249.1" y1="352.1" x2="687.0" y2="335.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-HCU->CDU" x1="414.0" y1="177.1" x2="547.0" y2="606.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-HCU->FCC" x1="471.3" y1="170.0" x2="348.9" y2="205.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-HCU->ALK" x1="491.2" y1="171.0" x2="694.2" y2="376.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-ALK->CDU" x1="642.2" y1="250.2" x2="465.3" y2="620.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.85"/>
+    </linearGradient>    <linearGradient id="live-grad-ALK->HCU" x1="665.9" y1="284.4" x2="598.7" y2="210.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.85"/>
+    </linearGradient>    <filter id="selected-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="alert-halo" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>  </defs>
+  <!-- Dark Viewport Backing -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <!-- Header Banner -->
+  <g id="canvas-header" transform="translate(40, 24)">
+    <text class="title-banner" x="0" y="16">HORNER OCS | REFINERY INTER-UNIT MASS &amp; ENERGY FLUX MATRIX CANVAS</text>
+    <text class="subtitle-banner" x="0" y="32">Work Package W177 | Gate G9 Graphic HMI Engine | Pure IEC 61131-3 (%R1380..%R1387, %M322..%M323)</text>
+    <rect x="780" y="2" width="180" height="30" rx="4" fill="#0B0F19" stroke="#10B981" stroke-width="1.5"/>
+    <text class="hud-badge-text" x="870" y="21" text-anchor="middle" fill="#F8FAFC">NOMINAL [0x0000]</text>
+  </g>
+  <!-- Circular Chord Diagram Area -->
+  <g id="chord-diagram">
+    <!-- Center Metrics Hub -->
+    <circle cx="470.0" cy="395.0" r="65" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+    <text x="470.0" y="377.0" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10px" fill="#94A3B8">TOTAL MATRIX FLUX</text>
+    <text x="470.0" y="399.0" text-anchor="middle" font-family="monospace" font-size="16px" font-weight="700" fill="#F8FAFC">927.0 t/h</text>
+    <text x="470.0" y="417.0" text-anchor="middle" font-family="monospace" font-size="11px" font-weight="700" fill="#38BDF8">EFF: 100.0%</text>
+    <!-- Dual-State: Golden Baseline Flux Contours (Subtle Cyan) -->
+    <g id="golden-baseline-contours">
+      <path id="base-CDU->VDU" class="chord-baseline" d="M 695.00 395.00 A 225.00 225.00 0 0 1 667.39 502.99 Q 470.00 395.00 316.32 559.33 A 225.00 225.00 0 0 1 257.66 469.41 Q 470.00 395.00 695.00 395.00 Z" stroke-dasharray="4,3"/>
+      <path id="base-CDU->FCC" class="chord-baseline" d="M 667.39 502.99 A 225.00 225.00 0 0 1 664.27 508.51 Q 470.00 395.00 264.37 303.66 A 225.00 225.00 0 0 1 267.06 297.83 Q 470.00 395.00 667.39 502.99 Z" stroke-dasharray="4,3"/>
+      <path id="base-CDU->HCU" class="chord-baseline" d="M 664.27 508.51 A 225.00 225.00 0 0 1 616.16 566.06 Q 470.00 395.00 499.94 172.00 A 225.00 225.00 0 0 1 563.72 190.45 Q 470.00 395.00 664.27 508.51 Z" stroke-dasharray="4,3"/>
+      <path id="base-VDU->FCC" class="chord-baseline" d="M 423.31 615.10 A 225.00 225.00 0 0 1 327.81 569.38 Q 470.00 395.00 267.06 297.83 A 225.00 225.00 0 0 1 338.31 212.56 Q 470.00 395.00 423.31 615.10 Z" stroke-dasharray="4,3"/>
+      <path id="base-VDU->HCU" class="chord-baseline" d="M 327.81 569.38 A 225.00 225.00 0 0 1 316.32 559.33 Q 470.00 395.00 563.72 190.45 A 225.00 225.00 0 0 1 576.28 196.68 Q 470.00 395.00 327.81 569.38 Z" stroke-dasharray="4,3"/>
+      <path id="base-FCC->CDU" class="chord-baseline" d="M 250.60 444.89 A 225.00 225.00 0 0 1 246.10 417.20 Q 470.00 395.00 616.16 566.06 A 225.00 225.00 0 0 1 594.00 582.75 Q 470.00 395.00 250.60 444.89 Z" stroke-dasharray="4,3"/>
+      <path id="base-FCC->VDU" class="chord-baseline" d="M 246.10 417.20 A 225.00 225.00 0 0 1 245.14 402.80 Q 470.00 395.00 257.66 469.41 A 225.00 225.00 0 0 1 253.51 456.31 Q 470.00 395.00 246.10 417.20 Z" stroke-dasharray="4,3"/>
+      <path id="base-FCC->ALK" class="chord-baseline" d="M 245.14 402.80 A 225.00 225.00 0 0 1 264.37 303.66 Q 470.00 395.00 675.21 302.74 A 225.00 225.00 0 0 1 693.56 369.57 Q 470.00 395.00 245.14 402.80 Z" stroke-dasharray="4,3"/>
+      <path id="base-HCU->CDU" class="chord-baseline" d="M 370.36 193.27 A 225.00 225.00 0 0 1 460.06 170.22 Q 470.00 395.00 594.00 582.75 A 225.00 225.00 0 0 1 495.77 618.52 Q 470.00 395.00 370.36 193.27 Z" stroke-dasharray="4,3"/>
+      <path id="base-HCU->FCC" class="chord-baseline" d="M 460.06 170.22 A 225.00 225.00 0 0 1 482.49 170.35 Q 470.00 395.00 338.31 212.56 A 225.00 225.00 0 0 1 359.93 198.76 Q 470.00 395.00 460.06 170.22 Z" stroke-dasharray="4,3"/>
+      <path id="base-HCU->ALK" class="chord-baseline" d="M 482.49 170.35 A 225.00 225.00 0 0 1 499.94 172.00 Q 470.00 395.00 693.56 369.57 A 225.00 225.00 0 0 1 694.69 383.22 Q 470.00 395.00 482.49 170.35 Z" stroke-dasharray="4,3"/>
+      <path id="base-ALK->CDU" class="chord-baseline" d="M 627.93 234.74 A 225.00 225.00 0 0 1 655.04 267.00 Q 470.00 395.00 495.77 618.52 A 225.00 225.00 0 0 1 434.90 617.24 Q 470.00 395.00 627.93 234.74 Z" stroke-dasharray="4,3"/>
+      <path id="base-ALK->HCU" class="chord-baseline" d="M 655.04 267.00 A 225.00 225.00 0 0 1 675.21 302.74 Q 470.00 395.00 576.28 196.68 A 225.00 225.00 0 0 1 619.33 226.70 Q 470.00 395.00 655.04 267.00 Z" stroke-dasharray="4,3"/>
+    </g>
+    <!-- Dual-State: Real-Time Live Flow Ribbons (Emerald Green Gradient) -->
+    <g id="live-flow-ribbons">
+      <path id="live-CDU->VDU" class="chord-live chord-selected" d="M 695.00 395.00 A 225.00 225.00 0 0 1 667.39 502.99 Q 470.00 395.00 316.32 559.33 A 225.00 225.00 0 0 1 257.66 469.41 Q 470.00 395.00 695.00 395.00 Z" fill="url(#live-grad-CDU->VDU)"/>
+      <path id="live-CDU->FCC" class="chord-live" d="M 667.39 502.99 A 225.00 225.00 0 0 1 664.27 508.51 Q 470.00 395.00 264.37 303.66 A 225.00 225.00 0 0 1 267.06 297.83 Q 470.00 395.00 667.39 502.99 Z" fill="url(#live-grad-CDU->FCC)"/>
+      <path id="live-CDU->HCU" class="chord-live" d="M 664.27 508.51 A 225.00 225.00 0 0 1 616.16 566.06 Q 470.00 395.00 499.94 172.00 A 225.00 225.00 0 0 1 563.72 190.45 Q 470.00 395.00 664.27 508.51 Z" fill="url(#live-grad-CDU->HCU)"/>
+      <path id="live-VDU->FCC" class="chord-live" d="M 423.31 615.10 A 225.00 225.00 0 0 1 327.81 569.38 Q 470.00 395.00 267.06 297.83 A 225.00 225.00 0 0 1 338.31 212.56 Q 470.00 395.00 423.31 615.10 Z" fill="url(#live-grad-VDU->FCC)"/>
+      <path id="live-VDU->HCU" class="chord-live" d="M 327.81 569.38 A 225.00 225.00 0 0 1 316.32 559.33 Q 470.00 395.00 563.72 190.45 A 225.00 225.00 0 0 1 576.28 196.68 Q 470.00 395.00 327.81 569.38 Z" fill="url(#live-grad-VDU->HCU)"/>
+      <path id="live-FCC->CDU" class="chord-live" d="M 250.60 444.89 A 225.00 225.00 0 0 1 246.10 417.20 Q 470.00 395.00 616.16 566.06 A 225.00 225.00 0 0 1 594.00 582.75 Q 470.00 395.00 250.60 444.89 Z" fill="url(#live-grad-FCC->CDU)"/>
+      <path id="live-FCC->VDU" class="chord-live" d="M 246.10 417.20 A 225.00 225.00 0 0 1 245.14 402.80 Q 470.00 395.00 257.66 469.41 A 225.00 225.00 0 0 1 253.51 456.31 Q 470.00 395.00 246.10 417.20 Z" fill="url(#live-grad-FCC->VDU)"/>
+      <path id="live-FCC->ALK" class="chord-live" d="M 245.14 402.80 A 225.00 225.00 0 0 1 264.37 303.66 Q 470.00 395.00 675.21 302.74 A 225.00 225.00 0 0 1 693.56 369.57 Q 470.00 395.00 245.14 402.80 Z" fill="url(#live-grad-FCC->ALK)"/>
+      <path id="live-HCU->CDU" class="chord-live" d="M 370.36 193.27 A 225.00 225.00 0 0 1 460.06 170.22 Q 470.00 395.00 594.00 582.75 A 225.00 225.00 0 0 1 495.77 618.52 Q 470.00 395.00 370.36 193.27 Z" fill="url(#live-grad-HCU->CDU)"/>
+      <path id="live-HCU->FCC" class="chord-live" d="M 460.06 170.22 A 225.00 225.00 0 0 1 482.49 170.35 Q 470.00 395.00 338.31 212.56 A 225.00 225.00 0 0 1 359.93 198.76 Q 470.00 395.00 460.06 170.22 Z" fill="url(#live-grad-HCU->FCC)"/>
+      <path id="live-HCU->ALK" class="chord-live" d="M 482.49 170.35 A 225.00 225.00 0 0 1 499.94 172.00 Q 470.00 395.00 693.56 369.57 A 225.00 225.00 0 0 1 694.69 383.22 Q 470.00 395.00 482.49 170.35 Z" fill="url(#live-grad-HCU->ALK)"/>
+      <path id="live-ALK->CDU" class="chord-live" d="M 627.93 234.74 A 225.00 225.00 0 0 1 655.04 267.00 Q 470.00 395.00 495.77 618.52 A 225.00 225.00 0 0 1 434.90 617.24 Q 470.00 395.00 627.93 234.74 Z" fill="url(#live-grad-ALK->CDU)"/>
+      <path id="live-ALK->HCU" class="chord-live" d="M 655.04 267.00 A 225.00 225.00 0 0 1 675.21 302.74 Q 470.00 395.00 576.28 196.68 A 225.00 225.00 0 0 1 619.33 226.70 Q 470.00 395.00 655.04 267.00 Z" fill="url(#live-grad-ALK->HCU)"/>
+    </g>
+    <!-- Flux Direction Arrows -->
+    <g id="flux-direction-arrows">
+      <polygon class="flux-arrow" points="448.33,445.33 456.21,439.07 458.06,447.87"/>
+      <polygon class="flux-arrow" points="439.83,384.84 449.89,384.90 445.82,392.93"/>
+      <polygon class="flux-arrow" points="521.80,350.08 528.25,357.81 519.49,359.87"/>
+      <polygon class="flux-arrow" points="395.51,383.83 402.40,391.16 393.78,393.75"/>
+      <polygon class="flux-arrow" points="475.19,360.80 474.06,370.80 466.52,365.90"/>
+      <polygon class="flux-arrow" points="474.10,460.54 464.04,460.75 467.89,452.62"/>
+      <polygon class="flux-arrow" points="355.28,426.45 355.71,416.39 363.58,420.76"/>
+      <polygon class="flux-arrow" points="499.89,367.75 491.18,372.80 490.63,363.81"/>
+      <polygon class="flux-arrow" points="484.66,423.41 477.66,416.18 486.24,413.47"/>
+      <polygon class="flux-arrow" points="424.64,291.66 433.84,287.57 433.43,296.57"/>
+      <polygon class="flux-arrow" points="549.17,349.62 539.33,347.53 544.93,340.49"/>
+      <polygon class="flux-arrow" points="499.94,442.02 499.31,431.98 507.60,435.49"/>
+      <polygon class="flux-arrow" points="545.74,308.24 552.87,315.34 544.34,318.21"/>
+    </g>
+    <!-- 5 Canonical Refinery Units Perimeter Arcs -->
+    <g id="unit-arcs">
+      <path id="arc-CDU" class="unit-arc" d="M 735.00 395.00 A 265.00 265.00 0 0 1 428.66 656.76 L 434.90 617.24 A 225.00 225.00 0 0 0 695.00 395.00 Z" fill="#10B981"/>
+      <text class="unit-label" x="657.7" y="614.7" text-anchor="middle" dominant-baseline="middle">CDU</text>
+      <text class="unit-sublabel" x="666.8" y="625.4" text-anchor="middle" dominant-baseline="middle">350 t/h</text>
+      <path id="arc-VDU" class="unit-arc" d="M 415.01 654.23 A 265.00 265.00 0 0 1 215.03 467.21 L 253.51 456.31 A 225.00 225.00 0 0 0 423.31 615.10 Z" fill="#06B6D4"/>
+      <text class="unit-label" x="272.6" y="606.1" text-anchor="middle" dominant-baseline="middle">VDU</text>
+      <text class="unit-sublabel" x="263.0" y="616.3" text-anchor="middle" dominant-baseline="middle">220 t/h</text>
+      <path id="arc-FCC" class="unit-arc" d="M 211.60 453.76 A 265.00 265.00 0 0 1 340.37 163.87 L 359.93 198.76 A 225.00 225.00 0 0 0 250.60 444.89 Z" fill="#F59E0B"/>
+      <text class="unit-label" x="205.9" y="277.7" text-anchor="middle" dominant-baseline="middle">FCC</text>
+      <text class="unit-sublabel" x="193.1" y="272.0" text-anchor="middle" dominant-baseline="middle">260 t/h</text>
+      <path id="arc-HCU" class="unit-arc" d="M 352.64 157.40 A 265.00 265.00 0 0 1 645.88 196.78 L 619.33 226.70 A 225.00 225.00 0 0 0 370.36 193.27 Z" fill="#818CF8"/>
+      <text class="unit-label" x="508.5" y="108.6" text-anchor="middle" dominant-baseline="middle">HCU</text>
+      <text class="unit-sublabel" x="510.3" y="94.7" text-anchor="middle" dominant-baseline="middle">240 t/h</text>
+      <path id="arc-ALK" class="unit-arc" d="M 656.01 206.25 A 265.00 265.00 0 0 1 734.64 381.13 L 694.69 383.22 A 225.00 225.00 0 0 0 627.93 234.74 Z" fill="#F43F5E"/>
+      <text class="unit-label" x="733.6" y="276.5" text-anchor="middle" dominant-baseline="middle">ALK</text>
+      <text class="unit-sublabel" x="746.4" y="270.7" text-anchor="middle" dominant-baseline="middle">150 t/h</text>
+    </g>
+  </g>
+  <!-- Right-Hand Refinery Mass/Energy Balance HUD Card -->
+  <g id="telemetry-hud" transform="translate(810, 70)">
+    <rect width="350" height="645" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <!-- HUD Card Header -->
+    <text class="hud-header" x="20" y="28">MASS &amp; ENERGY BALANCE HUD</text>
+    <text class="hud-sub" x="20" y="44">Continuous Closed-Loop Process Telemetry</text>
+    <line x1="20" y1="54" x2="330" y2="54" stroke="#334155" stroke-width="1"/>
+    <!-- Unit Mass Balance Table -->
+    <text class="hud-sub" x="20" y="75">UNIT FLUX CONTINUITY (t/h)</text>
+    <text class="hud-sub" x="90" y="75">IN</text>
+    <text class="hud-sub" x="145" y="75">OUT</text>
+    <text class="hud-sub" x="200" y="75">RESID</text>
+    <text class="hud-sub" x="260" y="75">STATUS</text>
+    <rect x="20" y="79" width="310" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="90" r="4" fill="#10B981"/>
+    <text class="hud-val" x="38" y="93">CDU</text>
+    <text class="hud-val" x="90" y="93">245</text>
+    <text class="hud-val" x="145" y="93">245</text>
+    <text class="hud-val" x="200" y="93">+0.0</text>
+    <text class="hud-val" x="260" y="93" fill="#10B981">OK</text>
+    <rect x="20" y="105" width="310" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="116" r="4" fill="#06B6D4"/>
+    <text class="hud-val" x="38" y="119">VDU</text>
+    <text class="hud-val" x="90" y="119">160</text>
+    <text class="hud-val" x="145" y="119">160</text>
+    <text class="hud-val" x="200" y="119">+0.0</text>
+    <text class="hud-val" x="260" y="119" fill="#10B981">OK</text>
+    <rect x="20" y="131" width="310" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="142" r="4" fill="#F59E0B"/>
+    <text class="hud-val" x="38" y="145">FCC</text>
+    <text class="hud-val" x="90" y="145">180</text>
+    <text class="hud-val" x="145" y="145">180</text>
+    <text class="hud-val" x="200" y="145">+0.0</text>
+    <text class="hud-val" x="260" y="145" fill="#10B981">OK</text>
+    <rect x="20" y="157" width="310" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="168" r="4" fill="#818CF8"/>
+    <text class="hud-val" x="38" y="171">HCU</text>
+    <text class="hud-val" x="90" y="171">190</text>
+    <text class="hud-val" x="145" y="171">190</text>
+    <text class="hud-val" x="200" y="171">+0.0</text>
+    <text class="hud-val" x="260" y="171" fill="#10B981">OK</text>
+    <rect x="20" y="183" width="310" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="194" r="4" fill="#F43F5E"/>
+    <text class="hud-val" x="38" y="197">ALK</text>
+    <text class="hud-val" x="90" y="197">152</text>
+    <text class="hud-val" x="145" y="197">152</text>
+    <text class="hud-val" x="200" y="197">+0.0</text>
+    <text class="hud-val" x="260" y="197" fill="#10B981">OK</text>
+    <line x1="20" y1="223" x2="330" y2="223" stroke="#334155" stroke-width="1"/>
+    <text class="hud-sub" x="20" y="233">SELECTED INTER-UNIT CHORD</text>
+    <rect x="20" y="241" width="310" height="42" rx="4" fill="#0B0F19" stroke="#38BDF8" stroke-width="1"/>
+    <text class="hud-label" x="30" y="258">CONNECTION:</text>
+    <text class="hud-val" x="120" y="258">CDU → VDU</text>
+    <text class="hud-label" x="30" y="273">LIVE FLUX RATE:</text>
+    <text class="hud-val" x="120" y="273" fill="#38BDF8">142.0 t/h  (%R1384: 1420)</text>
+    <line x1="20" y1="291" x2="330" y2="291" stroke="#334155" stroke-width="1"/>
+    <text class="hud-sub" x="20" y="301">HORNER OCS REGISTERS &amp; TELEMETRY</text>
+    <text class="hud-sub" x="20" y="319">%R1380</text>
+    <text class="hud-label" x="72" y="319">Global Flux Efficiency:</text>
+    <text class="hud-val" x="205" y="319">100.0% (1000)</text>
+    <text class="hud-sub" x="20" y="337">%R1381</text>
+    <text class="hud-label" x="72" y="337">Active Refinery Units:</text>
+    <text class="hud-val" x="205" y="337">5</text>
+    <text class="hud-sub" x="20" y="355">%R1382</text>
+    <text class="hud-label" x="72" y="355">Selected Source Node:</text>
+    <text class="hud-val" x="205" y="355">0 (CDU)</text>
+    <text class="hud-sub" x="20" y="373">%R1383</text>
+    <text class="hud-label" x="72" y="373">Selected Target Node:</text>
+    <text class="hud-val" x="205" y="373">1 (VDU)</text>
+    <text class="hud-sub" x="20" y="391">%R1385</text>
+    <text class="hud-label" x="72" y="391">Recirculation Ratio:</text>
+    <text class="hud-val" x="205" y="391">18.5% (185)</text>
+    <text class="hud-sub" x="20" y="409">%R1386</text>
+    <text class="hud-label" x="72" y="409">Max Flux Imbalance:</text>
+    <text class="hud-val" x="205" y="409">0.0% (0)</text>
+    <text class="hud-sub" x="20" y="427">%R1387</text>
+    <text class="hud-label" x="72" y="427">Diagnostic Code:</text>
+    <text class="hud-val" x="205" y="427">0x0000</text>
+    <text class="hud-sub" x="20" y="445">%M322</text>
+    <text class="hud-label" x="72" y="445">ChordFluxTrip:</text>
+    <text class="hud-val" x="205" y="445">NORMAL (0)</text>
+    <text class="hud-sub" x="20" y="463">%M323</text>
+    <text class="hud-label" x="72" y="463">ChordCanvasActive:</text>
+    <text class="hud-val" x="205" y="463">ACTIVE (1)</text>
+    <line x1="20" y1="483" x2="330" y2="483" stroke="#334155" stroke-width="1"/>
+    <!-- Dual-State Legend -->
+    <line x1="24" y1="497" x2="48" y2="497" stroke="#06B6D4" stroke-width="2" stroke-dasharray="4,2"/>
+    <text class="hud-sub" x="56" y="500">Cyan Dash: Golden Baseline Distribution</text>
+    <rect x="24" y="507" width="24" height="6" fill="#10B981" rx="1"/>
+    <text class="hud-sub" x="56" y="514">Emerald Fill: Real-Time Live Mass Flux</text>
+  </g>
+</svg>

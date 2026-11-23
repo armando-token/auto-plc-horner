@@ -1,0 +1,98 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Distillation Column VLE Dynamics verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W086",
+    "gate": "Gate G7 / G4",
+    "system": "Binary Distillation Column Dynamic ODE (Methanol-Water)",
+    "stages": 10,
+    "feed_stage": 5,
+    "alpha": 2.8,
+    "murphree_eff": 0.85,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R470..%R477 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "VLE_McCabe_Thiele_Monotonicity_And_Bounds",
+        "passed": true,
+        "details": "McCabe-Thiele equilibrium y*(x) strictly monotonic on [0, 1] with alpha=2.8."
+      },
+      {
+        "stage": 3,
+        "check": "Dynamic_Mass_And_Component_Conservation",
+        "passed": true,
+        "details": "Residuals: molar 0.00e+00, component 4.00e-15 mol/s."
+      },
+      {
+        "stage": 4,
+        "check": "RK4_Numerical_Integration_Stability",
+        "passed": true,
+        "details": "Completed 50 RK4 steps (5.0s simulated); stage compositions bounded in [0, 1]."
+      },
+      {
+        "stage": 5,
+        "check": "Reflux_Ratio_Step_Enrichment_Response",
+        "passed": true,
+        "details": "Distillate purity reached 0.9812 under increased reflux ratio R=4.0."
+      },
+      {
+        "stage": 6,
+        "check": "Murphree_Tray_Efficiency_Monotonicity",
+        "passed": true,
+        "details": "Vapor enrichment monotonically increases with higher Murphree efficiency."
+      },
+      {
+        "stage": 7,
+        "check": "Condenser_And_Reboiler_Energy_Balance",
+        "passed": true,
+        "details": "Condenser duty 7000.0 kW aligns with reboiler duty 7000.0 kW under CMO."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers synced: %R470=9812, %R471=1339, %R473=649, %R474=921 with zero overflow."
+      },
+      {
+        "stage": 9,
+        "check": "Total_Reflux_Override_And_Reset_Handshake",
+        "passed": true,
+        "details": "Total reflux mode engaged and alarm reset handshake confirmed."
+      }
+    ],
+    "steady_state_metrics": {
+      "distillate_purity_x_D": 0.9816,
+      "bottoms_residue_x_B": 0.1317,
+      "top_temperature_c": 64.9,
+      "sump_temperature_c": 92.2,
+      "reflux_ratio": 4.0,
+      "reboiler_duty_kw": 7000.0
+    },
+    "register_map": {
+      "analog_registers": "%R470..%R477",
+      "discrete_coils": "%M109..%M111",
+      "values": {
+        "%R470": 9816,
+        "%R471": 1317,
+        "%R472": 6233,
+        "%R473": 649,
+        "%R474": 922,
+        "%R475": 400,
+        "%R476": 7000,
+        "%R477": 99,
+        "%M109": true,
+        "%M110": false,
+        "%M111": false
+      }
+    },
+    "timestamp": "2026-10-03T01:32:44Z"
+  }
+}

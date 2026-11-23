@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "DeviceNet Master Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W106",
+    "gate": "Gate G8 / G4",
+    "component": "Industrial DeviceNet Explicit & Polled I/O Fragmentation Reassembly Master Protocol Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Parsed DeviceNetMasterSync program POU with STParser; zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "CAN_ID_Group_Arbitration_And_Framing",
+        "passed": true,
+        "details": "Poll Req CAN-ID=0x41D, Poll Resp CAN-ID=0x3C3, Dup MAC CAN-ID=0x41E."
+      },
+      {
+        "stage": 3,
+        "check": "Multi_Frame_Fragmentation_And_Reassembly",
+        "passed": true,
+        "details": "Fragmented 77 bytes into 11 frames; reconstructed bit-for-bit cleanly."
+      },
+      {
+        "stage": 4,
+        "check": "Duplicate_MAC_ID_Collision_Handling",
+        "passed": true,
+        "details": "Duplicate MAC 0 collision asserted %M157=TRUE and code 0x8302; MAC 10 passed cleanly."
+      },
+      {
+        "stage": 5,
+        "check": "Master_State_Machine_Phase_Progression",
+        "passed": true,
+        "details": "Transitioned to RUNNING; %M156=TRUE (BUS_NORMAL_ACTIVE), 2 slaves configured."
+      },
+      {
+        "stage": 6,
+        "check": "Cyclic_Polled_IO_Data_Exchange",
+        "passed": true,
+        "details": "Polled Slave 1: exchanged 4 bytes (12345678), total transfers=3."
+      },
+      {
+        "stage": 7,
+        "check": "Bus_Fault_Diagnostics_And_BusOff_Monitoring",
+        "passed": true,
+        "details": "Slave drop asserted SCANLIST_MISMATCH; Bus-Off asserted %M157=TRUE and code 0x8304."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Space_Synchronization",
+        "passed": true,
+        "details": "%R670=0x0043, %R671=2 slaves, %R672=0x0006 (MaskLow), %R675=4 transfers."
+      },
+      {
+        "stage": 9,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts and coils strictly intercepted with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "metrics": {
+      "master_mac_id": 10,
+      "configured_slaves": 2,
+      "total_transfers": 4,
+      "fragmentation_errors": 0
+    },
+    "register_map": {
+      "analog_registers": "%R670..%R677",
+      "discrete_coils": "%M156..%M157"
+    },
+    "timestamp": "2026-10-03T04:20:18Z"
+  }
+}

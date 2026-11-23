@@ -1,0 +1,95 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CANopen & DeviceNet Protocol Adapter verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W085",
+    "gate": "Gate G8 / G4",
+    "protocol": "CANopen (CiA 301/401) & DeviceNet (ODVA CIP Vol 3)",
+    "canopen_profile": "CiA 301 v4.2.0 / CiA 401 Generic I/O",
+    "devicenet_profile": "ODVA CIP Volume 3 Predefined Master/Slave Set",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Ladder_Rejection_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R460..%R465 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "CANopen_SDO_Expedited_Read_Write",
+        "passed": true,
+        "details": "Expedited 4B download write confirmed and device type upload read matched CiA 401 (0x00020191)."
+      },
+      {
+        "stage": 3,
+        "check": "CANopen_SDO_Abort_Code_Generation",
+        "passed": true,
+        "details": "Missing object abort code generated correctly: 0x06020000."
+      },
+      {
+        "stage": 4,
+        "check": "CANopen_PDO_Packing_Unpacking_Endianness",
+        "passed": true,
+        "details": "RPDO unpacked into %R462..%R463; TPDO assembled from %R464..%R465."
+      },
+      {
+        "stage": 5,
+        "check": "CANopen_NMT_State_Machine_And_Heartbeat",
+        "passed": true,
+        "details": "NMT state transitions verified; heartbeat consumer watchdog timeout detected."
+      },
+      {
+        "stage": 6,
+        "check": "DeviceNet_CIP_Explicit_Messaging",
+        "passed": true,
+        "details": "DeviceNet Get_Attribute_Single returned Horner APG Vendor ID (0x0059)."
+      },
+      {
+        "stage": 7,
+        "check": "DeviceNet_Polled_IO_Connection",
+        "passed": true,
+        "details": "DeviceNet master poll consumed to %R462..%R463 and slave response generated."
+      },
+      {
+        "stage": 8,
+        "check": "DeviceNet_Frame_Fragmentation_Reassembly",
+        "passed": true,
+        "details": "Multi-packet fragmented CIP message reassembled cleanly."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_Register_Synchronization_And_Reset",
+        "passed": true,
+        "details": "Registers %R460..%R465 updated; %M108 asynchronous reset handshake confirmed."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R460..%R465",
+      "discrete_coils": "%M107..%M108",
+      "values": {
+        "%R460": 4173,
+        "%R461": 895,
+        "%R462": 1234,
+        "%R463": 5678,
+        "%R464": 0,
+        "%R465": 0,
+        "%M107": true,
+        "%M108": false
+      }
+    },
+    "telemetry_metrics": {
+      "canopen_node_id": 16,
+      "devicenet_mac_id": 16,
+      "sdo_requests_handled": 3,
+      "rpdo_frames_received": 1,
+      "tpdo_frames_sent": 1,
+      "devicenet_poll_cycles": 1,
+      "fragmented_messages_reassembled": 1,
+      "heartbeat_timeouts_detected": 1
+    },
+    "timestamp": "2026-10-03T01:31:23Z"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "artifact": "P1 Field Selection Matrix",
+  "timestamp_utc": "2026-10-01T22:10:00Z",
+  "series": "Canvas_P1",
+  "models_count": 4,
+  "profiles": {
+    "P1_CANVAS_M1": {
+      "model_name": "Canvas 7 P1 Model 1",
+      "part_number": "HE-CP7-M1",
+      "digital_inputs": 12,
+      "digital_outputs": 0,
+      "relay_outputs": 6,
+      "analog_inputs": 4,
+      "analog_outputs": 0,
+      "screen_resolution": "800x480"
+    },
+    "P1_CANVAS_M2": {
+      "model_name": "Canvas 7 P1 Model 2",
+      "part_number": "HE-CP7-M2",
+      "digital_inputs": 12,
+      "digital_outputs": 12,
+      "relay_outputs": 0,
+      "analog_inputs": 2,
+      "analog_outputs": 0,
+      "screen_resolution": "800x480"
+    },
+    "P1_CANVAS_M3": {
+      "model_name": "Canvas 7 P1 Model 3",
+      "part_number": "HE-CP7-M3",
+      "digital_inputs": 12,
+      "digital_outputs": 12,
+      "relay_outputs": 0,
+      "analog_inputs": 2,
+      "analog_outputs": 2,
+      "screen_resolution": "800x480"
+    },
+    "P1_CANVAS_M5": {
+      "model_name": "Canvas 7 P1 Model 5",
+      "part_number": "HE-CP7-M5",
+      "digital_inputs": 12,
+      "digital_outputs": 12,
+      "relay_outputs": 0,
+      "analog_inputs": 2,
+      "analog_outputs": 2,
+      "rtd_tc_channels": 2,
+      "screen_resolution": "800x480"
+    }
+  },
+  "safety_rules": [
+    "Hardware target selection performs offline register sizing only",
+    "Physical flashing / download switches strictly intercepted"
+  ]
+}

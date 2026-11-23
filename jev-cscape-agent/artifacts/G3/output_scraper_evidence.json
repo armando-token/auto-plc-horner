@@ -1,0 +1,47 @@
+{
+  "artifact_version": "1.0.0",
+  "generated_at_utc": "2026-10-02T06:02:30Z",
+  "gate": "G3",
+  "work_package": "W016",
+  "title": "MFC ListBox 372 Compiler Output Scraper Evidence",
+  "status": "success",
+  "win32_controls": {
+    "output_window_frame": {
+      "control_id": 45011,
+      "hex_id": "0xAFD3",
+      "class_name": "Afx:ControlBar:b90000:8:10003:10",
+      "toggle_command": "ID_VIEW_OUTPUT_WINDOW (32801)"
+    },
+    "output_listbox": {
+      "control_id": 372,
+      "hex_id": "0x0174",
+      "class_name": "ListBox",
+      "messages": {
+        "LB_GETCOUNT": "0x018B (395)",
+        "LB_GETTEXTLEN": "0x018A (394)",
+        "LB_GETTEXT": "0x0189 (393)"
+      }
+    }
+  },
+  "dismantled_antipatterns": {
+    "H01_SILENT_MOCK": "All mock pathways explicitly declare 'mode': 'offline/mock' in ExecutionResult data.",
+    "H03_FAKE_ERROR_CHECK": "Compiler success cannot be claimed without reading and parsing MFC ListBox 372 lines. Empty lines return INCONCLUSIVE.",
+    "H05_PHANTOM_HWND": "Scraper validates window existence and visibility before reading buffers.",
+    "H13_PARTIAL_POU_MARKED_FULL_SUCCESS": "Compilations with warnings and zero errors are strictly classified as PARTIAL, never full SUCCESS."
+  },
+  "test_verification": {
+    "test_file": "tests/test_output_scraper.py",
+    "tests_count": 12,
+    "tests_passed": 12,
+    "scenarios_verified": [
+      "Empty output window -> INCONCLUSIVE (OUTPUT_EMPTY)",
+      "Clean compile (0 errors, 0 warnings) -> SUCCESS (is_clean=True)",
+      "Compile with syntax errors -> FAILED (COMPILATION_ERROR, line/col/error_code parsed)",
+      "Compile with warnings -> PARTIAL (H13 compliant)",
+      "Fail-closed when Cscape is not running -> FAILED (CSCAPE_NOT_RUNNING)",
+      "Explicit offline/mock mode -> SUCCESS (mode='offline/mock')",
+      "Single GUI boundary contention -> BLOCKED (GUI_CONTENTION_BLOCKED)",
+      "CscapeCompilerDispatcher.trigger_and_scrape integration (clean, warnings, errors)"
+    ]
+  }
+}

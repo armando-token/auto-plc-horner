@@ -1,0 +1,163 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W280 CIP Safety Over Wireless Mesh Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W280",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "work_package": "W280",
+    "gate": "G8",
+    "protocol": "ODVA CIP Safety Over Wireless Mesh (IEEE 802.15.4 / 6LoWPAN)",
+    "stages": [
+      {
+        "stage": 1,
+        "name": "init_and_config",
+        "check": "Engine Initialization & Configuration (Default and Custom Parameters)",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Default engine, custom node/routes, Class IDs (0x39/0x3A/0x3B/0x2F), and register mappings verified."
+      },
+      {
+        "stage": 2,
+        "name": "payload_and_dual_crc_s1_s2",
+        "check": "Payload Framing & Dual Safety CRC-S1/S2 Verification and Corruption Detection",
+        "passed": true,
+        "timing_ms": 0.503,
+        "details": "CRC-S1/S2 calculation, single-bit payload mutation detection, header sequence tamper detection, and wire pack/unpack verified."
+      },
+      {
+        "stage": 3,
+        "name": "multi_hop_routing_and_forwarding",
+        "check": "Multi-Hop Mesh Route Traversal (3 Hops) and Packet Forwarding",
+        "passed": true,
+        "timing_ms": 0.151,
+        "details": "3-hop route ETX selection (Route 1), frame transmission, and multi-hop destination receipt verified."
+      },
+      {
+        "stage": 4,
+        "name": "latency_jitter_watchdog_compensation",
+        "check": "Hop-Based Dynamic Latency Scaling and Safety Watchdog Timeout Enforcement",
+        "passed": true,
+        "timing_ms": 0.026,
+        "details": "Hop-scaled thresholds (225ms/250ms/275ms/300ms), in-window execution, watchdog kick, and TIMEOUT_EXPIRED trip confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "link_degradation_and_alternate_route_failover",
+        "check": "Link Degradation Surveillance (RSSI & Packet Loss) and Automatic Bumpless Reroute",
+        "passed": true,
+        "timing_ms": 0.775,
+        "details": "Bumpless failover to alternate route on RSSI < -82 dBm and packet loss > 5.0% with %M563 alarm assertion verified."
+      },
+      {
+        "stage": 6,
+        "name": "fail_safe_fallback_on_mesh_partition",
+        "check": "Fail-Safe Fallback Interlock on Mesh Partition (Outputs Zeroed & Alarm Asserted)",
+        "passed": true,
+        "timing_ms": 0.787,
+        "details": "Mesh partition without alternate route, explicit split-brain fault, and foreign SNN packet rejection into FAIL_SAFE confirmed."
+      },
+      {
+        "stage": 7,
+        "name": "horner_ocs_register_sync",
+        "check": "Horner OCS Register Space Synchronization (%R2410..%R2417 and %M562..%M563)",
+        "passed": true,
+        "timing_ms": 0.629,
+        "details": "Verified full synchronization of %R2410..%R2417 and discrete coils %M562..%M563 across nominal, degraded, and fail-safe states."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_generation_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 28.299,
+        "details": "CipSafetyWirelessMeshSync pure ST verified with 10 bound registers; rejected 9/9 ladder constructs."
+      },
+      {
+        "stage": 9,
+        "name": "cyclic_soak_100_scans",
+        "check": "100 Cyclic Scan Soak Execution, Memory Leak & Latency Stability Surveillance",
+        "passed": true,
+        "timing_ms": 322.321,
+        "details": "100 scan cycles executed cleanly with 0 faults (peak memory: 6.2 KB, execution status: SUCCESS)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "init_and_config",
+        "check": "Engine Initialization & Configuration (Default and Custom Parameters)",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Default engine, custom node/routes, Class IDs (0x39/0x3A/0x3B/0x2F), and register mappings verified."
+      },
+      {
+        "stage": 2,
+        "name": "payload_and_dual_crc_s1_s2",
+        "check": "Payload Framing & Dual Safety CRC-S1/S2 Verification and Corruption Detection",
+        "passed": true,
+        "timing_ms": 0.503,
+        "details": "CRC-S1/S2 calculation, single-bit payload mutation detection, header sequence tamper detection, and wire pack/unpack verified."
+      },
+      {
+        "stage": 3,
+        "name": "multi_hop_routing_and_forwarding",
+        "check": "Multi-Hop Mesh Route Traversal (3 Hops) and Packet Forwarding",
+        "passed": true,
+        "timing_ms": 0.151,
+        "details": "3-hop route ETX selection (Route 1), frame transmission, and multi-hop destination receipt verified."
+      },
+      {
+        "stage": 4,
+        "name": "latency_jitter_watchdog_compensation",
+        "check": "Hop-Based Dynamic Latency Scaling and Safety Watchdog Timeout Enforcement",
+        "passed": true,
+        "timing_ms": 0.026,
+        "details": "Hop-scaled thresholds (225ms/250ms/275ms/300ms), in-window execution, watchdog kick, and TIMEOUT_EXPIRED trip confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "link_degradation_and_alternate_route_failover",
+        "check": "Link Degradation Surveillance (RSSI & Packet Loss) and Automatic Bumpless Reroute",
+        "passed": true,
+        "timing_ms": 0.775,
+        "details": "Bumpless failover to alternate route on RSSI < -82 dBm and packet loss > 5.0% with %M563 alarm assertion verified."
+      },
+      {
+        "stage": 6,
+        "name": "fail_safe_fallback_on_mesh_partition",
+        "check": "Fail-Safe Fallback Interlock on Mesh Partition (Outputs Zeroed & Alarm Asserted)",
+        "passed": true,
+        "timing_ms": 0.787,
+        "details": "Mesh partition without alternate route, explicit split-brain fault, and foreign SNN packet rejection into FAIL_SAFE confirmed."
+      },
+      {
+        "stage": 7,
+        "name": "horner_ocs_register_sync",
+        "check": "Horner OCS Register Space Synchronization (%R2410..%R2417 and %M562..%M563)",
+        "passed": true,
+        "timing_ms": 0.629,
+        "details": "Verified full synchronization of %R2410..%R2417 and discrete coils %M562..%M563 across nominal, degraded, and fail-safe states."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_generation_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 28.299,
+        "details": "CipSafetyWirelessMeshSync pure ST verified with 10 bound registers; rejected 9/9 ladder constructs."
+      },
+      {
+        "stage": 9,
+        "name": "cyclic_soak_100_scans",
+        "check": "100 Cyclic Scan Soak Execution, Memory Leak & Latency Stability Surveillance",
+        "passed": true,
+        "timing_ms": 322.321,
+        "details": "100 scan cycles executed cleanly with 0 faults (peak memory: 6.2 KB, execution status: SUCCESS)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

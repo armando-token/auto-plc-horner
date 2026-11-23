@@ -1,0 +1,47 @@
+{
+  "task_id": "G9_TASK_02",
+  "screen_width": 320,
+  "screen_height": 240,
+  "objects": [
+    {
+      "object_id": 1,
+      "object_type": "NumericDisplay",
+      "bound_variable": "T1_LEVEL_PV",
+      "virtual_x": 40,
+      "virtual_y": 50,
+      "width": 100,
+      "height": 30,
+      "format_string": "%.1f L"
+    },
+    {
+      "object_id": 2,
+      "object_type": "BarGraph",
+      "bound_variable": "T1_LEVEL_PV",
+      "virtual_x": 160,
+      "virtual_y": 40,
+      "width": 40,
+      "height": 140,
+      "format_string": "Level"
+    },
+    {
+      "object_id": 3,
+      "object_type": "PilotLamp",
+      "bound_variable": "T1_INLET_BOOST",
+      "virtual_x": 220,
+      "virtual_y": 50,
+      "width": 30,
+      "height": 30,
+      "format_string": "INLET"
+    },
+    {
+      "object_id": 4,
+      "object_type": "PilotLamp",
+      "bound_variable": "T1_HIGH_PUMP",
+      "virtual_x": 220,
+      "virtual_y": 100,
+      "width": 30,
+      "height": 30,
+      "format_string": "PUMP"
+    }
+  ]
+}

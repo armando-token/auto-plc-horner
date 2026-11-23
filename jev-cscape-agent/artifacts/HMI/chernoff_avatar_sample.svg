@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </radialGradient>
+    <filter id="glow-alarm" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#0284C7" flood-opacity="0.8" />
+    </filter>
+    <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg-grad)" />
+  <!-- Header Bar -->
+  <g id="header-group">
+    <rect x="20" y="15" width="1160" height="55" rx="6" fill="#0B0F19" fill-opacity="0.95" stroke="#334155" stroke-width="1.2" />
+    <text x="40" y="42" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#F8FAFC">CRITICAL PROCESS ANOMALY AVATAR (CHERNOFF MULTI-DIMENSIONAL GROUNDING)</text>
+    <text x="40" y="58" font-family="Segoe UI, sans-serif" font-size="11" fill="#94A3B8">CSCAPE HMI GATE G9 / G2 LIVE SCREEN ENGINE - IEC 61131-3 PURE ST SYNCHRONIZATION</text>
+  </g>
+  <!-- Avatar Rendering Area -->
+  <g id="avatar-container">
+    <circle cx="380.0" cy="380.0" r="265.0" fill="none" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.25" stroke-dasharray="8 6" />
+    <ellipse cx="380.0" cy="380.0" rx="180.0" ry="220.0" fill="#111827" stroke="#38BDF8" stroke-width="4.5" filter="url(#glow-alarm)" />
+    <ellipse cx="338.2" cy="340.0" rx="32.0" ry="17.0" fill="#FFFFFF" stroke="#334155" stroke-width="2.0" />
+    <ellipse cx="421.8" cy="340.0" rx="32.0" ry="17.0" fill="#FFFFFF" stroke="#334155" stroke-width="2.0" />
+    <circle cx="338.2" cy="340.0" r="9.0" fill="#38BDF8" stroke="#0F172A" stroke-width="1.5" />
+    <circle cx="421.8" cy="340.0" r="9.0" fill="#38BDF8" stroke="#0F172A" stroke-width="1.5" />
+    <path d="M 307.8 333.0 Q 335.5 315.5 363.2 310.0" fill="none" stroke="#38BDF8" stroke-width="4.0" stroke-linecap="round" />
+    <path d="M 396.8 310.0 Q 424.5 315.5 452.2 333.0" fill="none" stroke="#38BDF8" stroke-width="4.0" stroke-linecap="round" />
+    <path d="M 380.0 355.0 L 372.0 405.0 L 388.0 405.0" fill="none" stroke="#475569" stroke-width="2.2" stroke-linejoin="round" />
+    <path d="M 320.8 470.0 C 360.2 501.5, 399.8 501.5, 439.2 470.0" fill="none" stroke="#38BDF8" stroke-width="5.0" stroke-linecap="round" />
+  </g>
+  <!-- Right Telemetry Scorecard -->
+  <g id="telemetry-panel" transform="translate(680, 85)">
+    <rect width="490" height="635" rx="8" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1.2" filter="url(#badge-shadow)" />
+    <text x="25" y="38" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">PROCESS TELEMETRY DIMENSION SCORECARD</text>
+    <line x1="25" y1="50" x2="465" y2="50" stroke="#334155" stroke-width="1.0" />
+    <text x="25" y="86" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Separator Pressure (Head Aspect Ratio)</text>
+    <text x="465" y="86" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">25.0 bar</text>
+    <rect x="25" y="94" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="94" width="220.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="183.4" y1="92" x2="183.4" y2="108" stroke="#10B981" stroke-width="1.8" />
+    <line x1="306.6" y1="92" x2="306.6" y2="108" stroke="#10B981" stroke-width="1.8" />
+    <text x="25" y="144" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Exchanger Inlet Temp (Eye Aperture)</text>
+    <text x="465" y="144" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">80.0 °C</text>
+    <rect x="25" y="152" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="152" width="220.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="171.7" y1="150" x2="171.7" y2="166" stroke="#10B981" stroke-width="1.8" />
+    <line x1="318.3" y1="150" x2="318.3" y2="166" stroke="#10B981" stroke-width="1.8" />
+    <text x="25" y="202" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Feed Density Divergence (Eye Spacing)</text>
+    <text x="465" y="202" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">30.0 kg/m³</text>
+    <rect x="25" y="210" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="210" width="66.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="58.0" y1="208" x2="58.0" y2="224" stroke="#10B981" stroke-width="1.8" />
+    <line x1="157.0" y1="208" x2="157.0" y2="224" stroke="#10B981" stroke-width="1.8" />
+    <text x="25" y="260" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Compressor Vibration (Eyebrow Slant)</text>
+    <text x="465" y="260" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">2.5 mm/s</text>
+    <rect x="25" y="268" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="268" width="55.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="47.0" y1="266" x2="47.0" y2="282" stroke="#10B981" stroke-width="1.8" />
+    <line x1="157.0" y1="266" x2="157.0" y2="282" stroke="#10B981" stroke-width="1.8" />
+    <text x="25" y="318" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Steam Header Imbalance (Eyebrow Elevation)</text>
+    <text x="465" y="318" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">0.0 kPa</text>
+    <rect x="25" y="326" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="326" width="220.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="179.0" y1="324" x2="179.0" y2="340" stroke="#10B981" stroke-width="1.8" />
+    <line x1="311.0" y1="324" x2="311.0" y2="340" stroke="#10B981" stroke-width="1.8" />
+    <text x="25" y="376" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Net Plant Production (Mouth Width)</text>
+    <text x="465" y="376" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">180.0 t/h</text>
+    <rect x="25" y="384" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="384" width="286.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="223.0" y1="382" x2="223.0" y2="398" stroke="#10B981" stroke-width="1.8" />
+    <line x1="399.0" y1="382" x2="399.0" y2="398" stroke="#10B981" stroke-width="1.8" />
+    <text x="25" y="434" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Global Loop Stability (Mouth Camber)</text>
+    <text x="465" y="434" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">90.0 %</text>
+    <rect x="25" y="442" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="442" width="418.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="333.0" y1="440" x2="333.0" y2="456" stroke="#10B981" stroke-width="1.8" />
+    <line x1="465.0" y1="440" x2="465.0" y2="456" stroke="#10B981" stroke-width="1.8" />
+    <text x="25" y="492" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Flash Drum Level Bias (Pupil Gaze)</text>
+    <text x="465" y="492" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">0.0 %</text>
+    <rect x="25" y="500" width="440" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+    <rect x="25" y="500" width="220.0" height="12" rx="3" fill="#38BDF8" />
+    <line x1="157.0" y1="498" x2="157.0" y2="514" stroke="#10B981" stroke-width="1.8" />
+    <line x1="333.0" y1="498" x2="333.0" y2="514" stroke="#10B981" stroke-width="1.8" />
+    <rect x="25" y="550" width="440" height="68" rx="6" fill="#111827" stroke="#38BDF8" stroke-width="1.5" />
+    <text x="45" y="576" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#94A3B8">OVERALL ANOMALY INDEX</text>
+    <text x="45" y="602" font-family="Consolas, monospace" font-size="22" font-weight="700" fill="#38BDF8">0.0%</text>
+    <rect x="310" y="568" width="135" height="34" rx="4" fill="#38BDF8" fill-opacity="0.20" stroke="#38BDF8" stroke-width="1.5" />
+    <text x="377" y="590" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" fill="#38BDF8">NORMAL</text>
+  </g>
+  <!-- Horner OCS Hardware Binding Ribbon -->
+  <g id="ocs-binding-group" transform="translate(20, 680)">
+    <rect width="630" height="45" rx="6" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1.0" />
+    <text x="20" y="27" font-family="Consolas, monospace" font-size="11" fill="#94A3B8">HORNER REGISTERS: %R570..%R577 (16-bit) | COILS: %M133 (WARN) %M134 (ALARM)</text>
+  </g>
+</svg>

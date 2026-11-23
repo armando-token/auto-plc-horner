@@ -1,0 +1,18 @@
+{
+  "magic": "CFBF_V4_OFFLINE_SYNTHESIS",
+  "project_name": "Tank 1 Basic Level Regulation",
+  "streams": {
+    "/V,": {
+      "size": 288,
+      "records": 9
+    },
+    "/Contents": {
+      "size": 4096,
+      "elements": 9
+    },
+    "/Screen1": {
+      "size": 1024,
+      "objects": 4
+    }
+  }
+}

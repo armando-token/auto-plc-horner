@@ -1,0 +1,96 @@
+{
+  "policy_metadata": {
+    "policy_id": "POL-G12-COMMISSIONING-LOCKOUT",
+    "title": "Gate G12 Field Commissioning Fail-Closed Lockout Policy",
+    "gate": "G12",
+    "work_package": "W031",
+    "version": "1.0.0",
+    "effective_date_utc": "2026-10-02T18:48:00Z",
+    "status": "ACTIVE_FAIL_CLOSED",
+    "blocker_id": "BLK-COMMISSIONING-LOCKOUT"
+  },
+  "overview": {
+    "description": "Formal Gate G12 security specification enforcing a permanent fail-closed hardware barrier. Automated agents, subagents, and execution scripts operate in an air-gapped zero-trust boundary with zero permissions to initiate physical PLC controller downloads, unlock hardware communication ports, or execute flashing utilities.",
+    "fail_closed_rule": "Physical PLC commissioning authorization defaults to FALSE under all circumstances. Automated bypass is strictly prohibited."
+  },
+  "zero_trust_boundary": {
+    "description": "Zero-trust execution perimeter separating the agentic runtime from physical plant and controller hardware.",
+    "locked_communication_ports": {
+      "serial_ports": "COM1 through COM256 (case-insensitive regex: ^COM([1-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-6])$)",
+      "device_namespaces": ["\\\\.\\COM*", "/dev/tty*"],
+      "fieldbuses": ["CAN*", "CAN0", "CAN1"],
+      "usb_interfaces": ["USB*", "USB0", "USB1"],
+      "jtag_interfaces": ["JTAG*"]
+    },
+    "locked_companion_binaries": [
+      "pgmupdateutility.exe",
+      "dfusecommand.exe",
+      "stmflashloader.exe",
+      "winjtag.exe"
+    ],
+    "locked_win32_command_ids": {
+      "32827": "ID_PROGRAM_DOWNLOAD",
+      "33149": "ID_CONTROLLER_DOWNLOAD"
+    },
+    "locked_cli_switches": [
+      "/d",
+      "/download",
+      "/flash",
+      "/burn",
+      "/write-flash"
+    ],
+    "network_and_vcs_lockout": {
+      "git_remotes_allowed": 0,
+      "remote_push_prohibited": true,
+      "airgap_enforced": true
+    }
+  },
+  "hardware_protection_invariants": [
+    {
+      "id": "INV-G12-001",
+      "title": "Default Fail-Closed State",
+      "description": "Physical PLC commissioning authorization must evaluate to FALSE by default in CommissioningGuard instances and class state across all execution environments.",
+      "enforcement": "CommissioningGuard.is_authorized == False"
+    },
+    {
+      "id": "INV-G12-002",
+      "title": "Physical Port Unlock Barrier",
+      "description": "Any request or attempt to unlock COM ports, serial namespaces, CAN buses, USB devices, or JTAG interfaces without explicit authorization is intercepted and blocked.",
+      "enforcement": "Raises CommissioningLockedError on request_port_unlock and assert_port_safe"
+    },
+    {
+      "id": "INV-G12-003",
+      "title": "Companion Flasher Execution Barrier",
+      "description": "Any attempt to unlock or execute companion firmware flashing utilities (PGMUpdateUtility, DfuSeCommand, STMFlashLoader, WinJTAG) without explicit authorization is intercepted and blocked.",
+      "enforcement": "Raises CommissioningLockedError on request_flash_tool_unlock and assert_binary_execution_safe"
+    },
+    {
+      "id": "INV-G12-004",
+      "title": "Win32 Download Command Interception Barrier",
+      "description": "Any attempt to unlock or dispatch Win32 WM_COMMAND messages for controller download (ID 32827, ID 33149) without explicit authorization is intercepted and blocked.",
+      "enforcement": "Raises CommissioningLockedError on request_win32_download_unlock and assert_win32_command_safe"
+    },
+    {
+      "id": "INV-G12-005",
+      "title": "Mandatory Tamper-Evident Audit Logging",
+      "description": "All blocked physical commissioning unlock requests and unauthorized access attempts must be recorded in an audit log with unique ID, timestamp, gate, action, target, and status.",
+      "enforcement": "CommissioningGuard._record_blocked_attempt maintains structured audit ledger"
+    },
+    {
+      "id": "INV-G12-006",
+      "title": "Physical Removable Media Exclusivity",
+      "description": "Actual physical controller deployment may only occur via offline physical transfer to removable media (USB drive or MicroSD card) following formal manual engineering sign-off.",
+      "enforcement": "Automated online downloads are permanently disabled"
+    }
+  ],
+  "exception_contracts": {
+    "primary_exception": "CommissioningLockedError",
+    "base_exception": "HardwareLockoutError",
+    "root_security_exception": "SecurityError"
+  },
+  "implementation_references": {
+    "guard_module": "src/jev_cscape/security/commissioning.py",
+    "guard_class": "CommissioningGuard",
+    "test_suite": "tests/test_commissioning_lockout.py"
+  }
+}

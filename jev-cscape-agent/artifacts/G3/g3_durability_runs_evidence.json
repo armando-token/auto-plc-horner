@@ -1,0 +1,290 @@
+{
+  "status": "success",
+  "timestamp_utc": "2026-10-08T22:06:13.129906+00:00",
+  "mission": "G3_W025_W030_DURABILITY_RUNS",
+  "total_runs_requested": 10,
+  "successful_runs": 10,
+  "failed_runs": 0,
+  "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+  "source_baseline_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+  "source_final_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+  "source_preserved_untouched": true,
+  "work_packages": {
+    "W025": {
+      "status": "success",
+      "title": "Target Copy Isolation & Source Hash Immutability"
+    },
+    "W026": {
+      "status": "success",
+      "title": "In-GUI Logic & Variable Mutation Injection"
+    },
+    "W027": {
+      "status": "success",
+      "title": "Win32 ID_FILE_SAVEAS (57604) / ID_FILE_SAVE (57603) Modal Handling"
+    },
+    "W028": {
+      "status": "success",
+      "title": "CFBF OLE2 Storage Format & Stream Health Validator"
+    },
+    "W029": {
+      "status": "success",
+      "title": "Post-Save Clean Reopen & Project Reload"
+    },
+    "W030": {
+      "status": "success",
+      "title": "10-Cycle Durability Loop & Clean Compile Verification"
+    }
+  },
+  "runs": [
+    {
+      "run_index": 1,
+      "status": "success",
+      "started_at_utc": "2026-10-08T21:59:47.305444+00:00",
+      "elapsed_seconds": 44.98,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_1.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_1_1791496787",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 10860,
+      "main_hwnd": "0x803c2",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_1.png"
+    },
+    {
+      "run_index": 2,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:00:32.282613+00:00",
+      "elapsed_seconds": 55.6,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_2.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_2_1791496832",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 4388,
+      "main_hwnd": "0x1003de",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_2.png"
+    },
+    {
+      "run_index": 3,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:01:27.878031+00:00",
+      "elapsed_seconds": 43.81,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_3.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_3_1791496887",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 1968,
+      "main_hwnd": "0x1a05be",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_3.png"
+    },
+    {
+      "run_index": 4,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:02:11.684925+00:00",
+      "elapsed_seconds": 35.56,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_4.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_4_1791496931",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 6640,
+      "main_hwnd": "0x150362",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_4.png"
+    },
+    {
+      "run_index": 5,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:02:47.244886+00:00",
+      "elapsed_seconds": 35.36,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_5.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_5_1791496967",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 11676,
+      "main_hwnd": "0x1603b4",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_5.png"
+    },
+    {
+      "run_index": 6,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:03:22.606158+00:00",
+      "elapsed_seconds": 35.35,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_6.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_6_1791497002",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 4860,
+      "main_hwnd": "0x1b036a",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_6.png"
+    },
+    {
+      "run_index": 7,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:03:57.960540+00:00",
+      "elapsed_seconds": 30.22,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_7.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_7_1791497037",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 8464,
+      "main_hwnd": "0x1b03c0",
+      "navigator_nodes_count": 40,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_7.png"
+    },
+    {
+      "run_index": 8,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:04:28.185483+00:00",
+      "elapsed_seconds": 35.35,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_8.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_8_1791497068",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 7056,
+      "main_hwnd": "0x200416",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_8.png"
+    },
+    {
+      "run_index": 9,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:05:03.534191+00:00",
+      "elapsed_seconds": 34.45,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_9.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_9_1791497103",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 2008,
+      "main_hwnd": "0x24029c",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_9.png"
+    },
+    {
+      "run_index": 10,
+      "status": "success",
+      "started_at_utc": "2026-10-08T22:05:37.984247+00:00",
+      "elapsed_seconds": 35.15,
+      "source_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "source_sha256_verified": true,
+      "target_copy_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\test_sandbox_run_10.csp",
+      "target_copy_initial_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "target_copy_saved_sha256": "25112eebdae56a77a97c0e37536eab3975a38ae3815b3850b9a8dfa12bb20592",
+      "mutation_tag": "RUN_10_1791497137",
+      "cfbf_validation": {
+        "valid_cfbf": true,
+        "magic_hex": "d0cf11e0a1b11ae1",
+        "size_bytes": 7680,
+        "sector_aligned_512": true
+      },
+      "cscape_pid": 9460,
+      "main_hwnd": "0x270372",
+      "navigator_nodes_count": 1,
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "reopen_verified": true,
+      "screenshot_file": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\durability_runs\\run_10.png"
+    }
+  ]
+}

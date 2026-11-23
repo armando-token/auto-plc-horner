@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 750" width="1200" height="750">
+  <style>
+    .title-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 15px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.8px; }
+    .subtitle-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #94A3B8; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; }
+    .sector-path { transition: opacity 0.2s; cursor: pointer; stroke: #1E293B; stroke-width: 1.2px; }
+    .sector-selected { stroke: #38BDF8; stroke-width: 2.5px; filter: drop-shadow(0 0 6px #38BDF8); }
+    .sector-tripped { stroke: #EF4444; stroke-width: 2.5px; filter: drop-shadow(0 0 6px #EF4444); }
+    .core-hub { fill: #0B0F19; stroke: #334155; stroke-width: 2px; }
+    .hud-card { fill: #1E293B; stroke: #334155; stroke-width: 1.5px; rx: 8px; }
+    .hud-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 13px; font-weight: 700; fill: #38BDF8; letter-spacing: 0.5px; }
+    .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+    .crumb-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 10px; font-weight: 600; fill: #F8FAFC; }
+  </style>
+  <defs>
+    <filter id="alert-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="focus-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Dark Theme Backing -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <g id="canvas-header">
+    <text x="30" y="38" class="title-banner">CSCAPE HMI DYNAMIC SUNBURST &amp; RADIAL RING PARTITIONING CANVAS (W174)</text>
+    <text x="30" y="55" class="subtitle-banner">3-Level Concentric SCADA Refinery Partitioning • Gate G9 Graphic Screen Engine / Gate G2 Live GUI</text>
+    <!-- System Status Decoupled Badge -->
+    <rect x="810" y="20" width="360" height="42" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="825" y="45" font-family="sans-serif" font-size="11px" font-weight="600" fill="#94A3B8">PLANT STATUS:</text>
+    <text x="1155" y="45" class="badge-text" fill="#10B981" text-anchor="end">NOMINAL OPERATION</text>
+  </g>
+  <!-- Breadcrumb Trail HUD -->
+  <g id="radial-breadcrumb-tracker">
+    <rect x="30" y="70" width="760" height="30" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="45" y="89" class="hud-label">HIERARCHY PATH:</text>
+    <text x="145" y="89" class="crumb-text"><tspan fill="#38BDF8">L0: Plant Core</tspan> &gt; <tspan fill="#06B6D4">L1: Crude / Distillation</tspan> &gt; <tspan fill="#10B981">L2: Atmospheric Crude Column</tspan></text>
+  </g>
+  <g id="sunburst-diagram">
+  <g id="concentric-annular-sectors">
+    <!-- Level 1 Block: Crude / Distillation -->
+    <path id="sector-BLK_CRUDE" class="sector-path" d="M 649.98 387.49 A 190.00 190.00 0 0 1 350.34 540.16 L 408.06 458.50 A 90.00 90.00 0 0 0 549.99 386.18 Z" fill="#0284C7" fill-opacity="0.75" stroke="#38BDF8" stroke-width="2.0"/>
+    <text x="523.6" y="505.7" font-family="sans-serif" font-size="9px" font-weight="700" fill="#F8FAFC" text-anchor="middle">BLK-01</text>
+    <text x="523.6" y="517.7" font-family="monospace" font-size="8px" fill="#94A3B8" text-anchor="middle">350 MW</text>
+    <!-- Level 1 Block: Conversion FCC / HCU -->
+    <path id="sector-BLK_CONVERSION" class="sector-path" d="M 346.32 537.24 A 190.00 190.00 0 0 1 346.32 232.76 L 406.15 312.89 A 90.00 90.00 0 0 0 406.15 457.11 Z" fill="#10B981" fill-opacity="0.55" stroke="#1E293B" stroke-width="1.0"/>
+    <text x="320.0" y="381.0" font-family="sans-serif" font-size="9px" font-weight="700" fill="#F8FAFC" text-anchor="middle">BLK-02</text>
+    <text x="320.0" y="393.0" font-family="monospace" font-size="8px" fill="#94A3B8" text-anchor="middle">300 MW</text>
+    <!-- Level 1 Block: Reforming / Isomerization -->
+    <path id="sector-BLK_REFORMING" class="sector-path" d="M 350.34 229.84 A 190.00 190.00 0 0 1 569.66 229.84 L 511.94 311.50 A 90.00 90.00 0 0 0 408.06 311.50 Z" fill="#6366F1" fill-opacity="0.55" stroke="#1E293B" stroke-width="1.0"/>
+    <text x="460.0" y="241.0" font-family="sans-serif" font-size="9px" font-weight="700" fill="#F8FAFC" text-anchor="middle">BLK-03</text>
+    <text x="460.0" y="253.0" font-family="monospace" font-size="8px" fill="#94A3B8" text-anchor="middle">200 MW</text>
+    <!-- Level 1 Block: Alkylation / Treating -->
+    <path id="sector-BLK_ALKYLATION" class="sector-path" d="M 573.68 232.76 A 190.00 190.00 0 0 1 649.98 382.51 L 549.99 383.82 A 90.00 90.00 0 0 0 513.85 312.89 Z" fill="#F59E0B" fill-opacity="0.55" stroke="#1E293B" stroke-width="1.0"/>
+    <text x="584.7" y="317.4" font-family="sans-serif" font-size="9px" font-weight="700" fill="#F8FAFC" text-anchor="middle">BLK-04</text>
+    <text x="584.7" y="329.4" font-family="monospace" font-size="8px" fill="#94A3B8" text-anchor="middle">150 MW</text>
+    <!-- Level 2 Subsystem: Atmospheric Crude Column -->
+    <path id="sector-SS_ATM_COL" class="sector-selected" d="M 759.99 387.62 A 300.00 300.00 0 0 1 653.24 614.48 L 588.82 537.98 A 200.00 200.00 0 0 0 659.99 386.75 Z" fill="#0284C7" fill-opacity="0.85"/>
+    <path d="M 663.98 387.85 A 204.00 204.00 0 0 1 602.49 530.99" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 755.97 389.13 A 296.00 296.00 0 0 1 676.44 586.92" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Crude Preflash Furnace -->
+    <path id="sector-SS_CRUDE_FURN" class="sector-path" d="M 649.20 617.81 A 300.00 300.00 0 0 1 462.62 684.99 L 461.75 584.99 A 200.00 200.00 0 0 0 586.14 540.21 Z" fill="#0284C7" fill-opacity="0.60"/>
+    <path d="M 587.83 543.98 A 204.00 204.00 0 0 1 475.01 588.45" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 645.47 615.68 A 296.00 296.00 0 0 1 478.84 680.40" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Desalter &amp; Heat Exchanger Train -->
+    <path id="sector-SS_DESALT_HEX" class="sector-path" d="M 457.38 684.99 A 300.00 300.00 0 0 1 352.00 664.89 L 388.00 571.59 A 200.00 200.00 0 0 0 458.25 584.99 Z" fill="#0284C7" fill-opacity="0.60"/>
+    <path d="M 457.15 588.98 A 204.00 204.00 0 0 1 394.26 578.12" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 455.87 680.97 A 296.00 296.00 0 0 1 363.14 664.70" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Vacuum Distillation Column -->
+    <path id="sector-SS_VAC_COL" class="sector-path" d="M 347.13 662.96 A 300.00 300.00 0 0 1 285.79 629.23 L 343.86 547.82 A 200.00 200.00 0 0 0 384.76 570.31 Z" fill="#0284C7" fill-opacity="0.60"/>
+    <path d="M 382.26 573.61 A 204.00 204.00 0 0 1 345.41 553.77" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 347.20 658.67 A 296.00 296.00 0 0 1 293.18 629.51" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: FCC Riser Reactor &amp; Reg -->
+    <path id="sector-SS_FCC_RX" class="sector-path" d="M 281.55 626.16 A 300.00 300.00 0 0 1 162.71 425.20 L 261.80 411.80 A 200.00 200.00 0 0 0 341.04 545.77 Z" fill="#10B981" fill-opacity="0.60"/>
+    <path d="M 337.80 548.35 A 204.00 204.00 0 0 1 261.95 433.92" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 282.69 622.02 A 296.00 296.00 0 0 1 173.21 458.25" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: FCC Main Air Compressor -->
+    <path id="sector-SS_FCC_BLOWER" class="sector-path" d="M 162.05 420.00 A 300.00 300.00 0 0 1 173.88 294.79 L 269.26 324.86 A 200.00 200.00 0 0 0 261.37 408.33 Z" fill="#10B981" fill-opacity="0.60"/>
+    <path d="M 257.27 407.74 A 204.00 204.00 0 0 1 262.59 333.56" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 165.84 417.99 A 296.00 296.00 0 0 1 173.41 310.96" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: HCU Trickle-Bed Reactor -->
+    <path id="sector-SS_HCU_RX" class="sector-path" d="M 175.50 289.81 A 300.00 300.00 0 0 1 227.19 195.80 L 304.79 258.86 A 200.00 200.00 0 0 0 270.34 321.54 Z" fill="#10B981" fill-opacity="0.60"/>
+    <path d="M 266.88 319.26 A 204.00 204.00 0 0 1 295.80 263.94" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 179.79 289.61 A 296.00 296.00 0 0 1 221.14 210.18" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: HCU Recycle Gas Compressor -->
+    <path id="sector-SS_HCU_COMP" class="sector-path" d="M 230.52 191.76 A 300.00 300.00 0 0 1 281.55 143.84 L 341.04 224.23 A 200.00 200.00 0 0 0 307.02 256.18 Z" fill="#10B981" fill-opacity="0.60"/>
+    <path d="M 304.65 252.78 A 204.00 204.00 0 0 1 332.75 225.55" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 234.58 193.16 A 296.00 296.00 0 0 1 275.11 153.85" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: CCR Multi-Bed Reactor -->
+    <path id="sector-SS_CCR_RX" class="sector-path" d="M 285.79 140.77 A 300.00 300.00 0 0 1 438.55 85.77 L 445.70 185.51 A 200.00 200.00 0 0 0 343.86 222.18 Z" fill="#6366F1" fill-opacity="0.60"/>
+    <path d="M 342.41 218.30 A 204.00 204.00 0 0 1 434.53 182.60" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 289.38 143.13 A 296.00 296.00 0 0 1 424.62 91.12" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: CCR Interheater Furnace -->
+    <path id="sector-SS_CCR_FURN" class="sector-path" d="M 443.78 85.44 A 300.00 300.00 0 0 1 550.21 98.88 L 520.14 194.26 A 200.00 200.00 0 0 0 449.18 185.29 Z" fill="#6366F1" fill-opacity="0.60"/>
+    <path d="M 450.03 181.24 A 204.00 204.00 0 0 1 512.80 187.95" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 445.54 89.35 A 296.00 296.00 0 0 1 538.11 99.49" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Deisohexanizer Column -->
+    <path id="sector-SS_ISOM_COL" class="sector-path" d="M 555.19 100.50 A 300.00 300.00 0 0 1 602.23 120.86 L 554.82 208.90 A 200.00 200.00 0 0 0 523.46 195.34 Z" fill="#6366F1" fill-opacity="0.60"/>
+    <path d="M 525.74 191.88 A 204.00 204.00 0 0 1 552.87 203.36" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 555.39 104.79 A 296.00 296.00 0 0 1 595.17 121.67" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Isom Feed Exchanger -->
+    <path id="sector-SS_ISOM_HEX" class="sector-path" d="M 606.81 123.38 A 300.00 300.00 0 0 1 634.21 140.77 L 576.14 222.18 A 200.00 200.00 0 0 0 557.88 210.59 Z" fill="#6366F1" fill-opacity="0.60"/>
+    <path d="M 560.76 207.62 A 204.00 204.00 0 0 1 576.29 217.39" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 606.21 127.63 A 296.00 296.00 0 0 1 628.97 141.96" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Sulfuric Acid Contactor -->
+    <path id="sector-SS_ALKY_RX" class="sector-path" d="M 638.45 143.84 A 300.00 300.00 0 0 1 716.88 230.04 L 631.25 281.69 A 200.00 200.00 0 0 0 578.96 224.23 Z" fill="#F59E0B" fill-opacity="0.60"/>
+    <path d="M 582.20 221.65 A 204.00 204.00 0 0 1 628.22 269.59" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 637.31 147.98 A 296.00 296.00 0 0 1 703.76 217.08" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Refrigeration Compressor -->
+    <path id="sector-SS_ALKY_COMP" class="sector-path" d="M 719.55 234.55 A 300.00 300.00 0 0 1 744.50 289.81 L 649.66 321.54 A 200.00 200.00 0 0 0 633.03 284.70 Z" fill="#F59E0B" fill-opacity="0.60"/>
+    <path d="M 637.02 283.62 A 204.00 204.00 0 0 1 651.55 314.83" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 716.86 237.90 A 296.00 296.00 0 0 1 737.84 282.91" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: Naphtha HDS Reactor -->
+    <path id="sector-SS_HDS_RX" class="sector-path" d="M 746.12 294.79 A 300.00 300.00 0 0 1 757.29 344.80 L 658.20 358.20 A 200.00 200.00 0 0 0 650.74 324.86 Z" fill="#F59E0B" fill-opacity="0.60"/>
+    <path d="M 654.88 324.68 A 204.00 204.00 0 0 1 661.38 352.40" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 742.76 297.47 A 296.00 296.00 0 0 1 752.16 337.46" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Level 2 Subsystem: HDS Stripper Column -->
+    <path id="sector-SS_HDS_COL" class="sector-path" d="M 757.95 350.00 A 300.00 300.00 0 0 1 759.99 382.38 L 659.99 383.25 A 200.00 200.00 0 0 0 658.63 361.67 Z" fill="#F59E0B" fill-opacity="0.60"/>
+    <path d="M 662.73 362.26 A 204.00 204.00 0 0 1 663.94 379.96" fill="none" stroke="#06B6D4" stroke-width="2.0" stroke-linecap="round"/>
+    <path d="M 754.16 352.01 A 296.00 296.00 0 0 1 755.90 377.40" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+  </g> <!-- concentric-annular-sectors -->
+  <!-- Level 0: Central Core Metric Hub -->
+  <g id="center-root-metric-hub">
+    <circle cx="460.0" cy="385.0" r="80.0" class="core-hub"/>
+    <text x="460.0" y="361.0" font-family="sans-serif" font-size="8.5px" font-weight="700" fill="#38BDF8" text-anchor="middle">PLANT ENERGY CORE</text>
+    <text x="460.0" y="387.0" font-family="monospace" font-size="20px" font-weight="700" fill="#F8FAFC" text-anchor="middle">89.5%</text>
+    <text x="460.0" y="401.0" font-family="monospace" font-size="9px" fill="#94A3B8" text-anchor="middle">1000.0 MW TOTAL</text>
+    <!-- Core Health Badge -->
+    <rect x="420.0" y="409.0" width="80" height="18" rx="3" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="460.0" y="421.0" class="badge-text" fill="#10B981" text-anchor="middle">KPI HEALTH</text>
+  </g>
+  </g> <!-- sunburst-diagram -->
+  <!-- Right-Hand Subsystem KPI & Energy Breakdown HUD Card -->
+  <g id="hierarchical-telemetry-card">
+    <rect x="820.0" y="70.0" width="350.0" height="650.0" class="hud-card"/>
+    <text x="838.0" y="98.0" class="hud-title">SUBSYSTEM KPI &amp; ENERGY HUD</text>
+    <text x="838.0" y="114.0" class="hud-label">TELEMETRY CARD • GATE G9 LIVE GUI</text>
+    <line x1="838.0" y1="124.0" x2="1152.0" y2="124.0" stroke="#334155" stroke-width="1"/>
+    <!-- Diagnostic Status -->
+    <g id="diagnostic-hud">
+      <text x="838.0" y="144.0" class="hud-label">DIAGNOSTIC STATUS (%R1357):</text>
+      <rect x="838.0" y="152.0" width="314.0" height="28" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <text x="850.0" y="170.0" class="badge-text" fill="#10B981">0x0000: NOMINAL OK</text>
+    </g>
+    <!-- Selected Subsystem -->
+    <text x="838.0" y="200.0" class="hud-label">SELECTED SECTOR [INDEX 0]:</text>
+    <text x="838.0" y="218.0" font-family="monospace" font-size="14px" font-weight="700" fill="#38BDF8">C-101 • Atmospheric Crude Column</text>
+    <text x="838.0" y="234.0" class="hud-label">TYPE: <tspan fill="#F8FAFC">Columns</tspan> • BLOCK: <tspan fill="#06B6D4">Crude / Distillation</tspan></text>
+    <!-- Energy Breakdown -->
+    <rect x="838.0" y="256.0" width="314.0" height="76" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="848.0" y="274.0" class="hud-label">ENERGY CONSUMPTION:</text>
+    <text x="848.0" y="294.0" font-family="monospace" font-size="16px" font-weight="700" fill="#F8FAFC">140.0 MW</text>
+    <text x="1142.0" y="294.0" font-family="monospace" font-size="16px" font-weight="700" fill="#38BDF8" text-anchor="end">14.0% SHARE</text>
+    <!-- Bar Progress -->
+    <rect x="848.0" y="304.0" width="294.0" height="8" rx="2" fill="#1E293B"/>
+    <rect x="848.0" y="304.0" width="41.2" height="8" rx="2" fill="#38BDF8"/>
+    <!-- Synchronized Health Scores -->
+    <rect x="838.0" y="348.0" width="314.0" height="96" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="848.0" y="366.0" class="hud-label">SYNCHRONIZED HEALTH SCORES:</text>
+    <!-- Cyan Baseline -->
+    <text x="848.0" y="384.0" class="hud-label">CYAN BASELINE:</text>
+    <text x="1142.0" y="384.0" font-family="monospace" font-size="12px" font-weight="700" fill="#06B6D4" text-anchor="end">92.0%</text>
+    <!-- Emerald Live Status -->
+    <text x="848.0" y="402.0" class="hud-label">EMERALD LIVE STATUS:</text>
+    <text x="1142.0" y="402.0" font-family="monospace" font-size="12px" font-weight="700" fill="#10B981" text-anchor="end">86.5%</text>
+    <!-- Health Deviation -->
+    <text x="848.0" y="420.0" class="hud-label">MAX DEVIATION (%R1355):</text>
+    <text x="1142.0" y="420.0" font-family="monospace" font-size="12px" font-weight="700" fill="#F8FAFC" text-anchor="end">5.5%</text>
+    <!-- Register Table HUD -->
+    <g id="register-space-hud">
+      <text x="838.0" y="460.0" class="hud-label">HORNER OCS REGISTER MEMORY SPACE:</text>
+      <rect x="838.0" y="468.0" width="314.0" height="140" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+      <text x="846.0" y="486.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1350 [TotalEnergyScore]: <tspan fill="#F8FAFC">895</tspan></text>
+      <text x="846.0" y="502.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1351 [SelectedDepth]:    <tspan fill="#F8FAFC">2</tspan></text>
+      <text x="846.0" y="518.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1352 [SelectedSector]:   <tspan fill="#F8FAFC">0</tspan></text>
+      <text x="846.0" y="534.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1353 [L1PrimaryScore]:   <tspan fill="#F8FAFC">920</tspan></text>
+      <text x="846.0" y="550.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1354 [L2SubsystemScore]: <tspan fill="#F8FAFC">865</tspan></text>
+      <text x="846.0" y="566.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1355 [MaxHierarchyDev]:  <tspan fill="#F8FAFC">55</tspan></text>
+      <text x="846.0" y="582.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1356 [ActiveSectors]:    <tspan fill="#F8FAFC">16</tspan></text>
+      <text x="846.0" y="598.0" font-family="monospace" font-size="9.5px" fill="#94A3B8">%R1357 [DiagStatusCode]:   <tspan fill="#F8FAFC">0</tspan></text>
+    </g>
+    <text x="838.0" y="620.0" class="hud-label">COILS: <tspan fill="#10B981">%M315 (Trip)=FALSE</tspan> • <tspan fill="#10B981">%M316 (Active)=TRUE</tspan></text>
+  </g> <!-- hierarchical-telemetry-card -->
+</svg>

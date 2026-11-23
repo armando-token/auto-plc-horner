@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_036",
+  "file_name": "scene_036.png",
+  "original_source": "artifacts\\G7\\acceptance_runs\\run_15_reopen.png",
+  "split": "reserved",
+  "scene_type": "ladder_editor",
+  "category": "LADDER",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "15c8bd670f3fa43a7771d123fb206f95b44920e5d01309e1ec28a632afd302c9",
+  "labels": {
+    "canvas_rect": [
+      124,
+      28,
+      1269,
+      460
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        244
+      ],
+      "canvas_nw": [
+        124,
+        28
+      ],
+      "canvas_se": [
+        1269,
+        460
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

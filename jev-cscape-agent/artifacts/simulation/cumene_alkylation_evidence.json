@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Cumene (Isopropylbenzene) Catalytic Alkylation ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W227",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Cumene (Isopropylbenzene) Benzene-Propylene Catalytic Alkylation ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "CumeneAlkylationSync POU verified cleanly; bound %R1880..%R1887 and %M438..%M440."
+      },
+      {
+        "stage": 2,
+        "check": "Reaction_Kinetics_And_Arrhenius_Monotonicity",
+        "passed": true,
+        "details": "Kinetics verified: k1(180C)=1.3385, k1(205C)=3.4389, k1(240C)=11.0430, Ea1 error=4.37e-11 J/mol."
+      },
+      {
+        "stage": 3,
+        "check": "Reaction_Enthalpy_Balances_And_Exothermic_Generation",
+        "passed": true,
+        "details": "Enthalpy duties verified: Q1=287.20 kW (-105 kJ/mol), Q2=7.91 kW (-102 kJ/mol), Q3=1.23 kW (-95 kJ/mol), Total=296.34 kW, uncooled dT_bed/dt=0.0533 \u00b0C/s."
+      },
+      {
+        "stage": 4,
+        "check": "Benzene_Propylene_Ratio_And_Pre_Alarm_Dynamics",
+        "passed": true,
+        "details": "Benzene:Propylene molar ratio pre-alarm %M439 (<4.2:1) and runaway trip 0xF003 (<3.5:1) verified."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Stability",
+        "passed": true,
+        "details": "RK4 solver stable over 5.0s (dt=0.02s): C_bz=7.3264, C_pr=0.0241, C_cu=1.4765, T_bed=205.00 \u00b0C, Conv=98.50%, Sel=93.20%."
+      },
+      {
+        "stage": 6,
+        "check": "Mass_Elemental_And_Enthalpy_Conservation_Residuals",
+        "passed": true,
+        "details": "Residuals verified: mass=0.00e+00 kg/s, elemental=0.00e+00 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xF001..0xF004), pre-alarm %M439, and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Emergency_Cold_Quench_Actuation_And_Bed_Quenching",
+        "passed": true,
+        "details": "Emergency cold quench verified: reaction power quenched to 0.00 kW, bed temperature cooled to 236.15 \u00b0C."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Memory_Space_Integration_And_Anti_Ladder_Security",
+        "passed": true,
+        "details": "Registers %R1880..%R1887 & %M438..%M440 verified; ladder logic rejected cleanly via SecurityGuard."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1880..%R1887",
+      "discrete_coils": "%M438..%M440",
+      "values": {
+        "%R1880": 2050,
+        "%R1881": 300,
+        "%R1882": 9850,
+        "%R1883": 9320,
+        "%R1884": 55,
+        "%R1885": 11500,
+        "%R1886": 110,
+        "%R1887": 0,
+        "%M438": true,
+        "%M439": false,
+        "%M440": false
+      }
+    },
+    "timestamp": "2026-10-06T08:45:27Z"
+  }
+}

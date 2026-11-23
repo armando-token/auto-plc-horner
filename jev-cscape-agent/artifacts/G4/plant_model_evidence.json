@@ -1,0 +1,74 @@
+{
+  "gate": "G4",
+  "work_package": "W021",
+  "status": "success",
+  "mode": "offline/mock",
+  "classification": "TESTED_MOCK [offline/DEV only]",
+  "timestamp_utc": "2026-10-02T06:48:30.000000+00:00",
+  "hardware_lockout": "FAIL_CLOSED_ACTIVE",
+  "straton_quarantine": "CERTIFIED_ISOLATED",
+  "plant_parameters": {
+    "system_name": "TankLevelClosedLoop",
+    "tank_geometry": {
+      "cross_sectional_area_m2": 1.0,
+      "max_height_m": 100.0,
+      "overflow_height_m": 100.0
+    },
+    "flow_coefficients": {
+      "valve_max_inflow_units_s": 10.0,
+      "drain_discharge_coefficient": 0.5,
+      "pump_max_outflow_units_s": 10.0,
+      "gravity_constant_m_s2": 9.80665
+    },
+    "scaling_matrix": {
+      "raw_min_counts": 0,
+      "raw_max_counts": 32000,
+      "level_min_pct": 0.0,
+      "level_max_pct": 100.0,
+      "counts_per_pct": 320.0
+    }
+  },
+  "channel_couplings": {
+    "actuators": {
+      "inlet_valve": "%AQ1",
+      "discharge_pump": "%Q1",
+      "pump_speed": "%AQ2"
+    },
+    "sensors": {
+      "level_transmitter": "%AI1",
+      "pump_feedback": "%I1",
+      "alarm_hi": "%M1",
+      "alarm_lo": "%M2",
+      "alarm_hi_hi": "%M3",
+      "alarm_lo_lo": "%M4"
+    }
+  },
+  "physics_verification_metrics": {
+    "mass_conservation_delta": 0.0,
+    "torricelli_drain_curve_r2": 1.0,
+    "level_sensor_linearity_r2": 1.0,
+    "saturation_clamps": {
+      "negative_level_suppressed": true,
+      "overflow_contained": true
+    },
+    "actuator_rate_limiting": {
+      "valve_slew_rate_pct_s": 20.0,
+      "pump_tau_accel_s": 1.5,
+      "pump_tau_coast_s": 2.5
+    },
+    "alarm_hysteresis": {
+      "hi_limit": 75.0,
+      "hi_hi_limit": 90.0,
+      "lo_limit": 25.0,
+      "lo_lo_limit": 10.0,
+      "deadband_pct": 2.0,
+      "anti_chatter_verified": true
+    }
+  },
+  "test_summary": {
+    "test_file": "tests/test_plant_model.py",
+    "total_assertions": 31,
+    "all_passed": true,
+    "status": "success"
+  }
+}

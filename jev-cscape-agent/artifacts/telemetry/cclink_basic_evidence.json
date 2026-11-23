@@ -1,0 +1,87 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CC-Link IE Field Basic Cyclic Transmission & Slave Station Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W166",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "CC-Link IE Field Basic Cyclic Protocol Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Binding",
+        "passed": true,
+        "details": "Parsed CcLinkIeFieldBasicSync and alias with 10 registered bindings: ['%M296', '%M297', '%R1270', '%R1271', '%R1272', '%R1273', '%R1274', '%R1275', '%R1276', '%R1277']."
+      },
+      {
+        "stage": 2,
+        "check": "Frame_Serialization_Parsing_And_CRC16_Checksum",
+        "passed": true,
+        "details": "Serialized 92 bytes with CRC 0x7B3C validated successfully."
+      },
+      {
+        "stage": 3,
+        "check": "Link_Devices_Cyclic_Data_Exchange_And_Double_Buffering",
+        "passed": true,
+        "details": "RX, RY, RWw, and RWr cyclic image exchange and atomic staging verified."
+      },
+      {
+        "stage": 4,
+        "check": "Slave_Station_Diagnostic_State_Machine_Lifecycle",
+        "passed": true,
+        "details": "Progression DISCONNECTED(0) -> LINK_SCAN_WAIT(1) -> CYCLIC_OPERATION(3) verified."
+      },
+      {
+        "stage": 5,
+        "check": "Group_Cycle_Time_Tracking_And_Nominal_Timing",
+        "passed": true,
+        "details": "Nominal 10.0 ms cycle (%R1270=100) with monotonic sequence %R1272=6 verified."
+      },
+      {
+        "stage": 6,
+        "check": "Disconnection_Detection_Timeout_Monitoring_0xBF01",
+        "passed": true,
+        "details": "55.0 ms silence triggered 0xBF01 (TIMEOUT), %M297=True, %M296=False."
+      },
+      {
+        "stage": 7,
+        "check": "Transaction_ID_Sequence_Consistency_Surveillance_0xBF02",
+        "passed": true,
+        "details": "Out-of-order transaction ID intercepted with code 0xBF02."
+      },
+      {
+        "stage": 8,
+        "check": "Duplicate_Station_Number_And_IP_Collision_Detection_0xBF03",
+        "passed": true,
+        "details": "Station collision intercepted with code 0xBF03 and fail-closed trip."
+      },
+      {
+        "stage": 9,
+        "check": "Frame_CRC_Corruption_Truncation_And_Anti_Ladder_Rejection_0xBF04",
+        "passed": true,
+        "details": "Corrupted packet CRC trapped (0xBF04) and ladder constructs rejected."
+      }
+    ],
+    "register_map": {
+      "%R1270": 100,
+      "%R1271": 1,
+      "%R1272": 9,
+      "%R1273": 500,
+      "%R1274": 1,
+      "%R1275": "0x0F82",
+      "%R1276": "0x0101",
+      "%R1277": "0xBF04",
+      "%M296": false,
+      "%M297": true
+    },
+    "metrics": {
+      "nominal_cycle_time_ms": 10.0,
+      "disconnection_timeout_ms": 50.0,
+      "total_cyclic_frames": 9,
+      "crc_errors_detected": 1
+    },
+    "timestamp": "2026-10-05T04:46:58Z"
+  }
+}

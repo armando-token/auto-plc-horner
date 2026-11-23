@@ -1,0 +1,127 @@
+================================================================================================
+GATE G11 OFFLINE READ-ONLY ACCEPTANCE REPORT (W084-W090)
+================================================================================================
+Results JSON Path       : C:\HornerAI\jev-cscape-agent\artifacts\G11\g11_results.json
+Checkpoint JSON Path    : C:\HornerAI\jev-cscape-agent\artifacts\G11\g11_endurance_checkpoint.json (exists=True)
+Campaign Log Path       : C:\HornerAI\jev-cscape-agent\artifacts\logs\g11_campaign.log (exists=True)
+Campaign Timestamp UTC  : 2026-10-16T05:11:11.878126+00:00
+Execution Mode          : live (endurance_only=True)
+Top-Level 4-State Status: status=success, error_code=None
+Recorded Duration (s)   : 14421.916s (4.01h)
+
+================================================================================================
+1. PER FAMILY + POLICY BENCHMARK SUCCESS / FAIL COUNTS
+================================================================================================
+1A. Trials Recorded in artifacts/G11/g11_results.json (n=229 live trials):
+Family     | Policy                | Total |  Pass |  Fail |    Rate | Wilson 95% CI     |    p50 ms |    p95 ms
+------------------------------------------------------------------------------------------------
+ladder     | jev_full              |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   61686.2 |   66548.7
+ladder     | rule_baseline         |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   61538.8 |   68045.3
+ladder     | llm_choice_baseline   |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   61938.8 |   70078.5
+hmi        | jev_full              |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   72291.5 |   99733.6
+hmi        | rule_baseline         |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   79993.2 |  108955.2
+hmi        | llm_choice_baseline   |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   72533.6 |  103320.1
+st_var     | jev_full              |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   49475.3 |   57911.2
+st_var     | rule_baseline         |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   48630.5 |   57690.7
+st_var     | llm_choice_baseline   |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   48565.7 |   57154.4
+------------------------------------------------------------------------------------------------
+TOTAL      | ALL_POLICIES          |   229 |   229 |     0 | 100.00% | [0.9835, 1.0000] |   61818.7 |   89285.0
+
+Per-Family Subtotals (artifacts/G11/g11_results.json):
+  - ladder  : 76/76 passed (100.00%), failed=0
+  - hmi     : 75/75 passed (100.00%), failed=0
+  - st_var  : 78/78 passed (100.00%), failed=0
+Per-Policy Subtotals (artifacts/G11/g11_results.json):
+  - jev_full             : 76/76 passed (100.00%), failed=0
+  - rule_baseline        : 76/76 passed (100.00%), failed=0
+  - llm_choice_baseline  : 77/77 passed (100.00%), failed=0
+
+1B. Full 270-Trial W084-W087 Benchmark Suite (30x3x3 in artifacts/logs/g11_campaign.log + copies/):
+Family     | Policy                | Total |  Pass |  Fail |    Rate | Notes
+------------------------------------------------------------------------------------------------
+ladder     | jev_full              |    30 |    29 |     1 |  96.67% | LADDER_19__jev_full fixed in f218227 & verified PASS in W088
+ladder     | rule_baseline         |    30 |    30 |     0 | 100.00% | 30/30 clean
+ladder     | llm_choice_baseline   |    30 |    30 |     0 | 100.00% | 30/30 clean
+hmi        | jev_full              |    30 |    30 |     0 | 100.00% | 30/30 clean
+hmi        | rule_baseline         |    30 |    30 |     0 | 100.00% | 30/30 clean
+hmi        | llm_choice_baseline   |    30 |    30 |     0 | 100.00% | 30/30 clean
+st_var     | jev_full              |    30 |    30 |     0 | 100.00% | 30/30 clean
+st_var     | rule_baseline         |    30 |    30 |     0 | 100.00% | 30/30 clean
+st_var     | llm_choice_baseline   |    30 |    30 |     0 | 100.00% | 30/30 clean
+------------------------------------------------------------------------------------------------
+TOTAL      | ALL_POLICIES          |   270 |   269 |     1 |  99.63% | 269/270 pre-f218227; 270/270 unique tasks verified across campaign
+
+================================================================================================
+2. W088 ENDURANCE WORKER SUMMARY (TRIAL COUNT, STATUS, FAILURES, DUPLICATES)
+================================================================================================
+Configured Endurance Horizon : 4.00 hours (14400.0s)
+Actual Endurance Elapsed     : 14415.929s (4.0044 hours)
+Halted By Horizon            : True (HORIZON_REACHED: elapsed_s=14415.93 >= max_duration_s=14400.00)
+Halted By Budget             : False
+Controlled Cscape Restarts   : 22 (interval=every 10 trials)
+W088 Endurance Trial Count   : 229 completed (remaining_queue=41, bounded_queue=270)
+W088 Status Counts (4-State) :
+  - success      : 229
+  - failed       : 0
+  - blocked      : 0
+  - inconclusive : 0
+W088 Endurance Failures List : [] (count=0)
+Prior 270-Benchmark Failures : ['G11_W084_LADDER_19__jev_full'] (count=1; healed in commit f218227 & verified PASS in W088 endurance as ENDURANCE_G11_W084_LADDER_19__jev_full)
+Duplicate Trial IDs (JSON)   : [] (unique=229/229, duplicates=0)
+Duplicate Trial IDs (Ckpt)   : [] (unique=229/229, duplicates=0)
+
+================================================================================================
+3. CORRUPTION CHECKS (SHA / REOPEN / COMPILE_CLEAN / CFBF)
+================================================================================================
+Baseline p1_base.csp Intact        : True (SHA-256=5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881)
+Pre-Reset SHA Matches Baseline     : 229/229
+Before-Edit SHA Matches Baseline   : 229/229
+Post-Save SHA Mutated (Non-Trivial): 229/229
+On-Disk .csp SHA Matches JSON      : 229/229
+On-Disk .csp OLE2/CFBF Reopen OK   : 229/229
+Cscape Error Check compile_clean   : 229/229 (100.00%)
+CFBF Binary Oracle cfbf_verified   : 229/229 (100.00%)
+Corrupted / Unreadable Trial Files : [] (count=0)
+Benchmark 270 On-Disk .csp Check   : files=270/270, sha_mutated=270/270, ole_cfbf_reopen_ok=270/270
+Safety & Scope Invariants          : zero_out_of_scope_writes=True, zero_blind_retries=True, zero_false_completions=True, zero_synthetic_results=True
+
+================================================================================================
+4. TOTALS: COST / TOKENS / API_CALLS
+================================================================================================
+4A. Totals in artifacts/G11/g11_results.json (n=229 trials):
+  - Total Cost (USD)     : $0.351280 (w088_endurance.spent_usd=$0.351280, cap=$25.000000)
+  - Total Input Tokens   : 130,623
+  - Total Output Tokens  : 25,895
+  - Total Tokens Used    : 156,518 (w088_endurance.total_tokens_used=156,518, cap=2,000,000)
+  - Total API Calls Made : 153 (w088_endurance.api_calls_made=153, HTTP_200=153, cap=1,000)
+
+Per-Policy Token / Cost / API Call Breakdown (artifacts/G11/g11_results.json):
+  - jev_full             : trials= 76, api_calls= 76, in_tokens= 76,551, out_tokens=19,709, total_tokens= 96,260, cost_usd=$0.233075
+  - rule_baseline        : trials= 76, api_calls=  0, in_tokens=      0, out_tokens=     0, total_tokens=      0, cost_usd=$0.000000
+  - llm_choice_baseline  : trials= 77, api_calls= 77, in_tokens= 54,072, out_tokens= 6,186, total_tokens= 60,258, cost_usd=$0.118205
+
+4B. 270-Trial W084-W087 Benchmark Phase Totals (from artifacts/logs/g11_campaign.log):
+  - Benchmark Trials     : 270 (269 passed, 1 pre-f218227 fail)
+  - Benchmark API Calls  : 180 (HTTP 200)
+  - Benchmark Tokens     : 184,414
+  - Benchmark Cost (USD) : $0.414160
+4C. Combined Live Campaign Totals (270 Benchmark + 229 Endurance = 499 Live Cscape Trials):
+  - Combined Live Trials : 499
+  - Combined API Calls   : 333
+  - Combined Tokens      : 340,932
+  - Combined Cost (USD)  : $0.765440
+
+================================================================================================
+5. PASS / FAIL VERDICT VS MEGAPLAN G11 CRITERIA (W084-W090)
+================================================================================================
+  [PASS] W084 Reserved 30x3 Disjoint Task Suite (90 unseen tasks) | total_tasks=90, disjoint=True, violations=0
+  [PASS] W085 Rule & LLM-Choice Baselines on Same Observer        | same_observer_verified=True, policies=3
+  [PASS] W086 Per-Stage Latency & Real HTTP Token/Cost Telemetry  | api_calls=153 (HTTP 200), tokens=156,518, cost=$0.351280
+  [PASS] W087 Balanced Schedule & Deterministic Project Reset     | base_p1_intact=True, pre_reset_sha_ok=229/229
+  [PASS] W088 Endurance Worker (Queue, Cap, Restarts, Checkpoint) | trials=229/229 PASS, restarts=22, horizon_reached=True
+  [PASS] W088 Corruption & Integrity (SHA, OLE2 Reopen, Compile)  | sha_match=229/229, reopen=229/229, compile_clean=229/229
+  [PASS] W089 Non-Parametric Median/p95 & 95% CIs Reported        | overall p50=61818.7ms, p95=89285.0ms, success_ci95=[0.9835, 1.0]
+  [PASS] W090 Zero Synthetic Results & Safety/Scope Invariants    | out_of_scope=0, blind_retries=0, false_completions=0, synthetic=0
+================================================================================================
+OVERALL GATE G11 ACCEPTANCE VERDICT: PASS
+================================================================================================

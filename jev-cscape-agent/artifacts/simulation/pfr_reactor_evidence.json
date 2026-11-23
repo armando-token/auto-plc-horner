@@ -1,0 +1,54 @@
+{
+  "work_package": "W077",
+  "gate": "G7",
+  "component": "Tubular Catalytic Plug-Flow Reactor (PFR) Kinetics & Thermal Runaway ODE",
+  "timestamp_utc": "2026-10-03T00:48:23.962941+00:00",
+  "overall_status": "success",
+  "registers": {
+    "%R380": 2000,
+    "%R381": 289,
+    "%R382": 8554,
+    "%R383": 1154,
+    "%R384": 925,
+    "%R385": 1100,
+    "%R386": 102,
+    "%R387": 1,
+    "%M88": true,
+    "%M89": false,
+    "%M90": false
+  },
+  "checks": {
+    "conversion_and_hotspot": {
+      "status": "passed",
+      "conversion_pct": 85.54,
+      "t_max_c": 115.39,
+      "z_hot_pct": 92.5
+    },
+    "conservation_residuals": {
+      "status": "passed",
+      "mass_residual": 0.0,
+      "energy_residual": 1.0913936421275139e-11,
+      "mass_conserved_1e10": true,
+      "energy_conserved_1e10": true
+    },
+    "thermal_runaway_and_reset": {
+      "status": "passed",
+      "runaway_latched_at_high_temp": true,
+      "runaway_cleared_on_reset": true
+    },
+    "emergency_coolant_flood_quench": {
+      "status": "passed",
+      "pre_flood_t_max_c": 115.4,
+      "post_flood_t_max_c": 114.05,
+      "flood_active_flag": true
+    },
+    "register_table_synchronization": {
+      "status": "passed",
+      "r380_inlet_conc": 2000,
+      "r381_outlet_conc": 289,
+      "r382_conversion": 8554,
+      "r383_t_max": 1154,
+      "r387_status_word": 1
+    }
+  }
+}

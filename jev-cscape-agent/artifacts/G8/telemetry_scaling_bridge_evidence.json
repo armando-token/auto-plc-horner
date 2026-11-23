@@ -1,0 +1,68 @@
+{
+  "work_package": "W027",
+  "gate": "G8",
+  "title": "Telemetry Quality & Modbus Register Scaling Bridge",
+  "timestamp_utc": "2026-10-02T18:57:00Z",
+  "status": "passed",
+  "verification_runner": "pytest tests/test_scaling_bridge.py",
+  "test_results": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 0.43
+  },
+  "deliverables": [
+    "src/jev_cscape/telemetry/scaling_bridge.py",
+    "src/jev_cscape/telemetry/__init__.py",
+    "tests/test_scaling_bridge.py"
+  ],
+  "capabilities_verified": {
+    "scaling_types": [
+      {
+        "type": "LINEAR",
+        "description": "Bidirectional EU scaling for full-span analog signals (%AI/%AQ)"
+      },
+      {
+        "type": "SQUARE_ROOT",
+        "description": "Differential pressure flow meter scaling with low-flow cutoff"
+      },
+      {
+        "type": "PIECEWISE",
+        "description": "Multi-segment non-linear calibration curve interpolation"
+      },
+      {
+        "type": "RTD",
+        "description": "Horner OCS 0.1 degC counts and Callendar-Van Dusen Pt100 curve"
+      }
+    ],
+    "quality_tracking": {
+      "major_qualities": ["GOOD", "UNCERTAIN", "BAD"],
+      "opc_quality_flags": [
+        "SENSOR_FAILURE",
+        "CONFIG_ERROR",
+        "EU_EXCEEDED",
+        "BURNOUT",
+        "SHORT_CIRCUIT",
+        "PRECISION_LOSS",
+        "OVERFLOW",
+        "UNDERFLOW",
+        "NAN_INF_FAULT"
+      ]
+    },
+    "namur_ne43_validator": {
+      "burnout_threshold_ma": 3.6,
+      "valid_min_ma": 3.8,
+      "nominal_span_ma": [4.0, 20.0],
+      "valid_max_ma": 20.5,
+      "short_circuit_threshold_ma": 21.0
+    },
+    "modbus_bridge": {
+      "word_orders": ["LOW_WORD_FIRST", "HIGH_WORD_FIRST"],
+      "register_types": ["INPUT", "HOLDING"],
+      "ieee754_precision_tracking": true,
+      "nan_inf_sanitization": true,
+      "horner_ocs_register_table_sync": true
+    }
+  }
+}

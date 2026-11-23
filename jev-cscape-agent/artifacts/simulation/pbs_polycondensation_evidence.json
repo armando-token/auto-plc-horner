@@ -1,0 +1,211 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "PBS polycondensation simulation verification passed (9/9 stages passed).",
+  "data": {
+    "work_package": "W275",
+    "module": "jev_cscape.simulation.pbs_polycondensation",
+    "stages_passed": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "duration_seconds": 0.03234601020812988,
+    "elapsed_ms": 32.35,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Reactor Physics, Thermochemical Constants & Arrhenius Kinetics",
+        "check": "Reactor Physics, Thermochemical Constants & Arrhenius Kinetics",
+        "passed": true,
+        "details": "Kinetics & thermochemistry verified: MW_SA=118.088, MW_BDO=90.122, MW_PBS=172.180, MW_THF=72.107, MW_H2O=18.015, k_poly(235C)=0.2320, Ea_poly err=1.60e-10 J/mol, Ea_thf err=1.75e-10 J/mol."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "PbsPolycondensationSync POU verified cleanly with STParser & SecurityGuard; STVariable address_binding validated for %R2360..%R2367 and %M550..%M552."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Polycondensation Steady-State Convergence",
+        "check": "Nominal Polycondensation Steady-State Convergence",
+        "passed": true,
+        "details": "Nominal baseline verified: T_melt=235.0\u00b0C (235.0), P_vac=2.0 mbar (2.0), Conv=98.5% (98.5), BDO/SA=1.05 (1.05), Mn=45000 Da (45000), IV=1.65 dL/g (1.65), THF rate=0.42 mg/L/min (0.42)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (< 1e-10)",
+        "check": "Conservation Laws Verification (< 1e-10)",
+        "passed": true,
+        "details": "Conservation laws verified: total mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s, enthalpy residual=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Melt Overtemperature (0xF401) & Vacuum Loss (0xF402) Trip Injections",
+        "check": "Melt Overtemperature (0xF401) & Vacuum Loss (0xF402) Trip Injections",
+        "passed": true,
+        "details": "0xF401 overtemp trip (> 248.0 \u00b0C) and 0xF402 vacuum loss trip (> 5.0 mbar) verified: %M552 emergency dump asserted, %M550 reaction active de-asserted."
+      },
+      {
+        "stage": 7,
+        "name": "THF Runaway (0xF403), Polymer Degradation (0xF404) & Pre-Alarm Injections",
+        "check": "THF Runaway (0xF403), Polymer Degradation (0xF404) & Pre-Alarm Injections",
+        "passed": true,
+        "details": "0xF403 THF runaway (> 1.20 mg/L/min), 0xF404 degradation (< 30,000 Da), and %M551 anomaly pre-alarm (242.0 \u00b0C) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2360..%R2367, %M550..%M552)",
+        "check": "Horner OCS Register Table Synchronization (%R2360..%R2367, %M550..%M552)",
+        "passed": true,
+        "details": "Registers %R2360..%R2367 and coils %M550..%M552 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final T_melt=235.00\u00b0C, Conv=98.50%, Mn=45000 Da, residuals < 1e-10, zero memory drift."
+      }
+    ],
+    "results": [
+      {
+        "stage": 1,
+        "name": "Reactor Physics, Thermochemical Constants & Arrhenius Kinetics",
+        "check": "Reactor Physics, Thermochemical Constants & Arrhenius Kinetics",
+        "passed": true,
+        "details": "Kinetics & thermochemistry verified: MW_SA=118.088, MW_BDO=90.122, MW_PBS=172.180, MW_THF=72.107, MW_H2O=18.015, k_poly(235C)=0.2320, Ea_poly err=1.60e-10 J/mol, Ea_thf err=1.75e-10 J/mol."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "PbsPolycondensationSync POU verified cleanly with STParser & SecurityGuard; STVariable address_binding validated for %R2360..%R2367 and %M550..%M552."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Polycondensation Steady-State Convergence",
+        "check": "Nominal Polycondensation Steady-State Convergence",
+        "passed": true,
+        "details": "Nominal baseline verified: T_melt=235.0\u00b0C (235.0), P_vac=2.0 mbar (2.0), Conv=98.5% (98.5), BDO/SA=1.05 (1.05), Mn=45000 Da (45000), IV=1.65 dL/g (1.65), THF rate=0.42 mg/L/min (0.42)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (< 1e-10)",
+        "check": "Conservation Laws Verification (< 1e-10)",
+        "passed": true,
+        "details": "Conservation laws verified: total mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s, enthalpy residual=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Melt Overtemperature (0xF401) & Vacuum Loss (0xF402) Trip Injections",
+        "check": "Melt Overtemperature (0xF401) & Vacuum Loss (0xF402) Trip Injections",
+        "passed": true,
+        "details": "0xF401 overtemp trip (> 248.0 \u00b0C) and 0xF402 vacuum loss trip (> 5.0 mbar) verified: %M552 emergency dump asserted, %M550 reaction active de-asserted."
+      },
+      {
+        "stage": 7,
+        "name": "THF Runaway (0xF403), Polymer Degradation (0xF404) & Pre-Alarm Injections",
+        "check": "THF Runaway (0xF403), Polymer Degradation (0xF404) & Pre-Alarm Injections",
+        "passed": true,
+        "details": "0xF403 THF runaway (> 1.20 mg/L/min), 0xF404 degradation (< 30,000 Da), and %M551 anomaly pre-alarm (242.0 \u00b0C) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2360..%R2367, %M550..%M552)",
+        "check": "Horner OCS Register Table Synchronization (%R2360..%R2367, %M550..%M552)",
+        "passed": true,
+        "details": "Registers %R2360..%R2367 and coils %M550..%M552 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final T_melt=235.00\u00b0C, Conv=98.50%, Mn=45000 Da, residuals < 1e-10, zero memory drift."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Reactor Physics, Thermochemical Constants & Arrhenius Kinetics",
+        "check": "Reactor Physics, Thermochemical Constants & Arrhenius Kinetics",
+        "passed": true,
+        "details": "Kinetics & thermochemistry verified: MW_SA=118.088, MW_BDO=90.122, MW_PBS=172.180, MW_THF=72.107, MW_H2O=18.015, k_poly(235C)=0.2320, Ea_poly err=1.60e-10 J/mol, Ea_thf err=1.75e-10 J/mol."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "PbsPolycondensationSync POU verified cleanly with STParser & SecurityGuard; STVariable address_binding validated for %R2360..%R2367 and %M550..%M552."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Polycondensation Steady-State Convergence",
+        "check": "Nominal Polycondensation Steady-State Convergence",
+        "passed": true,
+        "details": "Nominal baseline verified: T_melt=235.0\u00b0C (235.0), P_vac=2.0 mbar (2.0), Conv=98.5% (98.5), BDO/SA=1.05 (1.05), Mn=45000 Da (45000), IV=1.65 dL/g (1.65), THF rate=0.42 mg/L/min (0.42)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (< 1e-10)",
+        "check": "Conservation Laws Verification (< 1e-10)",
+        "passed": true,
+        "details": "Conservation laws verified: total mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s, enthalpy residual=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Melt Overtemperature (0xF401) & Vacuum Loss (0xF402) Trip Injections",
+        "check": "Melt Overtemperature (0xF401) & Vacuum Loss (0xF402) Trip Injections",
+        "passed": true,
+        "details": "0xF401 overtemp trip (> 248.0 \u00b0C) and 0xF402 vacuum loss trip (> 5.0 mbar) verified: %M552 emergency dump asserted, %M550 reaction active de-asserted."
+      },
+      {
+        "stage": 7,
+        "name": "THF Runaway (0xF403), Polymer Degradation (0xF404) & Pre-Alarm Injections",
+        "check": "THF Runaway (0xF403), Polymer Degradation (0xF404) & Pre-Alarm Injections",
+        "passed": true,
+        "details": "0xF403 THF runaway (> 1.20 mg/L/min), 0xF404 degradation (< 30,000 Da), and %M551 anomaly pre-alarm (242.0 \u00b0C) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2360..%R2367, %M550..%M552)",
+        "check": "Horner OCS Register Table Synchronization (%R2360..%R2367, %M550..%M552)",
+        "passed": true,
+        "details": "Registers %R2360..%R2367 and coils %M550..%M552 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final T_melt=235.00\u00b0C, Conv=98.50%, Mn=45000 Da, residuals < 1e-10, zero memory drift."
+      }
+    ]
+  }
+}

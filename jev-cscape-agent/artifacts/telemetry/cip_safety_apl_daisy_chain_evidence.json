@@ -1,0 +1,173 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Ethernet-APL Daisy-Chain Spur Protocol stages passed deterministically (PASSED 9/9 stages).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W292",
+    "gate": "G8",
+    "protocol": "ODVA CIP Safety Over Ethernet-APL Daisy-Chain Spur Topology (IEEE 802.3cg 10BASE-T1L)",
+    "standards": [
+      "IEEE 802.3cg 10BASE-T1L",
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2530..%R2537",
+      "%M590..%M591"
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "init_and_topology",
+        "check": "Daisy-Chain Spur Topology Initial State & Multi-Hop Configuration",
+        "passed": true,
+        "timing_ms": 0.298,
+        "details": "Node 1 initialized at hop 1 with 8 us latency across 4-node line topology; healthy."
+      },
+      {
+        "stage": 2,
+        "name": "dual_crc_validation",
+        "check": "ODVA CIP Safety Volume 5 Dual CRC (CRC-S1 poly 0x5935, CRC-S2 poly 0x755B) Validation",
+        "passed": true,
+        "timing_ms": 1.713,
+        "details": "Dual CRCs validated; CRC-S1 fault intercepted with 0xEE23, CRC-S2 fault intercepted with 0xEE24."
+      },
+      {
+        "stage": 3,
+        "name": "upstream_link_loss",
+        "check": "Upstream Port Ingress Link Drop, Fail-Safe Trip (0xEE21), and Restoration",
+        "passed": true,
+        "timing_ms": 0.435,
+        "details": "Upstream loss triggered fail-safe safe state; restore_upstream successfully cleared fault."
+      },
+      {
+        "stage": 4,
+        "name": "downstream_link_loss",
+        "check": "Downstream Link Loss, Downstream Node Isolation (K+1..N), and Degraded Operation",
+        "passed": true,
+        "timing_ms": 0.444,
+        "details": "Hop 2 downstream break isolated nodes 3..4 with 0xEE22; upstream node 1 operational; restored cleanly."
+      },
+      {
+        "stage": 5,
+        "name": "hop_latency_accumulation",
+        "check": "Per-Hop Forwarding Latency Tracking (~8us) and Hop Limit (8) Enforcement",
+        "passed": true,
+        "timing_ms": 0.988,
+        "details": "Hops 1..8 accumulated 8..64 us latency; hop 9 exceeded limit and tripped 0xEE26."
+      },
+      {
+        "stage": 6,
+        "name": "fail_safe_deenergize",
+        "check": "Deterministic Safe State Fallback, Safe Outputs De-Energization, and Fault Assertions",
+        "passed": true,
+        "timing_ms": 0.309,
+        "details": "Fail-safe trip 0xEE27 clamped safe outputs to 0x00, asserted %M591, and set fail-safe bit in %R2536."
+      },
+      {
+        "stage": 7,
+        "name": "heartbeat_watchdog_timeout",
+        "check": "Heartbeat Watchdog Surveillance (< 200ms) and Timeout Trip (0xEE25)",
+        "passed": true,
+        "timing_ms": 0.78,
+        "details": "250ms silence tripped 0xEE25; feed_heartbeat restored healthy state."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "Bit-Exact Horner OCS Register Space (%R2530..%R2537) and Discrete Coils (%M590..%M591)",
+        "passed": true,
+        "timing_ms": 0.345,
+        "details": "%R2530=0x0201, %R2531=1, %R2532=1, %R2533=2, %R2534=16, %R2536=0x000F, %M590=True, %M591=False."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 7.024,
+        "details": "Pure ST POU verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "init_and_topology",
+        "check": "Daisy-Chain Spur Topology Initial State & Multi-Hop Configuration",
+        "passed": true,
+        "timing_ms": 0.298,
+        "details": "Node 1 initialized at hop 1 with 8 us latency across 4-node line topology; healthy."
+      },
+      {
+        "stage": 2,
+        "name": "dual_crc_validation",
+        "check": "ODVA CIP Safety Volume 5 Dual CRC (CRC-S1 poly 0x5935, CRC-S2 poly 0x755B) Validation",
+        "passed": true,
+        "timing_ms": 1.713,
+        "details": "Dual CRCs validated; CRC-S1 fault intercepted with 0xEE23, CRC-S2 fault intercepted with 0xEE24."
+      },
+      {
+        "stage": 3,
+        "name": "upstream_link_loss",
+        "check": "Upstream Port Ingress Link Drop, Fail-Safe Trip (0xEE21), and Restoration",
+        "passed": true,
+        "timing_ms": 0.435,
+        "details": "Upstream loss triggered fail-safe safe state; restore_upstream successfully cleared fault."
+      },
+      {
+        "stage": 4,
+        "name": "downstream_link_loss",
+        "check": "Downstream Link Loss, Downstream Node Isolation (K+1..N), and Degraded Operation",
+        "passed": true,
+        "timing_ms": 0.444,
+        "details": "Hop 2 downstream break isolated nodes 3..4 with 0xEE22; upstream node 1 operational; restored cleanly."
+      },
+      {
+        "stage": 5,
+        "name": "hop_latency_accumulation",
+        "check": "Per-Hop Forwarding Latency Tracking (~8us) and Hop Limit (8) Enforcement",
+        "passed": true,
+        "timing_ms": 0.988,
+        "details": "Hops 1..8 accumulated 8..64 us latency; hop 9 exceeded limit and tripped 0xEE26."
+      },
+      {
+        "stage": 6,
+        "name": "fail_safe_deenergize",
+        "check": "Deterministic Safe State Fallback, Safe Outputs De-Energization, and Fault Assertions",
+        "passed": true,
+        "timing_ms": 0.309,
+        "details": "Fail-safe trip 0xEE27 clamped safe outputs to 0x00, asserted %M591, and set fail-safe bit in %R2536."
+      },
+      {
+        "stage": 7,
+        "name": "heartbeat_watchdog_timeout",
+        "check": "Heartbeat Watchdog Surveillance (< 200ms) and Timeout Trip (0xEE25)",
+        "passed": true,
+        "timing_ms": 0.78,
+        "details": "250ms silence tripped 0xEE25; feed_heartbeat restored healthy state."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "Bit-Exact Horner OCS Register Space (%R2530..%R2537) and Discrete Coils (%M590..%M591)",
+        "passed": true,
+        "timing_ms": 0.345,
+        "details": "%R2530=0x0201, %R2531=1, %R2532=1, %R2533=2, %R2534=16, %R2536=0x000F, %M590=True, %M591=False."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 7.024,
+        "details": "Pure ST POU verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      }
+    ]
+  }
+}

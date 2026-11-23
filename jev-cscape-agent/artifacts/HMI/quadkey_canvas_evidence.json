@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W318 QuadKey Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W318",
+    "gate": "G9",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment_and_platform_check",
+        "passed": true,
+        "timing_ms": 0.006,
+        "details": "Python 3.12.10 on win32; jev_cscape simulation, parser, and W318 modules verified."
+      },
+      {
+        "stage": 2,
+        "name": "quadkey_constants_and_register_mappings",
+        "passed": true,
+        "timing_ms": 0.007,
+        "details": "Horner OCS %R2790..%R2797, %M651..%M652, diagnostic codes 0x0000/0x8420, and status bits verified."
+      },
+      {
+        "stage": 3,
+        "name": "pure_python_quadkey_mercator_bijection",
+        "passed": true,
+        "timing_ms": 0.379,
+        "details": "Bijective Mercator projection, QuadKey encode/decode, and 64-bit packing round-trips verified."
+      },
+      {
+        "stage": 4,
+        "name": "quadkey_hierarchical_prefix_and_tile_tree",
+        "passed": true,
+        "timing_ms": 0.186,
+        "details": "Quadtree prefix nesting, 4-child subdivision, 16-grandchild hierarchy, and 8-neighbor adjacency verified."
+      },
+      {
+        "stage": 5,
+        "name": "spatial_proximity_hazard_and_collision_trip",
+        "passed": true,
+        "timing_ms": 0.797,
+        "details": "Spatial proximity collision trip, coil %M652 alarm latch, and nominal reset verified."
+      },
+      {
+        "stage": 6,
+        "name": "register_table_synchronization_and_signed_masks",
+        "passed": true,
+        "timing_ms": 0.587,
+        "details": "Horner OCS %R2790..%R2797 and %M651..%M652 synchronized; signed 16-bit masks and 0x8420 verified."
+      },
+      {
+        "stage": 7,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.195,
+        "details": "Pure ST POU 'QuadkeyCanvasSync' AST validated; ladder contacts, coils, rungs, and mnemonics strictly rejected."
+      },
+      {
+        "stage": 8,
+        "name": "svg_scada_canvas_rasterization_and_wcag_contrast",
+        "passed": true,
+        "timing_ms": 1.082,
+        "details": "W3C SVG 1.1 generated with QuadKey tiles; WCAG AAA contrast ratio verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 9,
+        "name": "multi_cycle_simulation_soak_and_evidence_emission",
+        "passed": true,
+        "timing_ms": 0.741,
+        "details": "Multi-cycle closed loop scan (5 cycles) and deterministic cryptographic evidence manifest generated."
+      }
+    ],
+    "svg_sample_path": "artifacts/HMI/quadkey_canvas_sample.svg",
+    "svg_sha256": "4de25602a041448631b96dc730bda95623d4cbe804e7acccf6ea5722682119ef",
+    "evidence_sha256": "7424ad5702c4a51e441acf87934463e83f005287253f3983f9b2f16b8f404275"
+  }
+}

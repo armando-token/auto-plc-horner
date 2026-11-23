@@ -1,0 +1,82 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Convex Hull Boundary & Multi-Cluster Scatter Canvas verified cleanly (9/9 stages passed).",
+  "data": {
+    "work_package": "W201",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Convex Hull Boundary & Multi-Cluster Scatter Spatial Enclosure Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "register_map": {
+      "analog_registers": "%R1620..%R1627",
+      "discrete_coils": "%M378..%M379"
+    },
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Symbol_Bindings",
+        "passed": true,
+        "details": "IEC 61131-3 Pure ST POU validated; %R1620..%R1627 and %M378..%M379 bound in AST."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Intercepted 9/9 forbidden ladder logic constructs fail-closed."
+      },
+      {
+        "stage": 3,
+        "check": "Andrews_Monotone_Chain_And_Graham_Scan_Convex_Hull",
+        "passed": true,
+        "details": "Monotone Chain & Graham Scan algorithms identify 4/4 square vertices; interior points filtered cleanly."
+      },
+      {
+        "stage": 4,
+        "check": "Shoelace_Area_Perimeter_And_Minkowski_Padding",
+        "passed": true,
+        "details": "Area=400.0, Perimeter=80.0; Outward padding expands area (400.0 -> 900.0)."
+      },
+      {
+        "stage": 5,
+        "check": "Point_In_Polygon_Containment_Ray_Casting_And_Winding",
+        "passed": true,
+        "details": "Ray-casting and 2D winding number tests concordantly confirm containment and exterior rejection."
+      },
+      {
+        "stage": 6,
+        "check": "Signed_Distance_To_Hull_Perimeter",
+        "passed": true,
+        "details": "Signed distance negative inside (-50.0), positive outside (20.0), 0 on boundary (0.0)."
+      },
+      {
+        "stage": 7,
+        "check": "Multi_Cluster_Centroids_And_Dispersion_RMS",
+        "passed": true,
+        "details": "3 plant zones initialized; center of mass centroids verified; dispersion RMS (46.6px) verified."
+      },
+      {
+        "stage": 8,
+        "check": "Statistical_Outlier_Detection_And_Horner_Register_Sync",
+        "passed": true,
+        "details": "Outlier detection verified (> 2.5 * R_rms); asserted %M379/%M148 and synchronized %R1626/%R636."
+      },
+      {
+        "stage": 9,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_WCAG_AAA_Contrast",
+        "passed": true,
+        "details": "Rendered 1200x750 SVG; XML valid; badge contrast 19.15:1 (> 18:1); theme text 17.85:1 (> 7:1)."
+      }
+    ],
+    "metrics": {
+      "total_points": 25,
+      "active_clusters": 3,
+      "total_outliers": 1,
+      "max_perimeter": 2331.0218008919032,
+      "max_dispersion_rms": 342.3986918747367,
+      "min_inter_cluster_dist": 327.8825671126143,
+      "wcag_badge_contrast": 19.15,
+      "wcag_theme_contrast": 17.85
+    }
+  }
+}

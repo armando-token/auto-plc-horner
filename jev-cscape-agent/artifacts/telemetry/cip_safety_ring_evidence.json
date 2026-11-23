@@ -1,0 +1,183 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Safety Ring Protocol Engine (W235) verified cleanly (9/9 stages passed).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "data": {
+    "work_package": "W235",
+    "standards": [
+      "ODVA CIP Networks Library Volume 5 (CIP Safety)",
+      "Class 0x39 (Safety Supervisor Object)",
+      "Class 0x3A (Safety Validator Object)",
+      "Class 0x3B (Safety Connection Object - Ring / Dual Port)",
+      "IEC 61784-3 Table 1 (Black Channel Mitigations)",
+      "IEC 61508 / IEC 62061 SIL 3",
+      "IEC 61131-3 Structured Text"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.034,
+        "details": "Class 0x39, 0x3A, 0x3B, SNN (6 octets), SCID (0x20261006), ring supervisor mode (1), nominal EPI 10ms, watchdog 30ms, beacon 1ms verified."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 2.268,
+        "details": "POU 'CipSafetyRingSync' validated clean with STParser & SecurityGuard; all 10 registers bound (%R1960..%R1967, %M457..%M458)."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.025,
+        "details": "Anti-ladder security guard intercepted 3/3 prohibited ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Ring_Topology_Binding_And_Supervisor_Operation",
+        "passed": true,
+        "timing_ms": 0.139,
+        "details": "Port 1 and Port 2 active, RING_NORMAL / SUPERVISOR_ACTIVE state; steady beacon frame generation verified."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_Channel_Diversified_Payload_Cross_Comparison_And_Dual_CRC_S_Validation",
+        "passed": true,
+        "timing_ms": 0.263,
+        "details": "Channel A / Channel B complement parity and CRC-S1/CRC-S2 verified; 0xEA03 discrepancy fault caught."
+      },
+      {
+        "stage": 6,
+        "check": "EPI_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.719,
+        "details": "Silence monitored; exceeding 30.0 ms watchdog injected 0xEA02 and asserted %M458 safe state."
+      },
+      {
+        "stage": 7,
+        "check": "Ring_Break_Fault_And_Beacon_Timeout_Injections",
+        "passed": true,
+        "timing_ms": 0.798,
+        "details": "0xEA05 ring break on Port 2 and 0xEA06 beacon timeout injected; %M458 safe state asserted, rapid recovery < 10ms verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 0.695,
+        "details": "Bit-exact synchronization of %R1960..%R1967 and %M457..%M458 verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycles_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 66.163,
+        "details": "100 deterministic scan cycles completed cleanly with steady beacon transmission. Heap growth: 3.28 KB (< 100 KB), Peak cycle latency: 2.08 ms (< 250 ms), Mean cycle latency: 0.65 ms (< 25 ms)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.034,
+        "details": "Class 0x39, 0x3A, 0x3B, SNN (6 octets), SCID (0x20261006), ring supervisor mode (1), nominal EPI 10ms, watchdog 30ms, beacon 1ms verified."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 2.268,
+        "details": "POU 'CipSafetyRingSync' validated clean with STParser & SecurityGuard; all 10 registers bound (%R1960..%R1967, %M457..%M458)."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.025,
+        "details": "Anti-ladder security guard intercepted 3/3 prohibited ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Ring_Topology_Binding_And_Supervisor_Operation",
+        "passed": true,
+        "timing_ms": 0.139,
+        "details": "Port 1 and Port 2 active, RING_NORMAL / SUPERVISOR_ACTIVE state; steady beacon frame generation verified."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_Channel_Diversified_Payload_Cross_Comparison_And_Dual_CRC_S_Validation",
+        "passed": true,
+        "timing_ms": 0.263,
+        "details": "Channel A / Channel B complement parity and CRC-S1/CRC-S2 verified; 0xEA03 discrepancy fault caught."
+      },
+      {
+        "stage": 6,
+        "check": "EPI_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.719,
+        "details": "Silence monitored; exceeding 30.0 ms watchdog injected 0xEA02 and asserted %M458 safe state."
+      },
+      {
+        "stage": 7,
+        "check": "Ring_Break_Fault_And_Beacon_Timeout_Injections",
+        "passed": true,
+        "timing_ms": 0.798,
+        "details": "0xEA05 ring break on Port 2 and 0xEA06 beacon timeout injected; %M458 safe state asserted, rapid recovery < 10ms verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 0.695,
+        "details": "Bit-exact synchronization of %R1960..%R1967 and %M457..%M458 verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycles_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 66.163,
+        "details": "100 deterministic scan cycles completed cleanly with steady beacon transmission. Heap growth: 3.28 KB (< 100 KB), Peak cycle latency: 2.08 ms (< 250 ms), Mean cycle latency: 0.65 ms (< 25 ms)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "register_map": {
+      "%R1960": "RingTopologyState",
+      "%R1961": "BeaconPacketsTransmittedCount",
+      "%R1962": "RingLatencyMsScaled",
+      "%R1963": "RingRecoveryTimeMsScaled",
+      "%R1964": "SafetyConsecutiveFaultCount",
+      "%R1965": "SafetySequenceNumber",
+      "%R1966": "SafetyPayloadWord",
+      "%R1967": "DiagnosticStatusCode",
+      "%M457": "CipSafetyRingActive",
+      "%M458": "SafetyRingTripSafeStateEngaged"
+    },
+    "registers": {
+      "%R1960": 3,
+      "%R1961": 2600,
+      "%R1962": 85,
+      "%R1963": 120,
+      "%R1964": 0,
+      "%R1965": 0,
+      "%R1966": 1,
+      "%R1967": 0,
+      "%M457": true,
+      "%M458": false
+    },
+    "metrics": {
+      "heap_growth_kb": 3.28,
+      "peak_cycle_latency_ms": 2.084,
+      "mean_cycle_latency_ms": 0.648,
+      "total_soak_cycles": 100,
+      "beacon_packets_transmitted": 2600
+    },
+    "timestamp": "2026-10-16T18:07:26Z"
+  }
+}

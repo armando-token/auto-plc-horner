@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W249_CUSTOM",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Funnel Pipeline Flow SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_And_AST_Validation",
+        "passed": true,
+        "timing_ms": 0.56,
+        "details": "Validated pure IEC 61131-3 ST POU 'FunnelPipelineCanvasSync' with STParser & SecurityGuard across %R2100..%R2107 and %M490..%M491."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.03,
+        "details": "Rejected 6 forbidden ladder logic constructs (contacts, coils, rungs, networks, mnemonics) with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Canvas_Bounds_And_Viewport_Geometry_Verification",
+        "passed": true,
+        "timing_ms": 0.0,
+        "details": "Verified 1200x750 viewport, canvas bounds (x=20, y=86, w=1160, h=644), dark theme backing (#0B0F19/#161B22/#21262D), and boundary containment."
+      },
+      {
+        "stage": 4,
+        "check": "5_Stage_Cascading_Pipeline_Geometry_And_Flow_Model",
+        "passed": true,
+        "timing_ms": 0.01,
+        "details": "Verified 5 cascading pipeline refinement stages (1250, 1080, 920, 780, 685 m3/h) with palette colors (#3B82F6..#8B5CF6) and 54.80% overall yield."
+      },
+      {
+        "stage": 5,
+        "check": "Trapezoid_Pipeline_Segments_With_Fillets_And_Dropoff_Indicators",
+        "passed": true,
+        "timing_ms": 0.12,
+        "details": "Verified 5 cascading trapezoid segments with smooth rounded corner fillets and drop-off flow indicators strictly within canvas bounds."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Safety_Interlocks_And_Bottleneck_Alarm_Assertion",
+        "passed": true,
+        "timing_ms": 1.12,
+        "details": "Verified %M491 alarm trip assertion when stage attrition > 30.0% or efficiency < 40.0%, and deterministic nominal recovery."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Diagnostic_Fault_Codes_And_Register_Latching",
+        "passed": true,
+        "timing_ms": 1.73,
+        "details": "Verified 0xF901 (Stages Count Invalid), 0xF902 (Inverted Flow Gradient), 0xF903 (Zero Inlet Volume), 0xF904 (Canvas Overflow), %R2107 latching, and clean recovery."
+      },
+      {
+        "stage": 8,
+        "check": "Standalone_W3C_SVG_Vector_Canvas_Renderer_And_XML_Validity",
+        "passed": true,
+        "timing_ms": 2.09,
+        "details": "Generated valid W3C SVG 1.1 vector graphic with 5 trapezoid paths, fillets, drop-off bleed indicators, decoupled badges, and HUD -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\funnel_pipeline_canvas_sample.svg."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Sync_And_100_Cycle_Soak_Stability",
+        "passed": true,
+        "timing_ms": 19.29,
+        "details": "Verified %R2100..%R2107 (5, 12500, 6850, 5480, 1, 2240, 0, 0) and %M490..%M491, WCAG AAA (19.13:1 badge, 18.30:1 text), and 100-cycle soak stability."
+      }
+    ],
+    "metrics": {
+      "funnel_stages_count": 5,
+      "inlet_flow_volume_scaled": 12500,
+      "outlet_yield_volume_scaled": 6850,
+      "overall_throughput_efficiency_scaled": 5480,
+      "bottleneck_stage_index": 1,
+      "max_stage_attrition_scaled": 2240,
+      "selected_pipeline_stage": 0,
+      "diagnostic_code": "0x0000",
+      "funnel_canvas_active": true,
+      "pipeline_bottleneck_alarm": false,
+      "wcag_badge_contrast": 19.13,
+      "wcag_text_contrast": 18.3
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_004",
+  "file_name": "scene_004.png",
+  "original_source": "artifacts\\G8\\hmi_probe_tab.png",
+  "split": "train",
+  "scene_type": "hmi_screen_editor",
+  "category": "HMI",
+  "dimensions": {
+    "width": 922,
+    "height": 172
+  },
+  "sha256": "72aa96b079ee3a373df6c136c2e85a34f19df84b779b6426fcd8510675bffea0",
+  "labels": {
+    "canvas_rect": [
+      28,
+      18,
+      913,
+      113
+    ],
+    "anchors": {
+      "canvas_center": [
+        470,
+        65
+      ],
+      "canvas_nw": [
+        28,
+        18
+      ],
+      "canvas_se": [
+        913,
+        113
+      ],
+      "status_bar_roi": [
+        0,
+        148,
+        922,
+        172
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

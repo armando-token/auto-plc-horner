@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="tile-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-focus" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-alert" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="hud-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#161B22" stop-opacity="0.94"/>
+    </linearGradient>
+    <style type="text/css">
+      .hud-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 13px; font-weight: bold; fill: #FFFFFF; }
+      .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; font-weight: 500; fill: #8B949E; text-transform: uppercase; }
+      .hud-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 12px; font-weight: 700; fill: #06B6D4; }
+      .area-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; font-weight: 700; fill: #FFFFFF; }
+      .tile-tag { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 10px; font-weight: 700; fill: #FFFFFF; }
+      .tile-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 9px; font-weight: 600; fill: #FFFFFF; }
+      .tile-metric { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 9px; font-weight: 500; fill: #E2E8F0; }
+    </style>
+  </defs>
+  <rect width="1200" height="750" fill="#0B0F19"/>
+  <!-- INTERACTIVE HUD SCORECARD HEADER BANNER -->
+  <g id="interactive-hud">
+    <rect x="20.0" y="12.0" width="1160.0" height="64.0" rx="6" ry="6" fill="url(#hud-bg)" stroke="#21262D" stroke-width="1.5"/>
+    <text x="36.0" y="36.0" class="hud-title">CSCAPE SCADA // DYNAMIC TREEMAP HIERARCHICAL PARTITION (W237)</text>
+    <text x="620.0" y="26.0" class="hud-label">PLANT STATS SCORECARD</text>
+    <rect x="36.0" y="46.0" width="126" height="18" rx="3" fill="#047857" fill-opacity="0.3" stroke="#10B981" stroke-width="1"/>
+    <text x="42.0" y="59.0" font-family="monospace" font-size="9" font-weight="700" fill="#FFFFFF">ACTIVE | NOMINAL</text>
+    <text x="240.0" y="40.0" class="hud-label">TOTAL TILES (%R1980)</text>
+    <text x="240.0" y="60.0" class="hud-val" fill="#FFFFFF">20</text>
+    <text x="372.0" y="40.0" class="hud-label">OVERALL HEALTH (%R1981)</text>
+    <text x="372.0" y="60.0" class="hud-val" fill="#10B981">98.50%</text>
+    <text x="504.0" y="40.0" class="hud-label">CRITICAL TILES (%R1982)</text>
+    <text x="504.0" y="60.0" class="hud-val" fill="#10B981">0</text>
+    <text x="636.0" y="40.0" class="hud-label">ACTIVE SECTOR FOCUS</text>
+    <text x="636.0" y="60.0" class="hud-val" fill="#06B6D4">RX-101</text>
+    <text x="768.0" y="40.0" class="hud-label">TOTAL WEIGHT</text>
+    <text x="768.0" y="60.0" class="hud-val" fill="#F59E0B">6,000.0 kg/h</text>
+    <text x="900.0" y="40.0" class="hud-label">MAX DEPTH</text>
+    <text x="900.0" y="60.0" class="hud-val" fill="#06B6D4">3 TIERS</text>
+    <text x="1032.0" y="40.0" class="hud-label">WORST ASPECT</text>
+    <text x="1032.0" y="60.0" class="hud-val" fill="#10B981">3.44:1</text>
+  </g>
+  <!-- MULTI-TIER NESTED SQUARIFIED TREEMAP CANVAS -->
+  <g id="treemap-viewport">
+    <g id="area-AREA_ALKYLATION">
+      <rect x="580.7" y="86.0" width="312.7" height="477.8" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+      <rect x="580.7" y="86.0" width="312.7" height="24.0" rx="4" ry="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="588.7" y="102.0" class="area-title">Cumene Alkylation Process Area [1,200.0 kg/h]</text>
+      <g id="tile-EQ_ALK_REACTORS">
+        <title>Alkylation Fixed-Bed Reactors | Health: 99.5%</title>
+        <rect x="584.7" y="114.0" width="164.7" height="274.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#06B6D4" stroke-width="2.5" filter="url(#glow-focus)"/>
+        <rect x="588.7" y="118.0" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="592.7" y="130.0" class="tile-tag">RX-101</text>
+        <text x="590.7" y="146.0" class="tile-name">Alkylation Fixed-Bed Rea</text>
+        <text x="590.7" y="158.0" class="tile-metric">400.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_ALK_COLUMNS">
+        <title>Benzene Recovery Fractionation Columns | Health: 99.5%</title>
+        <rect x="749.4" y="114.0" width="140.0" height="274.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="753.4" y="118.0" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="757.4" y="130.0" class="tile-tag">COL-101</text>
+        <text x="755.4" y="146.0" class="tile-name">Benzene Recovery Fractio</text>
+        <text x="755.4" y="158.0" class="tile-metric">340.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_ALK_EXCHANGERS">
+        <title>Alkylate Reboiler Heat Exchangers | Health: 99.5%</title>
+        <rect x="584.7" y="388.9" width="172.2" height="170.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="588.7" y="392.9" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="592.7" y="404.9" class="tile-tag">HEX-101</text>
+        <text x="590.7" y="420.9" class="tile-name">Alkylate Reboiler Heat E</text>
+        <text x="590.7" y="432.9" class="tile-metric">260.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_ALK_SEPARATORS">
+        <title>High-Pressure Phase Separators | Health: 99.5%</title>
+        <rect x="756.9" y="388.9" width="132.5" height="170.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="760.9" y="392.9" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="764.9" y="404.9" class="tile-tag">SEP-101</text>
+        <text x="762.9" y="420.9" class="tile-name">High-Pressure Phase Sepa</text>
+        <text x="762.9" y="432.9" class="tile-metric">200.0 kg/h | 99.5%</text>
+      </g>
+    </g>
+    <g id="area-AREA_OXIDATION">
+      <rect x="20.0" y="86.0" width="560.7" height="333.1" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+      <rect x="20.0" y="86.0" width="560.7" height="24.0" rx="4" ry="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="28.0" y="102.0" class="area-title">Cumene Oxidation Process Area [1,500.0 kg/h]</text>
+      <g id="tile-EQ_OXI_REACTORS">
+        <title>Air-Sparged Oxidation Bubble Reactors | Health: 99.5%</title>
+        <rect x="24.0" y="114.0" width="176.9" height="301.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="28.0" y="118.0" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="32.0" y="130.0" class="tile-tag">RX-201</text>
+        <text x="30.0" y="146.0" class="tile-name">Air-Sparged Oxidation Bu</text>
+        <text x="30.0" y="158.0" class="tile-metric">480.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_OXI_COLUMNS">
+        <title>CHP Concentration Stripping Columns | Health: 99.5%</title>
+        <rect x="200.9" y="114.0" width="154.7" height="301.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="204.9" y="118.0" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="208.9" y="130.0" class="tile-tag">COL-201</text>
+        <text x="206.9" y="146.0" class="tile-name">CHP Concentration Stripp</text>
+        <text x="206.9" y="158.0" class="tile-metric">420.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_OXI_EXCHANGERS">
+        <title>Oxidizer Overhead Condensers | Health: 99.5%</title>
+        <rect x="355.6" y="114.0" width="221.1" height="170.6" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="359.6" y="118.0" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="363.6" y="130.0" class="tile-tag">HEX-201</text>
+        <text x="361.6" y="146.0" class="tile-name">Oxidizer Overhead Conden</text>
+        <text x="361.6" y="158.0" class="tile-metric">340.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_OXI_SEPARATORS">
+        <title>Offgas Demister Knockout Separators | Health: 99.5%</title>
+        <rect x="355.6" y="284.6" width="221.1" height="130.5" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="359.6" y="288.6" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="363.6" y="300.6" class="tile-tag">SEP-201</text>
+        <text x="361.6" y="316.6" class="tile-name">Offgas Demister Knockout</text>
+        <text x="361.6" y="328.6" class="tile-metric">260.0 kg/h | 99.5%</text>
+      </g>
+    </g>
+    <g id="area-AREA_CLEAVAGE">
+      <rect x="893.4" y="86.0" width="286.6" height="477.8" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+      <rect x="893.4" y="86.0" width="286.6" height="24.0" rx="4" ry="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="901.4" y="102.0" class="area-title">CHP Cleavage &amp; Fractionation Area [1,100.0 kg/h]</text>
+      <g id="tile-EQ_CLE_REACTORS">
+        <title>Acid Catalyzed Cleavage Loop Reactors | Health: 99.5%</title>
+        <rect x="897.4" y="114.0" width="278.6" height="141.8" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="901.4" y="118.0" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="905.4" y="130.0" class="tile-tag">RX-301</text>
+        <text x="903.4" y="146.0" class="tile-name">Acid Catalyzed Cleavage </text>
+        <text x="903.4" y="158.0" class="tile-metric">350.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_CLE_COLUMNS">
+        <title>Acetone Fractionation Distillation Columns | Health: 99.5%</title>
+        <rect x="897.4" y="255.8" width="152.0" height="222.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="901.4" y="259.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="905.4" y="271.8" class="tile-tag">COL-301</text>
+        <text x="903.4" y="287.8" class="tile-name">Acetone Fractionation Di</text>
+        <text x="903.4" y="299.8" class="tile-metric">300.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_CLE_EXCHANGERS">
+        <title>Cleavage Effluent Coolers | Health: 99.5%</title>
+        <rect x="1049.3" y="255.8" width="126.7" height="222.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="1053.3" y="259.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="1057.3" y="271.8" class="tile-tag">HEX-301</text>
+        <text x="1055.3" y="287.8" class="tile-name">Cleavage Effluent Cooler</text>
+        <text x="1055.3" y="299.8" class="tile-metric">250.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_CLE_SEPARATORS">
+        <title>Acid Neutralization Wash Separators | Health: 99.5%</title>
+        <rect x="897.4" y="478.8" width="278.6" height="81.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="901.4" y="482.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="905.4" y="494.8" class="tile-tag">SEP-301</text>
+        <text x="903.4" y="510.8" class="tile-name">Acid Neutralization Wash</text>
+        <text x="903.4" y="522.8" class="tile-metric">200.0 kg/h | 99.5%</text>
+      </g>
+    </g>
+    <g id="area-AREA_POLYCONDENSATION">
+      <rect x="20.0" y="419.1" width="560.7" height="310.9" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+      <rect x="20.0" y="419.1" width="560.7" height="24.0" rx="4" ry="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="28.0" y="435.1" class="area-title">BPA Polycondensation Process Area [1,400.0 kg/h]</text>
+      <g id="tile-EQ_POL_REACTORS">
+        <title>Interfacial Polycondensation Reactors | Health: 99.5%</title>
+        <rect x="24.0" y="447.1" width="177.6" height="278.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="28.0" y="451.1" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="32.0" y="463.1" class="tile-tag">RX-401</text>
+        <text x="30.0" y="479.1" class="tile-name">Interfacial Polycondensa</text>
+        <text x="30.0" y="491.1" class="tile-metric">450.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_POL_COLUMNS">
+        <title>Methylene Chloride Stripping Columns | Health: 99.5%</title>
+        <rect x="201.6" y="447.1" width="150.0" height="278.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="205.6" y="451.1" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="209.6" y="463.1" class="tile-tag">COL-401</text>
+        <text x="207.6" y="479.1" class="tile-name">Methylene Chloride Strip</text>
+        <text x="207.6" y="491.1" class="tile-metric">380.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_POL_EXCHANGERS">
+        <title>Polymerization Thermosiphon Exchangers | Health: 99.5%</title>
+        <rect x="351.7" y="447.1" width="225.0" height="151.7" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="355.7" y="451.1" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="359.7" y="463.1" class="tile-tag">HEX-401</text>
+        <text x="357.7" y="479.1" class="tile-name">Polymerization Thermosip</text>
+        <text x="357.7" y="491.1" class="tile-metric">310.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_POL_SEPARATORS">
+        <title>Centrifugal Polymer Slurry Separators | Health: 99.5%</title>
+        <rect x="351.7" y="598.8" width="225.0" height="127.2" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="355.7" y="602.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="359.7" y="614.8" class="tile-tag">SEP-401</text>
+        <text x="357.7" y="630.8" class="tile-name">Centrifugal Polymer Slur</text>
+        <text x="357.7" y="642.8" class="tile-metric">260.0 kg/h | 99.5%</text>
+      </g>
+    </g>
+    <g id="area-AREA_RECOVERY">
+      <rect x="580.7" y="563.8" width="599.3" height="166.2" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+      <rect x="580.7" y="563.8" width="599.3" height="24.0" rx="4" ry="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="588.7" y="579.8" class="area-title">Solvent &amp; Monomer Recovery Area [800.0 kg/h]</text>
+      <g id="tile-EQ_REC_REACTORS">
+        <title>Catalyst Regeneration Hydration Reactors | Health: 99.5%</title>
+        <rect x="584.7" y="591.8" width="192.2" height="134.2" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="588.7" y="595.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="592.7" y="607.8" class="tile-tag">RX-501</text>
+        <text x="590.7" y="623.8" class="tile-name">Catalyst Regeneration Hy</text>
+        <text x="590.7" y="635.8" class="tile-metric">260.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_REC_COLUMNS">
+        <title>Azeotropic Solvent Recovery Columns | Health: 99.5%</title>
+        <rect x="776.9" y="591.8" width="162.6" height="134.2" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="780.9" y="595.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="784.9" y="607.8" class="tile-tag">COL-501</text>
+        <text x="782.9" y="623.8" class="tile-name">Azeotropic Solvent Recov</text>
+        <text x="782.9" y="635.8" class="tile-metric">220.0 kg/h | 99.5%</text>
+      </g>
+      <g id="tile-EQ_REC_EXCHANGERS">
+        <title>Vent Gas Chilled Brine Exchangers | Health: 84.0%</title>
+        <rect x="939.5" y="591.8" width="133.1" height="134.2" rx="3" ry="3" fill="#F59E0B" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="943.5" y="595.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="947.5" y="607.8" class="tile-tag">HEX-501</text>
+        <text x="945.5" y="623.8" class="tile-name">Vent Gas Chilled Brine E</text>
+        <text x="945.5" y="635.8" class="tile-metric">180.0 kg/h | 84.0%</text>
+      </g>
+      <g id="tile-EQ_REC_SEPARATORS">
+        <title>Decanter Water / Organic Phase Separators | Health: 95.0%</title>
+        <rect x="1072.5" y="591.8" width="103.5" height="134.2" rx="3" ry="3" fill="#10B981" fill-opacity="0.9" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="1076.5" y="595.8" width="68.0" height="18.0" rx="2" ry="2" fill="#050811" fill-opacity="0.95"/>
+        <text x="1080.5" y="607.8" class="tile-tag">SEP-501</text>
+        <text x="1078.5" y="623.8" class="tile-name">Decanter Water / Organic</text>
+        <text x="1078.5" y="635.8" class="tile-metric">140.0 kg/h | 95.0%</text>
+      </g>
+    </g>
+  </g>
+</svg>

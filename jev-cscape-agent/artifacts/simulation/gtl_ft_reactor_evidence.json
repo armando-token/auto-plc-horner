@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "GTL FT Slurry Reactor 9-stage verification passed 9/9 checks.",
+  "data": {
+    "work_package": "W188",
+    "module": "gtl_ft_reactor",
+    "total_checks": 9,
+    "checks_passed": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Horner_Symbol_Bindings",
+        "passed": true,
+        "details": "AST parsed=True, registers bound=True (11 registers verified)."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Blocked 5/5 forbidden ladder logic fragments with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "SBCR_Three_Phase_Hydrodynamics_And_Gas_Holdup",
+        "passed": true,
+        "details": "Hydrodynamics verified: eps_g=0.274, kLa_CO=0.0315/s, kLa_H2=0.0425/s, MonotonicHoldup=True, Monotonic_kLa=True."
+      },
+      {
+        "stage": 4,
+        "check": "ASF_Product_Distribution_And_Heavy_Wax_Selectivity",
+        "passed": true,
+        "details": "ASF verified (alpha=0.915): Wax_C20+=48.36 wt%, CH4=0.72 wt%, U_R=2.085, SumFractions=1.000000, Delta H_rxn=-165 kJ/mol."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: C_H2=44.5 mol/m3, C_CO=15.7 mol/m3, C_wax=1849.2 mol/m3, T_r=225.0\u00b0C, a_cat=1.000."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=3.747e-13 kg/s (< 1e-10), elemental_residual=3.747e-13 kg/s (< 1e-10), enthalpy_residual=1.856e-11 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xD201=True, 0xD202=True, 0xD203=True, 0xD204=True, Warning=True, Priority=True."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1490=205, %R1491=2250, %R1492=250, %R1493=685, %R1494=915, %R1495=18500, %R1496=18, %R1497=0x0000, %M347=True, %M348=False, %M349=False."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Settling_Stability",
+        "passed": true,
+        "details": "Disturbance response verified: T_r=229.0\u00b0C, CoolingDuty=23557.3 kW, Stable=True."
+      }
+    ],
+    "timestamp_utc": "2026-10-06T01:27:36Z"
+  }
+}

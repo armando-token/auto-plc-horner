@@ -1,0 +1,143 @@
+{
+  "status": "success",
+  "error_code": null,
+  "work_package": "W044",
+  "gate": "G8",
+  "generated_at_utc": "2026-10-02T20:31:16.163466+00:00",
+  "summary": {
+    "total_conditioners": 2,
+    "total_calibration_curves": 4,
+    "discrepancy_monitoring_active": true,
+    "burnout_failover_verified": true
+  },
+  "calibration_profiles": {
+    "%AI1": {
+      "curve_id": "CAL_T1_PRI",
+      "channel_name": "%AI1",
+      "zero_offset": 0.2,
+      "span_factor": 1.005,
+      "temp_coefficient": 0.0002,
+      "reference_temp_c": 25.0,
+      "piecewise_points": []
+    },
+    "%AI3": {
+      "curve_id": "CAL_T1_SEC",
+      "channel_name": "%AI3",
+      "zero_offset": -0.1,
+      "span_factor": 0.998,
+      "temp_coefficient": 0.0002,
+      "reference_temp_c": 25.0,
+      "piecewise_points": []
+    },
+    "%AI2": {
+      "curve_id": "CAL_T2_PRI",
+      "channel_name": "%AI2",
+      "zero_offset": 0.1,
+      "span_factor": 1.002,
+      "temp_coefficient": 0.00015,
+      "reference_temp_c": 25.0,
+      "piecewise_points": []
+    },
+    "%AI4": {
+      "curve_id": "CAL_T2_SEC",
+      "channel_name": "%AI4",
+      "zero_offset": -0.15,
+      "span_factor": 1.001,
+      "temp_coefficient": 0.00015,
+      "reference_temp_c": 25.0,
+      "piecewise_points": []
+    }
+  },
+  "verification_scenarios": {
+    "nominal_condition": {
+      "TANK1_LEVEL": {
+        "signal_name": "Tank1_Level_Reconciled",
+        "primary_value": 50.049,
+        "secondary_value": 49.8002,
+        "reconciled_value": 49.9246,
+        "divergence_delta": 0.2488,
+        "divergence_percentage": 0.5,
+        "is_divergent": false,
+        "active_channel": "AVERAGE",
+        "quality_code": "GOOD",
+        "quality_word": 192,
+        "fault_flags": []
+      },
+      "TANK2_LEVEL": {
+        "signal_name": "Tank2_Level_Reconciled",
+        "primary_value": 34.9698,
+        "secondary_value": 35.3853,
+        "reconciled_value": 34.9698,
+        "divergence_delta": 0.4155,
+        "divergence_percentage": 1.17,
+        "is_divergent": false,
+        "active_channel": "PRIMARY",
+        "quality_code": "GOOD",
+        "quality_word": 192,
+        "fault_flags": []
+      }
+    },
+    "thermal_excursion_45C": {
+      "TANK1_LEVEL": {
+        "signal_name": "Tank1_Level_Reconciled",
+        "primary_value": 50.2492,
+        "secondary_value": 49.9994,
+        "reconciled_value": 50.1243,
+        "divergence_delta": 0.2498,
+        "divergence_percentage": 0.5,
+        "is_divergent": false,
+        "active_channel": "AVERAGE",
+        "quality_code": "GOOD",
+        "quality_word": 192,
+        "fault_flags": []
+      },
+      "TANK2_LEVEL": {
+        "signal_name": "Tank2_Level_Reconciled",
+        "primary_value": 35.0747,
+        "secondary_value": 35.4915,
+        "reconciled_value": 35.0747,
+        "divergence_delta": 0.4168,
+        "divergence_percentage": 1.17,
+        "is_divergent": false,
+        "active_channel": "PRIMARY",
+        "quality_code": "GOOD",
+        "quality_word": 192,
+        "fault_flags": []
+      }
+    },
+    "primary_burnout_failover": {
+      "TANK1_LEVEL": {
+        "signal_name": "Tank1_Level_Reconciled",
+        "primary_value": 50.049,
+        "secondary_value": 49.8002,
+        "reconciled_value": 49.8002,
+        "divergence_delta": 0.2488,
+        "divergence_percentage": 0.5,
+        "is_divergent": false,
+        "active_channel": "SECONDARY_BACKUP",
+        "quality_code": "UNCERTAIN",
+        "quality_word": 64,
+        "fault_flags": [
+          "PRI_FAULT_BURNOUT",
+          "AUTO_FAILOVER_TO_SECONDARY"
+        ]
+      },
+      "TANK2_LEVEL": {
+        "signal_name": "Tank2_Level_Reconciled",
+        "primary_value": 34.9698,
+        "secondary_value": 35.3853,
+        "reconciled_value": 35.3853,
+        "divergence_delta": 0.4155,
+        "divergence_percentage": 1.17,
+        "is_divergent": false,
+        "active_channel": "SECONDARY_BACKUP",
+        "quality_code": "UNCERTAIN",
+        "quality_word": 64,
+        "fault_flags": [
+          "PRI_FAULT_BURNOUT",
+          "AUTO_FAILOVER_TO_SECONDARY"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial IO-Link Safety Master Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W160",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial IO-Link Safety Master & Safety Device Protocol Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Table_Binding",
+        "passed": true,
+        "details": "Verified IoLinkSafetySync and IoLinkSafetyMasterSync AST bindings across %R1210..%R1217, %M282..%M283."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Successfully trapped 5/5 prohibited ladder logic constructs with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "IO_Link_Safety_Master_Architecture_And_Scaling",
+        "passed": true,
+        "details": "Verified Master Cycle Time (%R1210=25), Active Devices (%R1211=4), Watchdog (%R1213=200), Vendor ID (%R1216=0x0123)."
+      },
+      {
+        "stage": 4,
+        "check": "Safe_PD_Container_Generation_Complement_And_Dual_CRC",
+        "passed": true,
+        "details": "Verified Safe PD serialization, bitwise inverted complement (P ^ ~P == 0xFF), and dual CRC-16 checksums."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_Channel_OSSD_Monitoring_And_Discrepancy_Detection",
+        "passed": true,
+        "details": "Verified dual-channel OSSD state word (%R1215=0x00FF) and safe de-energization on channel discrepancy."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Safety_Interlock_0xB901_CRC_Corrupted",
+        "passed": true,
+        "details": "Trapped CRC corruption with 0xB901: asserted %M283 (IoLinkSafetyFaultTrip), cleared %M282, incremented %R1214."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlock_0xB902_Sequence_Counter_Fault",
+        "passed": true,
+        "details": "Trapped frozen / replayed sequence counter with 0xB902 and asserted %M283 (IoLinkSafetyFaultTrip)."
+      },
+      {
+        "stage": 8,
+        "check": "Process_Safety_Interlock_0xB903_Safety_Watchdog_Timeout",
+        "passed": true,
+        "details": "Trapped safety watchdog silence (> 20.0 ms) with 0xB903: asserted %M283, cleared %M282, zeroed %R1215."
+      },
+      {
+        "stage": 9,
+        "check": "Device_Authentication_0xB904_And_Reset_Latch_Recovery",
+        "passed": true,
+        "details": "Trapped rogue vendor ID with 0xB904 and verified operator reset restoring %M282=True and %M283=False."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1210..%R1217",
+      "discrete_coils": "%M282..%M283",
+      "values": {
+        "%R1210": 25,
+        "%R1211": 4,
+        "%R1212": 300,
+        "%R1213": 200,
+        "%R1214": 1,
+        "%R1215": 255,
+        "%R1216": 291,
+        "%R1217": 0,
+        "%M282": true,
+        "%M283": false
+      }
+    },
+    "metrics": {
+      "master_cycle_time_ms": 2.5,
+      "master_cycle_time_ms_scaled": 25,
+      "active_devices_count": 4,
+      "safe_sequence_counter": 300,
+      "watchdog_timeout_ms": 20.0,
+      "crc_error_count": 1,
+      "ossd_output_state_word": 255,
+      "expected_vendor_id": 291
+    },
+    "timestamp": "2026-10-05T04:06:33Z"
+  }
+}

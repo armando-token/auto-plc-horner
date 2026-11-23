@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_057",
+  "file_name": "scene_057.png",
+  "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step3b_ck5tldlgname_dialog_1791603263.png",
+  "split": "train",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 188,
+    "height": 26
+  },
+  "sha256": "e017d108cb1922e4ac1d24a01b670f456623b81978f29975e2d967dd90c188f0",
+  "labels": {
+    "canvas_rect": [
+      9,
+      1,
+      179,
+      1
+    ],
+    "anchors": {
+      "canvas_center": [
+        94,
+        1
+      ],
+      "canvas_nw": [
+        9,
+        1
+      ],
+      "canvas_se": [
+        179,
+        1
+      ],
+      "status_bar_roi": [
+        0,
+        2,
+        188,
+        26
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

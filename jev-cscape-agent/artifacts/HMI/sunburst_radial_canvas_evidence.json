@@ -1,0 +1,88 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W231",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Sunburst Hierarchical Radial Partition SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Radial_Geometry_And_Canvas_Parameter_Verification",
+        "passed": true,
+        "timing_ms": 0.4,
+        "details": "Verified 1200x750 viewport, dark theme (#0B0F19/#161B22), R_in=60px, R_out=320px, and 5 concentric tiers."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_Structured_Text_POU_Validation",
+        "passed": true,
+        "timing_ms": 0.77,
+        "details": "Validated pure IEC 61131-3 ST POU 'SunburstRadialCanvasSync' with STParser & SecurityGuard across %R1920..%R1927 and %M448..%M449."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.03,
+        "details": "Rejected 6 forbidden ladder logic constructs (contacts, coils, rungs, networks, mnemonics) with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Hierarchical_Tree_Sector_Partition_And_Angular_Weight_Conservation",
+        "passed": true,
+        "timing_ms": 0.51,
+        "details": "Verified 61 sectors across 5 tiers: angular coverage = 2*pi per tier and child sectors strictly fit parent span."
+      },
+      {
+        "stage": 5,
+        "check": "Standalone_W3C_SVG_Vector_Canvas_Generation",
+        "passed": true,
+        "timing_ms": 3.39,
+        "details": "Generated valid W3C SVG 1.1 graphic (61 paths) with dark backing badges and WCAG 2.1 AAA compliance (text 19.15:1, badge 20.01:1) -> artifacts\\HMI\\sunburst_radial_canvas_sample.svg."
+      },
+      {
+        "stage": 6,
+        "check": "Critical_Node_Health_Alarm_Injection",
+        "passed": true,
+        "timing_ms": 1.64,
+        "details": "Verified critical node failure injection (50.0% < 70%) -> CriticalNodeAlarmCount > 0 -> %M449 alarm active, and de-assertion on recovery."
+      },
+      {
+        "stage": 7,
+        "check": "Diagnostic_Fault_Handling",
+        "passed": true,
+        "timing_ms": 4.36,
+        "details": "Verified 0xF301 (Radial Singularity), 0xF302 (Empty Tree), 0xF303 (Weight Mismatch), 0xF304 (Canvas Overflow) and nominal reset."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 1.74,
+        "details": "Verified %R1920..%R1927 (61, 9850, 0, 2, 5, 0, 320, 0) and %M448..%M449 (True, False) bit-exact with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycle_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 28.85,
+        "details": "Verified 100 deterministic scan cycles: 0 memory leak (steady 61 sectors), constant health index (98.50%), zero drift."
+      }
+    ],
+    "metrics": {
+      "total_hierarchy_nodes_count": 61,
+      "plant_overall_health_index_pct_scaled": 9850,
+      "critical_node_alarm_count": 0,
+      "warning_node_count": 2,
+      "max_hierarchy_depth_tiers": 5,
+      "outer_ring_radius_px": 320,
+      "diagnostic_code": "0x0000",
+      "wcag_badge_contrast": 20.01,
+      "wcag_text_contrast": 19.15
+    }
+  }
+}

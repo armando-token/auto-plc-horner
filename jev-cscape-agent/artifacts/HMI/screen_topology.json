@@ -1,0 +1,281 @@
+{
+  "topology_name": "Horner OCS Dual-Tank Process Screen Topology",
+  "cscape_version": "10.2.751.4",
+  "root_screen_id": 1,
+  "screens_count": 7,
+  "transitions_count": 23,
+  "screens": [
+    {
+      "screen_id": 1,
+      "name": "Main Overview",
+      "subtitle": "Dashboard",
+      "description": "Central plant overview dashboard showing dual-tank status, pumps, and alarms.",
+      "required_permission": "OPERATOR",
+      "active_register": "%D1",
+      "category": "OVERVIEW"
+    },
+    {
+      "screen_id": 2,
+      "name": "Tank 1 Detail",
+      "subtitle": "Pump & Inflow",
+      "description": "Detailed telemetry and manual controls for Tank 1 level and feed pump inflow.",
+      "required_permission": "OPERATOR",
+      "active_register": "%D2",
+      "category": "PROCESS"
+    },
+    {
+      "screen_id": 3,
+      "name": "Tank 2 Detail",
+      "subtitle": "Drain & Discharge",
+      "description": "Detailed telemetry and manual controls for Tank 2 level and drain/discharge pump.",
+      "required_permission": "OPERATOR",
+      "active_register": "%D3",
+      "category": "PROCESS"
+    },
+    {
+      "screen_id": 4,
+      "name": "Process Trends",
+      "subtitle": "Real-time charts",
+      "description": "Real-time trending charts for tank levels, flow rates, and pressures.",
+      "required_permission": "OPERATOR",
+      "active_register": "%D4",
+      "category": "TRENDS"
+    },
+    {
+      "screen_id": 5,
+      "name": "Active Alarms & Events",
+      "subtitle": "Active Alarms & Events",
+      "description": "Active alarm summary, acknowledge/silence controls, and historical event log.",
+      "required_permission": "OPERATOR",
+      "active_register": "%D5",
+      "category": "ALARMS"
+    },
+    {
+      "screen_id": 6,
+      "name": "Recipe Management",
+      "subtitle": "Recipe Management",
+      "description": "Batch recipe parameter management, setpoint profiles, and register deployment.",
+      "required_permission": "SUPERVISOR",
+      "active_register": "%D6",
+      "category": "RECIPES"
+    },
+    {
+      "screen_id": 7,
+      "name": "Controller Diagnostics & Communication Status",
+      "subtitle": "Communication Status",
+      "description": "OCS hardware health, scan cycle watchdog, CsCAN/Modbus communication diagnostics.",
+      "required_permission": "ENGINEER",
+      "active_register": "%D7",
+      "category": "DIAGNOSTICS"
+    }
+  ],
+  "transitions": [
+    {
+      "source_screen_id": 1,
+      "target_screen_id": 2,
+      "transition_type": "DRILLDOWN",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D2",
+      "description": "Drilldown to Tank 1 Detail"
+    },
+    {
+      "source_screen_id": 1,
+      "target_screen_id": 3,
+      "transition_type": "DRILLDOWN",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D3",
+      "description": "Drilldown to Tank 2 Detail"
+    },
+    {
+      "source_screen_id": 1,
+      "target_screen_id": 4,
+      "transition_type": "DIRECT",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D4",
+      "description": "Open Process Trends"
+    },
+    {
+      "source_screen_id": 1,
+      "target_screen_id": 5,
+      "transition_type": "ALARM_JUMP",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D5",
+      "description": "View Active Alarms & Events"
+    },
+    {
+      "source_screen_id": 1,
+      "target_screen_id": 6,
+      "transition_type": "RECIPE_SELECT",
+      "required_permission": "SUPERVISOR",
+      "trigger_register": "%D6",
+      "description": "Open Recipe Management (Supervisor)"
+    },
+    {
+      "source_screen_id": 1,
+      "target_screen_id": 7,
+      "transition_type": "DIAGNOSTIC",
+      "required_permission": "ENGINEER",
+      "trigger_register": "%D7",
+      "description": "Open Diagnostics & Comm Status (Engineer)"
+    },
+    {
+      "source_screen_id": 2,
+      "target_screen_id": 1,
+      "transition_type": "RETURN",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D1",
+      "description": "Return from Tank 1 to Main Overview"
+    },
+    {
+      "source_screen_id": 3,
+      "target_screen_id": 1,
+      "transition_type": "RETURN",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D1",
+      "description": "Return from Tank 2 to Main Overview"
+    },
+    {
+      "source_screen_id": 4,
+      "target_screen_id": 1,
+      "transition_type": "RETURN",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D1",
+      "description": "Return from Trends to Main Overview"
+    },
+    {
+      "source_screen_id": 5,
+      "target_screen_id": 1,
+      "transition_type": "RETURN",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D1",
+      "description": "Return from Alarms to Main Overview"
+    },
+    {
+      "source_screen_id": 6,
+      "target_screen_id": 1,
+      "transition_type": "RETURN",
+      "required_permission": "SUPERVISOR",
+      "trigger_register": "%D1",
+      "description": "Return from Recipes to Main Overview"
+    },
+    {
+      "source_screen_id": 7,
+      "target_screen_id": 1,
+      "transition_type": "RETURN",
+      "required_permission": "ENGINEER",
+      "trigger_register": "%D1",
+      "description": "Return from Diagnostics to Main Overview"
+    },
+    {
+      "source_screen_id": 2,
+      "target_screen_id": 3,
+      "transition_type": "DIRECT",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D3",
+      "description": "Switch from Tank 1 to Tank 2 Detail"
+    },
+    {
+      "source_screen_id": 3,
+      "target_screen_id": 2,
+      "transition_type": "DIRECT",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D2",
+      "description": "Switch from Tank 2 to Tank 1 Detail"
+    },
+    {
+      "source_screen_id": 2,
+      "target_screen_id": 4,
+      "transition_type": "DIRECT",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D4",
+      "description": "Switch from Tank 1 to Process Trends"
+    },
+    {
+      "source_screen_id": 3,
+      "target_screen_id": 4,
+      "transition_type": "DIRECT",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D4",
+      "description": "Switch from Tank 2 to Process Trends"
+    },
+    {
+      "source_screen_id": 4,
+      "target_screen_id": 2,
+      "transition_type": "DIRECT",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D2",
+      "description": "Switch from Process Trends to Tank 1 Detail"
+    },
+    {
+      "source_screen_id": 4,
+      "target_screen_id": 3,
+      "transition_type": "DIRECT",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D3",
+      "description": "Switch from Process Trends to Tank 2 Detail"
+    },
+    {
+      "source_screen_id": 2,
+      "target_screen_id": 5,
+      "transition_type": "ALARM_JUMP",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D5",
+      "description": "Jump to Alarms from Tank 1 Detail"
+    },
+    {
+      "source_screen_id": 3,
+      "target_screen_id": 5,
+      "transition_type": "ALARM_JUMP",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D5",
+      "description": "Jump to Alarms from Tank 2 Detail"
+    },
+    {
+      "source_screen_id": 4,
+      "target_screen_id": 5,
+      "transition_type": "ALARM_JUMP",
+      "required_permission": "OPERATOR",
+      "trigger_register": "%D5",
+      "description": "Jump to Alarms from Process Trends"
+    },
+    {
+      "source_screen_id": 6,
+      "target_screen_id": 5,
+      "transition_type": "ALARM_JUMP",
+      "required_permission": "SUPERVISOR",
+      "trigger_register": "%D5",
+      "description": "Jump to Alarms from Recipe Management"
+    },
+    {
+      "source_screen_id": 7,
+      "target_screen_id": 5,
+      "transition_type": "ALARM_JUMP",
+      "required_permission": "ENGINEER",
+      "trigger_register": "%D5",
+      "description": "Jump to Alarms from Controller Diagnostics"
+    }
+  ],
+  "reachability": {
+    "is_valid": true,
+    "unreachable_from_main": [],
+    "dead_end_screens": [],
+    "total_screens": 7,
+    "reachable_screens": 7,
+    "summary": "Reachability verified: All 7 screens reachable from Screen 1 (Main Overview); zero dead-end screens."
+  },
+  "security_levels": [
+    "VIEWER",
+    "OPERATOR",
+    "SUPERVISOR",
+    "ENGINEER",
+    "ADMIN"
+  ],
+  "current_state": {
+    "active_screen_id": 1,
+    "breadcrumb_stack": [
+      1
+    ],
+    "history_length": 0,
+    "current_user_permission": "OPERATOR"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Dynamic Radar / Spider Process KPI Multi-Dimensional Polygon Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W162",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Radar / Spider Process KPI Multi-Dimensional Polygon Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'RadarSpiderCanvasSync' and 'ProcessKpiRadarHmiSync' with SecurityGuard & STParser across Horner registers %R1230..%R1237 and %M287..%M288."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Multi_Dimensional_Radar_Polygon_Geometry_And_Projection",
+        "passed": true,
+        "details": "Verified 6-axis polar-to-cartesian projection (x=x0+r*sin(theta), y=y0-r*cos(theta)), regular hexagon angles, and 5 concentric grid webs (20%..100%)."
+      },
+      {
+        "stage": 4,
+        "check": "Dual_Polygon_Overlays_Baseline_Vs_RealTime",
+        "passed": true,
+        "details": "Verified dual polygon overlays: Cyan dashed Target Baseline vs Emerald Green Real-Time polygon with opacity."
+      },
+      {
+        "stage": 5,
+        "check": "Process_Safety_Interlock_Safety_Margin_Trip",
+        "passed": true,
+        "details": "Verified 0xBB01 RADAR_ERR_SAFETY_MARGIN_DEVIATION trip and %M287 coil assertion when Safety Margin < 25.0% (injected 18.0% -> %R1235=180)."
+      },
+      {
+        "stage": 6,
+        "check": "Diagnostic_Faults_Out_Of_Bounds_And_Render_Fault",
+        "passed": true,
+        "details": "Verified 0xBB02 axis out-of-bounds fault, 0xBB03 render fault latching, and clean nominal restoration."
+      },
+      {
+        "stage": 7,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone W3C SVG 1.1; XML valid; dark theme backing, concentric webs, radial spokes, dual polygons, vertex pulsing, and right-hand KPI panel verified."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Theme text 17.06:1 (> 7:1), Graphical SCADA colors (7.04:1..7.35:1 > 3:1) verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scan_Cycle",
+        "passed": true,
+        "details": "%R1230=885, %R1231=6, %R1232=910, %R1233=985, %R1234=840, %R1235=920, %R1236=0, %R1237=0; %M287=False, %M288=True; discrete scan cycle verified."
+      }
+    ],
+    "metrics": {
+      "num_axes": 6,
+      "overall_kpi_score_pct": 88.5,
+      "thermal_efficiency_pct": 91.0,
+      "product_purity_pct": 98.5,
+      "energy_utilization_pct": 84.0,
+      "safety_margin_pct": 92.0,
+      "wcag_badge_contrast": 18.3,
+      "wcag_theme_contrast": 17.06,
+      "selected_axis_index": 0
+    }
+  }
+}

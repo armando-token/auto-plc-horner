@@ -1,0 +1,202 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic 9-stage verification for Cscape HMI Chord Network Canvas (W255) passed cleanly.",
+  "data": {
+    "work_package": "W255",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Chord Diagram & Multi-Zone Flow Network SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Chord_Matrix_Geometry_And_Annular_Arc_Perimeters",
+        "check": "Chord_Matrix_Geometry_And_Annular_Arc_Perimeters",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.1308999489992857,
+        "details": "Verified 5 annular zone arcs spanning circular perimeter with positive perimeters."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.7407000996172428,
+        "details": "Validated ChordNetworkCanvasSync AST with SecurityGuard across %R2160..%R2167 and %M504..%M505."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.043899985030293465,
+        "details": "SecurityGuard rejected all 6/6 forbidden ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Telemetry_Flow_Matrix_And_Ribbon_Bezier_Rendering",
+        "check": "Nominal_Telemetry_Flow_Matrix_And_Ribbon_Bezier_Rendering",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.9489001240581274,
+        "details": "Nominal flow matrix generated 9 active conduits with total flux 850.0 kg/s; Quadratic and Cubic B\u00e9zier validated."
+      },
+      {
+        "stage": 5,
+        "name": "WCAG_AAA_Color_Contrast_Compliance",
+        "check": "WCAG_AAA_Color_Contrast_Compliance",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.05479995161294937,
+        "details": "WCAG AAA compliance verified: Title contrast=18.30:1, HUD text=7.47:1, Min graphical=5.06:1 (target >= 3.0:1); Decoupled badge=18.30:1 (target >= 18.0:1)."
+      },
+      {
+        "stage": 6,
+        "name": "Flow_Bottleneck_And_Asymmetry_Fault_Injections",
+        "check": "Flow_Bottleneck_And_Asymmetry_Fault_Injections",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.8192999996244907,
+        "details": "Verified 0x0000 OK, 0x7501 RIBBON_OVERFLOW trip, 0x7502 ASYMMETRY_FAULT trip, and reset_nominal()."
+      },
+      {
+        "stage": 7,
+        "name": "Interactive_Zone_Selection_And_Popover_Dynamic_Badges",
+        "check": "Interactive_Zone_Selection_And_Popover_Dynamic_Badges",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.6260999254882336,
+        "details": "Interactive selection verified: Zone 1 (Reaction) renders popover card with dynamic badge."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.5479000974446535,
+        "details": "Verified register synchronization: %R2160=5, %R2161=850, %R2162=425, %R2163=1250, %M504=True, %M505=False."
+      },
+      {
+        "stage": 9,
+        "name": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "check": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.0400000028312206,
+        "details": "Generated standalone W3C SVG 1.1 (16721 chars). Verified XML well-formedness with ElementTree."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Chord_Matrix_Geometry_And_Annular_Arc_Perimeters",
+        "check": "Chord_Matrix_Geometry_And_Annular_Arc_Perimeters",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.1308999489992857,
+        "details": "Verified 5 annular zone arcs spanning circular perimeter with positive perimeters."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.7407000996172428,
+        "details": "Validated ChordNetworkCanvasSync AST with SecurityGuard across %R2160..%R2167 and %M504..%M505."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.043899985030293465,
+        "details": "SecurityGuard rejected all 6/6 forbidden ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Telemetry_Flow_Matrix_And_Ribbon_Bezier_Rendering",
+        "check": "Nominal_Telemetry_Flow_Matrix_And_Ribbon_Bezier_Rendering",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.9489001240581274,
+        "details": "Nominal flow matrix generated 9 active conduits with total flux 850.0 kg/s; Quadratic and Cubic B\u00e9zier validated."
+      },
+      {
+        "stage": 5,
+        "name": "WCAG_AAA_Color_Contrast_Compliance",
+        "check": "WCAG_AAA_Color_Contrast_Compliance",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.05479995161294937,
+        "details": "WCAG AAA compliance verified: Title contrast=18.30:1, HUD text=7.47:1, Min graphical=5.06:1 (target >= 3.0:1); Decoupled badge=18.30:1 (target >= 18.0:1)."
+      },
+      {
+        "stage": 6,
+        "name": "Flow_Bottleneck_And_Asymmetry_Fault_Injections",
+        "check": "Flow_Bottleneck_And_Asymmetry_Fault_Injections",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.8192999996244907,
+        "details": "Verified 0x0000 OK, 0x7501 RIBBON_OVERFLOW trip, 0x7502 ASYMMETRY_FAULT trip, and reset_nominal()."
+      },
+      {
+        "stage": 7,
+        "name": "Interactive_Zone_Selection_And_Popover_Dynamic_Badges",
+        "check": "Interactive_Zone_Selection_And_Popover_Dynamic_Badges",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.6260999254882336,
+        "details": "Interactive selection verified: Zone 1 (Reaction) renders popover card with dynamic badge."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.5479000974446535,
+        "details": "Verified register synchronization: %R2160=5, %R2161=850, %R2162=425, %R2163=1250, %M504=True, %M505=False."
+      },
+      {
+        "stage": 9,
+        "name": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "check": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.0400000028312206,
+        "details": "Generated standalone W3C SVG 1.1 (16721 chars). Verified XML well-formedness with ElementTree."
+      }
+    ],
+    "metrics": {
+      "active_zones_count": 5,
+      "total_network_flow_scaled": 850,
+      "max_ribbon_bandwidth_scaled": 425,
+      "flow_asymmetry_index_scaled": 1250,
+      "selected_source_zone": 0,
+      "selected_target_zone": 1,
+      "flow_bottleneck_zone": 1,
+      "diagnostic_code": 0,
+      "canvas_healthy": true,
+      "bottleneck_alarm": false
+    },
+    "wcag_compliance": {
+      "text_on_badge_contrast": 18.303168456436335,
+      "muted_text_on_badge_contrast": 7.468741482607106,
+      "graphical_scada_contrasts": [
+        7.037819858583826,
+        7.353217917726586,
+        8.312541364840675,
+        5.98495267945199,
+        5.0611944035777165
+      ],
+      "meets_wcag_aaa": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_046",
+  "file_name": "scene_046.png",
+  "original_source": "artifacts\\G3\\edit_roundtrip_steps\\startup_guard_main_disabled_1791592680.png",
+  "split": "train",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "003f93f1c061f62136dc32fb6e84cbe522a97f0b05baf26c3da31de83b53f955",
+  "labels": {
+    "canvas_rect": [
+      124,
+      28,
+      1269,
+      460
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        244
+      ],
+      "canvas_nw": [
+        124,
+        28
+      ],
+      "canvas_se": [
+        1269,
+        460
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

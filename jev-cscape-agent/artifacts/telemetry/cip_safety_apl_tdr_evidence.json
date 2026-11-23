@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Work Package W325 Industrial ODVA CIP Safety Over Ethernet-APL Cable TDR Verification PASSED (9/9 stages).",
+  "work_package": "W325",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W325",
+    "gate": "G8",
+    "protocol": "Industrial ODVA CIP Safety Over Ethernet-APL Cable Diagnostics & Time-Domain Reflectometry (TDR) Engine",
+    "standards": [
+      "IEEE 802.3cg-2019 10BASE-T1L",
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2860..%R2867",
+      "%M667..%M668"
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment_and_protocol_constants",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "Verified protocol constants, register mappings %R2860..%R2867, %M667..%M668."
+      },
+      {
+        "stage": 2,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "passed": true,
+        "timing_ms": 0.337,
+        "details": "Dual CRC-S1 (0x5935) and CRC-S2 (0x755B) verified with 100% bit perturbation detection."
+      },
+      {
+        "stage": 3,
+        "name": "epid_authentication_and_packet_integrity",
+        "passed": true,
+        "timing_ms": 0.142,
+        "details": "EPID 'HORNER-OCS-APL-CABLE-TDR-SIL3' CRC32 hash (0xDE9EC089) verified."
+      },
+      {
+        "stage": 4,
+        "name": "tdr_pulse_propagation_and_impedance_profiling",
+        "passed": true,
+        "timing_ms": 0.17,
+        "details": "Nominal TDR cable impedance (100.0 Ohm), NVP (67.0%), and return loss (> 20 dB) verified."
+      },
+      {
+        "stage": 5,
+        "name": "open_and_short_circuit_fault_trips",
+        "passed": true,
+        "timing_ms": 0.203,
+        "details": "Cable open-circuit (0xEEC1) and short-circuit (0xEEC2) trips verified at exact fault distances."
+      },
+      {
+        "stage": 6,
+        "name": "impedance_mismatch_and_return_loss_diagnostics",
+        "passed": true,
+        "timing_ms": 0.192,
+        "details": "Impedance mismatch (0xEEC3) and return loss excursion (0xEEC4) trips validated."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "passed": true,
+        "timing_ms": 0.22,
+        "details": "Horner OCS memory channels %R2860..%R2867 and %M667..%M668 synchronized accurately."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.049,
+        "details": "Pure ST POU 'CipSafetyAplTdrSync' verified; 9/9 ladder constructs strictly rejected."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "passed": true,
+        "timing_ms": 20.897,
+        "details": "100 continuous closed-loop scan cycles executed with zero memory growth and zero packet drops."
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+========================================================================================
+GATE G12 PHASE 3 REPORT — ESTACION DE BOMBEO 3B (59 TAGS + 12 ALARMS + 26 RUNGS + PID + 4 ST + 6 HMI SCREENS + RECIPES + DATALOG)
+========================================================================================
+Spec Document        : specs/SPEC_ESTACION_BOMBEO_3B.md
+Target PLC           : Horner OCS XL4 Prime (HE-XPC1E2, 320x240 QVGA)
+Target Software      : Horner APG Cscape 10.2 (Build 10.2.751.4)
+Execution Mode       : offline
+Campaign Status      : inconclusive
+Campaign Verdict     : PENDING_LIVE_CSCAPE
+Live Cscape PID      : 0
+Reopen Cscape PID    : 0
+Baseline .csp        : C:\HornerAI\jev-cscape-agent\work\disposable\p1_base.csp
+Baseline SHA-256     : 5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881 (immutable=True)
+Generated .csp       : C:\HornerAI\jev-cscape-agent\artifacts\G12\estacion_bombeo_3b.csp
+SHA After Tags       : None
+SHA After Rungs+HMI  : None (changed_after_rungs=False)
+----------------------------------------------------------------------------------------
+1. [VERIFICAR] ITEMS RESOLUTION (14/14 VERIFIED)
+----------------------------------------------------------------------------------------
+  [V01] Line  21 (§1.2.1): VERIFIED — Modelo exacto de E/S en proyecto base JEV-Cscape (XL4 Prime)
+  [V02] Line  22 (§1.2.2): VERIFIED — Rango digital de entradas y salidas analógicas 4-20 mA (0-32000 cuentas)
+  [V03] Line 112 (§2.6): VERIFIED — Longitud y mapa de registros del bloque PID_BLK (%R100-%R139)
+  [V04] Line 133 (§2.7): VERIFIED — Retentividad del rango %R en el Horner XL4 Prime
+  [V05] Line 182 (§4): VERIFIED — Bit/campo de acción directa/inversa del bloque PID respecto al error SP - PV
+  [V06] Line 192 (§4): VERIFIED — Anti-windup del bloque PID y preposicionamiento manual en CV = 9600
+  [V07] Line 201 (§5): VERIFIED — Sintaxis exacta IEC 61131-3 ST en Cscape 10.2 (W5EditST.dll) y pulso de 1 s (%M30)
+  [V08] Line 341 (§8): VERIFIED — Resolución de pantalla integrada del Horner XL4 Prime
+  [V09] Line 360 (§8 (Pantalla 2)): VERIFIED — Parametrización de Pantalla 2 (Detalle de bomba) mediante %R50 y subvistas 2A/2B/2C
+  [V10] Line 412 (§8 (Pantalla 6)): VERIFIED — Soporte de seguridad/contraseña HMI en entradas numéricas de reset de mantenimiento
+  [V11] Line 419 (§9.1): VERIFIED — Función de Data Logging CSV en microSD en Cscape 10.2 para XL4
+  [V12] Line 435 (§9.2): VERIFIED — Implementación de Recetas (nativa + tabla %R200-%R235 con selector en ST)
+  [V13] Line 442 (§10.1): VERIFIED — Alcance del modo de prueba offline en Cscape 10.2 y simulador de planta/ciclo de scan
+  [V14] Line 484 (§10.3): VERIFIED — Extensión de archivo de respaldo de programa en Cscape 10.2
+----------------------------------------------------------------------------------------
+2. PHASE 3 LIVE GUI BUILD + REOPEN GUI READBACK VERIFICATION
+----------------------------------------------------------------------------------------
+  OLE2/CFBF Valid            : False
+  Reopen GUI Verified        : False (reopen_pid=0)
+  Compile Clean (0E/0DupCoil): False (errors=None, warnings=None, dup_coils=None)
+  GUI Readback Station Tags  : 0/59 (alarms=0/12, total_gui_decls=0)
+  GUI Readback Ladder Rungs  : 0/26
+  GUI Readback ST Blocks     : 0/4
+  GUI Readback PID Loops     : 0/1
+  GUI Readback HMI Screens   : 0/6 (objects=0)
+  GUI Readback Recipes       : 0/3
+  GUI Readback DataLog Cols  : 0/11
+  SHA Changed After Rungs    : False
+----------------------------------------------------------------------------------------
+3. T01-T30 ACCEPTANCE SUITE RESULTS (T02-T30 PENDING UNTIL REAL .CSP VERIFICATION)
+----------------------------------------------------------------------------------------
+  T01 | Compilación                | PENDING             | in="Proyecto estacion_bombeo_3b.csp (Phase 3: 59 tags + 12 alarmas + 26 rungs 0 dup-coils + PID + 4 bloques ST + 6 pantallas HMI + 3 recetas + 11 cols datalog via live Cscape GUI)" -> read={"compile_clean": false, "reopen_verified": false, "duplicate_coil_warnings": null, "gui_readback_station_tags": 0, "gui_readback_alarm_tags": 0, "unique_addresses": true, "gui_readback_rungs": 0, "gui_readback_st_blocks": 0, "gui_readback_pid_loops": 0, "gui_readback_hmi_screens": 0, "gui_readback_hmi_objects": 0, "gui_readback_recipes": 0, "gui_readback_datalog_columns": 0, "sha_changed_after_rungs": false, "live_pid": 0, "reopen_pid": 0}
+  T02 | Escalado                   | PENDING             | in="LT=16000, PT=12800, FT=8000 -> NIVEL_PCT=50.0, PRES_BAR=4.00, CAUDAL_M3H=75.0, PID_PV=4000" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T03 | Etapa 1                    | PENDING             | in="CI; LT=19520 (61 %) -> tras 10 s ETAPA_REQ=1, LIDER=1, P1_CMD=1, P2/P3=0" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T04 | Etapa 2                    | PENDING             | in="Continuación T03; LT=24320 (76 %) -> tras >=10 s y >=15 s: P2_CMD=1" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T05 | Etapa 3                    | PENDING             | in="Continuación T04; LT=27520 (86 %) -> P3_CMD=1; ETAPA_REQ=3" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T06 | Paro por nivel             | PENDING             | in="LT=9280 (29 %) -> tras 10 s todas las CMD=0; ETAPA_REQ=0" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T07 | Rotación                   | PENDING             | in="Horas P1=50, P2=20, P3=30; ETAPA 0 -> LT=61 % -> LIDER=2, RETRASO=3, RESERVA=1; arranca P2" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T08 | Fallback falla             | PENDING             | in="Etapa 1 con P1 líder en marcha; forzar P1_FALLA=1 -> P1_CMD=0; A07 activa; P2_CMD=1; LIDER=2" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T09 | No-arranque                | PENDING             | in="Etapa 1; P1_CMD=1 con P1_FB_MARCHA=0 -> a los 5 s A04 (%M14)=1; P1_CMD=0; P2_CMD=1" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T10 | Manual                     | PENDING             | in="P3_AUTO=0; HMI_P3_MAN=1 -> P3_CMD=1 independiente del nivel; sale de la rotación" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T11 | Manual con seguridad       | PENDING             | in="T10 + FLOT_SECO=0 -> P3_CMD=0 en <=1 s; A11 activa" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T12 | Paro de emergencia         | PENDING             | in="Etapa 3 activa; PARO_EMERG=0 -> todas CMD=0 y VFD_HAB=0 en el mismo scan; A01 y ALM_ESTOP=1" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T13 | Rearme E-stop              | PENDING             | in="1º HMI_RESET con PARO_EMERG=0 (sigue activa); 2º PARO_EMERG=1 + HMI_RESET (se borra y retoma)" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T14 | Marcha en seco por nivel   | PENDING             | in="LT=2880 (9 %) 6 s -> todas CMD=0; A11 activa; reset efectivo solo con NIVEL_PCT > SP_N_OFF" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T15 | PID habilitación           | PENDING             | in="Etapa 1, P1 en marcha con FB, LIDER=1 -> VFD_HAB=1; PID activo; VFD_REF_RAW >= 9600" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T16 | PID acción                 | PENDING             | in="SP_PRES=4.0; PT=9600 (3.0 bar) -> CV sube hacia 32000; PT=16000 (5.0 bar) -> CV baja hacia 9600" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T17 | Anti-windup                | PENDING             | in="PT=0 por 60 s (CV=32000), luego PT=16000 (5,0 bar) -> CV comienza a bajar en <= Ti (8 s)" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T18 | PID deshabilitado          | PENDING             | in="Parar líder -> VFD_HAB=0; VFD_REF_RAW=0; al rearrancar CV parte de 9600" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T19 | Sobrepresión               | PENDING             | in="PT=24320 (7,6 bar) 6 s -> A03 activa y enclavada" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T20 | Falla sensor               | PENDING             | in="PT/LT fuera de rango (<0 o >32000) -> A10 en 2 s; PID en manual 70 % (22400)" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T21 | Nivel alto                 | PENDING             | in="LT=29120 (91 %) 11 s -> A02 activa; se borra sola al bajar de 90 %" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T22 | Consignas inválidas        | PENDING             | in="Escribir SP_N2_ON=50 (< N1=60) -> restaura 30/60/75/85; A12 activa" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T23 | Horas de marcha            | PENDING             | in="P1_FB_MARCHA=1 durante 360 s -> P1_HORAS aumenta 0,10 h (+/- 0,01)" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T24 | Arranques                  | PENDING             | in="Pulsar P2_FB_MARCHA 0->1 tres veces -> P2_ARRANQUES +3" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T25 | Totalizador                | PENDING             | in="FT=16000 (150 m3/h) 120 s -> CAUDAL_TOT_M3 +5,0 (+/-0,1); con FT=100 (<1,5 m3/h) no suma" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T26 | Retentividad               | PENDING             | in="Apagar y encender el PLC -> P1_HORAS, P2_ARRANQUES, CAUDAL_TOT_M3, SP_*, LIDER conservan su valor" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T27 | Recetas                    | PENDING             | in="Cargar receta 'Demanda alta' -> SP_* = 5,0/50/65/80/25/8,0" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T28 | HMI navegación             | PENDING             | in="Recorrer las 6 pantallas y subvistas de detalle B1/B2/B3 (%R50=1,2,3)" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T29 | Data log                   | PENDING             | in="5 min (300 s) en marcha con microSD -> CSV con >=5 filas y las 11 columnas" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+  T30 | Reset alarmas físico       | PENDING             | in="Alarma A04 (%M14) activa; pulsar RESET_ALM=1 (%I12) -> A04 se borra si causa desapareció" -> read={"real_csp_verified": false, "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"}
+----------------------------------------------------------------------------------------
+SUMMARY: 0/30 PASS (pending=30) | GUI_TAGS: 0/59 | ALARMS: 0/12 | GUI_RUNGS: 0/26 | ST_BLOCKS: 0/4 | PID: 0/1 | HMI_SCREENS: 0/6 | RECIPES: 0/3 | DATALOG_COLS: 0/11 | DUP_COIL_WARN: None | COMPILE_CLEAN: False | REOPEN_OK: False | STATUS: inconclusive | VERDICT: PENDING_LIVE_CSCAPE
+========================================================================================

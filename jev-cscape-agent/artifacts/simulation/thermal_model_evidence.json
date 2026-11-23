@@ -1,0 +1,53 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Plant thermal dynamics verification completed: 8/8 assertions passed in 6.10 ms.",
+  "data": {
+    "all_passed": true,
+    "duration_ms": 6.101599894464016,
+    "assertions": [
+      {
+        "check": "hx_balanced_energy_conservation",
+        "passed": true,
+        "details": "Balanced: epsilon=0.4888, residual=0.00e+00 W, T_h_out=55.79 C, T_c_out=54.21 C"
+      },
+      {
+        "check": "hx_unbalanced_energy_conservation",
+        "passed": true,
+        "details": "Unbalanced: q_hx=55797.7 W, residual=0.00e+00 W"
+      },
+      {
+        "check": "hx_zero_flow_guard",
+        "passed": true,
+        "details": "Zero flow correctly yields zero heat transfer without division by zero"
+      },
+      {
+        "check": "heater_lag_and_dry_run_interlock",
+        "passed": true,
+        "details": "Heater: t=1s -> 3934.7W, t=16s -> 9996.6W, dry-run trip -> 67.4W"
+      },
+      {
+        "check": "rtd_normal_signal_conditioning",
+        "passed": true,
+        "details": "RTD normal: T=75.00 C, I=12.00 mA, raw=16000, quality=GOOD"
+      },
+      {
+        "check": "rtd_burnout_namur_fault",
+        "passed": true,
+        "details": "RTD burnout: I=2.50 mA, raw=-3000, quality=BAD"
+      },
+      {
+        "check": "plant_heating_and_cooling_transients",
+        "passed": true,
+        "details": "Transient: initial=25.00 C -> heated=25.13 C -> cooled=24.98 C"
+      },
+      {
+        "check": "horner_register_synchronization",
+        "passed": true,
+        "details": "Registers: AI3=5088, AI4=4999, R154=238 (tenths C), R150=0x13"
+      }
+    ],
+    "final_temperature_c": 24.97694676298902,
+    "heat_exchanger_residual_w": 0.0
+  }
+}

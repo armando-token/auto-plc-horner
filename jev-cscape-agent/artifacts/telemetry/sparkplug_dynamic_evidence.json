@@ -1,0 +1,83 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Sparkplug B Dynamic Metric Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W091",
+    "gate": "Gate G8 / G4",
+    "component": "Industrial MQTT Sparkplug B Dynamic Metric Definition & Complex UDT Datagroup Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R520..%R525 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Template_Definition_Protobuf_Schema_Serialization",
+        "passed": true,
+        "details": "Template '_types_/MotorTemplate' serialized into NBIRTH with 4 metrics (317 bytes)."
+      },
+      {
+        "stage": 3,
+        "check": "Template_Instance_And_Parameter_Override_Serialization",
+        "passed": true,
+        "details": "Template instance 'Assets/SlurryPump' instantiated with macro substitutions and verified in DBIRTH."
+      },
+      {
+        "stage": 4,
+        "check": "Complex_UDT_Datagroup_Dynamic_Metric_Binding",
+        "passed": true,
+        "details": "Bound 3 dynamic metrics from OCS channels (%AI1, %M1) to DDATA payload (seq=2)."
+      },
+      {
+        "stage": 5,
+        "check": "Differential_Delta_Metric_Deadband_Filtering",
+        "passed": true,
+        "details": "Sub-deadband delta (+2 rpm) suppressed; supra-deadband delta (+25 rpm) dispatched as single-metric DDATA."
+      },
+      {
+        "stage": 6,
+        "check": "Sequence_Number_Integrity_And_Modulo_256_Rollover",
+        "passed": true,
+        "details": "Advanced sequence through modulo-256 boundary (rollovers=1, cur_seq=8)."
+      },
+      {
+        "stage": 7,
+        "check": "Node_And_Device_Rebirth_Workflow_Handling",
+        "passed": true,
+        "details": "Coil %M122 engaged Rebirth: bdSeq=1, seq reset to 0, definitions re-broadcasted."
+      },
+      {
+        "stage": 8,
+        "check": "Corrupted_Template_Schema_And_Invalid_Override_Rejection",
+        "passed": true,
+        "details": "Trapped TemplateUndefinedError, ParameterTypeError, and CorruptedPayloadError deterministically without crash."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Synchronization_And_Diagnostic_Bitmask",
+        "passed": true,
+        "details": "Synchronized registers: %R520=0x002F, %R521=2 (seq), %R522=2 (UDTs)."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R520..%R525",
+      "discrete_coils": "%M121..%M122",
+      "values": {
+        "%R520": 47,
+        "%R521": 2,
+        "%R522": 2,
+        "%R523": 6,
+        "%R524": 0,
+        "%R525": 268,
+        "%M121": true,
+        "%M122": false
+      }
+    },
+    "timestamp": "2026-10-03T02:04:21Z"
+  }
+}

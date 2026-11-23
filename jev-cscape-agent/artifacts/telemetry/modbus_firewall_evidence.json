@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Modbus TCP Firewall verification completed: 9/9 checks passed.",
+  "data": {
+    "timestamp_utc": "2026-10-03T00:05:57.595987+00:00",
+    "tests_run": 9,
+    "tests_passed": 9,
+    "test_results": [
+      {
+        "name": "valid_read_holding_registers",
+        "status": "pass"
+      },
+      {
+        "name": "blocked_unauthorized_ip",
+        "status": "pass"
+      },
+      {
+        "name": "invalid_protocol_id_dpi",
+        "status": "pass"
+      },
+      {
+        "name": "prohibited_diagnostic_fc8",
+        "status": "pass"
+      },
+      {
+        "name": "unauthorized_safety_write_blocked",
+        "status": "pass"
+      },
+      {
+        "name": "read_only_lockdown_mode",
+        "status": "pass"
+      },
+      {
+        "name": "sliding_window_rate_limiter",
+        "status": "pass"
+      },
+      {
+        "name": "register_table_sync",
+        "status": "pass"
+      },
+      {
+        "name": "pure_st_boundary_enforcement",
+        "status": "pass"
+      }
+    ],
+    "firewall_modes": [
+      "MONITOR_ONLY",
+      "ENFORCE_STANDARD",
+      "ENFORCE_READ_ONLY",
+      "FAIL_CLOSED_ISOLATE"
+    ],
+    "reason_codes": [
+      "NO_DROP",
+      "IP_NOT_IN_ALLOWLIST",
+      "RATE_LIMIT_EXCEEDED",
+      "MALFORMED_MBAP_HEADER",
+      "INVALID_PROTOCOL_ID",
+      "ILLEGAL_FUNCTION_CODE",
+      "UNAUTHORIZED_REGISTER_WRITE",
+      "OUT_OF_BOUNDS_ADDRESS",
+      "PAYLOAD_LENGTH_MISMATCH",
+      "TRANSACTION_ID_MISMATCH",
+      "ZERO_BYTE_FLOOD",
+      "READ_ONLY_LOCKDOWN",
+      "ISOLATION_ACTIVE"
+    ],
+    "register_mapping": {
+      "status_word": "%R290",
+      "packets_inspected": "%R291",
+      "packets_dropped": "%R292",
+      "active_ip_blocks": "%R293",
+      "last_dropped_reason": "%R294",
+      "config_profile": "%R295",
+      "enable_coil": "%M65",
+      "reset_coil": "%M66"
+    }
+  }
+}

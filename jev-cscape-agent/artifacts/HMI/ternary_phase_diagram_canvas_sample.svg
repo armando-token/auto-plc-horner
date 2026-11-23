@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <filter id="op-halo" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="badge-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="binodal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect id="canvas-background" width="1200" height="750" fill="#0F172A"/>
+  <g id="canvas-header">
+    <rect x="30" y="20" width="1140" height="48" rx="8" fill="#0B0F19" stroke="#334155" stroke-width="1.2" filter="url(#badge-glow)"/>
+    <text x="50" y="52" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="19" font-weight="bold">HORNER OCS TERNARY PHASE EQUILIBRIUM SCADA CANVAS (W183)</text>
+    <rect x="900" y="30" width="110" height="28" rx="4" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="955" y="49" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">TWO-PHASE (LLE</text>
+    <rect x="1025" y="30" width="130" height="28" rx="4" fill="#0B0F19" stroke="#06B6D4" stroke-width="1.5"/>
+    <text x="1090" y="49" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">STATUS: 0x0000</text>
+  </g>
+  <g id="ternary-diagram-grid">
+    <line x1="226.0" y1="535.0" x2="694.0" y2="535.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="434.0" y1="174.7" x2="668.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="486.0" y1="174.7" x2="252.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="252.0" y1="489.9" x2="668.0" y2="489.9" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="408.0" y1="219.7" x2="616.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="512.0" y1="219.7" x2="304.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="278.0" y1="444.9" x2="642.0" y2="444.9" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="382.0" y1="264.8" x2="564.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="538.0" y1="264.8" x2="356.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="304.0" y1="399.9" x2="616.0" y2="399.9" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="356.0" y1="309.8" x2="512.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="564.0" y1="309.8" x2="408.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="330.0" y1="354.8" x2="590.0" y2="354.8" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="330.0" y1="354.8" x2="460.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="590.0" y1="354.8" x2="460.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="356.0" y1="309.8" x2="564.0" y2="309.8" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="304.0" y1="399.9" x2="408.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="616.0" y1="399.9" x2="512.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="382.0" y1="264.8" x2="538.0" y2="264.8" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="278.0" y1="444.9" x2="356.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="642.0" y1="444.9" x2="564.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="408.0" y1="219.7" x2="512.0" y2="219.7" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="252.0" y1="489.9" x2="304.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="668.0" y1="489.9" x2="616.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="434.0" y1="174.7" x2="486.0" y2="174.7" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="226.0" y1="535.0" x2="252.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <line x1="694.0" y1="535.0" x2="668.0" y2="580.0" stroke="#334155" stroke-width="1.0" stroke-dasharray="2,3" opacity="0.6"/>
+    <polygon id="ternary-triangle-frame" points="460.0,129.7 200.0,580.0 720.0,580.0" fill="none" stroke="#F8FAFC" stroke-width="2.5"/>
+  </g>
+  <g id="golden-baseline-binodal-group">
+    <path id="golden-baseline-binodal" d="M 220.80,561.99 C 184.34,629.60 228.28,561.20 239.00,557.48 C 249.72,553.77 269.07,546.16 285.80,539.47 C 302.53,532.78 323.24,525.87 340.40,516.95 C 357.56,508.04 375.21,495.83 389.80,485.43 C 404.39,475.03 418.42,464.68 428.80,453.91 C 439.18,443.13 446.71,430.53 452.72,420.13 C 458.73,409.73 463.14,401.63 465.20,390.86 C 467.26,380.09 464.34,371.18 465.20,354.83 C 466.06,338.49 470.40,312.59 470.40,291.79 C 470.40,270.98 466.92,248.06 465.20,228.74 C 463.48,209.42 460.86,188.08 460.00,174.70 C 459.14,161.33 499.47,83.78 460.00,147.68 C 420.53,211.58 257.26,494.37 220.80,561.99 Z" fill="url(#binodal-grad)" stroke="#06B6D4" stroke-width="2.6" stroke-dasharray="6,4" opacity="0.95"/>
+    <path id="binodal-envelope" d="M 220.80,561.99 C 184.34,629.60 228.28,561.20 239.00,557.48 C 249.72,553.77 269.07,546.16 285.80,539.47 C 302.53,532.78 323.24,525.87 340.40,516.95 C 357.56,508.04 375.21,495.83 389.80,485.43 C 404.39,475.03 418.42,464.68 428.80,453.91 C 439.18,443.13 446.71,430.53 452.72,420.13 C 458.73,409.73 463.14,401.63 465.20,390.86 C 467.26,380.09 464.34,371.18 465.20,354.83 C 466.06,338.49 470.40,312.59 470.40,291.79 C 470.40,270.98 466.92,248.06 465.20,228.74 C 463.48,209.42 460.86,188.08 460.00,174.70 C 459.14,161.33 499.47,83.78 460.00,147.68 C 420.53,211.58 257.26,494.37 220.80,561.99 Z" fill="none" stroke="#06B6D4" stroke-width="2.6" stroke-dasharray="6,4" opacity="0.95"/>
+  </g>
+  <g id="golden-design-tie-lines">
+    <line id="tie-line-1" x1="239.0" y1="557.5" x2="460.0" y2="174.7" stroke="#06B6D4" stroke-width="2.0" stroke-dasharray="6,4" opacity="0.85"/>
+    <line id="tie-line-2" x1="285.8" y1="539.5" x2="465.2" y2="228.7" stroke="#06B6D4" stroke-width="2.0" stroke-dasharray="6,4" opacity="0.85"/>
+    <line id="tie-line-3" x1="340.4" y1="517.0" x2="470.4" y2="291.8" stroke="#06B6D4" stroke-width="2.0" stroke-dasharray="6,4" opacity="0.85"/>
+    <line id="tie-line-4" x1="389.8" y1="485.4" x2="465.2" y2="354.8" stroke="#06B6D4" stroke-width="2.0" stroke-dasharray="6,4" opacity="0.85"/>
+    <line id="tie-line-5" x1="428.8" y1="453.9" x2="465.2" y2="390.9" stroke="#06B6D4" stroke-width="2.0" stroke-dasharray="6,4" opacity="0.85"/>
+  </g>
+  <g id="tie-lines">
+    <line x1="239.0" y1="557.5" x2="460.0" y2="174.7" stroke="#06B6D4" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.8"/>
+    <line x1="285.8" y1="539.5" x2="465.2" y2="228.7" stroke="#06B6D4" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.8"/>
+    <line x1="340.4" y1="517.0" x2="470.4" y2="291.8" stroke="#06B6D4" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.8"/>
+    <line x1="389.8" y1="485.4" x2="465.2" y2="354.8" stroke="#06B6D4" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.8"/>
+    <line x1="428.8" y1="453.9" x2="465.2" y2="390.9" stroke="#06B6D4" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.8"/>
+  </g>
+  <g id="plait-critical-point">
+    <circle cx="452.7" cy="420.1" r="5.5" fill="#06B6D4" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="462.7" y="412.1" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600">Critical Plait Point (14.5%)</text>
+  </g>
+  <g id="operating-point-focus">
+    <line x1="421.0" y1="377.4" x2="200.0" y2="580.0" stroke="#34D399" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+    <line x1="421.0" y1="377.4" x2="460.0" y2="129.7" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+    <line x1="421.0" y1="377.4" x2="720.0" y2="580.0" stroke="#FBBF24" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+    <circle cx="421.0" cy="377.4" r="17" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+  </g>
+  <g id="live-operating-point">
+    <circle cx="421.0" cy="377.4" r="9" fill="#F59E0B" stroke="#FFFFFF" stroke-width="2.5" filter="url(#op-halo)"/>
+    <circle cx="421.0" cy="377.4" r="3.5" fill="#FFFFFF"/>
+    <text x="435.0" y="381.4" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">OP (45.0%, 35.0%, 20.0%)</text>
+  </g>
+  <g id="operating-marker">
+    <circle cx="421.0" cy="377.4" r="9" fill="#F59E0B" stroke="#FFFFFF" stroke-width="2.5" filter="url(#op-halo)"/>
+  </g>
+  <g id="vertex-labels">
+    <!-- Vertex A (Apex): Component A Hydrocarbon -->
+    <text x="460.0" y="111.7" fill="#38BDF8" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Component A: Hydrocarbon (Apex)</text>
+    <text x="460.0" y="125.7" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">%R1440: 45.0%</text>
+
+    <!-- Vertex B (Bottom-Left): Component B Solvent/Water -->
+    <text x="185.0" y="605.0" fill="#34D399" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" text-anchor="start">Component B: Solvent / Water</text>
+    <text x="185.0" y="620.0" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="start">%R1441: 35.0%</text>
+
+    <!-- Vertex C (Bottom-Right): Component C Cosolvent/Alcohol -->
+    <text x="735.0" y="605.0" fill="#FBBF24" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" text-anchor="end">Component C: Cosolvent / Alcohol</text>
+    <text x="735.0" y="620.0" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="end">%R1442: 20.0%</text>
+  </g>
+  <g id="component-balance-hud">
+    <rect id="hud-card" x="830" y="80" width="340" height="640" rx="12" fill="#0B0F19" stroke="#334155" stroke-width="1.5" filter="url(#badge-glow)"/>
+    <text x="850" y="116" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="17" font-weight="bold">EQUILIBRIUM BALANCE HUD</text>
+    <line x1="850" y1="128" x2="1150" y2="128" stroke="#334155" stroke-width="1.0"/>
+
+    <!-- Component A Bar -->
+    <text x="850" y="158" fill="#38BDF8" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Comp A (Hydrocarbon): 45.0%</text>
+    <rect x="850" y="166" width="300" height="12" rx="4" fill="#1E293B"/>
+    <rect x="850" y="166" width="135.0" height="12" rx="4" fill="#38BDF8"/>
+
+    <!-- Component B Bar -->
+    <text x="850" y="204" fill="#34D399" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Comp B (Solvent/Water): 35.0%</text>
+    <rect x="850" y="212" width="300" height="12" rx="4" fill="#1E293B"/>
+    <rect x="850" y="212" width="105.0" height="12" rx="4" fill="#34D399"/>
+
+    <!-- Component C Bar -->
+    <text x="850" y="250" fill="#FBBF24" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Comp C (Cosolvent): 20.0%</text>
+    <rect x="850" y="258" width="300" height="12" rx="4" fill="#1E293B"/>
+    <rect x="850" y="258" width="60.0" height="12" rx="4" fill="#FBBF24"/>
+
+    <line x1="850" y1="286" x2="1150" y2="286" stroke="#334155" stroke-width="1.0"/>
+
+    <!-- Key Equilibrium Telemetry -->
+    <text x="850" y="314" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="12">Lever-Rule Phase Split (%R1443):</text>
+    <text x="1150" y="314" fill="#06B6D4" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">62.0%</text>
+
+    <text x="850" y="346" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="12">Distance to Critical Plait (%R1444):</text>
+    <text x="1150" y="346" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">14.5%</text>
+
+    <text x="850" y="378" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="12">Active Equilibrium Conodes (%R1445):</text>
+    <text x="1150" y="378" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">5 Tie-Lines</text>
+
+    <text x="850" y="410" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="12">Equilibrium Efficiency Score (%R1446):</text>
+    <text x="1150" y="410" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">96.2%</text>
+
+    <text x="850" y="442" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="12">Coordinate Closure Status:</text>
+    <text x="1150" y="442" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">OK (100.0%)</text>
+
+    <line x1="850" y1="466" x2="1150" y2="466" stroke="#334155" stroke-width="1.0"/>
+
+    <!-- Horner OCS Memory Address Map -->
+    <text x="850" y="494" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold">HORNER OCS REGISTER BINDINGS</text>
+
+    <text x="850" y="518" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">%R1440..%R1442 (A, B, C Scaled x10):</text>
+    <text x="1150" y="518" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" text-anchor="end">450, 350, 200</text>
+
+    <text x="850" y="542" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">%R1443 (Lever Split Scaled x10):</text>
+    <text x="1150" y="542" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" text-anchor="end">620</text>
+
+    <text x="850" y="566" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">%R1444 (Dist to Crit Scaled x10):</text>
+    <text x="1150" y="566" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" text-anchor="end">145</text>
+
+    <text x="850" y="590" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">%R1447 (Diagnostic Code):</text>
+    <text x="1150" y="590" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" text-anchor="end">0x0000</text>
+
+    <text x="850" y="614" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">%M336 (PhaseSeparationTrip):</text>
+    <text x="1150" y="614" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" text-anchor="end">CLEAN (NORMAL)</text>
+
+    <text x="850" y="638" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">%M337 (TernaryCanvasActive):</text>
+    <text x="1150" y="638" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" text-anchor="end">TRUE</text>
+
+    <!-- WCAG 2.1 AAA Decoupled Badges -->
+    <rect x="850" y="660" width="140" height="32" rx="6" fill="#0B0F19" stroke="#10B981" stroke-width="1.2"/>
+    <text x="920" y="681" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">WCAG 2.1 AAA &gt; 18:1</text>
+
+    <rect x="1010" y="660" width="140" height="32" rx="6" fill="#0B0F19" stroke="#06B6D4" stroke-width="1.2"/>
+    <text x="1080" y="681" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">PURE ST POUs OK</text>
+  </g>
+  <g id="telemetry-hud" opacity="0.0"/>
+</svg>

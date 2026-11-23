@@ -1,0 +1,4652 @@
+{
+  "telemetry": {
+    "total_cycles_recorded": 100,
+    "retained_snapshots": 100,
+    "dropped_snapshots": 0,
+    "total_simulated_time_ms": 1000.0,
+    "avg_cycle_duration_us": 6.42,
+    "max_cycle_duration_us": 24.00018274784088,
+    "min_cycle_duration_us": 5.09992241859436,
+    "buffer_configured_limit": 10000
+  },
+  "snapshots": [
+    {
+      "cycle": 0,
+      "time_ms": 10.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 24.00018274784088,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": true,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 1,
+        "%SR2": 1,
+        "%SR3": 1,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": null,
+      "fault": null
+    },
+    {
+      "cycle": 1,
+      "time_ms": 20.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 16.19989052414894,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 2,
+        "%SR2": 1,
+        "%SR3": 2,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S1": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 2,
+      "time_ms": 30.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 10.19984483718872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 3,
+        "%SR2": 1,
+        "%SR3": 3,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 3,
+      "time_ms": 40.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.6999422162771225,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 4,
+        "%SR2": 1,
+        "%SR3": 4,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 4,
+      "time_ms": 50.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.8999437391757965,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 5,
+        "%SR2": 1,
+        "%SR3": 5,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 5,
+      "time_ms": 60.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.200054824352264,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 6,
+        "%SR2": 1,
+        "%SR3": 6,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 6,
+      "time_ms": 70.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.600050255656242,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 7,
+        "%SR2": 1,
+        "%SR3": 7,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 7,
+      "time_ms": 80.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 10.899966582655907,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 8,
+        "%SR2": 1,
+        "%SR3": 8,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 8,
+      "time_ms": 90.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.00005330145359,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 9,
+        "%SR2": 1,
+        "%SR3": 9,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 9,
+      "time_ms": 100.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.3998159021139145,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 10,
+        "%SR2": 1,
+        "%SR3": 10,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 10,
+      "time_ms": 110.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.200047209858894,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 11,
+        "%SR2": 1,
+        "%SR3": 11,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 11,
+      "time_ms": 120.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.3998235166072845,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 12,
+        "%SR2": 1,
+        "%SR3": 12,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 12,
+      "time_ms": 130.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.3998159021139145,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 13,
+        "%SR2": 1,
+        "%SR3": 13,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 13,
+      "time_ms": 140.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.899928510189056,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 14,
+        "%SR2": 1,
+        "%SR3": 14,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 14,
+      "time_ms": 150.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.800044164061546,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 15,
+        "%SR2": 1,
+        "%SR3": 15,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 15,
+      "time_ms": 160.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.800044164061546,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 16,
+        "%SR2": 1,
+        "%SR3": 16,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 16,
+      "time_ms": 170.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.699926987290382,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 17,
+        "%SR2": 1,
+        "%SR3": 17,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 17,
+      "time_ms": 180.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 18,
+        "%SR2": 1,
+        "%SR3": 18,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 18,
+      "time_ms": 190.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 19,
+        "%SR2": 1,
+        "%SR3": 19,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 19,
+      "time_ms": 200.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.800044164061546,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 20,
+        "%SR2": 1,
+        "%SR3": 20,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 20,
+      "time_ms": 210.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.300164386630058,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 21,
+        "%SR2": 1,
+        "%SR3": 21,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 21,
+      "time_ms": 220.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.6999422162771225,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 22,
+        "%SR2": 1,
+        "%SR3": 22,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 22,
+      "time_ms": 230.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 23,
+        "%SR2": 1,
+        "%SR3": 23,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 23,
+      "time_ms": 240.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 24,
+        "%SR2": 1,
+        "%SR3": 24,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 24,
+      "time_ms": 250.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.800044164061546,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 25,
+        "%SR2": 1,
+        "%SR3": 25,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 25,
+      "time_ms": 260.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.699926987290382,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 26,
+        "%SR2": 1,
+        "%SR3": 26,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 26,
+      "time_ms": 270.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.0999376475811005,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 27,
+        "%SR2": 1,
+        "%SR3": 27,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 27,
+      "time_ms": 280.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.299931555986404,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 28,
+        "%SR2": 1,
+        "%SR3": 28,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 28,
+      "time_ms": 290.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.09993003308773,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 29,
+        "%SR2": 1,
+        "%SR3": 29,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 29,
+      "time_ms": 300.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 10.200077667832375,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 30,
+        "%SR2": 1,
+        "%SR3": 30,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 30,
+      "time_ms": 310.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 6.00004568696022,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 31,
+        "%SR2": 1,
+        "%SR3": 31,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 31,
+      "time_ms": 320.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 32,
+        "%SR2": 1,
+        "%SR3": 32,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 32,
+      "time_ms": 330.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.7998113334178925,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 33,
+        "%SR2": 1,
+        "%SR3": 33,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 33,
+      "time_ms": 340.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.600057870149612,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 34,
+        "%SR2": 1,
+        "%SR3": 34,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 34,
+      "time_ms": 350.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.699926987290382,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 35,
+        "%SR2": 1,
+        "%SR3": 35,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 35,
+      "time_ms": 360.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.800044164061546,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 36,
+        "%SR2": 1,
+        "%SR3": 36,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 36,
+      "time_ms": 370.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.699926987290382,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 37,
+        "%SR2": 1,
+        "%SR3": 37,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 37,
+      "time_ms": 380.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 7.500173524022102,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 38,
+        "%SR2": 1,
+        "%SR3": 38,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 38,
+      "time_ms": 390.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.300156772136688,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 39,
+        "%SR2": 1,
+        "%SR3": 39,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 39,
+      "time_ms": 400.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.558147+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 40,
+        "%SR2": 1,
+        "%SR3": 40,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 40,
+      "time_ms": 410.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 10.600080713629723,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 41,
+        "%SR2": 1,
+        "%SR3": 41,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 41,
+      "time_ms": 420.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 6.800051778554916,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 42,
+        "%SR2": 1,
+        "%SR3": 42,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 42,
+      "time_ms": 430.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 6.299931555986404,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 43,
+        "%SR2": 1,
+        "%SR3": 43,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 43,
+      "time_ms": 440.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.899928510189056,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 44,
+        "%SR2": 1,
+        "%SR3": 44,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 44,
+      "time_ms": 450.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.800044164061546,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 45,
+        "%SR2": 1,
+        "%SR3": 45,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 45,
+      "time_ms": 460.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.700159817934036,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 46,
+        "%SR2": 1,
+        "%SR3": 46,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 46,
+      "time_ms": 470.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.499925464391708,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 47,
+        "%SR2": 1,
+        "%SR3": 47,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 47,
+      "time_ms": 480.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 6.200047209858894,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 48,
+        "%SR2": 1,
+        "%SR3": 48,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 48,
+      "time_ms": 490.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.499925464391708,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 49,
+        "%SR2": 1,
+        "%SR3": 49,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 49,
+      "time_ms": 500.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 50,
+        "%SR2": 1,
+        "%SR3": 50,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 50,
+      "time_ms": 510.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.499925464391708,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 51,
+        "%SR2": 1,
+        "%SR3": 51,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 51,
+      "time_ms": 520.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.700159817934036,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 52,
+        "%SR2": 1,
+        "%SR3": 52,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 52,
+      "time_ms": 530.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.500158295035362,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 53,
+        "%SR2": 1,
+        "%SR3": 53,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 53,
+      "time_ms": 540.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.90016134083271,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 54,
+        "%SR2": 1,
+        "%SR3": 54,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 54,
+      "time_ms": 550.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 55,
+        "%SR2": 1,
+        "%SR3": 55,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 55,
+      "time_ms": 560.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.300156772136688,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 56,
+        "%SR2": 1,
+        "%SR3": 56,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 56,
+      "time_ms": 570.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.100155249238014,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 57,
+        "%SR2": 1,
+        "%SR3": 57,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 57,
+      "time_ms": 580.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 7.100170478224754,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 58,
+        "%SR2": 1,
+        "%SR3": 58,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 58,
+      "time_ms": 590.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.899928510189056,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 59,
+        "%SR2": 1,
+        "%SR3": 59,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 59,
+      "time_ms": 600.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.899928510189056,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 60,
+        "%SR2": 1,
+        "%SR3": 60,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 60,
+      "time_ms": 610.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.5998098105192184,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 61,
+        "%SR2": 1,
+        "%SR3": 61,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 61,
+      "time_ms": 620.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 62,
+        "%SR2": 1,
+        "%SR3": 62,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 62,
+      "time_ms": 630.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.200039595365524,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 63,
+        "%SR2": 1,
+        "%SR3": 63,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 63,
+      "time_ms": 640.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.09992241859436,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 64,
+        "%SR2": 1,
+        "%SR3": 64,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 64,
+      "time_ms": 650.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 65,
+        "%SR2": 1,
+        "%SR3": 65,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 65,
+      "time_ms": 660.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 66,
+        "%SR2": 1,
+        "%SR3": 66,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 66,
+      "time_ms": 670.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.300156772136688,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 67,
+        "%SR2": 1,
+        "%SR3": 67,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 67,
+      "time_ms": 680.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.499925464391708,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 68,
+        "%SR2": 1,
+        "%SR3": 68,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 68,
+      "time_ms": 690.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.299923941493034,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 69,
+        "%SR2": 1,
+        "%SR3": 69,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 69,
+      "time_ms": 700.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 70,
+        "%SR2": 1,
+        "%SR3": 70,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 70,
+      "time_ms": 710.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 6.00004568696022,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 71,
+        "%SR2": 1,
+        "%SR3": 71,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 71,
+      "time_ms": 720.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 72,
+        "%SR2": 1,
+        "%SR3": 72,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 72,
+      "time_ms": 730.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 8.09994526207447,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 73,
+        "%SR2": 1,
+        "%SR3": 73,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 73,
+      "time_ms": 740.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.699926987290382,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 74,
+        "%SR2": 1,
+        "%SR3": 74,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 74,
+      "time_ms": 750.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 75,
+        "%SR2": 1,
+        "%SR3": 75,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 75,
+      "time_ms": 760.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 76,
+        "%SR2": 1,
+        "%SR3": 76,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 76,
+      "time_ms": 770.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.200039595365524,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 77,
+        "%SR2": 1,
+        "%SR3": 77,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 77,
+      "time_ms": 780.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 78,
+        "%SR2": 1,
+        "%SR3": 78,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 78,
+      "time_ms": 790.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.499925464391708,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 79,
+        "%SR2": 1,
+        "%SR3": 79,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 79,
+      "time_ms": 800.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.500158295035362,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 80,
+        "%SR2": 1,
+        "%SR3": 80,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 80,
+      "time_ms": 810.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 81,
+        "%SR2": 1,
+        "%SR3": 81,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 81,
+      "time_ms": 820.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 8.200062438845634,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 82,
+        "%SR2": 1,
+        "%SR3": 82,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 82,
+      "time_ms": 830.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.499925464391708,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 83,
+        "%SR2": 1,
+        "%SR3": 83,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 83,
+      "time_ms": 840.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.700159817934036,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 84,
+        "%SR2": 1,
+        "%SR3": 84,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 84,
+      "time_ms": 850.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 85,
+        "%SR2": 1,
+        "%SR3": 85,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 85,
+      "time_ms": 860.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 9.499955922365189,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 86,
+        "%SR2": 1,
+        "%SR3": 86,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 86,
+      "time_ms": 870.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.299923941493034,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 87,
+        "%SR2": 1,
+        "%SR3": 87,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 87,
+      "time_ms": 880.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 6.200047209858894,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 88,
+        "%SR2": 1,
+        "%SR3": 88,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 88,
+      "time_ms": 890.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.5998098105192184,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": false,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 89,
+        "%SR2": 1,
+        "%SR3": 89,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 89,
+      "time_ms": 900.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 90,
+        "%SR2": 1,
+        "%SR3": 90,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S4": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 2
+      },
+      "fault": null
+    },
+    {
+      "cycle": 90,
+      "time_ms": 910.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.600042641162872,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 91,
+        "%SR2": 1,
+        "%SR3": 91,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 91,
+      "time_ms": 920.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.19980676472187,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 92,
+        "%SR2": 1,
+        "%SR3": 92,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 92,
+      "time_ms": 930.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.299923941493034,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 93,
+        "%SR2": 1,
+        "%SR3": 93,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 93,
+      "time_ms": 940.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.400041118264198,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 94,
+        "%SR2": 1,
+        "%SR3": 94,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 94,
+      "time_ms": 950.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 7.1998219937086105,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 95,
+        "%SR2": 1,
+        "%SR3": 95,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 95,
+      "time_ms": 960.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.499925464391708,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 96,
+        "%SR2": 1,
+        "%SR3": 96,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 96,
+      "time_ms": 970.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.100155249238014,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 97,
+        "%SR2": 1,
+        "%SR3": 97,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 97,
+      "time_ms": 980.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.09992241859436,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 98,
+        "%SR2": 1,
+        "%SR3": 98,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 98,
+      "time_ms": 990.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.299923941493034,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": true,
+        "%S4": true,
+        "%S5": false,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 99,
+        "%SR2": 1,
+        "%SR3": 99,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": false,
+            "new_value": true
+          }
+        },
+        "mutations_count": 1
+      },
+      "fault": null
+    },
+    {
+      "cycle": 99,
+      "time_ms": 1000.0,
+      "dt_ms": 10.0,
+      "phase": "IDLE",
+      "state": "RUNNING",
+      "timestamp_utc": "2026-10-02T06:13:38.560172+00:00",
+      "wall_duration_us": 5.699926987290382,
+      "latched_inputs": {},
+      "committed_outputs": {},
+      "internal_registers": {},
+      "registers": {},
+      "inputs": {},
+      "outputs": {},
+      "system_bits": {
+        "%S1": false,
+        "%S2": true,
+        "%S3": false,
+        "%S4": false,
+        "%S5": true,
+        "%S7": true,
+        "%S8": false,
+        "%S9": false
+      },
+      "system_registers": {
+        "%SR1": 100,
+        "%SR2": 1,
+        "%SR3": 100,
+        "%SR4": 0,
+        "%SR5": 10
+      },
+      "variables": {},
+      "modified_outputs": [],
+      "diff": {
+        "variables": {},
+        "registers": {},
+        "system_bits": {
+          "%S3": {
+            "old_value": true,
+            "new_value": false
+          },
+          "%S5": {
+            "old_value": false,
+            "new_value": true
+          },
+          "%S4": {
+            "old_value": true,
+            "new_value": false
+          }
+        },
+        "mutations_count": 3
+      },
+      "fault": null
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Live Cscape canvas inspection completed on winsta0\\Default (PID 12272, HWND 0x50452). Discovered 28 top-level child controls, MDIClient=found.",
+  "data": {
+    "gate": "G3",
+    "work_package": "W042",
+    "title": "Live Cscape Child Window & Canvas Structure Inspector",
+    "verdict": "success",
+    "timestamp_utc": "2026-10-08T21:57:22.394933+00:00",
+    "process_info": {
+      "pid": 12272,
+      "main_hwnd": "0x50452",
+      "window_title": "Cscape",
+      "class_name": "Afx:00060000:8:00010003:00000000:04D1037D",
+      "window_rect": {
+        "left": 1,
+        "top": 1,
+        "right": 1279,
+        "bottom": 567,
+        "width": 1278,
+        "height": 566
+      }
+    },
+    "mfc_structure": {
+      "mdi_client_present": true,
+      "mdi_client_hwnd": "0x50450",
+      "mdi_client_rect": {
+        "left": 535,
+        "top": 145,
+        "right": 1271,
+        "bottom": 349,
+        "width": 736,
+        "height": 204
+      },
+      "project_navigator_present": true,
+      "project_navigator_hwnd": "0x6020e",
+      "output_window_present": true,
+      "output_listbox_hwnd": "0x60026",
+      "statusbar_present": false,
+      "statusbar_panes": [],
+      "toolbars_count": 1
+    },
+    "child_windows_sample": [
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 13,
+          "bottom": 5,
+          "width": 4,
+          "height": 4
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:ControlBar:60000:8:10003:10",
+        "id": 38579,
+        "text": "Bookmark Window",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 209,
+          "bottom": 172,
+          "width": 200,
+          "height": 171
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 535,
+          "top": 349,
+          "right": 1271,
+          "bottom": 353,
+          "width": 736,
+          "height": 4
+        },
+        "visible": true
+      },
+      {
+        "class": "Afx:ControlBar:60000:8:10003:10",
+        "id": 45011,
+        "text": "Output Window",
+        "rect": {
+          "left": 535,
+          "top": 353,
+          "right": 1271,
+          "bottom": 540,
+          "width": 736,
+          "height": 187
+        },
+        "visible": true
+      },
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 13,
+          "bottom": 5,
+          "width": 4,
+          "height": 4
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:ControlBar:60000:8:10003:10",
+        "id": 38343,
+        "text": "IEC Debugger Windows",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 209,
+          "bottom": 201,
+          "width": 200,
+          "height": 200
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 13,
+          "bottom": 5,
+          "width": 4,
+          "height": 4
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:ControlBar:60000:8:10003:10",
+        "id": 38030,
+        "text": "IEC Defines/SpyList/BitFields/Enums/Structs",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 209,
+          "bottom": 201,
+          "width": 200,
+          "height": 200
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 13,
+          "bottom": 5,
+          "width": 4,
+          "height": 4
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:ControlBar:60000:8:10003:10",
+        "id": 320,
+        "text": "Search",
+        "rect": {
+          "left": 9,
+          "top": 1,
+          "right": 209,
+          "bottom": 172,
+          "width": 200,
+          "height": 171
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 735,
+          "top": 147,
+          "right": 739,
+          "bottom": 702,
+          "width": 4,
+          "height": 555
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:ControlBar:60000:8:10003:10",
+        "id": 38053,
+        "text": "Program Variables",
+        "rect": {
+          "left": 535,
+          "top": 147,
+          "right": 735,
+          "bottom": 702,
+          "width": 200,
+          "height": 555
+        },
+        "visible": false
+      },
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 531,
+          "top": 145,
+          "right": 535,
+          "bottom": 540,
+          "width": 4,
+          "height": 395
+        },
+        "visible": true
+      },
+      {
+        "class": "Afx:ControlBar:60000:8:10003:10",
+        "id": 37567,
+        "text": "Project Toolbox",
+        "rect": {
+          "left": 311,
+          "top": 145,
+          "right": 531,
+          "bottom": 540,
+          "width": 220,
+          "height": 395
+        },
+        "visible": true
+      },
+      {
+        "class": "Afx:Slider:60000:8:10003:10",
+        "id": -1,
+        "text": "",
+        "rect": {
+          "left": 307,
+          "top": 145,
+          "right": 311,
+          "bottom": 540,
+          "width": 4,
+          "height": 395
+        },
+        "visible": true
+      }
+    ],
+    "safety_invariants": {
+      "exclusive_gui_lock_verified": true,
+      "desktop": "winsta0\\Default",
+      "download_command_32827_blocked": true,
+      "hardware_lockout_active": true
+    }
+  }
+}

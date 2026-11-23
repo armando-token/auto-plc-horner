@@ -1,0 +1,838 @@
+{
+  "artifact_version": "2.2.0",
+  "generated_at_utc": "2026-10-08T21:57:26.420592+00:00",
+  "gate": "G3",
+  "title": "Live Cscape 10.2 HMI, Project Navigator & Process Stability Evidence",
+  "verdict": "success",
+  "session_metadata": {
+    "process_name": "Cscape.exe",
+    "pid": 12272,
+    "architecture": "x86_32bit",
+    "cscape_version": "10.2.751.4",
+    "window_station": "WinSta0",
+    "desktop": "Default",
+    "main_window": {
+      "hwnd": 328786,
+      "hwnd_hex": "0x50452",
+      "title": "Cscape",
+      "class_name": "Afx:00060000:8:00010003:00000000:04D1037D",
+      "rect": {
+        "left": 1,
+        "top": 1,
+        "right": 1279,
+        "bottom": 567,
+        "width": 1278,
+        "height": 566
+      },
+      "is_visible": true
+    },
+    "project_file": {
+      "path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "size_bytes": 7680
+    },
+    "exclusive_mutex": {
+      "acquired": true,
+      "owner_pid": 4448,
+      "lock_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\cscape_gui.lock"
+    }
+  },
+  "project_navigator_traversal": {
+    "status": "success",
+    "tree_hwnd": "0x6020e",
+    "control_id": 300,
+    "class_name": "SysTreeView32",
+    "total_items_count": 40,
+    "logic_nodes": [
+      {
+        "name": "Logic Modules",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> Control -> Logic Modules",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 2
+      },
+      {
+        "name": "Main Loop Modules",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> Control -> Logic Modules -> Main Loop Modules",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 1
+      },
+      {
+        "name": "main",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> Control -> Logic Modules -> Main Loop Modules -> main",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 0
+      },
+      {
+        "name": "Subroutine Modules",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> Control -> Logic Modules -> Subroutine Modules",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 0
+      },
+      {
+        "name": "Main Screen",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> User Interface -> Main Screen",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 0
+      }
+    ],
+    "screens_graphics_nodes": [
+      {
+        "name": "User Interface",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> User Interface",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 9
+      },
+      {
+        "name": "Screen Thumbnail",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> User Interface -> Screen Thumbnail",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 0
+      },
+      {
+        "name": "Main Screen",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> User Interface -> Main Screen",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children_count": 0
+      },
+      {
+        "name": "Display/Validate License",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> User Interface -> Web -> Display/Validate License",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 123,
+          "top": 165,
+          "right": 254,
+          "bottom": 183,
+          "width": 131,
+          "height": 18
+        },
+        "children_count": 0
+      },
+      {
+        "name": "Display Language",
+        "path": "Project Navigator -> test_sandbox [1] [Unknown Mode]* -> User Interface -> Language -> Display Language",
+        "control_type": "TreeItemControl",
+        "bounding_rect": {
+          "left": 123,
+          "top": 327,
+          "right": 220,
+          "bottom": 345,
+          "width": 97,
+          "height": 18
+        },
+        "children_count": 0
+      }
+    ],
+    "flattened_nodes_count": 40,
+    "full_tree_hierarchy": [
+      {
+        "name": "Project Navigator",
+        "control_type": "TreeItemControl",
+        "class_name": "",
+        "automation_id": "",
+        "bounding_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "children": [
+          {
+            "name": "test_sandbox [1] [Unknown Mode]*",
+            "control_type": "TreeItemControl",
+            "class_name": "",
+            "automation_id": "",
+            "bounding_rect": {
+              "left": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "children": [
+              {
+                "name": "Hardware Configuration",
+                "control_type": "TreeItemControl",
+                "class_name": "",
+                "automation_id": "",
+                "bounding_rect": {
+                  "left": 0,
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "children": []
+              },
+              {
+                "name": "Control",
+                "control_type": "TreeItemControl",
+                "class_name": "",
+                "automation_id": "",
+                "bounding_rect": {
+                  "left": 0,
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "children": [
+                  {
+                    "name": "Logic Modules",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": [
+                      {
+                        "name": "Main Loop Modules",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 0,
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "width": 0,
+                          "height": 0
+                        },
+                        "children": [
+                          {
+                            "name": "main",
+                            "control_type": "TreeItemControl",
+                            "class_name": "",
+                            "automation_id": "",
+                            "bounding_rect": {
+                              "left": 0,
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "width": 0,
+                              "height": 0
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Subroutine Modules",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 0,
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "width": 0,
+                          "height": 0
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "SetPoints",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "I/O Names",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Data Logging",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "User Interface",
+                "control_type": "TreeItemControl",
+                "class_name": "",
+                "automation_id": "",
+                "bounding_rect": {
+                  "left": 0,
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "children": [
+                  {
+                    "name": "Screen Thumbnail",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Main Screen",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Alarms",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Audio",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Recipe Database",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Reports",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Web",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "children": [
+                      {
+                        "name": "Configure Web Options",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 0,
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "width": 0,
+                          "height": 0
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Display/Validate License",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 165,
+                          "right": 254,
+                          "bottom": 183,
+                          "width": 131,
+                          "height": 18
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Publish Web Site",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 183,
+                          "right": 215,
+                          "bottom": 201,
+                          "width": 92,
+                          "height": 18
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Browse Web Site",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 201,
+                          "right": 214,
+                          "bottom": 219,
+                          "width": 91,
+                          "height": 18
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Publish To Removable Media",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 219,
+                          "right": 281,
+                          "bottom": 237,
+                          "width": 158,
+                          "height": 18
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Users and Security",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 237,
+                      "right": 204,
+                      "bottom": 255,
+                      "width": 100,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Language",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 255,
+                      "right": 160,
+                      "bottom": 273,
+                      "width": 56,
+                      "height": 18
+                    },
+                    "children": [
+                      {
+                        "name": "Export Strings",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 273,
+                          "right": 199,
+                          "bottom": 291,
+                          "width": 76,
+                          "height": 18
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Import Strings",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 291,
+                          "right": 202,
+                          "bottom": 309,
+                          "width": 79,
+                          "height": 18
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Language Options",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 309,
+                          "right": 224,
+                          "bottom": 327,
+                          "width": 101,
+                          "height": 18
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Display Language",
+                        "control_type": "TreeItemControl",
+                        "class_name": "",
+                        "automation_id": "",
+                        "bounding_rect": {
+                          "left": 123,
+                          "top": 327,
+                          "right": 220,
+                          "bottom": 345,
+                          "width": 97,
+                          "height": 18
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Networking",
+                "control_type": "TreeItemControl",
+                "class_name": "",
+                "automation_id": "",
+                "bounding_rect": {
+                  "left": 85,
+                  "top": 345,
+                  "right": 151,
+                  "bottom": 363,
+                  "width": 66,
+                  "height": 18
+                },
+                "children": [
+                  {
+                    "name": "CAN1 Configuration",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 363,
+                      "right": 216,
+                      "bottom": 381,
+                      "width": 112,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "CAN 2 Configuration",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 381,
+                      "right": 219,
+                      "bottom": 399,
+                      "width": 115,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "Protocols",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 399,
+                      "right": 158,
+                      "bottom": 417,
+                      "width": 54,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "GSM",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 417,
+                      "right": 133,
+                      "bottom": 435,
+                      "width": 29,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "GPRS",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 435,
+                      "right": 136,
+                      "bottom": 453,
+                      "width": 32,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "SMS",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 453,
+                      "right": 131,
+                      "bottom": 471,
+                      "width": 27,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "eMail",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 471,
+                      "right": 137,
+                      "bottom": 489,
+                      "width": 33,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "MQTT",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 489,
+                      "right": 142,
+                      "bottom": 507,
+                      "width": 38,
+                      "height": 18
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "OCS360",
+                    "control_type": "TreeItemControl",
+                    "class_name": "",
+                    "automation_id": "",
+                    "bounding_rect": {
+                      "left": 104,
+                      "top": 507,
+                      "right": 149,
+                      "bottom": 525,
+                      "width": 45,
+                      "height": 18
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "process_health_and_stability": {
+    "working_set_bytes": 207949824,
+    "working_set_mb": 198.32,
+    "commit_size_bytes": 239730688,
+    "commit_size_mb": 228.62,
+    "gdi_handle_count": 1770,
+    "user_handle_count": 244,
+    "is_hung": false,
+    "responsiveness": "responsive"
+  },
+  "safe_command_dispatch": {
+    "command_id": 32826,
+    "command_name": "ID_PROGRAM_ERRORCHECK",
+    "dispatched_via": "Win32CommandInterceptor",
+    "status": "success",
+    "details": "Dispatched WM_COMMAND 32826 (ID_PROGRAM_ERRORCHECK) to HWND 0x50452 successfully."
+  },
+  "screenshot": {
+    "captured": true,
+    "method": "GDI PrintWindow (PW_RENDERFULLCONTENT)",
+    "path": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G3\\live_cscape_deep_session.png",
+    "width": 1278,
+    "height": 566,
+    "size_bytes": 96203
+  },
+  "teardown": {
+    "method": "WM_CLOSE",
+    "status": "success",
+    "details": "Cscape closed cleanly via WM_CLOSE."
+  },
+  "safety_invariants_verified": {
+    "download_lockout_32827": "strictly_blocked",
+    "controller_download_lockout_33149": "strictly_blocked",
+    "com_ports_accessed": false,
+    "physical_hardware_isolated": true
+  }
+}

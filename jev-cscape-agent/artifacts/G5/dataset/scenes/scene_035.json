@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_035",
+  "file_name": "scene_035.png",
+  "original_source": "artifacts\\G7\\acceptance_runs\\run_14_reopen.png",
+  "split": "train",
+  "scene_type": "ladder_editor",
+  "category": "LADDER",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "21329510c254669b65bc519cab1e0cef2be36e3c2eb9513029962ec73ee38cb6",
+  "labels": {
+    "canvas_rect": [
+      124,
+      28,
+      1269,
+      460
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        244
+      ],
+      "canvas_nw": [
+        124,
+        28
+      ],
+      "canvas_se": [
+        1269,
+        460
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W294 K-D Tree Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W294",
+    "gate": "G9",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "init_and_domain",
+        "passed": true,
+        "timing_ms": 0.403,
+        "details": "Spatial K-D Tree initialized over [1200.0x750.0] domain (MaxDepth=12, Hazard=30.0px)."
+      },
+      {
+        "stage": 2,
+        "name": "node_insertion_and_depth",
+        "passed": true,
+        "timing_ms": 0.733,
+        "details": "Dynamic insertion validated: 5 nodes inserted, depth tracked accurately to 2."
+      },
+      {
+        "stage": 3,
+        "name": "alternating_axis_partitioning",
+        "passed": true,
+        "timing_ms": 0.009,
+        "details": "Alternating orthogonal axis partitioning verified: axis = depth % 2 across all subtree boundaries."
+      },
+      {
+        "stage": 4,
+        "name": "nearest_neighbor_search",
+        "passed": true,
+        "timing_ms": 0.15,
+        "details": "1-NN search verified: nearest node #5 at d=70.71px matches ground truth."
+      },
+      {
+        "stage": 5,
+        "name": "k_nearest_neighbors_search",
+        "passed": true,
+        "timing_ms": 0.304,
+        "details": "k-NN (k=3) branch-and-bound search validated: IDs=[5, 1, 2], distances strictly monotonic."
+      },
+      {
+        "stage": 6,
+        "name": "proximity_hazard_alarm",
+        "passed": true,
+        "timing_ms": 0.556,
+        "details": "Spatial proximity hazard detection validated: tripped %M596 and 0x8415 at d=7.07px < 30.0px."
+      },
+      {
+        "stage": 7,
+        "name": "wcag_aaa_svg_rendering",
+        "passed": true,
+        "timing_ms": 0.552,
+        "details": "W3C SVG 1.1 vector graphic rendered with valid XML; WCAG 2.1 AAA contrast verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.222,
+        "details": "Horner OCS register space %R2550..%R2557 and coils %M595..%M596 verified bit-exact."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.766,
+        "details": "KdtreeCanvasSync pure ST AST validated; ladder logic contacts rejected."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "init_and_domain",
+        "passed": true,
+        "timing_ms": 0.403,
+        "details": "Spatial K-D Tree initialized over [1200.0x750.0] domain (MaxDepth=12, Hazard=30.0px)."
+      },
+      {
+        "stage": 2,
+        "name": "node_insertion_and_depth",
+        "passed": true,
+        "timing_ms": 0.733,
+        "details": "Dynamic insertion validated: 5 nodes inserted, depth tracked accurately to 2."
+      },
+      {
+        "stage": 3,
+        "name": "alternating_axis_partitioning",
+        "passed": true,
+        "timing_ms": 0.009,
+        "details": "Alternating orthogonal axis partitioning verified: axis = depth % 2 across all subtree boundaries."
+      },
+      {
+        "stage": 4,
+        "name": "nearest_neighbor_search",
+        "passed": true,
+        "timing_ms": 0.15,
+        "details": "1-NN search verified: nearest node #5 at d=70.71px matches ground truth."
+      },
+      {
+        "stage": 5,
+        "name": "k_nearest_neighbors_search",
+        "passed": true,
+        "timing_ms": 0.304,
+        "details": "k-NN (k=3) branch-and-bound search validated: IDs=[5, 1, 2], distances strictly monotonic."
+      },
+      {
+        "stage": 6,
+        "name": "proximity_hazard_alarm",
+        "passed": true,
+        "timing_ms": 0.556,
+        "details": "Spatial proximity hazard detection validated: tripped %M596 and 0x8415 at d=7.07px < 30.0px."
+      },
+      {
+        "stage": 7,
+        "name": "wcag_aaa_svg_rendering",
+        "passed": true,
+        "timing_ms": 0.552,
+        "details": "W3C SVG 1.1 vector graphic rendered with valid XML; WCAG 2.1 AAA contrast verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.222,
+        "details": "Horner OCS register space %R2550..%R2557 and coils %M595..%M596 verified bit-exact."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.766,
+        "details": "KdtreeCanvasSync pure ST AST validated; ladder logic contacts rejected."
+      }
+    ]
+  }
+}

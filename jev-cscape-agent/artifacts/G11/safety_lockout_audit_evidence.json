@@ -1,0 +1,64 @@
+{
+  "gate": "G11",
+  "title": "Pre-Commissioning Safety Lockout & Interceptor Audit",
+  "verdict": "success",
+  "error_code": null,
+  "details": "Exhaustive pre-commissioning safety audit passed: 256 COM ports locked out, 17 device/bus interfaces locked out, 4 companion flasher utilities blocked, Win32 download commands (32827, 33149) intercepted with HardwareLockoutError, prohibited CLI download switches blocked, zero git remotes configured (local-only git), and zero horner-cscape-mcp references in src/jev_cscape/.",
+  "data": {
+    "physical_ports_audit": {
+      "status": "passed",
+      "com_ports_1_to_256_tested": 256,
+      "com_ports_1_to_256_blocked": 256,
+      "special_interfaces_tested": 17,
+      "special_interfaces_blocked": 17,
+      "all_ports_locked_out": true
+    },
+    "flasher_binaries_audit": {
+      "status": "passed",
+      "binaries_tested": 12,
+      "binaries_blocked": 12,
+      "all_binaries_locked_out": true
+    },
+    "win32_interceptor_audit": {
+      "status": "passed",
+      "download_commands_audited": [
+        {
+          "command_id": 32827,
+          "command_name": "ID_PROGRAM_DOWNLOAD",
+          "security_guard_raised": true,
+          "interceptor_raised": true,
+          "dispatch_blocked": true
+        },
+        {
+          "command_id": 33149,
+          "command_name": "ID_CONTROLLER_DOWNLOAD",
+          "security_guard_raised": true,
+          "interceptor_raised": true,
+          "dispatch_blocked": true
+        }
+      ],
+      "error_check_allowed": true,
+      "all_download_commands_hard_blocked": true
+    },
+    "cli_switches_audit": {
+      "status": "passed",
+      "switches_tested": 22,
+      "switches_blocked": 22,
+      "all_switches_locked_out": true
+    },
+    "git_remotes_audit": {
+      "status": "passed",
+      "configured_remotes": [],
+      "remote_count": 0,
+      "git_config_contains_remote": false,
+      "local_only_enforced": true
+    },
+    "mcp_isolation_audit": {
+      "status": "passed",
+      "scanned_files_count": 321,
+      "forbidden_references_found": 0,
+      "violations": [],
+      "isolation_verified": true
+    }
+  }
+}

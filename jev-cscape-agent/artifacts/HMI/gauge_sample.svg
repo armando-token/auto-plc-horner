@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300"
+     font-family="Segoe UI, Roboto, Arial, sans-serif" text-rendering="geometricPrecision" shape-rendering="geometricPrecision">
+  <defs>
+    <filter id="dialShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="3" />
+      <feFlood flood-color="#000000" flood-opacity="0.5" />
+      <feComposite operator="in" />
+      <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+  <!-- Dial Bezel & Dark SCADA Face -->
+  <rect width="300" height="300" rx="10" fill="#0F172A" />
+  <circle cx="150.0" cy="150.0" r="128.0" fill="#1E293B" stroke="#334155" stroke-width="2" />
+  <circle cx="150.0" cy="150.0" r="124.0" fill="#0B132B" stroke="#1E293B" stroke-width="1" />
+  <!-- Threshold Arc Bands (270 deg sweep) -->
+  <path d="M 72.22 227.78 A 110.00 110.00 0 1 1 238.99 85.34" fill="none" stroke="#10B981" stroke-width="10.0" />
+  <path d="M 238.99 85.34 A 110.00 110.00 0 0 1 259.66 158.63" fill="none" stroke="#F59E0B" stroke-width="10.0" />
+  <path d="M 259.66 158.63 A 110.00 110.00 0 0 1 227.78 227.78" fill="none" stroke="#EF4444" stroke-width="10.0" />
+  <!-- Ticks & Scale Labels -->
+  <line x1="82.82" y1="217.18" x2="77.17" y2="222.83" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="90.60" y="212.90" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">0</text>
+  <line x1="59.65" y1="179.36" x2="52.04" y2="181.83" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="70.11" y="179.46" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">10</text>
+  <line x1="56.17" y1="135.14" x2="48.27" y2="133.89" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="67.03" y="140.36" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">20</text>
+  <line x1="73.14" y1="94.16" x2="66.67" y2="89.46" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="82.04" y="104.13" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">30</text>
+  <line x1="106.87" y1="65.35" x2="103.24" y2="58.23" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="111.86" y="78.66" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">40</text>
+  <line x1="150.00" y1="55.00" x2="150.00" y2="47.00" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="150.00" y="69.50" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">50</text>
+  <line x1="193.13" y1="65.35" x2="196.76" y2="58.23" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="188.14" y="78.66" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">60</text>
+  <line x1="226.86" y1="94.16" x2="233.33" y2="89.46" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="217.96" y="104.13" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">70</text>
+  <line x1="243.83" y1="135.14" x2="251.73" y2="133.89" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="232.97" y="140.36" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">80</text>
+  <line x1="240.35" y1="179.36" x2="247.96" y2="181.83" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="229.89" y="179.46" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">90</text>
+  <line x1="217.18" y1="217.18" x2="222.83" y2="222.83" stroke="#CBD5E1" stroke-width="1.8" />
+  <text x="209.40" y="212.90" fill="#CBD5E1" font-size="9" font-weight="600" text-anchor="middle">100</text>
+  <polygon points="239.11,109.20 152.08,154.55 135.45,156.66 147.92,145.45" fill="#F8FAFC" stroke="#0F172A" stroke-width="1.2" filter="url(#dialShadow)" />
+  <g transform="translate(105.0, 192.0)">
+    <rect width="90" height="26" rx="4" fill="#070D18" stroke="#334155" stroke-width="1.2" />
+    <text x="45" y="17.5" fill="#38BDF8" font-size="13" font-weight="bold" text-anchor="middle">74.2 BAR</text>
+  </g>
+  <text x="150.0" y="235.0" fill="#94A3B8" font-size="11" font-weight="bold" letter-spacing="1" text-anchor="middle">PRESSURE</text>
+  <!-- Center Pivot Hub -->
+  <circle cx="150.0" cy="150.0" r="12" fill="url(#hubGrad)" stroke="#475569" stroke-width="1.5" />
+  <circle cx="150.0" cy="150.0" r="4.5" fill="#38BDF8" />
+</svg>

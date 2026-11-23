@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Steam Cracker Pyrolysis Furnace Tube Coking & Thermal Quench ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W179",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Steam Cracker Pyrolysis Furnace Tube Coking & Thermal Quench ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1400..%R1407 and %M326..%M328 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "Steam_Cracker_Radiant_Coil_Pyrolysis_Kinetics_And_Quench_Hydrodynamics",
+        "passed": true,
+        "details": "Kinetics & Quench verified: COT=840.0\u00b0C, TMT=1020.0\u00b0C, T_quench=405.0\u00b0C, Steam/HC=0.50 kg/kg, Delta H_rxn=1650 kJ/kg, Quench Delta T=435.0\u00b0C, u_gas=27.38 m/s."
+      },
+      {
+        "stage": 3,
+        "check": "Asymptotic_Tube_Internal_Coking_Model_And_Pressure_Drop",
+        "passed": true,
+        "details": "Coking model verified: delta_coke=2400 um, clean dP=1.80 bar, nominal dP=2.10 bar, heavily fouled dP=5.12 bar (> 3.5 bar alarm limit)."
+      },
+      {
+        "stage": 4,
+        "check": "Olefin_Product_Yields_And_Cracking_Severity",
+        "passed": true,
+        "details": "Yields verified: Ethylene=33.5%, Propylene=14.8%, High severity Ethylene(855\u00b0C)=34.20% (> 33.5%), Feed=15.0 kg/s, Steam=7.5 kg/s."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_High_Order_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: COT=841.06\u00b0C, TMT=1018.77\u00b0C, y_eth=0.336, y_prop=0.147, T_quench=405.21\u00b0C."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=0.000e+00 kg/s (< 1e-10), elemental_residual=0.000e+00 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xCC01, 0xCC02, 0xCC03, 0xCC04) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1400=8400, %R1401=10200, %R1402=210, %R1403=2400, %R1404=335, %R1405=148, %R1406=4050, %R1407=0x0000, %M326=True, %M327=False, %M328=False."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Closed_Loop_Settling",
+        "passed": true,
+        "details": "Transient response to +10.0 \u00b0C disturbance verified cleanly over 8.0s: COT=845.29\u00b0C, Permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1400..%R1407",
+      "discrete_coils": "%M326..%M328",
+      "values": {
+        "%R1400": 8400,
+        "%R1401": 10200,
+        "%R1402": 210,
+        "%R1403": 2400,
+        "%R1404": 335,
+        "%R1405": 148,
+        "%R1406": 4050,
+        "%R1407": 0,
+        "%M326": true,
+        "%M327": false,
+        "%M328": false
+      }
+    },
+    "timestamp": "2026-10-05T06:13:33Z"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "artifact": "Horner OCS Memory Channel Matrix",
+  "timestamp_utc": "2026-10-01T22:12:00Z",
+  "channels_count": 9,
+  "channels": {
+    "%I": {
+      "prefix": "%I",
+      "name": "Digital Inputs",
+      "element_type": "BOOL",
+      "bit_width": 1,
+      "range_min": 1,
+      "range_max": 2048,
+      "access": "RO",
+      "description": "Physical digital input contact states."
+    },
+    "%Q": {
+      "prefix": "%Q",
+      "name": "Digital Outputs",
+      "element_type": "BOOL",
+      "bit_width": 1,
+      "range_min": 1,
+      "range_max": 2048,
+      "access": "RW",
+      "description": "Physical digital output coil states."
+    },
+    "%M": {
+      "prefix": "%M",
+      "name": "Internal Markers",
+      "element_type": "BOOL",
+      "bit_width": 1,
+      "range_min": 1,
+      "range_max": 2048,
+      "access": "RW",
+      "description": "Internal Boolean memory bits."
+    },
+    "%D": {
+      "prefix": "%D",
+      "name": "Display Bits",
+      "element_type": "BOOL",
+      "bit_width": 1,
+      "range_min": 1,
+      "range_max": 2048,
+      "access": "RW",
+      "description": "Screen navigation and screen active bits."
+    },
+    "%K": {
+      "prefix": "%K",
+      "name": "Keypad Bits",
+      "element_type": "BOOL",
+      "bit_width": 1,
+      "range_min": 1,
+      "range_max": 128,
+      "access": "RO",
+      "description": "Hard key and function key states."
+    },
+    "%AI": {
+      "prefix": "%AI",
+      "name": "Analog Inputs",
+      "element_type": "INT",
+      "bit_width": 16,
+      "range_min": 1,
+      "range_max": 512,
+      "access": "RO",
+      "description": "Physical analog input words (raw counts)."
+    },
+    "%AQ": {
+      "prefix": "%AQ",
+      "name": "Analog Outputs",
+      "element_type": "INT",
+      "bit_width": 16,
+      "range_min": 1,
+      "range_max": 512,
+      "access": "RW",
+      "description": "Physical analog output words."
+    },
+    "%R": {
+      "prefix": "%R",
+      "name": "General Holding Registers",
+      "element_type": "INT",
+      "bit_width": 16,
+      "range_min": 1,
+      "range_max": 9999,
+      "access": "RW",
+      "description": "16-bit word storage for variables, timers, and calculations."
+    },
+    "%SR": {
+      "prefix": "%SR",
+      "name": "System Registers",
+      "element_type": "INT",
+      "bit_width": 16,
+      "range_min": 1,
+      "range_max": 256,
+      "access": "RO",
+      "description": "Diagnostic system registers (clock, scan time, battery status)."
+    }
+  }
+}

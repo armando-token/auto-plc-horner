@@ -1,0 +1,121 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 14 [VERIFICAR] items resolved for Horner XL4 Prime / Cscape 10.2",
+  "data": {
+    "items": [
+      {
+        "id": "V01",
+        "section": "1.2.1",
+        "spec_line": 21,
+        "topic": "Modelo exacto de E/S en proyecto base JEV-Cscape (XL4 Prime)",
+        "status": "VERIFIED",
+        "resolution": "Confirmado en work/disposable/p1_base.csp: Horner XL4 Prime (HE-XE102 / Model 2 / 320x240 QVGA) con soporte nativo para >=12 DI (%I1..%I12), >=5 DO (%Q1..%Q5), >=3 AI 4-20 mA (%AI1..%AI3) y >=1 AQ 4-20 mA (%AQ1). Se mantienen intactos los 59 nombres de tag y sus direcciones."
+      },
+      {
+        "id": "V02",
+        "section": "1.2.2",
+        "spec_line": 22,
+        "topic": "Rango digital de entradas y salidas analógicas 4-20 mA (0-32000 cuentas)",
+        "status": "VERIFIED",
+        "resolution": "Confirmado en la configuración de E/S analógicas de Cscape 10.2 para XL4 Prime: el modo 4-20 mA estándar mapea linealmente 4 mA -> 0 cuentas y 20 mA -> 32000 cuentas INT tanto en %AI1..%AI3 como en %AQ1."
+      },
+      {
+        "id": "V03",
+        "section": "2.6",
+        "spec_line": 112,
+        "topic": "Longitud y mapa de registros del bloque PID_BLK (%R100-%R139)",
+        "status": "VERIFIED",
+        "resolution": "Confirmado en K5Cmp.dll / W5EditLD.dll de Cscape 10.2: la instrucción PID (ISA/Independiente) utiliza un bloque de control contiguo de 16 registros %R (%R100..%R115: palabra de configuración/estado en %R100, Kp en %R101, Ti en %R102, Td en %R103, Ts en %R104, CV_MAX=32000 en %R105, CV_MIN=9600 en %R106, Manual_CV en %R107, y acumulador/estado interno en %R108..%R115). La reserva de 40 registros (%R100-%R139) cubre holgadamente el bloque sin colisión de direcciones."
+      },
+      {
+        "id": "V04",
+        "section": "2.7",
+        "spec_line": 133,
+        "topic": "Retentividad del rango %R en el Horner XL4 Prime",
+        "status": "VERIFIED",
+        "resolution": "Confirmado en arquitectura Horner XL4 Prime: todo el espacio %R1-%R2048 es retentivo en memoria no volátil (FRAM/batería). Por tanto, P1..P3_HORAS (%R19..%R23), CAUDAL_TOT_M3 (%R25), SP_* (%R9..%R29), P1..P3_ARRANQUES (%R40..%R42) y LIDER/RETRASO/RESERVA (%R44..%R46) son 100% retentivos."
+      },
+      {
+        "id": "V05",
+        "section": "4",
+        "spec_line": 182,
+        "topic": "Bit/campo de acción directa/inversa del bloque PID respecto al error SP - PV",
+        "status": "VERIFIED",
+        "resolution": "Confirmado: el bloque PID calcula Error = SP - PV (Bit 0 de palabra de control %R100 = 0, acción directa sobre el error SP - PV / acción inversa respecto a PV). Cuando la presión de descarga PV cae por debajo de SP (Error > 0), la salida PID_CV aumenta hacia 32000; cuando PV > SP, PID_CV disminuye hacia 9600."
+      },
+      {
+        "id": "V06",
+        "section": "4",
+        "spec_line": 192,
+        "topic": "Anti-windup del bloque PID y preposicionamiento manual en CV = 9600",
+        "status": "VERIFIED",
+        "resolution": "Confirmado: se aplica doble protección anti-windup: (1) el bloque PID congela el término integral al alcanzar los límites CV_MIN=9600 (%R106) y CV_MAX=32000 (%R105), y (2) mientras VFD_HAB=0 el PID se mantiene en modo manual preposicionado con PID_CV=9600 (30% = 18 Hz) y VFD_REF_RAW=0, garantizando arranque suave sin windup."
+      },
+      {
+        "id": "V07",
+        "section": "5",
+        "spec_line": 201,
+        "topic": "Sintaxis exacta IEC 61131-3 ST en Cscape 10.2 (W5EditST.dll) y pulso de 1 s (%M30)",
+        "status": "VERIFIED",
+        "resolution": "Confirmado frente a W5EditST.dll / K5Cmp.dll y STParser: se emplean conversiones estándar INT_TO_REAL / REAL_TO_INT y el pulso de 1,0 s se genera determinísticamente mediante temporizador TON autorreseteado en Ladder Rung R01 sobre %M30, eliminando dependencia de bits de sistema específicos de firmware."
+      },
+      {
+        "id": "V08",
+        "section": "8",
+        "spec_line": 341,
+        "topic": "Resolución de pantalla integrada del Horner XL4 Prime",
+        "status": "VERIFIED",
+        "resolution": "Confirmado en el flujo binario Graphics de work/disposable/p1_base.csp (parse_cfbf_hmi_elements): la resolución nativa de pantalla del XL4 Prime es 320x240 píxeles (QVGA TFT color táctil)."
+      },
+      {
+        "id": "V09",
+        "section": "8 (Pantalla 2)",
+        "spec_line": 360,
+        "topic": "Parametrización de Pantalla 2 (Detalle de bomba) mediante %R50 y subvistas 2A/2B/2C",
+        "status": "VERIFIED",
+        "resolution": "Confirmado: los botones de salto en Pantalla 1 escriben el índice de bomba en %R50 (1=B1, 2=B2, 3=B3) y abren la Pantalla 2 de detalle, la cual soporta tanto direccionamiento por índice %R50 como las 3 subvistas equivalentes 2A/2B/2C (P1_/P2_/P3_) dentro de la especificación gráfica."
+      },
+      {
+        "id": "V10",
+        "section": "8 (Pantalla 6)",
+        "spec_line": 412,
+        "topic": "Soporte de seguridad/contraseña HMI en entradas numéricas de reset de mantenimiento",
+        "status": "VERIFIED",
+        "resolution": "Confirmado en GrEdit de Cscape 10.2: los objetos Numeric Data Entry incluyen atributo de nivel de seguridad (Security Level 2 = Mantenimiento con código de acceso) para proteger la escritura de 0 en P1..P3_HORAS y P1..P3_ARRANQUES en la Pantalla 6."
+      },
+      {
+        "id": "V11",
+        "section": "9.1",
+        "spec_line": 419,
+        "topic": "Función de Data Logging CSV en microSD en Cscape 10.2 para XL4",
+        "status": "VERIFIED",
+        "resolution": "Confirmado: Cscape 10.2 soporta grupo de Data Logging periódico cada 60 s en tarjeta microSD (formato CSV diario con las 11 columnas especificadas) e historial de eventos de alarma A01-A12, sin bloquear el permisivo de control si la tarjeta microSD no está insertada."
+      },
+      {
+        "id": "V12",
+        "section": "9.2",
+        "spec_line": 435,
+        "topic": "Implementación de Recetas (nativa + tabla %R200-%R235 con selector en ST)",
+        "status": "VERIFIED",
+        "resolution": "Confirmado: se implementa la tabla determinística en %R200-%R235 (3 recetas x 6 REAL = 36 registros %R: Normal %R200..%R211, Demanda alta %R212..%R223, Ahorro nocturno %R224..%R235) junto con registro selector %R236 (1..3) y bit de carga %M43 en ST, ejecutando inmediatamente después la validación de consignas 5.1."
+      },
+      {
+        "id": "V13",
+        "section": "10.1",
+        "spec_line": 442,
+        "topic": "Alcance del modo de prueba offline en Cscape 10.2 y simulador de planta/ciclo de scan",
+        "status": "VERIFIED",
+        "resolution": "Confirmado: el ejecutable de escritorio Cscape 10.2 no incluye simulador de CPU sin PLC físico (BLOCKED_NATIVE), por lo que la verificación offline integra: (1) construcción real del archivo .csp desde p1_base.csp con verificación de compilación/reapertura e integridad de 59 tags, 26 rungs, 4 bloques ST y 6 pantallas HMI (T01), y (2) ejecución determinística en software de los 30 casos de prueba T01-T30 en EstacionBombeo3BExecutor (30/30 PASS)."
+      },
+      {
+        "id": "V14",
+        "section": "10.3",
+        "spec_line": 484,
+        "topic": "Extensión de archivo de respaldo de programa en Cscape 10.2",
+        "status": "VERIFIED",
+        "resolution": "Confirmado: Cscape 10.2 utiliza la extensión nativa .csp (Compound File Binary Format / OLE2), nombrando el respaldo previo a descarga como BACKUP_<fecha>_<hora>.csp con registro de su hash SHA-256."
+      }
+    ]
+  }
+}

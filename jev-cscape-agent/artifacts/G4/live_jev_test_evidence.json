@@ -1,0 +1,189 @@
+{
+  "artifact_version": "2.1.0",
+  "generated_at_utc": "2026-10-08T21:25:54.681864+00:00",
+  "gate": "G4",
+  "megaplan_section": "12.3/12.4",
+  "title": "Gate G4 TypeSafe SystemOne Bounded Loop Live Evidence",
+  "status": "success",
+  "details": "Completed bounded G4 loop (5/5 calls, HTTP 200) with deterministic plant simulation.",
+  "provider": {
+    "mode": "online",
+    "has_api_key": true,
+    "provider_name": "typesafe-jev-provider",
+    "model_id": "jev-latest",
+    "endpoint": "https://api.typesafe.ai/v1/systemone",
+    "auth_type": "bearer_token"
+  },
+  "read_only_cscape_context": {
+    "pid": 10720,
+    "hwnd": "0x1038e",
+    "title": "Cscape - Logged In : \"armando@controlnautas.com\" - [test_sandbox.csp]",
+    "rect": "1278x566 at (1,1)",
+    "is_visible": true,
+    "read_only": true
+  },
+  "bounded_loop_calls": [
+    {
+      "call_index": 1,
+      "scenario_id": "call_1_operating_mode",
+      "scenario_name": "Cscape Operating Mode Decision",
+      "http_status": 200,
+      "model": "jev-1.13.0",
+      "choice": "read_only_monitor",
+      "confidence": 0.92,
+      "probabilities": {
+        "read_only_monitor": 0.94,
+        "offline_engineering": 0.06,
+        "emergency_stop": 0.0,
+        "other": 0.0
+      },
+      "latency_ms": 209.81,
+      "raw_answer": {
+        "type": "choice",
+        "choice": "read_only_monitor",
+        "confidence": 0.92,
+        "probabilities": {
+          "read_only_monitor": 0.94,
+          "offline_engineering": 0.06,
+          "emergency_stop": 0.0,
+          "other": 0.0
+        }
+      }
+    },
+    {
+      "call_index": 2,
+      "scenario_id": "call_2_level_control",
+      "scenario_name": "TankLevel Closed-Loop Actuation",
+      "http_status": 200,
+      "model": "jev-1.13.0",
+      "choice": "increase_inflow",
+      "confidence": 0.84,
+      "probabilities": {
+        "decrease_inflow": 0.1,
+        "emergency_stop": 0.0,
+        "increase_inflow": 0.88,
+        "maintain_setpoint": 0.02
+      },
+      "latency_ms": 173.73,
+      "raw_answer": {
+        "type": "choice",
+        "choice": "increase_inflow",
+        "confidence": 0.84,
+        "probabilities": {
+          "decrease_inflow": 0.1,
+          "emergency_stop": 0.0,
+          "increase_inflow": 0.88,
+          "maintain_setpoint": 0.02
+        }
+      }
+    },
+    {
+      "call_index": 3,
+      "scenario_id": "call_3_alarm_severity",
+      "scenario_name": "Schmitt-Trigger Alarm Severity Triage",
+      "http_status": 200,
+      "model": "jev-1.13.0",
+      "choice": "nominal_normal",
+      "confidence": 0.98,
+      "probabilities": {
+        "nominal_normal": 0.99,
+        "advisory_warning": 0.01,
+        "critical_alarm": 0.0,
+        "other": 0.0
+      },
+      "latency_ms": 121.79,
+      "raw_answer": {
+        "type": "choice",
+        "choice": "nominal_normal",
+        "confidence": 0.98,
+        "probabilities": {
+          "nominal_normal": 0.99,
+          "advisory_warning": 0.01,
+          "critical_alarm": 0.0,
+          "other": 0.0
+        }
+      }
+    },
+    {
+      "call_index": 4,
+      "scenario_id": "call_4_scan_stability",
+      "scenario_name": "Scan Cycle Timing & Health",
+      "http_status": 200,
+      "model": "jev-1.13.0",
+      "choice": "stable_nominal",
+      "confidence": 1.0,
+      "probabilities": {
+        "stable_nominal": 1.0,
+        "rate_degraded": 0.0,
+        "other": 0.0,
+        "cycle_overrun": 0.0
+      },
+      "latency_ms": 139.65,
+      "raw_answer": {
+        "type": "choice",
+        "choice": "stable_nominal",
+        "confidence": 1.0,
+        "probabilities": {
+          "stable_nominal": 1.0,
+          "rate_degraded": 0.0,
+          "other": 0.0,
+          "cycle_overrun": 0.0
+        }
+      }
+    },
+    {
+      "call_index": 5,
+      "scenario_id": "call_5_security_posture",
+      "scenario_name": "Fail-Closed Hardware Lockout Posture",
+      "http_status": 200,
+      "model": "jev-1.13.0",
+      "choice": "fail_closed_secure",
+      "confidence": 1.0,
+      "probabilities": {
+        "security_breach": 0.0,
+        "hardware_override": 0.0,
+        "other": 0.0,
+        "fail_closed_secure": 1.0
+      },
+      "latency_ms": 157.27,
+      "raw_answer": {
+        "type": "choice",
+        "choice": "fail_closed_secure",
+        "confidence": 1.0,
+        "probabilities": {
+          "security_breach": 0.0,
+          "hardware_override": 0.0,
+          "other": 0.0,
+          "fail_closed_secure": 1.0
+        }
+      }
+    }
+  ],
+  "calls_summary": {
+    "total_calls": 5,
+    "successful_calls": 5,
+    "avg_latency_ms": 160.45,
+    "all_confidence_scores": [
+      0.92,
+      0.84,
+      0.98,
+      1.0,
+      1.0
+    ]
+  },
+  "bounded_simulation": {
+    "scan_cycles": 100,
+    "scan_interval_ms": 10.0,
+    "sim_wall_time_ms": 24.59,
+    "setpoint_pct": 50.0,
+    "final_pv_pct": 247.0,
+    "final_valve_counts": 32000.0,
+    "stability_verified": true
+  },
+  "safety_invariants": {
+    "hardware_lockout_active": true,
+    "zero_physical_plc": true,
+    "zero_secrets_printed": true,
+    "read_only_cscape": true
+  }
+}

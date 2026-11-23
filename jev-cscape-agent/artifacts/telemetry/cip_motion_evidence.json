@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Motion Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W154",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial CIP Motion Over EtherNet/IP Drive Profile & Axis Interpolator Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_IEC_61131_3_ST_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Successfully parsed CipMotionSync and AxisInterpolatorSync with 11 variables. Bound registers: %M268, %M269, %R1150, %R1151, %R1152, %R1153, %R1154, %R1155, %R1156, %R1157."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder logic contacts and coils strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "ODVA_CIP_Motion_Axis_State_Machine_Lifecycle",
+        "passed": true,
+        "details": "State machine transitions (Disabled -> Standstill -> Accelerating -> Disabled) verified deterministically."
+      },
+      {
+        "stage": 4,
+        "check": "S_Curve_And_Linear_Interpolation_Trajectory_Generation",
+        "passed": true,
+        "details": "Linear (585 steps) and S-curve (687 steps) trajectories smoothly converged to 100.0 mm respecting velocity, acceleration, and jerk limits."
+      },
+      {
+        "stage": 5,
+        "check": "IEEE_1588_CIP_Sync_Cyclic_Synchronization_And_Jitter",
+        "passed": true,
+        "details": "CIP Sync cyclic jitter validated across 5 frames (< 100 ns, max 50.0 ns)."
+      },
+      {
+        "stage": 6,
+        "check": "Axis_Overspeed_Interlock_Surveillance",
+        "passed": true,
+        "details": "Velocity overrun (> 250 mm/s) trapped deterministically with 0xB301, clearing %M268."
+      },
+      {
+        "stage": 7,
+        "check": "Following_Error_Trip_Interlock_And_Tolerance_Enforcement",
+        "passed": true,
+        "details": "Following error (1.20 mm > 0.50 mm) tripped 0xB302, asserting %M269 and clearing %M268."
+      },
+      {
+        "stage": 8,
+        "check": "Drive_Inverter_Fault_And_Cyclic_Comm_Loss_Watchdog",
+        "passed": true,
+        "details": "Inverter overcurrent (32 A) and cyclic sync loss (65 ms) deterministically tripped 0xB303 and 0xB304."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Memory_Space_Integration_And_Operator_Reset",
+        "passed": true,
+        "details": "Horner OCS registers (%R1150..%R1157, %M268..%M269) verified across healthy, tripped (0xB302), and operator reset recovery states."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1150..%R1157",
+      "discrete_coils": "%M268..%M269",
+      "values": {
+        "%R1150": 1249,
+        "%R1151": 1250,
+        "%R1152": 0,
+        "%R1153": 12,
+        "%R1154": 85,
+        "%R1155": 45,
+        "%R1156": 42,
+        "%R1157": 0,
+        "%M268": true,
+        "%M269": false
+      }
+    },
+    "timestamp": "2026-10-04T21:15:47Z"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "artifact": "Single GUI Agent Boundary Evidence",
+  "work_package": "W013",
+  "gate": "G2",
+  "timestamp_utc": "2026-10-01T22:20:00Z",
+  "status": "success",
+  "controller_module": "src/jev_cscape/automation/gui_controller.py",
+  "test_module": "tests/test_gui_controller.py",
+  "invariants": {
+    "exclusive_desktop_session": "winsta0\\Default",
+    "inter_process_lock_mechanism": "File-backed atomic O_CREAT | O_EXCL mutex (work/disposable/cscape_gui.lock)",
+    "multi_agent_contention_policy": "Fail closed with status: blocked and error_code: GUI_CONTENTION_BLOCKED",
+    "hwnd_verification": {
+      "is_window_valid": true,
+      "is_window_visible": true,
+      "is_not_minimized": true,
+      "synthetic_success_prohibited": true
+    }
+  }
+}

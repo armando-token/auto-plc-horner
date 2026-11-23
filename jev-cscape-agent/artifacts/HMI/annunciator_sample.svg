@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" class="cscape-annunciator-matrix">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        .cscape-annunciator-matrix { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        .tag-header { font-size: 13px; font-weight: 700; text-anchor: middle; letter-spacing: 0.8px; }
+        .desc-line { font-size: 11px; font-weight: 500; text-anchor: middle; }
+        .status-value { font-family: 'Consolas', 'Courier New', 'SFMono-Regular', monospace; font-size: 10px; font-weight: 700; text-anchor: middle; letter-spacing: 0.5px; }
+        .header-title { font-size: 15px; font-weight: 800; letter-spacing: 1.2px; fill: #F8FAFC; }
+        .header-subtitle { font-size: 11px; font-weight: 500; letter-spacing: 0.6px; fill: #94A3B8; }
+        @keyframes fast-blink { 0%, 49.9% { opacity: 1.0; } 50%, 100% { opacity: 0.28; } }
+        @keyframes slow-blink { 0%, 49.9% { opacity: 1.0; } 50%, 100% { opacity: 0.28; } }
+        .flash-fast { animation: fast-blink 0.5s infinite steps(1, end); }
+        .flash-slow { animation: slow-blink 2.0s infinite steps(1, end); }
+      ]]>
+    </style>
+    <filter id="tile-drop-shadow" x="-8%" y="-8%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="3.0" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <linearGradient id="panel-chassis-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0F172A"/><stop offset="50%" stop-color="#0B0F19"/><stop offset="100%" stop-color="#070A10"/></linearGradient>
+    <linearGradient id="bezel-metallic-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2D3748"/><stop offset="40%" stop-color="#1E293B"/><stop offset="100%" stop-color="#0F172A"/></linearGradient>
+    <linearGradient id="lens-sheen-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/><stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.05"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/></linearGradient>
+    <linearGradient id="lens-grad-critical-lit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#991B1B"/></linearGradient>
+    <linearGradient id="lens-grad-critical-unlit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1E1214"/><stop offset="100%" stop-color="#12090B"/></linearGradient>
+    <linearGradient id="lens-grad-high-lit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#B45309"/></linearGradient>
+    <linearGradient id="lens-grad-high-unlit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1E180E"/><stop offset="100%" stop-color="#120F08"/></linearGradient>
+    <linearGradient id="lens-grad-medium-lit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FACC15"/><stop offset="100%" stop-color="#A16207"/></linearGradient>
+    <linearGradient id="lens-grad-medium-unlit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1E1D0C"/><stop offset="100%" stop-color="#121206"/></linearGradient>
+    <linearGradient id="lens-grad-info-lit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#0E7490"/></linearGradient>
+    <linearGradient id="lens-grad-info-unlit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0C1820"/><stop offset="100%" stop-color="#060F16"/></linearGradient>
+    <linearGradient id="lens-grad-normal-lit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#065F46"/></linearGradient>
+    <linearGradient id="lens-grad-normal-unlit" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#182030"/><stop offset="100%" stop-color="#0F172A"/></linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#panel-chassis-grad)"/>
+  <rect x="1" y="1" width="798" height="478" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+  <g id="panel-header">
+    <rect width="800" height="46.0" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <line x1="0" y1="46.0" x2="800" y2="46.0" stroke="#334155" stroke-width="1.2"/>
+    <text x="24" y="22" class="header-title">SCADA PROCESS ALARM ANNUNCIATOR</text>
+    <text x="24" y="38" class="header-subtitle">AREA 01 — FEEDWATER &amp; CONDENSER TRAIN</text>
+    <rect x="686.0" y="11" width="90" height="24" rx="4" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="731.0" y="27" font-size="11" font-weight="700" fill="#EF4444" text-anchor="middle">ACTIVE: 3</text>
+    <rect x="581.0" y="11" width="95" height="24" rx="4" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="628.5" y="27" font-size="11" font-weight="700" fill="#F59E0B" text-anchor="middle">UNACK: 1</text>
+    <rect x="486.0" y="11" width="85" height="24" rx="4" fill="#EF4444" stroke="#F87171" stroke-width="1.2"/>
+    <text x="528.5" y="27" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">HORN ON</text>
+  </g>
+  <g id="annunciator-grid">
+    <g id="tile-0" transform="translate(26.0, 82.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-critical-lit)" stroke="#FCA5A5" stroke-width="1.5"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#FFFFFF" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">★ ◆ P-101A TRIP</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#FEF2F2" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">FEED PUMP BEARING</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#FEF2F2" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">HIGH TEMP</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(69, 10, 10, 0.70)" stroke="#F87171" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#FEE2E2">92.4 °C | TRIP</text>
+      </g>
+    </g>
+    <g id="tile-1" transform="translate(216.0, 82.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-critical-lit)" stroke="#FCA5A5" stroke-width="1.5"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#FFFFFF" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">◆ P-101B TRIP</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#FEF2F2" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">AUX PUMP HYDRAULIC</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#FEF2F2" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">LOW PRESS</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(69, 10, 10, 0.70)" stroke="#F87171" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#FEE2E2">18.2 PSI | TRIP</text>
+      </g>
+    </g>
+    <g id="tile-2" transform="translate(406.0, 82.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container flash-fast">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-high-lit)" stroke="#FDE68A" stroke-width="1.5"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#FFFFFF" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">▼ TK-201 HIGH</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#FFFBEB" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">STORAGE TANK</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#FFFBEB" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85));">OVERFLOW WARNING</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(69, 26, 3, 0.70)" stroke="#FBBF24" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#FEF3C7">94.2 % | HIGH</text>
+      </g>
+    </g>
+    <g id="tile-3" transform="translate(596.0, 82.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-high-unlit)" stroke="#3D2E16" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">▼ TK-201 LOW</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">STORAGE TANK MINIMUM</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">LEVEL</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-4" transform="translate(26.0, 194.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-critical-unlit)" stroke="#3B1C22" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">◆ HX-301 LEAK</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">HEAT EXCHANGER TUBE</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">LEAK</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-5" transform="translate(216.0, 194.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-medium-unlit)" stroke="#3C3814" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">■ V-102 FAULT</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">CONDENSER BYPASS</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">VALVE MISMATCH</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-6" transform="translate(406.0, 194.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-medium-unlit)" stroke="#3C3814" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">■ V-104 STALL</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">DEAERATOR INLET</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">ISOLATION</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-7" transform="translate(596.0, 194.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-high-unlit)" stroke="#3D2E16" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">▼ GEN-1 FLT</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">MAIN GENERATOR</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">STATOR TEMP</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-8" transform="translate(26.0, 306.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-info-unlit)" stroke="#15324E" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">● NET-01 STALE</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">MODBUS TELEMETRY</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">POLLING TIMEOUT</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-9" transform="translate(216.0, 306.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-info-unlit)" stroke="#15324E" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">● UPS-1 BATT</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">CONTROL PANEL 24V</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">UPS ON BATTERY</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-10" transform="translate(406.0, 306.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-info-unlit)" stroke="#15324E" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">● CALIB DUE</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">STEAM FLOWMETER</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">CALIBRATION DUE</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+    <g id="tile-11" transform="translate(596.0, 306.0)">
+      <rect width="178.0" height="100.0" rx="4.0" fill="url(#bezel-metallic-grad)" stroke="#334155" stroke-width="1.5" filter="url(#tile-drop-shadow)"/>
+      <line x1="2" y1="2" x2="176.0" y2="2" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="2" x2="2" y2="98.0" stroke="#64748B" stroke-width="1" stroke-opacity="0.8"/>
+      <line x1="2" y1="98.5" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <line x1="176.5" y1="2" x2="176.5" y2="98.5" stroke="#070A10" stroke-width="1.2"/>
+      <g class="lens-container">
+        <rect x="6.0" y="6.0" width="166.0" height="88.0" rx="2.5" fill="url(#lens-grad-normal-unlit)" stroke="#334155" stroke-width="1.0"/>
+        <path d="M 6.0 7.0 Q 89.0 20.0 172.0 7.0 L 172.0 34.0 Q 89.0 44.0 6.0 34.0 Z" fill="url(#lens-sheen-grad)"/>
+        <text x="89.0" y="23.0" class="tag-header" fill="#94A3B8">✔ SYS OK</text>
+        <line x1="27.0" y1="30.5" x2="151.0" y2="30.5" stroke="#334155" stroke-opacity="0.4" stroke-width="0.8"/>
+        <text x="89.0" y="43.0" class="desc-line" fill="#64748B">ALL INTERLOCKS</text>
+        <text x="89.0" y="57.5" class="desc-line" fill="#64748B">NORMAL AND ACTIVE</text>
+        <rect x="17.0" y="73.0" width="144.0" height="16.5" rx="3" fill="rgba(15, 23, 42, 0.60)" stroke="#334155" stroke-width="0.8"/>
+        <text x="89.0" y="85.0" class="status-value" fill="#475569">NORMAL</text>
+      </g>
+    </g>
+  </g>
+  <g id="operator-toolbar" transform="translate(0, 442.0)">
+    <rect width="800" height="38.0" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <line x1="0" y1="0" x2="800" y2="0" stroke="#334155" stroke-width="1.2"/>
+    <g id="btn-M98" transform="translate(95.0, 5.0)">
+      <rect width="190.0" height="28.0" rx="4" fill="#334155" stroke="#EF4444" stroke-width="1.2"/>
+      <circle cx="16" cy="14.0" r="4" fill="#EF4444" stroke="#EF4444" stroke-width="0.8"/>
+      <text x="30" y="18.0" font-size="11" font-weight="700" fill="#F8FAFC">ACKNOWLEDGE</text>
+      <text x="178.0" y="17.0" font-size="9" font-family="'Consolas', 'Courier New', 'SFMono-Regular', monospace" font-weight="600" fill="#64748B" text-anchor="end">%M98</text>
+    </g>
+    <g id="btn-M99" transform="translate(305.0, 5.0)">
+      <rect width="190.0" height="28.0" rx="4" fill="#334155" stroke="#F59E0B" stroke-width="1.2"/>
+      <circle cx="16" cy="14.0" r="4" fill="#F59E0B" stroke="#F59E0B" stroke-width="0.8"/>
+      <text x="30" y="18.0" font-size="11" font-weight="700" fill="#F8FAFC">SILENCE / RESET</text>
+      <text x="178.0" y="17.0" font-size="9" font-family="'Consolas', 'Courier New', 'SFMono-Regular', monospace" font-weight="600" fill="#64748B" text-anchor="end">%M99</text>
+    </g>
+    <g id="btn-TEST" transform="translate(515.0, 5.0)">
+      <rect width="190.0" height="28.0" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1.2"/>
+      <circle cx="16" cy="14.0" r="4" fill="#334155" stroke="#475569" stroke-width="0.8"/>
+      <text x="30" y="18.0" font-size="11" font-weight="700" fill="#F8FAFC">LAMP TEST</text>
+      <text x="178.0" y="17.0" font-size="9" font-family="'Consolas', 'Courier New', 'SFMono-Regular', monospace" font-weight="600" fill="#64748B" text-anchor="end">TEST</text>
+    </g>
+  </g>
+</svg>

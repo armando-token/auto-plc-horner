@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Continuous Catalytic Reforming (CCR) Multi-Bed ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W161",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Continuous Catalytic Reforming (CCR) Multi-Bed ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1220..%R1227 and %M284..%M286 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "Three_Stage_Radial_Flow_Moving_Bed_Hydrodynamics",
+        "passed": true,
+        "details": "Radial flow verified: dP_bed1=0.078 bar, dP_bed2=0.059 bar, dP_bed3=0.047 bar, dP_total=0.184 bar, u_solid=0.34 m/h."
+      },
+      {
+        "stage": 3,
+        "check": "Naphtha_Aromatization_Reaction_Kinetics_And_Thermodynamics",
+        "passed": true,
+        "details": "Kinetics verified: k_dhc(510C)=1.12e-01/s, k_dhn(510C)=7.08e+00/s, k_hck(510C)=3.46e-02/s, RON=102.1, Q_endotherm=21150 kW."
+      },
+      {
+        "stage": 4,
+        "check": "Inter_Stage_Furnace_Reheaters_And_Multi_Bed_Endotherm_Profiles",
+        "passed": true,
+        "details": "Thermal profiles verified: Delta T1=45.0\u00b0C > Delta T2=30.0\u00b0C > Delta T3=25.0\u00b0C; Combined furnace duty=24191 kW."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_High_Order_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: T_bed1=465.6\u00b0C, T_bed2=480.4\u00b0C, T_bed3=485.4\u00b0C, Aromatics=72.0%, RON=102.2."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=0.000e+00 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10), elemental_residual=0.000e+00 kg/s."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xBA01, 0xBA02, 0xBA03, 0xBA04) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1220=5100, %R1221=4850, %R1222=50, %R1223=30, %R1224=720, %R1225=1020, %R1226=1200, %R1227=0x0000, %M284=True, %M285=False, %M286=True."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Settling_Stability",
+        "passed": true,
+        "details": "Transient response to +3 \u00b0C furnace disturbance verified cleanly over 10.0s: T_bed1=466.5\u00b0C, T_bed3=485.8\u00b0C, Permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1220..%R1227",
+      "discrete_coils": "%M284..%M286",
+      "values": {
+        "%R1220": 5100,
+        "%R1221": 4850,
+        "%R1222": 50,
+        "%R1223": 30,
+        "%R1224": 720,
+        "%R1225": 1020,
+        "%R1226": 1200,
+        "%R1227": 0,
+        "%M284": true,
+        "%M285": false,
+        "%M286": true
+      }
+    },
+    "timestamp": "2026-10-05T04:10:34Z"
+  }
+}

@@ -1,0 +1,114 @@
+# profiles/cscape-reference.yaml - Reference Profile for Cscape 10.2
+profile_metadata:
+  profile_version: "1.0.0"
+  generated_at_utc: "2026-10-01T21:00:00Z"
+  target_application: "Horner APG Cscape"
+
+executable:
+  path: "C:\\Program Files (x86)\\Cscape 10.2\\Cscape.exe"
+  version_exact: "10.2.751.4"
+  architecture: "x86_32bit"
+  pe_machine_code: "0x014c"
+  subsystem: "IMAGE_SUBSYSTEM_WINDOWS_GUI"
+  subsystem_code: 2
+  size_bytes: 17663488
+  sha256: "4b82560db103b4f26a9163bee3ae29439712c1c69ccaac11d0e898e51dcde405"
+  file_description: "Cscape"
+  product_name: "Cscape"
+  company_name: "Horner APG, LLC"
+
+installation:
+  install_directory: "C:\\Program Files (x86)\\Cscape 10.2\\"
+  registry_hive: "HKLM"
+  registry_key: "Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{A780CECE-F628-4F37-86B7-1B698FB8A0AC}"
+  publisher: "Horner APG, LLC"
+  mui_language_id: 1033
+  language: "English (United States)"
+
+display_environment:
+  screen_resolution: "1280x760"
+  dpi: 96
+  scaling_percentage: 100.0
+
+file_associations:
+  csp:
+    extension: ".csp"
+    registered_type: "csp.Cscape"
+    description: "Cscape Single File Project Container (CFBF/OLE2)"
+  cpj:
+    extension: ".cpj"
+    registered_type: "cpj.Cscape"
+    description: "Cscape Multi-File Project Container"
+
+win32_command_map:
+  error_check:
+    command_id: 32826
+    description: "Program -> Error Check (Compile ST/Ladder POUs)"
+    accelerator: "Ctrl+F7"
+    policy: "PERMITTED_INSPECTION"
+  program_download:
+    command_id: 32827
+    description: "Program -> Download to Controller"
+    accelerator: null
+    policy: "FAIL_CLOSED_BLOCKED"
+  controller_download:
+    command_id: 33149
+    description: "Controller -> Download"
+    accelerator: null
+    policy: "FAIL_CLOSED_BLOCKED"
+
+st_to_ladder_conversion:
+  menu_item: null
+  accelerator: null
+  exported_function: null
+  ole_automation_method: null
+  status: "BLOCKED_NATIVE: DOCUMENT_ONLY"
+  notes: "Cscape 10.2 contains zero GUI menus, accelerators, or DLL exports for ST-to-LD conversion."
+
+companion_dlls:
+  W5EditST.dll:
+    size_bytes: 4174544
+    exports:
+      - "K5ExecuteCommand"
+      - "K5GetClassName"
+    st_ld_converter_exports: null
+  W5EditLD.dll:
+    size_bytes: 5082832
+    exports:
+      - "K5ExecuteCommand"
+      - "K5GetClassName"
+    st_ld_converter_exports: null
+  K5Cmp.dll:
+    size_bytes: 5231824
+    exports_count: 40
+    st_ld_converter_exports: null
+  K5MW.dll:
+    size_bytes: 4033232
+    exports_count: 111
+    st_ld_converter_exports: null
+  K5CBM.dll:
+    size_bytes: 3401424
+    exports_count: 18
+    st_ld_converter_exports: null
+
+companion_flash_utilities:
+  PGMUpdateUtility.exe:
+    path: "C:\\Program Files (x86)\\Cscape 10.2\\PGMUpdateUtility.exe"
+    size_bytes: 63488
+    sha256_prefix: "46c98926688b7438"
+    lockout_policy: "FAIL_CLOSED_EXECUTION_BLOCKED"
+  DfuSeCommand.exe:
+    path: "C:\\Program Files (x86)\\Cscape 10.2\\DfuSeCommand.exe"
+    size_bytes: 27648
+    sha256_prefix: "f60c79d21fa1a28c"
+    lockout_policy: "FAIL_CLOSED_EXECUTION_BLOCKED"
+  STMFlashLoader.exe:
+    path: "C:\\Program Files (x86)\\Cscape 10.2\\STMFlashLoader.exe"
+    size_bytes: 41472
+    sha256_prefix: "ba3a75c8870c5746"
+    lockout_policy: "FAIL_CLOSED_EXECUTION_BLOCKED"
+  WinJTAG.exe:
+    path: "C:\\Program Files (x86)\\Cscape 10.2\\WinJTAG.exe"
+    size_bytes: 249856
+    sha256_prefix: "dca5a3ea52ef656f"
+    lockout_policy: "FAIL_CLOSED_EXECUTION_BLOCKED"

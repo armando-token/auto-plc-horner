@@ -1,0 +1,65 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic 9-stage CIP Energy Management verification passed.",
+  "data": {
+    "stages_passed": 9,
+    "total_stages": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "check": "POU_ST_Syntax_Validation_And_Anti_Ladder_Check",
+        "passed": true,
+        "details": "POU 'CipEnergySync' verified clean; 10 registers bound; anti-ladder verified."
+      },
+      {
+        "stage": 2,
+        "check": "ODVA_Volume_6_Energy_Objects_Resolution",
+        "passed": true,
+        "details": "ODVA Class 0x4F (Energy Mgmt) & Class 0x50 (Base) attributes resolved deterministically."
+      },
+      {
+        "stage": 3,
+        "check": "Real_Time_Power_Metrics_And_4_Quadrant_Metering",
+        "passed": true,
+        "details": "Power triangle S=157.70 kVA, PF=0.9195; all 4 quadrants (Q1..Q4) verified."
+      },
+      {
+        "stage": 4,
+        "check": "Dual_16Bit_Energy_Accumulator_And_Word_Encoding",
+        "passed": true,
+        "details": "Energy integration verified (145.0 kWh); dual 16-bit DINT word encoding validated."
+      },
+      {
+        "stage": 5,
+        "check": "Peak_Demand_Sliding_Window_Profiler",
+        "passed": true,
+        "details": "Sliding window demand profiler verified: step avg 1=150.0 kW, step avg 2=200.0 kW."
+      },
+      {
+        "stage": 6,
+        "check": "Energy_State_Machine_Transitions",
+        "passed": true,
+        "details": "State machine transitions between Operational, EnergySaving, and NonOperational verified."
+      },
+      {
+        "stage": 7,
+        "check": "Automatic_Peak_Demand_Curtailment_Trip",
+        "passed": true,
+        "details": "Curtailment trip active (%M423=True, 0xEC01); recovery on reset validated."
+      },
+      {
+        "stage": 8,
+        "check": "Register_Table_Sync_And_Fault_Protections",
+        "passed": true,
+        "details": "Horner OCS %R1810..%R1817, %M422..%M423 verified; faults 0xEC02, 0xEC03, 0xEC04 confirmed."
+      },
+      {
+        "stage": 9,
+        "check": "ILogicUnit_100_Cycle_ScanContext_Simulation",
+        "passed": true,
+        "details": "100-cycle simulation completed; elapsed=1.0s, energy=0.040278 kWh."
+      }
+    ]
+  }
+}

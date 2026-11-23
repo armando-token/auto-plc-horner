@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#161B22" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0B0F19" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="focusGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Viewport Dark Industrial Background -->
+  <rect x="0" y="0" width="1200" height="750" fill="#0B0F19" />
+
+  <!-- Top Header Banner Panel -->
+  <rect x="20" y="16" width="1160" height="60" rx="8" fill="url(#headerGrad)" stroke="#21262D" stroke-width="1.5" />
+  <text x="40" y="44" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold">PARALLEL COORDINATES MULTIDIMENSIONAL TELEMETRY SCADA CANVAS</text>
+  <text x="40" y="62" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Caprolactam Beckmann Gas-Phase Fluidized Bed Rearrangement Telemetry (Wave W240 | Horner OCS %R2010..%R2017, %M469..%M470)</text>
+
+  <!-- Header Status Pill -->
+  <rect x="1010" y="28" width="150" height="34" rx="17" fill="#050811" stroke="#10B981" stroke-width="1.5" />
+  <circle cx="1028" cy="45" r="5" fill="#10B981" />
+  <text x="1042" y="49" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold">NOMINAL TELEMETRY</text>
+
+  <!-- Main Canvas Card Container -->
+  <rect x="20.0" y="86.0" width="1160.0" height="644.0" rx="8" fill="#161B22" stroke="#21262D" stroke-width="1.5" />
+
+  <!-- Horizontal Tick Graduation Guidelines -->
+  <line x1="50.0" y1="686.00" x2="1150.0" y2="686.00" stroke="#21262D" stroke-dasharray="4,4" stroke-width="1.0" />
+  <line x1="50.0" y1="548.00" x2="1150.0" y2="548.00" stroke="#21262D" stroke-dasharray="4,4" stroke-width="1.0" />
+  <line x1="50.0" y1="410.00" x2="1150.0" y2="410.00" stroke="#21262D" stroke-dasharray="4,4" stroke-width="1.0" />
+  <line x1="50.0" y1="272.00" x2="1150.0" y2="272.00" stroke="#21262D" stroke-dasharray="4,4" stroke-width="1.0" />
+  <line x1="50.0" y1="134.00" x2="1150.0" y2="134.00" stroke="#21262D" stroke-dasharray="4,4" stroke-width="1.0" />
+
+  <!-- 6 Dimension Axes -->
+  <line x1="80.00" y1="134.00" x2="80.00" y2="686.00" stroke="#06B6D4" stroke-width="2.5" />
+  <text x="80.00" y="114.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Bed Temperature</text>
+  <text x="80.00" y="128.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">[°C]</text>
+  <line x1="75.00" y1="686.00" x2="85.00" y2="686.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="72.00" y="689.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">300</text>
+  <line x1="75.00" y1="548.00" x2="85.00" y2="548.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="72.00" y="551.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">325</text>
+  <line x1="75.00" y1="410.00" x2="85.00" y2="410.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="72.00" y="413.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">350</text>
+  <line x1="75.00" y1="272.00" x2="85.00" y2="272.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="72.00" y="275.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">375</text>
+  <line x1="75.00" y1="134.00" x2="85.00" y2="134.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="72.00" y="137.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">400</text>
+  <text x="80.00" y="708.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">R_BED_TEMP</text>
+  <line x1="288.00" y1="134.00" x2="288.00" y2="686.00" stroke="#475569" stroke-width="1.5" />
+  <text x="288.00" y="114.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Operating Pressure</text>
+  <text x="288.00" y="128.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">[bar]</text>
+  <line x1="283.00" y1="686.00" x2="293.00" y2="686.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="280.00" y="689.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">0.8</text>
+  <line x1="283.00" y1="548.00" x2="293.00" y2="548.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="280.00" y="551.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">1.1</text>
+  <line x1="283.00" y1="410.00" x2="293.00" y2="410.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="280.00" y="413.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">1.4</text>
+  <line x1="283.00" y1="272.00" x2="293.00" y2="272.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="280.00" y="275.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">1.7</text>
+  <line x1="283.00" y1="134.00" x2="293.00" y2="134.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="280.00" y="137.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">2.0</text>
+  <text x="288.00" y="708.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">R_OP_PRESS</text>
+  <line x1="496.00" y1="134.00" x2="496.00" y2="686.00" stroke="#475569" stroke-width="1.5" />
+  <text x="496.00" y="114.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Oxime Conversion</text>
+  <text x="496.00" y="128.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">[%]</text>
+  <line x1="491.00" y1="686.00" x2="501.00" y2="686.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="488.00" y="689.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">90.0</text>
+  <line x1="491.00" y1="548.00" x2="501.00" y2="548.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="488.00" y="551.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">92.5</text>
+  <line x1="491.00" y1="410.00" x2="501.00" y2="410.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="488.00" y="413.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">95.0</text>
+  <line x1="491.00" y1="272.00" x2="501.00" y2="272.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="488.00" y="275.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">97.5</text>
+  <line x1="491.00" y1="134.00" x2="501.00" y2="134.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="488.00" y="137.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">100.0</text>
+  <text x="496.00" y="708.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">R_OX_CONV</text>
+  <line x1="704.00" y1="134.00" x2="704.00" y2="686.00" stroke="#475569" stroke-width="1.5" />
+  <text x="704.00" y="114.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Caprolactam Selectivity</text>
+  <text x="704.00" y="128.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">[%]</text>
+  <line x1="699.00" y1="686.00" x2="709.00" y2="686.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="696.00" y="689.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">85.0</text>
+  <line x1="699.00" y1="548.00" x2="709.00" y2="548.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="696.00" y="551.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">88.8</text>
+  <line x1="699.00" y1="410.00" x2="709.00" y2="410.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="696.00" y="413.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">92.5</text>
+  <line x1="699.00" y1="272.00" x2="709.00" y2="272.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="696.00" y="275.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">96.2</text>
+  <line x1="699.00" y1="134.00" x2="709.00" y2="134.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="696.00" y="137.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">100.0</text>
+  <text x="704.00" y="708.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">R_CAP_SEL</text>
+  <line x1="912.00" y1="134.00" x2="912.00" y2="686.00" stroke="#475569" stroke-width="1.5" />
+  <text x="912.00" y="114.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Superficial Velocity</text>
+  <text x="912.00" y="128.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">[m/s]</text>
+  <line x1="907.00" y1="686.00" x2="917.00" y2="686.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="904.00" y="689.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">0.2</text>
+  <line x1="907.00" y1="548.00" x2="917.00" y2="548.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="904.00" y="551.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">0.4</text>
+  <line x1="907.00" y1="410.00" x2="917.00" y2="410.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="904.00" y="413.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">0.5</text>
+  <line x1="907.00" y1="272.00" x2="917.00" y2="272.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="904.00" y="275.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">0.7</text>
+  <line x1="907.00" y1="134.00" x2="917.00" y2="134.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="904.00" y="137.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">0.8</text>
+  <text x="912.00" y="708.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">R_SUP_VEL</text>
+  <line x1="1120.00" y1="134.00" x2="1120.00" y2="686.00" stroke="#475569" stroke-width="1.5" />
+  <text x="1120.00" y="114.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">Vibration Level</text>
+  <text x="1120.00" y="128.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">[mm/s]</text>
+  <line x1="1115.00" y1="686.00" x2="1125.00" y2="686.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="1112.00" y="689.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">0.0</text>
+  <line x1="1115.00" y1="548.00" x2="1125.00" y2="548.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="1112.00" y="551.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">2.5</text>
+  <line x1="1115.00" y1="410.00" x2="1125.00" y2="410.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="1112.00" y="413.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">5.0</text>
+  <line x1="1115.00" y1="272.00" x2="1125.00" y2="272.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="1112.00" y="275.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">7.5</text>
+  <line x1="1115.00" y1="134.00" x2="1125.00" y2="134.00" stroke="#30363D" stroke-width="1.5" />
+  <text x="1112.00" y="137.00" text-anchor="end" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="9">10.0</text>
+  <text x="1120.00" y="708.00" text-anchor="middle" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">R_VIB_LVL</text>
+
+  <!-- Interactive Brushing Window Overlay -->
+  <rect x="62.00" y="352.00" width="36" height="116.00" rx="4" fill="#06B6D4" fill-opacity="0.15" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3,3" />
+  <text x="102.00" y="366.00" fill="#06B6D4" font-family="Segoe UI, sans-serif" font-size="9" font-weight="bold">BRUSH [116]</text>
+
+  <!-- Telemetry Process Stream Polyline Splines -->
+  <!-- Profile 1: Stream B (Reactor 1) -->
+  <path d="M 80.00,418.28 C 184.00,418.28 184.00,511.20 288.00,511.20 C 392.00,511.20 392.00,222.32 496.00,222.32 C 600.00,222.32 600.00,310.64 704.00,310.64 C 808.00,310.64 808.00,465.20 912.00,465.20 C 1016.00,465.20 1016.00,594.92 1120.00,594.92" fill="none" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.65" />
+  <circle cx="80.00" cy="418.28" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="511.20" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="222.32" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="310.64" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="465.20" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="594.92" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <!-- Profile 2: Stream C (Reactor 2) -->
+  <path d="M 80.00,401.72 C 184.00,401.72 184.00,492.80 288.00,492.80 C 392.00,492.80 392.00,189.20 496.00,189.20 C 600.00,189.20 600.00,288.56 704.00,288.56 C 808.00,288.56 808.00,446.80 912.00,446.80 C 1016.00,446.80 1016.00,605.96 1120.00,605.96" fill="none" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.65" />
+  <circle cx="80.00" cy="401.72" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="492.80" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="189.20" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="288.56" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="446.80" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="605.96" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <!-- Profile 3: Stream D (Batch 101) -->
+  <path d="M 80.00,415.52 C 184.00,415.52 184.00,506.60 288.00,506.60 C 392.00,506.60 392.00,233.36 496.00,233.36 C 600.00,233.36 600.00,318.00 704.00,318.00 C 808.00,318.00 808.00,474.40 912.00,474.40 C 1016.00,474.40 1016.00,592.16 1120.00,592.16" fill="none" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.65" />
+  <circle cx="80.00" cy="415.52" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="506.60" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="233.36" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="318.00" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="474.40" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="592.16" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <!-- Profile 4: Stream E (Batch 102) -->
+  <path d="M 80.00,398.96 C 184.00,398.96 184.00,488.20 288.00,488.20 C 392.00,488.20 392.00,194.72 496.00,194.72 C 600.00,194.72 600.00,295.92 704.00,295.92 C 808.00,295.92 808.00,437.60 912.00,437.60 C 1016.00,437.60 1016.00,600.44 1120.00,600.44" fill="none" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.65" />
+  <circle cx="80.00" cy="398.96" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="488.20" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="194.72" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="295.92" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="437.60" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="600.44" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <!-- Profile 5: Stream F (Batch 103) -->
+  <path d="M 80.00,407.24 C 184.00,407.24 184.00,497.40 288.00,497.40 C 392.00,497.40 392.00,211.28 496.00,211.28 C 600.00,211.28 600.00,306.96 704.00,306.96 C 808.00,306.96 808.00,456.00 912.00,456.00 C 1016.00,456.00 1016.00,597.68 1120.00,597.68" fill="none" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.65" />
+  <circle cx="80.00" cy="407.24" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="497.40" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="211.28" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="306.96" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="456.00" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="597.68" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <!-- Profile 6: Stream G (Run 204) -->
+  <path d="M 80.00,421.04 C 184.00,421.04 184.00,515.80 288.00,515.80 C 392.00,515.80 392.00,205.76 496.00,205.76 C 600.00,205.76 600.00,303.28 704.00,303.28 C 808.00,303.28 808.00,446.80 912.00,446.80 C 1016.00,446.80 1016.00,603.20 1120.00,603.20" fill="none" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.65" />
+  <circle cx="80.00" cy="421.04" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="515.80" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="205.76" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="303.28" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="446.80" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="603.20" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <!-- Profile 7: Stream H (Run 205) -->
+  <path d="M 80.00,404.48 C 184.00,404.48 184.00,497.40 288.00,497.40 C 392.00,497.40 392.00,216.80 496.00,216.80 C 600.00,216.80 600.00,314.32 704.00,314.32 C 808.00,314.32 808.00,456.00 912.00,456.00 C 1016.00,456.00 1016.00,598.78 1120.00,598.78" fill="none" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.65" />
+  <circle cx="80.00" cy="404.48" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="497.40" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="216.80" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="314.32" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="456.00" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="598.78" r="2.5" fill="#10B981" stroke="#161B22" stroke-width="1.0" />
+  <!-- Profile 0: Stream A (Golden) -->
+  <path d="M 80.00,410.00 C 184.00,410.00 184.00,502.00 288.00,502.00 C 392.00,502.00 392.00,200.24 496.00,200.24 C 600.00,200.24 600.00,299.60 704.00,299.60 C 808.00,299.60 808.00,456.00 912.00,456.00 C 1016.00,456.00 1016.00,603.20 1120.00,603.20" fill="none" stroke="#06B6D4" stroke-width="3.5" stroke-opacity="1.0" filter="url(#focusGlow)" />
+  <circle cx="80.00" cy="410.00" r="4.5" fill="#06B6D4" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="288.00" cy="502.00" r="4.5" fill="#06B6D4" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="496.00" cy="200.24" r="4.5" fill="#06B6D4" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="704.00" cy="299.60" r="4.5" fill="#06B6D4" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="912.00" cy="456.00" r="4.5" fill="#06B6D4" stroke="#161B22" stroke-width="1.0" />
+  <circle cx="1120.00" cy="603.20" r="4.5" fill="#06B6D4" stroke="#161B22" stroke-width="1.0" />
+
+  <!-- High-Contrast Decoupled Badge Scorecard (WCAG 2.1 AAA > 18:1) -->
+  <rect x="40.00" y="694.00" width="1120.00" height="28.00" rx="6" fill="#050811" stroke="#21262D" stroke-width="1.0" />
+  <text x="120.00" y="712.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, monospace" font-size="10">AXES: 6</text>
+  <text x="280.00" y="712.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, monospace" font-size="10">PROFILES: 8</text>
+  <text x="440.00" y="712.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, monospace" font-size="10">OUTLIERS: 0</text>
+  <text x="600.00" y="712.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, monospace" font-size="10">SELECTED: #0</text>
+  <text x="760.00" y="712.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, monospace" font-size="10">CORRELATION: 0.7850 (7850)</text>
+  <text x="920.00" y="712.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, monospace" font-size="10">BRUSHING: AXIS 0 (W=116)</text>
+  <text x="1080.00" y="712.00" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, monospace" font-size="10">DIAG: 0x0000</text>
+</svg>

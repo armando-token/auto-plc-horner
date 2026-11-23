@@ -1,0 +1,196 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W258",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Force-Directed Spring-Electrical Network SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Topology_Graph_And_Node_Edge_Adjacency_Matrix",
+        "check": "Topology_Graph_And_Node_Edge_Adjacency_Matrix",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 2.140199998393655,
+        "details": "Verified 36 nodes, 52 edges, 36x36 symmetric zero-diagonal adjacency matrix, and single connected component."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.861800042912364,
+        "details": "Validated 'ForceDirectedCanvasSync' POU AST across Horner OCS registers %R2190..%R2197 and coils %M511..%M512."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.0420999713242054,
+        "details": "Rejected all 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Force_Directed_Physics_Convergence",
+        "check": "Force_Directed_Physics_Convergence",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 46.171899884939194,
+        "details": "Verified Coulomb repulsion (k^2/d), Hooke attraction (d^2/k), annealing cooling, and equilibrium (residual 0.00 J/kg, min sep 53.9 px)."
+      },
+      {
+        "stage": 5,
+        "name": "WCAG_AAA_Color_Contrast_Compliance",
+        "check": "WCAG_AAA_Color_Contrast_Compliance",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.07569999434053898,
+        "details": "Verified decoupled badge contrast 20.01:1 (> 18:1), muted text 8.87:1 (> 7:1), and min graphic contrast 5.61:1 (> 3:1)."
+      },
+      {
+        "stage": 6,
+        "name": "Isolated_Node_And_Energy_Instability_Fault_Injections",
+        "check": "Isolated_Node_And_Energy_Instability_Fault_Injections",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 265.9311001189053,
+        "details": "Verified 0x0000 OK, 0x7601 ISOLATED_NODE trip (%M512 asserted), 0x7602 ENERGY_INSTABILITY trip, and clean nominal reset."
+      },
+      {
+        "stage": 7,
+        "name": "Interactive_Node_Selection_And_Dynamic_Popover_Badges",
+        "check": "Interactive_Node_Selection_And_Dynamic_Popover_Badges",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 6.84639997780323,
+        "details": "Verified node selection (Index 5->1) and dynamic decoupled popover badge generation (> 18:1 contrast)."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 7.596899988129735,
+        "details": "Synchronized %R2190=36, %R2191=52, %R2192=2, %R2193=1, %R2194=3, %R2195=210, %R2196=66, %R2197=0, %M511=True, %M512=False."
+      },
+      {
+        "stage": 9,
+        "name": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "check": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 6.729600019752979,
+        "details": "Generated high-res W3C SVG 1.1 (25007 chars) with visual grounding metadata -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\force_directed_canvas_sample.svg."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Topology_Graph_And_Node_Edge_Adjacency_Matrix",
+        "check": "Topology_Graph_And_Node_Edge_Adjacency_Matrix",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 2.140199998393655,
+        "details": "Verified 36 nodes, 52 edges, 36x36 symmetric zero-diagonal adjacency matrix, and single connected component."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.861800042912364,
+        "details": "Validated 'ForceDirectedCanvasSync' POU AST across Horner OCS registers %R2190..%R2197 and coils %M511..%M512."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.0420999713242054,
+        "details": "Rejected all 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Force_Directed_Physics_Convergence",
+        "check": "Force_Directed_Physics_Convergence",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 46.171899884939194,
+        "details": "Verified Coulomb repulsion (k^2/d), Hooke attraction (d^2/k), annealing cooling, and equilibrium (residual 0.00 J/kg, min sep 53.9 px)."
+      },
+      {
+        "stage": 5,
+        "name": "WCAG_AAA_Color_Contrast_Compliance",
+        "check": "WCAG_AAA_Color_Contrast_Compliance",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.07569999434053898,
+        "details": "Verified decoupled badge contrast 20.01:1 (> 18:1), muted text 8.87:1 (> 7:1), and min graphic contrast 5.61:1 (> 3:1)."
+      },
+      {
+        "stage": 6,
+        "name": "Isolated_Node_And_Energy_Instability_Fault_Injections",
+        "check": "Isolated_Node_And_Energy_Instability_Fault_Injections",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 265.9311001189053,
+        "details": "Verified 0x0000 OK, 0x7601 ISOLATED_NODE trip (%M512 asserted), 0x7602 ENERGY_INSTABILITY trip, and clean nominal reset."
+      },
+      {
+        "stage": 7,
+        "name": "Interactive_Node_Selection_And_Dynamic_Popover_Badges",
+        "check": "Interactive_Node_Selection_And_Dynamic_Popover_Badges",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 6.84639997780323,
+        "details": "Verified node selection (Index 5->1) and dynamic decoupled popover badge generation (> 18:1 contrast)."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 7.596899988129735,
+        "details": "Synchronized %R2190=36, %R2191=52, %R2192=2, %R2193=1, %R2194=3, %R2195=210, %R2196=66, %R2197=0, %M511=True, %M512=False."
+      },
+      {
+        "stage": 9,
+        "name": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "check": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 6.729600019752979,
+        "details": "Generated high-res W3C SVG 1.1 (25007 chars) with visual grounding metadata -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\force_directed_canvas_sample.svg."
+      }
+    ],
+    "wcag_compliance": {
+      "badge_contrast": 20.01371665884987,
+      "muted_contrast": 8.873025629298569,
+      "min_graphic_contrast": 5.610288077312328,
+      "meets_wcag_aaa": true
+    },
+    "registers": {
+      "%R2190": 36,
+      "%R2191": 52,
+      "%R2192": 3,
+      "%R2193": 1,
+      "%R2194": 7,
+      "%R2195": 210,
+      "%R2196": 66,
+      "%R2197": 0,
+      "%M511": true,
+      "%M512": false
+    }
+  }
+}
