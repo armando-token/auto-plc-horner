@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "PROFINET IO RT protocol verification: 7/7 checks passed.",
+  "data": {
+    "protocol": "PROFINET IO RT / DCP (IEC 61158-6-10)",
+    "tests": [
+      {
+        "check": "Pure_ST_POU_Validation",
+        "pou_name": "ProfinetIoRtAdapter",
+        "passed": true
+      },
+      {
+        "check": "Forbidden_Ladder_Construct_Rejection",
+        "passed": true
+      },
+      {
+        "check": "DCP_Identify_Discovery_Roundtrip",
+        "passed": true
+      },
+      {
+        "check": "DCP_Set_IP_and_Station_Name",
+        "passed": true
+      },
+      {
+        "check": "PROFINET_IO_RT_Cyclic_Data_Exchange",
+        "passed": true
+      },
+      {
+        "check": "Consumer_IOCS_Fault_Detection",
+        "passed": true
+      },
+      {
+        "check": "Asynchronous_Reset_Handshake",
+        "passed": true
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R430..%R435",
+      "discrete_coils": "%M100..%M101"
+    },
+    "timestamp": 1790990311.1633327
+  }
+}

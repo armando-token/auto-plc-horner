@@ -1,0 +1,206 @@
+{
+  "lockfile_version": "2.0.0",
+  "gate": "G12",
+  "work_package": "W091",
+  "generated_at_utc": "2026-10-16T08:02:00Z",
+  "python_version": "3.12.10",
+  "platform": "win32",
+  "architecture": "x64",
+  "proprietary_binaries_redistributed": false,
+  "direct_dependencies": {
+    "pydantic": {
+      "version": "2.13.5",
+      "license": "MIT",
+      "required": true,
+      "source": "pypi"
+    },
+    "pefile": {
+      "version": "2024.8.26",
+      "license": "MIT",
+      "required": true,
+      "source": "pypi"
+    },
+    "psutil": {
+      "version": "7.2.2",
+      "license": "BSD-3-Clause",
+      "required": true,
+      "source": "pypi"
+    },
+    "pywin32": {
+      "version": "312",
+      "license": "PSF-2.0",
+      "required": true,
+      "source": "pypi"
+    },
+    "pywinauto": {
+      "version": "0.6.9",
+      "license": "BSD-3-Clause",
+      "required": true,
+      "source": "pypi"
+    },
+    "uiautomation": {
+      "version": "2.0.29",
+      "license": "Apache-2.0",
+      "required": true,
+      "source": "pypi"
+    },
+    "comtypes": {
+      "version": "1.4.16",
+      "license": "MIT",
+      "required": true,
+      "source": "pypi"
+    },
+    "olefile": {
+      "version": "0.47",
+      "license": "BSD-2-Clause",
+      "required": true,
+      "source": "pypi"
+    },
+    "pillow": {
+      "version": "12.3.0",
+      "license": "MIT-CMU",
+      "required": true,
+      "source": "pypi"
+    },
+    "httpx2": {
+      "version": "2.12.0",
+      "license": "BSD-3-Clause",
+      "required": true,
+      "source": "pypi"
+    },
+    "httpcore2": {
+      "version": "2.12.0",
+      "license": "BSD-3-Clause",
+      "required": true,
+      "source": "pypi"
+    },
+    "mcp": {
+      "version": "2.1.1",
+      "license": "MIT",
+      "required": true,
+      "source": "pypi"
+    },
+    "anyio": {
+      "version": "4.15.0",
+      "license": "MIT",
+      "required": true,
+      "source": "pypi"
+    },
+    "pytest": {
+      "version": "9.1.1",
+      "license": "MIT",
+      "required": false,
+      "source": "pypi"
+    },
+    "pytest-asyncio": {
+      "version": "1.4.0",
+      "license": "Apache-2.0",
+      "required": false,
+      "source": "pypi"
+    },
+    "pytest-cov": {
+      "version": "7.1.0",
+      "license": "MIT",
+      "required": false,
+      "source": "pypi"
+    }
+  },
+  "optional_modules": {
+    "cua_jev": {
+      "version": "0.1.0-alpha",
+      "license": "MIT / Internal",
+      "status": "embedded_in_source",
+      "required": false
+    },
+    "pywinauto": {
+      "version": "0.6.9",
+      "license": "BSD-3-Clause",
+      "status": "installed_verified",
+      "required": false
+    },
+    "omniparser_u2o2": {
+      "version": "2.0-rc1",
+      "license": "MIT / Apache-2.0",
+      "status": "optional_vision_extra",
+      "required": false
+    }
+  },
+  "external_proprietary_binaries_checksums": {
+    "redistribution_policy": "NEVER_REDISTRIBUTED_CHECKSUM_VERIFICATION_ONLY",
+    "vendor": "Horner APG / Horner Electric",
+    "product": "Cscape 10.2",
+    "build_version": "10.2.751.4",
+    "install_root": "C:\\Program Files (x86)\\Cscape 10.2",
+    "pe_machine": "0x14c (IMAGE_FILE_MACHINE_I386 / 32-bit x86)",
+    "core_binaries": {
+      "Cscape.exe": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\Cscape.exe",
+        "size_bytes": 17663488,
+        "sha256": "4b82560db103b4f26a9163bee3ae29439712c1c69ccaac11d0e898e51dcde405",
+        "role": "Primary Cscape 10.2 IDE Host Executable"
+      },
+      "W5EditST.dll": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\W5EditST.dll",
+        "size_bytes": 4174544,
+        "sha256": "67c7aca5634fb706a0f3f6637de282d7b5e52f7d451c78996d27b4979043e745",
+        "role": "IEC 61131-3 Structured Text Editor & Dialog 108 Variable Table"
+      },
+      "W5EditLD.dll": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\W5EditLD.dll",
+        "size_bytes": 5082832,
+        "sha256": "45dd5b31379173feabf3801cbf1fc98e9f1e19c9a74ca76c28f4814196bb41ec",
+        "role": "IEC 61131-3 / Advanced Ladder Logic Editor"
+      },
+      "K5Cmp.dll": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\K5Cmp.dll",
+        "size_bytes": 5231824,
+        "sha256": "423f4005626dbe0a6f1a04f6871fd5f4c5e726d614ec636f9a54af2027f88b2e",
+        "role": "IEC 61131-3 Compiler Engine"
+      },
+      "K5MW.dll": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\K5MW.dll",
+        "size_bytes": 4033232,
+        "sha256": "e62ca003be9ff8a7a84f2dd3e48318094341fd3055497fd6e46e4a61f25362ba",
+        "role": "Middleware & Project Tree Workspace Engine"
+      },
+      "K5CBM.dll": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\K5CBM.dll",
+        "size_bytes": 3401424,
+        "sha256": "0c9b24926e5db1a9d807c9572e2bacc91b99d36bdd0425379620b7e04f7bb801",
+        "role": "Control Block Manager"
+      }
+    },
+    "locked_out_companion_flashers": {
+      "PGMUpdateUtility.exe": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\PGMUpdateUtility.exe",
+        "size_bytes": 63488,
+        "sha256": "46c98926688b7438f99be213f09f245c6e0f1d867e8739758d74c08887b62238",
+        "safety_policy": "HARD_BLOCKED_EXECUTION_FORBIDDEN"
+      },
+      "DfuSeCommand.exe": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\DfuSeCommand.exe",
+        "size_bytes": 27648,
+        "sha256": "f60c79d21fa1a28cfe40719501fc580f9f5bf31ad175f3b301365707bb1e7ef8",
+        "safety_policy": "HARD_BLOCKED_EXECUTION_FORBIDDEN"
+      },
+      "STMFlashLoader.exe": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\STMFlashLoader.exe",
+        "size_bytes": 41472,
+        "sha256": "ba3a75c8870c5746b3f4defadc30a32e8c63e3aa605917485f4cd2b7808aad6d",
+        "safety_policy": "HARD_BLOCKED_EXECUTION_FORBIDDEN"
+      },
+      "WinJTAG.exe": {
+        "path": "C:\\Program Files (x86)\\Cscape 10.2\\WinJTAG.exe",
+        "size_bytes": 249856,
+        "sha256": "dca5a3ea52ef656f976caf88d6f0a340049c026036c4dbb4ede9ca8b0c6428c9",
+        "safety_policy": "HARD_BLOCKED_EXECUTION_FORBIDDEN"
+      }
+    }
+  },
+  "baseline_project_checksum": {
+    "path": "work/disposable/p1_base.csp",
+    "size_bytes": 458752,
+    "sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+    "mutation_policy": "IMMUTABLE_SOURCE_COPY_ON_WRITE_ONLY"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Delayed Coking Thermal Cracking Drum Vaporization & Coke Morphology ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W167",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Delayed Coking Thermal Cracking Drum Vaporization & Coke Morphology ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1280..%R1287 and %M298..%M300 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "Delayed_Coking_Drum_Hydrodynamics_And_Foam_Swell",
+        "passed": true,
+        "details": "Hydrodynamics verified: u_vap=0.121 m/s, swell_factor=1.28, foam_height=21.92 m (73.1% < 90%), bed_growth=0.85 m/h."
+      },
+      {
+        "stage": 3,
+        "check": "High_Temperature_Residue_Thermal_Cracking_Kinetics",
+        "passed": true,
+        "details": "Kinetics verified: k_crack(495C)=7.47e-01/s, k_cgo(495C)=7.43e-01/s, k_naphtha(495C)=1.25e-01/s, delta H_coke=+210 kJ/kg."
+      },
+      {
+        "stage": 4,
+        "check": "Axial_Endothermic_Temperature_Drop_And_Thermal_Profile",
+        "passed": true,
+        "details": "Thermal profile verified: T_in=495.0\u00b0C -> T_vapor=435.0\u00b0C (Delta T=60.0\u00b0C drop); Q_coke=10500 kW (+210 kJ/kg feed)."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_High_Order_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: T_vap=435.0\u00b0C, y_gasoil=52.0%, CokeYield=28.5%, BedLevel=18.501 m."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=0.000e+00 kg/s (< 1e-10), elemental_residual=0.000e+00 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xC001, 0xC002, 0xC003, 0xC004) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1280=4950, %R1281=4350, %R1282=28, %R1283=11, %R1284=520, %R1285=285, %R1286=185, %R1287=0x0000, %M298=True, %M299=False, %M300=False."
+      },
+      {
+        "stage": 9,
+        "check": "Coke_Bed_Morphology_Growth_And_Transient_Settling",
+        "passed": true,
+        "details": "Transient response to +3 \u00b0C inlet disturbance verified cleanly over 8.0s: Bed growth rate=0.85 m/h (~0.85 m/h), Bed level=18.502 m, T_vapor=437.4\u00b0C, Permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1280..%R1287",
+      "discrete_coils": "%M298..%M300",
+      "values": {
+        "%R1280": 4950,
+        "%R1281": 4350,
+        "%R1282": 28,
+        "%R1283": 11,
+        "%R1284": 520,
+        "%R1285": 285,
+        "%R1286": 185,
+        "%R1287": 0,
+        "%M298": true,
+        "%M299": false,
+        "%M300": false
+      }
+    },
+    "timestamp": "2026-10-05T04:49:29Z"
+  }
+}

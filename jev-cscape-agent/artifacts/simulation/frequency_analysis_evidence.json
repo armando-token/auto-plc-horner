@@ -1,0 +1,54 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Disturbance Frequency Spectrum Analyzer passed across 4 dynamic regimes with verified register synchronization.",
+  "data": {
+    "sampling_parameters": {
+      "dt_s": 0.02,
+      "sampling_frequency_hz": 50.0,
+      "nyquist_frequency_hz": 25.0,
+      "fft_window_size": 512,
+      "frequency_resolution_hz": 0.09765625
+    },
+    "scenarios_evaluated": [
+      {
+        "scenario": "nominal_damped",
+        "state": "NORMAL",
+        "dominant_freq_hz": 0.3984,
+        "m_r": 152.3115,
+        "zeta_est": 0.0405
+      },
+      {
+        "scenario": "underdamped_warning",
+        "state": "UNDERDAMPED_WARNING",
+        "dominant_freq_hz": 0.8013,
+        "m_r": 161.7846,
+        "zeta_est": 0.0393
+      },
+      {
+        "scenario": "valve_hunting",
+        "state": "VALVE_HUNTING",
+        "hunting_index": 0.9944,
+        "dominant_freq_hz": 0.3198
+      },
+      {
+        "scenario": "stability_degraded_critical",
+        "state": "STABILITY_DEGRADED",
+        "dominant_freq_hz": 1.8009,
+        "m_r": 133.6031,
+        "zeta_est": 0.0433
+      }
+    ],
+    "ocs_register_image": {
+      "%M21_underdamped_warning": false,
+      "%M22_valve_hunting_alarm": false,
+      "%M23_stability_degraded_alarm": true,
+      "%M24_data_valid": true,
+      "%R201_dominant_freq_scaled": 180,
+      "%R202_resonance_ratio_scaled": 13360,
+      "%R203_damping_ratio_scaled": 43,
+      "%R204_bandwidth_scaled": 185,
+      "%R205_hunting_index_scaled": 0
+    }
+  }
+}

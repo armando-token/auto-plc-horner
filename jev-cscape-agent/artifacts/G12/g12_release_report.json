@@ -1,0 +1,295 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Gate G12 offline technical delivery, Horner dossier, security/coherence review, and closure completed (W091-W094 + W098 = success; G12_bank = blocked).",
+  "data": {
+    "gate": "G12",
+    "mode": "offline_only",
+    "live_cscape_launched": false,
+    "G12_bank": "blocked",
+    "verdict": "PASS",
+    "generated_at_utc": "2026-10-20T02:59:23.445629+00:00",
+    "work_packages": {
+      "W091": {
+        "status": "success",
+        "error_code": null,
+        "details": "W091 verified: 16 locked packages matched, baseline p1_base.csp SHA-256 verified, 10 external binary checksums recorded (proprietary_binaries_redistributed=False).",
+        "data": {
+          "python_version": "3.12.10",
+          "architecture": "64bit",
+          "clean_install_script": "scripts/g12_clean_install.ps1",
+          "requirements_lockfile": "requirements.lock.txt",
+          "dependencies_lockfile": "DEPENDENCIES.lock.json",
+          "proprietary_binaries_redistributed": false,
+          "locked_packages_count": 16,
+          "package_mismatches": [],
+          "baseline_csp": {
+            "path": "work/disposable/p1_base.csp",
+            "size_bytes": 458752,
+            "sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+            "verified": true
+          },
+          "external_binaries": {
+            "Cscape.exe": {
+              "group": "core",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\Cscape.exe",
+              "present_on_host": true,
+              "size_bytes": 17663488,
+              "sha256": "4b82560db103b4f26a9163bee3ae29439712c1c69ccaac11d0e898e51dcde405",
+              "verified": true
+            },
+            "W5EditST.dll": {
+              "group": "core",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\W5EditST.dll",
+              "present_on_host": true,
+              "size_bytes": 4174544,
+              "sha256": "67c7aca5634fb706a0f3f6637de282d7b5e52f7d451c78996d27b4979043e745",
+              "verified": true
+            },
+            "W5EditLD.dll": {
+              "group": "core",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\W5EditLD.dll",
+              "present_on_host": true,
+              "size_bytes": 5082832,
+              "sha256": "45dd5b31379173feabf3801cbf1fc98e9f1e19c9a74ca76c28f4814196bb41ec",
+              "verified": true
+            },
+            "K5Cmp.dll": {
+              "group": "core",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\K5Cmp.dll",
+              "present_on_host": true,
+              "size_bytes": 5231824,
+              "sha256": "423f4005626dbe0a6f1a04f6871fd5f4c5e726d614ec636f9a54af2027f88b2e",
+              "verified": true
+            },
+            "K5MW.dll": {
+              "group": "core",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\K5MW.dll",
+              "present_on_host": true,
+              "size_bytes": 4033232,
+              "sha256": "e62ca003be9ff8a7a84f2dd3e48318094341fd3055497fd6e46e4a61f25362ba",
+              "verified": true
+            },
+            "K5CBM.dll": {
+              "group": "core",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\K5CBM.dll",
+              "present_on_host": true,
+              "size_bytes": 3401424,
+              "sha256": "0c9b24926e5db1a9d807c9572e2bacc91b99d36bdd0425379620b7e04f7bb801",
+              "verified": true
+            },
+            "PGMUpdateUtility.exe": {
+              "group": "locked_flasher",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\PGMUpdateUtility.exe",
+              "present_on_host": true,
+              "size_bytes": 63488,
+              "sha256": "46c98926688b7438f99be213f09f245c6e0f1d867e8739758d74c08887b62238",
+              "verified": true
+            },
+            "DfuSeCommand.exe": {
+              "group": "locked_flasher",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\DfuSeCommand.exe",
+              "present_on_host": true,
+              "size_bytes": 27648,
+              "sha256": "f60c79d21fa1a28cfe40719501fc580f9f5bf31ad175f3b301365707bb1e7ef8",
+              "verified": true
+            },
+            "STMFlashLoader.exe": {
+              "group": "locked_flasher",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\STMFlashLoader.exe",
+              "present_on_host": true,
+              "size_bytes": 41472,
+              "sha256": "ba3a75c8870c5746b3f4defadc30a32e8c63e3aa605917485f4cd2b7808aad6d",
+              "verified": true
+            },
+            "WinJTAG.exe": {
+              "group": "locked_flasher",
+              "path": "C:\\Program Files (x86)\\Cscape 10.2\\WinJTAG.exe",
+              "present_on_host": true,
+              "size_bytes": 249856,
+              "sha256": "dca5a3ea52ef656f976caf88d6f0a340049c026036c4dbb4ede9ca8b0c6428c9",
+              "verified": true
+            }
+          },
+          "binary_mismatches": []
+        }
+      },
+      "W092": {
+        "status": "success",
+        "error_code": null,
+        "details": "W092 verified: 7 docs in docs/G12/ + .env.example present; all 8 content invariants passed.",
+        "data": {
+          "docs_verified": [
+            "docs/G12/README.md",
+            "docs/G12/01_INSTALL_AND_CONFIG.md",
+            "docs/G12/02_DEMO_AND_NATIVE_PROJECT.md",
+            "docs/G12/03_LIMITATIONS_AND_STOP_RECOVER.md",
+            "docs/G12/04_HORNER_TECHNICAL_DOSSIER.md",
+            "docs/G12/05_W094_RELEASE_REVIEW.md",
+            "docs/G12/06_W098_CLOSURE_AND_V2_BACKLOG.md",
+            ".env.example"
+          ],
+          "content_checks": {
+            "env_example_has_placeholder_key": true,
+            "env_example_has_g12_bank_blocked": true,
+            "limitations_documents_4h_vs_24h": true,
+            "limitations_documents_g12_bank_blocked": true,
+            "limitations_documents_blocked_native_st_ld": true,
+            "limitations_documents_w5editst_opacity": true,
+            "limitations_documents_stop_and_recover": true,
+            "demo_documents_baseline_sha": true
+          },
+          "failed_checks": []
+        }
+      },
+      "W093": {
+        "status": "success",
+        "error_code": null,
+        "details": "W093 verified: JEV 3-layer diagram, capability tables, 16 G0-G11 evidence artifacts indexed with SHA-256, and 6 Horner collaboration questions documented.",
+        "data": {
+          "dossier_path": "docs/G12/04_HORNER_TECHNICAL_DOSSIER.md",
+          "evidence_index_path": "artifacts/G12/w093_horner_evidence_index.json",
+          "indexed_artifact_count": 16,
+          "missing_artifacts": [],
+          "collaboration_questions_count": 6,
+          "checks": {
+            "has_jev_layer_diagram": true,
+            "has_capability_matrix": true,
+            "has_evidence_index": true,
+            "has_6_collaboration_questions": true,
+            "all_16_primary_artifacts_exist": true
+          }
+        }
+      },
+      "W094": {
+        "status": "success",
+        "error_code": null,
+        "details": "W094 release review passed: 0 tracked .env files, 0 .env commits in git history, 0 leaked keys across 1718 tracked files, 0 proprietary binaries redistributed, 0 git remotes, all permissive licenses, and G7-G11 cross-gate coherence verified.",
+        "data": {
+          "tracked_files_scanned": 1718,
+          "security_checks": {
+            "gitignore_blocks_env": true,
+            "zero_tracked_env_files": true,
+            "zero_env_commits_in_git_history": true,
+            "zero_leaked_api_keys_in_tracked_files": true,
+            "zero_tracked_proprietary_binaries": true,
+            "zero_git_remotes_configured": true,
+            "all_licenses_permissive": true
+          },
+          "coherence_checks": {
+            "g7_pass_19_of_20": true,
+            "g8_pass_20_of_20": true,
+            "g9_8_passed_1_pending_1_negative_handled": true,
+            "g10_recoverable_16_of_16": true,
+            "g11_benchmark_270_verified": true,
+            "g11_endurance_229_of_229_4h_honest": true,
+            "g11_acceptance_verdict_pass": true
+          },
+          "tracked_env_files": [],
+          "env_history_commits": [],
+          "leaked_secrets": [],
+          "tracked_proprietary_binaries": [],
+          "git_remotes": [],
+          "non_permissive_packages": []
+        }
+      },
+      "W095": {
+        "title": "Optional Physical PLC Bench Preparation & Loopback Check",
+        "status": "blocked",
+        "error_code": "POL-G12-COMMISSIONING-LOCKOUT"
+      },
+      "W096": {
+        "title": "Optional Physical PLC Controlled Download & Online Status Verification",
+        "status": "blocked",
+        "error_code": "POL-G12-COMMISSIONING-LOCKOUT"
+      },
+      "W097": {
+        "title": "Optional Physical PLC Bench Teardown & Safe State Restoration",
+        "status": "blocked",
+        "error_code": "POL-G12-COMMISSIONING-LOCKOUT"
+      },
+      "W098": {
+        "status": "success",
+        "error_code": null,
+        "details": "Gate G12 offline acceptance closed cleanly: W091-W094 + W098 succeeded, W095-W097 recorded as G12_bank=blocked (no PLC), and v2 backlog prioritized.",
+        "data": {
+          "closure_doc": "docs/G12/06_W098_CLOSURE_AND_V2_BACKLOG.md",
+          "G12_bank": "blocked",
+          "offline_acceptance_verdict": "PASS",
+          "v2_backlog": [
+            {
+              "priority": "P1",
+              "id": "V2-P1-HEADLESS-COMPILER",
+              "title": "Headless Cscape CLI / K5Cmp.dll Direct Harness",
+              "target_gate": "v2.0",
+              "rationale": "Eliminate single-GUI winsta0\\Default bottleneck by invoking K5Cmp.dll or headless CLI compile switches in parallel."
+            },
+            {
+              "priority": "P2",
+              "id": "V2-P2-ENDURANCE-24H",
+              "title": "Full 24-Hour Unattended Endurance Soak (W088-24H)",
+              "target_gate": "v2.0",
+              "rationale": "Extend the certified 4.0-hour (229/229 passed) live W088 endurance soak to a full 24-hour (~1,350 trials) unattended run."
+            },
+            {
+              "priority": "P3",
+              "id": "V2-P3-MULTI-RUNG-LADDER",
+              "title": "Multi-Rung & Parallel Branch Ladder Synthesis",
+              "target_gate": "v2.0",
+              "rationale": "Expand single-rung contact-to-coil placement to multi-rung networks, parallel branches, and TON/TOF/CTU/CTD function blocks."
+            },
+            {
+              "priority": "P4",
+              "id": "V2-P4-HMI-REGISTER-BINDING",
+              "title": "Full HMI Register & Tag Binding inside GrEdit Dialogs",
+              "target_gate": "v2.0",
+              "rationale": "Automate full %R/%M/IEC tag binding inside Numeric Data and Lamp property dialogs."
+            },
+            {
+              "priority": "P5",
+              "id": "V2-P5-CFBF-OFFLINE-DIFF",
+              "title": "Semantic Offline .csp CFBF Stream Differ & Validator",
+              "target_gate": "v2.0",
+              "rationale": "Decode Ladder rungs, TagDatabase rows, and GrEdit screen objects directly from CFBF streams offline."
+            },
+            {
+              "priority": "P6",
+              "id": "V2-P6-SUPERVISED-PLC-BENCH",
+              "title": "Supervised Physical OCS Hardware Bench (W095-W097)",
+              "target_gate": "v2.0",
+              "rationale": "Execute human-authorized hardware-in-the-loop bench tests (W095-W097) when a physical Horner OCS PLC test bench is connected."
+            }
+          ]
+        }
+      }
+    },
+    "g12_hardware_bank": {
+      "status": "blocked",
+      "error_code": "POL-G12-COMMISSIONING-LOCKOUT",
+      "details": "Optional physical PLC bench work packages (W095-W097) are strictly BLOCKED (G12_bank=blocked): no physical Horner OCS PLC connected, and fail-closed hardware lockout (COM1..COM256, USB*, CAN*, JTAG, 32827, 33149, flashers) is permanently active.",
+      "data": {
+        "G12_bank": "blocked",
+        "plc_connected": false,
+        "commissioning_lockout_policy_present": true,
+        "policy_id": "POL-G12-COMMISSIONING-LOCKOUT",
+        "work_packages": {
+          "W095": {
+            "title": "Optional Physical PLC Bench Preparation & Loopback Check",
+            "status": "blocked",
+            "error_code": "POL-G12-COMMISSIONING-LOCKOUT"
+          },
+          "W096": {
+            "title": "Optional Physical PLC Controlled Download & Online Status Verification",
+            "status": "blocked",
+            "error_code": "POL-G12-COMMISSIONING-LOCKOUT"
+          },
+          "W097": {
+            "title": "Optional Physical PLC Bench Teardown & Safe State Restoration",
+            "status": "blocked",
+            "error_code": "POL-G12-COMMISSIONING-LOCKOUT"
+          }
+        }
+      }
+    }
+  }
+}

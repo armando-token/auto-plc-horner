@@ -1,0 +1,101 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "ANSI/ISA-88.01 Batch Phase Engine verified: 13 procedural states, 7-phase recipe sequencing, priority command arbitration (ABORT > STOP > HOLD), process interlocks, and Horner register synchronization (%R230..%R235, %M35..%M44) passed.",
+  "data": {
+    "work_package": "W057",
+    "gate": "G4",
+    "timestamp_utc": "2026-10-02T21:18:04.131860+00:00",
+    "isa88_state_model": {
+      "standard": "ANSI/ISA-88.01-1995 / IEC 61512-1",
+      "total_states": 13,
+      "quiescent_states": [
+        "IDLE",
+        "RUNNING",
+        "COMPLETE",
+        "PAUSED",
+        "HELD",
+        "STOPPED",
+        "ABORTED"
+      ],
+      "transient_states": [
+        "PAUSING",
+        "RESUMING",
+        "HOLDING",
+        "RESTARTING",
+        "STOPPING",
+        "ABORTING"
+      ],
+      "commands_arbitrated": [
+        "START",
+        "PAUSE",
+        "RESUME",
+        "HOLD",
+        "RESTART",
+        "STOP",
+        "ABORT",
+        "RESET"
+      ],
+      "command_priority_order": "ABORT (P1) > STOP (P2) > HOLD (P3) > OPERATIONAL (P4)"
+    },
+    "recipe_sequence": {
+      "recipe_id": 101,
+      "recipe_name": "Standard Neutralization",
+      "total_phases": 7,
+      "phases": [
+        {
+          "phase_id": 1,
+          "name": "Phase 1: Pre-Fill Line Verification",
+          "timeout_s": 60.0
+        },
+        {
+          "phase_id": 2,
+          "name": "Phase 2: Inflow Fill to 1.2m",
+          "timeout_s": 60.0
+        },
+        {
+          "phase_id": 3,
+          "name": "Phase 3: Thermal Heat Exchanger to 60.0C",
+          "timeout_s": 60.0
+        },
+        {
+          "phase_id": 4,
+          "name": "Phase 4: Reaction Dwell & Agitation",
+          "timeout_s": 60.0
+        },
+        {
+          "phase_id": 5,
+          "name": "Phase 5: Catalytic Neutralization",
+          "timeout_s": 60.0
+        },
+        {
+          "phase_id": 6,
+          "name": "Phase 6: Product Discharge Drain to <0.05m",
+          "timeout_s": 60.0
+        },
+        {
+          "phase_id": 7,
+          "name": "Phase 7: Clean-In-Place Rinse",
+          "timeout_s": 60.0
+        }
+      ]
+    },
+    "horner_ocs_register_map": {
+      "%R230": "ISA-88 Current State Code (1=IDLE..13=ABORTED)",
+      "%R231": "Active Recipe Phase Index (1..7)",
+      "%R232": "Phase Elapsed Time (Deciseconds)",
+      "%R233": "Active Recipe Identifier",
+      "%R234": "State Transition Counter",
+      "%R235": "Process Interlock Fault Code",
+      "%AQ1": "Inflow Valve Command Output",
+      "%AQ2": "Thermal Actuator Command Output",
+      "%M35..%M39": "Operator Pulse Command Coils (START, HOLD, RESTART, ABORT, RESET)",
+      "%M40..%M44": "State Annunciation Discrete Bits"
+    },
+    "safety_interlocks_verified": [
+      "Overfill Level Trip (%AI1 > 1.90m -> HOLDING)",
+      "Overtemp Ceiling Trip (%AI3 > 85.0C -> HOLDING)",
+      "Emergency Trip Coil (%M38 -> ABORTING)"
+    ]
+  }
+}

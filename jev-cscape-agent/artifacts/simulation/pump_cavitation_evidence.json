@@ -1,0 +1,59 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Pump Cavitation & NPSH Acoustic Forensics verification completed: 7/7 checks passed.",
+  "data": {
+    "timestamp_utc": "2026-10-03T00:07:36.722829+00:00",
+    "tests_run": 7,
+    "tests_passed": 7,
+    "test_results": [
+      {
+        "name": "normal_single_phase_operation",
+        "status": "pass"
+      },
+      {
+        "name": "vfd_affinity_law_scaling",
+        "status": "pass"
+      },
+      {
+        "name": "incipient_cavitation_detection",
+        "status": "pass"
+      },
+      {
+        "name": "vapor_lock_and_automated_vfd_trip",
+        "status": "pass"
+      },
+      {
+        "name": "supervisory_reset_handshake",
+        "status": "pass"
+      },
+      {
+        "name": "register_table_synchronization",
+        "status": "pass"
+      },
+      {
+        "name": "pure_st_boundary_enforcement",
+        "status": "pass"
+      }
+    ],
+    "regimes_modeled": [
+      "NORMAL",
+      "INCIPIENT",
+      "DEVELOPED",
+      "VAPOR_LOCK"
+    ],
+    "register_mapping": {
+      "vfd_speed_rpm": "%R190",
+      "flow_rate_lpm": "%R191",
+      "discharge_head_m": "%R192",
+      "npsh_available_cm": "%R193",
+      "npsh_required_cm": "%R194",
+      "thoma_sigma_x1000": "%R195",
+      "acoustic_noise_x10db": "%R196",
+      "status_word": "%R197",
+      "enable_coil": "%M67",
+      "vfd_trip_coil": "%M68",
+      "reset_coil": "%M69"
+    }
+  }
+}

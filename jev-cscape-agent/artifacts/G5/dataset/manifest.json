@@ -1,0 +1,3021 @@
+{
+  "dataset_name": "Horner Cscape G5 Vision Dataset",
+  "version": "1.0.0",
+  "total_scenes": 60,
+  "split_summary": {
+    "train": 42,
+    "reserved": 18,
+    "train_percent": 70.0,
+    "reserved_percent": 30.0
+  },
+  "categories": {
+    "HMI": 17,
+    "LADDER": 20,
+    "IEC_AND_WINDOW": 20,
+    "GENERAL": 3
+  },
+  "scenes": [
+    {
+      "scene_id": "scene_001",
+      "file_name": "scene_001.png",
+      "original_source": "artifacts\\G8\\hmi_probe_full.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "831bf90055d804336da69f180119f70be4c9ec60a83311c5b274a6d385db6dc9",
+      "labels": {
+        "canvas_rect": [
+          119,
+          14,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            694,
+            277
+          ],
+          "canvas_nw": [
+            119,
+            14
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_002",
+      "file_name": "scene_002.png",
+      "original_source": "artifacts\\G8\\hmi_probe_canvas.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 922,
+        "height": 172
+      },
+      "sha256": "72aa96b079ee3a373df6c136c2e85a34f19df84b779b6426fcd8510675bffea0",
+      "labels": {
+        "canvas_rect": [
+          28,
+          18,
+          913,
+          113
+        ],
+        "anchors": {
+          "canvas_center": [
+            470,
+            65
+          ],
+          "canvas_nw": [
+            28,
+            18
+          ],
+          "canvas_se": [
+            913,
+            113
+          ],
+          "status_bar_roi": [
+            0,
+            148,
+            922,
+            172
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_003",
+      "file_name": "scene_003.png",
+      "original_source": "artifacts\\G8\\hmi_probe_screen_editor.png",
+      "split": "reserved",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 922,
+        "height": 172
+      },
+      "sha256": "72aa96b079ee3a373df6c136c2e85a34f19df84b779b6426fcd8510675bffea0",
+      "labels": {
+        "canvas_rect": [
+          28,
+          18,
+          913,
+          113
+        ],
+        "anchors": {
+          "canvas_center": [
+            470,
+            65
+          ],
+          "canvas_nw": [
+            28,
+            18
+          ],
+          "canvas_se": [
+            913,
+            113
+          ],
+          "status_bar_roi": [
+            0,
+            148,
+            922,
+            172
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_004",
+      "file_name": "scene_004.png",
+      "original_source": "artifacts\\G8\\hmi_probe_tab.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 922,
+        "height": 172
+      },
+      "sha256": "72aa96b079ee3a373df6c136c2e85a34f19df84b779b6426fcd8510675bffea0",
+      "labels": {
+        "canvas_rect": [
+          28,
+          18,
+          913,
+          113
+        ],
+        "anchors": {
+          "canvas_center": [
+            470,
+            65
+          ],
+          "canvas_nw": [
+            28,
+            18
+          ],
+          "canvas_se": [
+            913,
+            113
+          ],
+          "status_bar_roi": [
+            0,
+            148,
+            922,
+            172
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_005",
+      "file_name": "scene_005.png",
+      "original_source": "artifacts\\G8\\g8_bind_roundtrip_canvas.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 922,
+        "height": 172
+      },
+      "sha256": "ec382c9e97ef943f9177a16838f89f0526c049b1b7967316a8b38525bf5a1589",
+      "labels": {
+        "canvas_rect": [
+          260,
+          13,
+          913,
+          141
+        ],
+        "anchors": {
+          "canvas_center": [
+            586,
+            77
+          ],
+          "canvas_nw": [
+            260,
+            13
+          ],
+          "canvas_se": [
+            913,
+            141
+          ],
+          "status_bar_roi": [
+            0,
+            148,
+            922,
+            172
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_006",
+      "file_name": "scene_006.png",
+      "original_source": "artifacts\\G8\\g8_placement_numeric_display.png",
+      "split": "reserved",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "7362902b636584f4fe65bd024338ead7f85a0dd12cc91583caf574bde0098ddb",
+      "labels": {
+        "canvas_rect": [
+          122,
+          14,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            695,
+            277
+          ],
+          "canvas_nw": [
+            122,
+            14
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_007",
+      "file_name": "scene_007.png",
+      "original_source": "artifacts\\G8\\g8_reopen_screen_editor.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "ff3c0bebecb3f0ee7dfa2f615de41dc7922a04c09bf77339099d01241a218cd1",
+      "labels": {
+        "canvas_rect": [
+          117,
+          15,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            693,
+            278
+          ],
+          "canvas_nw": [
+            117,
+            15
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_008",
+      "file_name": "scene_008.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_01_reopen.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "d94f466875cf4ef8f3ef97ad6a856b7b06952e56ad435651658735a11d81f884",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_009",
+      "file_name": "scene_009.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_02_reopen.png",
+      "split": "reserved",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "05e5509f5959076eb057dc3fd885eccb15599589b03891504f8dc59200d9ce5e",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_010",
+      "file_name": "scene_010.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_03_reopen.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "33d1504d40169ed2ed5737cd239ed79ce4236a95d6bac53b3f25ec2002af01d9",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_011",
+      "file_name": "scene_011.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_04_reopen.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "c5793ef8ff54fe82811147ff64fe3f2b5f41c9532e1788ec6c7ded01464bbdca",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_012",
+      "file_name": "scene_012.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_05_reopen.png",
+      "split": "reserved",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "856531c23e90c491defa82ce0064003ef0388568c768a9e97b3f9185205c291f",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_013",
+      "file_name": "scene_013.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_06_reopen.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "4fd5cb1ed0bef30f24994711a6bee5416568e45b9d318369bdbb22fc7e7358a7",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_014",
+      "file_name": "scene_014.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_07_reopen.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "c6e3c61fdbd62dbf06ba1d8f8547434bd2c1bd8b803d83e8ab8839450d4e8ad7",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_015",
+      "file_name": "scene_015.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_08_reopen.png",
+      "split": "reserved",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "cb6db6fae52e1942be5152c410b7baa0d6e48823edaa45acf5c6236f8f150d07",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_016",
+      "file_name": "scene_016.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_09_reopen.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "8f0d59ba2ccfaf67305cc1739a15663d346023dfaea3cd5d965ae57687d35447",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_017",
+      "file_name": "scene_017.png",
+      "original_source": "artifacts\\G8\\acceptance_runs\\run_10_reopen.png",
+      "split": "train",
+      "scene_type": "hmi_screen_editor",
+      "category": "HMI",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "3b3cef5f0661f1b974ef354d3f90df7a30a88b3e88fe141878692dc65cf23d0f",
+      "labels": {
+        "canvas_rect": [
+          55,
+          14,
+          1271,
+          755
+        ],
+        "anchors": {
+          "canvas_center": [
+            663,
+            384
+          ],
+          "canvas_nw": [
+            55,
+            14
+          ],
+          "canvas_se": [
+            1271,
+            755
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_018",
+      "file_name": "scene_018.png",
+      "original_source": "artifacts\\G7\\sb_ladder_probe_full.png",
+      "split": "reserved",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 27
+      },
+      "sha256": "b8d11e6bf49955dea092289324373b9c80152df32414c7b0acf525fa7ebcd469",
+      "labels": {
+        "canvas_rect": [
+          63,
+          1,
+          1215,
+          2
+        ],
+        "anchors": {
+          "canvas_center": [
+            639,
+            1
+          ],
+          "canvas_nw": [
+            63,
+            1
+          ],
+          "canvas_se": [
+            1215,
+            2
+          ],
+          "status_bar_roi": [
+            0,
+            3,
+            1278,
+            27
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_019",
+      "file_name": "scene_019.png",
+      "original_source": "artifacts\\G7\\sb_placement_step1_open.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 27
+      },
+      "sha256": "77552d4a35cedb0487dbab762cd5cc51eed5ef71e651a8c33b2bbf3bb1c2ba16",
+      "labels": {
+        "canvas_rect": [
+          63,
+          1,
+          1215,
+          2
+        ],
+        "anchors": {
+          "canvas_center": [
+            639,
+            1
+          ],
+          "canvas_nw": [
+            63,
+            1
+          ],
+          "canvas_se": [
+            1215,
+            2
+          ],
+          "status_bar_roi": [
+            0,
+            3,
+            1278,
+            27
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_020",
+      "file_name": "scene_020.png",
+      "original_source": "artifacts\\G7\\sb_placement_step2_after_rung.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 27
+      },
+      "sha256": "77552d4a35cedb0487dbab762cd5cc51eed5ef71e651a8c33b2bbf3bb1c2ba16",
+      "labels": {
+        "canvas_rect": [
+          63,
+          1,
+          1215,
+          2
+        ],
+        "anchors": {
+          "canvas_center": [
+            639,
+            1
+          ],
+          "canvas_nw": [
+            63,
+            1
+          ],
+          "canvas_se": [
+            1215,
+            2
+          ],
+          "status_bar_roi": [
+            0,
+            3,
+            1278,
+            27
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_021",
+      "file_name": "scene_021.png",
+      "original_source": "artifacts\\G7\\sb_placement_step3_after_canvas_click.png",
+      "split": "reserved",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 27
+      },
+      "sha256": "8ec0a690dea5d43337db019eda94b697570be5793b01d1f9308ef035260b8ba2",
+      "labels": {
+        "canvas_rect": [
+          63,
+          1,
+          1215,
+          2
+        ],
+        "anchors": {
+          "canvas_center": [
+            639,
+            1
+          ],
+          "canvas_nw": [
+            63,
+            1
+          ],
+          "canvas_se": [
+            1215,
+            2
+          ],
+          "status_bar_roi": [
+            0,
+            3,
+            1278,
+            27
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_022",
+      "file_name": "scene_022.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_01_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "f3e3d623a13d0b87d514500da11c784a4b24f7663f4abd9d4d85426143953949",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_023",
+      "file_name": "scene_023.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_02_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "6a6523415384ed6b6a0ae3c37217395f2b0195be589ba5af056aa23699985b2a",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_024",
+      "file_name": "scene_024.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_03_reopen.png",
+      "split": "reserved",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "018da37bef4d29cdfd79f72a4909a25619e39be7885fffe1b86d7772f31e93c5",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_025",
+      "file_name": "scene_025.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_04_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "f1a8c55123d04a8bbf92f2bcda56c962142ddd4e3c7db59703f5111619407387",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_026",
+      "file_name": "scene_026.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_05_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "c6478e1a0dddd17f3ac4d39648aa51ed25507022b096e14325a1466944a02da4",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_027",
+      "file_name": "scene_027.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_06_reopen.png",
+      "split": "reserved",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "1d661ee2d15790460d3f021f3f2549839a9003062c2a1aefa5f58b7c48e10d96",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_028",
+      "file_name": "scene_028.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_07_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "cadc4462f9509ef1c105400fa17280b33d3fc77b3443be996227c79a2da110e5",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_029",
+      "file_name": "scene_029.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_08_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "698f3bf2c145d76c8b646796148f0154e03846c3e5950a38656491e912c182bb",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_030",
+      "file_name": "scene_030.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_09_reopen.png",
+      "split": "reserved",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "8b7e6eab7432aab200cb9eb6aa98ffb0392130f6381be0141cd5efd04e89b5f6",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_031",
+      "file_name": "scene_031.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_10_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "34091caa370a72c5985871196f68be12b9c63ceb2110f6e29213b7229a92196e",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_032",
+      "file_name": "scene_032.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_11_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "5fd10700395f12a0a0bddd711f21cc46b67dbf7641eab17fb2a77aaa1ec6a8f0",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_033",
+      "file_name": "scene_033.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_12_reopen.png",
+      "split": "reserved",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "360f504c13a47fb985c2b281f9ba504a16e9ccdaaa6000ac380563865b0b3fe6",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_034",
+      "file_name": "scene_034.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_13_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "7a81b384cc3b227f68d978ad71b02e54aa3b7f55e820e164a6d9fd4f0f576eef",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_035",
+      "file_name": "scene_035.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_14_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "21329510c254669b65bc519cab1e0cef2be36e3c2eb9513029962ec73ee38cb6",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_036",
+      "file_name": "scene_036.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_15_reopen.png",
+      "split": "reserved",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "15c8bd670f3fa43a7771d123fb206f95b44920e5d01309e1ec28a632afd302c9",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_037",
+      "file_name": "scene_037.png",
+      "original_source": "artifacts\\G7\\acceptance_runs\\run_16_reopen.png",
+      "split": "train",
+      "scene_type": "ladder_editor",
+      "category": "LADDER",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "6bbb5c7625f7a8faf05558f3e71bb5b956c18a9e5ba21c487532ff86217d6016",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_038",
+      "file_name": "scene_038.png",
+      "original_source": "artifacts\\G3\\probe_iec_editor_full.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "a52b78df5ec81ed71865ca371a3ff753a29e6067538591e1224041f5e4d9ad19",
+      "labels": {
+        "canvas_rect": [
+          124,
+          15,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            278
+          ],
+          "canvas_nw": [
+            124,
+            15
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_039",
+      "file_name": "scene_039.png",
+      "original_source": "artifacts\\G3\\probe_iec_editor_tab.png",
+      "split": "reserved",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 548,
+        "height": 434
+      },
+      "sha256": "4008cd11c34bcadfe4a0e61cb1ac65b7287c0c4d8f5cbe5860c513efa7b46734",
+      "labels": {
+        "canvas_rect": [
+          12,
+          10,
+          539,
+          396
+        ],
+        "anchors": {
+          "canvas_center": [
+            275,
+            203
+          ],
+          "canvas_nw": [
+            12,
+            10
+          ],
+          "canvas_se": [
+            539,
+            396
+          ],
+          "status_bar_roi": [
+            0,
+            410,
+            548,
+            434
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": [
+            "3"
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": "scene_040",
+      "file_name": "scene_040.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\about_dialog_guard_main_disabled_1791665466.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "980cd2e14f7095fb8bf522af9acbadf076da165e2ff9f470d209f4b5ff305ba8",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_041",
+      "file_name": "scene_041.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\pre_action_guard_main_disabled_1791592198.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "e6f32d6189ba5fdd9bf47d896148dbcb071b42ecf44a901750bdbf4b2006a52e",
+      "labels": {
+        "canvas_rect": [
+          124,
+          19,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            280
+          ],
+          "canvas_nw": [
+            124,
+            19
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_042",
+      "file_name": "scene_042.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\pre_action_guard_main_disabled_1791695464.png",
+      "split": "reserved",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "519be73730252376d27918ea17c01d8b38dac39f9b86a440b8b9fabc3d8bbcfb",
+      "labels": {
+        "canvas_rect": [
+          124,
+          10,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            275
+          ],
+          "canvas_nw": [
+            124,
+            10
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_043",
+      "file_name": "scene_043.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\reopen_startup_main_disabled_1791875532.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "1c416d8518d861a544729916b9018b1a418e439cfbd8b92d9f09c99658d72332",
+      "labels": {
+        "canvas_rect": [
+          51,
+          28,
+          1271,
+          745
+        ],
+        "anchors": {
+          "canvas_center": [
+            661,
+            386
+          ],
+          "canvas_nw": [
+            51,
+            28
+          ],
+          "canvas_se": [
+            1271,
+            745
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": "1*",
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_044",
+      "file_name": "scene_044.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\run_2_startup_main_disabled_1791873998.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1280,
+        "height": 780
+      },
+      "sha256": "28002ab0bf69694924193f6378515d418df3ce5acc5f7f5ecad5e1e18aaee9e4",
+      "labels": {
+        "canvas_rect": [
+          51,
+          28,
+          1271,
+          745
+        ],
+        "anchors": {
+          "canvas_center": [
+            661,
+            386
+          ],
+          "canvas_nw": [
+            51,
+            28
+          ],
+          "canvas_se": [
+            1271,
+            745
+          ],
+          "status_bar_roi": [
+            0,
+            756,
+            1280,
+            780
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": "1*",
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_045",
+      "file_name": "scene_045.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\startup_guard_main_disabled_1791574777.png",
+      "split": "reserved",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "c8b88076d3f0158572848a9d9861761e742d7840ecdc237ecd05621562aac0a5",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_046",
+      "file_name": "scene_046.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\startup_guard_main_disabled_1791592680.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "003f93f1c061f62136dc32fb6e84cbe522a97f0b05baf26c3da31de83b53f955",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_047",
+      "file_name": "scene_047.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\startup_guard_main_disabled_1791603903.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "592b6cd6a7b0de697fff2a599c06a8cf3d7285bdf4b4403ab758036c445f5c17",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_048",
+      "file_name": "scene_048.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\startup_guard_main_disabled_1791684206.png",
+      "split": "reserved",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "4d17bd24d8ccec7ba17f76ca44ef2d8afb7f0ceccf7b9e5f317943f3aed14cf8",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          460
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            244
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            460
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_049",
+      "file_name": "scene_049.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step1_cscape_ready_1791517351.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "037e6d1de9345f7d8ddf5401389170e51301dbe54146648b7f24f40503b3e7fa",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            284
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_050",
+      "file_name": "scene_050.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step1_cscape_ready_1791592380.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "c9a268c9a104c275a3c6087abe0eb19cf562fd24a15e22e5e85dd34869621916",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            284
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_051",
+      "file_name": "scene_051.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step1_cscape_ready_1791684654.png",
+      "split": "reserved",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "cd04febebaadffd0fa64dedbdc99b42960818eb4a002b990c2a4b7cabe2bbf6e",
+      "labels": {
+        "canvas_rect": [
+          306,
+          14,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            787,
+            277
+          ],
+          "canvas_nw": [
+            306,
+            14
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_052",
+      "file_name": "scene_052.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step2_program_variables_pane_ope_1791574719.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "39f848557c27a776972462bb130ec4d663969b6875ee2f9e25089ab1cf10edfd",
+      "labels": {
+        "canvas_rect": [
+          124,
+          19,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            280
+          ],
+          "canvas_nw": [
+            124,
+            19
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_053",
+      "file_name": "scene_053.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step2_program_variables_pane_ope_1791604300.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "747b71b34e458ad171a94de313e994a764b7a809bdc7c502ab9f8dff15639056",
+      "labels": {
+        "canvas_rect": [
+          124,
+          14,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            277
+          ],
+          "canvas_nw": [
+            124,
+            14
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_054",
+      "file_name": "scene_054.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step3_before_right_click_1791576231.png",
+      "split": "reserved",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "f4761d8757d2cc3507275bfbd1cf9f574b5304bed3dfa37b421a107d1a7afeb6",
+      "labels": {
+        "canvas_rect": [
+          124,
+          19,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            280
+          ],
+          "canvas_nw": [
+            124,
+            19
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_055",
+      "file_name": "scene_055.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step3_before_right_click_1791605403.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "f70974636f35f970eea8b54d595358817e8a471abf2eafaf8b4350fb8ad718ad",
+      "labels": {
+        "canvas_rect": [
+          124,
+          14,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            277
+          ],
+          "canvas_nw": [
+            124,
+            14
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_056",
+      "file_name": "scene_056.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step3b_ck5tldlgname_dialog_1791572741.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 188,
+        "height": 26
+      },
+      "sha256": "be45ba546d0ce39ff49437e04712ed291eff57553f2d979ea0894356eed2c732",
+      "labels": {
+        "canvas_rect": [
+          9,
+          1,
+          179,
+          1
+        ],
+        "anchors": {
+          "canvas_center": [
+            94,
+            1
+          ],
+          "canvas_nw": [
+            9,
+            1
+          ],
+          "canvas_se": [
+            179,
+            1
+          ],
+          "status_bar_roi": [
+            0,
+            2,
+            188,
+            26
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_057",
+      "file_name": "scene_057.png",
+      "original_source": "artifacts\\G3\\edit_roundtrip_steps\\step3b_ck5tldlgname_dialog_1791603263.png",
+      "split": "train",
+      "scene_type": "iec_variable_editor",
+      "category": "IEC_AND_WINDOW",
+      "dimensions": {
+        "width": 188,
+        "height": 26
+      },
+      "sha256": "e017d108cb1922e4ac1d24a01b670f456623b81978f29975e2d967dd90c188f0",
+      "labels": {
+        "canvas_rect": [
+          9,
+          1,
+          179,
+          1
+        ],
+        "anchors": {
+          "canvas_center": [
+            94,
+            1
+          ],
+          "canvas_nw": [
+            9,
+            1
+          ],
+          "canvas_se": [
+            179,
+            1
+          ],
+          "status_bar_roi": [
+            0,
+            2,
+            188,
+            26
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_058",
+      "file_name": "scene_058.png",
+      "original_source": "artifacts\\G3\\durability_runs\\run_1.png",
+      "split": "train",
+      "scene_type": "general_cscape_editor",
+      "category": "GENERAL",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "803fc3e49230df135aac709c55d560f3d69442aa6f18914253d830efea75d21a",
+      "labels": {
+        "canvas_rect": [
+          124,
+          15,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            278
+          ],
+          "canvas_nw": [
+            124,
+            15
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_059",
+      "file_name": "scene_059.png",
+      "original_source": "artifacts\\G3\\durability_runs\\run_10.png",
+      "split": "train",
+      "scene_type": "general_cscape_editor",
+      "category": "GENERAL",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "f0c3d8d60f1f9b0bcea29a7d26dccb87783def353606e7002ed4840441f1f183",
+      "labels": {
+        "canvas_rect": [
+          124,
+          28,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            284
+          ],
+          "canvas_nw": [
+            124,
+            28
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    },
+    {
+      "scene_id": "scene_060",
+      "file_name": "scene_060.png",
+      "original_source": "artifacts\\G3\\durability_runs\\run_2.png",
+      "split": "train",
+      "scene_type": "general_cscape_editor",
+      "category": "GENERAL",
+      "dimensions": {
+        "width": 1278,
+        "height": 566
+      },
+      "sha256": "72ace42a562a09a3470458002a7c18cd8875f8e1837309785339f727aac2244e",
+      "labels": {
+        "canvas_rect": [
+          124,
+          15,
+          1269,
+          541
+        ],
+        "anchors": {
+          "canvas_center": [
+            696,
+            278
+          ],
+          "canvas_nw": [
+            124,
+            15
+          ],
+          "canvas_se": [
+            1269,
+            541
+          ],
+          "status_bar_roi": [
+            0,
+            542,
+            1278,
+            566
+          ]
+        },
+        "status_bar_metrics": {
+          "objects": null,
+          "screen": null,
+          "zoom": null,
+          "coords": null
+        },
+        "ocr_tokens": {
+          "sample_canvas_tokens": []
+        }
+      }
+    }
+  ]
+}

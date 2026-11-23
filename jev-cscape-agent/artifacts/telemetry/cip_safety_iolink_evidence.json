@@ -1,0 +1,162 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W271 CIP Safety IO-Link Safety Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W271",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety IO-Link Safety (IEC 61131-9 Safe Sensor/Actuator)",
+    "work_package": "W271",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x48": "IO-Link Safety Object"
+    },
+    "register_map": {
+      "%R2320": "Safe State Machine (0=SAFE_INIT, 1=SAFE_COMMISSIONING, 2=SAFE_OPERATIONAL, 3=SAFE_FAULT_TRIP)",
+      "%R2321": "OSSD Input Signal Status Word (Bit0=OSSD1, Bit1=OSSD2, Bit2=OSSDE)",
+      "%R2322": "IO-Link Safety Cycle Time (ms)",
+      "%R2323": "Safe Device ID / Safety Network Number",
+      "%R2324": "Safe Sequence Number Counter (0..65535)",
+      "%R2325": "CRC Error Counter",
+      "%R2326": "Watchdog Timer Elapsed (us)",
+      "%R2327": "Diagnostic Code (0x0000 OK, 0xEE71..0xEE74)",
+      "%M541": "IO-Link Safety Operational Coil",
+      "%M542": "IO-Link Safety Fault Tripped Coil"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Protocol_Constants_Registers_And_Diagnostic_Codes",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Verified register mappings %R2320..%R2327, %M541..%M542, and signed/unsigned DiagnosticCode equality."
+      },
+      {
+        "stage": 2,
+        "name": "Safe_CRC_Validation_And_Corruption_Handling",
+        "passed": true,
+        "timing_ms": 0.276,
+        "details": "CRC-S1/S2 valid=True, sequence inverted=True, single-bit mutation detected=True."
+      },
+      {
+        "stage": 3,
+        "name": "Pure_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "timing_ms": 2.704,
+        "details": "Pure ST POU CipSafetyIOLinkSync passed SecurityGuard.assert_pure_st_content and STParser AST checks."
+      },
+      {
+        "stage": 4,
+        "name": "Anti_Ladder_Construct_Rejection",
+        "passed": true,
+        "timing_ms": 0.01,
+        "details": "Ladder logic contacts/coils strictly intercepted with LadderForbiddenError."
+      },
+      {
+        "stage": 5,
+        "name": "State_Transitions_SAFE_INIT_To_SAFE_FAULT_TRIP",
+        "passed": true,
+        "timing_ms": 0.791,
+        "details": "State machine verified: INIT -> COMMISSIONING -> OPERATIONAL -> FAULT_TRIP."
+      },
+      {
+        "stage": 6,
+        "name": "OSSD_Input_Monitoring_And_OSSDE_Fault_Trips",
+        "passed": true,
+        "timing_ms": 0.813,
+        "details": "OSSD signal surveillance triggered trip 0xEE71, updated %R2321, asserted %M542, and recovered on reset."
+      },
+      {
+        "stage": 7,
+        "name": "Sequence_Counter_Increment_And_Mismatch_Detection",
+        "passed": true,
+        "timing_ms": 1.035,
+        "details": "Monotonic increment confirmed; out-of-order sequence triggered 0xEE73 SEQUENCE_COUNTER_FAULT."
+      },
+      {
+        "stage": 8,
+        "name": "Watchdog_Expiration_And_Safe_State_Fallback",
+        "passed": true,
+        "timing_ms": 0.585,
+        "details": "Watchdog exceeded 20.0 ms timeout, tripped 0xEE74, and fell back to safe state."
+      },
+      {
+        "stage": 9,
+        "name": "Register_Table_Sync_And_100_Cycle_Soak",
+        "passed": true,
+        "timing_ms": 325.957,
+        "details": "100 scan cycles executed with register sync (%R2320..%R2327, %M541..%M542), heap growth 0.58 KB (< 100 KB limit)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Protocol_Constants_Registers_And_Diagnostic_Codes",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Verified register mappings %R2320..%R2327, %M541..%M542, and signed/unsigned DiagnosticCode equality."
+      },
+      {
+        "stage": 2,
+        "name": "Safe_CRC_Validation_And_Corruption_Handling",
+        "passed": true,
+        "timing_ms": 0.276,
+        "details": "CRC-S1/S2 valid=True, sequence inverted=True, single-bit mutation detected=True."
+      },
+      {
+        "stage": 3,
+        "name": "Pure_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "timing_ms": 2.704,
+        "details": "Pure ST POU CipSafetyIOLinkSync passed SecurityGuard.assert_pure_st_content and STParser AST checks."
+      },
+      {
+        "stage": 4,
+        "name": "Anti_Ladder_Construct_Rejection",
+        "passed": true,
+        "timing_ms": 0.01,
+        "details": "Ladder logic contacts/coils strictly intercepted with LadderForbiddenError."
+      },
+      {
+        "stage": 5,
+        "name": "State_Transitions_SAFE_INIT_To_SAFE_FAULT_TRIP",
+        "passed": true,
+        "timing_ms": 0.791,
+        "details": "State machine verified: INIT -> COMMISSIONING -> OPERATIONAL -> FAULT_TRIP."
+      },
+      {
+        "stage": 6,
+        "name": "OSSD_Input_Monitoring_And_OSSDE_Fault_Trips",
+        "passed": true,
+        "timing_ms": 0.813,
+        "details": "OSSD signal surveillance triggered trip 0xEE71, updated %R2321, asserted %M542, and recovered on reset."
+      },
+      {
+        "stage": 7,
+        "name": "Sequence_Counter_Increment_And_Mismatch_Detection",
+        "passed": true,
+        "timing_ms": 1.035,
+        "details": "Monotonic increment confirmed; out-of-order sequence triggered 0xEE73 SEQUENCE_COUNTER_FAULT."
+      },
+      {
+        "stage": 8,
+        "name": "Watchdog_Expiration_And_Safe_State_Fallback",
+        "passed": true,
+        "timing_ms": 0.585,
+        "details": "Watchdog exceeded 20.0 ms timeout, tripped 0xEE74, and fell back to safe state."
+      },
+      {
+        "stage": 9,
+        "name": "Register_Table_Sync_And_100_Cycle_Soak",
+        "passed": true,
+        "timing_ms": 325.957,
+        "details": "100 scan cycles executed with register sync (%R2320..%R2327, %M541..%M542), heap growth 0.58 KB (< 100 KB limit)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

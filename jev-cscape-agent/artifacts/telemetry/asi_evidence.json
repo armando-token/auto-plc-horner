@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "AS-Interface v3.0 Master Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W103",
+    "gate": "Gate G8 / G4",
+    "component": "Industrial AS-Interface (AS-i v3.0 / IEC 62026-2) Master Protocol Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Parsed ASiMasterBusSync program POU with STParser; zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "Request_Response_Parity_And_Framing_Validation",
+        "passed": true,
+        "details": "14-bit request parity check passed; 7-bit response parity check passed; parity corruption detected (ERR_PARITY)."
+      },
+      {
+        "stage": 3,
+        "check": "Extended_AB_Addressing_And_Bitmask_Calculation",
+        "passed": true,
+        "details": "Configured 6 slaves: Low Mask=0x8003 (expected 0x8003), High Mask=0x0001 (expected 0x0001)."
+      },
+      {
+        "stage": 4,
+        "check": "Master_State_Machine_Phase_Progression",
+        "passed": true,
+        "details": "Clean phase progression: INIT -> CONFIG -> ACTIVE -> NORMAL_OPERATION (%M149=TRUE)."
+      },
+      {
+        "stage": 5,
+        "check": "Safety_At_Work_Rolling_Code_Sequence_Validation",
+        "passed": true,
+        "details": "8-step SaW code sequence validated cleanly; static zero trip asserted (ERR_SAW_STATIC_ZERO_CODE) and cleared by operator reset."
+      },
+      {
+        "stage": 6,
+        "check": "Cyclic_Process_Data_Exchange_Split_Phase_AB",
+        "passed": true,
+        "details": "Alternating split cycle validated: Phase A polled 4 nodes, Phase B polled 2 nodes."
+      },
+      {
+        "stage": 7,
+        "check": "Bus_Fault_Diagnostics_Slave_Drop_And_APF_Monitoring",
+        "passed": true,
+        "details": "Slave 2A drop asserted SLAVE_CONFIG_FAULT (%M150=TRUE); APF low voltage asserted bit 0x0008 and code 0x8104."
+      },
+      {
+        "stage": 8,
+        "check": "Auto_Addressing_Engine_And_Horner_Register_Sync",
+        "passed": true,
+        "details": "Replacement slave auto-addressed to 2A; %R640=0x0013, %R645=9 transfers, %R646=3 repeats."
+      },
+      {
+        "stage": 9,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts and coils strictly intercepted with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "metrics": {
+      "configured_slaves": 6,
+      "cycle_time_us": 624.0,
+      "total_transfers": 9,
+      "repeat_errors": 3
+    },
+    "register_map": {
+      "analog_registers": "%R640..%R647",
+      "discrete_coils": "%M149..%M150"
+    },
+    "timestamp": "2026-10-03T03:08:25Z"
+  }
+}

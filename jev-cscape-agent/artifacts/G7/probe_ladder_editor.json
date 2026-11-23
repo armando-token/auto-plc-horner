@@ -1,0 +1,7347 @@
+{
+  "artifact": "Gate G7 Ladder Editor Forensic Probe",
+  "artifact_name": "ladder_probe.json",
+  "gate": "G7",
+  "cscape_version": "10.2 (Build 10.2.751.4)",
+  "timestamp_utc": "2026-10-10T18:49:25.307971+00:00",
+  "source_p1_base_sha": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "source_p1_base_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "initial_copy_sha": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "initial_copy_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "final_copy_sha": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "final_copy_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "is_unmodified": true,
+  "dialogs_encountered": [],
+  "screenshots": [
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_probe_full.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_probe_tab.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\logic_editing_tab.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\edit_tab.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\contacts_and_coils_expanded.png"
+  ],
+  "screenshot_map": {
+    "full": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_probe_full.png",
+    "tab": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_probe_tab.png",
+    "logic_editing_tab": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\logic_editing_tab.png",
+    "file_paths": [
+      "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_probe_full.png",
+      "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\ladder_probe_tab.png",
+      "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\logic_editing_tab.png"
+    ],
+    "edit_tab": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\edit_tab.png",
+    "contacts_expanded": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\contacts_and_coils_expanded.png"
+  },
+  "ladder_editor": {
+    "hwnd": 58786644,
+    "hwnd_hex": "0x3810354",
+    "title": "probe_ladder_editor.csp",
+    "class_name": "Afx:00AF0000:b:00010003:00000006:00730194",
+    "rect": [
+      527,
+      114,
+      1279,
+      548
+    ],
+    "is_visible": true
+  },
+  "child_windows": [
+    {
+      "hwnd": 36111202,
+      "hwnd_hex": "0x2270362",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "AfxFrameOrView140su",
+      "class_name": "AfxFrameOrView140su",
+      "ctrl_id": 59649,
+      "control_id": 59649,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        597,
+        191,
+        1269,
+        538
+      ],
+      "width": 672,
+      "height": 347,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x52300000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x52300000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 21431708,
+      "hwnd_hex": "0x147059c",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "AfxWnd140su",
+      "class_name": "AfxWnd140su",
+      "ctrl_id": 158018272,
+      "control_id": 158018272,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        567,
+        191,
+        597,
+        521
+      ],
+      "width": 30,
+      "height": 330,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 71828460,
+      "hwnd_hex": "0x44803ec",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "AfxWnd140su",
+      "class_name": "AfxWnd140su",
+      "ctrl_id": 158077120,
+      "control_id": 158077120,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        597,
+        171,
+        1299,
+        191
+      ],
+      "width": 702,
+      "height": 20,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 45483588,
+      "hwnd_hex": "0x2b60644",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "Static",
+      "class_name": "Static",
+      "ctrl_id": 5000,
+      "control_id": 5000,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        171,
+        567,
+        562
+      ],
+      "width": 30,
+      "height": 391,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x40000008",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x40000008",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 39912878,
+      "hwnd_hex": "0x26105ae",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "ToolbarWindow32",
+      "class_name": "ToolbarWindow32",
+      "ctrl_id": 4500,
+      "control_id": 4500,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        171,
+        567,
+        562
+      ],
+      "width": 30,
+      "height": 391,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x5400004e",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x5400004e",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 86573986,
+      "hwnd_hex": "0x52903a2",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "AfxFrameOrView140su",
+      "class_name": "AfxFrameOrView140su",
+      "ctrl_id": 59649,
+      "control_id": 59649,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        147,
+        537,
+        147
+      ],
+      "width": 0,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x40000000",
+        "ex_style": "0x200"
+      },
+      "style_hex": "0x40000000",
+      "ex_style_hex": "0x200",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 40698846,
+      "hwnd_hex": "0x26d03de",
+      "parent_hwnd": 86573986,
+      "parent_hwnd_hex": "0x52903a2",
+      "class": "W5EditST",
+      "class_name": "W5EditST",
+      "ctrl_id": 750,
+      "control_id": 750,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        147,
+        1337,
+        747
+      ],
+      "width": 800,
+      "height": 600,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x52210000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x52210000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 12518254,
+      "hwnd_hex": "0xbf036e",
+      "parent_hwnd": 40698846,
+      "parent_hwnd_hex": "0x26d03de",
+      "class": "Static",
+      "class_name": "Static",
+      "ctrl_id": 9999,
+      "control_id": 9999,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        147,
+        637,
+        247
+      ],
+      "width": 100,
+      "height": 100,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x40000005",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x40000005",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 9831692,
+      "hwnd_hex": "0x96050c",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "AfxFrameOrView140su",
+      "class_name": "AfxFrameOrView140su",
+      "ctrl_id": 59649,
+      "control_id": 59649,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        147,
+        537,
+        147
+      ],
+      "width": 0,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x40000000",
+        "ex_style": "0x200"
+      },
+      "style_hex": "0x40000000",
+      "ex_style_hex": "0x200",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 156828654,
+      "hwnd_hex": "0x95903ee",
+      "parent_hwnd": 9831692,
+      "parent_hwnd_hex": "0x96050c",
+      "class": "W5EditST",
+      "class_name": "W5EditST",
+      "ctrl_id": 750,
+      "control_id": 750,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        147,
+        1337,
+        747
+      ],
+      "width": 800,
+      "height": 600,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x52010000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x52010000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 73925000,
+      "hwnd_hex": "0x4680188",
+      "parent_hwnd": 156828654,
+      "parent_hwnd_hex": "0x95903ee",
+      "class": "Static",
+      "class_name": "Static",
+      "ctrl_id": 9999,
+      "control_id": 9999,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        147,
+        637,
+        247
+      ],
+      "width": 100,
+      "height": 100,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x40000005",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x40000005",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 64095118,
+      "hwnd_hex": "0x3d2038e",
+      "parent_hwnd": 58786644,
+      "parent_hwnd_hex": "0x3810354",
+      "class": "SysTabControl32",
+      "class_name": "SysTabControl32",
+      "ctrl_id": 59648,
+      "control_id": 59648,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        537,
+        147,
+        1269,
+        171
+      ],
+      "width": 732,
+      "height": 24,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x56002000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x56002000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 168428574,
+      "hwnd_hex": "0xa0a041e",
+      "parent_hwnd": 64095118,
+      "parent_hwnd_hex": "0x3d2038e",
+      "class": "CNewLookBitmapButton",
+      "class_name": "CNewLookBitmapButton",
+      "ctrl_id": 300,
+      "control_id": 300,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        1245,
+        152,
+        1261,
+        168
+      ],
+      "width": 16,
+      "height": 16,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 71763410,
+      "hwnd_hex": "0x44705d2",
+      "parent_hwnd": 64095118,
+      "parent_hwnd_hex": "0x3d2038e",
+      "class": "CNewLookBitmapButton",
+      "class_name": "CNewLookBitmapButton",
+      "ctrl_id": 301,
+      "control_id": 301,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        1225,
+        152,
+        1241,
+        168
+      ],
+      "width": 16,
+      "height": 16,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 58786644,
+      "hwnd_hex": "0x3810354",
+      "parent_hwnd": 12386846,
+      "parent_hwnd_hex": "0xbd021e",
+      "class": "Afx:00AF0000:b:00010003:00000006:00730194",
+      "class_name": "Afx:00AF0000:b:00010003:00000006:00730194",
+      "ctrl_id": 65280,
+      "control_id": 65280,
+      "text": "probe_ladder_editor.csp",
+      "window_text": "probe_ladder_editor.csp",
+      "rect": [
+        527,
+        114,
+        1279,
+        548
+      ],
+      "width": 752,
+      "height": 434,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x57cfc000",
+        "ex_style": "0x340"
+      },
+      "style_hex": "0x57cfc000",
+      "ex_style_hex": "0x340",
+      "wm_gettextlength": 23
+    },
+    {
+      "hwnd": 6227462,
+      "hwnd_hex": "0x5f0606",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        13,
+        5
+      ],
+      "width": 4,
+      "height": 4,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46000001",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46000001",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 121570866,
+      "hwnd_hex": "0x73f0632",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 38579,
+      "control_id": 38579,
+      "text": "Bookmark Window",
+      "window_text": "Bookmark Window",
+      "rect": [
+        9,
+        1,
+        209,
+        172
+      ],
+      "width": 200,
+      "height": 171,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46008240",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46008240",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 15
+    },
+    {
+      "hwnd": 124519328,
+      "hwnd_hex": "0x76c03a0",
+      "parent_hwnd": 121570866,
+      "parent_hwnd_hex": "0x73f0632",
+      "class": "ListBox",
+      "class_name": "ListBox",
+      "ctrl_id": 373,
+      "control_id": 373,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        21,
+        209,
+        172
+      ],
+      "width": 200,
+      "height": 151,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000181",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000181",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 68551986,
+      "hwnd_hex": "0x4160532",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        535,
+        349,
+        1271,
+        353
+      ],
+      "width": 736,
+      "height": 4,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46000001",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46000001",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 84280612,
+      "hwnd_hex": "0x5060524",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 45011,
+      "control_id": 45011,
+      "text": "Output Window",
+      "window_text": "Output Window",
+      "rect": [
+        535,
+        353,
+        1271,
+        540
+      ],
+      "width": 736,
+      "height": 187,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46008240",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46008240",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 13
+    },
+    {
+      "hwnd": 103547992,
+      "hwnd_hex": "0x62c0458",
+      "parent_hwnd": 84280612,
+      "parent_hwnd_hex": "0x5060524",
+      "class": "ListBox",
+      "class_name": "ListBox",
+      "ctrl_id": 372,
+      "control_id": 372,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        535,
+        373,
+        1271,
+        540
+      ],
+      "width": 736,
+      "height": 167,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000981",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000981",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 99222974,
+      "hwnd_hex": "0x5ea05be",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        13,
+        5
+      ],
+      "width": 4,
+      "height": 4,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46000002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46000002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 83428240,
+      "hwnd_hex": "0x4f90390",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 38343,
+      "control_id": 38343,
+      "text": "IEC Debugger Windows",
+      "window_text": "IEC Debugger Windows",
+      "rect": [
+        9,
+        1,
+        209,
+        201
+      ],
+      "width": 200,
+      "height": 200,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46001440",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46001440",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 20
+    },
+    {
+      "hwnd": 59573768,
+      "hwnd_hex": "0x38d0608",
+      "parent_hwnd": 83428240,
+      "parent_hwnd_hex": "0x4f90390",
+      "class": "CComponentWndContainer",
+      "class_name": "CComponentWndContainer",
+      "ctrl_id": 467,
+      "control_id": 467,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        176,
+        209,
+        200
+      ],
+      "width": 200,
+      "height": 24,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 11927946,
+      "hwnd_hex": "0xb6018a",
+      "parent_hwnd": 59573768,
+      "parent_hwnd_hex": "0x38d0608",
+      "class": "SysTabControl32",
+      "class_name": "SysTabControl32",
+      "ctrl_id": 150,
+      "control_id": 150,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        176,
+        209,
+        200
+      ],
+      "width": 200,
+      "height": 24,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x54002002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x54002002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 57411124,
+      "hwnd_hex": "0x36c0634",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        13,
+        5
+      ],
+      "width": 4,
+      "height": 4,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46000002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46000002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 96469958,
+      "hwnd_hex": "0x5c003c6",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 38030,
+      "control_id": 38030,
+      "text": "IEC Defines/SpyList/BitFields/Enums/Structs",
+      "window_text": "IEC Defines/SpyList/BitFields/Enums/Structs",
+      "rect": [
+        9,
+        1,
+        209,
+        201
+      ],
+      "width": 200,
+      "height": 200,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46001440",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46001440",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 43
+    },
+    {
+      "hwnd": 113706048,
+      "hwnd_hex": "0x6c70440",
+      "parent_hwnd": 96469958,
+      "parent_hwnd_hex": "0x5c003c6",
+      "class": "CComponentWndContainer",
+      "class_name": "CComponentWndContainer",
+      "ctrl_id": 330,
+      "control_id": 330,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        176,
+        209,
+        200
+      ],
+      "width": 200,
+      "height": 24,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 32571690,
+      "hwnd_hex": "0x1f1012a",
+      "parent_hwnd": 113706048,
+      "parent_hwnd_hex": "0x6c70440",
+      "class": "SysTabControl32",
+      "class_name": "SysTabControl32",
+      "ctrl_id": 150,
+      "control_id": 150,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        176,
+        209,
+        200
+      ],
+      "width": 200,
+      "height": 24,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x54002002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x54002002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 8259060,
+      "hwnd_hex": "0x7e05f4",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        13,
+        5
+      ],
+      "width": 4,
+      "height": 4,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46000001",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46000001",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 188613670,
+      "hwnd_hex": "0xb3e0426",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 320,
+      "control_id": 320,
+      "text": "Search",
+      "window_text": "Search",
+      "rect": [
+        9,
+        1,
+        209,
+        172
+      ],
+      "width": 200,
+      "height": 171,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46008240",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46008240",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 6
+    },
+    {
+      "hwnd": 84476512,
+      "hwnd_hex": "0x5090260",
+      "parent_hwnd": 188613670,
+      "parent_hwnd_hex": "0xb3e0426",
+      "class": "CComponentWndContainer",
+      "class_name": "CComponentWndContainer",
+      "ctrl_id": 320,
+      "control_id": 320,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        147,
+        209,
+        171
+      ],
+      "width": 200,
+      "height": 24,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 17040330,
+      "hwnd_hex": "0x10403ca",
+      "parent_hwnd": 84476512,
+      "parent_hwnd_hex": "0x5090260",
+      "class": "SysTabControl32",
+      "class_name": "SysTabControl32",
+      "ctrl_id": 150,
+      "control_id": 150,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        147,
+        209,
+        171
+      ],
+      "width": 200,
+      "height": 24,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x54002002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x54002002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 68814152,
+      "hwnd_hex": "0x41a0548",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        735,
+        145,
+        739,
+        540
+      ],
+      "width": 4,
+      "height": 395,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46000002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46000002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 12518670,
+      "hwnd_hex": "0xbf050e",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 38053,
+      "control_id": 38053,
+      "text": "Program Variables",
+      "window_text": "Program Variables",
+      "rect": [
+        535,
+        145,
+        735,
+        540
+      ],
+      "width": 200,
+      "height": 395,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46001440",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46001440",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 17
+    },
+    {
+      "hwnd": 5833822,
+      "hwnd_hex": "0x59045e",
+      "parent_hwnd": 12518670,
+      "parent_hwnd_hex": "0xbf050e",
+      "class": "CProjectDatabaseWnd",
+      "class_name": "CProjectDatabaseWnd",
+      "ctrl_id": 355,
+      "control_id": 355,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        535,
+        165,
+        735,
+        540
+      ],
+      "width": 200,
+      "height": 375,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 100664418,
+      "hwnd_hex": "0x6000462",
+      "parent_hwnd": 5833822,
+      "parent_hwnd_hex": "0x59045e",
+      "class": "W5EditTL",
+      "class_name": "W5EditTL",
+      "ctrl_id": 1603,
+      "control_id": 1603,
+      "text": "CW5EditTLWnd_Dico",
+      "window_text": "CW5EditTLWnd_Dico",
+      "rect": [
+        535,
+        165,
+        735,
+        540
+      ],
+      "width": 200,
+      "height": 375,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x52010000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x52010000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 17
+    },
+    {
+      "hwnd": 40502432,
+      "hwnd_hex": "0x26a04a0",
+      "parent_hwnd": 100664418,
+      "parent_hwnd_hex": "0x6000462",
+      "class": "Static",
+      "class_name": "Static",
+      "ctrl_id": 1006,
+      "control_id": 1006,
+      "text": "CW5EditTLWnd_Dico - Margin",
+      "window_text": "CW5EditTLWnd_Dico - Margin",
+      "rect": [
+        535,
+        165,
+        552,
+        540
+      ],
+      "width": 17,
+      "height": 375,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000100",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000100",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 26
+    },
+    {
+      "hwnd": 131662804,
+      "hwnd_hex": "0x7d903d4",
+      "parent_hwnd": 100664418,
+      "parent_hwnd_hex": "0x6000462",
+      "class": "Static",
+      "class_name": "Static",
+      "ctrl_id": 1000,
+      "control_id": 1000,
+      "text": "CW5EditTLWnd_Dico - Header",
+      "window_text": "CW5EditTLWnd_Dico - Header",
+      "rect": [
+        552,
+        165,
+        735,
+        183
+      ],
+      "width": 183,
+      "height": 18,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x50000100",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x50000100",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 26
+    },
+    {
+      "hwnd": 43451678,
+      "hwnd_hex": "0x297051e",
+      "parent_hwnd": 100664418,
+      "parent_hwnd_hex": "0x6000462",
+      "class": "SysTreeView32",
+      "class_name": "SysTreeView32",
+      "ctrl_id": 1001,
+      "control_id": 1001,
+      "text": "CW5EditTLWnd_Dico - Tree",
+      "window_text": "CW5EditTLWnd_Dico - Tree",
+      "rect": [
+        552,
+        183,
+        735,
+        540
+      ],
+      "width": 183,
+      "height": 357,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x501000a5",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x501000a5",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 24
+    },
+    {
+      "hwnd": 18220354,
+      "hwnd_hex": "0x1160542",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        531,
+        145,
+        535,
+        540
+      ],
+      "width": 4,
+      "height": 395,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x56000002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x56000002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 118359256,
+      "hwnd_hex": "0x70e04d8",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 37567,
+      "control_id": 37567,
+      "text": "Project Toolbox",
+      "window_text": "Project Toolbox",
+      "rect": [
+        311,
+        145,
+        531,
+        540
+      ],
+      "width": 220,
+      "height": 395,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x56001440",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x56001440",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 15
+    },
+    {
+      "hwnd": 4654658,
+      "hwnd_hex": "0x470642",
+      "parent_hwnd": 118359256,
+      "parent_hwnd_hex": "0x70e04d8",
+      "class": "CProjectToolboxWnd",
+      "class_name": "CProjectToolboxWnd",
+      "ctrl_id": 310,
+      "control_id": 310,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        311,
+        165,
+        531,
+        540
+      ],
+      "width": 220,
+      "height": 375,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x50200000",
+        "ex_style": "0x200"
+      },
+      "style_hex": "0x50200000",
+      "ex_style_hex": "0x200",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 114558232,
+      "hwnd_hex": "0x6d40518",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:Slider:af0000:8:10003:10",
+      "class_name": "Afx:Slider:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        307,
+        145,
+        311,
+        540
+      ],
+      "width": 4,
+      "height": 395,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x56000002",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x56000002",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 40633312,
+      "hwnd_hex": "0x26c03e0",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:ControlBar:af0000:8:10003:10",
+      "class_name": "Afx:ControlBar:af0000:8:10003:10",
+      "ctrl_id": 45012,
+      "control_id": 45012,
+      "text": "Project Navigator",
+      "window_text": "Project Navigator",
+      "rect": [
+        9,
+        145,
+        307,
+        540
+      ],
+      "width": 298,
+      "height": 395,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x56001440",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x56001440",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 17
+    },
+    {
+      "hwnd": 4850678,
+      "hwnd_hex": "0x4a03f6",
+      "parent_hwnd": 40633312,
+      "parent_hwnd_hex": "0x26c03e0",
+      "class": "SysTreeView32",
+      "class_name": "SysTreeView32",
+      "ctrl_id": 300,
+      "control_id": 300,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        165,
+        307,
+        540
+      ],
+      "width": 298,
+      "height": 375,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x5000002f",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x5000002f",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 54592414,
+      "hwnd_hex": "0x341039e",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:RibbonBar:af0000:8:10003:10",
+      "class_name": "Afx:RibbonBar:af0000:8:10003:10",
+      "ctrl_id": 59398,
+      "control_id": 59398,
+      "text": "Cscape",
+      "window_text": "Cscape",
+      "rect": [
+        9,
+        1,
+        1271,
+        145
+      ],
+      "width": 1262,
+      "height": 144,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x540b2800",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x540b2800",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 6
+    },
+    {
+      "hwnd": 12386846,
+      "hwnd_hex": "0xbd021e",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "MDIClient",
+      "class_name": "MDIClient",
+      "ctrl_id": 59648,
+      "control_id": 59648,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        535,
+        145,
+        1271,
+        540
+      ],
+      "width": 736,
+      "height": 395,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x56000001",
+        "ex_style": "0x200"
+      },
+      "style_hex": "0x56000001",
+      "ex_style_hex": "0x200",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 4326232,
+      "hwnd_hex": "0x420358",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:TabWnd:af0000:8:10003:10",
+      "class_name": "Afx:TabWnd:af0000:8:10003:10",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "width": 0,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46000000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46000000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 34800160,
+      "hwnd_hex": "0x2130220",
+      "parent_hwnd": 4326232,
+      "parent_hwnd_hex": "0x420358",
+      "class": "Button",
+      "class_name": "Button",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "width": 0,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x5000000b",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x5000000b",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 39519690,
+      "hwnd_hex": "0x25b05ca",
+      "parent_hwnd": 4326232,
+      "parent_hwnd_hex": "0x420358",
+      "class": "Button",
+      "class_name": "Button",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "width": 0,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x5000000b",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x5000000b",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 24380472,
+      "hwnd_hex": "0x1740438",
+      "parent_hwnd": 4326232,
+      "parent_hwnd_hex": "0x420358",
+      "class": "Button",
+      "class_name": "Button",
+      "ctrl_id": -1,
+      "control_id": -1,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "width": 0,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x5000000b",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x5000000b",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 39519226,
+      "hwnd_hex": "0x25b03fa",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:StatusBar:af0000:8:10003:10",
+      "class_name": "Afx:StatusBar:af0000:8:10003:10",
+      "ctrl_id": 59393,
+      "control_id": 59393,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        540,
+        1271,
+        559
+      ],
+      "width": 1262,
+      "height": 19,
+      "visible": true,
+      "enabled": true,
+      "styles": {
+        "style": "0x54008300",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x54008300",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 5
+    },
+    {
+      "hwnd": 72024098,
+      "hwnd_hex": "0x44b0022",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59419,
+      "control_id": 59419,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        145,
+        1271,
+        145
+      ],
+      "width": 1262,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46002000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46002000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 79298702,
+      "hwnd_hex": "0x4ba008e",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59419,
+      "control_id": 59419,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        145,
+        1271,
+        145
+      ],
+      "width": 1262,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46002000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46002000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 8454540,
+      "hwnd_hex": "0x81018c",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59422,
+      "control_id": 59422,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        540,
+        1271,
+        540
+      ],
+      "width": 1262,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46008000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46008000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 69534086,
+      "hwnd_hex": "0x4250186",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59422,
+      "control_id": 59422,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        540,
+        1271,
+        540
+      ],
+      "width": 1262,
+      "height": 0,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46008000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46008000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 53478298,
+      "hwnd_hex": "0x330039a",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59420,
+      "control_id": 59420,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        145,
+        9,
+        540
+      ],
+      "width": 0,
+      "height": 395,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46001000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46001000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 65471396,
+      "hwnd_hex": "0x3e703a4",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59420,
+      "control_id": 59420,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        9,
+        145,
+        9,
+        540
+      ],
+      "width": 0,
+      "height": 395,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46001000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46001000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 124584914,
+      "hwnd_hex": "0x76d03d2",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59421,
+      "control_id": 59421,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        1271,
+        145,
+        1271,
+        540
+      ],
+      "width": 0,
+      "height": 395,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46004000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46004000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    },
+    {
+      "hwnd": 50725848,
+      "hwnd_hex": "0x30603d8",
+      "parent_hwnd": 64488516,
+      "parent_hwnd_hex": "0x3d80444",
+      "class": "Afx:DockPane:af0000:8:10003:10",
+      "class_name": "Afx:DockPane:af0000:8:10003:10",
+      "ctrl_id": 59421,
+      "control_id": 59421,
+      "text": "",
+      "window_text": "",
+      "rect": [
+        1271,
+        145,
+        1271,
+        540
+      ],
+      "width": 0,
+      "height": 395,
+      "visible": false,
+      "enabled": true,
+      "styles": {
+        "style": "0x46004000",
+        "ex_style": "0x0"
+      },
+      "style_hex": "0x46004000",
+      "ex_style_hex": "0x0",
+      "wm_gettextlength": 0
+    }
+  ],
+  "menu_hierarchy": [
+    {
+      "position": 0,
+      "text": "System",
+      "path": "MenuBar -> System",
+      "cmd_id": null,
+      "has_submenu": false,
+      "children": []
+    },
+    {
+      "position": 1,
+      "text": "System",
+      "path": "MenuBar -> System",
+      "cmd_id": null,
+      "has_submenu": false,
+      "children": []
+    }
+  ],
+  "classified_ladder_commands": {
+    "rungs": [],
+    "contacts": [
+      {
+        "name": "Normally Open Contact",
+        "source": "live_vertical_toolbar",
+        "raw_tooltip_text": "Normally Open Contact",
+        "automation_id": null,
+        "cmd_id": 1000,
+        "control_id": 4500,
+        "rect": [
+          537,
+          242,
+          560,
+          264
+        ],
+        "category": "Ladder Vertical Toolbar",
+        "path": "Vertical Toolbar -> Normally Open Contact (cmd 1000)"
+      },
+      {
+        "name": "Normally Closed Contact",
+        "source": "live_vertical_toolbar",
+        "raw_tooltip_text": "Normally Closed Contact",
+        "automation_id": null,
+        "cmd_id": 1001,
+        "control_id": 4500,
+        "rect": [
+          537,
+          264,
+          560,
+          286
+        ],
+        "category": "Ladder Vertical Toolbar",
+        "path": "Vertical Toolbar -> Normally Closed Contact (cmd 1001)"
+      },
+      {
+        "name": "Normally Open Contact",
+        "source": "live_toolbox",
+        "automation_id": "ID_NO_CONTACT",
+        "cmd_id": 37684,
+        "control_id": 310,
+        "rect": [
+          316,
+          190,
+          513,
+          212
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Normally Open Contact"
+      },
+      {
+        "name": "Normally Closed Contact",
+        "source": "live_toolbox",
+        "automation_id": "ID_NC_CONTACT",
+        "cmd_id": 37685,
+        "control_id": 310,
+        "rect": [
+          316,
+          212,
+          513,
+          234
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Contact"
+      }
+    ],
+    "coils": [
+      {
+        "name": "Normally Open Coil",
+        "source": "live_vertical_toolbar",
+        "raw_tooltip_text": "Normally Open Coil",
+        "automation_id": null,
+        "cmd_id": 1002,
+        "control_id": 4500,
+        "rect": [
+          537,
+          286,
+          560,
+          308
+        ],
+        "category": "Ladder Vertical Toolbar",
+        "path": "Vertical Toolbar -> Normally Open Coil (cmd 1002)"
+      },
+      {
+        "name": "Normally Open Coil",
+        "source": "live_toolbox",
+        "automation_id": "ID_NO_COIL",
+        "cmd_id": 37686,
+        "control_id": 310,
+        "rect": [
+          316,
+          234,
+          513,
+          256
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Normally Open Coil"
+      },
+      {
+        "name": "Normally Closed Coil",
+        "source": "live_toolbox",
+        "automation_id": "ID_NC_COIL",
+        "cmd_id": 37687,
+        "control_id": 310,
+        "rect": [
+          316,
+          256,
+          513,
+          278
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Coil"
+      },
+      {
+        "name": "Positive Transition Coil",
+        "source": "live_toolbox",
+        "automation_id": "ID_POS_COIL",
+        "cmd_id": 37688,
+        "control_id": 310,
+        "rect": [
+          316,
+          278,
+          513,
+          300
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Positive Transition Coil"
+      },
+      {
+        "name": "Negative Transition Coil",
+        "source": "live_toolbox",
+        "automation_id": "ID_NEG_COIL",
+        "cmd_id": 37689,
+        "control_id": 310,
+        "rect": [
+          316,
+          300,
+          513,
+          322
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Negative Transition Coil"
+      },
+      {
+        "name": "Set Coil",
+        "source": "live_toolbox",
+        "automation_id": "ID_SET_COIL",
+        "cmd_id": 37690,
+        "control_id": 310,
+        "rect": [
+          316,
+          322,
+          513,
+          344
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Set Coil"
+      },
+      {
+        "name": "Reset Coil",
+        "source": "live_toolbox",
+        "automation_id": "ID_RESET_COIL",
+        "cmd_id": 37691,
+        "control_id": 310,
+        "rect": [
+          316,
+          344,
+          513,
+          366
+        ],
+        "category": "Contacts and Coils",
+        "path": "Project Toolbox -> Contacts and Coils -> Reset Coil"
+      }
+    ],
+    "instructions": [
+      {
+        "name": "Timer",
+        "source": "live_vertical_toolbar",
+        "raw_tooltip_text": "Timer",
+        "automation_id": null,
+        "cmd_id": 1003,
+        "control_id": 4500,
+        "rect": [
+          537,
+          308,
+          560,
+          330
+        ],
+        "category": "Ladder Vertical Toolbar",
+        "path": "Vertical Toolbar -> Timer (cmd 1003)"
+      },
+      {
+        "name": "Counter",
+        "source": "live_vertical_toolbar",
+        "raw_tooltip_text": "Counter",
+        "automation_id": null,
+        "cmd_id": 1004,
+        "control_id": 4500,
+        "rect": [
+          537,
+          330,
+          560,
+          352
+        ],
+        "category": "Ladder Vertical Toolbar",
+        "path": "Vertical Toolbar -> Counter (cmd 1004)"
+      },
+      {
+        "name": "File Counters",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1144,
+          57,
+          1238,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> File Counters"
+      },
+      {
+        "name": "File Counters",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1144,
+          57,
+          1238,
+          79
+        ],
+        "category": "Edit Ribbon",
+        "path": "Ribbon -> Edit -> File Counters"
+      }
+    ],
+    "functions_and_math": [],
+    "timers_and_counters": [
+      {
+        "name": "Timer",
+        "source": "live_vertical_toolbar",
+        "raw_tooltip_text": "Timer",
+        "automation_id": null,
+        "cmd_id": 1003,
+        "control_id": 4500,
+        "rect": [
+          537,
+          308,
+          560,
+          330
+        ],
+        "category": "Ladder Vertical Toolbar",
+        "path": "Vertical Toolbar -> Timer (cmd 1003)"
+      },
+      {
+        "name": "Counter",
+        "source": "live_vertical_toolbar",
+        "raw_tooltip_text": "Counter",
+        "automation_id": null,
+        "cmd_id": 1004,
+        "control_id": 4500,
+        "rect": [
+          537,
+          330,
+          560,
+          352
+        ],
+        "category": "Ladder Vertical Toolbar",
+        "path": "Vertical Toolbar -> Counter (cmd 1004)"
+      },
+      {
+        "name": "File Counters",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1144,
+          57,
+          1238,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> File Counters"
+      },
+      {
+        "name": "File Counters",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1144,
+          57,
+          1238,
+          79
+        ],
+        "category": "Edit Ribbon",
+        "path": "Ribbon -> Edit -> File Counters"
+      }
+    ],
+    "other_ladder": [
+      {
+        "name": "Project Navigator",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          17,
+          57,
+          131,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Project Navigator"
+      },
+      {
+        "name": "Project Toolbox",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          17,
+          79,
+          122,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Project Toolbox"
+      },
+      {
+        "name": "Output Window",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          17,
+          101,
+          128,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Output Window"
+      },
+      {
+        "name": "Program Variables",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          131,
+          57,
+          250,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Program Variables"
+      },
+      {
+        "name": "Defines Window",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          131,
+          79,
+          243,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Defines Window"
+      },
+      {
+        "name": "Bookmark Window",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          131,
+          101,
+          256,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Bookmark Window"
+      },
+      {
+        "name": "Set Target  ID",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          267,
+          57,
+          361,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Set Target  ID"
+      },
+      {
+        "name": "Set Local  ID",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          267,
+          79,
+          355,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Set Local  ID"
+      },
+      {
+        "name": "Connection Wizard",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          267,
+          101,
+          392,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Connection Wizard"
+      },
+      {
+        "name": "Hardware Config",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          400,
+          57,
+          514,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Hardware Config"
+      },
+      {
+        "name": "Connect",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          400,
+          79,
+          469,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Connect"
+      },
+      {
+        "name": "Disconnect",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          400,
+          101,
+          483,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Disconnect"
+      },
+      {
+        "name": "Download",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          522,
+          57,
+          544,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Download"
+      },
+      {
+        "name": "Upload",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          522,
+          79,
+          544,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Upload"
+      },
+      {
+        "name": "Verify",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          522,
+          101,
+          544,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Verify"
+      },
+      {
+        "name": "Run",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          552,
+          57,
+          574,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Run"
+      },
+      {
+        "name": "Do I/O",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          552,
+          79,
+          574,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Do I/O"
+      },
+      {
+        "name": "Stop",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          552,
+          101,
+          574,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Stop"
+      },
+      {
+        "name": "Start",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          585,
+          57,
+          635,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Start"
+      },
+      {
+        "name": "Download Online Change",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          585,
+          79,
+          746,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Download Online Change"
+      },
+      {
+        "name": "Revert",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          585,
+          101,
+          643,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Revert"
+      },
+      {
+        "name": "Error Check",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          757,
+          57,
+          842,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Error Check"
+      },
+      {
+        "name": "Error List",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          757,
+          79,
+          828,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Error List"
+      },
+      {
+        "name": "Element Usage",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          757,
+          101,
+          859,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Element Usage"
+      },
+      {
+        "name": "Setpoints",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          867,
+          79,
+          942,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Setpoints"
+      },
+      {
+        "name": "Download Options",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          867,
+          101,
+          992,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Download Options"
+      },
+      {
+        "name": "Protocols",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1000,
+          57,
+          1022,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Protocols"
+      },
+      {
+        "name": "Import  L5K",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1000,
+          79,
+          1022,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Import  L5K"
+      },
+      {
+        "name": "Audio",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1000,
+          101,
+          1022,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Audio"
+      },
+      {
+        "name": "Datalogging",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1033,
+          57,
+          1124,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Datalogging"
+      },
+      {
+        "name": "Reports",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1033,
+          79,
+          1099,
+          101
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Reports"
+      },
+      {
+        "name": "Recipe Database",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          1033,
+          101,
+          1144,
+          123
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Recipe Database"
+      },
+      {
+        "name": "Messaging",
+        "source": "live_uia",
+        "automation_id": "",
+        "cmd_id": null,
+        "control_id": null,
+        "rect": [
+          867,
+          57,
+          958,
+          79
+        ],
+        "category": "Logic Editing Ribbon",
+        "path": "Ribbon -> Logic Editing -> Messaging"
+      }
+    ]
+  },
+  "toolbars": [
+    {
+      "hwnd": 39912878,
+      "hwnd_hex": "0x26105ae",
+      "button_count": 11,
+      "rect": [
+        537,
+        171,
+        567,
+        562
+      ],
+      "visible": true,
+      "buttons": [
+        {
+          "name": "Open Setpoints Window",
+          "rect": [
+            540,
+            363,
+            563,
+            385
+          ]
+        }
+      ]
+    }
+  ],
+  "ribbon_commands": [],
+  "ribbon_tabs": [
+    "Home",
+    "Edit",
+    "Logic Editing",
+    "User Interface",
+    "Debug",
+    "Tools",
+    "My Account",
+    "Help",
+    "main"
+  ],
+  "ribbon_elements": [
+    {
+      "name": "Line up",
+      "automation_id": "UpButton",
+      "help_text": "",
+      "rect": [
+        512,
+        167,
+        529,
+        184
+      ]
+    },
+    {
+      "name": "Page down",
+      "automation_id": "DownPageButton",
+      "help_text": "",
+      "rect": [
+        512,
+        462,
+        529,
+        521
+      ]
+    },
+    {
+      "name": "Line down",
+      "automation_id": "DownButton",
+      "help_text": "",
+      "rect": [
+        512,
+        521,
+        529,
+        538
+      ]
+    },
+    {
+      "name": "Application menu",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        9,
+        5,
+        54,
+        50
+      ]
+    },
+    {
+      "name": "Save",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        58,
+        6,
+        80,
+        26
+      ]
+    },
+    {
+      "name": "Hardware Config",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        80,
+        6,
+        102,
+        26
+      ]
+    },
+    {
+      "name": "Connection Wizard",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        102,
+        6,
+        124,
+        26
+      ]
+    },
+    {
+      "name": "Connect",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        124,
+        6,
+        146,
+        26
+      ]
+    },
+    {
+      "name": "Set Target  ID",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        146,
+        6,
+        168,
+        26
+      ]
+    },
+    {
+      "name": "Run",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        168,
+        6,
+        190,
+        26
+      ]
+    },
+    {
+      "name": "Do I/O",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        190,
+        6,
+        212,
+        26
+      ]
+    },
+    {
+      "name": "Stop",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        212,
+        6,
+        234,
+        26
+      ]
+    },
+    {
+      "name": "Upload",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        234,
+        6,
+        256,
+        26
+      ]
+    },
+    {
+      "name": "Download",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        256,
+        6,
+        278,
+        26
+      ]
+    },
+    {
+      "name": "Debug Mode",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        278,
+        6,
+        300,
+        26
+      ]
+    },
+    {
+      "name": "Error Check",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        300,
+        6,
+        322,
+        26
+      ]
+    },
+    {
+      "name": "Data Watch",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        322,
+        6,
+        344,
+        26
+      ]
+    },
+    {
+      "name": "Find",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        344,
+        6,
+        366,
+        26
+      ]
+    },
+    {
+      "name": "Log In",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        366,
+        6,
+        388,
+        26
+      ]
+    },
+    {
+      "name": "Log Out",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        388,
+        6,
+        410,
+        26
+      ]
+    },
+    {
+      "name": "Project Navigator",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        17,
+        57,
+        131,
+        79
+      ]
+    },
+    {
+      "name": "Project Toolbox",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        17,
+        79,
+        122,
+        101
+      ]
+    },
+    {
+      "name": "Output Window",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        17,
+        101,
+        128,
+        123
+      ]
+    },
+    {
+      "name": "Program Variables",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        131,
+        57,
+        250,
+        79
+      ]
+    },
+    {
+      "name": "Defines Window",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        131,
+        79,
+        243,
+        101
+      ]
+    },
+    {
+      "name": "Bookmark Window",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        131,
+        101,
+        256,
+        123
+      ]
+    },
+    {
+      "name": "Set Target  ID",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        267,
+        57,
+        361,
+        79
+      ]
+    },
+    {
+      "name": "Set Local  ID",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        267,
+        79,
+        355,
+        101
+      ]
+    },
+    {
+      "name": "Connection Wizard",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        267,
+        101,
+        392,
+        123
+      ]
+    },
+    {
+      "name": "Hardware Config",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        400,
+        57,
+        514,
+        79
+      ]
+    },
+    {
+      "name": "Connect",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        400,
+        79,
+        469,
+        101
+      ]
+    },
+    {
+      "name": "Disconnect",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        400,
+        101,
+        483,
+        123
+      ]
+    },
+    {
+      "name": "Download",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        522,
+        57,
+        544,
+        79
+      ]
+    },
+    {
+      "name": "Upload",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        522,
+        79,
+        544,
+        101
+      ]
+    },
+    {
+      "name": "Verify",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        522,
+        101,
+        544,
+        123
+      ]
+    },
+    {
+      "name": "Run",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        552,
+        57,
+        574,
+        79
+      ]
+    },
+    {
+      "name": "Do I/O",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        552,
+        79,
+        574,
+        101
+      ]
+    },
+    {
+      "name": "Stop",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        552,
+        101,
+        574,
+        123
+      ]
+    },
+    {
+      "name": "Start",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        585,
+        57,
+        635,
+        79
+      ]
+    },
+    {
+      "name": "Download Online Change",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        585,
+        79,
+        746,
+        101
+      ]
+    },
+    {
+      "name": "Revert",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        585,
+        101,
+        643,
+        123
+      ]
+    },
+    {
+      "name": "Error Check",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        757,
+        57,
+        842,
+        79
+      ]
+    },
+    {
+      "name": "Error List",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        757,
+        79,
+        828,
+        101
+      ]
+    },
+    {
+      "name": "Element Usage",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        757,
+        101,
+        859,
+        123
+      ]
+    },
+    {
+      "name": "Setpoints",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        867,
+        79,
+        942,
+        101
+      ]
+    },
+    {
+      "name": "Download Options",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        867,
+        101,
+        992,
+        123
+      ]
+    },
+    {
+      "name": "Protocols",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1000,
+        57,
+        1022,
+        79
+      ]
+    },
+    {
+      "name": "Import  L5K",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1000,
+        79,
+        1022,
+        101
+      ]
+    },
+    {
+      "name": "Audio",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1000,
+        101,
+        1022,
+        123
+      ]
+    },
+    {
+      "name": "Datalogging",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1033,
+        57,
+        1124,
+        79
+      ]
+    },
+    {
+      "name": "Reports",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1033,
+        79,
+        1099,
+        101
+      ]
+    },
+    {
+      "name": "Recipe Database",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1033,
+        101,
+        1144,
+        123
+      ]
+    },
+    {
+      "name": "File Counters",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1144,
+        57,
+        1238,
+        79
+      ]
+    },
+    {
+      "name": "Line up",
+      "automation_id": "UpButton",
+      "help_text": "",
+      "rect": [
+        1252,
+        191,
+        1269,
+        208
+      ]
+    },
+    {
+      "name": "Page down",
+      "automation_id": "DownPageButton",
+      "help_text": "",
+      "rect": [
+        1252,
+        377,
+        1269,
+        504
+      ]
+    },
+    {
+      "name": "Line down",
+      "automation_id": "DownButton",
+      "help_text": "",
+      "rect": [
+        1252,
+        504,
+        1269,
+        521
+      ]
+    },
+    {
+      "name": "Column left",
+      "automation_id": "UpButton",
+      "help_text": "",
+      "rect": [
+        597,
+        521,
+        614,
+        538
+      ]
+    },
+    {
+      "name": "Page right",
+      "automation_id": "DownPageButton",
+      "help_text": "",
+      "rect": [
+        631,
+        521,
+        1235,
+        538
+      ]
+    },
+    {
+      "name": "Column right",
+      "automation_id": "DownButton",
+      "help_text": "",
+      "rect": [
+        1235,
+        521,
+        1252,
+        538
+      ]
+    },
+    {
+      "name": "Open Setpoints Window",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        540,
+        363,
+        563,
+        385
+      ]
+    },
+    {
+      "name": "Minimize",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1169,
+        124,
+        1201,
+        142
+      ]
+    },
+    {
+      "name": "Restore",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1203,
+        124,
+        1235,
+        142
+      ]
+    },
+    {
+      "name": "Close",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1237,
+        124,
+        1269,
+        142
+      ]
+    },
+    {
+      "name": "Minimize",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1132,
+        2,
+        1179,
+        30
+      ]
+    },
+    {
+      "name": "Maximize",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1179,
+        2,
+        1225,
+        30
+      ]
+    },
+    {
+      "name": "Close",
+      "automation_id": "",
+      "help_text": "",
+      "rect": [
+        1225,
+        2,
+        1272,
+        30
+      ]
+    }
+  ],
+  "logic_editing_buttons": [
+    {
+      "name": "Project Navigator",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        57,
+        131,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Project Navigator"
+    },
+    {
+      "name": "Project Toolbox",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        79,
+        122,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Project Toolbox"
+    },
+    {
+      "name": "Output Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        101,
+        128,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Output Window"
+    },
+    {
+      "name": "Program Variables",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        57,
+        250,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Program Variables"
+    },
+    {
+      "name": "Defines Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        79,
+        243,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Defines Window"
+    },
+    {
+      "name": "Bookmark Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        101,
+        256,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Bookmark Window"
+    },
+    {
+      "name": "Set Target  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        57,
+        361,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Set Target  ID"
+    },
+    {
+      "name": "Set Local  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        79,
+        355,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Set Local  ID"
+    },
+    {
+      "name": "Connection Wizard",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        101,
+        392,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Connection Wizard"
+    },
+    {
+      "name": "Hardware Config",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        57,
+        514,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Hardware Config"
+    },
+    {
+      "name": "Connect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        79,
+        469,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Connect"
+    },
+    {
+      "name": "Disconnect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        101,
+        483,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Disconnect"
+    },
+    {
+      "name": "Download",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        57,
+        544,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download"
+    },
+    {
+      "name": "Upload",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        79,
+        544,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Upload"
+    },
+    {
+      "name": "Verify",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        101,
+        544,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Verify"
+    },
+    {
+      "name": "Run",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        57,
+        574,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Run"
+    },
+    {
+      "name": "Do I/O",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        79,
+        574,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Do I/O"
+    },
+    {
+      "name": "Stop",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        101,
+        574,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Stop"
+    },
+    {
+      "name": "Start",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        57,
+        635,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Start"
+    },
+    {
+      "name": "Download Online Change",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        79,
+        746,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download Online Change"
+    },
+    {
+      "name": "Revert",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        101,
+        643,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Revert"
+    },
+    {
+      "name": "Error Check",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        57,
+        842,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Error Check"
+    },
+    {
+      "name": "Error List",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        79,
+        828,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Error List"
+    },
+    {
+      "name": "Element Usage",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        101,
+        859,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Element Usage"
+    },
+    {
+      "name": "Setpoints",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        79,
+        942,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Setpoints"
+    },
+    {
+      "name": "Download Options",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        101,
+        992,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download Options"
+    },
+    {
+      "name": "Protocols",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        57,
+        1022,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Protocols"
+    },
+    {
+      "name": "Import  L5K",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        79,
+        1022,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Import  L5K"
+    },
+    {
+      "name": "Audio",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        101,
+        1022,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Audio"
+    },
+    {
+      "name": "Datalogging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        57,
+        1124,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Datalogging"
+    },
+    {
+      "name": "Reports",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        79,
+        1099,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Reports"
+    },
+    {
+      "name": "Recipe Database",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        101,
+        1144,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Recipe Database"
+    },
+    {
+      "name": "File Counters",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1144,
+        57,
+        1238,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> File Counters"
+    },
+    {
+      "name": "Messaging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        57,
+        958,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Messaging"
+    }
+  ],
+  "project_toolbox_items": [
+    {
+      "name": "Normally Open Contact",
+      "source": "live_toolbox",
+      "automation_id": "ID_NO_CONTACT",
+      "cmd_id": 37684,
+      "control_id": 310,
+      "rect": [
+        316,
+        190,
+        513,
+        212
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Open Contact"
+    },
+    {
+      "name": "Normally Closed Contact",
+      "source": "live_toolbox",
+      "automation_id": "ID_NC_CONTACT",
+      "cmd_id": 37685,
+      "control_id": 310,
+      "rect": [
+        316,
+        212,
+        513,
+        234
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Contact"
+    },
+    {
+      "name": "Normally Open Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NO_COIL",
+      "cmd_id": 37686,
+      "control_id": 310,
+      "rect": [
+        316,
+        234,
+        513,
+        256
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Open Coil"
+    },
+    {
+      "name": "Normally Closed Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NC_COIL",
+      "cmd_id": 37687,
+      "control_id": 310,
+      "rect": [
+        316,
+        256,
+        513,
+        278
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Coil"
+    },
+    {
+      "name": "Positive Transition Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_POS_COIL",
+      "cmd_id": 37688,
+      "control_id": 310,
+      "rect": [
+        316,
+        278,
+        513,
+        300
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Positive Transition Coil"
+    },
+    {
+      "name": "Negative Transition Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NEG_COIL",
+      "cmd_id": 37689,
+      "control_id": 310,
+      "rect": [
+        316,
+        300,
+        513,
+        322
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Negative Transition Coil"
+    },
+    {
+      "name": "Set Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_SET_COIL",
+      "cmd_id": 37690,
+      "control_id": 310,
+      "rect": [
+        316,
+        322,
+        513,
+        344
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Set Coil"
+    },
+    {
+      "name": "Reset Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_RESET_COIL",
+      "cmd_id": 37691,
+      "control_id": 310,
+      "rect": [
+        316,
+        344,
+        513,
+        366
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Reset Coil"
+    }
+  ],
+  "live_ladder_items": [
+    {
+      "name": "Select/Edit Elements",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Select/Edit Elements",
+      "automation_id": null,
+      "cmd_id": 112,
+      "control_id": 4500,
+      "rect": [
+        537,
+        171,
+        560,
+        193
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Select/Edit Elements (cmd 112)"
+    },
+    {
+      "name": "Comment",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Comment",
+      "automation_id": null,
+      "cmd_id": 1006,
+      "control_id": 4500,
+      "rect": [
+        537,
+        193,
+        560,
+        215
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Comment (cmd 1006)"
+    },
+    {
+      "name": "Branch",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Branch",
+      "automation_id": null,
+      "cmd_id": 1005,
+      "control_id": 4500,
+      "rect": [
+        537,
+        215,
+        560,
+        237
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Branch (cmd 1005)"
+    },
+    {
+      "name": "Normally Open Contact",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Normally Open Contact",
+      "automation_id": null,
+      "cmd_id": 1000,
+      "control_id": 4500,
+      "rect": [
+        537,
+        242,
+        560,
+        264
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Open Contact (cmd 1000)"
+    },
+    {
+      "name": "Normally Closed Contact",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Normally Closed Contact",
+      "automation_id": null,
+      "cmd_id": 1001,
+      "control_id": 4500,
+      "rect": [
+        537,
+        264,
+        560,
+        286
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Closed Contact (cmd 1001)"
+    },
+    {
+      "name": "Normally Open Coil",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Normally Open Coil",
+      "automation_id": null,
+      "cmd_id": 1002,
+      "control_id": 4500,
+      "rect": [
+        537,
+        286,
+        560,
+        308
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Open Coil (cmd 1002)"
+    },
+    {
+      "name": "Timer",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Timer",
+      "automation_id": null,
+      "cmd_id": 1003,
+      "control_id": 4500,
+      "rect": [
+        537,
+        308,
+        560,
+        330
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Timer (cmd 1003)"
+    },
+    {
+      "name": "Counter",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Counter",
+      "automation_id": null,
+      "cmd_id": 1004,
+      "control_id": 4500,
+      "rect": [
+        537,
+        330,
+        560,
+        352
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Counter (cmd 1004)"
+    },
+    {
+      "name": "Open Setpoints Window",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Open Setpoints Window",
+      "automation_id": null,
+      "cmd_id": 37895,
+      "control_id": 4500,
+      "rect": [
+        537,
+        357,
+        560,
+        379
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Open Setpoints Window (cmd 37895)"
+    },
+    {
+      "name": "Project Navigator",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        57,
+        131,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Project Navigator"
+    },
+    {
+      "name": "Project Toolbox",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        79,
+        122,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Project Toolbox"
+    },
+    {
+      "name": "Output Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        101,
+        128,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Output Window"
+    },
+    {
+      "name": "Program Variables",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        57,
+        250,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Program Variables"
+    },
+    {
+      "name": "Defines Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        79,
+        243,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Defines Window"
+    },
+    {
+      "name": "Bookmark Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        101,
+        256,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Bookmark Window"
+    },
+    {
+      "name": "Set Target  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        57,
+        361,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Set Target  ID"
+    },
+    {
+      "name": "Set Local  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        79,
+        355,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Set Local  ID"
+    },
+    {
+      "name": "Connection Wizard",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        101,
+        392,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Connection Wizard"
+    },
+    {
+      "name": "Hardware Config",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        57,
+        514,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Hardware Config"
+    },
+    {
+      "name": "Connect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        79,
+        469,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Connect"
+    },
+    {
+      "name": "Disconnect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        101,
+        483,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Disconnect"
+    },
+    {
+      "name": "Download",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        57,
+        544,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download"
+    },
+    {
+      "name": "Upload",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        79,
+        544,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Upload"
+    },
+    {
+      "name": "Verify",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        101,
+        544,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Verify"
+    },
+    {
+      "name": "Run",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        57,
+        574,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Run"
+    },
+    {
+      "name": "Do I/O",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        79,
+        574,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Do I/O"
+    },
+    {
+      "name": "Stop",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        101,
+        574,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Stop"
+    },
+    {
+      "name": "Start",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        57,
+        635,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Start"
+    },
+    {
+      "name": "Download Online Change",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        79,
+        746,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download Online Change"
+    },
+    {
+      "name": "Revert",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        101,
+        643,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Revert"
+    },
+    {
+      "name": "Error Check",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        57,
+        842,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Error Check"
+    },
+    {
+      "name": "Error List",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        79,
+        828,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Error List"
+    },
+    {
+      "name": "Element Usage",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        101,
+        859,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Element Usage"
+    },
+    {
+      "name": "Setpoints",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        79,
+        942,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Setpoints"
+    },
+    {
+      "name": "Download Options",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        101,
+        992,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download Options"
+    },
+    {
+      "name": "Protocols",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        57,
+        1022,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Protocols"
+    },
+    {
+      "name": "Import  L5K",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        79,
+        1022,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Import  L5K"
+    },
+    {
+      "name": "Audio",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        101,
+        1022,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Audio"
+    },
+    {
+      "name": "Datalogging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        57,
+        1124,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Datalogging"
+    },
+    {
+      "name": "Reports",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        79,
+        1099,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Reports"
+    },
+    {
+      "name": "Recipe Database",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        101,
+        1144,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Recipe Database"
+    },
+    {
+      "name": "File Counters",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1144,
+        57,
+        1238,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> File Counters"
+    },
+    {
+      "name": "Messaging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        57,
+        958,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Messaging"
+    },
+    {
+      "name": "Project Navigator",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        57,
+        131,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Project Navigator"
+    },
+    {
+      "name": "Project Toolbox",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        79,
+        122,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Project Toolbox"
+    },
+    {
+      "name": "Output Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        101,
+        128,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Output Window"
+    },
+    {
+      "name": "Program Variables",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        57,
+        250,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Program Variables"
+    },
+    {
+      "name": "Defines Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        79,
+        243,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Defines Window"
+    },
+    {
+      "name": "Bookmark Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        101,
+        256,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Bookmark Window"
+    },
+    {
+      "name": "Set Target  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        57,
+        361,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Set Target  ID"
+    },
+    {
+      "name": "Set Local  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        79,
+        355,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Set Local  ID"
+    },
+    {
+      "name": "Connection Wizard",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        101,
+        392,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Connection Wizard"
+    },
+    {
+      "name": "Hardware Config",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        57,
+        514,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Hardware Config"
+    },
+    {
+      "name": "Connect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        79,
+        469,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Connect"
+    },
+    {
+      "name": "Disconnect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        101,
+        483,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Disconnect"
+    },
+    {
+      "name": "Download",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        57,
+        544,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download"
+    },
+    {
+      "name": "Upload",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        79,
+        544,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Upload"
+    },
+    {
+      "name": "Verify",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        101,
+        544,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Verify"
+    },
+    {
+      "name": "Run",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        57,
+        574,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Run"
+    },
+    {
+      "name": "Do I/O",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        79,
+        574,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Do I/O"
+    },
+    {
+      "name": "Stop",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        101,
+        574,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Stop"
+    },
+    {
+      "name": "Start",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        57,
+        635,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Start"
+    },
+    {
+      "name": "Download Online Change",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        79,
+        746,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download Online Change"
+    },
+    {
+      "name": "Revert",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        101,
+        643,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Revert"
+    },
+    {
+      "name": "Error Check",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        57,
+        842,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Error Check"
+    },
+    {
+      "name": "Error List",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        79,
+        828,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Error List"
+    },
+    {
+      "name": "Element Usage",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        101,
+        859,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Element Usage"
+    },
+    {
+      "name": "Setpoints",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        79,
+        942,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Setpoints"
+    },
+    {
+      "name": "Download Options",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        101,
+        992,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download Options"
+    },
+    {
+      "name": "Protocols",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        57,
+        1022,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Protocols"
+    },
+    {
+      "name": "Import  L5K",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        79,
+        1022,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Import  L5K"
+    },
+    {
+      "name": "Audio",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        101,
+        1022,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Audio"
+    },
+    {
+      "name": "Datalogging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        57,
+        1124,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Datalogging"
+    },
+    {
+      "name": "Reports",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        79,
+        1099,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Reports"
+    },
+    {
+      "name": "Recipe Database",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        101,
+        1144,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Recipe Database"
+    },
+    {
+      "name": "File Counters",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1144,
+        57,
+        1238,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> File Counters"
+    },
+    {
+      "name": "Messaging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        57,
+        958,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Messaging"
+    },
+    {
+      "name": "Normally Open Contact",
+      "source": "live_toolbox",
+      "automation_id": "ID_NO_CONTACT",
+      "cmd_id": 37684,
+      "control_id": 310,
+      "rect": [
+        316,
+        190,
+        513,
+        212
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Open Contact"
+    },
+    {
+      "name": "Normally Closed Contact",
+      "source": "live_toolbox",
+      "automation_id": "ID_NC_CONTACT",
+      "cmd_id": 37685,
+      "control_id": 310,
+      "rect": [
+        316,
+        212,
+        513,
+        234
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Contact"
+    },
+    {
+      "name": "Normally Open Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NO_COIL",
+      "cmd_id": 37686,
+      "control_id": 310,
+      "rect": [
+        316,
+        234,
+        513,
+        256
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Open Coil"
+    },
+    {
+      "name": "Normally Closed Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NC_COIL",
+      "cmd_id": 37687,
+      "control_id": 310,
+      "rect": [
+        316,
+        256,
+        513,
+        278
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Coil"
+    },
+    {
+      "name": "Positive Transition Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_POS_COIL",
+      "cmd_id": 37688,
+      "control_id": 310,
+      "rect": [
+        316,
+        278,
+        513,
+        300
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Positive Transition Coil"
+    },
+    {
+      "name": "Negative Transition Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NEG_COIL",
+      "cmd_id": 37689,
+      "control_id": 310,
+      "rect": [
+        316,
+        300,
+        513,
+        322
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Negative Transition Coil"
+    },
+    {
+      "name": "Set Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_SET_COIL",
+      "cmd_id": 37690,
+      "control_id": 310,
+      "rect": [
+        316,
+        322,
+        513,
+        344
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Set Coil"
+    },
+    {
+      "name": "Reset Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_RESET_COIL",
+      "cmd_id": 37691,
+      "control_id": 310,
+      "rect": [
+        316,
+        344,
+        513,
+        366
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Reset Coil"
+    }
+  ],
+  "live_ladder_commands": [
+    {
+      "name": "Select/Edit Elements",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Select/Edit Elements",
+      "automation_id": null,
+      "cmd_id": 112,
+      "control_id": 4500,
+      "rect": [
+        537,
+        171,
+        560,
+        193
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Select/Edit Elements (cmd 112)"
+    },
+    {
+      "name": "Comment",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Comment",
+      "automation_id": null,
+      "cmd_id": 1006,
+      "control_id": 4500,
+      "rect": [
+        537,
+        193,
+        560,
+        215
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Comment (cmd 1006)"
+    },
+    {
+      "name": "Branch",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Branch",
+      "automation_id": null,
+      "cmd_id": 1005,
+      "control_id": 4500,
+      "rect": [
+        537,
+        215,
+        560,
+        237
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Branch (cmd 1005)"
+    },
+    {
+      "name": "Normally Open Contact",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Normally Open Contact",
+      "automation_id": null,
+      "cmd_id": 1000,
+      "control_id": 4500,
+      "rect": [
+        537,
+        242,
+        560,
+        264
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Open Contact (cmd 1000)"
+    },
+    {
+      "name": "Normally Closed Contact",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Normally Closed Contact",
+      "automation_id": null,
+      "cmd_id": 1001,
+      "control_id": 4500,
+      "rect": [
+        537,
+        264,
+        560,
+        286
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Closed Contact (cmd 1001)"
+    },
+    {
+      "name": "Normally Open Coil",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Normally Open Coil",
+      "automation_id": null,
+      "cmd_id": 1002,
+      "control_id": 4500,
+      "rect": [
+        537,
+        286,
+        560,
+        308
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Open Coil (cmd 1002)"
+    },
+    {
+      "name": "Timer",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Timer",
+      "automation_id": null,
+      "cmd_id": 1003,
+      "control_id": 4500,
+      "rect": [
+        537,
+        308,
+        560,
+        330
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Timer (cmd 1003)"
+    },
+    {
+      "name": "Counter",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Counter",
+      "automation_id": null,
+      "cmd_id": 1004,
+      "control_id": 4500,
+      "rect": [
+        537,
+        330,
+        560,
+        352
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Counter (cmd 1004)"
+    },
+    {
+      "name": "Open Setpoints Window",
+      "source": "live_vertical_toolbar",
+      "raw_tooltip_text": "Open Setpoints Window",
+      "automation_id": null,
+      "cmd_id": 37895,
+      "control_id": 4500,
+      "rect": [
+        537,
+        357,
+        560,
+        379
+      ],
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Open Setpoints Window (cmd 37895)"
+    },
+    {
+      "name": "Project Navigator",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        57,
+        131,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Project Navigator"
+    },
+    {
+      "name": "Project Toolbox",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        79,
+        122,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Project Toolbox"
+    },
+    {
+      "name": "Output Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        101,
+        128,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Output Window"
+    },
+    {
+      "name": "Program Variables",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        57,
+        250,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Program Variables"
+    },
+    {
+      "name": "Defines Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        79,
+        243,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Defines Window"
+    },
+    {
+      "name": "Bookmark Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        101,
+        256,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Bookmark Window"
+    },
+    {
+      "name": "Set Target  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        57,
+        361,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Set Target  ID"
+    },
+    {
+      "name": "Set Local  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        79,
+        355,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Set Local  ID"
+    },
+    {
+      "name": "Connection Wizard",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        101,
+        392,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Connection Wizard"
+    },
+    {
+      "name": "Hardware Config",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        57,
+        514,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Hardware Config"
+    },
+    {
+      "name": "Connect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        79,
+        469,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Connect"
+    },
+    {
+      "name": "Disconnect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        101,
+        483,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Disconnect"
+    },
+    {
+      "name": "Download",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        57,
+        544,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download"
+    },
+    {
+      "name": "Upload",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        79,
+        544,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Upload"
+    },
+    {
+      "name": "Verify",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        101,
+        544,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Verify"
+    },
+    {
+      "name": "Run",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        57,
+        574,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Run"
+    },
+    {
+      "name": "Do I/O",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        79,
+        574,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Do I/O"
+    },
+    {
+      "name": "Stop",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        101,
+        574,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Stop"
+    },
+    {
+      "name": "Start",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        57,
+        635,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Start"
+    },
+    {
+      "name": "Download Online Change",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        79,
+        746,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download Online Change"
+    },
+    {
+      "name": "Revert",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        101,
+        643,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Revert"
+    },
+    {
+      "name": "Error Check",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        57,
+        842,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Error Check"
+    },
+    {
+      "name": "Error List",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        79,
+        828,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Error List"
+    },
+    {
+      "name": "Element Usage",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        101,
+        859,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Element Usage"
+    },
+    {
+      "name": "Setpoints",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        79,
+        942,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Setpoints"
+    },
+    {
+      "name": "Download Options",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        101,
+        992,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Download Options"
+    },
+    {
+      "name": "Protocols",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        57,
+        1022,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Protocols"
+    },
+    {
+      "name": "Import  L5K",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        79,
+        1022,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Import  L5K"
+    },
+    {
+      "name": "Audio",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        101,
+        1022,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Audio"
+    },
+    {
+      "name": "Datalogging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        57,
+        1124,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Datalogging"
+    },
+    {
+      "name": "Reports",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        79,
+        1099,
+        101
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Reports"
+    },
+    {
+      "name": "Recipe Database",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        101,
+        1144,
+        123
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Recipe Database"
+    },
+    {
+      "name": "File Counters",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1144,
+        57,
+        1238,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> File Counters"
+    },
+    {
+      "name": "Messaging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        57,
+        958,
+        79
+      ],
+      "category": "Logic Editing Ribbon",
+      "path": "Ribbon -> Logic Editing -> Messaging"
+    },
+    {
+      "name": "Project Navigator",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        57,
+        131,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Project Navigator"
+    },
+    {
+      "name": "Project Toolbox",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        79,
+        122,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Project Toolbox"
+    },
+    {
+      "name": "Output Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        101,
+        128,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Output Window"
+    },
+    {
+      "name": "Program Variables",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        57,
+        250,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Program Variables"
+    },
+    {
+      "name": "Defines Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        79,
+        243,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Defines Window"
+    },
+    {
+      "name": "Bookmark Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        101,
+        256,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Bookmark Window"
+    },
+    {
+      "name": "Set Target  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        57,
+        361,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Set Target  ID"
+    },
+    {
+      "name": "Set Local  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        79,
+        355,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Set Local  ID"
+    },
+    {
+      "name": "Connection Wizard",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        101,
+        392,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Connection Wizard"
+    },
+    {
+      "name": "Hardware Config",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        57,
+        514,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Hardware Config"
+    },
+    {
+      "name": "Connect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        79,
+        469,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Connect"
+    },
+    {
+      "name": "Disconnect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        101,
+        483,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Disconnect"
+    },
+    {
+      "name": "Download",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        57,
+        544,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download"
+    },
+    {
+      "name": "Upload",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        79,
+        544,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Upload"
+    },
+    {
+      "name": "Verify",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        101,
+        544,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Verify"
+    },
+    {
+      "name": "Run",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        57,
+        574,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Run"
+    },
+    {
+      "name": "Do I/O",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        79,
+        574,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Do I/O"
+    },
+    {
+      "name": "Stop",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        101,
+        574,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Stop"
+    },
+    {
+      "name": "Start",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        57,
+        635,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Start"
+    },
+    {
+      "name": "Download Online Change",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        79,
+        746,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download Online Change"
+    },
+    {
+      "name": "Revert",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        101,
+        643,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Revert"
+    },
+    {
+      "name": "Error Check",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        57,
+        842,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Error Check"
+    },
+    {
+      "name": "Error List",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        79,
+        828,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Error List"
+    },
+    {
+      "name": "Element Usage",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        101,
+        859,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Element Usage"
+    },
+    {
+      "name": "Setpoints",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        79,
+        942,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Setpoints"
+    },
+    {
+      "name": "Download Options",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        101,
+        992,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download Options"
+    },
+    {
+      "name": "Protocols",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        57,
+        1022,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Protocols"
+    },
+    {
+      "name": "Import  L5K",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        79,
+        1022,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Import  L5K"
+    },
+    {
+      "name": "Audio",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        101,
+        1022,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Audio"
+    },
+    {
+      "name": "Datalogging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        57,
+        1124,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Datalogging"
+    },
+    {
+      "name": "Reports",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        79,
+        1099,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Reports"
+    },
+    {
+      "name": "Recipe Database",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        101,
+        1144,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Recipe Database"
+    },
+    {
+      "name": "File Counters",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1144,
+        57,
+        1238,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> File Counters"
+    },
+    {
+      "name": "Messaging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        57,
+        958,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Messaging"
+    },
+    {
+      "name": "Normally Open Contact",
+      "source": "live_toolbox",
+      "automation_id": "ID_NO_CONTACT",
+      "cmd_id": 37684,
+      "control_id": 310,
+      "rect": [
+        316,
+        190,
+        513,
+        212
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Open Contact"
+    },
+    {
+      "name": "Normally Closed Contact",
+      "source": "live_toolbox",
+      "automation_id": "ID_NC_CONTACT",
+      "cmd_id": 37685,
+      "control_id": 310,
+      "rect": [
+        316,
+        212,
+        513,
+        234
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Contact"
+    },
+    {
+      "name": "Normally Open Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NO_COIL",
+      "cmd_id": 37686,
+      "control_id": 310,
+      "rect": [
+        316,
+        234,
+        513,
+        256
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Open Coil"
+    },
+    {
+      "name": "Normally Closed Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NC_COIL",
+      "cmd_id": 37687,
+      "control_id": 310,
+      "rect": [
+        316,
+        256,
+        513,
+        278
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Normally Closed Coil"
+    },
+    {
+      "name": "Positive Transition Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_POS_COIL",
+      "cmd_id": 37688,
+      "control_id": 310,
+      "rect": [
+        316,
+        278,
+        513,
+        300
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Positive Transition Coil"
+    },
+    {
+      "name": "Negative Transition Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_NEG_COIL",
+      "cmd_id": 37689,
+      "control_id": 310,
+      "rect": [
+        316,
+        300,
+        513,
+        322
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Negative Transition Coil"
+    },
+    {
+      "name": "Set Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_SET_COIL",
+      "cmd_id": 37690,
+      "control_id": 310,
+      "rect": [
+        316,
+        322,
+        513,
+        344
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Set Coil"
+    },
+    {
+      "name": "Reset Coil",
+      "source": "live_toolbox",
+      "automation_id": "ID_RESET_COIL",
+      "cmd_id": 37691,
+      "control_id": 310,
+      "rect": [
+        316,
+        344,
+        513,
+        366
+      ],
+      "category": "Contacts and Coils",
+      "path": "Project Toolbox -> Contacts and Coils -> Reset Coil"
+    }
+  ],
+  "w5editld_exports": [
+    "K5ExecuteCommand",
+    "K5GetClassName"
+  ],
+  "safety_invariants_verified": true,
+  "vertical_toolbar_buttons": [
+    {
+      "name": "Select/Edit Elements",
+      "source": "live_vertical_toolbar",
+      "index": 0,
+      "cmd_id": 112,
+      "control_id": 4500,
+      "rect": [
+        537,
+        171,
+        560,
+        193
+      ],
+      "raw_tooltip_text": "Select/Edit Elements",
+      "tooltip_text": "Select/Edit Elements",
+      "fs_state": 37,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Select/Edit Elements (cmd 112)"
+    },
+    {
+      "name": "Comment",
+      "source": "live_vertical_toolbar",
+      "index": 1,
+      "cmd_id": 1006,
+      "control_id": 4500,
+      "rect": [
+        537,
+        193,
+        560,
+        215
+      ],
+      "raw_tooltip_text": "Comment",
+      "tooltip_text": "Comment",
+      "fs_state": 36,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Comment (cmd 1006)"
+    },
+    {
+      "name": "Branch",
+      "source": "live_vertical_toolbar",
+      "index": 2,
+      "cmd_id": 1005,
+      "control_id": 4500,
+      "rect": [
+        537,
+        215,
+        560,
+        237
+      ],
+      "raw_tooltip_text": "Branch",
+      "tooltip_text": "Branch",
+      "fs_state": 4,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Branch (cmd 1005)"
+    },
+    {
+      "name": "Separator",
+      "source": "live_vertical_toolbar",
+      "index": 3,
+      "cmd_id": null,
+      "control_id": 4500,
+      "rect": [
+        537,
+        215,
+        545,
+        242
+      ],
+      "raw_tooltip_text": "Separator",
+      "tooltip_text": "Separator",
+      "fs_state": 36,
+      "fs_style": 1,
+      "is_separator": true,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Separator (cmd 0)"
+    },
+    {
+      "name": "Normally Open Contact",
+      "source": "live_vertical_toolbar",
+      "index": 4,
+      "cmd_id": 1000,
+      "control_id": 4500,
+      "rect": [
+        537,
+        242,
+        560,
+        264
+      ],
+      "raw_tooltip_text": "Normally Open Contact",
+      "tooltip_text": "Normally Open Contact",
+      "fs_state": 36,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Open Contact (cmd 1000)"
+    },
+    {
+      "name": "Normally Closed Contact",
+      "source": "live_vertical_toolbar",
+      "index": 5,
+      "cmd_id": 1001,
+      "control_id": 4500,
+      "rect": [
+        537,
+        264,
+        560,
+        286
+      ],
+      "raw_tooltip_text": "Normally Closed Contact",
+      "tooltip_text": "Normally Closed Contact",
+      "fs_state": 36,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Closed Contact (cmd 1001)"
+    },
+    {
+      "name": "Normally Open Coil",
+      "source": "live_vertical_toolbar",
+      "index": 6,
+      "cmd_id": 1002,
+      "control_id": 4500,
+      "rect": [
+        537,
+        286,
+        560,
+        308
+      ],
+      "raw_tooltip_text": "Normally Open Coil",
+      "tooltip_text": "Normally Open Coil",
+      "fs_state": 36,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Normally Open Coil (cmd 1002)"
+    },
+    {
+      "name": "Timer",
+      "source": "live_vertical_toolbar",
+      "index": 7,
+      "cmd_id": 1003,
+      "control_id": 4500,
+      "rect": [
+        537,
+        308,
+        560,
+        330
+      ],
+      "raw_tooltip_text": "Timer",
+      "tooltip_text": "Timer",
+      "fs_state": 36,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Timer (cmd 1003)"
+    },
+    {
+      "name": "Counter",
+      "source": "live_vertical_toolbar",
+      "index": 8,
+      "cmd_id": 1004,
+      "control_id": 4500,
+      "rect": [
+        537,
+        330,
+        560,
+        352
+      ],
+      "raw_tooltip_text": "Counter",
+      "tooltip_text": "Counter",
+      "fs_state": 4,
+      "fs_style": 2,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Counter (cmd 1004)"
+    },
+    {
+      "name": "Separator",
+      "source": "live_vertical_toolbar",
+      "index": 9,
+      "cmd_id": null,
+      "control_id": 4500,
+      "rect": [
+        537,
+        330,
+        545,
+        357
+      ],
+      "raw_tooltip_text": "Separator",
+      "tooltip_text": "Separator",
+      "fs_state": 36,
+      "fs_style": 1,
+      "is_separator": true,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Separator (cmd 0)"
+    },
+    {
+      "name": "Open Setpoints Window",
+      "source": "live_vertical_toolbar",
+      "index": 10,
+      "cmd_id": 37895,
+      "control_id": 4500,
+      "rect": [
+        537,
+        357,
+        560,
+        379
+      ],
+      "raw_tooltip_text": "Open Setpoints Window",
+      "tooltip_text": "Open Setpoints Window",
+      "fs_state": 4,
+      "fs_style": 0,
+      "is_separator": false,
+      "category": "Ladder Vertical Toolbar",
+      "path": "Vertical Toolbar -> Open Setpoints Window (cmd 37895)"
+    }
+  ],
+  "edit_ribbon_buttons": [
+    {
+      "name": "Project Navigator",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        57,
+        131,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Project Navigator"
+    },
+    {
+      "name": "Project Toolbox",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        79,
+        122,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Project Toolbox"
+    },
+    {
+      "name": "Output Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        17,
+        101,
+        128,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Output Window"
+    },
+    {
+      "name": "Program Variables",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        57,
+        250,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Program Variables"
+    },
+    {
+      "name": "Defines Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        79,
+        243,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Defines Window"
+    },
+    {
+      "name": "Bookmark Window",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        131,
+        101,
+        256,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Bookmark Window"
+    },
+    {
+      "name": "Set Target  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        57,
+        361,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Set Target  ID"
+    },
+    {
+      "name": "Set Local  ID",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        79,
+        355,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Set Local  ID"
+    },
+    {
+      "name": "Connection Wizard",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        267,
+        101,
+        392,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Connection Wizard"
+    },
+    {
+      "name": "Hardware Config",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        57,
+        514,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Hardware Config"
+    },
+    {
+      "name": "Connect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        79,
+        469,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Connect"
+    },
+    {
+      "name": "Disconnect",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        400,
+        101,
+        483,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Disconnect"
+    },
+    {
+      "name": "Download",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        57,
+        544,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download"
+    },
+    {
+      "name": "Upload",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        79,
+        544,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Upload"
+    },
+    {
+      "name": "Verify",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        522,
+        101,
+        544,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Verify"
+    },
+    {
+      "name": "Run",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        57,
+        574,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Run"
+    },
+    {
+      "name": "Do I/O",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        79,
+        574,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Do I/O"
+    },
+    {
+      "name": "Stop",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        552,
+        101,
+        574,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Stop"
+    },
+    {
+      "name": "Start",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        57,
+        635,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Start"
+    },
+    {
+      "name": "Download Online Change",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        79,
+        746,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download Online Change"
+    },
+    {
+      "name": "Revert",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        585,
+        101,
+        643,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Revert"
+    },
+    {
+      "name": "Error Check",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        57,
+        842,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Error Check"
+    },
+    {
+      "name": "Error List",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        79,
+        828,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Error List"
+    },
+    {
+      "name": "Element Usage",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        757,
+        101,
+        859,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Element Usage"
+    },
+    {
+      "name": "Setpoints",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        79,
+        942,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Setpoints"
+    },
+    {
+      "name": "Download Options",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        101,
+        992,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Download Options"
+    },
+    {
+      "name": "Protocols",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        57,
+        1022,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Protocols"
+    },
+    {
+      "name": "Import  L5K",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        79,
+        1022,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Import  L5K"
+    },
+    {
+      "name": "Audio",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1000,
+        101,
+        1022,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Audio"
+    },
+    {
+      "name": "Datalogging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        57,
+        1124,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Datalogging"
+    },
+    {
+      "name": "Reports",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        79,
+        1099,
+        101
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Reports"
+    },
+    {
+      "name": "Recipe Database",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1033,
+        101,
+        1144,
+        123
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Recipe Database"
+    },
+    {
+      "name": "File Counters",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        1144,
+        57,
+        1238,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> File Counters"
+    },
+    {
+      "name": "Messaging",
+      "source": "live_uia",
+      "automation_id": "",
+      "cmd_id": null,
+      "control_id": null,
+      "rect": [
+        867,
+        57,
+        958,
+        79
+      ],
+      "category": "Edit Ribbon",
+      "path": "Ribbon -> Edit -> Messaging"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <filter id="beacon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="badge-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="binodal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.30"/>
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.30"/>
+    </linearGradient>
+  </defs>
+  <rect id="canvas-background" width="1200" height="750" fill="#0B0F19"/>
+  <g id="canvas-header">
+    <rect x="20" y="16" width="1160" height="52" rx="8" fill="#050811" stroke="#21262D" stroke-width="1.2" filter="url(#badge-shadow)"/>
+    <text x="40" y="48" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="18" font-weight="bold">CSCAPE HMI DYNAMIC TERNARY PHASE DIAGRAM SCADA CANVAS (W243)</text>
+    <rect x="880" y="28" width="130" height="28" rx="4" fill="#161B22" stroke="#10B981" stroke-width="1.5"/>
+    <text x="945" y="47" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" text-anchor="middle">SINGLE-PHASE</text>
+    <rect x="1025" y="28" width="140" height="28" rx="4" fill="#161B22" stroke="#06B6D4" stroke-width="1.5"/>
+    <text x="1095" y="47" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" text-anchor="middle">STATUS: 0x0000</text>
+  </g>
+  <g id="ternary-gridlines">
+    <line x1="240.0" y1="622.0" x2="960.0" y2="622.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="560.0" y1="158.0" x2="920.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="640.0" y1="158.0" x2="280.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="280.0" y1="564.0" x2="920.0" y2="564.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="520.0" y1="216.0" x2="840.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="680.0" y1="216.0" x2="360.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="320.0" y1="506.0" x2="880.0" y2="506.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="480.0" y1="274.0" x2="760.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="720.0" y1="274.0" x2="440.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="360.0" y1="448.0" x2="840.0" y2="448.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="440.0" y1="332.0" x2="680.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="760.0" y1="332.0" x2="520.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="400.0" y1="390.0" x2="800.0" y2="390.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="400.0" y1="390.0" x2="600.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="800.0" y1="390.0" x2="600.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="440.0" y1="332.0" x2="760.0" y2="332.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="360.0" y1="448.0" x2="520.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="840.0" y1="448.0" x2="680.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="480.0" y1="274.0" x2="720.0" y2="274.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="320.0" y1="506.0" x2="440.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="880.0" y1="506.0" x2="760.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="520.0" y1="216.0" x2="680.0" y2="216.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="280.0" y1="564.0" x2="360.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="920.0" y1="564.0" x2="840.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="560.0" y1="158.0" x2="640.0" y2="158.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="240.0" y1="622.0" x2="280.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="960.0" y1="622.0" x2="920.0" y2="680.0" stroke="#21262D" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6"/>
+  </g>
+  <g id="ternary-outer-triangle">
+    <polygon points="600.0,100.0 200.0,680.0 1000.0,680.0"
+             fill="none" stroke="#475569" stroke-width="2.2"/>
+  </g>
+  <g id="ternary-vertices">
+    <!-- Apex A (Top): Component A (Water) -->
+    <circle cx="600.0" cy="100.0" r="6" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="600.0" y="82.0" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">APEX A: Water (100%)</text>
+
+    <!-- Vertex B (Bottom Left): Component B (Carrier Solvent) -->
+    <circle cx="200.0" cy="680.0" r="6" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="188.0" y="706.0" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">VERTEX B: Carrier Solvent (100%)</text>
+
+    <!-- Vertex C (Bottom Right): Component C (Solute / Product) -->
+    <circle cx="1000.0" cy="680.0" r="6" fill="#EAB308" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="1012.0" y="706.0" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="start">VERTEX C: Solute / Product (100%)</text>
+  </g>
+  <g id="binodal-envelope">
+    <path d="M 216.00,668.40 C 155.94,757.40 221.44,662.54 232.00,656.80 C 242.56,651.06 264.16,641.26 280.00,633.60 C 295.84,625.94 310.84,621.88 328.00,610.40 C 345.16,598.92 364.20,581.23 384.00,564.00 C 403.80,546.77 426.88,527.05 448.00,506.00 C 469.12,484.95 497.48,455.54 512.00,436.40 C 526.52,417.26 525.44,405.31 536.00,390.00 C 546.56,374.69 567.25,361.07 576.00,343.60 C 584.75,326.13 585.04,307.12 589.00,284.15 C 592.96,261.18 599.50,227.13 600.00,204.40 C 600.50,181.67 592.66,160.75 592.00,146.40 C 591.34,132.05 658.04,31.27 596.00,117.40 C 533.96,203.53 276.06,579.40 216.00,668.40 Z" fill="url(#binodal-grad)" stroke="#06B6D4" stroke-width="2.2"/>
+  </g>
+  <g id="equilibrium-tie-lines">
+    <line x1="232.0" y1="656.8" x2="592.0" y2="146.4" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.85"/>
+    <line x1="280.0" y1="633.6" x2="600.0" y2="204.4" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.85"/>
+    <line x1="328.0" y1="610.4" x2="589.0" y2="284.1" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.85"/>
+    <line x1="384.0" y1="564.0" x2="576.0" y2="343.6" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.85"/>
+    <line x1="448.0" y1="506.0" x2="536.0" y2="390.0" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.85"/>
+  </g>
+  <g id="plait-critical-point">
+    <circle cx="512.0" cy="436.4" r="5.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="524.0" y="428.4" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold">Plait Point (18.0% C)</text>
+  </g>
+  <g id="operating-point-marker">
+    <!-- Outer Pulsing Beacon Halo -->
+    <circle cx="540.0" cy="419.0" r="15" fill="none" stroke="#10B981" stroke-width="2.2" opacity="0.65" filter="url(#beacon-glow)"/>
+    <!-- Core Marker -->
+    <circle cx="540.0" cy="419.0" r="6.5" fill="#10B981" stroke="#FFFFFF" stroke-width="2.0"/>
+    <!-- Status Badge Tag -->
+    <rect x="552.0" y="391.0" width="160" height="24" rx="4" fill="#050811" stroke="#10B981" stroke-width="1.2"/>
+    <text x="632.0" y="407.0" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">OP: 45.0%A / 35.0%B / 20.0%C</text>
+  </g>
+  <g id="scada-telemetry-hud">
+    <rect x="880" y="86" width="300" height="636" rx="8" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+    <text x="898" y="118" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">PROCESS TELEMETRY HUD</text>
+    <line x1="898" y1="130" x2="1162" y2="130" stroke="#21262D" stroke-width="1.2"/>
+
+    <!-- Component A Mass Fraction (%R2040) -->
+    <text x="898" y="162" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Comp A (Water) [%R2040]:</text>
+    <text x="1162" y="162" fill="#3B82F6" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">45.00%</text>
+
+    <!-- Component B Mass Fraction (%R2041) -->
+    <text x="898" y="198" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Comp B (Solvent) [%R2041]:</text>
+    <text x="1162" y="198" fill="#8B5CF6" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">35.00%</text>
+
+    <!-- Component C Mass Fraction (%R2042) -->
+    <text x="898" y="234" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Comp C (Solute) [%R2042]:</text>
+    <text x="1162" y="234" fill="#EAB308" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">20.00%</text>
+
+    <!-- Closure Check -->
+    <text x="898" y="270" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Mass Fraction Sum (A+B+C):</text>
+    <text x="1162" y="270" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">100.00%</text>
+
+    <line x1="898" y1="290" x2="1162" y2="290" stroke="#21262D" stroke-width="1.0"/>
+
+    <!-- Tie Lines Configured (%R2043) -->
+    <text x="898" y="322" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Active Tie Lines [%R2043]:</text>
+    <text x="1162" y="322" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">5</text>
+
+    <!-- Equilibrium State (%R2044) -->
+    <text x="898" y="358" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Equilibrium State [%R2044]:</text>
+    <text x="1162" y="358" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">PhaseEquilibriumState.SINGLE_PHASE (SINGLE-PHASE)</text>
+
+    <!-- Tie Line Slope (%R2045) -->
+    <text x="898" y="394" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Tie Line Slope [%R2045]:</text>
+    <text x="1162" y="394" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">-1.25 (-125)</text>
+
+    <!-- Distribution Coeff K_D (%R2046) -->
+    <text x="898" y="430" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Distribution Coeff [%R2046]:</text>
+    <text x="1162" y="430" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">1.450 (1450)</text>
+
+    <!-- Diagnostic Code (%R2047) -->
+    <text x="898" y="466" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Diagnostic Code [%R2047]:</text>
+    <text x="1162" y="466" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">0x0000</text>
+
+    <line x1="898" y1="486" x2="1162" y2="486" stroke="#21262D" stroke-width="1.0"/>
+
+    <!-- Discrete Coils -->
+    <text x="898" y="518" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Canvas Active [%M476]:</text>
+    <text x="1162" y="518" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">TRUE</text>
+
+    <text x="898" y="554" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="11">Two-Phase Alarm [%M477]:</text>
+    <text x="1162" y="554" fill="#10B981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="end">NORMAL</text>
+
+    <!-- WCAG Contrast Box -->
+    <rect x="898" y="596" width="264" height="90" rx="6" fill="#050811" stroke="#21262D" stroke-width="1.0"/>
+    <text x="910" y="620" fill="#FFFFFF" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold">WCAG 2.1 AAA SCADA COMPLIANCE</text>
+    <text x="910" y="642" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">Badge Contrast: 20.01:1 (Target > 18:1)</text>
+    <text x="910" y="660" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">Text Contrast: 17.30:1 (Target > 7.0:1)</text>
+    <text x="910" y="678" fill="#8B949E" font-family="Segoe UI, sans-serif" font-size="10">Graphics Contrast: 7.89:1 (Target > 3.0:1)</text>
+  </g>
+</svg>

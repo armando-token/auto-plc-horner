@@ -1,0 +1,239 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "OPC UA address space verification completed: 8/8 assertions passed in 0.69 ms.",
+  "data": {
+    "all_passed": true,
+    "duration_ms": 0.6936001591384411,
+    "namespaces": [
+      "http://opcfoundation.org/UA/",
+      "urn:horner:ocs:telemetry"
+    ],
+    "total_nodes": 16,
+    "assertions": [
+      {
+        "check": "standard_namespaces_registered",
+        "passed": true,
+        "details": "Namespaces: ['http://opcfoundation.org/UA/', 'urn:horner:ocs:telemetry']"
+      },
+      {
+        "check": "standard_roots_present",
+        "passed": true,
+        "details": "Root, Objects, Types, Views nodes verified in Namespace 0"
+      },
+      {
+        "check": "horner_controller_hierarchy",
+        "passed": true,
+        "details": "HornerOCS object organized under Objects root folder"
+      },
+      {
+        "check": "node_id_parsing_multi_format",
+        "passed": true,
+        "details": "Verified Numeric, String, GUID, ByteString NodeId parsing & serialization"
+      },
+      {
+        "check": "method_node_invocation",
+        "passed": true,
+        "details": "Method ResetAlarms invoked with result: ['All alarms cleared successfully']"
+      },
+      {
+        "check": "access_level_and_range_validation",
+        "passed": true,
+        "details": "RW write=GOOD, RO write=BAD_NOT_WRITABLE, EU exceed=UNCERTAIN_EU_EXCEEDED"
+      },
+      {
+        "check": "register_table_bidirectional_sync",
+        "passed": true,
+        "details": "Synced from regs: 3, synced to regs: 3, R100=55.0"
+      },
+      {
+        "check": "modbus_scaling_bridge_sync",
+        "passed": true,
+        "details": "Bridge point auto-created in namespace 1 with value 50.0 and status UNCERTAIN_EU_EXCEEDED"
+      }
+    ],
+    "address_space_summary": {
+      "namespaces": [
+        "http://opcfoundation.org/UA/",
+        "urn:horner:ocs:telemetry"
+      ],
+      "total_nodes": 16,
+      "nodes": [
+        {
+          "node_id": "ns=0;i=84",
+          "node_class": "OBJECT",
+          "browse_name": "0:Root",
+          "display_name": "Root",
+          "references_count": 3
+        },
+        {
+          "node_id": "ns=0;i=85",
+          "node_class": "OBJECT",
+          "browse_name": "0:Objects",
+          "display_name": "Objects",
+          "references_count": 2
+        },
+        {
+          "node_id": "ns=0;i=86",
+          "node_class": "OBJECT",
+          "browse_name": "0:Types",
+          "display_name": "Types",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=0;i=87",
+          "node_class": "OBJECT",
+          "browse_name": "0:Views",
+          "display_name": "Views",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS",
+          "node_class": "OBJECT",
+          "browse_name": "1:HornerOCS",
+          "display_name": "Horner OCS Controller",
+          "references_count": 12
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Inputs",
+          "node_class": "OBJECT",
+          "browse_name": "1:DigitalInputs",
+          "display_name": "DigitalInputs",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Outputs",
+          "node_class": "OBJECT",
+          "browse_name": "1:DigitalOutputs",
+          "display_name": "DigitalOutputs",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Markers",
+          "node_class": "OBJECT",
+          "browse_name": "1:InternalMarkers",
+          "display_name": "InternalMarkers",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.AnalogInputs",
+          "node_class": "OBJECT",
+          "browse_name": "1:AnalogInputs",
+          "display_name": "AnalogInputs",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.AnalogOutputs",
+          "node_class": "OBJECT",
+          "browse_name": "1:AnalogOutputs",
+          "display_name": "AnalogOutputs",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Registers",
+          "node_class": "OBJECT",
+          "browse_name": "1:Registers",
+          "display_name": "Registers",
+          "references_count": 1
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Telemetry.TankTemp",
+          "node_class": "VARIABLE",
+          "browse_name": "1:TankTemp",
+          "display_name": "TankTemp",
+          "references_count": 1,
+          "data_type": "ns=0;i=10",
+          "access_level": "0x3",
+          "horner_register": "%R100",
+          "value": {
+            "value": 55.0,
+            "status_code": "0x0",
+            "status_name": "GOOD",
+            "is_good": true,
+            "source_timestamp": 1790975031.533121,
+            "server_timestamp": 1790975031.533121
+          },
+          "eu_range": [
+            0.0,
+            100.0
+          ],
+          "engineering_units": "degC"
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Telemetry.TankPressure",
+          "node_class": "VARIABLE",
+          "browse_name": "1:TankPressure",
+          "display_name": "TankPressure",
+          "references_count": 1,
+          "data_type": "ns=0;i=10",
+          "access_level": "0x1",
+          "horner_register": "%R102",
+          "value": {
+            "value": 0.0,
+            "status_code": "0x0",
+            "status_name": "GOOD",
+            "is_good": true,
+            "source_timestamp": 1790975031.533121,
+            "server_timestamp": 1790975031.533121
+          },
+          "eu_range": [
+            0.0,
+            5.0
+          ],
+          "engineering_units": "bar"
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Telemetry.HighAlarm",
+          "node_class": "VARIABLE",
+          "browse_name": "1:HighAlarm",
+          "display_name": "HighAlarm",
+          "references_count": 1,
+          "data_type": "ns=0;i=1",
+          "access_level": "0x3",
+          "horner_register": "%M1",
+          "value": {
+            "value": true,
+            "status_code": "0x0",
+            "status_name": "GOOD",
+            "is_good": true,
+            "source_timestamp": 1790975031.533121,
+            "server_timestamp": 1790975031.533121
+          },
+          "eu_range": null,
+          "engineering_units": null
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Methods.ResetAlarms",
+          "node_class": "METHOD",
+          "browse_name": "1:ResetAlarms",
+          "display_name": "ResetAlarms",
+          "references_count": 1,
+          "executable": true
+        },
+        {
+          "node_id": "ns=1;s=HornerOCS.Telemetry.InletFlow",
+          "node_class": "VARIABLE",
+          "browse_name": "1:InletFlow",
+          "display_name": "InletFlow",
+          "references_count": 1,
+          "data_type": "ns=0;i=10",
+          "access_level": "0x3",
+          "horner_register": "%R10",
+          "value": {
+            "value": 50.0,
+            "status_code": "0x40910000",
+            "status_name": "UNCERTAIN_EU_EXCEEDED",
+            "is_good": false,
+            "source_timestamp": 1790975031.533121,
+            "server_timestamp": 1790975031.533121
+          },
+          "eu_range": [
+            0.0,
+            100.0
+          ],
+          "engineering_units": "L/min"
+        }
+      ]
+    }
+  }
+}

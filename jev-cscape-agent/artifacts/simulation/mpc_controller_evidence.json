@@ -1,0 +1,50 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Model Predictive Controller (MPC) Horizon Solver verified: Receding horizon optimization, Hildreth dual active-set QP solver (<= 50 iterations), slew rate limiting (|delta_u| <= 5%), actuator saturation clamping [0, 100%], disturbance observer, pure ST boundary enforcement, and Horner OCS register space synchronization (%R170..%R175, %M54..%M55) passed.",
+  "data": {
+    "work_package": "W061",
+    "gate": "G4",
+    "timestamp_utc": "2026-10-02T21:43:16.208678+00:00",
+    "mpc_parameters": {
+      "prediction_horizon_np": 10,
+      "control_horizon_nc": 3,
+      "execution_interval_dt_s": 0.01,
+      "weight_tracking_q": 1.0,
+      "weight_delta_u_r": 0.1,
+      "actuator_limits": [
+        0.0,
+        100.0
+      ],
+      "slew_rate_limit": 5.0,
+      "solver": "Hildreth Dual Active-Set Coordinate Descent",
+      "max_iterations_budget": 50
+    },
+    "closed_loop_performance": {
+      "setpoint_pct": 60.0,
+      "final_pv_pct": 60.0,
+      "final_valve_u_pct": 60.0101,
+      "final_delta_u_pct": 0.0068,
+      "qp_iterations_last_cycle": 0,
+      "objective_cost": 0.0
+    },
+    "security_invariants": {
+      "offline_mock_mode": true,
+      "zero_external_solvers": true,
+      "pure_st_enforced": true,
+      "ladder_construct_injection_blocked": true,
+      "com_ports_accessed": 0,
+      "downloads_attempted": 0
+    },
+    "horner_ocs_register_map": {
+      "%R170": "Manipulated Variable Command u(k) (0..32000 counts)",
+      "%R171": "Delta Control Action delta_u(k) (signed 16-bit word)",
+      "%R172": "Level Setpoint r(k) (0..32000 counts)",
+      "%R173": "Process Variable / Tank Level y(k) (0..32000 counts)",
+      "%R174": "Tracking Error e(k) = r(k) - y(k) (signed 16-bit word)",
+      "%R175": "MPC Status Bitmask Word (Active, Optimal, Saturated, Slew Limited)",
+      "%M54": "MPC Auto Run / Enable Coil",
+      "%M55": "MPC Reset Coil"
+    }
+  }
+}

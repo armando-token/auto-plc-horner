@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_009",
+  "file_name": "scene_009.png",
+  "original_source": "artifacts\\G8\\acceptance_runs\\run_02_reopen.png",
+  "split": "reserved",
+  "scene_type": "hmi_screen_editor",
+  "category": "HMI",
+  "dimensions": {
+    "width": 1280,
+    "height": 780
+  },
+  "sha256": "05e5509f5959076eb057dc3fd885eccb15599589b03891504f8dc59200d9ce5e",
+  "labels": {
+    "canvas_rect": [
+      55,
+      14,
+      1271,
+      755
+    ],
+    "anchors": {
+      "canvas_center": [
+        663,
+        384
+      ],
+      "canvas_nw": [
+        55,
+        14
+      ],
+      "canvas_se": [
+        1271,
+        755
+      ],
+      "status_bar_roi": [
+        0,
+        756,
+        1280,
+        780
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

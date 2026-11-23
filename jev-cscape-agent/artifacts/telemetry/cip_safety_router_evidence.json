@@ -1,0 +1,179 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9/9 CIP Safety Router protocol stages PASSED deterministically.",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W238",
+    "protocol": "ODVA CIP Safety Volume 5 (Safety Router Concentrator)",
+    "classes": [
+      57,
+      58,
+      59
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.042,
+        "details": "Class 0x39..0x3B, 10ms EPI / 30ms watchdog, 2500us jitter limit, and 0xEA01..0xEA06 signed/unsigned equality verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 3.896,
+        "details": "POU 'CipSafetyRouterSync' verified with STParser and bound to %R1990..%R1997 and %M464..%M465."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.033,
+        "details": "Successfully intercepted all 4/4 ladder logic patterns with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Router_Multi_Node_Configuration_And_Registration",
+        "check": "Router_Multi_Node_Configuration_And_Registration",
+        "passed": true,
+        "timing_ms": 0.043,
+        "details": "4 managed safety nodes (E-Stop, Light Curtain, Safety Mat, AGV Interlock) verified with 99.80% health index."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "check": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "passed": true,
+        "timing_ms": 0.409,
+        "details": "Dual-channel complement parity valid, CRC-S1 (poly 0x5935) & CRC-S2 (poly 0x755B) verified, corruptions detected."
+      },
+      {
+        "stage": 6,
+        "name": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "check": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.059,
+        "details": "EPI watchdog elapsed past 30 ms, latching 0xEA02 timeout fault and asserting %M465 safe state."
+      },
+      {
+        "stage": 7,
+        "name": "Jitter_Surveillance_And_Packet_Routing_Forwarding",
+        "check": "Jitter_Surveillance_And_Packet_Routing_Forwarding",
+        "passed": true,
+        "timing_ms": 0.291,
+        "details": "Jitter > 2500us tripped 0xEA04, node disconnect tripped 0xEA05, and corrupt table tripped 0xEA06."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 99.748,
+        "details": "Registers %R1990..%R1997 and coils %M464..%M465 synchronized bit-exact with SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 256.323,
+        "details": "100 continuous soak cycles passed; registers %R1990..%R1997 and %M464..%M465 maintained bounded and healthy."
+      }
+    ],
+    "register_map": {
+      "%R1990": "REG_SAFETY_NODES_COUNT",
+      "%R1991": "REG_ROUTER_HEALTH_INDEX_SCALED",
+      "%R1992": "REG_MAX_JITTER_US",
+      "%R1993": "REG_FORWARDED_PACKETS_SCALED",
+      "%R1994": "REG_ACTIVE_FAULT_NODE_INDEX",
+      "%R1995": "REG_ROUTER_TOPOLOGY_STATUS_BITS",
+      "%R1996": "REG_SELECTED_MONITORED_NODE",
+      "%R1997": "REG_DIAGNOSTIC_STATUS_CODE",
+      "%M464": "COIL_SAFETY_ROUTER_ACTIVE",
+      "%M465": "COIL_SAFETY_ROUTER_FAULT_ACTIVE"
+    },
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.042,
+        "details": "Class 0x39..0x3B, 10ms EPI / 30ms watchdog, 2500us jitter limit, and 0xEA01..0xEA06 signed/unsigned equality verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 3.896,
+        "details": "POU 'CipSafetyRouterSync' verified with STParser and bound to %R1990..%R1997 and %M464..%M465."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.033,
+        "details": "Successfully intercepted all 4/4 ladder logic patterns with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Router_Multi_Node_Configuration_And_Registration",
+        "check": "Router_Multi_Node_Configuration_And_Registration",
+        "passed": true,
+        "timing_ms": 0.043,
+        "details": "4 managed safety nodes (E-Stop, Light Curtain, Safety Mat, AGV Interlock) verified with 99.80% health index."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "check": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "passed": true,
+        "timing_ms": 0.409,
+        "details": "Dual-channel complement parity valid, CRC-S1 (poly 0x5935) & CRC-S2 (poly 0x755B) verified, corruptions detected."
+      },
+      {
+        "stage": 6,
+        "name": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "check": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.059,
+        "details": "EPI watchdog elapsed past 30 ms, latching 0xEA02 timeout fault and asserting %M465 safe state."
+      },
+      {
+        "stage": 7,
+        "name": "Jitter_Surveillance_And_Packet_Routing_Forwarding",
+        "check": "Jitter_Surveillance_And_Packet_Routing_Forwarding",
+        "passed": true,
+        "timing_ms": 0.291,
+        "details": "Jitter > 2500us tripped 0xEA04, node disconnect tripped 0xEA05, and corrupt table tripped 0xEA06."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 99.748,
+        "details": "Registers %R1990..%R1997 and coils %M464..%M465 synchronized bit-exact with SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 256.323,
+        "details": "100 continuous soak cycles passed; registers %R1990..%R1997 and %M464..%M465 maintained bounded and healthy."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

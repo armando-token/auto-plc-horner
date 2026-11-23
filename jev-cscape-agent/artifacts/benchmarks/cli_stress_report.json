@@ -1,0 +1,442 @@
+{
+  "suite_title": "JEV Cscape Agent CLI Stress and Concurrency Benchmark",
+  "timestamp_utc": "2026-10-02T19:32:05.930146+00:00",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.12.10",
+    "cpu_count": 2,
+    "ram_total_gb": 7.95
+  },
+  "configuration": {
+    "iterations_per_sequential_cmd": 3,
+    "concurrency_workers": 4,
+    "timeout_seconds": 30.0,
+    "quick_mode": false
+  },
+  "summary": {
+    "total_cli_executions": 36,
+    "sequential_executions": 24,
+    "concurrent_executions": 12,
+    "total_wall_duration_s": 29.74,
+    "overall_mean_latency_ms": 1340.78,
+    "peak_memory_footprint_mb": 41.24,
+    "zero_mutex_deadlocks": true,
+    "clean_termination_rate": 1.0,
+    "contract_conformance_rate": 1.0
+  },
+  "invariants": {
+    "all_8_subcommands_benchmarked": true,
+    "sequential_clean_exits": true,
+    "concurrent_clean_exits": true,
+    "zero_mutex_deadlocks": true,
+    "strict_4_state_contract_conformance": true,
+    "concurrency_level_tested": 4
+  },
+  "sequential_benchmarks": {
+    "doctor": {
+      "subcommand": "doctor",
+      "args": [
+        "doctor",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        1280.68,
+        1578.09,
+        1234.85
+      ],
+      "latency_min_ms": 1234.85,
+      "latency_max_ms": 1578.09,
+      "latency_mean_ms": 1364.54,
+      "latency_stdev_ms": 152.16,
+      "peak_rss_mb": 39.48,
+      "mean_rss_mb": 39.41,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    "status": {
+      "subcommand": "status",
+      "args": [
+        "status",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        1039.07,
+        1077.99,
+        895.57
+      ],
+      "latency_min_ms": 895.57,
+      "latency_max_ms": 1077.99,
+      "latency_mean_ms": 1004.21,
+      "latency_stdev_ms": 78.44,
+      "peak_rss_mb": 39.6,
+      "mean_rss_mb": 39.49,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    "validate-st": {
+      "subcommand": "validate-st",
+      "args": [
+        "validate-st",
+        "C:\\Users\\ARMAND~1\\AppData\\Local\\Temp\\benchmark_st_bj6pwort.st",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        895.02,
+        854.87,
+        518.6
+      ],
+      "latency_min_ms": 518.6,
+      "latency_max_ms": 895.02,
+      "latency_mean_ms": 756.16,
+      "latency_stdev_ms": 168.78,
+      "peak_rss_mb": 39.36,
+      "mean_rss_mb": 39.32,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    "simulate": {
+      "subcommand": "simulate",
+      "args": [
+        "simulate",
+        "--cycles",
+        "10",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        543.65,
+        985.42,
+        1107.99
+      ],
+      "latency_min_ms": 543.65,
+      "latency_max_ms": 1107.99,
+      "latency_mean_ms": 879.02,
+      "latency_stdev_ms": 242.36,
+      "peak_rss_mb": 40.98,
+      "mean_rss_mb": 40.91,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    "inspect-registers": {
+      "subcommand": "inspect-registers",
+      "args": [
+        "inspect-registers",
+        "--format",
+        "json",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        824.35,
+        600.02,
+        833.16
+      ],
+      "latency_min_ms": 600.02,
+      "latency_max_ms": 833.16,
+      "latency_mean_ms": 752.51,
+      "latency_stdev_ms": 107.89,
+      "peak_rss_mb": 40.98,
+      "mean_rss_mb": 40.93,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    "audit-safety": {
+      "subcommand": "audit-safety",
+      "args": [
+        "audit-safety",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        1222.52,
+        1028.43,
+        628.21
+      ],
+      "latency_min_ms": 628.21,
+      "latency_max_ms": 1222.52,
+      "latency_mean_ms": 959.72,
+      "latency_stdev_ms": 247.44,
+      "peak_rss_mb": 39.92,
+      "mean_rss_mb": 39.88,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    "soak": {
+      "subcommand": "soak",
+      "args": [
+        "soak",
+        "--cycles",
+        "20",
+        "--rates",
+        "10",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        698.35,
+        582.7,
+        681.5
+      ],
+      "latency_min_ms": 582.7,
+      "latency_max_ms": 698.35,
+      "latency_mean_ms": 654.18,
+      "latency_stdev_ms": 51.01,
+      "peak_rss_mb": 41.11,
+      "mean_rss_mb": 41.03,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    "scale-point": {
+      "subcommand": "scale-point",
+      "args": [
+        "scale-point",
+        "--channel",
+        "%AI1",
+        "--raw",
+        "16000",
+        "--json"
+      ],
+      "iterations": 3,
+      "latencies_ms": [
+        1586.37,
+        989.27,
+        1056.29
+      ],
+      "latency_min_ms": 989.27,
+      "latency_max_ms": 1586.37,
+      "latency_mean_ms": 1210.64,
+      "latency_stdev_ms": 267.09,
+      "peak_rss_mb": 41.19,
+      "mean_rss_mb": 41.14,
+      "all_exit_codes_zero": true,
+      "clean_termination_rate": 1.0,
+      "contract_conformance_rate": 1.0,
+      "contract_statuses": [
+        "success",
+        "success",
+        "success"
+      ]
+    }
+  },
+  "concurrent_benchmarks": {
+    "concurrency_level": 4,
+    "waves_executed": 3,
+    "waves": [
+      {
+        "wave_index": 1,
+        "concurrency": 4,
+        "subcommands": [
+          "doctor",
+          "status",
+          "simulate",
+          "scale-point"
+        ],
+        "wall_duration_ms": 1811.62,
+        "sum_individual_latencies_ms": 6415.69,
+        "parallel_speedup_ratio": 3.54,
+        "temporal_overlap_detected": true,
+        "all_exit_codes_zero": true,
+        "all_clean_exits": true,
+        "all_contracts_valid": true,
+        "deadlock_detected": false,
+        "processes": [
+          {
+            "subcommand": "doctor",
+            "exit_code": 0,
+            "wall_duration_ms": 1340.81,
+            "peak_rss_mb": 39.45,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "status",
+            "exit_code": 0,
+            "wall_duration_ms": 1620.75,
+            "peak_rss_mb": 39.46,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "simulate",
+            "exit_code": 0,
+            "wall_duration_ms": 1793.45,
+            "peak_rss_mb": 40.84,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "scale-point",
+            "exit_code": 0,
+            "wall_duration_ms": 1660.69,
+            "peak_rss_mb": 41.24,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          }
+        ]
+      },
+      {
+        "wave_index": 2,
+        "concurrency": 4,
+        "subcommands": [
+          "validate-st",
+          "inspect-registers",
+          "audit-safety",
+          "soak"
+        ],
+        "wall_duration_ms": 2740.04,
+        "sum_individual_latencies_ms": 10021.59,
+        "parallel_speedup_ratio": 3.66,
+        "temporal_overlap_detected": true,
+        "all_exit_codes_zero": true,
+        "all_clean_exits": true,
+        "all_contracts_valid": true,
+        "deadlock_detected": false,
+        "processes": [
+          {
+            "subcommand": "validate-st",
+            "exit_code": 0,
+            "wall_duration_ms": 2527.0,
+            "peak_rss_mb": 39.32,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "inspect-registers",
+            "exit_code": 0,
+            "wall_duration_ms": 2291.13,
+            "peak_rss_mb": 40.86,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "audit-safety",
+            "exit_code": 0,
+            "wall_duration_ms": 2517.17,
+            "peak_rss_mb": 39.96,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "soak",
+            "exit_code": 0,
+            "wall_duration_ms": 2686.29,
+            "peak_rss_mb": 40.81,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          }
+        ]
+      },
+      {
+        "wave_index": 3,
+        "concurrency": 4,
+        "subcommands": [
+          "simulate",
+          "simulate",
+          "simulate",
+          "simulate"
+        ],
+        "wall_duration_ms": 2413.25,
+        "sum_individual_latencies_ms": 9087.79,
+        "parallel_speedup_ratio": 3.77,
+        "temporal_overlap_detected": true,
+        "all_exit_codes_zero": true,
+        "all_clean_exits": true,
+        "all_contracts_valid": true,
+        "deadlock_detected": false,
+        "processes": [
+          {
+            "subcommand": "simulate",
+            "exit_code": 0,
+            "wall_duration_ms": 2051.78,
+            "peak_rss_mb": 41.11,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "simulate",
+            "exit_code": 0,
+            "wall_duration_ms": 2376.86,
+            "peak_rss_mb": 40.77,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "simulate",
+            "exit_code": 0,
+            "wall_duration_ms": 2315.67,
+            "peak_rss_mb": 40.8,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          },
+          {
+            "subcommand": "simulate",
+            "exit_code": 0,
+            "wall_duration_ms": 2343.47,
+            "peak_rss_mb": 40.86,
+            "contract_status": "success",
+            "contract_valid": true,
+            "clean_exit": true
+          }
+        ]
+      }
+    ],
+    "zero_mutex_deadlocks": true,
+    "total_deadlocks_detected": 0
+  }
+}

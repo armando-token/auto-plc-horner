@@ -1,0 +1,69 @@
+{
+  "gate": "G4",
+  "work_package": "W020",
+  "status": "success",
+  "mode": "offline/mock",
+  "classification": "TESTED_MOCK [offline/DEV only]",
+  "timestamp_utc": "2026-10-02T06:33:00.000000+00:00",
+  "hardware_lockout": "FAIL_CLOSED_ACTIVE",
+  "straton_quarantine": "CERTIFIED_ISOLATED",
+  "standard_blocks_implemented": {
+    "TON": {
+      "standard": "IEC 61131-3",
+      "type": "Timer On-Delay",
+      "inputs": ["IN (BOOL)", "PT (TIME/ms)"],
+      "outputs": ["Q (BOOL)", "ET (TIME/ms)"],
+      "timing_precision": "integer microseconds (zero-drift)",
+      "register_mapping": "in_reg (%I/%M), pt_reg (%R), q_reg (%Q/%M), et_reg (%R)"
+    },
+    "TOF": {
+      "standard": "IEC 61131-3",
+      "type": "Timer Off-Delay",
+      "inputs": ["IN (BOOL)", "PT (TIME/ms)"],
+      "outputs": ["Q (BOOL)", "ET (TIME/ms)"],
+      "timing_precision": "integer microseconds (zero-drift)",
+      "register_mapping": "in_reg (%I/%M), pt_reg (%R), q_reg (%Q/%M), et_reg (%R)"
+    },
+    "TP": {
+      "standard": "IEC 61131-3",
+      "type": "Pulse Timer",
+      "inputs": ["IN (BOOL)", "PT (TIME/ms)"],
+      "outputs": ["Q (BOOL)", "ET (TIME/ms)"],
+      "timing_precision": "integer microseconds (zero-drift)",
+      "register_mapping": "in_reg (%I/%M), pt_reg (%R), q_reg (%Q/%M), et_reg (%R)"
+    },
+    "CTU": {
+      "standard": "IEC 61131-3",
+      "type": "Up Counter",
+      "inputs": ["CU (BOOL edge)", "RESET (BOOL)", "PV (INT)"],
+      "outputs": ["Q (BOOL)", "CV (INT)"],
+      "register_mapping": "cu_reg (%I/%M), reset_reg (%I/%M), pv_reg (%R), q_reg (%Q/%M), cv_reg (%R)"
+    },
+    "CTD": {
+      "standard": "IEC 61131-3",
+      "type": "Down Counter",
+      "inputs": ["CD (BOOL edge)", "LOAD (BOOL)", "PV (INT)"],
+      "outputs": ["Q (BOOL)", "CV (INT)"],
+      "register_mapping": "cd_reg (%I/%M), load_reg (%I/%M), pv_reg (%R), q_reg (%Q/%M), cv_reg (%R)"
+    },
+    "CTUD": {
+      "standard": "IEC 61131-3",
+      "type": "Up/Down Counter",
+      "inputs": ["CU (BOOL edge)", "CD (BOOL edge)", "RESET (BOOL)", "LOAD (BOOL)", "PV (INT)"],
+      "outputs": ["QU (BOOL)", "QD (BOOL)", "CV (INT)"],
+      "register_mapping": "cu_reg (%I), cd_reg (%I), reset_reg (%I), load_reg (%I), pv_reg (%R), qu_reg (%Q), qd_reg (%Q), cv_reg (%R)"
+    }
+  },
+  "adapter_unit": {
+    "class": "FunctionBlockLogicUnit",
+    "interface": "ILogicUnit",
+    "horner_ocs_binding": true,
+    "scan_cycle_phases": "Phase 2 (Logic Execution) using staged writes & latched inputs"
+  },
+  "test_summary": {
+    "test_file": "tests/test_standard_blocks.py",
+    "total_assertions": 12,
+    "status": "success",
+    "all_tests_passed": true
+  }
+}

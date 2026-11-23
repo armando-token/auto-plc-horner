@@ -1,0 +1,113 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Wireless (W304) stages passed deterministically (PASSED 9/9 stages).",
+  "work_package": "W304",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W304",
+    "gate": "G8",
+    "protocol": "Industrial ODVA CIP Safety Over Wireless (IEEE 802.11 / Bluetooth LE)",
+    "standards": [
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3",
+      "IEEE 802.11 Wi-Fi",
+      "Bluetooth LE 5.x Channel Sounding"
+    ],
+    "registers": [
+      "%R2650..%R2657",
+      "%M618..%M619"
+    ],
+    "diagnostic_codes": {
+      "0x0000": "OK",
+      "0xEE51": "PACKET_LOSS_TRIP",
+      "0xEE52": "WEAK_SIGNAL_TRIP",
+      "0xEE53": "JITTER_EXCEEDED_TRIP",
+      "0xEE54": "WATCHDOG_COMM_TIMEOUT_TRIP",
+      "0xEE55": "AUTH_CRC_FAULT_TRIP"
+    },
+    "sha256_digests": {
+      "pou_sha256": "0363041573fac315f95bd0dd3db0c966d3ff7dc88479d7702c0ce985bc26b759",
+      "stages_sha256": "a4773d284f2851aff86911ba7650086dce26acfec9393ccc1161112dbe0bee69"
+    },
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python version, OS platform, and core dependencies",
+        "passed": true,
+        "timing_ms": 934.098,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants",
+        "check": "Verify connection states, diagnostic codes (0xEE51-0xEE55), register offsets (%R2650..%R2657, %M618..%M619)",
+        "passed": true,
+        "timing_ms": 0.096,
+        "details": "Connection states (0..4), diagnostic codes (0x0000, 0xEE51..0xEE55), and register mappings (%R2650..%R2657, %M618..%M619) verified."
+      },
+      {
+        "stage": 3,
+        "name": "crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics and corruption detection",
+        "passed": true,
+        "timing_ms": 0.419,
+        "details": "CRC-S1=0xDBBB, CRC-S2=0x3581. Dual polynomial mathematics, recurrence, and single-bit sensitivity verified."
+      },
+      {
+        "stage": 4,
+        "name": "rf_channel_telemetry",
+        "check": "Verify RSSI, SNR, latency, and jitter thresholds and nominal telemetry tracking",
+        "passed": true,
+        "timing_ms": 0.832,
+        "details": "Nominal telemetry (RSSI -55 dBm, SNR 25 dB, Latency 8ms, Jitter 2ms, Loss 20 ppm) and boundary checks passed."
+      },
+      {
+        "stage": 5,
+        "name": "wireless_fault_trips",
+        "check": "Verify weak signal (0xEE52), packet loss (0xEE51), jitter (0xEE53), watchdog (0xEE54)",
+        "passed": true,
+        "timing_ms": 0.069,
+        "details": "All 4 wireless fault trips fired exact diagnostic codes (0xEE52, 0xEE51, 0xEE53, 0xEE54) with clean recovery."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "check": "Verify RegisterTable reads/writes and bitwise signed masks across %R2650..%R2657 and %M618..%M619",
+        "passed": true,
+        "timing_ms": 1.153,
+        "details": "Bit-exact synchronization and 16-bit signed wrapping verified across %R2650..%R2657 and %M618..%M619."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "check": "Verify ST POU 'CipSafetyWirelessSync' and LadderForbiddenError on ladder syntax",
+        "passed": true,
+        "timing_ms": 4.038,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "check": "Verify multi-cycle ILogicUnit execution (100 cycles)",
+        "passed": true,
+        "timing_ms": 549.798,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 8.1 KB."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "check": "Write deterministic evidence JSON with SHA-256 digests",
+        "passed": true,
+        "timing_ms": 0.163,
+        "details": "Cryptographic SHA-256 digests generated. ST POU digest: 0363041573fac315..."
+      }
+    ]
+  }
+}

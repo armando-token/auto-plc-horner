@@ -1,0 +1,184 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W268 CIP Safety Over Wi-Fi 6 IEEE 802.11ax Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W268",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety Over Wi-Fi 6 (IEEE 802.11ax) Protocol Engine",
+    "work_package": "W268",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x2E": "CIP Safety Wireless Extension Class ID"
+    },
+    "snn": "0x3a4b",
+    "rssi_dbm": -54,
+    "per_bps": 12,
+    "epi_us": 5000,
+    "register_map": {
+      "%R2290": "REG_WIFI6_SAFETY_STATE (0..4)",
+      "%R2291": "REG_WIFI6_RSSI_PRIMARY_DBM (-54 dBm)",
+      "%R2292": "REG_WIFI6_RSSI_DIVERSITY_DBM (-58 dBm)",
+      "%R2293": "REG_WIFI6_PER_SCALED (12 = 0.12% PER)",
+      "%R2294": "REG_WIFI6_TX_FRAME_COUNT (100)",
+      "%R2295": "REG_WIFI6_ROAMING_EVENT_COUNT (0)",
+      "%R2296": "REG_WIFI6_EPI_TIMER_US (5000 us)",
+      "%R2297": "REG_WIFI6_DIAGNOSTIC_CODE (0x0000 OK, 0xEE61..0xEE64)",
+      "%M534": "COIL_WIFI6_SAFETY_LINK_HEALTHY",
+      "%M535": "COIL_WIFI6_SAFETY_STOP_TRIPPED"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "IEEE_802_11ax_WiFi6_OFDMA_Safety_Frame_Profile_And_SNN",
+        "check": "IEEE 802.11ax Wi-Fi 6 OFDMA Safety Frame Profile & SNN",
+        "passed": true,
+        "timing_ms": 0.923,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x2E), SNN 0x3A4B, Dual CRC-S1 (0x5935)/S2 (0x755B), and OFDMA 106-RU framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 4.137,
+        "details": "POU 'CipSafetyWiFi6Sync' validated with STParser and SecurityGuard, binding %R2290..%R2297 and %M534..%M535."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.056,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Wireless_Safety_Telemetry",
+        "check": "Nominal Wireless Safety Telemetry (RSSI -54 dBm, PER 0.12%, EPI 5000 us, 0x0000)",
+        "passed": true,
+        "timing_ms": 1.115,
+        "details": "RSSI -54 dBm, PER 0.12% (12 in %R2293), EPI 5000 us, Diagnostic 0x0000, %M534=True, %M535=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_Antenna_Diversity_RSSI_Degradation_Safe_Stop_Trip",
+        "check": "Dual-Antenna Diversity RSSI Degradation Safe Stop Trip (0xEE61, %M535)",
+        "passed": true,
+        "timing_ms": 0.661,
+        "details": "Dual-antenna diversity switched on single degradation; dual drop (-86/-88 dBm < -82 dBm) tripped 0xEE61, asserted %M535, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "Packet_Error_Rate_Burst_Safe_Stop_Trip",
+        "check": "Packet Error Rate Burst Safe Stop Trip (0xEE62, %M535)",
+        "passed": true,
+        "timing_ms": 0.583,
+        "details": "PER burst (6.50% > 5.00% limit) tripped 0xEE62, asserted %M535, %R2293=650, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "BSS_Roaming_Handover_Watchdog_Fault",
+        "check": "BSS Roaming Handover Watchdog Fault (0xEE63, %M535)",
+        "passed": true,
+        "timing_ms": 1.106,
+        "details": "BSS roaming handover overrun (35 ms > 25 ms limit) & cyclic silence timeout tripped 0xEE63, asserted %M535, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2290..%R2297, %M534..%M535)",
+        "passed": true,
+        "timing_ms": 0.996,
+        "details": "Bit-exact %R2290..%R2297 and %M534..%M535 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 1938.791,
+        "details": "100 scan cycles executed without fault or drift, heap growth 1.09 KB (< 100 KB)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "IEEE_802_11ax_WiFi6_OFDMA_Safety_Frame_Profile_And_SNN",
+        "check": "IEEE 802.11ax Wi-Fi 6 OFDMA Safety Frame Profile & SNN",
+        "passed": true,
+        "timing_ms": 0.923,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x2E), SNN 0x3A4B, Dual CRC-S1 (0x5935)/S2 (0x755B), and OFDMA 106-RU framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 4.137,
+        "details": "POU 'CipSafetyWiFi6Sync' validated with STParser and SecurityGuard, binding %R2290..%R2297 and %M534..%M535."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.056,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Wireless_Safety_Telemetry",
+        "check": "Nominal Wireless Safety Telemetry (RSSI -54 dBm, PER 0.12%, EPI 5000 us, 0x0000)",
+        "passed": true,
+        "timing_ms": 1.115,
+        "details": "RSSI -54 dBm, PER 0.12% (12 in %R2293), EPI 5000 us, Diagnostic 0x0000, %M534=True, %M535=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_Antenna_Diversity_RSSI_Degradation_Safe_Stop_Trip",
+        "check": "Dual-Antenna Diversity RSSI Degradation Safe Stop Trip (0xEE61, %M535)",
+        "passed": true,
+        "timing_ms": 0.661,
+        "details": "Dual-antenna diversity switched on single degradation; dual drop (-86/-88 dBm < -82 dBm) tripped 0xEE61, asserted %M535, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "Packet_Error_Rate_Burst_Safe_Stop_Trip",
+        "check": "Packet Error Rate Burst Safe Stop Trip (0xEE62, %M535)",
+        "passed": true,
+        "timing_ms": 0.583,
+        "details": "PER burst (6.50% > 5.00% limit) tripped 0xEE62, asserted %M535, %R2293=650, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "BSS_Roaming_Handover_Watchdog_Fault",
+        "check": "BSS Roaming Handover Watchdog Fault (0xEE63, %M535)",
+        "passed": true,
+        "timing_ms": 1.106,
+        "details": "BSS roaming handover overrun (35 ms > 25 ms limit) & cyclic silence timeout tripped 0xEE63, asserted %M535, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2290..%R2297, %M534..%M535)",
+        "passed": true,
+        "timing_ms": 0.996,
+        "details": "Bit-exact %R2290..%R2297 and %M534..%M535 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 1938.791,
+        "details": "100 scan cycles executed without fault or drift, heap growth 1.09 KB (< 100 KB)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

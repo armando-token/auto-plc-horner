@@ -1,0 +1,76 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Modbus Master Client verification passed across RTU and TCP protocols with full FC coverage.",
+  "data": {
+    "protocols_verified": [
+      "Modbus RTU",
+      "Modbus TCP"
+    ],
+    "function_codes_verified": [
+      {
+        "fc": 1,
+        "name": "READ_COILS",
+        "verified": true
+      },
+      {
+        "fc": 2,
+        "name": "READ_DISCRETE_INPUTS",
+        "verified": true
+      },
+      {
+        "fc": 3,
+        "name": "READ_HOLDING_REGISTERS",
+        "verified": true
+      },
+      {
+        "fc": 4,
+        "name": "READ_INPUT_REGISTERS",
+        "verified": true
+      },
+      {
+        "fc": 5,
+        "name": "WRITE_SINGLE_COIL",
+        "verified": true
+      },
+      {
+        "fc": 6,
+        "name": "WRITE_SINGLE_REGISTER",
+        "verified": true
+      },
+      {
+        "fc": 15,
+        "name": "WRITE_MULTIPLE_COILS",
+        "verified": true
+      },
+      {
+        "fc": 16,
+        "name": "WRITE_MULTIPLE_REGISTERS",
+        "verified": true
+      }
+    ],
+    "rtu_telemetry": {
+      "requests_sent": 7,
+      "responses_received": 7,
+      "crc_errors": 0,
+      "timeouts": 0,
+      "retries_attempted": 0,
+      "exceptions_received": 1,
+      "successful_transactions": 6
+    },
+    "tcp_telemetry": {
+      "requests_sent": 2,
+      "responses_received": 2,
+      "crc_errors": 0,
+      "timeouts": 0,
+      "retries_attempted": 0,
+      "exceptions_received": 0,
+      "successful_transactions": 2
+    },
+    "safety_invariants": {
+      "physical_ports_accessed": 0,
+      "serial_drivers_used": "NONE_PURE_IN_MEMORY",
+      "com_lockout_verified": true
+    }
+  }
+}

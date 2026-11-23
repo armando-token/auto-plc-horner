@@ -1,0 +1,189 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Ethernet-APL Redundant Ring (W313) stages passed deterministically (PASSED 9/9 stages).",
+  "work_package": "W313",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W313",
+    "gate": "G8",
+    "protocol": "Industrial ODVA CIP Safety Over Ethernet-APL Redundant Ring (DLR - Device Level Ring) Protocol Engine (IEC 62439-2 / IEC 61784-3-2 / IEEE 802.3cg)",
+    "standards": [
+      "ODVA CIP Safety Volume 5",
+      "ODVA EtherNet/IP Volume 2 Chapter 9 (Device Level Ring - DLR)",
+      "IEC 62439-2",
+      "IEC 61784-3-2",
+      "IEEE 802.3cg 10BASE-T1L",
+      "IEC TS 60079-47 2-WISE",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2740..%R2747",
+      "%M639..%M640"
+    ],
+    "diagnostic_codes": {
+      "0x0000": "OK",
+      "0xEE81": "ERR_BEACON_TIMEOUT",
+      "0xEE82": "ERR_DUAL_PORT_LINK_DOWN",
+      "0xEE83": "ERR_RING_FAULT_DETECTED",
+      "0xEE84": "ERR_DUAL_CRC_SAFETY_FAULT",
+      "0xEE85": "ERR_SUPERVISOR_COLLISION"
+    },
+    "sha256_digests": {
+      "pou_sha256": "ea96fcf66542a84a376d01dc43a46601e90a614850ecef6cdd62460ec37f49dd",
+      "stages_sha256": "b025b5f045044ff3d4a053915a973e2cfcd37cb7d53b8f0521634e836a6ad8d8"
+    },
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python runtime, OS platform, and core telemetry dependencies",
+        "passed": true,
+        "timing_ms": 642.825,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants_and_register_mappings",
+        "check": "Verify MRP/DLR ring diagnostic codes (0xEE81-0xEE85), register offsets (%R2740..%R2747), coils (%M639..%M640)",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Class IDs (0x39, 0x3A, 0x3B, 0x47), registers %R2740..%R2747, coils %M639..%M640, and diagnostic codes (0x0000, 0xEE81..0xEE85) verified bit-exact."
+      },
+      {
+        "stage": 3,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics, bit-flip detection, and frame integrity",
+        "passed": true,
+        "timing_ms": 1.153,
+        "details": "CRC-S1=0x5D3D, CRC-S2=0x21DB. Dual polynomial mathematics, 1-bit mutation sensitivity, and packet serialization round-trip verified."
+      },
+      {
+        "stage": 4,
+        "name": "ethernet_apl_ring_topology_and_beacons",
+        "check": "Verify 10BASE-T1L Ethernet-APL MRP supervisor/client topology, beacon timing, and kinematics",
+        "passed": true,
+        "timing_ms": 0.257,
+        "details": "Ring kinematics (delay 14.50us, switchover budget 8.5ms), active supervisor (400us beacon), and client node verified."
+      },
+      {
+        "stage": 5,
+        "name": "port_break_and_fault_localization_trips",
+        "check": "Verify ring break switchover (< 10 ms -> 0xEE83) and Port 1/2 link loss trips (0xEE83)",
+        "passed": true,
+        "timing_ms": 0.029,
+        "details": "Ring break switchover (0xEE83) and port link loss localization (location 1 and 2) verified with clean restoration."
+      },
+      {
+        "stage": 6,
+        "name": "safety_interlock_trips_and_fault_recovery",
+        "check": "Verify dual-port failure (0xEE82), beacon loss (0xEE81), CRC corruption (0xEE84), collision (0xEE85), and recovery",
+        "passed": true,
+        "timing_ms": 0.217,
+        "details": "All interlock trips (0xEE81, 0xEE82, 0xEE84, 0xEE85) correctly forced fail-safe state and recovered deterministically."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "check": "Verify RegisterTable reads/writes, privilege modes, and status bitmasks across %R2740..%R2747 and %M639..%M640",
+        "passed": true,
+        "timing_ms": 0.675,
+        "details": "Bit-exact synchronization and 16-bit signed masking verified across %R2740..%R2747 and coils %M639..%M640."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "check": "Verify pure IEC 61131-3 ST POU 'CipSafetyAplRingSync' and strict rejection of ladder logic constructs",
+        "passed": true,
+        "timing_ms": 3.048,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "check": "Verify multi-cycle ILogicUnit scan execution (100 cycles), zero memory leaks, and emit evidence JSON",
+        "passed": true,
+        "timing_ms": 591.74,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 5.3 KB."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python runtime, OS platform, and core telemetry dependencies",
+        "passed": true,
+        "timing_ms": 642.825,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants_and_register_mappings",
+        "check": "Verify MRP/DLR ring diagnostic codes (0xEE81-0xEE85), register offsets (%R2740..%R2747), coils (%M639..%M640)",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Class IDs (0x39, 0x3A, 0x3B, 0x47), registers %R2740..%R2747, coils %M639..%M640, and diagnostic codes (0x0000, 0xEE81..0xEE85) verified bit-exact."
+      },
+      {
+        "stage": 3,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics, bit-flip detection, and frame integrity",
+        "passed": true,
+        "timing_ms": 1.153,
+        "details": "CRC-S1=0x5D3D, CRC-S2=0x21DB. Dual polynomial mathematics, 1-bit mutation sensitivity, and packet serialization round-trip verified."
+      },
+      {
+        "stage": 4,
+        "name": "ethernet_apl_ring_topology_and_beacons",
+        "check": "Verify 10BASE-T1L Ethernet-APL MRP supervisor/client topology, beacon timing, and kinematics",
+        "passed": true,
+        "timing_ms": 0.257,
+        "details": "Ring kinematics (delay 14.50us, switchover budget 8.5ms), active supervisor (400us beacon), and client node verified."
+      },
+      {
+        "stage": 5,
+        "name": "port_break_and_fault_localization_trips",
+        "check": "Verify ring break switchover (< 10 ms -> 0xEE83) and Port 1/2 link loss trips (0xEE83)",
+        "passed": true,
+        "timing_ms": 0.029,
+        "details": "Ring break switchover (0xEE83) and port link loss localization (location 1 and 2) verified with clean restoration."
+      },
+      {
+        "stage": 6,
+        "name": "safety_interlock_trips_and_fault_recovery",
+        "check": "Verify dual-port failure (0xEE82), beacon loss (0xEE81), CRC corruption (0xEE84), collision (0xEE85), and recovery",
+        "passed": true,
+        "timing_ms": 0.217,
+        "details": "All interlock trips (0xEE81, 0xEE82, 0xEE84, 0xEE85) correctly forced fail-safe state and recovered deterministically."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "check": "Verify RegisterTable reads/writes, privilege modes, and status bitmasks across %R2740..%R2747 and %M639..%M640",
+        "passed": true,
+        "timing_ms": 0.675,
+        "details": "Bit-exact synchronization and 16-bit signed masking verified across %R2740..%R2747 and coils %M639..%M640."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "check": "Verify pure IEC 61131-3 ST POU 'CipSafetyAplRingSync' and strict rejection of ladder logic constructs",
+        "passed": true,
+        "timing_ms": 3.048,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "check": "Verify multi-cycle ILogicUnit scan execution (100 cycles), zero memory leaks, and emit evidence JSON",
+        "passed": true,
+        "timing_ms": 591.74,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 5.3 KB."
+      }
+    ]
+  }
+}

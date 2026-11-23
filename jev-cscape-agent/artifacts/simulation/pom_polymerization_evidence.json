@@ -1,0 +1,210 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "POM polymerization simulation verification passed (9/9 stages passed).",
+  "data": {
+    "work_package": "W269",
+    "stages_passed": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "duration_seconds": 0.06298398971557617,
+    "elapsed_ms": 62.98398971557617,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "POM Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "check": "POM Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "passed": true,
+        "details": "Thermochemical constants verified: Ep error=2.33e-10 J/mol, DeltaH_rxn=-22.5 kJ/mol, MW_trioxane=90.078 g/mol, MW_dioxolane=74.079 g/mol."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "POMPolymerizationSync POU verified cleanly with STParser & SecurityGuard; bound %R2300..%R2307 and %M536..%M538."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Steady-State Convergence (Conv=88.50%, T=95.0\u00b0C, Mw=78000 Da, Q=115.0 kW)",
+        "check": "Nominal Steady-State Convergence (Conv=88.50%, T=95.0\u00b0C, Mw=78000 Da, Q=115.0 kW)",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=88.50% (88.50), T=95.0\u00b0C (95.0), Mw=78000 Da (78,000), dioxolane=3.40% (3.40), Rp=2.10 mol/(L.s) (2.10), Q_cool=115.0 kW (115.0), catalyst=45 ppm (45)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "check": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "passed": true,
+        "details": "Conservation laws verified: mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s, enthalpy residual=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal Unzipping Depolymerization Trip & Emergency Quench (0xFA01, %M538)",
+        "check": "Thermal Unzipping Depolymerization Trip & Emergency Quench (0xFA01, %M538)",
+        "passed": true,
+        "details": "0xFA01 thermal unzipping trip (> 120.0 \u00b0C) verified, %M538 emergency quench active, %M536 reactor inactive, %M537 terminator permissive cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Exothermic Runaway (0xFA02), Comonomer Depletion (0xFA03) & Catalyst Deactivation (0xFA04)",
+        "check": "Exothermic Runaway (0xFA02), Comonomer Depletion (0xFA03) & Catalyst Deactivation (0xFA04)",
+        "passed": true,
+        "details": "0xFA02 runaway (> 105.0 \u00b0C), 0xFA03 comonomer depletion (< 2.00 %), and 0xFA04 catalyst deactivation (< 20.0 ppm) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2300..%R2307, %M536..%M538)",
+        "check": "Horner OCS Register Table Synchronization (%R2300..%R2307, %M536..%M538)",
+        "passed": true,
+        "details": "Registers %R2300..%R2307 and coils %M536..%M538 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final T=95.00\u00b0C, conversion=88.50%, residuals < 1e-10."
+      }
+    ],
+    "results": [
+      {
+        "stage": 1,
+        "name": "POM Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "check": "POM Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "passed": true,
+        "details": "Thermochemical constants verified: Ep error=2.33e-10 J/mol, DeltaH_rxn=-22.5 kJ/mol, MW_trioxane=90.078 g/mol, MW_dioxolane=74.079 g/mol."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "POMPolymerizationSync POU verified cleanly with STParser & SecurityGuard; bound %R2300..%R2307 and %M536..%M538."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Steady-State Convergence (Conv=88.50%, T=95.0\u00b0C, Mw=78000 Da, Q=115.0 kW)",
+        "check": "Nominal Steady-State Convergence (Conv=88.50%, T=95.0\u00b0C, Mw=78000 Da, Q=115.0 kW)",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=88.50% (88.50), T=95.0\u00b0C (95.0), Mw=78000 Da (78,000), dioxolane=3.40% (3.40), Rp=2.10 mol/(L.s) (2.10), Q_cool=115.0 kW (115.0), catalyst=45 ppm (45)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "check": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "passed": true,
+        "details": "Conservation laws verified: mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s, enthalpy residual=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal Unzipping Depolymerization Trip & Emergency Quench (0xFA01, %M538)",
+        "check": "Thermal Unzipping Depolymerization Trip & Emergency Quench (0xFA01, %M538)",
+        "passed": true,
+        "details": "0xFA01 thermal unzipping trip (> 120.0 \u00b0C) verified, %M538 emergency quench active, %M536 reactor inactive, %M537 terminator permissive cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Exothermic Runaway (0xFA02), Comonomer Depletion (0xFA03) & Catalyst Deactivation (0xFA04)",
+        "check": "Exothermic Runaway (0xFA02), Comonomer Depletion (0xFA03) & Catalyst Deactivation (0xFA04)",
+        "passed": true,
+        "details": "0xFA02 runaway (> 105.0 \u00b0C), 0xFA03 comonomer depletion (< 2.00 %), and 0xFA04 catalyst deactivation (< 20.0 ppm) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2300..%R2307, %M536..%M538)",
+        "check": "Horner OCS Register Table Synchronization (%R2300..%R2307, %M536..%M538)",
+        "passed": true,
+        "details": "Registers %R2300..%R2307 and coils %M536..%M538 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final T=95.00\u00b0C, conversion=88.50%, residuals < 1e-10."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "POM Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "check": "POM Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "passed": true,
+        "details": "Thermochemical constants verified: Ep error=2.33e-10 J/mol, DeltaH_rxn=-22.5 kJ/mol, MW_trioxane=90.078 g/mol, MW_dioxolane=74.079 g/mol."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "POMPolymerizationSync POU verified cleanly with STParser & SecurityGuard; bound %R2300..%R2307 and %M536..%M538."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Steady-State Convergence (Conv=88.50%, T=95.0\u00b0C, Mw=78000 Da, Q=115.0 kW)",
+        "check": "Nominal Steady-State Convergence (Conv=88.50%, T=95.0\u00b0C, Mw=78000 Da, Q=115.0 kW)",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=88.50% (88.50), T=95.0\u00b0C (95.0), Mw=78000 Da (78,000), dioxolane=3.40% (3.40), Rp=2.10 mol/(L.s) (2.10), Q_cool=115.0 kW (115.0), catalyst=45 ppm (45)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "check": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "passed": true,
+        "details": "Conservation laws verified: mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s, enthalpy residual=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal Unzipping Depolymerization Trip & Emergency Quench (0xFA01, %M538)",
+        "check": "Thermal Unzipping Depolymerization Trip & Emergency Quench (0xFA01, %M538)",
+        "passed": true,
+        "details": "0xFA01 thermal unzipping trip (> 120.0 \u00b0C) verified, %M538 emergency quench active, %M536 reactor inactive, %M537 terminator permissive cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Exothermic Runaway (0xFA02), Comonomer Depletion (0xFA03) & Catalyst Deactivation (0xFA04)",
+        "check": "Exothermic Runaway (0xFA02), Comonomer Depletion (0xFA03) & Catalyst Deactivation (0xFA04)",
+        "passed": true,
+        "details": "0xFA02 runaway (> 105.0 \u00b0C), 0xFA03 comonomer depletion (< 2.00 %), and 0xFA04 catalyst deactivation (< 20.0 ppm) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2300..%R2307, %M536..%M538)",
+        "check": "Horner OCS Register Table Synchronization (%R2300..%R2307, %M536..%M538)",
+        "passed": true,
+        "details": "Registers %R2300..%R2307 and coils %M536..%M538 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final T=95.00\u00b0C, conversion=88.50%, residuals < 1e-10."
+      }
+    ]
+  }
+}

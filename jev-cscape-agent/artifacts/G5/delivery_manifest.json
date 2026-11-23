@@ -1,0 +1,3735 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at_utc": "2026-10-20T02:59:20.525446+00:00",
+  "repository_root": "C:/HornerAI/jev-cscape-agent",
+  "status": "success",
+  "mode": "offline/mock",
+  "classification": "PRODUCTION_READY",
+  "root_digest": "02a89ad1c7229e0c9184a7067f693b0c32d565d383ac815d8f828216b6608b9c",
+  "total_files": 514,
+  "total_bytes": 14191151,
+  "gate_summaries": {
+    "G0": {
+      "gate": "G0",
+      "file_count": 8,
+      "total_bytes": 30784,
+      "gate_digest": "8e4e70ac26ad27eca0b50853806a9a467e72dd04b13f84ff1df9a1cb44a28597"
+    },
+    "G1": {
+      "gate": "G1",
+      "file_count": 6,
+      "total_bytes": 15865,
+      "gate_digest": "cdc7f072c7d97eb7f6d07da08f84823925b7b53644360fc12d91a2690e80e905"
+    },
+    "G2": {
+      "gate": "G2",
+      "file_count": 2,
+      "total_bytes": 3043,
+      "gate_digest": "4d65e74aacc9213ab3892fc81c3984bfd9641f4b24796caf7647340dd2bc10c1"
+    },
+    "G3": {
+      "gate": "G3",
+      "file_count": 7,
+      "total_bytes": 73277,
+      "gate_digest": "643faf9935e5452aa8febb0f75fdf71b19235d05229bd5daffb59d4bc9613314"
+    },
+    "G4": {
+      "gate": "G4",
+      "file_count": 75,
+      "total_bytes": 348179,
+      "gate_digest": "f61a50073eddba8fc184137a02000979382002e1c51057ea436fa077758a9238"
+    },
+    "G7": {
+      "gate": "G7",
+      "file_count": 61,
+      "total_bytes": 2586643,
+      "gate_digest": "e91199f9d79fef41cb2cfbcf51695f72b2485e54fd09379f689cccf35da440ff"
+    },
+    "G8": {
+      "gate": "G8",
+      "file_count": 133,
+      "total_bytes": 2983107,
+      "gate_digest": "e381aab1ec5206deb3a23c3cbcfa560f0c0c0ae230bec8f66f7793a10fd9b34e"
+    },
+    "G9": {
+      "gate": "G9",
+      "file_count": 62,
+      "total_bytes": 3251439,
+      "gate_digest": "90028a31a892c06710e9af4a042c3b538ff3a35a360a108a63176f58da124249"
+    },
+    "G10": {
+      "gate": "G10",
+      "file_count": 1,
+      "total_bytes": 4193,
+      "gate_digest": "e95f164b05fbdc8b7bc748f0d186d7163293f45901af86f73eed5f6c70d1d54a"
+    },
+    "G11": {
+      "gate": "G11",
+      "file_count": 1,
+      "total_bytes": 2195,
+      "gate_digest": "009882db64b2ae80c63d2bfe9d058cedbe806d9b09629fa29b3d3097c28d395a"
+    },
+    "G12": {
+      "gate": "G12",
+      "file_count": 1,
+      "total_bytes": 4639,
+      "gate_digest": "4a9b1b7945bfc46c37c4d37f8ee2a0b3e5bd6c30667dad93939381a339c6ea49"
+    },
+    "HMI": {
+      "gate": "HMI",
+      "file_count": 142,
+      "total_bytes": 2078789,
+      "gate_digest": "8275698f6e4b3a4f43073225971756f7c54cc21df932a5b8ccc2a7c73d4cc297"
+    },
+    "ALARMING": {
+      "gate": "ALARMING",
+      "file_count": 1,
+      "total_bytes": 8130,
+      "gate_digest": "c567b6efb8b8274965eaf58a0a7153b491e57c1ee0377eed863e6333e8c5d30e"
+    },
+    "PILOT": {
+      "gate": "PILOT",
+      "file_count": 1,
+      "total_bytes": 35546,
+      "gate_digest": "14421ebfff926e1e89059ae5db89a227375aae0eeab39e147d47dd61e469560e"
+    },
+    "BENCHMARKS": {
+      "gate": "BENCHMARKS",
+      "file_count": 3,
+      "total_bytes": 18718,
+      "gate_digest": "e3d9f9d0839c581918e7c453221122f00b71f5b9146651a804163c2c34618293"
+    },
+    "DOCS": {
+      "gate": "DOCS",
+      "file_count": 6,
+      "total_bytes": 1844527,
+      "gate_digest": "4a2b89323e3b6288149635f2d76f79518f2b83059205a9b6372b87017ea60aff"
+    },
+    "OPS": {
+      "gate": "OPS",
+      "file_count": 4,
+      "total_bytes": 902077,
+      "gate_digest": "59ec40f112dc1870a4646001cad65512c2e4de6d16347b520b7cd2cdefdc501b"
+    }
+  },
+  "artifacts": [
+    {
+      "relative_path": "artifacts/logs/cscape_startup_evidence.json",
+      "sha256": "265c0c5fc70d0e17a0a4b5f9aae084453f385576b7495f4652eeef3585c04549",
+      "size_bytes": 11463,
+      "gate": "G0",
+      "description": "Gate G0: Live Cscape 10.2 startup and HWND verification log"
+    },
+    {
+      "relative_path": "artifacts/logs/sample_project_open_evidence.json",
+      "sha256": "7ef5ad1aa8e640eae2be0c8a6fa3f7db19fe9c205949910624d21375c7f64e2d",
+      "size_bytes": 10723,
+      "gate": "G0",
+      "description": "Gate G0: Disposable sandbox project open log"
+    },
+    {
+      "relative_path": "artifacts/logs/doctor_diagnostics.json",
+      "sha256": "8d23d0de9801a6dce433c9f2f753fb32a78f8e3881f4963e65b3f7924ba14094",
+      "size_bytes": 457,
+      "gate": "G0",
+      "description": "Gate G0: Doctor environment and safety diagnostics"
+    },
+    {
+      "relative_path": "profiles/environment-reference.json",
+      "sha256": "9eb2b76943627548bc3f18f51b2abb7407e141d2fa5ed30c726cf3c326f5be38",
+      "size_bytes": 1168,
+      "gate": "G0",
+      "description": "Gate G0: Host Windows 11 environment reference profile"
+    },
+    {
+      "relative_path": "profiles/cscape-reference.yaml",
+      "sha256": "757a342c2db376189eb524b0718d8ec25e694f168a5ef87ccc102436a50bae3c",
+      "size_bytes": 3435,
+      "gate": "G0",
+      "description": "Gate G0: Cscape 10.2 x86 PE reference specification"
+    },
+    {
+      "relative_path": "profiles/jev-provider.yaml",
+      "sha256": "6f77d9f3c186984fcf8f1342b7fe9b073ece4354fa24d475c755c1387de07597",
+      "size_bytes": 940,
+      "gate": "G0",
+      "description": "Gate G0: Jev provider profile (zero credentials)"
+    },
+    {
+      "relative_path": "profiles/supervisor-profile.yaml",
+      "sha256": "8156004948231b872b97d24a7cea33eb0608d068832ebc0cd7bbcce200430281",
+      "size_bytes": 1096,
+      "gate": "G0",
+      "description": "Gate G0: Supervisor autonomy profile"
+    },
+    {
+      "relative_path": "ops/blockers.json",
+      "sha256": "48bdc0f321e410cf95fa8d6d652b2fbc0bbe37cc05f00eec336fc961300412e2",
+      "size_bytes": 1502,
+      "gate": "G0",
+      "description": "Gate G0: Active blockers registry (BLK-001 credential missing)"
+    },
+    {
+      "relative_path": "artifacts/G1/h01_h13_audit.json",
+      "sha256": "9d32bfe706b4eab5df440736c19c8550e29d7c48980983a655037faf0a818c04",
+      "size_bytes": 4466,
+      "gate": "G1",
+      "description": "Gate G1: False success dismantling and PARTIAL classification audit"
+    },
+    {
+      "relative_path": "artifacts/G1/navigation_map.json",
+      "sha256": "71373d13f5d2f26836e4d40715d2a980b4b7fc92908100fee2aa173b3b3886b0",
+      "size_bytes": 5394,
+      "gate": "G1",
+      "description": "Gate G1: Cscape 10.2 UI navigation topology and safe menus"
+    },
+    {
+      "relative_path": "artifacts/G1/stability_report.json",
+      "sha256": "8f60fdfa4ff5dc5688507c65dbdfa1818cf5a71b9ebed9f1f4feaa57b9d6998f",
+      "size_bytes": 748,
+      "gate": "G1",
+      "description": "Gate G1: Process stability, memory footprint, and CPU benchmark"
+    },
+    {
+      "relative_path": "artifacts/G1/p1_field_selection.json",
+      "sha256": "b9e9a3cc3f48dd6a6c9bccaf3bc69daaca4aca4be854c7db53253664b1824a61",
+      "size_bytes": 1459,
+      "gate": "G1",
+      "description": "Gate G1: Horner Micro OCS P1 field selection profile"
+    },
+    {
+      "relative_path": "artifacts/G1/channel_matrix.json",
+      "sha256": "ef0ad4106b58afa114e2a87cd55cb790da32f327d556eb83422050da76a78254",
+      "size_bytes": 2483,
+      "gate": "G1",
+      "description": "Gate G1: Horner OCS 14-channel memory register matrix"
+    },
+    {
+      "relative_path": "artifacts/G1/st_parser_evidence.json",
+      "sha256": "c8bb2f56ee3374d0320a4f82be7361390768d1cdea0dfa7525db74ee63c3f2c2",
+      "size_bytes": 1315,
+      "gate": "G1",
+      "description": "Gate G1: Pure ST parser and ERR_LADDER_FORBIDDEN verification"
+    },
+    {
+      "relative_path": "artifacts/G2/single_gui_boundary_evidence.json",
+      "sha256": "b2af1c000d93e0374d707add3cc3f1acae3f1ed1fbd85bb0d509a11ab6417275",
+      "size_bytes": 757,
+      "gate": "G2",
+      "description": "Gate G2: Win32 exclusive GUI boundary controller evidence"
+    },
+    {
+      "relative_path": "artifacts/G2/navigator_inspection.json",
+      "sha256": "63c02b8227cd4448c4caf7af4651bd0821485780bc554b0aedfbe5c7e8b4f5d1",
+      "size_bytes": 2286,
+      "gate": "G2",
+      "description": "Gate G2: Project Navigator UIA tree traversal (no invented IDs)"
+    },
+    {
+      "relative_path": "artifacts/G3/output_scraper_evidence.json",
+      "sha256": "3ba94f42e0a48fb2b93120a4e776d2952ae6141b4eabc6fa5c1840382adc611b",
+      "size_bytes": 1994,
+      "gate": "G3",
+      "description": "Gate G3: MFC ListBox 372 compiler output scraper evidence"
+    },
+    {
+      "relative_path": "artifacts/G3/error_check_evidence.json",
+      "sha256": "7967faf573c128eb1717853e29d34654cc73cb5464f645f3e60a59258775739f",
+      "size_bytes": 12122,
+      "gate": "G3",
+      "description": "Gate G3: Error Check clean compile (0/0) and download lockout"
+    },
+    {
+      "relative_path": "artifacts/G3/live_cscape_navigation_evidence.json",
+      "sha256": "92fbee15a430b8e7641fb7c7258f6d975c9a37071ed23a206cb13b3baa9be07d",
+      "size_bytes": 10265,
+      "gate": "G3",
+      "description": "Gate G3: Live Cscape 10.2 navigation, clean compile & download lockout evidence"
+    },
+    {
+      "relative_path": "artifacts/G3/live_hmi_and_stability_evidence.json",
+      "sha256": "aa1586de963a8e65738108a571763f2d4759a3fac6f5fbd1d3bfa305edb814c9",
+      "size_bytes": 28799,
+      "gate": "G3",
+      "description": "Gate G3: Live Cscape 10.2 deep HMI, Project Navigator & process stability evidence"
+    },
+    {
+      "relative_path": "artifacts/G3/live_cscape_canvas_evidence.json",
+      "sha256": "aed4c3b13fff1a0b8a30e6e4ee7c3d9d1eb9983a2e5300492ccc0c1f351c2d41",
+      "size_bytes": 6360,
+      "gate": "G3",
+      "description": "G3 artifact"
+    },
+    {
+      "relative_path": "artifacts/G3/diagnostic_classifier_evidence.json",
+      "sha256": "eba37e25c19d796574bf72fc8b33166292def2100ab79d35ab08b6447bfa2c0f",
+      "size_bytes": 11563,
+      "gate": "G3",
+      "description": "G3 artifact"
+    },
+    {
+      "relative_path": "artifacts/G3/gui_window_watchdog_evidence.json",
+      "sha256": "3d91817511ffa4c95e4ef3e6453fa78d83b57b60e61ec53cd5655e5292d2dbc7",
+      "size_bytes": 2174,
+      "gate": "G3",
+      "description": "Gate G3: Cscape GUI automated window health watchdog and geometry forensics evidence"
+    },
+    {
+      "relative_path": "artifacts/G4/simulation_engine_evidence.json",
+      "sha256": "555bfac6980ee98ebaa0272923b2008d6a154119893211ba3bd6e61ca9e686d4",
+      "size_bytes": 926,
+      "gate": "G4",
+      "description": "Gate G4: In-memory scan cycle execution engine evidence"
+    },
+    {
+      "relative_path": "artifacts/G4/simulation_engine_trace.json",
+      "sha256": "c6cf22abbf46d699b6658806f8c7e0a331cb330d12e076d721ba00325810f1fd",
+      "size_bytes": 108779,
+      "gate": "G4",
+      "description": "Gate G4: Deterministic simulation execution telemetry trace"
+    },
+    {
+      "relative_path": "artifacts/G4/register_table_evidence.json",
+      "sha256": "491731fd5fc1d3406e666bedc5a9b40ddb0f4b0ab614542b1d04ad7c5a1958d9",
+      "size_bytes": 3587,
+      "gate": "G4",
+      "description": "Gate G4: Horner OCS 14-channel register table evidence"
+    },
+    {
+      "relative_path": "artifacts/G4/standard_blocks_evidence.json",
+      "sha256": "13a5408d68756beaefd93aa7a12453ca89fc222a7775155c09ef838240d209b8",
+      "size_bytes": 2640,
+      "gate": "G4",
+      "description": "Gate G4: IEC 61131-3 standard timers and counters evidence"
+    },
+    {
+      "relative_path": "artifacts/G4/plant_model_evidence.json",
+      "sha256": "7dcb73216fbddc6256579453a2b837c74a5d2733328a258ff9c1337773112cb9",
+      "size_bytes": 1943,
+      "gate": "G4",
+      "description": "Gate G4: First-principles tank level plant model evidence"
+    },
+    {
+      "relative_path": "artifacts/G4/closed_loop_simulation_evidence.json",
+      "sha256": "507335391f7eb79caf6352a3630d13ead80ffff5ff4d3417a8f733fce3e43eb3",
+      "size_bytes": 3233,
+      "gate": "G4",
+      "description": "Gate G4: Deterministic closed-loop verification runner evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/batch_simulation_evidence.json",
+      "sha256": "d516cadc79873694f8ba69cef395493bca1c90aa63baffa77be64bd09c4238d0",
+      "size_bytes": 3424,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/anomaly_recovery_evidence.json",
+      "sha256": "e6df21728ce4bf95aa3ab13c58508708ccdc05fdffd129ea21f1c3985349ff4b",
+      "size_bytes": 1116,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/frequency_analysis_evidence.json",
+      "sha256": "3ca4cb884e05e60bd0e7c769bf5b4b7c24b6706fd03c5d381c377bafae05065a",
+      "size_bytes": 1585,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/thermal_model_evidence.json",
+      "sha256": "7d0b60b78b78b84643b400192f5c3f02b1b071e83e1f9e8f85d0380ab3fe6cc4",
+      "size_bytes": 1777,
+      "gate": "G4",
+      "description": "Gate G7: First-principles plant thermal transfer and heat exchanger ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/batch_phase_evidence.json",
+      "sha256": "9a955dcb10a4464947559f5272f287ecaec18d06a5e044e1766210c20e458b36",
+      "size_bytes": 3064,
+      "gate": "G4",
+      "description": "Gate G4: ANSI/ISA-88 procedural batch phase state machine and recipe sequence evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/adaptive_tuner_evidence.json",
+      "sha256": "8eb7f10f4f099741296ca6097ccb6ce2f3e09cfdd61790acee20c3d922f2c9f2",
+      "size_bytes": 1909,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/sfc_engine_evidence.json",
+      "sha256": "05d60990ec0976bcf04f856179b7339e7e5460fd8d56c95eedd53069991b186f",
+      "size_bytes": 1386,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/mpc_controller_evidence.json",
+      "sha256": "7bde4d1ba4d855001e0567c24a871e5f77ae336083c708abb152fc9b261e499c",
+      "size_bytes": 1999,
+      "gate": "G4",
+      "description": "Gate G4: Model Predictive Controller (MPC) horizon solver and Hildreth QP evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/pneumatic_system_evidence.json",
+      "sha256": "d44f45fb35ed7bb8a36cf927b10fdd60019e703e2e1534879b55ca4dec953a4d",
+      "size_bytes": 1507,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/pump_cavitation_evidence.json",
+      "sha256": "95f3524bf1fd8149e5e4771fb32dcbc2562e3522378c46d1ff3bbab4d07befa7",
+      "size_bytes": 1485,
+      "gate": "G4",
+      "description": "Gate G7: Centrifugal pump cavitation, NPSH physics, and acoustic forensics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/ph_neutralization_evidence.json",
+      "sha256": "e17fb340493fbe5eeade792ab63378fd549ec554730edb7b2ab38b498812d682",
+      "size_bytes": 1170,
+      "gate": "G4",
+      "description": "Gate G7: Non-linear chemical reactor pH neutralization titration ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/packed_column_evidence.json",
+      "sha256": "11ad8b810b7bee057e2ff31b1b4ec31a51ec3c60869be088be9def0ec7f2a09b",
+      "size_bytes": 1330,
+      "gate": "G4",
+      "description": "Gate G7: Gas-liquid absorption packed column mass transfer and two-film equilibrium ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/pfr_reactor_evidence.json",
+      "sha256": "84ef653f932f7a80fc6cafadb1718577b3a6b29431d883d4bbbb6a836a95ef77",
+      "size_bytes": 1419,
+      "gate": "G4",
+      "description": "Gate G7: Tubular catalytic plug-flow reactor (PFR) exothermic kinetics and thermal runaway ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/rotary_kiln_evidence.json",
+      "sha256": "fa812f86539de112f153a5656abd557da92ef90598e74819b2b4e0cfa597e4f4",
+      "size_bytes": 3816,
+      "gate": "G4",
+      "description": "Gate G7: Industrial rotary kiln multi-mechanism heat transfer and bed calcination ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/crystallizer_evidence.json",
+      "sha256": "f2a7cab83b61c753a41b7671a86eab641b29d728e3bc3154557e1bf3f3554966",
+      "size_bytes": 1217,
+      "gate": "G4",
+      "description": "Gate G7: Batch vacuum evaporative crystallizer population balance equations and MOM ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/distillation_evidence.json",
+      "sha256": "d565ed93b4da8e42f696c4b79e7c39248915a692ac270d78bbcf0615382d1241",
+      "size_bytes": 3114,
+      "gate": "G4",
+      "description": "Gate G7: Multi-stage binary distillation column McCabe-Thiele VLE dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/fluidized_bed_evidence.json",
+      "sha256": "cee4a895ac48953ff73bba9c4ac99fb98fd3ab9b108051f638caac5943ef2033",
+      "size_bytes": 2822,
+      "gate": "G4",
+      "description": "Gate G7: Fluidized bed reactor two-phase hydrodynamics and catalytic gasification ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/three_phase_separator_evidence.json",
+      "sha256": "7a53dce69875847cb4f279da322f1783bcdf3555ed261bb22b30a788a341344d",
+      "size_bytes": 2904,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/shell_and_tube_evidence.json",
+      "sha256": "ff5f407fd5c7d851c3e22669c1914f65bc0afe5dde0d142333cad703ffd43c29",
+      "size_bytes": 2838,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/acoustic_resonance_evidence.json",
+      "sha256": "4d4ba938c7534ce423d682421804cdf01b2381ab0f8b1125020235b0e03941e5",
+      "size_bytes": 2636,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/slurry_column_evidence.json",
+      "sha256": "f359ee2c5f45f7a38408b47e941d06769420cbe4805fc2b01db0c01f089d21ef",
+      "size_bytes": 3043,
+      "gate": "G4",
+      "description": "Gate G7: Continuous multi-stage slurry bubble column reactor gas holdup and superficial velocity ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/evaporator_evidence.json",
+      "sha256": "a27737991c7e88a32ad1939b4590dabfcec51bbdf4a783d6c7fa081600f690b2",
+      "size_bytes": 2961,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/spray_dryer_evidence.json",
+      "sha256": "0bccf657740414bf74f8051299dc17850faf1385da7795116c85025dee6cfe7c",
+      "size_bytes": 2985,
+      "gate": "G4",
+      "description": "Gate G4: Industrial spray drying tower and droplet dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/supercritical_co2_evidence.json",
+      "sha256": "f15f9dfaa6e3159b894c960490df37c20259adaddf8dc056583051dcda4e6f19",
+      "size_bytes": 2918,
+      "gate": "G4",
+      "description": "Gate G4: Supercritical CO2 extraction tower and high-pressure phase transition ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/pyrolysis_evidence.json",
+      "sha256": "0bcbf86530a82b60cb3199a2090979bcb8c6484a5e926191928f41fea89caf3f",
+      "size_bytes": 2788,
+      "gate": "G4",
+      "description": "Gate G4: Industrial biomass pyrolysis and fast thermal decomposition dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/calciner_evidence.json",
+      "sha256": "6c0a28e4a9589d9aacebadbf271070d8c51d1dbf626cddb6f374242423996924",
+      "size_bytes": 3163,
+      "gate": "G4",
+      "description": "Gate G4: Industrial rotary calciner and direct-fired solid mineral calcination dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/fgd_absorber_evidence.json",
+      "sha256": "a7946fdd53175dcd5e1f152725a01de01b3a2ce42400d779043d051d286a0652",
+      "size_bytes": 3225,
+      "gate": "G4",
+      "description": "Gate G4: Industrial wet flue gas desulfurization (FGD) spray absorber dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/anaerobic_digester_evidence.json",
+      "sha256": "81ee23f09ed835d2327e50bf7c4820e07bd6ce7623c69da8d4e86140279b8303",
+      "size_bytes": 3246,
+      "gate": "G4",
+      "description": "Gate G4: Industrial anaerobic digester and biogas methanogenesis dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/mbr_fouling_evidence.json",
+      "sha256": "1fbb44d30c5ccd294db27f76cd056837ae52a76a5e033fb34a0f26ce98adc5e1",
+      "size_bytes": 3275,
+      "gate": "G4",
+      "description": "Gate G4: Industrial membrane bioreactor (MBR) permeate flux and cake layer fouling dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/hydrocyclone_evidence.json",
+      "sha256": "2170841af07f462e504c0ad22519fd3b70d7e3e8453e0e9c8e3253e8c90c3556",
+      "size_bytes": 3358,
+      "gate": "G4",
+      "description": "Gate G4: Industrial hydrocyclone centrifugal separation and Rietema/Bradley swirl dynamics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/reverse_osmosis_evidence.json",
+      "sha256": "6c4325c6424ec1f11dd13f8f90fae7dba2a2dbbc781bc2686aa770a59bef6822",
+      "size_bytes": 3584,
+      "gate": "G4",
+      "description": "Gate G4: Industrial reverse osmosis desalination membrane transport and concentration polarization ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/multiple_effect_evaporator_evidence.json",
+      "sha256": "4a6194b07b33fdc225a5b76cc59e65f38443e288615892cac1320b8c0c0ff929",
+      "size_bytes": 3440,
+      "gate": "G4",
+      "description": "Gate G4: Industrial multiple-effect evaporator forward-feed thermal vapor recompression ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/molten_salt_tes_evidence.json",
+      "sha256": "124f58521610c154eaa7167662b7e4792874eef0a2dc76578de56a620f2949f9",
+      "size_bytes": 3061,
+      "gate": "G4",
+      "description": "Gate G4: Molten salt thermal energy storage (TES) two-tank ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/fcc_regenerator_evidence.json",
+      "sha256": "c2914abf23d342974fb5001f517941f87c4b857b60d6d79e79d9a4c35d6cb167",
+      "size_bytes": 3361,
+      "gate": "G4",
+      "description": "Gate G4: Fluid catalytic cracking (FCC) regenerator carbon burning kinetics and thermal balance ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/hydrocracker_tbr_evidence.json",
+      "sha256": "84ef052089b1cf7e9c4392ddd1d823996642618f75a44c71a5b68a64113a47b3",
+      "size_bytes": 3360,
+      "gate": "G4",
+      "description": "Gate G4: Industrial trickle bed hydrocracker reactor (TBR) multi-phase catalytic kinetics ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/smr_reformer_evidence.json",
+      "sha256": "f83560d9296e4f9308d048780a2cdd5b3200f0776fa2d62dab648b41cdd95e2b",
+      "size_bytes": 3338,
+      "gate": "G4",
+      "description": "Gate G4: Steam methane reforming (SMR) catalytic reactor kinetics and thermal balance ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/naphtha_hds_evidence.json",
+      "sha256": "eda44e6d0ac674f64661b8d448f1b5a4d65ab45c7b43a3126af9c3082a9a1976",
+      "size_bytes": 3323,
+      "gate": "G4",
+      "description": "Gate G4: Industrial hydrotreating fixed-bed naphtha hydrodesulfurization (HDS) multi-reaction ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/hda_reactor_evidence.json",
+      "sha256": "3d0fd82d8e5832abcba683bf0455125d3d1ff9bebfd17e557dd677e9ae07ed00",
+      "size_bytes": 3382,
+      "gate": "G4",
+      "description": "Gate G4: Industrial hydrodealkylation (HDA) thermal toluene conversion ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/ccr_reformer_evidence.json",
+      "sha256": "78d361834b239ccc0aa7fd6ab5ce923720f0ca7a7f3ad4cee2d3135a5b846109",
+      "size_bytes": 3441,
+      "gate": "G4",
+      "description": "Gate G4: Industrial continuous catalytic reforming (CCR) multi-bed naphtha aromatization ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/fcc_riser_evidence.json",
+      "sha256": "a68cee6c1919f3667c3c6a8da010d6e3bbf8860533f326eb3e1f53623e09b6a7",
+      "size_bytes": 3452,
+      "gate": "G4",
+      "description": "Gate G4: Fluid catalytic cracking (FCC) riser catalytic cracking kinetics and four-lump hydrodynamic ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/delayed_coker_evidence.json",
+      "sha256": "ffb4c2bb215a66e853e5953219c59a68a64ea3eb70920312fdd97f30781fd8a2",
+      "size_bytes": 3490,
+      "gate": "G4",
+      "description": "Gate G4: Industrial delayed coker drum thermal cracking and coke drum cycle ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/hydroisomerization_evidence.json",
+      "sha256": "8e4ca4930f8e8668687cfc0a3516c9816b2580aea7a15484452bf08ddca2f0c1",
+      "size_bytes": 3508,
+      "gate": "G4",
+      "description": "Gate G4: Industrial hydroisomerization light naphtha alkane branching catalytic ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/alkylation_acid_evidence.json",
+      "sha256": "0ad3fd79c2fe1691ed36644d95ef41ed5cba3f698aaf3791049807e737331f29",
+      "size_bytes": 3357,
+      "gate": "G4",
+      "description": "Gate G4: Industrial alkylation sulfuric/HF acid contactor kinetics and settler ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/hydrocracker_quench_evidence.json",
+      "sha256": "72712b1f7375931c2c8f62dbb1da24851849cc5b7e6f89267dd2395d11ddc21c",
+      "size_bytes": 3503,
+      "gate": "G4",
+      "description": "Gate G4: Multi-bed hydrocracker cold hydrogen quench inter-bed temperature control ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/steam_cracker_furnace_evidence.json",
+      "sha256": "b6f2f3a12bfcae990f4dd9c0c920ebf454294c729ef4462674885a4e12c65174",
+      "size_bytes": 3540,
+      "gate": "G4",
+      "description": "Gate G4: Industrial steam cracker pyrolysis furnace tube coking and thermal quench ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/fcc_regenerator_combustion_evidence.json",
+      "sha256": "50bb8b42118e4e30ec9d5aa186bdca6e661c5900a483907253ab9e7940f1b7cb",
+      "size_bytes": 3687,
+      "gate": "G4",
+      "description": "Gate G4: Industrial FCC regenerator catalyst coke combustion and two-zone afterburning ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/ccr_reforming_reactor_evidence.json",
+      "sha256": "8933b49e9310ada777c79f90605ebd31a4c3c7c6719222de709eef37129498c8",
+      "size_bytes": 2513,
+      "gate": "G4",
+      "description": "Gate G4: Industrial continuous catalytic reforming (CCR) reactor kinetics and catalyst circulation ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/gtl_ft_reactor_evidence.json",
+      "sha256": "55a53382ea512146062a219652a0620694f574cbc9fca9127514a4070cc7629c",
+      "size_bytes": 2727,
+      "gate": "G4",
+      "description": "Gate G4: Industrial gas-to-liquids (GTL) Fischer-Tropsch slurry bubble column reactor (SBCR) ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/ethylene_oxide_reactor_evidence.json",
+      "sha256": "895a2e23375243af3565afa1520095604fbac7da1ef5eaaf200760887d865136",
+      "size_bytes": 2852,
+      "gate": "G4",
+      "description": "Gate G4: Industrial ethylene oxide catalytic shell-and-tube packed-bed reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/acrylonitrile_reactor_evidence.json",
+      "sha256": "be0197752626edddc93fe1c48b3f1d6482f0b9269e02b9ad27d99a12b0214143",
+      "size_bytes": 2849,
+      "gate": "G4",
+      "description": "Gate G4: Industrial propylene ammoxidation to acrylonitrile fluidized-bed reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/cumene_reactor_evidence.json",
+      "sha256": "aa0e3514d25721b52db772b49e6b1c2dd6e798642bf1613f25849f07d2c99503",
+      "size_bytes": 2798,
+      "gate": "G4",
+      "description": "Gate G4: Industrial Q-Max catalytic fixed-bed cumene alkylation ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/maleic_anhydride_reactor_evidence.json",
+      "sha256": "e77e4ff59d9318f10f90c4ee3abab2af42ae64d8da351c4b7f70883c4bfce311",
+      "size_bytes": 3300,
+      "gate": "G4",
+      "description": "Gate G4: Industrial maleic anhydride multi-tube fixed-bed oxidation reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/phthalic_anhydride_reactor_evidence.json",
+      "sha256": "3eba927c721a5f53533f436637043d426510d8e4bd7ed5408407ee344ac16f32",
+      "size_bytes": 3297,
+      "gate": "G4",
+      "description": "Gate G4: Industrial o-xylene multi-tube catalytic oxidation phthalic anhydride reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/vcm_thermal_cracker_evidence.json",
+      "sha256": "5eb3fd60b4b31221b7ec058c63b5a721557c52a71edc40220186d0679157796f",
+      "size_bytes": 3299,
+      "gate": "G4",
+      "description": "Gate G4: Industrial vinyl chloride monomer (VCM) thermal cracking reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/bpa_reactor_evidence.json",
+      "sha256": "a0546b7cb123aae9325c15b55d2c01ef68dd579ec1f6d3fd68264d991da6c004",
+      "size_bytes": 2785,
+      "gate": "G4",
+      "description": "Gate G4: Industrial bisphenol A (BPA) packed-bed reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/ka_oxidation_reactor_evidence.json",
+      "sha256": "4c2b4021b18d2574d0cbccb9b7e6a2c7a79b5a1c36ee14ced8c98d7c3a1b475b",
+      "size_bytes": 2898,
+      "gate": "G4",
+      "description": "Gate G4: Industrial KA oil cyclohexane liquid-phase catalytic oxidation reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/beckmann_rearrangement_evidence.json",
+      "sha256": "e170fe2b33f2b836671b29d50ca9fdf99d5ed662a6e1ad685f2a99b8dbbc95c8",
+      "size_bytes": 2872,
+      "gate": "G4",
+      "description": "Gate G4: Industrial caprolactam Beckmann rearrangement packed-bed catalytic reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/pta_oxidation_reactor_evidence.json",
+      "sha256": "be55aa43006ac05a5f574d7ffaa371b693ebabe7e7ec6a276a1cacc436814170",
+      "size_bytes": 2953,
+      "gate": "G4",
+      "description": "Gate G4: Industrial PTA p-xylene liquid-phase catalytic air oxidation reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/eg_hydration_reactor_evidence.json",
+      "sha256": "2d834b621383baa4041f18a210857c2fad4517a5f085d0d0b189ac63d92193b5",
+      "size_bytes": 2877,
+      "gate": "G4",
+      "description": "Gate G4: Industrial ethylene glycol thermal hydration catalytic tubular reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/styrene_dehydrogenation_evidence.json",
+      "sha256": "3e3782819e2e2a952cd3617f3dfe50fa4cb76eab401c135f2aeaabbdb8b56b95",
+      "size_bytes": 7465,
+      "gate": "G4",
+      "description": "Gate G4: Industrial ethylbenzene dehydrogenation catalytic radial-flow reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/cumene_alkylation_evidence.json",
+      "sha256": "6dd49413ba126650dc87a0c1fe3e7992e5b542b39c7ecd42f78487c7b50cf2da",
+      "size_bytes": 3260,
+      "gate": "G4",
+      "description": "Gate G4: Industrial Cumene Benzene-Propylene Catalytic Alkylation ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/chp_cleavage_reactor_evidence.json",
+      "sha256": "deedb1913792178c367878c30e8e4a3e32032b2eb4ba23d5d9b1926b62bfcb83",
+      "size_bytes": 3256,
+      "gate": "G4",
+      "description": "Gate G4: Industrial Cumene Hydroperoxide (CHP) Cleavage Catalytic Reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/bpa_condensation_evidence.json",
+      "sha256": "2396b9b0d9c56915f8102bf607d55af36f22b2d5c78c3bb7aa26d93a89939c16",
+      "size_bytes": 7242,
+      "gate": "G4",
+      "description": "G4 artifact"
+    },
+    {
+      "relative_path": "artifacts/simulation/pet_polycondensation_evidence.json",
+      "sha256": "061401d1137dcee22a70551e901935397ca7ab2825af9ac9bc300861e5519490",
+      "size_bytes": 3347,
+      "gate": "G4",
+      "description": "Gate G4: Industrial PET catalytic melt polycondensation reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/caprolactam_fluidized_bed_evidence.json",
+      "sha256": "84296770240447a8024ea0048d20f60781a10945d707a16b3c4803ef47534d8b",
+      "size_bytes": 6606,
+      "gate": "G4",
+      "description": "Gate G4: Industrial caprolactam Beckmann gas-phase fluidized bed catalytic reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/maleic_anhydride_oxidation_evidence.json",
+      "sha256": "8cadb04e10d8a547a76f63c81409a4ccf2ddf3308f0457425e2f93f33771ddbb",
+      "size_bytes": 6916,
+      "gate": "G4",
+      "description": "Gate G4: Industrial maleic anhydride fixed-bed partial oxidation reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/styrene_dehydrogenation_evidence.json",
+      "sha256": "3e3782819e2e2a952cd3617f3dfe50fa4cb76eab401c135f2aeaabbdb8b56b95",
+      "size_bytes": 7465,
+      "gate": "G4",
+      "description": "Gate G4: Industrial ethylbenzene dehydrogenation catalytic radial-flow reactor ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/vcm_pyrolysis_evidence.json",
+      "sha256": "ac51fc4a3a849cd056ca814df64b45e35ac62275e8aaad562dcd54c22726f69c",
+      "size_bytes": 7304,
+      "gate": "G4",
+      "description": "Gate G4: Industrial Vinyl Chloride Monomer (VCM) EDC thermal pyrolysis cracking ODE simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/simulation/cumene_hydroperoxide_cleavage_evidence.json",
+      "sha256": "871244802d6a1f712401aae0ba3eb561e74cadacebe7ffc65bb91eebb285f2d3",
+      "size_bytes": 7883,
+      "gate": "G4",
+      "description": "Gate G4: Industrial Cumene Hydroperoxide (CHP) acid-catalyzed cleavage reaction ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pet_esterification.py",
+      "sha256": "ed1f555b252b7914b9c127ec44905b7c54c493ee664e43f5b044115b389118df",
+      "size_bytes": 64328,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyethylene Terephthalate (PET) continuous precursor esterification CSTR ODE simulation"
+    },
+    {
+      "relative_path": "artifacts/simulation/pet_esterification_evidence.json",
+      "sha256": "759270152e809dc24fcec2c8c99bbc86989f3098a036dcb9c98b0f168567bb5c",
+      "size_bytes": 3349,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyethylene Terephthalate (PET) continuous precursor esterification CSTR ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/nylon66_polycondensation.py",
+      "sha256": "cdeb92ed1c2d91850c3836a33e9d8038804f157863d38aae9e5f82f80590df01",
+      "size_bytes": 69024,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Nylon 6,6 continuous polycondensation ODE simulation"
+    },
+    {
+      "relative_path": "artifacts/simulation/nylon66_polycondensation_evidence.json",
+      "sha256": "5bb2a59db367156bd53b34ffe0dd0788a926b51a9b84989e241202923ffcbcae",
+      "size_bytes": 3797,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Nylon 6,6 continuous polycondensation ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/polycarbonate_transesterification.py",
+      "sha256": "2fcce9357902e37afa5e697dc94b69bc1a9aa231c6fd858265b2a4812bc4f012",
+      "size_bytes": 68419,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polycarbonate (PC) Bisphenol-A phosgene-free melt transesterification ODE simulation"
+    },
+    {
+      "relative_path": "artifacts/simulation/polycarbonate_transesterification_evidence.json",
+      "sha256": "698f4b0a18ab48514e017cd89ab26682940f8ec3c8c5cff158dd8928e686aa93",
+      "size_bytes": 3958,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polycarbonate (PC) Bisphenol-A phosgene-free melt transesterification ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pmma_polymerization.py",
+      "sha256": "fd864f748104f15ac819d6a5f4c3ea28763dc5b74e82560da86e87a74e0ea804",
+      "size_bytes": 67001,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polymethyl Methacrylate (PMMA) bulk polymerization CSTR ODE simulation"
+    },
+    {
+      "relative_path": "artifacts/simulation/pmma_polymerization_evidence.json",
+      "sha256": "29938bd179631b027205750f3d0095fd69be9ae0f66afda097762fa56048b75d",
+      "size_bytes": 3992,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polymethyl Methacrylate (PMMA) bulk polymerization CSTR ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/nylon6_ring_opening.py",
+      "sha256": "123b0578eb2f394559ce50d617b09a246f7871e7d0202799f97f568bd0f6f6a8",
+      "size_bytes": 65609,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Nylon 6 ring-opening polymerization CSTR/PFR ODE simulation"
+    },
+    {
+      "relative_path": "artifacts/simulation/nylon6_ring_opening_evidence.json",
+      "sha256": "ec865f3a153011991317fab1fc5a78e6985be8370aa839c4ec4a047a16a724f5",
+      "size_bytes": 3914,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Nylon 6 ring-opening polymerization CSTR/PFR ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pom_polymerization.py",
+      "sha256": "79de21463e9171b53221785a06cfe5c04b4b39abf38733de329016c6dbe34657",
+      "size_bytes": 74294,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyoxymethylene (POM) ring-opening polymerization CSTR ODE simulation"
+    },
+    {
+      "relative_path": "artifacts/simulation/pom_polymerization_evidence.json",
+      "sha256": "ad8fd64f58d5492c2dd6993257b757f07ac696bdac1bc32d8196e3902de5dfc3",
+      "size_bytes": 11207,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyoxymethylene (POM) ring-opening polymerization CSTR ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_biopolymer_fermentation.py",
+      "sha256": "df58c204dfdc5d25a65c0f660f0d422867c1656cc9b00d65eab5aaf803b10b18",
+      "size_bytes": 74003,
+      "gate": "G7",
+      "description": "Gate G4: Industrial Polyhydroxyalkanoates (PHA) Biopolymer Fermentation ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/pha_biopolymer_fermentation_evidence.json",
+      "sha256": "70b6d6363015ee20f1fe470236b3e42440c8ca7ac1c88091da51dadd47d24be8",
+      "size_bytes": 11494,
+      "gate": "G7",
+      "description": "Gate G4: Industrial Polyhydroxyalkanoates (PHA) Biopolymer Fermentation ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pbs_polycondensation.py",
+      "sha256": "a51d65b417ca41029ac728f91bebac804c9b986c9bb10be17138dc18e457c251",
+      "size_bytes": 70317,
+      "gate": "G7",
+      "description": "Gate G4: Industrial Polybutylene Succinate (PBS) Bio-Polyester Polycondensation ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/pbs_polycondensation_evidence.json",
+      "sha256": "a14c7ddd6b8a621d87a4c16316042dd3f27031bd91ca2aec90a08367ef789130",
+      "size_bytes": 11012,
+      "gate": "G7",
+      "description": "Gate G4: Industrial Polybutylene Succinate (PBS) Bio-Polyester Polycondensation ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pbat_polycondensation.py",
+      "sha256": "4443b417573e6f6d2c87dc7d55adc5761537cd045162ecff5ac1e5134f147ea2",
+      "size_bytes": 78627,
+      "gate": "G7",
+      "description": "Gate G7: Industrial PBAT Biodegradable Copolyester Melt Polycondensation ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/pbat_polycondensation_evidence.json",
+      "sha256": "0dc2de48ec7691bddddb9e32810fd57eff5dc81542cb2b1f105ce30b7707111a",
+      "size_bytes": 11191,
+      "gate": "G7",
+      "description": "Gate G7: Industrial PBAT Biodegradable Copolyester Melt Polycondensation ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/phbv_biosynthesis.py",
+      "sha256": "d9adabcd82c050136723644bc5df1486103431c3a5b2fefe5549876b5701dd6c",
+      "size_bytes": 73702,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxyvalerate (PHV) / PHBV Copolymer Biosynthesis ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/phbv_biosynthesis_evidence.json",
+      "sha256": "83a9bb9d118aa6dab0f5dd5d2ba5e653109dba612cf29e55cf350bfabb687e74",
+      "size_bytes": 11151,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxyvalerate (PHV) / PHBV Copolymer Biosynthesis ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/bio_succinic_acid.py",
+      "sha256": "42fb0ff33c95739b463cc9ca5955243abf96d5bb6eab7474b881281c9b27352b",
+      "size_bytes": 76749,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Bio-Succinic Acid Bacterial Fermentation ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/bio_succinic_acid_evidence.json",
+      "sha256": "ca6efd79feea37d08613e2645d9c0bc89c675db4bd217be829de6aa375749e26",
+      "size_bytes": 12216,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Bio-Succinic Acid Bacterial Fermentation ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/phb_hhx_biosynthesis.py",
+      "sha256": "d6a3f6142eb15e692163c66303ac037f3765d7ec9d6b617fc98d6f4f8d50a142",
+      "size_bytes": 26432,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxybutyrate-co-Polyhydroxyhexanoate (PHB-HHx) Biosynthesis ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/phb_hhx_biosynthesis_evidence.json",
+      "sha256": "e04e1b7270c5402c0f614a4c80e6fd0b32a0db9b1b5bb0972e1ddd97d8a91378",
+      "size_bytes": 4422,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxybutyrate-co-Polyhydroxyhexanoate (PHB-HHx) Biosynthesis ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/mcl_pha_biosynthesis.py",
+      "sha256": "2a6255682ef6d6cce759fd8a8db942333d1a0d995328767f550aa40a1be93b83",
+      "size_bytes": 40328,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxyalkanoate Medium-Chain-Length (mcl-PHA) Biosynthesis ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/mcl_pha_biosynthesis_evidence.json",
+      "sha256": "f7c76eaf91d3480d65863398cb09e10b1edee4f38327c4b10bd7160eed721d2c",
+      "size_bytes": 4616,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxyalkanoate Medium-Chain-Length (mcl-PHA) Biosynthesis ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/p3hb_4hb_biosynthesis.py",
+      "sha256": "e939bca177cbb656e93099bcf2b916dbecec405cb74fd9dde6713222f7ca63d6",
+      "size_bytes": 46695,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxyalkanoate Copolymer P(3HB-co-4HB) Biosynthesis ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/p3hb_4hb_biosynthesis_evidence.json",
+      "sha256": "4900f7e8c2e7e59fc68724503134e34f6106d8197a7d114e74096f39fe424e6e",
+      "size_bytes": 4668,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Polyhydroxyalkanoate Copolymer P(3HB-co-4HB) Biosynthesis ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/phbv_nanocomposite.py",
+      "sha256": "2a119b921597ca5a933e5de2b2e2376caea0eee91bf7380a9c5553576d012f83",
+      "size_bytes": 58683,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Poly(hydroxybutyrate-co-hydroxyvalerate) PHBV Nanocomposite Biopolymer Biosynthesis ODE simulation implementation"
+    },
+    {
+      "relative_path": "artifacts/simulation/phbv_nanocomposite_evidence.json",
+      "sha256": "e020229662827a1031f5a40f285dcd1cfeb42e70def6e797f2985c1f582e6568",
+      "size_bytes": 4849,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Poly(hydroxybutyrate-co-hydroxyvalerate) PHBV Nanocomposite Biopolymer Biosynthesis ODE simulation evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_depolymerization.py",
+      "sha256": "84e409a2b7a780e43d2217c135dbb370cafd7d81c3c6587e97b890c1957c5b49",
+      "size_bytes": 58410,
+      "gate": "G7",
+      "description": "Gate G7: Polyhydroxyalkanoate bio-recycling & depolymerization CSTR ODE simulation and kinetics implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_depolymerization_verification.py",
+      "sha256": "38cf02c8bd230618f347e95b54845c8f2417e110d8234b0746ba93acf82b3854",
+      "size_bytes": 26348,
+      "gate": "G7",
+      "description": "Gate G7: Polyhydroxyalkanoate bio-recycling & depolymerization CSTR ODE simulation and kinetics verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_depolymerization.py",
+      "sha256": "ff3d592d6423ac57334fbdd94dccbb1c90952ad50705c4bb2cad9168ecdbed9f",
+      "size_bytes": 53735,
+      "gate": "G7",
+      "description": "Gate G7: Polyhydroxyalkanoate bio-recycling & depolymerization CSTR ODE simulation and kinetics test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_supercritical_extraction.py",
+      "sha256": "6cdb772a34ef886cd5ca7063456edd3260afeb1641167f2d13ab824f8c5a2844",
+      "size_bytes": 64107,
+      "gate": "G7",
+      "description": "Gate G7: Supercritical CO2 polyhydroxyalkanoate extraction and precipitation autoclave ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_supercritical_extraction_verification.py",
+      "sha256": "ae82c851f021cdf3763017ed653c1b11d0a1abd5af525824318272ee5bd374a6",
+      "size_bytes": 28362,
+      "gate": "G7",
+      "description": "Gate G7: Supercritical CO2 polyhydroxyalkanoate extraction and precipitation autoclave ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_supercritical_extraction.py",
+      "sha256": "40cd1ca2e3f549c902c2d97b84607ba0be81755f3280096abd957b111a361218",
+      "size_bytes": 48653,
+      "gate": "G7",
+      "description": "Gate G7: Supercritical CO2 polyhydroxyalkanoate extraction and precipitation autoclave ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_hydrogenolysis.py",
+      "sha256": "51eff040c1ae744ea3a3f19f43ee2b44aa61c8338c30cfce5dcc65707537eb37",
+      "size_bytes": 60812,
+      "gate": "G7",
+      "description": "Gate G7: Catalytic polyhydroxyalkanoate hydrogenolysis and 1,3-butanediol synthesis fixed-bed ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_hydrogenolysis_verification.py",
+      "sha256": "1dc342990acbe4becdfdee3a2e9c91f12d3e81a2970deb37f99fbf19ab0d3347",
+      "size_bytes": 29163,
+      "gate": "G7",
+      "description": "Gate G7: Catalytic polyhydroxyalkanoate hydrogenolysis and 1,3-butanediol synthesis fixed-bed ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_hydrogenolysis.py",
+      "sha256": "350c50a4b5ae2b72e375172d531095dc24348e823ac2216035e0c2463b1276f3",
+      "size_bytes": 43146,
+      "gate": "G7",
+      "description": "Gate G7: Catalytic polyhydroxyalkanoate hydrogenolysis and 1,3-butanediol synthesis fixed-bed ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_thermolysis.py",
+      "sha256": "98aa3a989d9c548a2f127513cad67ace525a9d25a777b4cc29eb8c7f2a1548ec",
+      "size_bytes": 61488,
+      "gate": "G7",
+      "description": "Gate G7: Continuous catalytic polyhydroxyalkanoate thermolysis & bio-acrylic acid pyrolysis CSTR ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_thermolysis_verification.py",
+      "sha256": "2a4bb92ebc5fd97cbecc1193e78e04f44fa67e24c62380eeb69681a10317a4dd",
+      "size_bytes": 31484,
+      "gate": "G7",
+      "description": "Gate G7: Continuous catalytic polyhydroxyalkanoate thermolysis & bio-acrylic acid pyrolysis CSTR ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_thermolysis.py",
+      "sha256": "e5daf2c5dc3b29bbf3ec9bde426cfb0dcaaff8b7e3a59d8864fe90287b053f9e",
+      "size_bytes": 55506,
+      "gate": "G7",
+      "description": "Gate G7: Continuous catalytic polyhydroxyalkanoate thermolysis & bio-acrylic acid pyrolysis CSTR ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_gasification.py",
+      "sha256": "df5f8030ceff5a9650d2bd25904ff047c5e0ce908ef53d01ede212f465c5534e",
+      "size_bytes": 71060,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate gasification & bio-syngas pyrolysis moving-bed ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_gasification_verification.py",
+      "sha256": "d12ce330f9aa0a9b97ac23370b81ba704e533ed5175c3f754ac5b56ef45c297e",
+      "size_bytes": 32502,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate gasification & bio-syngas pyrolysis moving-bed ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_gasification.py",
+      "sha256": "b77e2f7e9e72bab2c88d0850a31ca61055c0a9c70a9261f92a02b04e03a4b6ee",
+      "size_bytes": 62254,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate gasification & bio-syngas pyrolysis moving-bed ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_succinic_esterification.py",
+      "sha256": "956bc305f78f9193e1a71520ba04c4c8d65ce1077c99ea4d9bccbe4c3e5fdac6",
+      "size_bytes": 75085,
+      "gate": "G7",
+      "description": "Gate G7: Industrial bio-succinic acid esterification and PHA precursor distillation column ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_succinic_esterification_verification.py",
+      "sha256": "1bec292a30a9d6998ae2ff7d00b6f2edffbec17139d19a14937a8fb7446d97ed",
+      "size_bytes": 33354,
+      "gate": "G7",
+      "description": "Gate G7: Industrial bio-succinic acid esterification and PHA precursor distillation column ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_succinic_esterification.py",
+      "sha256": "7d03ecab1435f4c107ccfa48ae153d8f4d64443147902e51897c093c4e7445a7",
+      "size_bytes": 65530,
+      "gate": "G7",
+      "description": "Gate G7: Industrial bio-succinic acid esterification and PHA precursor distillation column ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_hydrogenation_bdo.py",
+      "sha256": "809339848970421d1b40a8b1c2484f099a6eedb2643a94e54d477f4f639c322d",
+      "size_bytes": 71165,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenation & 1,4-butanediol precursor fixed-bed ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_hydrogenation_bdo_verification.py",
+      "sha256": "74c50a4547d36c0b0cabca759658ca625605dd6e806cb1399bb5e38bda63b137",
+      "size_bytes": 33096,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenation & 1,4-butanediol precursor fixed-bed ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_hydrogenation_bdo.py",
+      "sha256": "a0512b6565a0c20fea8dfe03218136e0a9bbd5f10baa6a96175271a9f94a721e",
+      "size_bytes": 63697,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenation & 1,4-butanediol precursor fixed-bed ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_hydrogenolysis_gbl.py",
+      "sha256": "8b47a6c032d9a34144b88face77e32e3ba5f8621050872e472330b856016788c",
+      "size_bytes": 72859,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenolysis & gamma-butyrolactone (GBL) synthesis CSTR ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_hydrogenolysis_gbl_verification.py",
+      "sha256": "5153c7e04d5a6f92bc456493debb9b38a9e5bfdfb83e2b7df3ade277cdbcb0d7",
+      "size_bytes": 33403,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenolysis & gamma-butyrolactone (GBL) synthesis CSTR ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_hydrogenolysis_gbl.py",
+      "sha256": "7485e5d7bdeb7860637eceaafd041446dc67b337677fe317fce245d548630f62",
+      "size_bytes": 67418,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenolysis & gamma-butyrolactone (GBL) synthesis CSTR ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_hydrogenolysis_thf.py",
+      "sha256": "8bba11e423104ff4ba3313a86b73c785d677fe8392769a6e5baaf688b819f64c",
+      "size_bytes": 74070,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenolysis & tetrahydrofuran (THF) dehydration fixed-bed ODE simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_hydrogenolysis_thf_verification.py",
+      "sha256": "2700a35bc427fb6f131fd51aeef1933d542f3e8b8f328a1d269b8fef09ac879b",
+      "size_bytes": 33143,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenolysis & tetrahydrofuran (THF) dehydration fixed-bed ODE simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_hydrogenolysis_thf.py",
+      "sha256": "4cfe4ebfcf729344e5ac0bd18a343d32185cf0b3bd23011b938131bc208db427",
+      "size_bytes": 68809,
+      "gate": "G7",
+      "description": "Gate G7: Industrial catalytic polyhydroxyalkanoate hydrogenolysis & tetrahydrofuran (THF) dehydration fixed-bed ODE simulation test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/simulation/pha_hydrogenolysis_methef.py",
+      "sha256": "90afb1d9777fadec14e3a292afc9475ae4a93f76f33adb7b8a2fb8efe32d523b",
+      "size_bytes": 76983,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Catalytic Polyhydroxyalkanoate Hydrogenolysis & 2-MeTHF Synthesis CSTR ODE Simulation implementation"
+    },
+    {
+      "relative_path": "scripts/run_pha_hydrogenolysis_methef_verification.py",
+      "sha256": "33ef3af9f5772b13e6711c6d556895bfd30b8fc9d0eca9cdb1bfae26be276c27",
+      "size_bytes": 7449,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Catalytic Polyhydroxyalkanoate Hydrogenolysis & 2-MeTHF Synthesis CSTR ODE Simulation verification runner"
+    },
+    {
+      "relative_path": "tests/test_pha_hydrogenolysis_methef.py",
+      "sha256": "7bf27b3a73a94ddbbf397bea1e8629cc446e86e3cb29ec43a993fc06d72ab672",
+      "size_bytes": 17838,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Catalytic Polyhydroxyalkanoate Hydrogenolysis & 2-MeTHF Synthesis CSTR ODE Simulation test suite"
+    },
+    {
+      "relative_path": "artifacts/simulation/pha_hydrogenolysis_methef_evidence.json",
+      "sha256": "21fd51ae2077fcc6d816538dc8ed77029c2892dc364df5f428c7aa6da1e7a1e5",
+      "size_bytes": 5667,
+      "gate": "G7",
+      "description": "Gate G7: Industrial Catalytic Polyhydroxyalkanoate Hydrogenolysis & 2-MeTHF Synthesis CSTR ODE Simulation evidence"
+    },
+    {
+      "relative_path": "artifacts/G8/telemetry_scaling_bridge_evidence.json",
+      "sha256": "53a03bf1205c24b9c545587b0d311f7a12892c14545d598986349431a9ce9e46",
+      "size_bytes": 1900,
+      "gate": "G8",
+      "description": "Gate G8: Modbus register scaling bridge and telemetry quality evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/modbus_stack_evidence.json",
+      "sha256": "62263fb9e39528604059c1c1088d58179ae0e79fdfd521a004f11139affcf30a",
+      "size_bytes": 1407,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/calibration_matrix_evidence.json",
+      "sha256": "9f819d148b754de491296c67a2f608c54189e1f3983db4be9b3fbe965bd644b5",
+      "size_bytes": 4250,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/modbus_client_evidence.json",
+      "sha256": "d3404e04be5b60f943769540bc1279186b39ef1c7f0e8579c9af3758378381d9",
+      "size_bytes": 1761,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/opcua_nodes_evidence.json",
+      "sha256": "ae441124b47a702e378ac2fe1dfa82d0e9c4c5222687719eef37b08996ec5c51",
+      "size_bytes": 7635,
+      "gate": "G8",
+      "description": "Gate G8: OPC UA Part 5 Information Model address space and node management evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/modbus_fuzzer_evidence.json",
+      "sha256": "29286430c014d8cb83245e936b3b0fc97c69ebae89489ea311971424dbb4ea2a",
+      "size_bytes": 5406,
+      "gate": "G8",
+      "description": "Gate G8: Industrial Modbus protocol resilience fuzzer and boundary security harness evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/historical_logger_evidence.json",
+      "sha256": "11436de85acab1dc96e6e630cd6beb86a8e14306bfcb642ce882537d79ab4bc0",
+      "size_bytes": 1613,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/sample_telemetry_history.csv",
+      "sha256": "35d521cca4e3c5aef177406c486db5eeaa3a39f78ade2f58959341619a5765d1",
+      "size_bytes": 1169,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/syslog_event_evidence.json",
+      "sha256": "6cbd8d690b0fa7955682f7e67112a2e55f6b023adbddd2eebdbbb86a57013c30",
+      "size_bytes": 2866,
+      "gate": "G8",
+      "description": "Gate G8: Real-Time SCADA process event logger and Syslog RFC 5424 serializer evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/scada_events.log",
+      "sha256": "fbafdaa412679a6ebf3df3262cdee07f9dbbb9ac6bc5d502aa27a5c6ca8edabe",
+      "size_bytes": 706,
+      "gate": "G8",
+      "description": "Gate G8: Append-only RFC 5424 SCADA process event log with SHA-256 hash chaining"
+    },
+    {
+      "relative_path": "artifacts/telemetry/sparkplug_b_evidence.json",
+      "sha256": "b449cb48b9d0999b8821e11420a1fcabb88055bb7b388caf337b7416cc6f04ff",
+      "size_bytes": 1483,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/modbus_firewall_evidence.json",
+      "sha256": "fcd81811407aada16b1d3db674ad2beb61fe3df48d3bc64c35d030dfc47222e6",
+      "size_bytes": 1971,
+      "gate": "G8",
+      "description": "Gate G8: Industrial Modbus TCP security packet firewall and deep packet inspection evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/dnp3_evidence.json",
+      "sha256": "bab2d170e80a091e30471426e0c202549986a44117ce9b9a2a1e65edecc322de",
+      "size_bytes": 1082,
+      "gate": "G8",
+      "description": "Gate G8: Industrial DNP3 / IEEE 1815 telemetry protocol parser and outstation evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/iec104_evidence.json",
+      "sha256": "03724fb131e2873ca8806b3bdff6ddcf3e2f94333872cbd9a6784466219533ce",
+      "size_bytes": 1208,
+      "gate": "G8",
+      "description": "Gate G8: Industrial IEC 60870-5-104 telemetry protocol server and APCI/ASDU engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/bacnet_evidence.json",
+      "sha256": "0793cac20f594256c086a94cc4d22df0926dcd1865d6c85542046b04d04c94da",
+      "size_bytes": 1482,
+      "gate": "G8",
+      "description": "Gate G8: Industrial BACnet/IP building automation telemetry protocol server evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/ethernet_ip_evidence.json",
+      "sha256": "0e81306c3ea27d5b4dcc1902fc7f33229c7359bd4497af5e08636156f6cd3165",
+      "size_bytes": 759,
+      "gate": "G8",
+      "description": "Gate G8: Industrial EtherNet/IP adapter and CIP object protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/profinet_evidence.json",
+      "sha256": "e4c4534e9cab2fbb668132ecef2f6276e9a483b988b2ae2417e5c13cd576eb75",
+      "size_bytes": 1083,
+      "gate": "G8",
+      "description": "Gate G8: Industrial PROFINET IO RT protocol adapter and DCP discovery engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/canopen_devicenet_evidence.json",
+      "sha256": "8db18f758c41d772557376ff0f79a5e89335d8d0828b5ba9c8ffa48b0e1e8e21",
+      "size_bytes": 3160,
+      "gate": "G8",
+      "description": "Gate G8: Industrial CANopen CiA 301/401 and DeviceNet CIP protocol telemetry adapter evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/ethercat_evidence.json",
+      "sha256": "885a737cb7cdaebed0cf3e01c1e736f4e9be23db3a3087b0509e28dbe679505a",
+      "size_bytes": 2805,
+      "gate": "G8",
+      "description": "Gate G8: Industrial EtherCAT SubDevice protocol adapter and ESM/CoE/DC engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/sparkplug_dynamic_evidence.json",
+      "sha256": "fc432f45bf07f4d7d43da0a7a44edc042df71150445b2494c3aad1c6ec14d7a3",
+      "size_bytes": 2953,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/sparkplug_sf_evidence.json",
+      "sha256": "20b648dbe76c1b0adc8118288e9371f47f1fb0c327d797b56551a9cb70853a9f",
+      "size_bytes": 2896,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_evidence.json",
+      "sha256": "7ba133b82151c0d743be37eb693638e553bd63ab24f273b4854e21ab8f264699",
+      "size_bytes": 2916,
+      "gate": "G8",
+      "description": "Gate G8: Industrial CIP Safety protocol packet validator and black channel integrity evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/io_link_evidence.json",
+      "sha256": "efbb13e376fe9e9b7545a79f30aa48a07054ef94494972a25bc05a4739c2d48e",
+      "size_bytes": 2711,
+      "gate": "G8",
+      "description": "Gate G8: Industrial IO-Link Master protocol frame engine and device parameter serialization matrix evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/asi_evidence.json",
+      "sha256": "4ee443bf3de71a2925142831308a2823f1821b84aeddc0c4ba777f54d260842b",
+      "size_bytes": 2910,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/devicenet_evidence.json",
+      "sha256": "1819477de3d6b7fec741006313e6c9669a043e9da4d6e4c90134dc6133f4571f",
+      "size_bytes": 2699,
+      "gate": "G8",
+      "description": "Gate G8: Industrial DeviceNet CIP Volume 3 master protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/fieldbus_evidence.json",
+      "sha256": "bd8ee2e041e964d56a9303593bd5e6aef100922ccb47c47361519ef0b78a2119",
+      "size_bytes": 3171,
+      "gate": "G8",
+      "description": "Gate G8: Industrial FOUNDATION Fieldbus H1 master protocol engine and LAS link active scheduler evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cclink_evidence.json",
+      "sha256": "13307c172ee134419b9d941587dbe07bbc22024c6ffc1a8ebbceacb0b691ee33",
+      "size_bytes": 3305,
+      "gate": "G8",
+      "description": "Gate G8: Industrial CC-Link IE Field master protocol engine and cyclic token ring synchronizer evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/sercos_evidence.json",
+      "sha256": "c24817cada5768afb59aea084df207bd6d267be8739dca602ef28c0fdd5b97f2",
+      "size_bytes": 3403,
+      "gate": "G8",
+      "description": "Gate G8: Industrial SERCOS III master protocol engine and real-time motion bus synchronizer evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/hart_ip_evidence.json",
+      "sha256": "3b02921417e047b9a2bdb6e49a33e9c8a588e4ab8ba3bfb116cc3caeb9264974",
+      "size_bytes": 3303,
+      "gate": "G8",
+      "description": "Gate G8: Industrial HART-IP master protocol engine and device session multiplexer evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/knx_ip_evidence.json",
+      "sha256": "7b38873d6595b276b28377296967f5ae6b3ad2b903c78ce72ec348c342644fd0",
+      "size_bytes": 3131,
+      "gate": "G8",
+      "description": "Gate G8: Industrial KNX/IP Net'n'Node master protocol engine and device session multiplexer evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/enocean_ip_evidence.json",
+      "sha256": "a1e2cdfcbfab974e7eb72d3ba8680b866a49f6e018e0fd712e8b966a99a425c4",
+      "size_bytes": 3341,
+      "gate": "G8",
+      "description": "Gate G8: Industrial EnOcean IP gateway and wireless sensor telemetry bridge evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/wireless_hart_evidence.json",
+      "sha256": "770ad8ad26b6d693b358add0effe8f904d8f3632b6402ffe1764828d9d671085",
+      "size_bytes": 3467,
+      "gate": "G8",
+      "description": "Gate G8: Industrial WirelessHART TDMA network manager and field sensor mesh engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/isa100_11a_evidence.json",
+      "sha256": "76ba6b8277cc30eeafe15f86d07352a13ac705b6de22a0d9cfd25fbba0c330d2",
+      "size_bytes": 3445,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ISA100.11a wireless field network and object-oriented routing engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/iolink_wireless_evidence.json",
+      "sha256": "6ce46e8b55c013695d5578a057cac73d30cc204c070ca8bce0286af8ee4b90aa",
+      "size_bytes": 3398,
+      "gate": "G8",
+      "description": "Gate G8: Industrial IO-Link Wireless W-Master and W-Device deterministic cycle engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/as_interface_evidence.json",
+      "sha256": "d393ace8ff18784fbecbb0759ccc7556bbac2646edd967c75bd6bcd247c4a3cb",
+      "size_bytes": 3732,
+      "gate": "G8",
+      "description": "Gate G8: Industrial AS-Interface (AS-i v3.0) actuator-sensor interface master and safety monitor telemetry evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/ethercat_slave_evidence.json",
+      "sha256": "a1382ff03a702c5fca3ed77d765953ec03e79a518a2420b0c86d8d2080d58dd3",
+      "size_bytes": 4164,
+      "gate": "G8",
+      "description": "Gate G8: Industrial EtherCAT SubDevice ESC protocol engine and sync manager evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/devicenet_safety_evidence.json",
+      "sha256": "3fefa653fffb67f50066b52d8dbcdfe3726e4fa03d5fc56214600af4a4926b26",
+      "size_bytes": 3587,
+      "gate": "G8",
+      "description": "Gate G8: Industrial DeviceNet Safety network protocol engine and CIP safety validator evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/sercos3_ring_evidence.json",
+      "sha256": "c6248db97b3595010927d34b0867874496955dfea2f0933dfd6eb904f129aa5c",
+      "size_bytes": 3543,
+      "gate": "G8",
+      "description": "Gate G8: Industrial Sercos III ring redundancy telemetry protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/powerlink_mn_evidence.json",
+      "sha256": "d0114c662f23e01eb873727a3a1246c62b19ff31784f8bc9fda0e0b7e342a55a",
+      "size_bytes": 3523,
+      "gate": "G8",
+      "description": "Gate G8: Industrial Ethernet POWERLINK Managing Node (MN) telemetry protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/opensafety_evidence.json",
+      "sha256": "3e026bbfe0f0bb7ee746c9835a75cfa8c4e8b5b53fdf9df5340c359ec71c5b18",
+      "size_bytes": 3218,
+      "gate": "G8",
+      "description": "Gate G8: Industrial openSAFETY safety network protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_motion_evidence.json",
+      "sha256": "c9809dba99c51d7751d0da43d0f35645623543f484c51e860da677183c9cc574",
+      "size_bytes": 3247,
+      "gate": "G8",
+      "description": "Gate G8: Industrial CIP Motion over EtherNet/IP multi-axis synchronization evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/profinet_irt_evidence.json",
+      "sha256": "4b9e06c5aba4321538090a3cc9518155f70ba64ae335d5ea45464926f198c6c3",
+      "size_bytes": 3151,
+      "gate": "G8",
+      "description": "Gate G8: Industrial PROFINET IO IRT isochronous real-time communication evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/iolink_safety_evidence.json",
+      "sha256": "b849b6111fb3c9a43fb352da7c135b8ad625e00b190967e9d1533305569489c9",
+      "size_bytes": 3526,
+      "gate": "G8",
+      "description": "Gate G8: Industrial IO-Link Safety master and safety device protocol evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cclink_basic_evidence.json",
+      "sha256": "ea402d3583368e73024302d490c6d1b736eaf11180cceead0460bcb0f24973d0",
+      "size_bytes": 3085,
+      "gate": "G8",
+      "description": "Gate G8: Industrial CC-Link IE Field Basic cyclic transmission and slave station protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/modbus_rtu_rs485_evidence.json",
+      "sha256": "ddfdafda918d16d6365e76befc39d605559263e6fb5beb615c2304f8e40d5d7a",
+      "size_bytes": 3175,
+      "gate": "G8",
+      "description": "Gate G8: Industrial Modbus RTU serial RS-485 framing and CRC-16 protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_explicit_messaging_evidence.json",
+      "sha256": "c1cb3feeea6ff58c70ff1a33f1842f13a27ba6be17c2db6bbfd1da856c1d6530",
+      "size_bytes": 3203,
+      "gate": "G8",
+      "description": "Gate G8: Industrial EtherNet/IP explicit messaging UCMM and CIP object dictionary evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/modbus_tcp_gateway_evidence.json",
+      "sha256": "7535e71929adc9e962e9ef27ead7814b85182d71823c1bed90ea6c44b4b1d7e0",
+      "size_bytes": 3182,
+      "gate": "G8",
+      "description": "Gate G8: Industrial Modbus TCP multi-client gateway and transaction multiplexing evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/opc_da_bridge_evidence.json",
+      "sha256": "4a9cde88b95c1e46ffe1e95faa4b1539bc9ff750d74ec8fe8dd9525d75e295a7",
+      "size_bytes": 3263,
+      "gate": "G8",
+      "description": "Gate G8: Industrial OPC DA / XML-DA protocol wrapper and legacy COM/DCOM bridge evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/foundation_fieldbus_las_evidence.json",
+      "sha256": "5e0d4b4c4395d6c23116e85e7dd7f76a398819a7a55f757f9692564ac530fd78",
+      "size_bytes": 3224,
+      "gate": "G8",
+      "description": "Gate G8: Industrial FOUNDATION Fieldbus H1 Link Active Scheduler (LAS) and macrocycle schedule evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/hart_ip_gateway_evidence.json",
+      "sha256": "c52684b78a6fbdf8dd0c92a9e4761251d8ce0bd851baa785746917154e6ea7e0",
+      "size_bytes": 2699,
+      "gate": "G8",
+      "description": "Gate G8: Industrial HART-IP gateway and wireless mesh burst mode telemetry evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_sync_ptp_evidence.json",
+      "sha256": "fa520b013c3f456adcd39dc7ee7b7cf2d4ef361e1d25f6b0688f36a1e60566ea",
+      "size_bytes": 5389,
+      "gate": "G8",
+      "description": "Gate G8: Industrial CIP Sync and IEEE 1588 PTP precision time synchronization evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_energy_evidence.json",
+      "sha256": "bbb5935fba86271ed2219839f70eb4bba23c58e2bd6357da714bcf443fd9aa71",
+      "size_bytes": 2713,
+      "gate": "G8",
+      "description": "Gate G8: Industrial EtherNet/IP CIP Energy management and ODVA energy object protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_security_evidence.json",
+      "sha256": "6b20e96d98a5482389d84b2c99e90ab7054d118e4cb55633a58da6d96e11dfb7",
+      "size_bytes": 5899,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA EtherNet/IP CIP Security TLS/DTLS encryption and trust engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_redundancy_evidence.json",
+      "sha256": "2a03e9209a0f72d61353fb3a34825ef723c846eb48811fa5d6208b3d57311d46",
+      "size_bytes": 5513,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA EtherNet/IP CIP Redundancy DLR / PRP / HSR media engine verification evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_quickconnect_evidence.json",
+      "sha256": "d85ebcd05ba3e3d95c37a8b89a03a0fe1c9a5e18b89f6ee01285fa37af0ff42b",
+      "size_bytes": 5921,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA EtherNet/IP CIP QuickConnect rapid power-up & fast I/O handshake engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_dlr_evidence.json",
+      "sha256": "67b83ef26a35e49e929c2057f1d2e6a9e86782007f8fa871a39dcf49e3dc68be",
+      "size_bytes": 3218,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA EtherNet/IP Device Level Ring (DLR) supervisor & beacon protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_devicenet_evidence.json",
+      "sha256": "8d3ae09658a0535b0318cbd6217578d0547afa3b96860849b0dde5c8a3307055",
+      "size_bytes": 3742,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over DeviceNet protocol engine verification evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_sync_gptp_evidence.json",
+      "sha256": "04ea4f8ec090cfb177f5443d8b53c70b46cdfc0a0c17b0c769113cd44760d39e",
+      "size_bytes": 5649,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Sync & IEEE 802.1AS gPTP TSN engine verification evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_sync_transparent_clock_evidence.json",
+      "sha256": "35406eb2f7a5cecbaabf474f3a8787632c7f517f08ce9a44d06f6826ecc5f0b6",
+      "size_bytes": 5788,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Sync boundary & transparent clock engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_multipoint_evidence.json",
+      "sha256": "872546507fcbbf89f870f7a4c39927fee146e1a2011a186298d763ea6d634218",
+      "size_bytes": 6083,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety multi-point target and originator engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_security_rbac_evidence.json",
+      "sha256": "3d4b1d85389dda4715b45e80ddc3ce172e7595b6bb4e4726b37d1625fbf0866b",
+      "size_bytes": 5768,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Security RBAC and token authorization protocol engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_energy_mgmt_evidence.json",
+      "sha256": "f30979d4583c8503d8ea1a4516f7395773ca40b2927f802111f7a28a697dcd48",
+      "size_bytes": 2303,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Energy & Power Management Object Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_modbus_gateway_evidence.json",
+      "sha256": "c10bedc26006be24ea0ea3c63eee886ec3c3e539fd2f2727eaf1547c10a9adb7",
+      "size_bytes": 2387,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Modbus Gateway & Protocol Translator Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_guard_evidence.json",
+      "sha256": "6286645dcf34322a1c39989989ff0bd26fdb7c85c8379ef63b828a9d3f20c935",
+      "size_bytes": 6850,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety SNN Multi-Target Guard Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_point_evidence.json",
+      "sha256": "6281f7f85fccf08d7d1e8c519cede7ea711e1e2df416fc345d8f830b2190c624",
+      "size_bytes": 6941,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Point-to-Point Target & Single-Point Safety Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_daisy_chain_evidence.json",
+      "sha256": "8820e595d4c7fd1eb14b1b38865ffbd2cb177ba6313e1c7bd89551078407503a",
+      "size_bytes": 4882,
+      "gate": "G8",
+      "description": "G8 artifact"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_ring_evidence.json",
+      "sha256": "6acedf0ad0db5a4fb6149adc34f742def0aacaa94169e1ab3a773c5592d28ba0",
+      "size_bytes": 7175,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Ring Protocol Engine (DLR Safety) evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_router_evidence.json",
+      "sha256": "d87c5b4fade0f0115d63920a07401f7152f968f29a15695fffc423f34c4cbd23",
+      "size_bytes": 7394,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Routing & Multi-Node Safety Router Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_multicast_evidence.json",
+      "sha256": "669e5e11ec59f35fda129d4f4877dc103cb7fb1c86f3e1e6b7894f16595e2621",
+      "size_bytes": 7470,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Multi-Cast Producer-Consumer Safety Validator Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_sync_evidence.json",
+      "sha256": "09882b7657f5d4c8aea0e82bbe2a14e8ef8db241009d3c2907c98c7c1ae02b7b",
+      "size_bytes": 7596,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Time-Synchronized IEEE 1588 CIP Sync Safety Bridge evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_guard_io_evidence.json",
+      "sha256": "9e222d95a398f94cd92dc04df06f03d6710adeb4d27988c9ed57ed9d1ac5745f",
+      "size_bytes": 7356,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety ArmorBlock Guard I/O Concentrator Protocol Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_sfi_evidence.json",
+      "sha256": "0c89ec3e50bf980372548bd4e5f865eb299a7e86baae5bfd5ad1b65dc9c8ee03",
+      "size_bytes": 7379,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Safe Feedback Interface (SFI) Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_wireless.py",
+      "sha256": "a0a57c7b5cae8cf50a7ad26e8f87c44b4de5cd3ab4714e0cc74a603f5bc9c358",
+      "size_bytes": 64222,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over Wireless and WiFi 6 Industrial TSN bridge protocol engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_wireless_evidence.json",
+      "sha256": "82c70a99d4ecacd15ee48b52e33134f8e2f41731b22a85813f7e24571c5aa0e2",
+      "size_bytes": 4403,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Wireless Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_5g_urllc.py",
+      "sha256": "4af9ba2e439bdf093fcdd4b75925504ad5de5c10a39e9ab834f6f80b0eee4176",
+      "size_bytes": 66756,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over 5G URLLC Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_5g_urllc_evidence.json",
+      "sha256": "09fdee8c5306219bc41de32a3f32fd996e8306f60dd44f46fba3da5f5d142d92",
+      "size_bytes": 7454,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over 5G URLLC Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_tsn.py",
+      "sha256": "168e008774bab83a7efc1729e134d09d93d2ef833dad3856bff0095a132576db",
+      "size_bytes": 69546,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Time-Sensitive Networking (TSN) IEEE 802.1Qbv/Qbu Safe Scheduling Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_tsn_evidence.json",
+      "sha256": "6e7e6b58a37f431f792a74314b43fa19f944ec824276b8f039eb457293086703",
+      "size_bytes": 7725,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Time-Sensitive Networking (TSN) IEEE 802.1Qbv/Qbu Safe Scheduling Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_opcua.py",
+      "sha256": "d5f183695fd2ba3eab50396774c63721599924c925acc23bd07e247f86d9cc64",
+      "size_bytes": 70688,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety OPC UA Safety Part 15 / PubSub Safety Interoperability Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_opcua_evidence.json",
+      "sha256": "80d9c87fc99b70c1ab90e3a0fdb6dc51f25d5e73b5572d19f0d77a7b605e6c99",
+      "size_bytes": 7609,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety OPC UA Safety Part 15 / PubSub Safety Interoperability Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_spe.py",
+      "sha256": "9608980fa5ae12ce5b3be3d68d8249c36eeef6b75f26f8c6b80f358c7b1c8f55",
+      "size_bytes": 77005,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Single-Pair Ethernet (SPE) 10BASE-T1L Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_spe_evidence.json",
+      "sha256": "0c1dd2207378797d3cbd06d0f51b5566908cd10998d95de1e05e0e438ec98cd4",
+      "size_bytes": 7650,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Single-Pair Ethernet (SPE) 10BASE-T1L Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_wifi6.py",
+      "sha256": "ab2268daf098728db4fb82cc7670e8b2c1b1190d72b396e04c3bd2233c118dcc",
+      "size_bytes": 79505,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Wi-Fi 6 (IEEE 802.11ax) Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_wifi6_evidence.json",
+      "sha256": "a51e8ea199f7e1caf740daa4b21533f88339ac0e9b7ef6d9a94cee0c3d12bea8",
+      "size_bytes": 7900,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Wi-Fi 6 (IEEE 802.11ax) Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_iolink.py",
+      "sha256": "82ab71b316001820389edfa2ac4f877a41fda014170d15b8eff1df5dc1d32bc6",
+      "size_bytes": 65145,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety IO-Link Safety Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_iolink_evidence.json",
+      "sha256": "98247f59e54fdae7bf2a20fa4865b7937cb98b53daa2ea45cce7a75309a3d112",
+      "size_bytes": 6216,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety IO-Link Safety Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl.py",
+      "sha256": "a0b90e53418a3f2e83266bc12ccd1947401f8a5e626797560879cc272eed5699",
+      "size_bytes": 64521,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_evidence.json",
+      "sha256": "fd8c101a2ccb809a344cf5d620a52e9eeffe587acb84f17f7636a033a4ef5354",
+      "size_bytes": 6957,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_redundant.py",
+      "sha256": "fcc7ed7929e119347518c87f4ce98dab7167f0ea2c5c50af7238abca583cc82b",
+      "size_bytes": 69237,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Redundant Trunks implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_redundant_evidence.json",
+      "sha256": "ae3cd47b160d8cfbb4629c102a24e6a9ffaddd37718bb152fd1dc4245f95d2e5",
+      "size_bytes": 4547,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Redundant Trunks evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_wireless_mesh.py",
+      "sha256": "cefd7b4d942c8d4476ad590a96bdf22bc180d33990559464aa27ba8dc950dbce",
+      "size_bytes": 60855,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Wireless Mesh (IEEE 802.15.4 / 6LoWPAN) implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_wireless_mesh_evidence.json",
+      "sha256": "db4113ad31bdca233cda2b5b5d1823743256513bb5706f6d7f3f038b2d5a1a8d",
+      "size_bytes": 7278,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Wireless Mesh (IEEE 802.15.4 / 6LoWPAN) evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_multidrop.py",
+      "sha256": "6b1636a57347d9c980cd9261d4f81e2bab56bb9bf60c1c5e893d54e3c298676c",
+      "size_bytes": 74028,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Multi-Drop Trunk Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_multidrop_evidence.json",
+      "sha256": "9b133d94993924b5e84a22a9fad33a5269d3af3bb24cc622662ebcbf39c3e846",
+      "size_bytes": 7444,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Multi-Drop Trunk Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_ring.py",
+      "sha256": "8eba2834869da1bc6c560f7176aff075f99df338966830a0065143fedc50f957",
+      "size_bytes": 72943,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Redundant Ring (DLR) protocol engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_ring_evidence.json",
+      "sha256": "45062ea29c5ff4329dad2246d25eedfdf1f0aced566fdacbf282b0ca46a5785f",
+      "size_bytes": 8669,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Ring Topology Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_star.py",
+      "sha256": "a3752fe3b407f5b4c4c5ef6bbe90cc1eae83d8f2190c3595f682fb17b6e205ac",
+      "size_bytes": 58696,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Star Topology Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_star_evidence.json",
+      "sha256": "12295605b34d4cb455b399e27b3ec93536d95f688b342dcae26c42c123f778de",
+      "size_bytes": 6850,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Star Topology Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_daisy_chain.py",
+      "sha256": "a982cf3b9daa0e3158fd3370c1e770b32f7db86f46b7dd7280bb0661d529feca",
+      "size_bytes": 60833,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Daisy-Chain Spur Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_daisy_chain_evidence.json",
+      "sha256": "4f1c921ae5c4c411b74278e1ae4e2d922b5b36d430cf2966a6a2f041665f6707",
+      "size_bytes": 7010,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Daisy-Chain Spur Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_power.py",
+      "sha256": "5b5736efc6419c813d654f61c8f86c54b45f7afd4b930b5e5aac63156ed0c2b5",
+      "size_bytes": 66277,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Trunk / Spur Power Coordination Protocol Engine implementation"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_power_evidence.json",
+      "sha256": "ed030f98106be928e0187140d201912c449a8aeba2a0ac1b3165b0306df1e2f4",
+      "size_bytes": 7075,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Trunk / Spur Power Coordination Protocol Engine evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_spe_hybrid.py",
+      "sha256": "1997a9962fe837ccdd0c2231d66b447950d8631380efbbed66a5ef8052f06b6d",
+      "size_bytes": 64942,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over Single-Pair Ethernet (SPE) hybrid power/data engine and PoDL coordination implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_spe_hybrid_verification.py",
+      "sha256": "0aba3533ba174f90c3f5edbfb608c5edf4f786be9f9b8d0c2901f18684e0a851",
+      "size_bytes": 27489,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over Single-Pair Ethernet (SPE) hybrid power/data engine and PoDL coordination verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_spe_hybrid.py",
+      "sha256": "7d8e20151daead7e46541cad39413affa91d18e8a6257fbb614400ea277faebe",
+      "size_bytes": 46584,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over Single-Pair Ethernet (SPE) hybrid power/data engine and PoDL coordination test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_profisafe.py",
+      "sha256": "39e974d0f89bc8231844b1fd2a5b02a471ac66ddcc1c504802b1e610a43aae98",
+      "size_bytes": 80590,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over PROFINET / PROFIsafe gateway bridge protocol translation engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_profisafe_verification.py",
+      "sha256": "b3457bb395ff10f4874a6d447cf34a10393949366dbb2ee14f54866bfa8d1479",
+      "size_bytes": 9574,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over PROFINET / PROFIsafe gateway bridge protocol translation engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_profisafe.py",
+      "sha256": "ab0ea98a6b9801b3bb538f150391efd42810b8ff0cb5b57f532bc5f38664ec5c",
+      "size_bytes": 53282,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over PROFINET / PROFIsafe gateway bridge protocol translation engine test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_wireless.py",
+      "sha256": "a0a57c7b5cae8cf50a7ad26e8f87c44b4de5cd3ab4714e0cc74a603f5bc9c358",
+      "size_bytes": 64222,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over Wireless and WiFi 6 Industrial TSN bridge protocol engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_wireless_verification.py",
+      "sha256": "46205848011b4844f1550ccb9ef54cb9fb0148b29a0c345dea08c7b1ee28e2c3",
+      "size_bytes": 63773,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over Wireless and WiFi 6 Industrial TSN bridge protocol engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_wireless.py",
+      "sha256": "eaecc5868d75c4acfcf0972854c88ebb1631bb9b9452dca4bd71b0b356b2e289",
+      "size_bytes": 59558,
+      "gate": "G8",
+      "description": "Gate G8: ODVA CIP Safety over Wireless and WiFi 6 Industrial TSN bridge protocol engine test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_satellite.py",
+      "sha256": "140810ef8deb4a1103ae0e4b3a4592519524a4144512e7f5d4608f426eb9cc85",
+      "size_bytes": 69635,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Satellite and Low Earth Orbit (LEO) telemetry bridge protocol engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_satellite_verification.py",
+      "sha256": "6ec39bf42fce36b1ce0603f9544a436f96975d7bf6988a5b2aae521dd351d378",
+      "size_bytes": 35444,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Satellite and LEO telemetry bridge protocol engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_satellite.py",
+      "sha256": "cf302471ae2e53397155b96cf575e7a970380b6039f6077ec279c611c9848548",
+      "size_bytes": 47585,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Satellite and LEO telemetry bridge protocol engine test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_redcap.py",
+      "sha256": "3170267ca45f846512db83c3eaa558d791e69fec7715460c8495d66050f2a99b",
+      "size_bytes": 69195,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Cellular / 5G RedCap and IoT NTN bridge protocol engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_redcap_verification.py",
+      "sha256": "9253769f99b641e9021acf4404307aec0ac075fbee0d9be2538e91d78b3a5fe6",
+      "size_bytes": 35534,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Cellular / 5G RedCap and IoT NTN bridge protocol engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_redcap.py",
+      "sha256": "6f66acab904c34559ea27310c6a36845ae38a0869dfc73b97d5d1fcd7e06a128",
+      "size_bytes": 62181,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Cellular / 5G RedCap and IoT NTN bridge protocol engine test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_ring.py",
+      "sha256": "8eba2834869da1bc6c560f7176aff075f99df338966830a0065143fedc50f957",
+      "size_bytes": 72943,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Redundant Ring (DLR) protocol engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_apl_ring_verification.py",
+      "sha256": "0231a47f1ab63c697aa801d16ded43badd4eaa2203b799a7ce2052e7c2c39898",
+      "size_bytes": 41281,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Redundant Ring verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_apl_ring.py",
+      "sha256": "50f2cb2153734ec0e97e14e746185f661f832e4ec35dd241b2f3cd71bf63f26a",
+      "size_bytes": 64231,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Redundant Ring test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_podl_fault.py",
+      "sha256": "f283157f2c1a8a2eddec7916e4f50cc305fcdff7f8fc8880ebddf25d95909291",
+      "size_bytes": 77723,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Single-Pair Ethernet (SPE) PoDL fault engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_podl_fault_verification.py",
+      "sha256": "85d26edfbb157d5edfaad66e557be3847af0f1cb0bebcc8603b9112a58f080a0",
+      "size_bytes": 40450,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Single-Pair Ethernet (SPE) PoDL fault engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_podl_fault.py",
+      "sha256": "02b6e856076f2518171459236452342598fdbe7de083103fd026acb6dd5e877b",
+      "size_bytes": 69699,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Single-Pair Ethernet (SPE) PoDL fault engine test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_barrier.py",
+      "sha256": "4f88726f78734dcbd6fc65bb600a2735657fa2f3be8172ffe44b9fc8b959c686",
+      "size_bytes": 81624,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Ethernet-APL intrinsic safety barrier monitor engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_apl_barrier_verification.py",
+      "sha256": "773e3f7768c71f3672cf19972798e59a5b2151ec4ce8813bbf79523c0d90f288",
+      "size_bytes": 42685,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Ethernet-APL intrinsic safety barrier monitor engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_apl_barrier.py",
+      "sha256": "d3544afb738360d6a126954718c485d989c46da2ac617d936c335da1aeb72c99",
+      "size_bytes": 53764,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Ethernet-APL intrinsic safety barrier monitor engine test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_switch.py",
+      "sha256": "3d3b7cafd659fbd5f1afb2621251b5db8b98e578726e3d73a4f27b744e85fb57",
+      "size_bytes": 81226,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Ethernet-APL field switch diagnostics engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_apl_switch_verification.py",
+      "sha256": "2616df642ab72d3c2b056d25eb6de474de472fa5813ebaabee641f5fac32083c",
+      "size_bytes": 41781,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Ethernet-APL field switch diagnostics engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_apl_switch.py",
+      "sha256": "5013adbc12afd2a4bfdb2dad74d02bb4c33c4b8c4302d4ee71ce45d6172e3cdb",
+      "size_bytes": 62560,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety over Ethernet-APL field switch diagnostics engine test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/telemetry/cip_safety_apl_tdr.py",
+      "sha256": "e7c913c8f0a83b680dedb13d89b3d8df806fbc4c19aa36da8aa5ce56575a5196",
+      "size_bytes": 38187,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Cable Diagnostics & TDR Engine implementation"
+    },
+    {
+      "relative_path": "scripts/run_cip_safety_apl_tdr_verification.py",
+      "sha256": "c8f15cdc4a5549f4fcd2bfaa5536288262b0369bb66b1cda25eabdf7e23c96a7",
+      "size_bytes": 8022,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Cable Diagnostics & TDR Engine verification runner"
+    },
+    {
+      "relative_path": "tests/test_cip_safety_apl_tdr.py",
+      "sha256": "4e34aef897b2e88d52c2a79aaeec2ed9a355a2d8642f0305d129579f2ec64026",
+      "size_bytes": 21460,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Cable Diagnostics & TDR Engine test suite"
+    },
+    {
+      "relative_path": "artifacts/telemetry/cip_safety_apl_tdr_evidence.json",
+      "sha256": "3001eba46c555212c35733ffc8ae0b6c0935dab32dfc793218d17137d0ce0df8",
+      "size_bytes": 3106,
+      "gate": "G8",
+      "description": "Gate G8: Industrial ODVA CIP Safety Over Ethernet-APL Cable Diagnostics & TDR Engine evidence"
+    },
+    {
+      "relative_path": "artifacts/G9/vision_grounding_evidence.json",
+      "sha256": "221ef4db77dfe4848644960f2152567b5b040957fb365510cb63c31273457de5",
+      "size_bytes": 10559,
+      "gate": "G9",
+      "description": "Gate G9: Computer vision grounding and MFC fallback coordinates evidence"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/chord_network_canvas.py",
+      "sha256": "6dd77f8aad415c15da52a3f3071eb06273400617a902bab0c9f4407928ebdf8c",
+      "size_bytes": 84734,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic chord network multizone telemetry SCADA canvas implementation"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_network_canvas_evidence.json",
+      "sha256": "9f414d5da9ffb37e8f3003af4afc82cc4816fcc47dd760f19a1758368cd58933",
+      "size_bytes": 8387,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic chord network multizone telemetry SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_network_canvas_sample.svg",
+      "sha256": "f459c8ac1f6fee23275fcd11e6ecdf27901db60f05d792a2c2677ca42de07794",
+      "size_bytes": 16944,
+      "gate": "G9",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic chord network multizone telemetry SCADA canvas sample"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/force_directed_canvas.py",
+      "sha256": "43c163c83318bcb6f79ec299f7f713d67af273582f953a2ff88941a322ae5438",
+      "size_bytes": 102719,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic force-directed spring-electrical network SCADA canvas implementation"
+    },
+    {
+      "relative_path": "artifacts/HMI/force_directed_canvas_evidence.json",
+      "sha256": "b9da1357600af2938eaead70a9be316f2cd73bae5d333ba03d42e3ce71043e56",
+      "size_bytes": 8205,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic force-directed spring-electrical network SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/force_directed_canvas_sample.svg",
+      "sha256": "1106f84808b9b6c09e166a4f5e3889910f7c5edb3c9ff9c720af0411287c0008",
+      "size_bytes": 25184,
+      "gate": "G9",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic force-directed spring-electrical network SCADA canvas sample"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/treemap_spatial_canvas.py",
+      "sha256": "a1ebfbe4123fcad7488ec200c3c14d08e5c1c3a0c56618dfc5dcc6227c6d206b",
+      "size_bytes": 87811,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic treemap nested spatial hierarchy SCADA canvas implementation"
+    },
+    {
+      "relative_path": "artifacts/HMI/treemap_spatial_canvas_evidence.json",
+      "sha256": "b7161d55e0660b490e333c3954c919f7c17053aa43f10e51a6464f09312cbf69",
+      "size_bytes": 4825,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic treemap nested spatial hierarchy SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/treemap_spatial_canvas_sample.svg",
+      "sha256": "d506a2836ecd240e5b274e1de24e74f5b250fdf8264fa76187195edbaa1eb19f",
+      "size_bytes": 16219,
+      "gate": "G9",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic treemap nested spatial hierarchy SCADA canvas sample"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/poincare_multiscale_canvas.py",
+      "sha256": "f607819f31cb56fc364957e5e7a50a1d2fb0c4b69d3a9d86e382168d93340107",
+      "size_bytes": 91215,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic hyperbolic Poincare multiscale radial asset SCADA canvas implementation"
+    },
+    {
+      "relative_path": "artifacts/HMI/poincare_multiscale_canvas_evidence.json",
+      "sha256": "140863067684d66877c98b32a7e8e555b32d54f7332da304ae811d59abeb0d27",
+      "size_bytes": 4841,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic hyperbolic Poincare multiscale radial asset SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/poincare_multiscale_canvas_sample.svg",
+      "sha256": "c87e15444daed4da2dbb7aec9d89eab4495e04a04b17f925600343a27df8dc9d",
+      "size_bytes": 19706,
+      "gate": "G9",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic hyperbolic Poincare multiscale radial asset SCADA canvas sample"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/delaunay_voronoi_canvas.py",
+      "sha256": "b9cb70e80d64e697ad0beeb1f232323ee0c90297cdc5c28bb3dde787ab181d9d",
+      "size_bytes": 83884,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic Delaunay triangulation & Voronoi partition SCADA canvas implementation"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_voronoi_canvas_evidence.json",
+      "sha256": "12211f6cbf3d0fec9b3ff86ff80c96cfd8e95a068b68b58bfaf280472221f5ec",
+      "size_bytes": 4623,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic Delaunay triangulation & Voronoi partition SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_voronoi_canvas_sample.svg",
+      "sha256": "86eb04f35a7eefad752e53bbfcfcfdf861c1d705b8e580769e82a6ea35597ac2",
+      "size_bytes": 35321,
+      "gate": "G9",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic Delaunay triangulation & Voronoi partition SCADA canvas sample"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/isochrone_contour_canvas.py",
+      "sha256": "68c4b28f75668db78251d3333224ce7fd26ce97c4d707d80a37bbc2c14cbe6d6",
+      "size_bytes": 87410,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic isochrone contour reachability topological SCADA canvas implementation"
+    },
+    {
+      "relative_path": "artifacts/HMI/isochrone_contour_canvas_evidence.json",
+      "sha256": "26f7c127bd190a2e9655402889ed83b9c295313645cedfb76bdc84e0d46a7dda",
+      "size_bytes": 3872,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic isochrone contour reachability topological SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/isochrone_contour_canvas_sample.svg",
+      "sha256": "be21b33e0852f78c10e70ca5d412b771fbbfc3f55683b549456a575089459189",
+      "size_bytes": 12168,
+      "gate": "G9",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic isochrone contour reachability topological SCADA canvas sample"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/streamline_advection_canvas.py",
+      "sha256": "49da82cb39c97668aa350eee534998770f3bacb1c00897d52ca757b820af0496",
+      "size_bytes": 104235,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Streamline Particle Vector Field Advection SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "artifacts/HMI/streamline_advection_canvas_evidence.json",
+      "sha256": "73c89477cd0f79da055415d90ad18b562c0649f5d455a62979934e2a56a663fc",
+      "size_bytes": 6961,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Streamline Particle Vector Field Advection SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/streamline_advection_canvas_sample.svg",
+      "sha256": "88d319913871ae2e5a7d733d4c4e839ad3d3c0dcd6927e049a518a4b412e2afa",
+      "size_bytes": 78959,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Streamline Particle Vector Field Advection SCADA Canvas sample SVG"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/convex_hull_canvas.py",
+      "sha256": "52c8dc65fdc8d0572eb6eb164760c8e9bb1fb3e7b2f9217e641ede6033ce8390",
+      "size_bytes": 70475,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic convex hull boundary & multi-cluster scatter SCADA canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/alpha_shape_canvas.py",
+      "sha256": "34cca78bd47fcd0ff53a0eb8ad2a052a5d6f5469afdaab4f0e951944a6aef8a6",
+      "size_bytes": 35494,
+      "gate": "G9",
+      "description": "Gate G9: Dynamic Spatial Alpha Shape Non-Convex Concave Boundary SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/medial_axis_canvas.py",
+      "sha256": "753621a8f5cd9e0067e9bb7108a91e9bf2e5e753a49339cc6e758c184f484787",
+      "size_bytes": 62957,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Medial Axis Skeletonization SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/cvt_canvas.py",
+      "sha256": "e1ffdaf917c3125e26a481fb765cf92d9bc9a736fccbca0e60bb7f7c6ec7ccce",
+      "size_bytes": 67478,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Centroidal Voronoi Tessellation (CVT) SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/poisson_disk_canvas.py",
+      "sha256": "5a2fbc94ea7b66ce3371a87dcaaa747116195ac361fd14b669f136f2c3088c87",
+      "size_bytes": 26753,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Poisson-Disk Sampling SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/quadtree_canvas.py",
+      "sha256": "41cf2d71264579644210751b4a6908ebfa1ad55f6e497ab3b8d7f68729f13b57",
+      "size_bytes": 92780,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Quadtree / Spatial Index SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/kdtree_canvas.py",
+      "sha256": "c8bd622f633c8cfb29aa3b257d88847ab7c0eccf2cb8a79335621eada3e18e8a",
+      "size_bytes": 59487,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial K-D Tree / Nearest-Neighbor SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/rtree_canvas.py",
+      "sha256": "3a2430aeb805c7336975f1fc7fa05e5d7d177f51b92b8387d998cf13b2bfbc87",
+      "size_bytes": 64545,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial R-Tree / Bounding Volume Hierarchy (BVH) SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/interval_tree_canvas.py",
+      "sha256": "c060fc6acba9ed8b45f397735a2bf0287c0bb4b893f03e7b79940b3335da7417",
+      "size_bytes": 82461,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial interval tree and 1D-2D range segment SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_interval_tree_canvas_verification.py",
+      "sha256": "7c3d6d1b17cab4a9bda35e4ea3b26ecb69861615b12c7346551517727dfe6d14",
+      "size_bytes": 6553,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial interval tree and 1D-2D range segment SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_interval_tree_canvas.py",
+      "sha256": "862adeeee965ac3c8e2207f25c66bc4beb80f7e126204ee210a2024473eb813a",
+      "size_bytes": 44567,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial interval tree and 1D-2D range segment SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/quadtree_canvas.py",
+      "sha256": "41cf2d71264579644210751b4a6908ebfa1ad55f6e497ab3b8d7f68729f13b57",
+      "size_bytes": 92780,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Quadtree / Spatial Index SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_quadtree_canvas_verification.py",
+      "sha256": "5bc1b1876bd2a20643c3fb513c70a009576e1a154b1cfca7727711a0d4a73cc5",
+      "size_bytes": 26319,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Quadtree / Spatial Index SCADA Canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_quadtree_canvas.py",
+      "sha256": "2c9675631b600e691725cd52d57734ea0e912a73345502e05df3898919575d25",
+      "size_bytes": 44333,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Quadtree / Spatial Index SCADA Canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/hilbert_canvas.py",
+      "sha256": "7fccd41530dbf7a48e480f5318acf18a9f881d9dcc5bdbdd99e02586eb18cc79",
+      "size_bytes": 76051,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Hilbert and Morton space-filling curve SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_hilbert_canvas_verification.py",
+      "sha256": "ba7637d5a31708fd33c8c21410f99b9b75609979c56507b874c0f66587f7a5dc",
+      "size_bytes": 51677,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Hilbert and Morton space-filling curve SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_hilbert_canvas.py",
+      "sha256": "35c60fd9093c82c63932c8aa3351a1556edf77dd6885912f8358baeac8cf78c8",
+      "size_bytes": 34426,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Hilbert and Morton space-filling curve SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/geohash_canvas.py",
+      "sha256": "cf21fff902697a6d22d25e5eac503d941987b6b5b5d320cca4354d4518f3183b",
+      "size_bytes": 70080,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash hierarchical bounding box SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_geohash_canvas_verification.py",
+      "sha256": "f3f797bd7608ab3398eb20a7b5ff6eee6c9f124d5caae4c98d7d677ae271da7a",
+      "size_bytes": 61333,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash hierarchical bounding box SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_geohash_canvas.py",
+      "sha256": "ba158ebe5509db6322abd84c9525ccd8dd9497d4b4d81589c382386ad5146e1c",
+      "size_bytes": 51577,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash hierarchical bounding box SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/s2_canvas.py",
+      "sha256": "eb6884f955a8cb82c76092b51d3a273704e17d2b6ef4a1e864589813c39acaab",
+      "size_bytes": 97591,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial S2 geometry spherical hierarchical hexagonal SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_s2_canvas_verification.py",
+      "sha256": "a496e875dd178f93067f16825622e2cc1df86e1df29821bfe91397fa86e01587",
+      "size_bytes": 68046,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial S2 geometry spherical hierarchical hexagonal SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_s2_canvas.py",
+      "sha256": "5fc2436835a40301c7e72a860f4bddd82809263e43271deabad028e0184cf4ac",
+      "size_bytes": 50632,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial S2 geometry spherical hierarchical hexagonal SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/h3_canvas.py",
+      "sha256": "f4ecd6fd229690bcdbf14f4a3de6153c0e644b98a44604c90befb57efc330323",
+      "size_bytes": 88847,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial H3 hexagonal discrete global grid SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_h3_canvas_verification.py",
+      "sha256": "f90d7f0ccd9a33732afd10b1dc0e4c83d1601ef2f061e24cd600e3a4a5e4f1a8",
+      "size_bytes": 71893,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial H3 hexagonal discrete global grid SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_h3_canvas.py",
+      "sha256": "74f5cb2ac41ecedde3422739c50ce13fc3947cc676d9b54639fb7bed75683ebe",
+      "size_bytes": 54387,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial H3 hexagonal discrete global grid SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/quadkey_canvas.py",
+      "sha256": "b620479d348d068b30d8d710b79b1df9e4a1c91401c6ac7099b7b802ccc5b484",
+      "size_bytes": 79270,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Quadkey / Bing Maps tile hierarchical SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_quadkey_canvas_verification.py",
+      "sha256": "0891c8371fd1656323447209be2a82942372df94c2577f74f77119dd92cccaad",
+      "size_bytes": 69012,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Quadkey / Bing Maps tile hierarchical SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_quadkey_canvas.py",
+      "sha256": "cc2bb36f3fb3123e158614b73a4be7a12b4048a91a0241aa17413bee932e5495",
+      "size_bytes": 54734,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Quadkey / Bing Maps tile hierarchical SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/mesh_canvas.py",
+      "sha256": "2c46d4c695685a7e171fcf1fb02d0b7de41ee0bdff409b86abb48799298ff539",
+      "size_bytes": 80551,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash / Morton bounding box mesh SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_mesh_canvas_verification.py",
+      "sha256": "04a03437ef56e358307035758353bd91511ac762b5b85142528892ea6f48a533",
+      "size_bytes": 65962,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash / Morton bounding box mesh SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_mesh_canvas.py",
+      "sha256": "40c60fb0123171423dc8d8959fce75a90cb6c972921c0dc1815a2ca7b9d44c23",
+      "size_bytes": 56214,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash / Morton bounding box mesh SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/voronoi_canvas.py",
+      "sha256": "0b2bf8488ccc55727eeb61b2c6442e329eccfa492a3f57b3a219b0a4c3d692ea",
+      "size_bytes": 94290,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash / Voronoi diagram SCADA canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_voronoi_canvas_verification.py",
+      "sha256": "3c525e769443f2dbf23e8c944a9567f7e216841b2f1a6aa075600485784b592a",
+      "size_bytes": 73034,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash / Voronoi diagram SCADA canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_voronoi_canvas.py",
+      "sha256": "9eb6ed4a0e65e1efe62767109c21f33e77515f32e9e1a07513a34b5e987f909f",
+      "size_bytes": 64599,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI dynamic spatial Geohash / Voronoi diagram SCADA canvas test suite"
+    },
+    {
+      "relative_path": "src/jev_cscape/hmi/delaunay_dual_canvas.py",
+      "sha256": "c523765d10d7f76a822fe0f61c8b5ed1b1a436ff0cc714b8a733eab401b6e558",
+      "size_bytes": 96945,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Geohash / Delaunay Triangulation Dual Graph SCADA Canvas implementation"
+    },
+    {
+      "relative_path": "scripts/run_delaunay_dual_canvas_verification.py",
+      "sha256": "ad296d8620cfd0f1bcc2d5242675dcc2080e8ac63eceb6f57ba13ef0034d86f7",
+      "size_bytes": 8120,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Geohash / Delaunay Triangulation Dual Graph SCADA Canvas verification runner"
+    },
+    {
+      "relative_path": "tests/test_delaunay_dual_canvas.py",
+      "sha256": "b6ced427c77ec150a94b1d6b11f33b9e4e5614331f8ef8ce01e543dd9aa8a196",
+      "size_bytes": 26375,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Geohash / Delaunay Triangulation Dual Graph SCADA Canvas test suite"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_dual_canvas_evidence.json",
+      "sha256": "1bb2dfd3c192f83db6a66cc87df5220449328d96a863150939ac7a0c6aa15a2a",
+      "size_bytes": 5052,
+      "gate": "G9",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Geohash / Delaunay Triangulation Dual Graph SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_dual_canvas_sample.svg",
+      "sha256": "ba8ccffa7fdc8e8f030e198433ca3c40b0fbb52618563f86f9dc68f1f9d365bf",
+      "size_bytes": 24977,
+      "gate": "G9",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial Geohash / Delaunay Triangulation Dual Graph SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/G10/soak_verification_evidence.json",
+      "sha256": "079bc70836e7c4bf0b3b55526dc97643de974a702d915324b6c0eeede8cbc4ed",
+      "size_bytes": 4193,
+      "gate": "G10",
+      "description": "Gate G10: 100k-cycle multi-rate closed-loop soak verification evidence"
+    },
+    {
+      "relative_path": "artifacts/G11/safety_lockout_audit_evidence.json",
+      "sha256": "ab205f41a8caf6b3f71d2037bba6fbc8d3ead64ac5af47aba5755fa5186c7ac1",
+      "size_bytes": 2195,
+      "gate": "G11",
+      "description": "Gate G11: Pre-commissioning safety lockout and interceptor audit evidence"
+    },
+    {
+      "relative_path": "ops/commissioning_lockout.json",
+      "sha256": "377f2d8df02fce074f02bd7806f2d16dbf321bfa4f49a02d63ed1078dd0fbafa",
+      "size_bytes": 4639,
+      "gate": "G12",
+      "description": "Gate G12: Permanent fail-closed field commissioning hardware barrier policy"
+    },
+    {
+      "relative_path": "artifacts/HMI/screen_topology.json",
+      "sha256": "567632fc03a1b8c6ab7635487c70d729a5c05f8508a713b801a67cdcaea6d87a",
+      "size_bytes": 8779,
+      "gate": "HMI",
+      "description": "HMI/SCADA: Multi-screen reachability and navigation graph topology"
+    },
+    {
+      "relative_path": "artifacts/HMI/plant_recipes.json",
+      "sha256": "82dff9e1ea21cf6e8ded5cd5580cf74619673b7b45042b449624e24dba375f67",
+      "size_bytes": 6462,
+      "gate": "HMI",
+      "description": "HMI/SCADA: Canonical industrial water treatment recipe definitions"
+    },
+    {
+      "relative_path": "artifacts/HMI/main_dashboard_screen.json",
+      "sha256": "997e80435cbe1472aaf0d7f36d1622d3e6b9072db30343c1d3752f544ce0cb4b",
+      "size_bytes": 10306,
+      "gate": "HMI",
+      "description": "HMI/SCADA: Main plant dashboard Horner OCS screen definition"
+    },
+    {
+      "relative_path": "artifacts/HMI/main_dashboard.svg",
+      "sha256": "4e24a5647469a22cbd51770cee22bd8d1fd4c2d20740641242f09bc2ad630a7c",
+      "size_bytes": 7461,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/navigation_session_evidence.json",
+      "sha256": "d858f39c160bf08c5f8206b303750c98c5e30952079d8ded4cdfce71fb1110c0",
+      "size_bytes": 4087,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/screen_1_overview.svg",
+      "sha256": "e9967fc2ffcf0d0c709fedbea54ffcfafc56f0d9452fa7c705f01ff224bf7543",
+      "size_bytes": 7457,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/screen_5_alarms.svg",
+      "sha256": "4392b750e8bf6af1eae1b3327722513dbe33b844fa8dc0464d3e37746a5df56f",
+      "size_bytes": 5211,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/screen_6_recipes.svg",
+      "sha256": "3399eb12cf2005d60e8e6c4662d091d4af26119094c91b7d61520d8fad90292e",
+      "size_bytes": 5047,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/recipe_audit_evidence.json",
+      "sha256": "4a068b13a77daca18f7184881ad2642efcae3e13116dc574656ff1d78e4ef53c",
+      "size_bytes": 20970,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/alarm_annunciator_evidence.json",
+      "sha256": "b472987fa01bb9e2aebb552ee55d2f729a2ae6d18077a41417d06dc4328c2f62",
+      "size_bytes": 2480,
+      "gate": "HMI",
+      "description": "HMI/SCADA: ANSI/ISA-18.1 SCADA alarm annunciator and multi-tone audio synthesis evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/critical_alarm_sample.wav",
+      "sha256": "6a5c0a50f2c05bb0ebdcf9b99db7d5c3a7224dcdf77a8e48a6ebd13edb45eb6a",
+      "size_bytes": 88244,
+      "gate": "HMI",
+      "description": "HMI/SCADA: Pure-software synthesized 44.1kHz 16-bit PCM critical alarm klaxon WAV sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/font_metrics_evidence.json",
+      "sha256": "58a154330b10a4f69b2a3da39daba69941286a1f15cea02a47c01a2d6f1433a6",
+      "size_bytes": 1947,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/trend_chart_evidence.json",
+      "sha256": "9634c029b0f18f286c9093efc217e4dcb9a616c0a0c4c3b23c11911a6a73c2fd",
+      "size_bytes": 1400,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI historical trend chart vector renderer and multi-pen spline plotting evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/trend_chart_sample.svg",
+      "sha256": "4b72861c2a5e5933aa84a87b8cd62d6e90d22d5d81009cf4a8c8a30b79de5e72",
+      "size_bytes": 13908,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dual-pen historical trend chart sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/symbol_matrix_evidence.json",
+      "sha256": "38038e0d65a07f2af2b928f032159054045c3d797a2be18ede164fa94cdb042a",
+      "size_bytes": 1521,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic 2D symbol matrix and QR code generator evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/qr_code_sample.svg",
+      "sha256": "0609dd48f909c5ea1f8fc718864a41554114d1afd81fd21f4d5674c3eeda05e9",
+      "size_bytes": 3738,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered 2D QR code vector symbol sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/vector_gauge_evidence.json",
+      "sha256": "0a0e01c58c17bb545987e3a8e13cb919b26f29e448affd3636448c6f48ad941b",
+      "size_bytes": 1287,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic circular gauge and polar compass azimuth vector dial rasterizer evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/gauge_sample.svg",
+      "sha256": "586e7d2b9a9c09e7f196da4ea210e85603e48e77dffb0fc9d28662b74c503989",
+      "size_bytes": 4525,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic circular vector gauge dial sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/data_table_evidence.json",
+      "sha256": "90265e9ddc214ba30d8432d4430fb61abe28e277ad78aadaae931071c0cf6ce9",
+      "size_bytes": 1348,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic interactive data table vector grid rasterizer evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/table_sample.svg",
+      "sha256": "15ea884f6e1cb8a1ea1efe730080013fc8b57bc317c1a2b3494aac7b3a10e62b",
+      "size_bytes": 14299,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic interactive data table grid sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/annunciator_matrix_evidence.json",
+      "sha256": "cda61bd00e502870dd273071a73a2f66da9a417057f5e165e6ab2c8e99ef9b7e",
+      "size_bytes": 1841,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic graphic annunciator matrix and alarm panel rasterizer evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/annunciator_sample.svg",
+      "sha256": "4d9539eb8762f58dab3e02edc37a0e297712c334ebfd8c3be5a90c380a6ff6bf",
+      "size_bytes": 25659,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered ISA-18.1 multi-state graphic annunciator matrix panel sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/spider_radar_evidence.json",
+      "sha256": "91ae4520348fb4b981624bfbb0ce2c68c51379bfa73fd7de14823557f3350615",
+      "size_bytes": 2014,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic spider / radar polar diagnostic pentagon chart rasterizer evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/spider_sample.svg",
+      "sha256": "e8c86d119f93b685363592ebdc347653b3bbbb101262b049150fb556120b4da5",
+      "size_bytes": 14574,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered polar pentagon diagnostic radar chart sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/sankey_flow_evidence.json",
+      "sha256": "0e7adc133659f9c75ce5bc5ed087ce2b0b4d62347a8a96499e610b9fdffd1577",
+      "size_bytes": 3023,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Sankey energy and mass flow diagram vector canvas rasterizer evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/sankey_sample.svg",
+      "sha256": "bcd092b841a8d26eaa9a5b33c034bc50b25fab39f47912a3d63acf7473fbf729",
+      "size_bytes": 9160,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic Sankey energy and mass flow vector canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/cartesian_heatmap_evidence.json",
+      "sha256": "1d9292187112391f3f2158016196315f0d81da8b431c70dd9e6a68e97faf711b",
+      "size_bytes": 2926,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Cartesian heatmap and thermal dispersion matrix rasterizer evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/heatmap_sample.svg",
+      "sha256": "2cddc10d66671397e292e557c6cd7cbb3d9e68ab0e13daaa194bae2e2869199e",
+      "size_bytes": 60609,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered 16x8 Cartesian heatmap and Marching Squares contour sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/parallel_plotter_evidence.json",
+      "sha256": "58a7bcedd62b3d5746303d420219e1c58caf6da31679281a5d95f625a16cf4a2",
+      "size_bytes": 2855,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/parallel_plotter_sample.svg",
+      "sha256": "0ba24a32c493833467a6209a6c641b3ee91646a66e3fdcc4ccff1fff8f7a8bc0",
+      "size_bytes": 20728,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/chernoff_avatar_evidence.json",
+      "sha256": "e22fc8dfb366e7f8f659f2ff1acfeb6d1c7f1c904b66ef3fe7e76e803ef7aa6a",
+      "size_bytes": 2879,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/chernoff_avatar_sample.svg",
+      "sha256": "976ed3882a316bbf2a6b5990e7cd367d759982e32910d5980891691bdc459884",
+      "size_bytes": 9461,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/voronoi_partition_evidence.json",
+      "sha256": "c614ee5da9bc0b09f6cec622acd5d78807bd9074a795647186b021c21657fd39",
+      "size_bytes": 2915,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/voronoi_partition_sample.svg",
+      "sha256": "0fb1647d6d2fcc5db84b8ab7059f2ee8e262a5b6f2879f6770c3dfb972901baf",
+      "size_bytes": 8527,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/convex_hull_evidence.json",
+      "sha256": "f5247f9d61e185c9fe68917f65292afdc313b879c0884be60fa907c91260f1aa",
+      "size_bytes": 3050,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic convex hull boundary and multi-cluster scatter spatial enclosure evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/convex_hull_sample.svg",
+      "sha256": "94c8ce38e98286980a05f092397f50f96cac7bb2199b3198547dc3b1d33a234e",
+      "size_bytes": 9147,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered multi-cluster convex hull enclosure canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_mesh_evidence.json",
+      "sha256": "d91140c1d1aeb1ea3be5e70036ec63ecc08e4a517e409930ccfa272f9eae89b9",
+      "size_bytes": 2777,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_mesh_sample.svg",
+      "sha256": "63aa2035268c150951afc05a96bd1263e45140140eb044c4be584b2c1f9daa48",
+      "size_bytes": 4617,
+      "gate": "HMI",
+      "description": "HMI artifact"
+    },
+    {
+      "relative_path": "artifacts/HMI/streamline_canvas_evidence.json",
+      "sha256": "54b980626a762bb3d3091a3494fcf5de3fefce6bc3694786e2f64e7789211513",
+      "size_bytes": 2799,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic streamline vector field canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/streamline_canvas_sample.svg",
+      "sha256": "e59b698c33e7a76fa7bdbf5b3c4b10d02ea1b4007296f042e61cffd4c7469608",
+      "size_bytes": 14081,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered streamline vector field canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/marching_tetrahedra_evidence.json",
+      "sha256": "8bd8f0ef9539a925519cfed2b26b8b5e6d8015aafa935cf8216718a24e72ad9c",
+      "size_bytes": 2916,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic iso-surface contouring and marching tetrahedra 3D projection canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/marching_tetrahedra_sample.svg",
+      "sha256": "fd16f9202057b9257aa355fa82fc18ebc4c1a89dd21e6e6074905112bb73b647",
+      "size_bytes": 114671,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered marching tetrahedra 3D iso-surface projection canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/poincare_canvas_evidence.json",
+      "sha256": "699e37d2b34b7907e46f75f6a1a94b8d84390d237c8290269d545bbcdaaf75db",
+      "size_bytes": 3069,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Poincare phase portrait and non-linear attractor trajectory canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/poincare_canvas_sample.svg",
+      "sha256": "b3c4841ff91e78cc3609938557605d2153dab30578b70c31b76f14d9c47ed768",
+      "size_bytes": 129355,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Poincare phase portrait and attractor trajectory canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/treemap_canvas_evidence.json",
+      "sha256": "73884f3da3951541479fcd4fdf900639ca2168b9a133c500a7c53a9f9cc1c0fe",
+      "size_bytes": 3200,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic treemap hierarchical resource allocation canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/treemap_canvas_sample.svg",
+      "sha256": "738aa109b7cc358607878226525cc5fe61157fc5cebf8053cd7a146bd5954c6f",
+      "size_bytes": 17259,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered treemap hierarchical resource allocation canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_canvas_evidence.json",
+      "sha256": "03218439d8cdfc53bc048e8d01d39eadc89067844dc1c807aecab6a603b51437",
+      "size_bytes": 3455,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic chord diagram inter-unit dependency canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_canvas_sample.svg",
+      "sha256": "5cbc50edfe4f7fb63845f5e4705faa8778fba9f7b942e7a3b3fea15f16840c1a",
+      "size_bytes": 18945,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered chord diagram inter-unit dependency canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/sunburst_canvas_evidence.json",
+      "sha256": "10e5e909f82866819d2c04dc97bc25444fe012ebdd2232acfd033664b1ce17ff",
+      "size_bytes": 3797,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic sunburst multi-level concentric radial canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/sunburst_canvas_sample.svg",
+      "sha256": "5d43b6b77aa1f2fc2a49621e77c4a17922fc84d2278d3256cc6114909468cb97",
+      "size_bytes": 19842,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered sunburst multi-level concentric radial canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/nightingale_rose_evidence.json",
+      "sha256": "9bed827c9270cd43e8d8afa03bd9e0d460f6fd33c6666510287e6ab14dd61ae5",
+      "size_bytes": 3174,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Nightingale rose / polar area cyclic operational profile canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/nightingale_rose_sample.svg",
+      "sha256": "8c37f32d3e89272461442ae6596daa1986acd8981b53aa66d585f36fb17c9353",
+      "size_bytes": 16493,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Nightingale rose cyclic operational profile canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/ternary_canvas_evidence.json",
+      "sha256": "3798a513e8690b5514db385675c7f557ca15d8bcde363927415b9d9beb9b00a5",
+      "size_bytes": 3238,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic ternary phase diagram and Gibbs triangle equilibrium canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/ternary_canvas_sample.svg",
+      "sha256": "de04e02c9321c4e7a4f77c8d9bb1e167ab51b6beae2436bccf6cddace9f6b167",
+      "size_bytes": 8637,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered ternary phase diagram Gibbs equilibrium canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/streamgraph_canvas_evidence.json",
+      "sha256": "0f20ca84c4ad75d10e9631fc1f1cf646ef3d75b374080099ff69593eb74880fa",
+      "size_bytes": 3415,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic streamgraph baseline-centered organic stacked area canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/streamgraph_canvas_sample.svg",
+      "sha256": "c7b59a01084a084142239685384a65d78b696eec020adfbcdf7326329caf1ae4",
+      "size_bytes": 15105,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered streamgraph baseline-centered organic stacked area canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/marimekko_canvas_evidence.json",
+      "sha256": "c811483d4ee1db9182ebebf98e89c1681af37a079c5f3d455e01d83caffadb37",
+      "size_bytes": 3192,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Marimekko / mosaic variable-width stacked bar canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/marimekko_canvas_sample.svg",
+      "sha256": "d8ab7025986d87ab0da70a622c25d4459c0487924297f9accd57269f57adc1ba",
+      "size_bytes": 10159,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Marimekko variable-width stacked bar canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/chernoff_canvas_evidence.json",
+      "sha256": "427ba912e623efe1df9f86bec85115f43c634b2b62b231b9c3fff998cc4261dd",
+      "size_bytes": 3169,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Chernoff faces multivariate glyph canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/chernoff_canvas_sample.svg",
+      "sha256": "8408c1a62767a8546bb70b0e43fdd9813b6f45472ed09f0a6948760aa29d6a2f",
+      "size_bytes": 20993,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Chernoff faces multivariate glyph canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/upset_canvas_evidence.json",
+      "sha256": "8d8afcbd43ed44ad236c71faeadb102ca0bf4ba34168d4de40b2c51f7c16eee3",
+      "size_bytes": 2986,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic UpSet set intersection matrix and combinatorial cardinality canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/upset_canvas_sample.svg",
+      "sha256": "822ed789f73eb5d57a06928129f4c3e135b43e97a5b914e3dd1073150b3127a2",
+      "size_bytes": 15036,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered UpSet set intersection matrix canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/horizon_canvas_evidence.json",
+      "sha256": "8517648bddaf1cc89843c0a6bbd0e5dff005905b0388a69024bf6bbe21d6b63e",
+      "size_bytes": 3018,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic horizon graph two-tone area band canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/horizon_canvas_sample.svg",
+      "sha256": "6d05ba07e61dd7fbedfad7f5f1f49350e16ea5c3f23f9d636217d55319f09ada",
+      "size_bytes": 23169,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered horizon graph two-tone area band canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/ridge_canvas_evidence.json",
+      "sha256": "6b4964380807e7508c016b551b6a9ec682aa4de1b02a0c4d96537bdbbb176398",
+      "size_bytes": 2974,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic ridge plot multi-channel elevation profile canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/ridge_canvas_sample.svg",
+      "sha256": "152b68be8a6c97497cb6bc3d1abc78706244d314c929a836624fd45ba7c4b85b",
+      "size_bytes": 63064,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered ridge plot multi-channel elevation profile canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/funnel_canvas_evidence.json",
+      "sha256": "1d7760891abc6f7457a485e21ccf8e75cd52145ee75fe7d90d7eb2cb2a732f6c",
+      "size_bytes": 3352,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic funnel conversion and process stage attrition canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/funnel_canvas_sample.svg",
+      "sha256": "6d58fa3324b954fc723028b62115553ff1af10c186d8221817980ceac0ed07c6",
+      "size_bytes": 17878,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered funnel conversion and process stage attrition canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/sankey_canvas_evidence.json",
+      "sha256": "0c6101cd4d88ea5c5cce19efc4f6e9e1e004b09d672de0164ddf5db7d81f0141",
+      "size_bytes": 3587,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Sankey process stream flow distribution canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/sankey_canvas_sample.svg",
+      "sha256": "8a2664e091b9265e95d1aa86a27813e177341935fa4b52c14007ecab30174248",
+      "size_bytes": 20700,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Sankey process stream flow distribution canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/radar_canvas_evidence.json",
+      "sha256": "fd9624c2115929a6adf472466a645987feadc70f72a51a89d34c4af1971c98ba",
+      "size_bytes": 3338,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic radar process KPI multi-dimensional polygon canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/radar_canvas_sample.svg",
+      "sha256": "61803c9ab0b609006b5c62e483740f187fe0008c206f1aae56adf569478c2dc4",
+      "size_bytes": 16301,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered radar process KPI multi-dimensional polygon canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/parallel_canvas_evidence.json",
+      "sha256": "533498f796c1cc9fcaad9282bd80fc19b82d6ff33bbeb5ffacd953d00281d46f",
+      "size_bytes": 3347,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic parallel coordinates multivariate process canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/parallel_canvas_sample.svg",
+      "sha256": "df91bfafb8dabf3ff50227eaa614bfdb329fba6af39d192b35de61b8bc79327e",
+      "size_bytes": 15815,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered parallel coordinates multivariate process canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/box_whisker_canvas_evidence.json",
+      "sha256": "eeb3b9788ff7674d7a46a77eba7ee310ec46a7ef6737ae4dedc798b9c5ad38b8",
+      "size_bytes": 3506,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic box-and-whisker distribution canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/box_whisker_canvas_sample.svg",
+      "sha256": "c4afa2aa73b9c1794f21cd67411c1bb1913d5061f80561a7638eafddce29526c",
+      "size_bytes": 22946,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered box-and-whisker distribution canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/trellis_canvas_evidence.json",
+      "sha256": "d639dfeada19fec0213db1ee3e2f6a65f190d207c29db9a832b48b8514c61ca1",
+      "size_bytes": 3401,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic trellis multi-panel conditioned process lattice canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/trellis_canvas_sample.svg",
+      "sha256": "29f9e735bb0a2f1126f908949823e9b0cbfcde5c31785ad2e69a229280a3ef65",
+      "size_bytes": 27845,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered trellis multi-panel conditioned process lattice canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_matrix_canvas_evidence.json",
+      "sha256": "f493296d3ca31c61a7dff1297f5b819c9f22459bab9fe0acb83ca0c045e7061e",
+      "size_bytes": 3477,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic chord matrix cross-unit inter-flow topology vector canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_matrix_canvas_sample.svg",
+      "sha256": "b53a0b5e3e14b976ed06bf763bc09020467666a0814330a89820f42abff98bc5",
+      "size_bytes": 23725,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic chord matrix cross-unit inter-flow topology vector canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/flame_contour_canvas_evidence.json",
+      "sha256": "5cd4c7ab0473cc12aa46aef82f361a2b0ba68b900f82caadbda21c758d46e726",
+      "size_bytes": 3567,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic flame 3D contour and combustion thermal intensity canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/flame_contour_canvas_sample.svg",
+      "sha256": "f2c4ad78d2dbf441442ac420e058d48f8bcce08dfd91d2722330edc2c203b25d",
+      "size_bytes": 33439,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic flame 3D contour canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/ternary_phase_diagram_canvas_evidence.json",
+      "sha256": "581cb44453e4f861f8cfed7ea1b443eb35fa88134954e5690ca159d001273ef6",
+      "size_bytes": 3528,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic ternary phase diagram and liquid-liquid extraction equilibrium canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/ternary_phase_diagram_canvas_sample.svg",
+      "sha256": "18ce3a704917d163192520c66e08f51a4570b999a44a63674499cf5040117294",
+      "size_bytes": 16479,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic ternary phase diagram and LLE equilibrium canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/polar_spectral_canvas_evidence.json",
+      "sha256": "dc9aa09c7513bc7102e4955877bb7ec0b73e63d9a69cec38261e57aa9acbd568",
+      "size_bytes": 3489,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic polar spectral canvas and frequency-domain harmonic analysis evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/polar_spectral_canvas_sample.svg",
+      "sha256": "361dfba01bee50da7639b419561308e1e8f7ed168d25a4c7be1288913e82d721",
+      "size_bytes": 21217,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic polar spectral canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/stream_waterfall_canvas_evidence.json",
+      "sha256": "ca15422eff1a4fe6a966052f27c8619eb8cc076ac9d8614c4dec7aa5c28770c5",
+      "size_bytes": 3434,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic stream waterfall multi-product distribution canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/stream_waterfall_canvas_sample.svg",
+      "sha256": "035aa5d1bf8818e49b2248989f9ff174bd8d8c5dfc706431cc0c703d02ee54d9",
+      "size_bytes": 26037,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic stream waterfall canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/wind_rose_canvas_evidence.json",
+      "sha256": "7eed61bb7d2373242da9edde11603db8e1c394157ac26eeef530a33c00441e6a",
+      "size_bytes": 3383,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic wind rose polar directional vector SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/wind_rose_canvas_sample.svg",
+      "sha256": "f2b6bdba8322d2e721fc273f92b895ffa3f0efd7aa094a950dc0822611ee1e44",
+      "size_bytes": 40183,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic wind rose polar directional vector SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/horizon_wavelet_canvas_evidence.json",
+      "sha256": "2c8720ca1cc450702e5c9ca15e0b4ca10232ef1674f146f8f0fd48679ce51b61",
+      "size_bytes": 3186,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic horizon wavelet multi-resolution decomposition SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/horizon_wavelet_canvas_sample.svg",
+      "sha256": "124210c041ceec8b4ffeee43b1efc92d2b90184914fffe9feba634720345d68a",
+      "size_bytes": 34574,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic horizon wavelet multi-resolution decomposition SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_flux_canvas_evidence.json",
+      "sha256": "4666db7e1aeda62f6d128ca3d8d968aa8bd822e3fd407b8f81ef22d968c1fa9a",
+      "size_bytes": 3573,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic chord diagram & multi-echelon flux SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/chord_flux_canvas_sample.svg",
+      "sha256": "c32f91eb5e19813dfc57edd93967c37f2839b50445640e70e9c3ebcca9cb7bd9",
+      "size_bytes": 27291,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic chord diagram multi-echelon flux SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/convex_hull_canvas_evidence.json",
+      "sha256": "40e652f38f6bb6da2c129f98508d022c2e081534cccaeabe2eddc8c2e0e69675",
+      "size_bytes": 3186,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic convex hull boundary & multi-cluster scatter SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/convex_hull_canvas_sample.svg",
+      "sha256": "71074db09cfcf066653a11ca7dd0ac54aa11bb0f54df0089bf03c388f965f02b",
+      "size_bytes": 9233,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic convex hull boundary & multi-cluster scatter SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/alpha_shape_canvas_evidence.json",
+      "sha256": "8eab08859469657d042e504363b6aa41e4e4f32aa4c02653acc6310d3ccb4d3e",
+      "size_bytes": 4220,
+      "gate": "HMI",
+      "description": "Gate G9: Dynamic Spatial Alpha Shape Non-Convex Concave Boundary SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/alpha_shape_canvas_sample.svg",
+      "sha256": "cce341ce8076d413ed72e1f14321a1f632c8533a1daf3d39eaa4817e07c7032c",
+      "size_bytes": 2709,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial Alpha Shape SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/medial_axis_canvas_evidence.json",
+      "sha256": "41fb9ea93364dca19a395d6fd6a2ac48d01b969fee09dff1ed9b81b4189a689c",
+      "size_bytes": 5950,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Medial Axis Skeletonization SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/medial_axis_canvas_sample.svg",
+      "sha256": "46438bfd0e8bfad827247aef60074ed45ed51befad3caf5d00bd023c4056b3b5",
+      "size_bytes": 26412,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial Medial Axis SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_voronoi_canvas_evidence.json",
+      "sha256": "12211f6cbf3d0fec9b3ff86ff80c96cfd8e95a068b68b58bfaf280472221f5ec",
+      "size_bytes": 4623,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic Delaunay triangulation & Voronoi partition SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/delaunay_voronoi_canvas_sample.svg",
+      "sha256": "86eb04f35a7eefad752e53bbfcfcfdf861c1d705b8e580769e82a6ea35597ac2",
+      "size_bytes": 35321,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic Delaunay triangulation & Voronoi partition SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/radial_tree_canvas_evidence.json",
+      "sha256": "b1b53d775d49534acb7a515e3ec05e0aa6d88e06624049fab5b70cd77925bbac",
+      "size_bytes": 2609,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic radial tree & hierarchical dependency graph SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/radial_tree_canvas_sample.svg",
+      "sha256": "ada56b75bfb494ce90bb53e170b4329e70d93e223a77c4f863d5bae8f3d20c5d",
+      "size_bytes": 13975,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic radial tree & hierarchical dependency graph SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/force_directed_canvas_evidence.json",
+      "sha256": "b9da1357600af2938eaead70a9be316f2cd73bae5d333ba03d42e3ce71043e56",
+      "size_bytes": 8205,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic force-directed spring-electrical network SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/force_directed_canvas_sample.svg",
+      "sha256": "1106f84808b9b6c09e166a4f5e3889910f7c5edb3c9ff9c720af0411287c0008",
+      "size_bytes": 25184,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic force-directed spring-electrical network SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/hyperbolic_tree_canvas_evidence.json",
+      "sha256": "de4c648723dc1a94a27926284ccdb9e720ac92aca3eaa5fde305c60236ea9a4c",
+      "size_bytes": 2686,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic hyperbolic tree & Poincare disk SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/hyperbolic_tree_canvas_sample.svg",
+      "sha256": "62d02eb4f46d6366d916dcc5d22b17fdc12aaba62813a5b29afae925d8f06345",
+      "size_bytes": 14824,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic hyperbolic tree Poincare disk SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/icicle_canvas_evidence.json",
+      "sha256": "33ccea3c41b6509f1b19c7bb3977e39e9ca55b3aa868147fac030c261e18e8c9",
+      "size_bytes": 2802,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic icicle hierarchical partition flow SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/icicle_canvas_sample.svg",
+      "sha256": "8e7b7099bebc35e14eda7251a74b8dfbac8019b4053981507745be0f5ddedbee",
+      "size_bytes": 26459,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic icicle hierarchical partition flow SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/dendrogram_canvas_evidence.json",
+      "sha256": "301deef0d276b6131b62756b0892b45570e4ea6362148348b3dcf20bd8ef6ed8",
+      "size_bytes": 2841,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic dendrogram and hierarchical clustering matrix SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/dendrogram_canvas_sample.svg",
+      "sha256": "78be489e4853b58106ccd2dd265ceb7c08fd33c62da9b9ce9d6451828098263d",
+      "size_bytes": 144654,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic dendrogram and hierarchical clustering matrix SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/contour_canvas_evidence.json",
+      "sha256": "c6e4f24bc4e20d1fcf39047e760e17201dd75b0193689faaccc7ce7c21860edc",
+      "size_bytes": 3559,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic contour plot & 2D scalar field isoline gradient SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/contour_canvas_sample.svg",
+      "sha256": "b5a35fbe9425f8d6c2b4c50c7b9b743fbe8fbc4cdc212387d1acf664e5204901",
+      "size_bytes": 25260,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic contour plot & 2D scalar field isoline gradient SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/hexbin_canvas_evidence.json",
+      "sha256": "4cccc0cf1df1359433adb6d555766d5dd3e31045e8e699fe4d3be7111ba14ea2",
+      "size_bytes": 3512,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic hexagonal binning heatmap & density scatter SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/hexbin_canvas_sample.svg",
+      "sha256": "d4d02cc62c4edf98eb9a5138b2ea5e31a556b68338419d4bdb04d6a98e06b7bf",
+      "size_bytes": 31851,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic hexagonal binning heatmap & density scatter SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/beeswarm_canvas_evidence.json",
+      "sha256": "93eb5dd5748067aa811abc913f0bc2811e582ec469ae233ae4a1c60b516c310d",
+      "size_bytes": 3630,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic beeswarm jitter scatter SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/beeswarm_canvas_sample.svg",
+      "sha256": "97bda2df94b6f1fd82c628fb7786f304fddc4a1215d9f3686ed1452b4b0c92c8",
+      "size_bytes": 90889,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic beeswarm jitter scatter SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/sunburst_radial_canvas_evidence.json",
+      "sha256": "958be35f06af5afbbc951d55b1f3a9ca00302efa851cf50501a36f2d652d822c",
+      "size_bytes": 3521,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic sunburst hierarchical radial partition SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/sunburst_radial_canvas_sample.svg",
+      "sha256": "f815a1b60a443a545d5429fe8dd778900d87282e236302546bafec445b8de304",
+      "size_bytes": 28096,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic sunburst hierarchical radial partition SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/treemap_hierarchical_canvas_evidence.json",
+      "sha256": "dfde36b2395d5b5efe01dcc1ff9d226ade300f99542234cbd2ea517e589bd3be",
+      "size_bytes": 3576,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic treemap hierarchical nested SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/treemap_hierarchical_canvas_sample.svg",
+      "sha256": "902461ef045b9fd65a384ca1eb4dcc34c036b1373ede5c95c6d9a0ddc77ed19e",
+      "size_bytes": 18510,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic treemap hierarchical nested SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/parallel_coordinates_canvas_evidence.json",
+      "sha256": "4eb2240beb66ef5057165060b37d065ae421d1c2406ffaf57a3016192a10bd76",
+      "size_bytes": 3724,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic parallel coordinates multidimensional telemetry SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/parallel_coordinates_canvas_sample.svg",
+      "sha256": "03bc2cf226295e2e5a3825c7dc8cff277d4947c68bf191985c45327b8f73efdd",
+      "size_bytes": 21334,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic parallel coordinates multidimensional telemetry SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/ternary_phase_canvas_evidence.json",
+      "sha256": "195af798e84c65d8d48f6e1d4236b35944bdeda3759153b53bd43e6a7b774e4c",
+      "size_bytes": 3791,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic ternary phase diagram SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/ternary_phase_canvas_sample.svg",
+      "sha256": "83fd911b15298a3a254e5fca917ebcf85cd7e14906816ca4efaf493162614872",
+      "size_bytes": 13609,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic ternary phase diagram SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/contour_surface_canvas_evidence.json",
+      "sha256": "2d1e9e90c0a17b07612a4f2c6f5e43534b51bf2e05f30aae17bff1ab1381e59c",
+      "size_bytes": 3771,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic contour surface heatmap SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/contour_surface_canvas_sample.svg",
+      "sha256": "f74936cf871ad9616b234afd85b0aa4a23440cde54a99f71a7fd02c74b53d7e2",
+      "size_bytes": 27734,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic contour surface heatmap SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/funnel_pipeline_canvas_evidence.json",
+      "sha256": "c442e5c676c015a0b71bd7010cc65baea4701534d388ea92804097d26722c1c4",
+      "size_bytes": 3872,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic funnel pipeline flow SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/funnel_pipeline_canvas_sample.svg",
+      "sha256": "622016f2e20ffa3bc1f378479982dbc85f8645f6673e50f79b542405bcece358",
+      "size_bytes": 16871,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic funnel pipeline flow SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/sunburst_partition_canvas_evidence.json",
+      "sha256": "2de547b3bda92671956f1ff9ea128819b60a0a211cd565a12a94e1798383dc01",
+      "size_bytes": 3744,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI dynamic sunburst partition multilevel hierarchy SCADA canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/sunburst_partition_canvas_sample.svg",
+      "sha256": "18c968c310db5cb9425d92e9be64db5ba1252c6ab74942f1590f9a4852ddaf69",
+      "size_bytes": 14042,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered dynamic sunburst partition multilevel hierarchy SCADA canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/cvt_canvas_evidence.json",
+      "sha256": "ee11a85ccdd53d0865614549b53bda762923fc5d984ba4febfcdea3774b0477f",
+      "size_bytes": 6386,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Centroidal Voronoi Tessellation (CVT) SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/cvt_canvas_sample.svg",
+      "sha256": "2a3541340ca953e526beaee82cc984f722ca0dfa10f4ad4e81806f97746087d6",
+      "size_bytes": 10783,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial Centroidal Voronoi Tessellation (CVT) SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/poisson_disk_canvas_evidence.json",
+      "sha256": "50d8f1137d834ae3f6e78477029e3a2e0a24a7e0f57ec9355e42942733ce84dd",
+      "size_bytes": 4405,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Poisson-Disk Sampling SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/poisson_disk_canvas_sample.svg",
+      "sha256": "65e6b444b342ba06f7f8989c5e7658718eca0c216ec5cb76f0bb3e6d414f4094",
+      "size_bytes": 36393,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial Poisson-Disk Sampling SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/quadtree_canvas_evidence.json",
+      "sha256": "55167cac9c2100a7bf4cb09844d2d50718cdd3ebff91c5245c2eb6789e858749",
+      "size_bytes": 2845,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial Quadtree / Spatial Index SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/quadtree_canvas_sample.svg",
+      "sha256": "6959865136ec05b7ec7580795be8362ed8a695789d5c37f29041d1929c711442",
+      "size_bytes": 16534,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial Quadtree / Spatial Index SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/kdtree_canvas_evidence.json",
+      "sha256": "1110a72ad100050762874d8d29397b71d59d6d4309f3ea153518fc4b92fbdb50",
+      "size_bytes": 4743,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial K-D Tree / Nearest-Neighbor SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/kdtree_canvas_sample.svg",
+      "sha256": "c19f8ca3d148557e0a0d8177415ac4eb73ddf50d21d9e86fe1f3238ca477058c",
+      "size_bytes": 5472,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial K-D Tree / Nearest-Neighbor SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/HMI/rtree_canvas_evidence.json",
+      "sha256": "731977a8e8c5ed17fd2fd178160211c480e262a17af5ae625bf46d29274de84c",
+      "size_bytes": 4791,
+      "gate": "HMI",
+      "description": "Gate G9: Cscape HMI Dynamic Spatial R-Tree / Bounding Volume Hierarchy (BVH) SCADA Canvas evidence"
+    },
+    {
+      "relative_path": "artifacts/HMI/rtree_canvas_sample.svg",
+      "sha256": "d1108354350f07dd090d73fa94aa6b16e06d1e9afd4d7ef4e2c399624c4dcdb3",
+      "size_bytes": 4600,
+      "gate": "HMI",
+      "description": "Gate G9: Standalone pure-SVG rendered Dynamic Spatial R-Tree / Bounding Volume Hierarchy (BVH) SCADA Canvas sample"
+    },
+    {
+      "relative_path": "artifacts/alarming/alarm_historian_evidence.json",
+      "sha256": "ace5f06a25545ec98c09117027683b97c36153c61fceb6918300e6b956ab6675",
+      "size_bytes": 8130,
+      "gate": "ALARMING",
+      "description": "Alarming: ANSI/ISA-18.2 alarm management and event historian audit evidence"
+    },
+    {
+      "relative_path": "artifacts/pilot/pilot_demonstration_report.json",
+      "sha256": "caa6b6acfb9847d5e22f6dc95505127d27a9db05afaefd6cb723e8dc70a4e512",
+      "size_bytes": 35546,
+      "gate": "PILOT",
+      "description": "Pilot: Integrated closed-loop multi-disciplinary pilot demonstration audit"
+    },
+    {
+      "relative_path": "artifacts/benchmarks/cli_stress_report.json",
+      "sha256": "3b6162df258ab17d0d52e2cb3bdb71023d52f2e36bdaadba9d5d78706cf4dc8c",
+      "size_bytes": 11837,
+      "gate": "BENCHMARKS",
+      "description": "Benchmarks: CLI stress, latency, and concurrency verification report"
+    },
+    {
+      "relative_path": "artifacts/benchmarks/cli_soak_profile.json",
+      "sha256": "dd89a99a4db02fb79a12178797cde048ccee77e9e521fc82c35dd4f310d47e38",
+      "size_bytes": 4744,
+      "gate": "BENCHMARKS",
+      "description": "BENCHMARKS artifact"
+    },
+    {
+      "relative_path": "artifacts/benchmarks/spc_profiler_evidence.json",
+      "sha256": "e5e764f1aa14b119dae6cfa3fac86a903f600fb51a2a689ee1fb05b25404b1bd",
+      "size_bytes": 2137,
+      "gate": "BENCHMARKS",
+      "description": "Gate G10: Statistical process control, Shewhart rules, and Cpk capability profiler evidence"
+    },
+    {
+      "relative_path": "docs/ARCHITECTURE_OVERVIEW.md",
+      "sha256": "2d2d21c628f5949abd41a27354d9faf851c266bd76a26cf46943be2329b72b8e",
+      "size_bytes": 21835,
+      "gate": "DOCS",
+      "description": "Technical Architecture: Multi-agent J/E/V layers and FastMCP parity"
+    },
+    {
+      "relative_path": "docs/SAFETY_AND_COMMISSIONING_MANUAL.md",
+      "sha256": "5f60f700dbf023b3eea938ae4dd5cfc35a0d0432a40cd418e437383c728cdb72",
+      "size_bytes": 18782,
+      "gate": "DOCS",
+      "description": "Safety Manual: Invariants INV-G12-001..006, port lockout, companion binary ban, air-gap"
+    },
+    {
+      "relative_path": "docs/PLANT_SIMULATION_GUIDE.md",
+      "sha256": "482b2b343dbf84ef7e0885a167daebc022917791fa3066124d6401a65d0e59c5",
+      "size_bytes": 616185,
+      "gate": "DOCS",
+      "description": "Simulation Guide: Mass conservation, Torricelli non-linear flow, OU noise, discrete scan pipeline"
+    },
+    {
+      "relative_path": "docs/TELEMETRY_AND_SCALING_GUIDE.md",
+      "sha256": "7ebf911219e72faa1bee28057dec1a4dd71dea67131803a5f6921ac0c908a06a",
+      "size_bytes": 602676,
+      "gate": "DOCS",
+      "description": "Telemetry Guide: OCS register space, Namur NE43 monitoring, 16-bit OPC UA word"
+    },
+    {
+      "relative_path": "docs/HMI_SCADA_SPECIFICATION.md",
+      "sha256": "1a7b009fab62b2ce7d6704b02e41e1079a881b18df814ddde5be0c1b1fdf4912",
+      "size_bytes": 559315,
+      "gate": "DOCS",
+      "description": "HMI/SCADA Spec: Screen elements, navigation topology, ISA-18.2 alarms, recipe management"
+    },
+    {
+      "relative_path": "docs/OPERATOR_REFERENCE_MANUAL.md",
+      "sha256": "cdf8e36cd71fe97dde02378babfc4a7032d6fb063d7bc2ad4cf296e3d28a6cc7",
+      "size_bytes": 25734,
+      "gate": "DOCS",
+      "description": "Operator Manual: CLI operations, run procedures, troubleshooting catalog"
+    },
+    {
+      "relative_path": "ops/backlog.json",
+      "sha256": "1fa65bf3609663cd67e97017fab3afb53a6cd21d13054a506282b80d5abd186b",
+      "size_bytes": 660138,
+      "gate": "OPS",
+      "description": "Operations: Work package backlog tracking ledger"
+    },
+    {
+      "relative_path": "ops/gates.json",
+      "sha256": "2d2a98b1ed7950d5409d775dc28de022f1a23cde3a876c2b98aab7e31babf6bb",
+      "size_bytes": 67161,
+      "gate": "OPS",
+      "description": "Operations: Evidence-gated milestone progress ledger"
+    },
+    {
+      "relative_path": "STATUS.md",
+      "sha256": "8030d714ed6a0534d81ad8d512ca1979501b3ea9b343f59fcc17c6ae04b93e10",
+      "size_bytes": 165196,
+      "gate": "OPS",
+      "description": "Documentation: Real-time project status and verification matrix"
+    },
+    {
+      "relative_path": "NEXT_ACTION.md",
+      "sha256": "773b748ebc591a3709017262e11b4cd87e08bcee530a6e27f85ac69baf5c043b",
+      "size_bytes": 9582,
+      "gate": "OPS",
+      "description": "Documentation: Immediate executable next steps and safety reminders"
+    }
+  ],
+  "safety_audit": {
+    "fail_closed_lockout": "VERIFIED_ACTIVE",
+    "hardware_ports_blocked": [
+      "COM1..COM256",
+      "\\\\.\\COM*",
+      "/dev/tty*"
+    ],
+    "download_commands_blocked": [
+      32827,
+      33149
+    ],
+    "companion_flash_tools_blocked": [
+      "PGMUpdateUtility.exe",
+      "DfuSeCommand.exe",
+      "STMFlashLoader.exe",
+      "WinJTAG.exe"
+    ],
+    "straton_k5_isolation": "CERTIFIED_ZERO_DEPENDENCY",
+    "secrets_leak_audit": "CLEAN_ZERO_CREDENTIALS"
+  }
+}

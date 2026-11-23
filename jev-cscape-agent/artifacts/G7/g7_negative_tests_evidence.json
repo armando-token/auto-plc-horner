@@ -1,0 +1,82 @@
+{
+  "gate": "G7",
+  "suite": "GATE_G7_NEGATIVE_VERIFICATION_TESTS",
+  "timestamp_start_utc": "2026-10-10T23:31:15.517538+00:00",
+  "timestamp_end_utc": "2026-10-10T23:33:55.733687+00:00",
+  "status": "success",
+  "cscape_version": "10.2 (Build 10.2.751.4)",
+  "overall_status": "success",
+  "total_tests": 3,
+  "passed_tests": 3,
+  "failed_tests": 0,
+  "blocked_tests": 0,
+  "inconclusive_tests": 0,
+  "baseline_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "safety_invariants": {
+    "com_ports_blocked": true,
+    "download_commands_blocked": true,
+    "baseline_p1_unmodified": true
+  },
+  "tests": [
+    {
+      "test_id": "N1_UNBOUND_INVALID_VARIABLE",
+      "description": "Unbound/invalid variable (1BAD-NAME) rejected with SHA unchanged",
+      "invalid_identifier": "1BAD-NAME",
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g7_n1_invalid_variable.csp",
+      "initial_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "final_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "sha_unchanged": true,
+      "rejection_confirmed": true,
+      "rejection_type": "syntax_warning_dialog",
+      "rejection_details": "Title: 'Error', Body: 'Invalid tag name'",
+      "cfbf_contains_invalid_var": false,
+      "p1_base_intact": true,
+      "base_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "screenshots": [
+        "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\negative_tests_steps\\g7_n1_invalid_var_rejected.png"
+      ],
+      "dialogs_encountered": [],
+      "status": "success",
+      "error": null
+    },
+    {
+      "test_id": "N2_ABORT_BEFORE_SAVE",
+      "description": "Ladder element placed in memory, save aborted answering 'No', file SHA unchanged",
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g7_n2_abort_before_save.csp",
+      "initial_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "final_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "sha_unchanged": true,
+      "in_memory_edit_placed": true,
+      "cfbf_element_count": 0,
+      "p1_base_intact": true,
+      "base_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "screenshots": [
+        "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\negative_tests_steps\\g7_n2_dirty_ladder_before_abort.png"
+      ],
+      "dialogs_encountered": [],
+      "status": "success",
+      "error": null
+    },
+    {
+      "test_id": "N3_INTERRUPTED_SAVE",
+      "description": "Hard-kill Cscape during save; copy remains valid CFBF, reopens clean, never corrupt",
+      "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g7_n3_interrupted_save.csp",
+      "initial_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "pre_kill_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "interrupted_sha256": "7b2a6caee4cff79bffda01c9748b8fc823cbc01e53461a9fcadc18a39c87eb46",
+      "is_ole_valid": true,
+      "cfbf_stream_readable": true,
+      "contents_stream_size": 281182,
+      "corruption_detected": false,
+      "reopen_clean": true,
+      "p1_base_intact": true,
+      "base_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+      "screenshots": [
+        "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G7\\negative_tests_steps\\g7_n3_reopened_interrupted_project.png"
+      ],
+      "dialogs_encountered": [],
+      "status": "success",
+      "error": null
+    }
+  ]
+}

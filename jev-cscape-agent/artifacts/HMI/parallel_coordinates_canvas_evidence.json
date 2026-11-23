@@ -1,0 +1,89 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W240",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Parallel Coordinates Multidimensional Telemetry SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Parallel_Coordinates_Geometry_And_Viewport_Parameter_Verification",
+        "passed": true,
+        "timing_ms": 0.02,
+        "details": "Verified 1200x750 viewport, dark industrial theme (#0B0F19/#161B22), canvas bounds (20.0, 86.0, 1160.0, 644.0), and 6 dimension axes."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_Structured_Text_POU_Validation",
+        "passed": true,
+        "timing_ms": 0.75,
+        "details": "Validated pure IEC 61131-3 ST POU 'ParallelCoordinatesCanvasSync' with STParser & SecurityGuard across %R2010..%R2017 and %M469..%M470."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.03,
+        "details": "Rejected 6 forbidden ladder logic constructs (contacts, coils, rungs, networks, mnemonics) with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Multidimensional_Spline_Interpolation_And_Trajectory_Bounds",
+        "passed": true,
+        "timing_ms": 0.83,
+        "details": "Verified 8 active telemetry profiles mapped across 6 axes: all vertices contained within canvas bounds with smooth cubic B\u00e9zier splines."
+      },
+      {
+        "stage": 5,
+        "check": "Standalone_W3C_SVG_Vector_Canvas_Generation",
+        "passed": true,
+        "timing_ms": 3.69,
+        "details": "Generated valid W3C SVG 1.1 vector graphic with paths, lines, decoupled badges, and WCAG 2.1 AAA contrast (badge 20.01:1, text 17.30:1) -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\parallel_coordinates_canvas_sample.svg."
+      },
+      {
+        "stage": 6,
+        "check": "Multivariate_Outlier_Alarm_Injection",
+        "passed": true,
+        "timing_ms": 1.21,
+        "details": "Verified 3-sigma outlier injection (Vibration 9.5 mm/s vs ref 1.50) -> OutlierProfilesCount > 0 -> %M470 asserted, and de-assertion upon recovery reset."
+      },
+      {
+        "stage": 7,
+        "check": "Diagnostic_Fault_Handling",
+        "passed": true,
+        "timing_ms": 2.29,
+        "details": "Verified 0xF601 (Geometry Singularity), 0xF602 (Insufficient Axes), 0xF603 (Range Degeneracy), 0xF604 (Canvas Overflow), and nominal resets."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 1.35,
+        "details": "Verified %R2010..%R2017 (6, 8, 0, 0, 7850, 0, 116, 0) and %M469..%M470 (True, False) bit-exact with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycle_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 34.08,
+        "details": "Verified 100 deterministic scan cycles: 0 memory leak (steady 6 axes, 8 profiles), constant correlation index (7850), steady layout."
+      }
+    ],
+    "metrics": {
+      "parallel_axes_count": 6,
+      "active_profiles_count": 8,
+      "outlier_profiles_count": 0,
+      "selected_profile_index": 0,
+      "mean_correlation_index_scaled": 7850,
+      "brushing_axis_index": 0,
+      "brushing_window_scaled": 116,
+      "diagnostic_code": "0x0000",
+      "wcag_badge_contrast": 20.01371665884987,
+      "wcag_text_contrast": 17.29838090011432
+    }
+  }
+}

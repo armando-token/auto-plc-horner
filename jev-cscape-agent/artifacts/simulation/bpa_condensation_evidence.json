@@ -1,0 +1,174 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Bisphenol A (BPA) Catalytic Condensation ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W233",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Bisphenol A (BPA) Catalytic Condensation ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "elapsed_seconds": 0.1878,
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Reactor_Physics_And_Thermochemical_Constants",
+        "check": "Reactor_Physics_And_Thermochemical_Constants",
+        "passed": true,
+        "details": "Kinetics verified: k1(60C)=0.0121, k1(72C)=0.0273, k1(85C)=0.0621, Ea1 error=4.37e-11 J/mol, Delta_H1=-46.0 kJ/mol, Nominal 72 \u00b0C, 2.2 bar, 10.5:1 ratio."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "BpaCondensationSync POU verified cleanly; bound %R1940..%R1947 and %M452..%M454."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state verified: Conversion=98.80% (> 98.5%), Selectivity=95.20% (> 94.0%), Production=1400.0 kg/h (~1400 kg/h)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Residuals verified: mass=0.00e+00 kg/s, elemental=0.00e+00 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_And_Acetone_Accumulation_Injections",
+        "check": "Thermal_Runaway_And_Acetone_Accumulation_Injections",
+        "passed": true,
+        "details": "0xF001 over-temp (>95\u00b0C), 0xF002 accumulation (>0.40 mol/L), %M454 quench open verified."
+      },
+      {
+        "stage": 7,
+        "name": "Low_Phenol_Ratio_And_Catalyst_Deactivation_Injections",
+        "check": "Low_Phenol_Ratio_And_Catalyst_Deactivation_Injections",
+        "passed": true,
+        "details": "0xF003 ratio (<6.0:1), 0xF004 deactivation (>5.0%), pre-alarm %M453 (<7.5:1) verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers %R1940..%R1947 and coils %M452..%M454 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed: bounded state (T=71.99\u00b0C, Conv=98.97%), memory delta=13.8 KB."
+      }
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Reactor_Physics_And_Thermochemical_Constants",
+        "check": "Reactor_Physics_And_Thermochemical_Constants",
+        "passed": true,
+        "details": "Kinetics verified: k1(60C)=0.0121, k1(72C)=0.0273, k1(85C)=0.0621, Ea1 error=4.37e-11 J/mol, Delta_H1=-46.0 kJ/mol, Nominal 72 \u00b0C, 2.2 bar, 10.5:1 ratio."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "BpaCondensationSync POU verified cleanly; bound %R1940..%R1947 and %M452..%M454."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state verified: Conversion=98.80% (> 98.5%), Selectivity=95.20% (> 94.0%), Production=1400.0 kg/h (~1400 kg/h)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Residuals verified: mass=0.00e+00 kg/s, elemental=0.00e+00 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_And_Acetone_Accumulation_Injections",
+        "check": "Thermal_Runaway_And_Acetone_Accumulation_Injections",
+        "passed": true,
+        "details": "0xF001 over-temp (>95\u00b0C), 0xF002 accumulation (>0.40 mol/L), %M454 quench open verified."
+      },
+      {
+        "stage": 7,
+        "name": "Low_Phenol_Ratio_And_Catalyst_Deactivation_Injections",
+        "check": "Low_Phenol_Ratio_And_Catalyst_Deactivation_Injections",
+        "passed": true,
+        "details": "0xF003 ratio (<6.0:1), 0xF004 deactivation (>5.0%), pre-alarm %M453 (<7.5:1) verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers %R1940..%R1947 and coils %M452..%M454 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed: bounded state (T=71.99\u00b0C, Conv=98.97%), memory delta=13.8 KB."
+      }
+    ],
+    "register_map": {
+      "analog_registers": {
+        "%R1940": "ReactorTemperatureScaled (x10 \u00b0C)",
+        "%R1941": "ReactorPressureBarScaled (x10 bar)",
+        "%R1942": "AcetoneConversionPctScaled (x100 %)",
+        "%R1943": "BpaSelectivityPctScaled (x100 %)",
+        "%R1944": "PhenolAcetoneRatioScaled (x10)",
+        "%R1945": "BpaProductionRateKgHrScaled (x10 kg/h)",
+        "%R1946": "CatalystDeactivationPctScaled (x100 %)",
+        "%R1947": "DiagnosticStatusCode (0x0000..0xF004)"
+      },
+      "discrete_coils": {
+        "%M452": "BpaCondensationActive (BOOL)",
+        "%M453": "LowPhenolRatioPreAlarm (BOOL)",
+        "%M454": "EmergencyQuenchValveOpen (BOOL)"
+      },
+      "values": {
+        "%R1940": 720,
+        "%R1941": 22,
+        "%R1942": 9880,
+        "%R1943": 9450,
+        "%R1944": 105,
+        "%R1945": 14000,
+        "%R1946": 85,
+        "%R1947": 0,
+        "%M452": true,
+        "%M453": false,
+        "%M454": false
+      }
+    },
+    "timestamp": "2026-10-06T18:14:54Z"
+  }
+}

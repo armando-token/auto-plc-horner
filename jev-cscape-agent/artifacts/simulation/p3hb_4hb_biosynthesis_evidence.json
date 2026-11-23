@@ -1,0 +1,141 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W293 P(3HB-co-4HB) Biosynthesis Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W293",
+    "gate": "G7",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 1.216,
+        "details": "Inoculation growth verified: Biomass increased from 2.50 to 2.69 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "dual_substrate_kinetics",
+        "passed": true,
+        "timing_ms": 0.926,
+        "details": "Dual-substrate kinetics confirmed: S1 (29.56 -> 29.10 g/L), S2 (5.00 -> 4.99 g/L), N (1.18 -> 1.16 g/L)."
+      },
+      {
+        "stage": 3,
+        "name": "p3hb_4hb_accumulation",
+        "passed": true,
+        "timing_ms": 2.122,
+        "details": "P(3HB-co-4HB) polymer synthesized and accumulated from 0.51 to 0.53 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "monomer_fraction_tuning",
+        "passed": true,
+        "timing_ms": 0.904,
+        "details": "4HB monomer fraction tuned cleanly to 15.7 mol% within target 5.0-40.0 mol% range."
+      },
+      {
+        "stage": 5,
+        "name": "precursor_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.319,
+        "details": "Precursor toxicity trip 0xF911 asserted on S2 > 20.0 g/L; precursor feed shut off."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_runaway_trip",
+        "passed": true,
+        "timing_ms": 0.294,
+        "details": "Thermal runaway trip 0xF913 asserted upon T > 36.0 \u00b0C; cooling interlock tripped."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "Elemental carbon conservation residual 0.00e+00 < 1e-10 threshold."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.216,
+        "details": "Horner OCS register space %R2540..%R2547 and coils %M592..%M594 bit-exact verified."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.356,
+        "details": "P3hb4hbBiosynthesisSync pure ST AST validated; ladder contacts rejected strictly."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 1.216,
+        "details": "Inoculation growth verified: Biomass increased from 2.50 to 2.69 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "dual_substrate_kinetics",
+        "passed": true,
+        "timing_ms": 0.926,
+        "details": "Dual-substrate kinetics confirmed: S1 (29.56 -> 29.10 g/L), S2 (5.00 -> 4.99 g/L), N (1.18 -> 1.16 g/L)."
+      },
+      {
+        "stage": 3,
+        "name": "p3hb_4hb_accumulation",
+        "passed": true,
+        "timing_ms": 2.122,
+        "details": "P(3HB-co-4HB) polymer synthesized and accumulated from 0.51 to 0.53 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "monomer_fraction_tuning",
+        "passed": true,
+        "timing_ms": 0.904,
+        "details": "4HB monomer fraction tuned cleanly to 15.7 mol% within target 5.0-40.0 mol% range."
+      },
+      {
+        "stage": 5,
+        "name": "precursor_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.319,
+        "details": "Precursor toxicity trip 0xF911 asserted on S2 > 20.0 g/L; precursor feed shut off."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_runaway_trip",
+        "passed": true,
+        "timing_ms": 0.294,
+        "details": "Thermal runaway trip 0xF913 asserted upon T > 36.0 \u00b0C; cooling interlock tripped."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "Elemental carbon conservation residual 0.00e+00 < 1e-10 threshold."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.216,
+        "details": "Horner OCS register space %R2540..%R2547 and coils %M592..%M594 bit-exact verified."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.356,
+        "details": "P3hb4hbBiosynthesisSync pure ST AST validated; ladder contacts rejected strictly."
+      }
+    ]
+  }
+}

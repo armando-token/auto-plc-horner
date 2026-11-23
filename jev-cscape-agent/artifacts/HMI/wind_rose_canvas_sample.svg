@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="canvas-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1117" />
+      <stop offset="100%" stop-color="#161B22" />
+    </linearGradient>
+    <linearGradient id="card-surface-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161B22" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="plume-hazard-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.75" />
+      <stop offset="60%" stop-color="#EF4444" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#D29922" stop-opacity="0.15" />
+    </linearGradient>
+    <marker id="plume-arrowhead" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#D29922" />
+    </marker>
+    <marker id="prevailing-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#58A6FF" />
+    </marker>
+    <filter id="hazard-alarm-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#canvas-bg-grad)" />
+  <!-- Header Banner -->
+  <g id="canvas-header" transform="translate(40, 24)">
+    <rect x="0" y="0" width="700" height="60" rx="8" fill="#05080C" stroke="#30363D" stroke-width="1.2" />
+    <text x="18" y="26" fill="#F0F6FC" font-size="16" font-family="system-ui, -apple-system, sans-serif" font-weight="700">CSCAPE SCADA DYNAMIC WIND ROSE &amp; ENVIRONMENTAL DISPERSION CANVAS</text>
+    <text x="18" y="46" fill="#8B949E" font-size="11" font-family="monospace">WORK PACKAGE W192 | 16 POLAR SECTORS | GAUSSIAN PLUME HAZARD OVERLAY | HORNER OCS %R1530..%R1537</text>
+    <g transform="translate(715, 0)">      <rect x="0" y="0" width="135" height="28" rx="6" fill="#05080C" stroke="#30363D" />      <circle cx="14" cy="14" r="5" fill="#238636" />      <text x="26" y="18" fill="#F0F6FC" font-size="11" font-weight="600" font-family="system-ui">ACTIVE %M357</text>    </g>
+    <g transform="translate(860, 0)">      <rect x="0" y="0" width="145" height="28" rx="6" fill="#05080C" stroke="#238636" stroke-width="1.2" />      <circle cx="14" cy="14" r="5" fill="#238636" />      <text x="26" y="18" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">BOUNDARY CLEAR</text>    </g>
+    <g transform="translate(1015, 0)">      <rect x="0" y="0" width="105" height="28" rx="6" fill="#05080C" stroke="#30363D" />      <text x="12" y="18" fill="#8B949E" font-size="10" font-weight="700" font-family="monospace">0x0000 OK</text>    </g>
+  </g>
+  <!-- Interactive Sector Selector -->
+  <g id="interactive-sector-selector" transform="translate(40, 96)">
+    <rect x="0" y="0" width="85" height="26" rx="5" fill="#1F2937" stroke="#58A6FF" stroke-width="1.5" />    <text x="42.5" y="17" text-anchor="middle" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">ALL SECTORS</text>
+    <rect x="91" y="0" width="75" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="128.5" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">N (0°)</text>
+    <rect x="172" y="0" width="85" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="214.5" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">NE (45°)</text>
+    <rect x="263" y="0" width="75" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="300.5" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">E (90°)</text>
+    <rect x="344" y="0" width="85" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="386.5" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">SE (135°)</text>
+    <rect x="435" y="0" width="85" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="477.5" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">S (180°)</text>
+    <rect x="526" y="0" width="85" height="26" rx="5" fill="#1F2937" stroke="#58A6FF" stroke-width="1.5" />    <text x="568.5" y="17" text-anchor="middle" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">SW (225°)*</text>
+    <rect x="617" y="0" width="85" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="659.5" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">W (270°)</text>
+    <rect x="708" y="0" width="85" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="750.5" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">NW (315°)</text>
+    <rect x="799" y="0" width="98" height="26" rx="5" fill="#05080C" stroke="#30363D" stroke-width="1.0" />    <text x="848.0" y="17" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="600" font-family="system-ui">TOXIC CORRIDOR (45°)</text>
+  </g>
+  <!-- Wind Rose Polar SCADA Display -->
+  <g id="wind-rose-polar-display">
+    <circle cx="420.0" cy="415.0" r="250.0" fill="#161B22" fill-opacity="0.3" stroke="#30363D" stroke-width="1.5" />
+    <!-- Concentric Grid Circles -->
+    <g id="concentric-grid-circles">
+      <circle cx="420.0" cy="415.0" r="86.00" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="426.0" y="340.0" fill="#8B949E" font-size="9" font-family="monospace">5%</text>
+      <circle cx="420.0" cy="415.0" r="127.00" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="426.0" y="299.0" fill="#8B949E" font-size="9" font-family="monospace">10%</text>
+      <circle cx="420.0" cy="415.0" r="168.00" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="426.0" y="258.0" fill="#8B949E" font-size="9" font-family="monospace">15%</text>
+      <circle cx="420.0" cy="415.0" r="209.00" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="426.0" y="217.0" fill="#8B949E" font-size="9" font-family="monospace">20%</text>
+      <circle cx="420.0" cy="415.0" r="250.00" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="426.0" y="176.0" fill="#8B949E" font-size="9" font-family="monospace">25%</text>
+    </g>
+    <!-- 16 Directional Radial Spokes -->
+    <g id="directional-spokes">
+      <line x1="420.00" y1="370.00" x2="420.00" y2="155.00" stroke="#30363D" stroke-width="1" />
+      <text x="420.00" y="145.00" text-anchor="middle" fill="#F0F6FC" font-size="14" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">N</text>
+      <line x1="437.22" y1="373.43" x2="519.50" y2="174.79" stroke="#30363D" stroke-width="1" />
+      <text x="524.86" y="165.86" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">NNE</text>
+      <line x1="451.82" y1="383.18" x2="603.85" y2="231.15" stroke="#30363D" stroke-width="1" />
+      <text x="613.75" y="225.25" text-anchor="middle" fill="#58A6FF" font-size="11" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">NE</text>
+      <line x1="461.57" y1="397.78" x2="660.21" y2="315.50" stroke="#30363D" stroke-width="1" />
+      <text x="673.14" y="314.14" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">ENE</text>
+      <line x1="465.00" y1="415.00" x2="680.00" y2="415.00" stroke="#30363D" stroke-width="1" />
+      <text x="694.00" y="419.00" text-anchor="middle" fill="#F0F6FC" font-size="14" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">E</text>
+      <line x1="461.57" y1="432.22" x2="660.21" y2="514.50" stroke="#30363D" stroke-width="1" />
+      <text x="673.14" y="523.86" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">ESE</text>
+      <line x1="451.82" y1="446.82" x2="603.85" y2="598.85" stroke="#30363D" stroke-width="1" />
+      <text x="613.75" y="612.75" text-anchor="middle" fill="#58A6FF" font-size="11" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">SE</text>
+      <line x1="437.22" y1="456.57" x2="519.50" y2="655.21" stroke="#30363D" stroke-width="1" />
+      <text x="524.86" y="672.14" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">SSE</text>
+      <line x1="420.00" y1="460.00" x2="420.00" y2="675.00" stroke="#30363D" stroke-width="1" />
+      <text x="420.00" y="693.00" text-anchor="middle" fill="#F0F6FC" font-size="14" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">S</text>
+      <line x1="402.78" y1="456.57" x2="320.50" y2="655.21" stroke="#30363D" stroke-width="1" />
+      <text x="315.14" y="672.14" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">SSW</text>
+      <line x1="388.18" y1="446.82" x2="236.15" y2="598.85" stroke="#30363D" stroke-width="1" />
+      <text x="226.25" y="612.75" text-anchor="middle" fill="#58A6FF" font-size="11" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">SW</text>
+      <line x1="378.43" y1="432.22" x2="179.79" y2="514.50" stroke="#30363D" stroke-width="1" />
+      <text x="166.86" y="523.86" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">WSW</text>
+      <line x1="375.00" y1="415.00" x2="160.00" y2="415.00" stroke="#30363D" stroke-width="1" />
+      <text x="146.00" y="419.00" text-anchor="middle" fill="#F0F6FC" font-size="14" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">W</text>
+      <line x1="378.43" y1="397.78" x2="179.79" y2="315.50" stroke="#30363D" stroke-width="1" />
+      <text x="166.86" y="314.14" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">WNW</text>
+      <line x1="388.18" y1="383.18" x2="236.15" y2="231.15" stroke="#30363D" stroke-width="1" />
+      <text x="226.25" y="225.25" text-anchor="middle" fill="#58A6FF" font-size="11" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">NW</text>
+      <line x1="402.78" y1="373.43" x2="320.50" y2="174.79" stroke="#30363D" stroke-width="1" />
+      <text x="315.14" y="165.86" text-anchor="middle" fill="#8B949E" font-size="9" font-weight="normal" font-family="system-ui, -apple-system, sans-serif">NNW</text>
+    </g>
+    <!-- Stacked Sector Wedges -->
+    <g id="stacked-sector-wedges">
+      <path id="sector-N-bin-0" d="M 411.61 370.79 L 411.15 368.37 A 47.46 47.46 0 0 1 428.85 368.37 L 428.39 370.79 A 45.00 45.00 0 0 0 411.61 370.79 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>N: Calm (&lt;1 m/s) = 0.3%</title></path>
+      <path id="sector-N-bin-1" d="M 411.15 368.37 L 408.70 355.48 A 60.58 60.58 0 0 1 431.30 355.48 L 428.85 368.37 A 47.46 47.46 0 0 0 411.15 368.37 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>N: Light (1-5 m/s) = 1.6%</title></path>
+      <path id="sector-N-bin-2" d="M 408.70 355.48 L 407.32 348.23 A 67.96 67.96 0 0 1 432.68 348.23 L 431.30 355.48 A 60.58 60.58 0 0 0 408.70 355.48 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>N: Moderate (5-10 m/s) = 0.9%</title></path>
+      <path id="sector-N-bin-3" d="M 407.32 348.23 L 407.02 346.62 A 69.60 69.60 0 0 1 432.98 346.62 L 432.68 348.23 A 67.96 67.96 0 0 0 407.32 348.23 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>N: Fresh (10-15 m/s) = 0.2%</title></path>
+      <path id="sector-NNE-bin-0" d="M 429.16 370.94 L 429.83 367.73 A 48.28 48.28 0 0 1 446.47 374.62 L 444.67 377.37 A 45.00 45.00 0 0 0 429.16 370.94 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNE: Calm (&lt;1 m/s) = 0.4%</title></path>
+      <path id="sector-NNE-bin-1" d="M 429.83 367.73 L 433.67 349.27 A 67.14 67.14 0 0 1 456.81 358.85 L 446.47 374.62 A 48.28 48.28 0 0 0 429.83 367.73 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNE: Light (1-5 m/s) = 2.3%</title></path>
+      <path id="sector-NNE-bin-2" d="M 433.67 349.27 L 436.01 338.03 A 78.62 78.62 0 0 1 463.11 349.25 L 456.81 358.85 A 67.14 67.14 0 0 0 433.67 349.27 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNE: Moderate (5-10 m/s) = 1.4%</title></path>
+      <path id="sector-NNE-bin-3" d="M 436.01 338.03 L 436.68 334.82 A 81.90 81.90 0 0 1 464.91 346.51 L 463.11 349.25 A 78.62 78.62 0 0 0 436.01 338.03 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNE: Fresh (10-15 m/s) = 0.4%</title></path>
+      <path id="sector-NE-bin-0" d="M 445.33 377.80 L 447.63 374.41 A 49.10 49.10 0 0 1 460.59 387.37 L 457.20 389.67 A 45.00 45.00 0 0 0 445.33 377.80 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NE: Calm (&lt;1 m/s) = 0.5%</title></path>
+      <path id="sector-NE-bin-1" d="M 447.63 374.41 L 461.48 354.08 A 73.70 73.70 0 0 1 480.92 373.52 L 460.59 387.37 A 49.10 49.10 0 0 0 447.63 374.41 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NE: Light (1-5 m/s) = 3.0%</title></path>
+      <path id="sector-NE-bin-2" d="M 461.48 354.08 L 473.02 337.14 A 94.20 94.20 0 0 1 497.86 361.98 L 480.92 373.52 A 73.70 73.70 0 0 0 461.48 354.08 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NE: Moderate (5-10 m/s) = 2.5%</title></path>
+      <path id="sector-NE-bin-3" d="M 473.02 337.14 L 475.32 333.75 A 98.30 98.30 0 0 1 501.25 359.68 L 497.86 361.98 A 94.20 94.20 0 0 0 473.02 337.14 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NE: Fresh (10-15 m/s) = 0.5%</title></path>
+      <path id="sector-ENE-bin-0" d="M 457.63 390.33 L 460.38 388.53 A 48.28 48.28 0 0 1 467.27 405.17 L 464.06 405.84 A 45.00 45.00 0 0 0 457.63 390.33 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ENE: Calm (&lt;1 m/s) = 0.4%</title></path>
+      <path id="sector-ENE-bin-1" d="M 460.38 388.53 L 476.15 378.19 A 67.14 67.14 0 0 1 485.73 401.33 L 467.27 405.17 A 48.28 48.28 0 0 0 460.38 388.53 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ENE: Light (1-5 m/s) = 2.3%</title></path>
+      <path id="sector-ENE-bin-2" d="M 476.15 378.19 L 485.75 371.89 A 78.62 78.62 0 0 1 496.97 398.99 L 485.73 401.33 A 67.14 67.14 0 0 0 476.15 378.19 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ENE: Moderate (5-10 m/s) = 1.4%</title></path>
+      <path id="sector-ENE-bin-3" d="M 485.75 371.89 L 488.49 370.09 A 81.90 81.90 0 0 1 500.18 398.32 L 496.97 398.99 A 78.62 78.62 0 0 0 485.75 371.89 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ENE: Fresh (10-15 m/s) = 0.4%</title></path>
+      <path id="sector-E-bin-0" d="M 464.21 406.61 L 466.63 406.15 A 47.46 47.46 0 0 1 466.63 423.85 L 464.21 423.39 A 45.00 45.00 0 0 0 464.21 406.61 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>E: Calm (&lt;1 m/s) = 0.3%</title></path>
+      <path id="sector-E-bin-1" d="M 466.63 406.15 L 479.52 403.70 A 60.58 60.58 0 0 1 479.52 426.30 L 466.63 423.85 A 47.46 47.46 0 0 0 466.63 406.15 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>E: Light (1-5 m/s) = 1.6%</title></path>
+      <path id="sector-E-bin-2" d="M 479.52 403.70 L 486.77 402.32 A 67.96 67.96 0 0 1 486.77 427.68 L 479.52 426.30 A 60.58 60.58 0 0 0 479.52 403.70 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>E: Moderate (5-10 m/s) = 0.9%</title></path>
+      <path id="sector-E-bin-3" d="M 486.77 402.32 L 488.38 402.02 A 69.60 69.60 0 0 1 488.38 427.98 L 486.77 427.68 A 67.96 67.96 0 0 0 486.77 402.32 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>E: Fresh (10-15 m/s) = 0.2%</title></path>
+      <path id="sector-ESE-bin-0" d="M 464.06 424.16 L 467.27 424.83 A 48.28 48.28 0 0 1 460.38 441.47 L 457.63 439.67 A 45.00 45.00 0 0 0 464.06 424.16 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ESE: Calm (&lt;1 m/s) = 0.4%</title></path>
+      <path id="sector-ESE-bin-1" d="M 467.27 424.83 L 479.31 427.34 A 60.58 60.58 0 0 1 470.66 448.22 L 460.38 441.47 A 48.28 48.28 0 0 0 467.27 424.83 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ESE: Light (1-5 m/s) = 1.5%</title></path>
+      <path id="sector-ESE-bin-2" d="M 479.31 427.34 L 486.54 428.84 A 67.96 67.96 0 0 1 476.83 452.26 L 470.66 448.22 A 60.58 60.58 0 0 0 479.31 427.34 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ESE: Moderate (5-10 m/s) = 0.9%</title></path>
+      <path id="sector-ESE-bin-3" d="M 486.54 428.84 L 488.14 429.17 A 69.60 69.60 0 0 1 478.21 453.16 L 476.83 452.26 A 67.96 67.96 0 0 0 486.54 428.84 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>ESE: Fresh (10-15 m/s) = 0.2%</title></path>
+      <path id="sector-SE-bin-0" d="M 457.20 440.33 L 459.23 441.71 A 47.46 47.46 0 0 1 446.71 454.23 L 445.33 452.20 A 45.00 45.00 0 0 0 457.20 440.33 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SE: Calm (&lt;1 m/s) = 0.3%</title></path>
+      <path id="sector-SE-bin-1" d="M 459.23 441.71 L 470.07 449.09 A 60.58 60.58 0 0 1 454.09 465.07 L 446.71 454.23 A 47.46 47.46 0 0 0 459.23 441.71 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SE: Light (1-5 m/s) = 1.6%</title></path>
+      <path id="sector-SE-bin-2" d="M 470.07 449.09 L 476.18 453.25 A 67.96 67.96 0 0 1 458.25 471.18 L 454.09 465.07 A 60.58 60.58 0 0 0 470.07 449.09 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SE: Moderate (5-10 m/s) = 0.9%</title></path>
+      <path id="sector-SE-bin-3" d="M 476.18 453.25 L 477.53 454.17 A 69.60 69.60 0 0 1 459.17 472.53 L 458.25 471.18 A 67.96 67.96 0 0 0 476.18 453.25 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SE: Fresh (10-15 m/s) = 0.2%</title></path>
+      <path id="sector-SSE-bin-0" d="M 444.67 452.63 L 446.47 455.38 A 48.28 48.28 0 0 1 429.83 462.27 L 429.16 459.06 A 45.00 45.00 0 0 0 444.67 452.63 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSE: Calm (&lt;1 m/s) = 0.4%</title></path>
+      <path id="sector-SSE-bin-1" d="M 446.47 455.38 L 454.56 467.72 A 63.04 63.04 0 0 1 432.84 476.72 L 429.83 462.27 A 48.28 48.28 0 0 0 446.47 455.38 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSE: Light (1-5 m/s) = 1.8%</title></path>
+      <path id="sector-SSE-bin-2" d="M 454.56 467.72 L 459.51 475.26 A 72.06 72.06 0 0 1 434.67 485.55 L 432.84 476.72 A 63.04 63.04 0 0 0 454.56 467.72 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSE: Moderate (5-10 m/s) = 1.1%</title></path>
+      <path id="sector-SSE-bin-3" d="M 459.51 475.26 L 460.41 476.63 A 73.70 73.70 0 0 1 435.01 487.16 L 434.67 485.55 A 72.06 72.06 0 0 0 459.51 475.26 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSE: Fresh (10-15 m/s) = 0.2%</title></path>
+      <path id="sector-S-bin-0" d="M 428.39 459.21 L 429.16 463.24 A 49.10 49.10 0 0 1 410.84 463.24 L 411.61 459.21 A 45.00 45.00 0 0 0 428.39 459.21 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>S: Calm (&lt;1 m/s) = 0.5%</title></path>
+      <path id="sector-S-bin-1" d="M 429.16 463.24 L 432.98 483.38 A 69.60 69.60 0 0 1 407.02 483.38 L 410.84 463.24 A 49.10 49.10 0 0 0 429.16 463.24 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>S: Light (1-5 m/s) = 2.5%</title></path>
+      <path id="sector-S-bin-2" d="M 432.98 483.38 L 437.57 507.55 A 94.20 94.20 0 0 1 402.43 507.55 L 407.02 483.38 A 69.60 69.60 0 0 0 432.98 483.38 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>S: Moderate (5-10 m/s) = 3.0%</title></path>
+      <path id="sector-S-bin-3" d="M 437.57 507.55 L 439.10 515.60 A 102.40 102.40 0 0 1 400.90 515.60 L 402.43 507.55 A 94.20 94.20 0 0 0 437.57 507.55 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>S: Fresh (10-15 m/s) = 1.0%</title></path>
+      <path id="sector-SSW-bin-0" d="M 410.84 459.06 L 410.00 463.07 A 49.10 49.10 0 0 1 393.08 456.06 L 395.33 452.63 A 45.00 45.00 0 0 0 410.84 459.06 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSW: Calm (&lt;1 m/s) = 0.5%</title></path>
+      <path id="sector-SSW-bin-1" d="M 410.00 463.07 L 404.99 487.16 A 73.70 73.70 0 0 1 379.59 476.63 L 393.08 456.06 A 49.10 49.10 0 0 0 410.00 463.07 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSW: Light (1-5 m/s) = 3.0%</title></path>
+      <path id="sector-SSW-bin-2" d="M 404.99 487.16 L 398.31 519.27 A 106.50 106.50 0 0 1 361.61 504.06 L 379.59 476.63 A 73.70 73.70 0 0 0 404.99 487.16 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSW: Moderate (5-10 m/s) = 4.0%</title></path>
+      <path id="sector-SSW-bin-3" d="M 398.31 519.27 L 395.81 531.31 A 118.80 118.80 0 0 1 354.86 514.35 L 361.61 504.06 A 106.50 106.50 0 0 0 398.31 519.27 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSW: Fresh (10-15 m/s) = 1.5%</title></path>
+      <path id="sector-SSW-bin-4" d="M 395.81 531.31 L 394.97 535.32 A 122.90 122.90 0 0 1 352.61 517.78 L 354.86 514.35 A 118.80 118.80 0 0 0 395.81 531.31 Z" fill="#EF4444" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>SSW: Strong (&gt;15 m/s) = 0.5%</title></path>
+      <path id="sector-SW-bin-0" d="M 394.67 452.20 L 392.37 455.59 A 49.10 49.10 0 0 1 379.41 442.63 L 382.80 440.33 A 45.00 45.00 0 0 0 394.67 452.20 Z" fill="#38BDF8" fill-opacity="0.95" stroke="#161B22" stroke-width="0.7"><title>SW: Calm (&lt;1 m/s) = 0.5%</title></path>
+      <path id="sector-SW-bin-1" d="M 392.37 455.59 L 373.91 482.70 A 81.90 81.90 0 0 1 352.30 461.09 L 379.41 442.63 A 49.10 49.10 0 0 0 392.37 455.59 Z" fill="#10B981" fill-opacity="0.95" stroke="#161B22" stroke-width="0.7"><title>SW: Light (1-5 m/s) = 4.0%</title></path>
+      <path id="sector-SW-bin-2" d="M 373.91 482.70 L 346.22 523.37 A 131.10 131.10 0 0 1 311.63 488.78 L 352.30 461.09 A 81.90 81.90 0 0 0 373.91 482.70 Z" fill="#F59E0B" fill-opacity="0.95" stroke="#161B22" stroke-width="0.7"><title>SW: Moderate (5-10 m/s) = 6.0%</title></path>
+      <path id="sector-SW-bin-3" d="M 346.22 523.37 L 330.06 547.09 A 159.80 159.80 0 0 1 287.91 504.94 L 311.63 488.78 A 131.10 131.10 0 0 0 346.22 523.37 Z" fill="#F97316" fill-opacity="0.95" stroke="#161B22" stroke-width="0.7"><title>SW: Fresh (10-15 m/s) = 3.5%</title></path>
+      <path id="sector-SW-bin-4" d="M 330.06 547.09 L 323.14 557.26 A 172.10 172.10 0 0 1 277.74 511.86 L 287.91 504.94 A 159.80 159.80 0 0 0 330.06 547.09 Z" fill="#EF4444" fill-opacity="0.95" stroke="#161B22" stroke-width="0.7"><title>SW: Strong (&gt;15 m/s) = 1.5%</title></path>
+      <path id="sector-WSW-bin-0" d="M 382.37 439.67 L 378.94 441.92 A 49.10 49.10 0 0 1 371.93 425.00 L 375.94 424.16 A 45.00 45.00 0 0 0 382.37 439.67 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WSW: Calm (&lt;1 m/s) = 0.5%</title></path>
+      <path id="sector-WSW-bin-1" d="M 378.94 441.92 L 358.37 455.41 A 73.70 73.70 0 0 1 347.84 430.01 L 371.93 425.00 A 49.10 49.10 0 0 0 378.94 441.92 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WSW: Light (1-5 m/s) = 3.0%</title></path>
+      <path id="sector-WSW-bin-2" d="M 358.37 455.41 L 334.36 471.15 A 102.40 102.40 0 0 1 319.75 435.85 L 347.84 430.01 A 73.70 73.70 0 0 0 358.37 455.41 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WSW: Moderate (5-10 m/s) = 3.5%</title></path>
+      <path id="sector-WSW-bin-3" d="M 334.36 471.15 L 324.08 477.89 A 114.70 114.70 0 0 1 307.70 438.36 L 319.75 435.85 A 102.40 102.40 0 0 0 334.36 471.15 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WSW: Fresh (10-15 m/s) = 1.5%</title></path>
+      <path id="sector-WSW-bin-4" d="M 324.08 477.89 L 320.65 480.14 A 118.80 118.80 0 0 1 303.69 439.19 L 307.70 438.36 A 114.70 114.70 0 0 0 324.08 477.89 Z" fill="#EF4444" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WSW: Strong (&gt;15 m/s) = 0.5%</title></path>
+      <path id="sector-W-bin-0" d="M 375.79 423.39 L 371.76 424.16 A 49.10 49.10 0 0 1 371.76 405.84 L 375.79 406.61 A 45.00 45.00 0 0 0 375.79 423.39 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>W: Calm (&lt;1 m/s) = 0.5%</title></path>
+      <path id="sector-W-bin-1" d="M 371.76 424.16 L 351.62 427.98 A 69.60 69.60 0 0 1 351.62 402.02 L 371.76 405.84 A 49.10 49.10 0 0 0 371.76 424.16 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>W: Light (1-5 m/s) = 2.5%</title></path>
+      <path id="sector-W-bin-2" d="M 351.62 427.98 L 327.45 432.57 A 94.20 94.20 0 0 1 327.45 397.43 L 351.62 402.02 A 69.60 69.60 0 0 0 351.62 427.98 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>W: Moderate (5-10 m/s) = 3.0%</title></path>
+      <path id="sector-W-bin-3" d="M 327.45 432.57 L 319.40 434.10 A 102.40 102.40 0 0 1 319.40 395.90 L 327.45 397.43 A 94.20 94.20 0 0 0 327.45 432.57 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>W: Fresh (10-15 m/s) = 1.0%</title></path>
+      <path id="sector-W-bin-4" d="M 319.40 434.10 L 315.37 434.86 A 106.50 106.50 0 0 1 315.37 395.14 L 319.40 395.90 A 102.40 102.40 0 0 0 319.40 434.10 Z" fill="#EF4444" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>W: Strong (&gt;15 m/s) = 0.5%</title></path>
+      <path id="sector-WNW-bin-0" d="M 375.94 405.84 L 372.73 405.17 A 48.28 48.28 0 0 1 379.62 388.53 L 382.37 390.33 A 45.00 45.00 0 0 0 375.94 405.84 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WNW: Calm (&lt;1 m/s) = 0.4%</title></path>
+      <path id="sector-WNW-bin-1" d="M 372.73 405.17 L 358.28 402.16 A 63.04 63.04 0 0 1 367.28 380.44 L 379.62 388.53 A 48.28 48.28 0 0 0 372.73 405.17 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WNW: Light (1-5 m/s) = 1.8%</title></path>
+      <path id="sector-WNW-bin-2" d="M 358.28 402.16 L 347.04 399.82 A 74.52 74.52 0 0 1 357.68 374.14 L 367.28 380.44 A 63.04 63.04 0 0 0 358.28 402.16 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WNW: Moderate (5-10 m/s) = 1.4%</title></path>
+      <path id="sector-WNW-bin-3" d="M 347.04 399.82 L 343.83 399.16 A 77.80 77.80 0 0 1 354.94 372.34 L 357.68 374.14 A 74.52 74.52 0 0 0 347.04 399.82 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>WNW: Fresh (10-15 m/s) = 0.4%</title></path>
+      <path id="sector-NW-bin-0" d="M 382.80 389.67 L 379.41 387.37 A 49.10 49.10 0 0 1 392.37 374.41 L 394.67 377.80 A 45.00 45.00 0 0 0 382.80 389.67 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NW: Calm (&lt;1 m/s) = 0.5%</title></path>
+      <path id="sector-NW-bin-1" d="M 379.41 387.37 L 365.86 378.14 A 65.50 65.50 0 0 1 383.14 360.86 L 392.37 374.41 A 49.10 49.10 0 0 0 379.41 387.37 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NW: Light (1-5 m/s) = 2.0%</title></path>
+      <path id="sector-NW-bin-2" d="M 365.86 378.14 L 355.69 371.21 A 77.80 77.80 0 0 1 376.21 350.69 L 383.14 360.86 A 65.50 65.50 0 0 0 365.86 378.14 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NW: Moderate (5-10 m/s) = 1.5%</title></path>
+      <path id="sector-NW-bin-3" d="M 355.69 371.21 L 352.30 368.91 A 81.90 81.90 0 0 1 373.91 347.30 L 376.21 350.69 A 77.80 77.80 0 0 0 355.69 371.21 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NW: Fresh (10-15 m/s) = 0.5%</title></path>
+      <path id="sector-NNW-bin-0" d="M 395.33 377.37 L 393.53 374.62 A 48.28 48.28 0 0 1 410.17 367.73 L 410.84 370.94 A 45.00 45.00 0 0 0 395.33 377.37 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNW: Calm (&lt;1 m/s) = 0.4%</title></path>
+      <path id="sector-NNW-bin-1" d="M 393.53 374.62 L 385.44 362.28 A 63.04 63.04 0 0 1 407.16 353.28 L 410.17 367.73 A 48.28 48.28 0 0 0 393.53 374.62 Z" fill="#10B981" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNW: Light (1-5 m/s) = 1.8%</title></path>
+      <path id="sector-NNW-bin-2" d="M 385.44 362.28 L 380.49 354.74 A 72.06 72.06 0 0 1 405.33 344.45 L 407.16 353.28 A 63.04 63.04 0 0 0 385.44 362.28 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNW: Moderate (5-10 m/s) = 1.1%</title></path>
+      <path id="sector-NNW-bin-3" d="M 380.49 354.74 L 379.59 353.37 A 73.70 73.70 0 0 1 404.99 342.84 L 405.33 344.45 A 72.06 72.06 0 0 0 380.49 354.74 Z" fill="#F97316" fill-opacity="0.85" stroke="#161B22" stroke-width="0.7"><title>NNW: Fresh (10-15 m/s) = 0.2%</title></path>
+    </g>
+    <!-- Gaussian Plume Dispersion Hazard Corridor -->
+    <g id="gaussian-plume-corridor">
+      <path id="plume-hazard-corridor-boundary" d="M 454.65 386.01 L 471.88 377.57 L 488.25 368.27 L 504.34 358.70 L 520.28 348.96 L 536.10 339.11 L 551.83 329.17 L 567.49 319.16 L 583.09 309.09 Q 558.74 276.26 525.91 251.91 L 515.84 267.51 L 505.83 283.17 L 495.89 298.90 L 486.04 314.72 L 476.30 330.66 L 466.73 346.75 L 457.43 363.12 L 448.99 380.35 Z" fill="url(#plume-hazard-grad)" stroke="#EF4444" stroke-width="1.8" stroke-dasharray="5,3"><title>Downwind Toxic Footprint: 850 m</title></path>
+      <path id="plume-toxic-core" d="M 454.65 386.01 L 461.94 383.04 L 468.81 379.64 L 475.55 376.11 L 482.21 372.50 L 488.81 368.83 L 495.37 365.12 L 501.89 361.38 L 508.38 357.60 Q 497.13 337.87 477.40 326.62 L 473.62 333.11 L 469.88 339.63 L 466.17 346.19 L 462.50 352.79 L 458.89 359.45 L 455.36 366.19 L 451.96 373.06 L 448.99 380.35 Z" fill="#DC2626" fill-opacity="0.6" stroke="#F0F6FC" stroke-width="1.2"><title>IDLH Core Concentration Zone</title></path>
+      <line id="plume-centerline" x1="451.82" y1="383.18" x2="554.50" y2="280.50" stroke="#D29922" stroke-width="2.2" marker-end="url(#plume-arrowhead)" />
+      <g transform="translate(524.4, 260.6)">        <rect x="0" y="0" width="80" height="20" rx="4" fill="#05080C" stroke="#D29922" stroke-width="1" />        <text x="40" y="14" text-anchor="middle" fill="#F0F6FC" font-size="9" font-weight="700" font-family="monospace">850m PG-4</text>      </g>
+    </g>
+    <!-- Central Calm Hub -->
+    <g id="central-calm-hub">
+      <circle cx="420.0" cy="415.0" r="45.0" fill="#161B22" stroke="#30363D" stroke-width="2" />
+      <text x="420.0" y="412.0" text-anchor="middle" fill="#F0F6FC" font-size="14" font-weight="700" font-family="monospace">8.5%</text>
+      <text x="420.0" y="428.0" text-anchor="middle" fill="#38BDF8" font-size="9" font-weight="600" font-family="system-ui">CALM</text>
+    </g>
+  </g>
+  <!-- Beaufort Scale Telemetry HUD Card -->
+  <g id="beaufort-scale-hud" transform="translate(760, 145)">
+    <rect x="0" y="0" width="400" height="175" rx="8" fill="url(#card-surface-grad)" stroke="#30363D" stroke-width="1.2" />
+    <rect x="12" y="10" width="220" height="24" rx="4" fill="#05080C" stroke="#30363D" />    <text x="22" y="26" fill="#F0F6FC" font-size="11" font-weight="700" font-family="system-ui">BEAUFORT SCALE TELEMETRY</text>
+    <rect x="290" y="10" width="98" height="24" rx="4" fill="#05080C" stroke="#238636" stroke-width="1.2" />    <text x="339" y="26" text-anchor="middle" fill="#238636" font-size="11" font-weight="700" font-family="monospace">FORCE 4</text>
+    <text x="20" y="60" fill="#8B949E" font-size="12" font-family="system-ui">Beaufort Condition:</text>    <text x="380" y="60" text-anchor="end" fill="#F0F6FC" font-size="12" font-weight="600" font-family="system-ui">Moderate Breeze</text>
+    <text x="20" y="86" fill="#8B949E" font-size="12" font-family="system-ui">Average Wind Speed (%R1531):</text>    <text x="380" y="86" text-anchor="end" fill="#F0F6FC" font-size="12" font-weight="700" font-family="monospace">6.5 m/s (12.6 kts)</text>
+    <text x="20" y="112" fill="#8B949E" font-size="12" font-family="system-ui">Peak Gust Speed (%R1532):</text>    <text x="380" y="112" text-anchor="end" fill="#F0F6FC" font-size="12" font-weight="700" font-family="monospace">14.2 m/s (27.6 kts)</text>
+    <text x="20" y="138" fill="#8B949E" font-size="12" font-family="system-ui">Prevailing Vector (%R1530):</text>    <text x="380" y="138" text-anchor="end" fill="#58A6FF" font-size="12" font-weight="700" font-family="monospace">225° (SW)</text>
+    <text x="20" y="162" fill="#8B949E" font-size="12" font-family="system-ui">Calm Observations (%R1533):</text>    <text x="380" y="162" text-anchor="end" fill="#38BDF8" font-size="12" font-weight="700" font-family="monospace">8.5 % total</text>
+  </g>
+  <!-- Environmental Hazard & Toxic Dispersion HUD Card -->
+  <g id="toxic-corridor-hud" transform="translate(760, 332)">
+    <rect x="0" y="0" width="400" height="175" rx="8" fill="url(#card-surface-grad)" stroke="#30363D" stroke-width="1.2" />
+    <rect x="12" y="10" width="235" height="24" rx="4" fill="#05080C" stroke="#30363D" />    <text x="22" y="26" fill="#F0F6FC" font-size="11" font-weight="700" font-family="system-ui">TOXIC PLUME DISPERSION</text>
+    <rect x="275" y="10" width="112" height="24" rx="4" fill="#05080C" stroke="#238636" stroke-width="1.2" />    <text x="331" y="26" text-anchor="middle" fill="#238636" font-size="10" font-weight="700" font-family="monospace">%M358: FALSE</text>
+    <text x="20" y="60" fill="#8B949E" font-size="12" font-family="system-ui">Stability Class (%R1535):</text>    <text x="380" y="60" text-anchor="end" fill="#F0F6FC" font-size="12" font-weight="600" font-family="system-ui">Class D (Neutral)</text>
+    <text x="20" y="86" fill="#8B949E" font-size="12" font-family="system-ui">Dispersion Distance (%R1534):</text>    <text x="380" y="86" text-anchor="end" fill="#238636" font-size="12" font-weight="700" font-family="monospace">850 m (Limit: 1000m)</text>
+    <text x="20" y="112" fill="#8B949E" font-size="12" font-family="system-ui">Downwind Azimuth (%R1536):</text>    <text x="380" y="112" text-anchor="end" fill="#D29922" font-size="12" font-weight="700" font-family="monospace">45° (NE)</text>
+    <text x="20" y="138" fill="#8B949E" font-size="12" font-family="system-ui">Lateral Spread Angle:</text>    <text x="380" y="138" text-anchor="end" fill="#F0F6FC" font-size="12" font-weight="700" font-family="monospace">±12.0° (Pasquill-Gifford)</text>
+    <text x="20" y="162" fill="#8B949E" font-size="12" font-family="system-ui">Dispersion Safety State:</text>    <text x="380" y="162" text-anchor="end" fill="#238636" font-size="12" font-weight="700" font-family="monospace">NORMAL: WITHIN BOUNDARY</text>
+  </g>
+  <!-- Horner OCS SCADA Memory Space HUD Card -->
+  <g id="horner-memory-hud" transform="translate(760, 519)">
+    <rect x="0" y="0" width="400" height="206" rx="8" fill="url(#card-surface-grad)" stroke="#30363D" stroke-width="1.2" />
+    <rect x="12" y="10" width="240" height="24" rx="4" fill="#05080C" stroke="#30363D" />    <text x="22" y="26" fill="#F0F6FC" font-size="11" font-weight="700" font-family="system-ui">HORNER OCS REGISTER MAPPINGS</text>
+    <rect x="290" y="10" width="98" height="24" rx="4" fill="#05080C" stroke="#30363D" />    <text x="339" y="26" text-anchor="middle" fill="#58A6FF" font-size="10" font-weight="700" font-family="monospace">IEC 61131-3</text>
+    <text x="20" y="52" fill="#8B949E" font-size="10.5" font-family="monospace">%R1530 PrevailingWindDirectionDeg:</text>    <text x="380" y="52" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">225°</text>
+    <text x="20" y="70" fill="#8B949E" font-size="10.5" font-family="monospace">%R1531 AverageWindSpeedMpsScaled:</text>    <text x="380" y="70" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">65</text>
+    <text x="20" y="88" fill="#8B949E" font-size="10.5" font-family="monospace">%R1532 PeakGustSpeedMpsScaled:</text>    <text x="380" y="88" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">142</text>
+    <text x="20" y="106" fill="#8B949E" font-size="10.5" font-family="monospace">%R1533 CalmPeriodPercentageScaled:</text>    <text x="380" y="106" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">85</text>
+    <text x="20" y="124" fill="#8B949E" font-size="10.5" font-family="monospace">%R1534 PlumeDispersionDistanceMeters:</text>    <text x="380" y="124" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">850 m</text>
+    <text x="20" y="142" fill="#8B949E" font-size="10.5" font-family="monospace">%R1535 AtmosphericStabilityClass:</text>    <text x="380" y="142" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">4</text>
+    <text x="20" y="160" fill="#8B949E" font-size="10.5" font-family="monospace">%R1536 ToxicCorridorSectorAngleDeg:</text>    <text x="380" y="160" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">45°</text>
+    <text x="20" y="178" fill="#8B949E" font-size="10.5" font-family="monospace">%R1537 DiagnosticStatusCode:</text>    <text x="380" y="178" text-anchor="end" fill="#F0F6FC" font-size="10.5" font-weight="700" font-family="monospace">0x0000</text>
+  </g>
+  <!-- Wind Speed Frequency Bins Legend -->
+  <g id="speed-bins-legend" transform="translate(40, 695)">
+    <rect x="0" y="0" width="700" height="36" rx="6" fill="#05080C" stroke="#30363D" stroke-width="1" />
+    <rect x="16" y="11" width="14" height="14" rx="2" fill="#38BDF8" />    <text x="36" y="22" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">Calm (&lt;1 m/s)</text>
+    <rect x="151" y="11" width="14" height="14" rx="2" fill="#10B981" />    <text x="171" y="22" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">Light (1-5 m/s)</text>
+    <rect x="286" y="11" width="14" height="14" rx="2" fill="#F59E0B" />    <text x="306" y="22" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">Moderate (5-10 m/s)</text>
+    <rect x="421" y="11" width="14" height="14" rx="2" fill="#F97316" />    <text x="441" y="22" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">Fresh (10-15 m/s)</text>
+    <rect x="556" y="11" width="14" height="14" rx="2" fill="#EF4444" />    <text x="576" y="22" fill="#F0F6FC" font-size="10" font-weight="600" font-family="system-ui">Strong (&gt;15 m/s)</text>
+  </g>
+</svg>

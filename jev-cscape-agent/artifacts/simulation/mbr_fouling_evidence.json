@@ -1,0 +1,82 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Membrane Bioreactor (MBR) Permeate Flux & Cake Fouling ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W125",
+    "gate": "Gate G7 / Gate G4",
+    "component": "Industrial MBR Permeate Flux & Cake Fouling ODE Simulator",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU validated; %R860..%R867 and %M200..%M202 bound into AST."
+      },
+      {
+        "stage": 2,
+        "check": "Resistance_In_Series_And_Darcy_Viscosity",
+        "passed": true,
+        "details": "Darcy's law & Vogel viscosity verified: mu(10C)=1.300e-03 > mu(20C)=1.002e-03 > mu(30C)=7.972e-04 Pa*s; TMP doubles with doubled flux (TMP1=15.30 kPa, TMP2=30.61 kPa)."
+      },
+      {
+        "stage": 3,
+        "check": "Dynamic_Cake_Deposition_And_Air_Scour_Detachment",
+        "passed": true,
+        "details": "Cake kinetics verified: r_dep=1.11e+10 m^-1/s scales linearly with MLSS, backwash enhances detachment (5.50e+10 vs 5.00e+09 m^-1/s)."
+      },
+      {
+        "stage": 4,
+        "check": "Irreversible_Pore_Blocking_Kinetics",
+        "passed": true,
+        "details": "Pore blocking asymptotic behavior verified: r_pore=1.81e+00 m^-1/s approaches zero at R_p,max (0.00e+00 m^-1/s)."
+      },
+      {
+        "stage": 5,
+        "check": "High_Order_RK4_With_Adaptive_Substepping",
+        "passed": true,
+        "details": "RK4 integration stable: J=25.0 LMH, Rc=1.01e+12 m^-1, TMP=15.74 kPa, MLSS=8.00 g/L, DO=2.64 mg/L."
+      },
+      {
+        "stage": 6,
+        "check": "Stoichiometric_Solids_Mass_Conservation_Residual",
+        "passed": true,
+        "details": "Mass conservation verified: solids residual = 8.6736e-19 kg/s (< 1e-10 kg/s)."
+      },
+      {
+        "stage": 7,
+        "check": "High_TMP_Alarm_And_Critical_Fouling_Trip",
+        "passed": true,
+        "details": "Safety interlocks verified: %M200 warning alarm (0x9601)=True, %M201 critical fouling trip (0x9602, pump permissive disabled)=True."
+      },
+      {
+        "stage": 8,
+        "check": "Aeration_Loss_Trip_And_Automated_Backwash",
+        "passed": true,
+        "details": "Aeration & backwash trips verified: %M202 backwash cmd=True, %M201 aeration loss trip (0x9603, DO=0.35 mg/L)=True."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_Anti_Ladder_Rejection",
+        "passed": true,
+        "details": "Registers synced: %R860=0x000F, %R861=250, %R862=178, %R863=100, %R864=20, %R865=80, %R866=254, %R867=0; Anti-ladder rejection asserted."
+      }
+    ],
+    "metrics": {
+      "permeate_flux_lmh": 25.0,
+      "r_cake_m_inv": 1003051695404.8868,
+      "r_pore_m_inv": 200000000000.9027,
+      "tmp_kpa": 17.82326315385055,
+      "c_mlss_g_l": 7.999873573253867,
+      "do_mg_l": 2.5366752999924946,
+      "mass_balance_residual_kg_s": 0.0
+    },
+    "register_map": {
+      "analog_registers": "%R860..%R867",
+      "discrete_coils": "%M200..%M202"
+    },
+    "timestamp": "2026-10-04T18:50:54Z"
+  }
+}

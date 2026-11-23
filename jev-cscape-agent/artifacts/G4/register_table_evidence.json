@@ -1,0 +1,52 @@
+{
+  "gate": "G4",
+  "work_package": "W019",
+  "status": "success",
+  "mode": "offline/mock",
+  "classification": "TESTED_MOCK [offline/DEV only]",
+  "timestamp_utc": "2026-10-02T06:28:00.000000+00:00",
+  "hardware_lockout": "FAIL_CLOSED_ACTIVE",
+  "straton_quarantine": "CERTIFIED_ISOLATED",
+  "channels_supported": {
+    "total_channel_types": 14,
+    "channels": {
+      "%I": { "name": "Digital Inputs", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 2048, "access": "RO", "description": "Physical digital input contact states." },
+      "%Q": { "name": "Digital Outputs", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 2048, "access": "RW", "description": "Physical digital output coil states." },
+      "%M": { "name": "Internal Markers", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 2048, "access": "RW", "description": "Internal Boolean memory bits." },
+      "%D": { "name": "Display Bits", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 2048, "access": "RW", "description": "Screen navigation and active bits." },
+      "%K": { "name": "Keypad Bits", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 128, "access": "RO", "description": "Function key states." },
+      "%S": { "name": "System Bits", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 16, "access": "RO", "description": "System status bits (%S1..%S9)." },
+      "%AI": { "name": "Analog Inputs", "element_type": "INT", "bit_width": 16, "range_min": 1, "range_max": 512, "access": "RO", "description": "Physical analog input raw counts." },
+      "%AQ": { "name": "Analog Outputs", "element_type": "INT", "bit_width": 16, "range_min": 1, "range_max": 512, "access": "RW", "description": "Physical analog output words." },
+      "%R": { "name": "General Holding Registers", "element_type": "INT", "bit_width": 16, "range_min": 1, "range_max": 9999, "access": "RW", "description": "16-bit word storage." },
+      "%SR": { "name": "System Registers", "element_type": "INT", "bit_width": 16, "range_min": 1, "range_max": 256, "access": "RO", "description": "Diagnostic system registers." },
+      "%IG": { "name": "Global Digital Inputs", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 2048, "access": "RO", "description": "Network digital inputs (CsCAN)." },
+      "%QG": { "name": "Global Digital Outputs", "element_type": "BOOL", "bit_width": 1, "range_min": 1, "range_max": 2048, "access": "RW", "description": "Network digital outputs (CsCAN)." },
+      "%AIG": { "name": "Global Analog Inputs", "element_type": "INT", "bit_width": 16, "range_min": 1, "range_max": 512, "access": "RO", "description": "Network analog inputs (CsCAN)." },
+      "%AQG": { "name": "Global Analog Outputs", "element_type": "INT", "bit_width": 16, "range_min": 1, "range_max": 512, "access": "RW", "description": "Network analog outputs (CsCAN)." }
+    }
+  },
+  "capabilities_verified": {
+    "bit_addressing": true,
+    "word_addressing": true,
+    "bit_slicing": true,
+    "multi_word_32bit_dint_udint_real": true,
+    "signed_16bit_clamping": true,
+    "read_only_protection": true,
+    "boundary_checks": true,
+    "snapshot_export": true,
+    "memory_diffing": true
+  },
+  "test_summary": {
+    "test_file": "tests/test_register_table.py",
+    "total_assertions": 24,
+    "status": "success"
+  },
+  "sample_diff": {
+    "mutations_count": 2,
+    "registers": {
+      "%R100": { "old_value": 0, "new_value": 1500 },
+      "%AQ1": { "old_value": 0, "new_value": 32000 }
+    }
+  }
+}

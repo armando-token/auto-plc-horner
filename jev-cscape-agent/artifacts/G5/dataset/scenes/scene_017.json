@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_017",
+  "file_name": "scene_017.png",
+  "original_source": "artifacts\\G8\\acceptance_runs\\run_10_reopen.png",
+  "split": "train",
+  "scene_type": "hmi_screen_editor",
+  "category": "HMI",
+  "dimensions": {
+    "width": 1280,
+    "height": 780
+  },
+  "sha256": "3b3cef5f0661f1b974ef354d3f90df7a30a88b3e88fe141878692dc65cf23d0f",
+  "labels": {
+    "canvas_rect": [
+      55,
+      14,
+      1271,
+      755
+    ],
+    "anchors": {
+      "canvas_center": [
+        663,
+        384
+      ],
+      "canvas_nw": [
+        55,
+        14
+      ],
+      "canvas_se": [
+        1271,
+        755
+      ],
+      "status_bar_roi": [
+        0,
+        756,
+        1280,
+        780
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

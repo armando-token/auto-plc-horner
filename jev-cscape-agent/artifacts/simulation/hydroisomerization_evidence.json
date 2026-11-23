@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Hydroisomerization Dewaxing Trickle-Bed Pour Point & Viscosity Index ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W170",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Hydroisomerization Dewaxing Trickle-Bed Pour Point & Viscosity Index ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1310..%R1317 and %M305..%M307 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "Trickle_Bed_Hydrodynamics_And_Two_Phase_Hydraulics",
+        "passed": true,
+        "details": "Hydrodynamics verified at 120 bar: u_l=0.0120 m/s, u_g=0.105 m/s, holdup=0.228, delta_P=2.52 bar, kla=0.055 1/s."
+      },
+      {
+        "stage": 3,
+        "check": "Hydroisomerization_Kinetics_And_Reaction_Enthalpies",
+        "passed": true,
+        "details": "Kinetics verified: k_isom(335C)=1.63e-01/s, k_crack(335C)=4.28e-02/s; Delta H_isom=-45 kJ/mol, Delta H_crack=-65 kJ/mol; Q_rxn=16.8 kW."
+      },
+      {
+        "stage": 4,
+        "check": "Pour_Point_And_Viscosity_Index_Target_Properties",
+        "passed": true,
+        "details": "Dewaxing properties verified: Feed PourPoint=35.0\u00b0C -> Product PourPoint=-18.0\u00b0C, ViscosityIndex=132.0 (> 130), LubeYield=84.5%."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_High_Order_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: T_bed=334.9\u00b0C, y_np=0.035, y_iso=0.699, Yield=84.5%, PourPoint=-18.0\u00b0C, VI=132.0."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=0.000e+00 kg/s (< 1e-10), elemental_residual=7.105e-15 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xC301, 0xC302, 0xC303, 0xC304) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1310=3350, %R1311=1200, %R1312=600, %R1313=845, %R1314=-180, %R1315=132, %R1316=965, %R1317=0x0000, %M305=True, %M306=False, %M307=False."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Closed_Loop_Settling",
+        "passed": true,
+        "details": "Transient response to +2.5 \u00b0C disturbance verified cleanly over 8.0s: T_bed=337.2\u00b0C, PourPoint=-18.0\u00b0C, VI=132.0, Permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1310..%R1317",
+      "discrete_coils": "%M305..%M307",
+      "values": {
+        "%R1310": 3350,
+        "%R1311": 1200,
+        "%R1312": 600,
+        "%R1313": 845,
+        "%R1314": -180,
+        "%R1315": 132,
+        "%R1316": 965,
+        "%R1317": 0,
+        "%M305": true,
+        "%M306": false,
+        "%M307": false
+      }
+    },
+    "timestamp": "2026-10-05T05:04:09Z"
+  }
+}

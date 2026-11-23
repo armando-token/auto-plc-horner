@@ -1,0 +1,69 @@
+{
+  "task_id": "G9_TASK_08",
+  "variables": [
+    {
+      "name": "CHEM_LEVEL_PV",
+      "iec_type": "INT",
+      "ocs_register": "%R108",
+      "initial_value": 0,
+      "description": "Process Variable: Level transmitter for TANK_CHEM"
+    },
+    {
+      "name": "TANK_CHEM_SETPOINT",
+      "iec_type": "REAL",
+      "ocs_register": "%R182",
+      "initial_value": 350.0,
+      "description": "Operator Target Setpoint for TANK_CHEM"
+    },
+    {
+      "name": "TANK_CHEM_LOW_SP",
+      "iec_type": "REAL",
+      "ocs_register": "%R183",
+      "initial_value": 60.0,
+      "description": "Low Level Alarm Setpoint for TANK_CHEM"
+    },
+    {
+      "name": "TANK_CHEM_HIGH_SP",
+      "iec_type": "REAL",
+      "ocs_register": "%R184",
+      "initial_value": 700.0,
+      "description": "High Level Alarm Setpoint for TANK_CHEM"
+    },
+    {
+      "name": "SYS_AUTO_MODE",
+      "iec_type": "BOOL",
+      "ocs_register": "%M91",
+      "initial_value": true,
+      "description": "System Auto Mode Permissive bit"
+    },
+    {
+      "name": "SYS_ESTOP_ACTIVE",
+      "iec_type": "BOOL",
+      "ocs_register": "%I27",
+      "initial_value": false,
+      "description": "Hardware Emergency Stop Pushbutton Contact"
+    },
+    {
+      "name": "CHEM_DOSING_VALVE",
+      "iec_type": "BOOL",
+      "ocs_register": "%M108",
+      "initial_value": false,
+      "description": "Inlet Valve Solenoid output for TANK_CHEM"
+    },
+    {
+      "name": "CHEM_FLUSH_VALVE",
+      "iec_type": "BOOL",
+      "ocs_register": "%Q40",
+      "initial_value": false,
+      "description": "Discharge Valve Solenoid output for TANK_CHEM"
+    },
+    {
+      "name": "CHEM_METER_PUMP",
+      "iec_type": "BOOL",
+      "ocs_register": "%Q41",
+      "initial_value": false,
+      "description": "Feed/Discharge Pump Contactor output for TANK_CHEM"
+    }
+  ],
+  "total_variables": 9
+}

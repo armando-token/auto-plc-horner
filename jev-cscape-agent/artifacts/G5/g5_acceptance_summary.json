@@ -1,0 +1,310 @@
+{
+  "campaign": "G5_VISION_OFFLINE_ACCEPTANCE",
+  "timestamp_utc": "2026-10-16T19:04:49.905525+00:00",
+  "status": "success",
+  "actions_total": 20,
+  "actions_passed": 20,
+  "actions_pass_rate": 1.0,
+  "negatives_total": 5,
+  "negatives_passed": 5,
+  "baseline_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "actions": [
+    {
+      "status": "success",
+      "sha256": "710235f27c455ca230bc0e3aedea6b665dc1f71bf322001a674edc830882757d",
+      "dimensions": [
+        1278,
+        566
+      ],
+      "action_id": "action_01",
+      "name": "Action 01: Frame provenance & crypto",
+      "duration_ms": 8.04
+    },
+    {
+      "status": "success",
+      "roi_96": [
+        100,
+        100,
+        200,
+        200
+      ],
+      "roi_144": [
+        67,
+        67,
+        133,
+        133
+      ],
+      "action_id": "action_02",
+      "name": "Action 02: DPI scaling & normalization",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "sub_dimensions": [
+        100,
+        60
+      ],
+      "sub_sha": "b4132a7a3f1d771cd9349a5361f08a81b5ef30cc088c6f7e06c466165c6898d3",
+      "action_id": "action_03",
+      "name": "Action 03: ROI cropping & offsets",
+      "duration_ms": 7.93
+    },
+    {
+      "status": "success",
+      "registers_found": [
+        "%R100",
+        "%AI1",
+        "%AQ5"
+      ],
+      "action_id": "action_04",
+      "name": "Action 04: OCR OCS registers",
+      "duration_ms": 653.39
+    },
+    {
+      "status": "success",
+      "tags_found": [
+        "RTC_SEC",
+        "RTC_MIN",
+        "P1_TANK_LEVEL_PV"
+      ],
+      "action_id": "action_05",
+      "name": "Action 05: OCR Horner tags",
+      "duration_ms": 1088.5
+    },
+    {
+      "status": "success",
+      "status_metrics": {
+        "raw_text": "1",
+        "screen": null,
+        "zoom_percent": null,
+        "coords": null,
+        "dimensions": null,
+        "object_count": null,
+        "has_objects": false,
+        "tokens": [
+          "1"
+        ]
+      },
+      "action_id": "action_06",
+      "name": "Action 06: Status bar metrics",
+      "duration_ms": 467.82
+    },
+    {
+      "status": "success",
+      "parsed_coords": [
+        208,
+        126
+      ],
+      "action_id": "action_07",
+      "name": "Action 07: Status bar coordinates",
+      "duration_ms": 40.88
+    },
+    {
+      "status": "success",
+      "detected_rail_x": 5,
+      "action_id": "action_08",
+      "name": "Action 08: Ladder power rail detection",
+      "duration_ms": 0.73
+    },
+    {
+      "status": "success",
+      "cell_0_0": [
+        65,
+        50
+      ],
+      "cell_5_10": [
+        765,
+        350
+      ],
+      "action_id": "action_09",
+      "name": "Action 09: Ladder grid cell mapping",
+      "duration_ms": 0.04
+    },
+    {
+      "status": "success",
+      "rung_2_coil_target": [
+        765,
+        170
+      ],
+      "action_id": "action_10",
+      "name": "Action 10: Ladder coil targeting",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "virtual_resolution": [
+        320,
+        240
+      ],
+      "action_id": "action_11",
+      "name": "Action 11: HMI virtual bounds",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "zoom_100": [
+        100,
+        100
+      ],
+      "zoom_120": [
+        120,
+        120
+      ],
+      "zoom_150": [
+        150,
+        150
+      ],
+      "action_id": "action_12",
+      "name": "Action 12: HMI zoom transformation",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "anchors_verified": [
+        "NW",
+        "N",
+        "NE",
+        "W",
+        "CENTER",
+        "E",
+        "SW",
+        "S",
+        "SE"
+      ],
+      "action_id": "action_13",
+      "name": "Action 13: HMI 9-point anchors",
+      "duration_ms": 0.04
+    },
+    {
+      "status": "success",
+      "snap8": [
+        24,
+        48
+      ],
+      "snap16": [
+        16,
+        48
+      ],
+      "action_id": "action_14",
+      "name": "Action 14: HMI grid snapping",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "roundtrip_delta": [
+        0.0,
+        0.13333333333333997
+      ],
+      "action_id": "action_15",
+      "name": "Action 15: Dual-coord roundtrip",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "detected_canvas_bounds": [
+        119,
+        14,
+        1269,
+        541
+      ],
+      "action_id": "action_16",
+      "name": "Action 16: Canvas landmark detection",
+      "duration_ms": 5.83
+    },
+    {
+      "status": "success",
+      "reserved_count": 18,
+      "action_id": "action_17",
+      "name": "Action 17: Reserved eval split verification",
+      "duration_ms": 0.24
+    },
+    {
+      "status": "success",
+      "sidecar_sha": "710235f27c455ca230bc0e3aedea6b665dc1f71bf322001a674edc830882757d",
+      "action_id": "action_18",
+      "name": "Action 18: Frame sidecar provenance",
+      "duration_ms": 38.53
+    },
+    {
+      "status": "success",
+      "diff_bbox": [
+        50,
+        50,
+        101,
+        101
+      ],
+      "action_id": "action_19",
+      "name": "Action 19: Offline visual diff",
+      "duration_ms": 9.58
+    },
+    {
+      "status": "success",
+      "guard_res": {
+        "status": "success",
+        "error_code": null,
+        "details": "All visual safety preconditions verified fail-closed.",
+        "data": {
+          "target_coords": [
+            100,
+            100
+          ],
+          "canvas_bounds": [
+            10,
+            10,
+            190,
+            190
+          ],
+          "window_stationary": true,
+          "image_fresh": true,
+          "within_bounds": true,
+          "no_occlusion": true
+        }
+      },
+      "action_id": "action_20",
+      "name": "Action 20: Composite visual guard",
+      "duration_ms": 0.06
+    }
+  ],
+  "negatives": [
+    {
+      "status": "success",
+      "detected_error": "StaleImageError",
+      "message": "FAIL_CLOSED: Capture frame is stale! Age: 4.000s (threshold: 2.000s)",
+      "negative_id": "negative_01",
+      "name": "Negative 01: Stale image rejection",
+      "duration_ms": 0.03
+    },
+    {
+      "status": "success",
+      "detected_error": "WindowMovedError",
+      "message": "FAIL_CLOSED: Window moved beyond tolerance (5px > 2px)! Baseline: (100, 100, 900, 700), Current: (105, 100, 900, 700)",
+      "negative_id": "negative_02",
+      "name": "Negative 02: Moved window rejection",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "detected_error": "OutOfBoundsVisualError",
+      "message": "FAIL_CLOSED: Target X=45 out of safe canvas bounds [55, 445] (raw bounds: [50, 450], margin: 5px)!",
+      "negative_id": "negative_03",
+      "name": "Negative 03: Out-of-bounds rejection",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "detected_error": "OcclusionVisualError",
+      "message": "FAIL_CLOSED: Target ROI (100, 100, 150, 150) is occluded by modal dialog #0 (110, 110, 400, 400)! Intersection: (110, 110, 150, 150)",
+      "negative_id": "negative_04",
+      "name": "Negative 04: Occlusion rejection",
+      "duration_ms": 0.01
+    },
+    {
+      "status": "success",
+      "detected_error": "AssertionError",
+      "message": "FAIL_CLOSED: Variable tag mismatch! Expected 'RTC_SEC', got 'INVALID_BOGUS_TAG'",
+      "negative_id": "negative_05",
+      "name": "Negative 05: Tag mismatch rejection",
+      "duration_ms": 0.0
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Convex Hull Boundary & Multi-Cluster Scatter Canvas verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W276",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Convex Hull Boundary & Multi-Cluster Scatter Spatial Enclosure Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Initialization_And_Spatial_Node_Configuration",
+        "passed": true,
+        "duration_ms": 0.74,
+        "details": "3 clusters configured with 24 spatial nodes; canvas active."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_ST_POU_Validation",
+        "passed": true,
+        "duration_ms": 1.71,
+        "details": "Pure ST POU verified; %R2370..%R2377 and %M553..%M554 bound into AST."
+      },
+      {
+        "stage": 3,
+        "check": "Ladder_Logic_Rejection_Guard",
+        "passed": true,
+        "duration_ms": 0.01,
+        "details": "Ladder contacts and coils strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 4,
+        "check": "Convex_Hull_Algorithmic_Correctness",
+        "passed": true,
+        "duration_ms": 0.07,
+        "details": "Monotone Chain & Graham Scan correctly extracted 4 extreme vertices; interior nodes filtered."
+      },
+      {
+        "stage": 5,
+        "check": "Geometric_Metrics_Area_Perimeter_Centroid_Radius",
+        "passed": true,
+        "duration_ms": 0.02,
+        "details": "Area=100.0px^2, Perimeter=40.0px, Z1 R_rms=46.6px, Centroid=(227.5,242.5)."
+      },
+      {
+        "stage": 6,
+        "check": "Boundary_Breach_And_Dispersion_Alarm_Detection",
+        "passed": true,
+        "duration_ms": 1.01,
+        "details": "Outlier F99 detected at distance 251.6px > 2.5*R_rms; asserted coil %M554."
+      },
+      {
+        "stage": 7,
+        "check": "High_Contrast_WCAG_AAA_SVG_Render",
+        "passed": true,
+        "duration_ms": 1.81,
+        "details": "SVG 1.1 validated (9122 bytes); WCAG AAA badge contrast 19.2:1 >= 18:1, text contrast 17.1:1 >= 7:1."
+      },
+      {
+        "stage": 8,
+        "check": "RegisterTable_Synchronization",
+        "passed": true,
+        "duration_ms": 0.09,
+        "details": "Registers synced: %R2370=0x014B, %R2371=25 pts, %R2376=1 outliers, %R2377=-4489."
+      },
+      {
+        "stage": 9,
+        "check": "Deterministic_Multi_Cycle_Closed_Loop_Scan",
+        "passed": true,
+        "duration_ms": 6.56,
+        "details": "Closed-loop scan executed 10 cycles (dt=10ms); cycle_count=10, deterministic stability verified."
+      }
+    ],
+    "metrics": {
+      "total_scatter_points": 25,
+      "active_clusters": 3,
+      "max_hull_perimeter_px": 741.8605819206642,
+      "max_dispersion_rms_px": 99.19739642142895,
+      "min_inter_cluster_distance_px": 398.4971769034255,
+      "outlier_count": 1,
+      "critical_zone_id": 1
+    },
+    "register_map": {
+      "analog_registers": "%R2370..%R2377",
+      "discrete_coils": "%M553..%M554"
+    },
+    "timestamp": "2026-10-07T07:54:30Z"
+  }
+}

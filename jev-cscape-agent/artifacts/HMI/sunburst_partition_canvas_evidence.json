@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W252",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Sunburst Partition Multilevel Hierarchy SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_IEC_61131_3_Structured_Text_POU_Validation",
+        "passed": true,
+        "timing_ms": 0.56,
+        "details": "Validated pure IEC 61131-3 ST POU 'SunburstPartitionCanvasSync' with STParser & SecurityGuard across %R2130..%R2137 and %M497..%M498."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.03,
+        "details": "Rejected 6 forbidden ladder logic constructs (contacts, coils, rungs, networks, mnemonics) with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Canvas_Bounds_And_Annular_Ring_Viewport_Geometry",
+        "passed": true,
+        "timing_ms": 0.0,
+        "details": "Verified 1200x750 viewport, bounds (20, 86, 1160, 644), center (600, 408), 3 annular tiers (70..140, 150..220, 230..300) within bounds."
+      },
+      {
+        "stage": 4,
+        "check": "Hierarchical_Multilevel_Tree_Partition_And_Angular_Weight_Conservation",
+        "passed": true,
+        "timing_ms": 0.15,
+        "details": "Verified 14 sectors across 3 tiers (3 Areas, 4 Unit Ops, 7 Sub-Equipments): strictly nested angular spans summing to 360.0 deg and 4250 kW total load."
+      },
+      {
+        "stage": 5,
+        "check": "Standalone_W3C_SVG_Vector_Graphic_Generation_With_Annular_Wedges",
+        "passed": true,
+        "timing_ms": 2.01,
+        "details": "Generated valid W3C SVG 1.1 graphic (14 annular wedge paths with M, A, L, A, Z commands) -> artifacts/HMI/sunburst_partition_canvas_sample.svg."
+      },
+      {
+        "stage": 6,
+        "check": "WCAG_2_1_AAA_Contrast_Compliance",
+        "passed": true,
+        "timing_ms": 0.02,
+        "details": "Verified WCAG 2.1 AAA contrast compliance: text contrast 19.15:1 (> 7:1) and decoupled badge contrast 20.01:1 (> 18:1)."
+      },
+      {
+        "stage": 7,
+        "check": "Sector_Overload_And_Thermal_Efficiency_Safety_Alarm_Trip_Injection",
+        "passed": true,
+        "timing_ms": 1.5,
+        "details": "Verified %M498 alarm trip when load share > 35.0% or efficiency < 75.0%, and nominal de-assertion on recovery."
+      },
+      {
+        "stage": 8,
+        "check": "Diagnostic_Fault_Code_Handling_And_Register_Latching",
+        "passed": true,
+        "timing_ms": 2.27,
+        "details": "Verified 0xFA01 (Hierarchy Levels), 0xFA02 (Total Load), 0xFA03 (Angle Sum), 0xFA04 (Canvas Overflow) latched into %R2137 and recovery."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Memory_Space_Synchronization_And_100_Cycle_Soak",
+        "passed": true,
+        "timing_ms": 19.66,
+        "details": "Verified %R2130..%R2137 and %M497..%M498 bit-exact synchronization, and 100 deterministic scan cycles without memory drift or NaN."
+      }
+    ],
+    "metrics": {
+      "hierarchy_levels": 3,
+      "total_energy_load_kw": 4250.0,
+      "active_sectors_count": 14,
+      "max_sector_load_share_pct": 28.5,
+      "max_sector_load_share_scaled": 2850,
+      "critical_overconsumption_sector": 8,
+      "thermal_efficiency_index_pct": 88.4,
+      "thermal_efficiency_index_scaled": 8840,
+      "selected_hierarchy_node": 8,
+      "diagnostic_code": "0x0000",
+      "wcag_badge_contrast": 20.01,
+      "wcag_text_contrast": 19.15
+    }
+  }
+}

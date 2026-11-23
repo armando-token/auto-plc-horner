@@ -1,0 +1,141 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W290 mcl-PHA Biosynthesis Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W290",
+    "gate": "G7",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 2.999,
+        "details": "Inoculation growth verified: Biomass increased from 2.00 to 2.11 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "substrate_fatty_acid_kinetics",
+        "passed": true,
+        "timing_ms": 0.824,
+        "details": "Coupled substrate consumption confirmed: S (14.76 -> 14.51 g/L), N (0.99 -> 0.98 g/L)."
+      },
+      {
+        "stage": 3,
+        "name": "mcl_pha_accumulation",
+        "passed": true,
+        "timing_ms": 1.621,
+        "details": "mcl-PHA polymer synthesized and accumulated from 0.21 to 0.22 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "c10_fraction_tuning",
+        "passed": true,
+        "timing_ms": 0.843,
+        "details": "C10 monomer fraction tuned cleanly to 65.4 mol% within target 50-80 mol% range."
+      },
+      {
+        "stage": 5,
+        "name": "substrate_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.303,
+        "details": "Substrate toxicity trip 0xF901 asserted on S > 25.0 g/L; fatty acid feed shut off."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_excursion_trip",
+        "passed": true,
+        "timing_ms": 0.295,
+        "details": "Thermal excursion trip 0xF903 asserted upon T > 35.0 \u00b0C; cooling interlock tripped."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "Elemental carbon conservation residual 0.00e+00 < 1e-10 threshold."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.209,
+        "details": "Horner OCS register space %R2510..%R2517 and coils %M585..%M587 bit-exact verified."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.388,
+        "details": "MclPhaBiosynthesisSync pure ST AST validated; ladder contacts rejected strictly."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 2.999,
+        "details": "Inoculation growth verified: Biomass increased from 2.00 to 2.11 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "substrate_fatty_acid_kinetics",
+        "passed": true,
+        "timing_ms": 0.824,
+        "details": "Coupled substrate consumption confirmed: S (14.76 -> 14.51 g/L), N (0.99 -> 0.98 g/L)."
+      },
+      {
+        "stage": 3,
+        "name": "mcl_pha_accumulation",
+        "passed": true,
+        "timing_ms": 1.621,
+        "details": "mcl-PHA polymer synthesized and accumulated from 0.21 to 0.22 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "c10_fraction_tuning",
+        "passed": true,
+        "timing_ms": 0.843,
+        "details": "C10 monomer fraction tuned cleanly to 65.4 mol% within target 50-80 mol% range."
+      },
+      {
+        "stage": 5,
+        "name": "substrate_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.303,
+        "details": "Substrate toxicity trip 0xF901 asserted on S > 25.0 g/L; fatty acid feed shut off."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_excursion_trip",
+        "passed": true,
+        "timing_ms": 0.295,
+        "details": "Thermal excursion trip 0xF903 asserted upon T > 35.0 \u00b0C; cooling interlock tripped."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "Elemental carbon conservation residual 0.00e+00 < 1e-10 threshold."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.209,
+        "details": "Horner OCS register space %R2510..%R2517 and coils %M585..%M587 bit-exact verified."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.388,
+        "details": "MclPhaBiosynthesisSync pure ST AST validated; ladder contacts rejected strictly."
+      }
+    ]
+  }
+}

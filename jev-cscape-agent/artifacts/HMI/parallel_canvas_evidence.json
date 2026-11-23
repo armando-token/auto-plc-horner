@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Dynamic Parallel Coordinates Multi-Parameter Multivariate Trajectory Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W165",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Parallel Coordinates Multi-Parameter Multivariate Trajectory Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'ParallelCanvasSync' and 'ParallelTrajectoryHmiSync' with SecurityGuard & STParser across Horner registers %R1260..%R1267 and %M294..%M295."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Parallel_Coordinate_6_Axes_Geometry_And_Scaling",
+        "passed": true,
+        "details": "Verified 6 vertical parallel axes spacing (dx=124.0 px) across X: 140..760, Y: 160..620 (Height=460 px), and affine range scaling."
+      },
+      {
+        "stage": 4,
+        "check": "Dual_Polyline_Trajectory_Synthesis_Baseline_Vs_RealTime",
+        "passed": true,
+        "details": "Verified dual polyline trajectory synthesis: Cyan dashed Golden Baseline vs Emerald Green Real-Time trajectory."
+      },
+      {
+        "stage": 5,
+        "check": "Process_Safety_Interlock_Envelope_Breach_Trip",
+        "passed": true,
+        "details": "Verified 0xBE01 PARALLEL_ERR_ENVELOPE_BREACH trip and %M294 coil assertion when Safety Margin < 25.0% (injected 18.0% -> %R1265=180)."
+      },
+      {
+        "stage": 6,
+        "check": "Diagnostic_Faults_Out_Of_Bounds_And_Render_Fault",
+        "passed": true,
+        "details": "Verified 0xBE02 axis out-of-bounds fault, 0xBE03 render fault latching, and clean nominal restoration."
+      },
+      {
+        "stage": 7,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone W3C SVG 1.1; XML valid; dark theme backing, axes lines, tick lines, dual polylines, vertex markers, and right-hand HUD metrics card verified."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Theme text 17.06:1 (> 7:1), Graphical SCADA colors (7.04:1..7.35:1 > 3:1) verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scan_Cycle",
+        "passed": true,
+        "details": "%R1260=885, %R1261=6, %R1262=910, %R1263=985, %R1264=840, %R1265=920, %R1266=0, %R1267=0; %M294=False, %M295=True; discrete scan cycle verified."
+      }
+    ],
+    "metrics": {
+      "num_axes": 6,
+      "overall_trajectory_score_pct": 88.5,
+      "thermal_efficiency_pct": 91.0,
+      "product_purity_pct": 98.5,
+      "energy_utilization_pct": 84.0,
+      "safety_margin_pct": 92.0,
+      "wcag_badge_contrast": 18.3,
+      "wcag_theme_contrast": 17.06,
+      "selected_axis_index": 0
+    }
+  }
+}

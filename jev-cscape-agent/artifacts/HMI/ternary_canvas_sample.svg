@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <g id="diagnostic-hud">
+    <rect x="20" y="15" width="1160" height="55" rx="6" fill="#0B0F19" fill-opacity="0.94" filter="url(#badge-shadow)"/>
+    <text x="40" y="42" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="16" font-weight="700">CSCAPE HMI - TERNARY / GIBBS TRIANGLE PHASE EQUILIBRIUM (W129)</text>
+    <text x="40" y="58" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11">SYSTEM: Water-Ethanol-Toluene Liquid Extraction System | MODE: LIQUID_LIQUID | COMPONENTS: Water (A) / Ethanol (B) / Toluene (C)</text>
+    <rect x="960" y="24" width="200" height="36" rx="4" fill="#1E293B" stroke="#27AE60" stroke-width="1.5"/>
+    <text x="975" y="47" fill="#27AE60" font-family="Segoe UI, monospace" font-size="13" font-weight="700">DIAG: OK (0x0000)</text>
+  </g>
+  <g id="ternary-triangle-frame">
+    <path d="M 600.00 111.32 L 850.00 544.34 L 350.00 544.34 Z" fill="#1E293B" fill-opacity="0.35" stroke="#475569" stroke-width="2.5"/>
+    <g id="ternary-grid-lines">
+      <line x1="825.00" y1="501.04" x2="375.00" y2="501.04" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="625.00" y1="154.63" x2="400.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="575.00" y1="154.63" x2="800.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="800.00" y1="457.74" x2="400.00" y2="457.74" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="650.00" y1="197.93" x2="450.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="550.00" y1="197.93" x2="750.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="775.00" y1="414.43" x2="425.00" y2="414.43" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="675.00" y1="241.23" x2="500.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="525.00" y1="241.23" x2="700.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="750.00" y1="371.13" x2="450.00" y2="371.13" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="700.00" y1="284.53" x2="550.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="500.00" y1="284.53" x2="650.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="725.00" y1="327.83" x2="475.00" y2="327.83" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="725.00" y1="327.83" x2="600.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="475.00" y1="327.83" x2="600.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="700.00" y1="284.53" x2="500.00" y2="284.53" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="750.00" y1="371.13" x2="650.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="450.00" y1="371.13" x2="550.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="675.00" y1="241.23" x2="525.00" y2="241.23" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="775.00" y1="414.43" x2="700.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="425.00" y1="414.43" x2="500.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="650.00" y1="197.93" x2="550.00" y2="197.93" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="800.00" y1="457.74" x2="750.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="400.00" y1="457.74" x2="450.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="625.00" y1="154.63" x2="575.00" y2="154.63" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="825.00" y1="501.04" x2="800.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="375.00" y1="501.04" x2="400.00" y2="544.34" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3"/>
+    </g>
+    <text x="600.00" y="97.32" text-anchor="middle" fill="#38BDF8" font-family="Segoe UI, monospace" font-size="13" font-weight="700">A: Water (100%)</text>
+    <text x="866.00" y="562.34" text-anchor="start" fill="#34D399" font-family="Segoe UI, monospace" font-size="13" font-weight="700">B: Ethanol (100%)</text>
+    <text x="334.00" y="562.34" text-anchor="end" fill="#FBBF24" font-family="Segoe UI, monospace" font-size="13" font-weight="700">C: Toluene (100%)</text>
+  </g>
+  <g id="binodal-envelope">
+    <path id="binodal-curve-path" d="M 395.00 535.68 L 405.43 524.32 L 415.71 513.35 L 425.85 502.77 L 435.84 492.57 L 445.69 482.75 L 455.40 473.32 L 464.96 464.28 L 474.38 455.62 L 483.65 447.34 L 492.78 439.45 L 501.76 431.95 L 510.60 424.83 L 519.29 418.09 L 527.84 411.74 L 536.25 405.77 L 544.51 400.19 L 552.63 395.00 L 560.60 390.19 L 568.43 385.76 L 576.11 381.72 L 583.65 378.06 L 591.04 374.79 L 598.29 371.90 L 605.40 369.40 L 612.36 367.28 L 619.18 365.55 L 625.85 364.20 L 632.38 363.24 L 638.76 362.66 L 645.00 362.47 L 651.09 362.66 L 657.04 363.24 L 662.85 364.20 L 668.51 365.55 L 674.03 367.28 L 679.40 369.40 L 684.63 371.90 L 689.71 374.79 L 694.65 378.06 L 699.44 381.72 L 704.09 385.76 L 708.60 390.19 L 712.96 395.00 L 717.18 400.19 L 721.25 405.77 L 725.18 411.74 L 728.96 418.09 L 732.60 424.83 L 736.09 431.95 L 739.44 439.45 L 742.65 447.34 L 745.71 455.62 L 748.63 464.28 L 751.40 473.32 L 754.03 482.75 L 756.51 492.57 L 758.85 502.77 L 761.04 513.35 L 763.09 524.32 L 765.00 535.68 Z" fill="#D83B01" fill-opacity="0.22" stroke="#F39C12" stroke-width="2.5"/>
+    <circle id="plait-point" cx="645.00" cy="362.47" r="4.5" fill="#F8FAFC" stroke="#F39C12" stroke-width="2"/>
+    <text x="653.00" y="354.47" fill="#F39C12" font-family="Segoe UI, monospace" font-size="10" font-weight="700">Plait Point</text>
+  </g>
+  <g id="tie-lines">
+    <line id="tie-line-0" x1="609.59" y1="368.08" x2="674.44" y2="367.43" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85"/>
+    <line id="tie-line-1" x1="569.98" y1="384.92" x2="700.16" y2="382.31" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85"/>
+    <line id="tie-line-2" x1="526.15" y1="412.98" x2="722.16" y2="407.10" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85"/>
+    <line id="tie-line-3" x1="478.10" y1="452.26" x2="740.43" y2="441.81" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85"/>
+    <line id="tie-line-4" x1="431.86" y1="496.60" x2="753.56" y2="480.99" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85"/>
+  </g>
+  <g id="operating-point">
+    <circle id="operating-point-marker" cx="600.00" cy="284.53" r="7.5" fill="#27AE60" stroke="#107C41" stroke-width="2.5"/>
+    <text x="612.00" y="274.53" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="12" font-weight="700">OP: A=60.0% B=20.0% C=20.0%</text>
+    <text x="612.00" y="292.53" fill="#107C41" font-family="Segoe UI, monospace" font-size="10" font-weight="600">STATE: HOMOGENEOUS (dist=+83.3px)</text>
+  </g>
+  <g id="horner-register-space">
+    <rect x="20" y="640" width="1160" height="90" rx="6" fill="#0B0F19" fill-opacity="0.94" filter="url(#badge-shadow)"/>
+    <text x="40" y="665" fill="#F8FAFC" font-family="Segoe UI, monospace" font-size="12" font-weight="700">HORNER OCS REGISTER SPACE (%R900..%R907, %M210..%M211)</text>
+    <text x="40" y="688" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11">%R900 [Status]=0x0047  |  %R901 [CompA]=600 (60.0%)  |  %R902 [CompB]=200 (20.0%)  |  %R903 [CompC]=200 (20.0%)  |  %R904 [DistPxX10]=833</text>
+    <text x="40" y="710" fill="#94A3B8" font-family="Segoe UI, monospace" font-size="11">%R905 [Phases]=1  |  %R906 [Mode]=0  |  %R907 [DiagCode]=0x0000  |  %M210 [ExcursionAlarm]=0 (NOMINAL)  |  %M211 [LimitTrip]=0 (CLEAR)</text>
+  </g>
+</svg>

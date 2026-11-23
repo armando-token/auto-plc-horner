@@ -1,0 +1,99 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial AS-Interface (AS-i v3.0 / SaW) Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W136",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial AS-Interface (AS-i) Safety at Work & Actuator-Sensor Telemetry Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Validated AsiSafetySync and AsiNetworkSync POUs with bound registers %R970..%R977, %M226..%M227."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Asserted LadderForbiddenError on ladder contacts, coils, rungs, and mnemonics."
+      },
+      {
+        "stage": 3,
+        "check": "Manchester_APM_Bit_Timing_And_Physical_Layer",
+        "passed": true,
+        "details": "Verified 167 kbit/s APM pulse modulation (T_bit=6.0us), jitter boundaries, and noise limits."
+      },
+      {
+        "stage": 4,
+        "check": "Master_Scan_Cycle_And_Extended_AB_Addressing",
+        "passed": true,
+        "details": "Verified 5ms standard cycle for 31 slaves and 10ms split-phase cycle for 62 A/B slaves."
+      },
+      {
+        "stage": 5,
+        "check": "Safety_At_Work_Dynamic_Code_Sequence_Generation",
+        "passed": true,
+        "details": "Verified deterministic 8x4-bit dynamic sequence tables for E-stop, Light Curtain, and Gate Interlock."
+      },
+      {
+        "stage": 6,
+        "check": "SaW_Safety_Monitor_Fast_Evaluation",
+        "passed": true,
+        "details": "Asserted < 40ms fail-safe trip on static zero code (0x00), sequence mismatch, and step timeout."
+      },
+      {
+        "stage": 7,
+        "check": "Dual_Redundant_Safety_Channel_Discrepancy",
+        "passed": true,
+        "details": "Verified transient discrepancy tolerance (50ms <= 100ms) and discrepancy trip (> 100ms)."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Synchronization",
+        "passed": true,
+        "details": "Verified %R970..%R977 bindings, PV/SV scaling (45.6->456), and 0xA101 trip (%M227=TRUE, %M226=FALSE)."
+      },
+      {
+        "stage": 9,
+        "check": "Closed_Loop_Simulation_And_Trip_Recovery",
+        "passed": true,
+        "details": "Simulated closed-loop scan cycle, tripped E-stop, and recovered cleanly via operator reset handshake."
+      }
+    ],
+    "metrics": {
+      "baud_rate_hz": 166666.67,
+      "bit_time_us": 6.0,
+      "transaction_time_us": 156.0,
+      "standard_cycle_time_ms": 5.0,
+      "extended_cycle_time_ms": 10.0,
+      "saw_max_reaction_time_s": 0.04,
+      "discrepancy_timeout_s": 0.1,
+      "max_standard_slaves": 31,
+      "max_extended_slaves": 62
+    },
+    "register_map": {
+      "status_word_active_slave_count": "%R970",
+      "safety_code_sequence_word": "%R971",
+      "cycle_counter": "%R972",
+      "primary_process_input_scaled": "%R973",
+      "secondary_process_input_scaled": "%R974",
+      "telegram_error_counter": "%R975",
+      "safe_channel_status_word": "%R976",
+      "diagnostic_status_code": "%R977",
+      "asi_master_active": "%M226",
+      "asi_safety_at_work_trip": "%M227"
+    },
+    "diagnostic_codes": {
+      "0x0000": "OK",
+      "0xA101": "ASI_ERR_SAFETY_CODE_TRIP",
+      "0xA102": "ASI_ERR_CHANNEL_DISCREPANCY",
+      "0xA103": "ASI_ERR_SLAVE_OFFLINE",
+      "0xA104": "ASI_ERR_APM_NOISE_FAULT"
+    },
+    "timestamp": "2026-10-04T19:52:09Z"
+  }
+}

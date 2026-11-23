@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+    <rect width="1200" height="750" fill="#0D1117" />
+    <line class="kd-partition-line" x1="600.0" y1="0.0" x2="600.0" y2="750.0" stroke="#38BDF8" stroke-width="2.2" stroke-dasharray="4 2" stroke-opacity="0.75" /><line class="kd-partition-line" x1="0.0" y1="200.0" x2="600.0" y2="200.0" stroke="#10B981" stroke-width="2.1" stroke-dasharray="4 2" stroke-opacity="0.75" /><line class="kd-partition-line" x1="200.0" y1="0.0" x2="200.0" y2="200.0" stroke="#3B82F6" stroke-width="2.0" stroke-dasharray="4 2" stroke-opacity="0.75" /><line class="kd-partition-line" x1="400.0" y1="200.0" x2="400.0" y2="750.0" stroke="#3B82F6" stroke-width="2.0" stroke-dasharray="4 2" stroke-opacity="0.75" /><line class="kd-partition-line" x1="600.0" y1="500.0" x2="1200.0" y2="500.0" stroke="#10B981" stroke-width="2.1" stroke-dasharray="4 2" stroke-opacity="0.75" />
+    <g id="connector-vector-5" class="nearest-vector"><line x1="450.0" y1="350.0" x2="400.0" y2="300.0" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5 3" /><rect x="401.0" y="311.0" width="48" height="15" rx="3" fill="#05080C" stroke="#F59E0B" stroke-width="0.8" /><text class="distance-callout" x="425.0" y="322.0" fill="#F59E0B" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">d=70.7</text></g><g id="connector-vector-1" class="nearest-vector"><line x1="450.0" y1="350.0" x2="600.0" y2="375.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="5 3" /><rect x="501.0" y="348.5" width="48" height="15" rx="3" fill="#05080C" stroke="#06B6D4" stroke-width="0.8" /><text class="distance-callout" x="525.0" y="359.5" fill="#06B6D4" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">d=152.1</text></g><g id="connector-vector-2" class="nearest-vector"><line x1="450.0" y1="350.0" x2="300.0" y2="200.0" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="5 3" /><rect x="351.0" y="261.0" width="48" height="15" rx="3" fill="#05080C" stroke="#06B6D4" stroke-width="0.8" /><text class="distance-callout" x="375.0" y="272.0" fill="#06B6D4" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">d=212.1</text></g>
+    
+    <!-- Query Target Crosshair Reticle Overlay -->
+    <g id="query-target-crosshair" class="query-reticle">
+        <!-- Crosshair lines -->
+        <line x1="434.0" y1="350.0" x2="466.0" y2="350.0" stroke="#06B6D4" stroke-width="1.8" />
+        <line x1="450.0" y1="334.0" x2="450.0" y2="366.0" stroke="#06B6D4" stroke-width="1.8" />
+        <!-- Target center pip -->
+        <circle cx="450.0" cy="350.0" r="6.0" fill="none" stroke="#06B6D4" stroke-width="1.8" />
+        <!-- Spatial proximity hazard perimeter -->
+        <circle cx="450.0" cy="350.0" r="30.0" fill="#EF4444" fill-opacity="0.10" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3 3" />
+        <text x="486.0" y="354.0" fill="#EF4444" font-family="monospace" font-size="9" font-weight="bold">HAZARD ZONE (30px)</text>
+    </g>
+        
+    <g id="kd-node-1" class="sensor-node"><circle cx="600.0" cy="375.0" r="5.5" fill="#10B981" stroke="#059669" stroke-width="1.5" /><text x="608.0" y="371.0" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">INST-001</text></g><g id="kd-node-2" class="sensor-node"><circle cx="300.0" cy="200.0" r="5.5" fill="#10B981" stroke="#059669" stroke-width="1.5" /><text x="308.0" y="196.0" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">INST-002</text></g><g id="kd-node-3" class="sensor-node"><circle cx="900.0" cy="500.0" r="5.5" fill="#10B981" stroke="#059669" stroke-width="1.5" /><text x="908.0" y="496.0" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">INST-003</text></g><g id="kd-node-4" class="sensor-node"><circle cx="200.0" cy="100.0" r="5.5" fill="#10B981" stroke="#059669" stroke-width="1.5" /><text x="208.0" y="96.0" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">INST-004</text></g><g id="kd-node-5" class="sensor-node"><circle cx="400.0" cy="300.0" r="5.5" fill="#10B981" stroke="#059669" stroke-width="1.5" /><text x="408.0" y="296.0" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold">INST-005</text></g>
+    
+    <!-- Decoupled High-Contrast HUD Scorecard Card (WCAG AAA >= 18:1) -->
+    <g id="hud-telemetry-scorecard">
+        <rect x="20" y="20" width="1160" height="85" rx="8" fill="#05080C" stroke="#334155" stroke-width="1.5" />
+        <text x="40" y="48" fill="#FFFFFF" font-family="monospace" font-size="17" font-weight="bold">DYNAMIC SPATIAL K-D TREE SCADA CANVAS (W294)</text>
+        <text x="40" y="70" fill="#CBD5E1" font-family="monospace" font-size="11">POU: KdtreeCanvasSync | NODES: 5 | MAX DEPTH: 2/12 | TARGET: #999 | 1-NN: #5 | DIST: 70.7px | HAZARD: 30.0px (VIOLATIONS: 0)</text>
+        <text x="40" y="90" fill="#94A3B8" font-family="monospace" font-size="10">%R2550=5 | %R2551=2 | %R2552=999 | %R2553=5 | %R2554=707 | %R2555=300 | %R2556=0 | %R2557=0x0000 | %M595=1 | %M596=0</text>
+
+        <!-- Status Pill Box -->
+        <rect x="850" y="32" width="310" height="38" rx="6" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-width="1.5" />
+        <text x="1005" y="56" fill="#10B981" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">K-D TREE INDEXING ONLINE</text>
+    </g>
+    
+</svg>

@@ -1,0 +1,109 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial EtherCAT SubDevice (Slave) State Machine & CoE / SyncManager Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W139",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial EtherCAT SubDevice (Slave) State Machine & CoE / SyncManager Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Security_Guard",
+        "passed": true,
+        "details": "Verified IEC 61131-3 Pure ST POU, bound %R1000..%R1007 & %M233..%M234, rejected ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "AL_State_Machine_Sequential_Transitions",
+        "passed": true,
+        "details": "Sequential transitions INIT -> PREOP -> SAFEOP -> OP and safe down-transitions verified cleanly."
+      },
+      {
+        "stage": 3,
+        "check": "Illegal_Transition_Rejection_And_Diagnostics_0xA402",
+        "passed": true,
+        "details": "Illegal skip transitions rejected with AL status code 0x0011 and diagnostic code 0xA402."
+      },
+      {
+        "stage": 4,
+        "check": "SyncManager_Configuration_And_Channel_Activation",
+        "passed": true,
+        "details": "SM0..SM3 channels configured, state-dependent activation verified, cycle counter incremented to 5."
+      },
+      {
+        "stage": 5,
+        "check": "CoE_Object_Dictionary_And_SDO_Transactions",
+        "passed": true,
+        "details": "CoE SDO Upload (Vendor ID 0x00000059) and Download expedited write (450) verified."
+      },
+      {
+        "stage": 6,
+        "check": "SDO_Abort_Exception_Trapping_0xA404",
+        "passed": true,
+        "details": "SDO abort traps asserted diagnostic code 0xA404."
+      },
+      {
+        "stage": 7,
+        "check": "Distributed_Clocks_Sub_Microsecond_Jitter_And_Sync_Loss_0xA403",
+        "passed": true,
+        "details": "DC Sync0 jitter tracked nominal 45 ns and detected sync loss 620 ns (diagnostic 0xA403)."
+      },
+      {
+        "stage": 8,
+        "check": "SyncManager_Watchdog_Timer_Expiry_And_Process_Safety_0xA401",
+        "passed": true,
+        "details": "SM2 watchdog timeout tripped 0xA401, cleared %M233, asserted %M234, and clamped outputs to zero in SAFEOP."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Full_Register_Space_Sync_And_Fault_Recovery_Pipeline",
+        "passed": true,
+        "details": "Fault recovery restored %M233=TRUE, %M234=FALSE, %R1007=0x0000, and synchronized process data scaled x10 (%R1003=274, %R1004=274)."
+      }
+    ],
+    "metrics": {
+      "station_address": "0x1000",
+      "vendor_id": "0x00000059 (Horner APG)",
+      "product_code": "0x00000102",
+      "watchdog_timeout_ms": 100.0,
+      "target_jitter_ns": 100,
+      "dc_jitter_threshold_ns": 100,
+      "jitter_trip_threshold_ns": 500,
+      "sync0_cycle_ns": 1000000,
+      "sync_manager_channels": 4,
+      "sm0_mailbox_out_address": 4096,
+      "sm1_mailbox_in_address": 4224,
+      "sm2_rx_pdo_address": 4352,
+      "sm3_tx_pdo_address": 4416
+    },
+    "register_map": {
+      "%R1000": "AlStatusStateWord",
+      "%R1001": "AlStatusCode",
+      "%R1002": "SyncManagerCycleCounter",
+      "%R1003": "RxPdoProcessDataScaled",
+      "%R1004": "TxPdoProcessDataScaled",
+      "%R1005": "DcSyncErrorNs",
+      "%R1006": "CoeObjectDirectoryCounter",
+      "%R1007": "DiagnosticStatusCode",
+      "%M233": "EtherCatOperationalActive",
+      "%M234": "EtherCatWatchdogTrip",
+      "status_word": "%R1000",
+      "state_word": "%R1001",
+      "al_status_code": "%R1001",
+      "cycle_counter": "%R1002",
+      "rx_pdo_0": "%R1003",
+      "rx_pdo_1": "%R1004",
+      "tx_pdo_0": "%R1004",
+      "dc_jitter_ns": "%R1005",
+      "dc_sync_error_ns": "%R1005",
+      "coe_od_counter": "%R1006",
+      "diagnostic_status_code": "%R1007",
+      "slave_active": "%M233",
+      "safety_trip": "%M234"
+    },
+    "timestamp": "2026-10-04T20:12:40Z"
+  }
+}

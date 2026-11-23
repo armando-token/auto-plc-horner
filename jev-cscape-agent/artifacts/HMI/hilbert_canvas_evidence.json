@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W306 Hilbert Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W306",
+    "gate": "G9",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "passed": true,
+        "timing_ms": 0.007,
+        "details": "Python 3.12.10 on win32; jev_cscape simulation, parser, and W306 modules verified."
+      },
+      {
+        "stage": 2,
+        "name": "curve_algorithms",
+        "passed": true,
+        "timing_ms": 3.028,
+        "details": "Bijective round-trips verified for Hilbert (xy2d/d2xy) and Morton (xy2z/z2xy) across orders 1..4; bounds check enforced."
+      },
+      {
+        "stage": 3,
+        "name": "spatial_locality_preservation",
+        "passed": true,
+        "timing_ms": 4.566,
+        "details": "100% unit-step adjacency verified for Hilbert curve; Morton jump discontinuities confirmed; C <= 3.0 H\u00f6lder bound held."
+      },
+      {
+        "stage": 4,
+        "name": "spatial_range_queries",
+        "passed": true,
+        "timing_ms": 0.625,
+        "details": "1D window (16 hits), 2D rect (18 hits), circular (7 hits), and point match verified against brute-force."
+      },
+      {
+        "stage": 5,
+        "name": "svg_rendering_and_wcag",
+        "passed": true,
+        "timing_ms": 1.848,
+        "details": "W3C SVG 1.1 generated with valid XML elements; WCAG AAA contrast ratio verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 6,
+        "name": "register_synchronization",
+        "passed": true,
+        "timing_ms": 1.437,
+        "details": "Horner OCS registers %R2670..%R2677 and coils %M623..%M624 synchronized; signed 16-bit masks and alarm trip verified."
+      },
+      {
+        "stage": 7,
+        "name": "structured_text_validation",
+        "passed": true,
+        "timing_ms": 2.293,
+        "details": "Pure ST POU 'HilbertCanvasSync' AST validated; ladder logic contacts, coils, rungs, and mnemonics strictly rejected."
+      },
+      {
+        "stage": 8,
+        "name": "scan_cycle_simulation",
+        "passed": true,
+        "timing_ms": 23.942,
+        "details": "Closed-loop scan cycle simulation completed (20 cycles) with dynamic insertion and range querying."
+      },
+      {
+        "stage": 9,
+        "name": "evidence_emission",
+        "passed": true,
+        "timing_ms": 0.094,
+        "details": "Deterministic evidence manifest generated with cryptographic SHA-256 integrity."
+      }
+    ],
+    "svg_sample_path": "artifacts/HMI/hilbert_canvas_sample.svg",
+    "svg_sha256": "602bbcdfdb64d9c61eba3eabff64a19a0fcf59601779493eb6237cf9c28a3a2a",
+    "evidence_sha256": "79734cd478e5ff80bc2b00a571ebbcec58f1f322e9e206f53b0d68e03cfafd4e"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Work Package W327 Voronoi Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W327",
+    "gate": "G9",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "init_and_domain",
+        "passed": true,
+        "timing_ms": 0.041,
+        "details": "Voronoi Canvas initialized over [800.0x600.0], Status=OK."
+      },
+      {
+        "stage": 2,
+        "name": "voronoi_morton_encoding_and_spatial_indexing",
+        "passed": true,
+        "timing_ms": 0.094,
+        "details": "Morton 2D bit interleaving bijection and Geohash hierarchical indexing validated; OOB coordinates rejected."
+      },
+      {
+        "stage": 3,
+        "name": "delaunay_triangulation_and_voronoi_cells",
+        "passed": true,
+        "timing_ms": 1.659,
+        "details": "Delaunay dual computed (3 tris); Voronoi cells partitioned (5 cells, area sum=480000.0px\u00b2); topology hash=0x7195."
+      },
+      {
+        "stage": 4,
+        "name": "degenerate_sites_and_diagnostics",
+        "passed": true,
+        "timing_ms": 0.616,
+        "details": "Degenerate sites (coincident and collinear geometry) 0x8441 and out-of-bounds 0x8442 properly detected."
+      },
+      {
+        "stage": 5,
+        "name": "spatial_asset_indexing_and_morton_queries",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Spatial sites indexed (N=5); Morton range, cell, and radius queries validated."
+      },
+      {
+        "stage": 6,
+        "name": "proximity_hazard_collision_detection",
+        "passed": true,
+        "timing_ms": 1.727,
+        "details": "Collision hazard detected: 1 violation(s), nearest distance=11.1m < 50m."
+      },
+      {
+        "stage": 7,
+        "name": "hazard_alarm_trip_and_clear",
+        "passed": true,
+        "timing_ms": 0.643,
+        "details": "Collision alarm asserted %M673 and 0x8440; cleanly deasserted upon hazard clearance."
+      },
+      {
+        "stage": 8,
+        "name": "wcag_aaa_svg_scada_rendering",
+        "passed": true,
+        "timing_ms": 20.329,
+        "details": "W3C SVG 1.1 generated with 800x600 Voronoi cells and scorecard; contrast verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 0.973,
+        "details": "Horner OCS registers %R2880..%R2887 and coils %M672..%M673 synced; pure ST AST validated; ladder logic strictly rejected."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "init_and_domain",
+        "passed": true,
+        "timing_ms": 0.041,
+        "details": "Voronoi Canvas initialized over [800.0x600.0], Status=OK."
+      },
+      {
+        "stage": 2,
+        "name": "voronoi_morton_encoding_and_spatial_indexing",
+        "passed": true,
+        "timing_ms": 0.094,
+        "details": "Morton 2D bit interleaving bijection and Geohash hierarchical indexing validated; OOB coordinates rejected."
+      },
+      {
+        "stage": 3,
+        "name": "delaunay_triangulation_and_voronoi_cells",
+        "passed": true,
+        "timing_ms": 1.659,
+        "details": "Delaunay dual computed (3 tris); Voronoi cells partitioned (5 cells, area sum=480000.0px\u00b2); topology hash=0x7195."
+      },
+      {
+        "stage": 4,
+        "name": "degenerate_sites_and_diagnostics",
+        "passed": true,
+        "timing_ms": 0.616,
+        "details": "Degenerate sites (coincident and collinear geometry) 0x8441 and out-of-bounds 0x8442 properly detected."
+      },
+      {
+        "stage": 5,
+        "name": "spatial_asset_indexing_and_morton_queries",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Spatial sites indexed (N=5); Morton range, cell, and radius queries validated."
+      },
+      {
+        "stage": 6,
+        "name": "proximity_hazard_collision_detection",
+        "passed": true,
+        "timing_ms": 1.727,
+        "details": "Collision hazard detected: 1 violation(s), nearest distance=11.1m < 50m."
+      },
+      {
+        "stage": 7,
+        "name": "hazard_alarm_trip_and_clear",
+        "passed": true,
+        "timing_ms": 0.643,
+        "details": "Collision alarm asserted %M673 and 0x8440; cleanly deasserted upon hazard clearance."
+      },
+      {
+        "stage": 8,
+        "name": "wcag_aaa_svg_scada_rendering",
+        "passed": true,
+        "timing_ms": 20.329,
+        "details": "W3C SVG 1.1 generated with 800x600 Voronoi cells and scorecard; contrast verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 0.973,
+        "details": "Horner OCS registers %R2880..%R2887 and coils %M672..%M673 synced; pure ST AST validated; ladder logic strictly rejected."
+      }
+    ]
+  }
+}

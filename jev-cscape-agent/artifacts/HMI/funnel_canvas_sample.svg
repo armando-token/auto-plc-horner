@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750" style="background-color: #0F172A; font-family: Segoe UI, -apple-system, sans-serif;">
+<defs>
+  <filter id="funnel-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="3.5" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <linearGradient id="funnel-fluid-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#064E3B" stop-opacity="0.85"/>
+    <stop offset="50%" stop-color="#047857" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.92"/>
+  </linearGradient>
+  <linearGradient id="offtake-grad-up" x1="0%" y1="100%" x2="0%" y2="0%">
+    <stop offset="0%" stop-color="#047857" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.9"/>
+  </linearGradient>
+  <linearGradient id="offtake-grad-down" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#047857" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.9"/>
+  </linearGradient>
+  <marker id="arrow-up" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 10 L 5 0 L 10 10 z" fill="#F59E0B"/>
+  </marker>
+  <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 0 L 5 10 z" fill="#F59E0B"/>
+  </marker>
+</defs>
+<rect width="1200" height="750" fill="#0F172A"/>
+<g id="canvas-header">
+  <rect x="30" y="20" width="1140" height="60" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="50" y="44" fill="#F8FAFC" font-size="16" font-weight="bold" letter-spacing="0.5">DYNAMIC PIPELINE / FUNNEL MULTI-STAGE YIELD &amp; CONVERSION CANVAS</text>
+  <text x="50" y="64" fill="#94A3B8" font-size="11">Work Package W150 | Gate G9 Graphic HMI Engine | Horner OCS %R1110..%R1117, %M259..%M260</text>
+  <rect x="940" y="32" width="210" height="36" rx="4" fill="#0B0F19" stroke="#065F46" stroke-width="1.5"/>
+  <circle cx="958" cy="50" r="5" fill="#10B981"/>
+  <text x="972" y="54" fill="#F8FAFC" font-size="11" font-weight="bold">0x0000 NOMINAL YIELD</text>
+</g>
+<g id="funnel-container">
+  <rect x="30" y="95" width="770" height="500" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="45" y="122" fill="#94A3B8" font-size="11" font-weight="bold" letter-spacing="0.5">MULTI-STAGE MASS FLOW PIPELINE CONVERSION ENVELOPE (STAGES 1..4)</text>
+  <line x1="60.0" y1="320.0" x2="790.0" y2="320.0" stroke="#38BDF8" stroke-dasharray="6,6" stroke-width="1.5" opacity="0.4"/>
+  <path class="funnel-fluid-body" d="M 60.0,200.0 L 170.0,200.0 C 205.0,200.0 205.0,209.0 240.0,209.0 L 350.0,209.0 C 385.0,209.0 385.0,218.0 420.0,218.0 L 530.0,218.0 C 565.0,218.0 565.0,221.6 600.0,221.6 L 710.0,221.6 L 710.0,418.4 L 600.0,418.4 C 565.0,418.4 565.0,422.0 530.0,422.0 L 420.0,422.0 C 385.0,422.0 385.0,431.0 350.0,431.0 L 240.0,431.0 C 205.0,431.0 205.0,440.0 170.0,440.0 L 60.0,440.0 L 60.0,200.0 Z" fill="url(#funnel-fluid-grad)" stroke="#065F46" stroke-width="1.5"/>
+  <path class="funnel-top-wall" d="M 60.0,200.0 L 170.0,200.0 C 205.0,200.0 205.0,209.0 240.0,209.0 L 350.0,209.0 C 385.0,209.0 385.0,218.0 420.0,218.0 L 530.0,218.0 C 565.0,218.0 565.0,221.6 600.0,221.6 L 710.0,221.6" fill="none" stroke="#475569" stroke-width="3.5" stroke-linecap="round"/>
+  <path class="funnel-bottom-wall" d="M 710.0,418.4 L 600.0,418.4 C 565.0,418.4 565.0,422.0 530.0,422.0 L 420.0,422.0 C 385.0,422.0 385.0,431.0 350.0,431.0 L 240.0,431.0 C 205.0,431.0 205.0,440.0 170.0,440.0 L 60.0,440.0" fill="none" stroke="#475569" stroke-width="3.5" stroke-linecap="round"/>
+  <line class="stage-flange" x1="60.0" y1="194.0" x2="60.0" y2="446.0" stroke="#64748B" stroke-width="2"/>
+  <rect class="stage-focus-box" x="60.0" y="200.0" width="110.0" height="240.0" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-width="2"/>
+  <g class="stage-pipeline-badge" id="stage-1">
+    <rect x="65.0" y="296.0" width="100.0" height="48" rx="4" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+    <text x="115.0" y="311.0" fill="#F8FAFC" font-size="10" font-weight="bold" text-anchor="middle">Raw Feedstock</text>
+    <text x="115.0" y="326.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">100.0 kg/s</text>
+    <text x="115.0" y="338.0" fill="#94A3B8" font-size="9" text-anchor="middle">100.0% cum | FDS-101</text>
+  </g>
+  <line class="stage-flange" x1="240.0" y1="203.0" x2="240.0" y2="437.0" stroke="#64748B" stroke-width="2"/>
+  <g class="stage-pipeline-badge" id="stage-2">
+    <rect x="245.0" y="296.0" width="100.0" height="48" rx="4" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+    <text x="295.0" y="311.0" fill="#F8FAFC" font-size="10" font-weight="bold" text-anchor="middle">Reactor Effluent</text>
+    <text x="295.0" y="326.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">92.5 kg/s</text>
+    <text x="295.0" y="338.0" fill="#94A3B8" font-size="9" text-anchor="middle">92.5% cum | RXC-201</text>
+  </g>
+  <line class="stage-flange" x1="420.0" y1="212.0" x2="420.0" y2="428.0" stroke="#64748B" stroke-width="2"/>
+  <g class="stage-pipeline-badge" id="stage-3">
+    <rect x="425.0" y="296.0" width="100.0" height="48" rx="4" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+    <text x="475.0" y="311.0" fill="#F8FAFC" font-size="10" font-weight="bold" text-anchor="middle">Fractionation Distillates</text>
+    <text x="475.0" y="326.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">85.0 kg/s</text>
+    <text x="475.0" y="338.0" fill="#94A3B8" font-size="9" text-anchor="middle">85.0% cum | FRD-301</text>
+  </g>
+  <line class="stage-flange" x1="600.0" y1="215.6" x2="600.0" y2="424.4" stroke="#64748B" stroke-width="2"/>
+  <g class="stage-pipeline-badge" id="stage-4">
+    <rect x="605.0" y="296.0" width="100.0" height="48" rx="4" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+    <text x="655.0" y="311.0" fill="#F8FAFC" font-size="10" font-weight="bold" text-anchor="middle">Polished Final Product</text>
+    <text x="655.0" y="326.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">82.0 kg/s</text>
+    <text x="655.0" y="338.0" fill="#94A3B8" font-size="9" text-anchor="middle">82.0% cum | PFP-401</text>
+  </g>
+  <line class="stage-flange" x1="710.0" y1="215.6" x2="710.0" y2="424.4" stroke="#64748B" stroke-width="2"/>
+  <g id="drop-off-losses">
+    <line class="offtake-pipe" x1="205.0" y1="204.5" x2="205.0" y2="150.0" stroke="#F59E0B" stroke-width="3" stroke-dasharray="4,3" marker-end="url(#arrow-up)"/>
+    <g class="drop-off-callout-badge" id="loss-stage-2">
+      <rect class="drop-off-badge" x="117.5" y="105.0" width="175.0" height="44.0" rx="4" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="205.0" y="119.0" fill="#F8FAFC" font-size="10" font-weight="bold" text-anchor="middle">Light Off-Gas (VENT-102)</text>
+      <text x="205.0" y="133.0" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">-7.5 kg/s (-7.5%)</text>
+      <text x="205.0" y="144.0" fill="#94A3B8" font-size="8" text-anchor="middle">Stage 2 Conversion Drop</text>
+    </g>
+    <line class="offtake-pipe" x1="385.0" y1="426.5" x2="385.0" y2="490.0" stroke="#F59E0B" stroke-width="3" stroke-dasharray="4,3" marker-end="url(#arrow-down)"/>
+    <g class="drop-off-callout-badge" id="loss-stage-3">
+      <rect class="drop-off-badge" x="297.5" y="505.0" width="175.0" height="44.0" rx="4" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="385.0" y="519.0" fill="#F8FAFC" font-size="10" font-weight="bold" text-anchor="middle">Heavy Residue (BTM-202)</text>
+      <text x="385.0" y="533.0" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">-7.5 kg/s (-7.5%)</text>
+      <text x="385.0" y="544.0" fill="#94A3B8" font-size="8" text-anchor="middle">Stage 3 Conversion Drop</text>
+    </g>
+    <line class="offtake-pipe" x1="565.0" y1="219.8" x2="565.0" y2="150.0" stroke="#F59E0B" stroke-width="3" stroke-dasharray="4,3" marker-end="url(#arrow-up)"/>
+    <g class="drop-off-callout-badge" id="loss-stage-4">
+      <rect class="drop-off-badge" x="477.5" y="105.0" width="175.0" height="44.0" rx="4" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="565.0" y="119.0" fill="#F8FAFC" font-size="10" font-weight="bold" text-anchor="middle">Finishing Loss (PRG-302)</text>
+      <text x="565.0" y="133.0" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">-3.0 kg/s (-3.0%)</text>
+      <text x="565.0" y="144.0" fill="#94A3B8" font-size="8" text-anchor="middle">Stage 4 Conversion Drop</text>
+    </g>
+  </g>
+</g>
+<g id="analytics-panel">
+  <rect x="820.0" y="95" width="350.0" height="500" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="835.0" y="122" fill="#94A3B8" font-size="11" font-weight="bold" letter-spacing="0.5">YIELD EFFICIENCY &amp; BOTTLENECK ANALYTICS</text>
+  <g id="efficiency-ring-gauge" class="efficiency-gauge">
+    <circle cx="995.0" cy="205.0" r="62.0" fill="none" stroke="#334155" stroke-width="12"/>
+    <circle class="ring-arc-value" cx="995.0" cy="205.0" r="62.0" fill="none" stroke="#10B981" stroke-width="12" stroke-linecap="round" stroke-dasharray="319.4 389.6" stroke-dashoffset="0" transform="rotate(-90 995.0 205.0)"/>
+    <text x="995.0" y="211.0" fill="#F8FAFC" font-size="24" font-weight="bold" text-anchor="middle">82.0%</text>
+    <text x="995.0" y="227.0" fill="#94A3B8" font-size="10" font-weight="bold" text-anchor="middle">OVERALL YIELD</text>
+    <rect x="930.0" y="245.0" width="130" height="20" rx="10" fill="#0B0F19" stroke="#10B981" stroke-width="1"/>
+    <text x="995.0" y="259.0" fill="#10B981" font-size="9" font-weight="bold" text-anchor="middle">HEALTHY RECOVERY</text>
+  </g>
+  <g id="bottleneck-stage" class="bottleneck-indicator">
+    <rect class="bottleneck-badge" x="835.0" y="295.0" width="320.0" height="76" rx="6" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="847.0" y="313.0" fill="#F59E0B" font-size="10" font-weight="bold" letter-spacing="0.5">PRIMARY CONVERSION BOTTLENECK</text>
+    <text x="847.0" y="333.0" fill="#F8FAFC" font-size="13" font-weight="bold">Stage 2: Reactor Effluent (RXC-201)</text>
+    <text x="847.0" y="349.0" fill="#94A3B8" font-size="10">Max Stage Loss: 7.5% | Trip Limit: &gt;25.0%</text>
+    <text x="1143.0" y="349.0" fill="#10B981" font-size="10" font-weight="bold" text-anchor="end">OK (NOMINAL)</text>
+  </g>
+  <g id="stage-selector-container">
+    <text x="835.0" y="384.0" fill="#94A3B8" font-size="10" font-weight="bold">PROCESS STAGE DIRECTORY &amp; FOCUS</text>
+    <g class="stage-container stage-card" id="selector-stage-1">
+      <rect x="835.0" y="390.0" width="320.0" height="42.0" rx="4" fill="#111C2E" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="845.0" y="406.0" fill="#F8FAFC" font-size="10" font-weight="bold">1. Raw Feedstock</text>
+      <text x="845.0" y="420.0" fill="#94A3B8" font-size="9">FDS-101 | Loss: -0.0 kg/s (-0.0%)</text>
+      <text x="1145.0" y="414.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="end">100.0 kg/s</text>
+    </g>
+    <g class="stage-container stage-card" id="selector-stage-2">
+      <rect x="835.0" y="438.0" width="320.0" height="42.0" rx="4" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.0"/>
+      <text x="845.0" y="454.0" fill="#F8FAFC" font-size="10" font-weight="bold">2. Reactor Effluent</text>
+      <text x="845.0" y="468.0" fill="#94A3B8" font-size="9">RXC-201 | Loss: -7.5 kg/s (-7.5%)</text>
+      <text x="1145.0" y="462.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="end">92.5 kg/s</text>
+    </g>
+    <g class="stage-container stage-card" id="selector-stage-3">
+      <rect x="835.0" y="486.0" width="320.0" height="42.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+      <text x="845.0" y="502.0" fill="#F8FAFC" font-size="10" font-weight="bold">3. Fractionation Distillates</text>
+      <text x="845.0" y="516.0" fill="#94A3B8" font-size="9">FRD-301 | Loss: -7.5 kg/s (-7.5%)</text>
+      <text x="1145.0" y="510.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="end">85.0 kg/s</text>
+    </g>
+    <g class="stage-container stage-card" id="selector-stage-4">
+      <rect x="835.0" y="534.0" width="320.0" height="42.0" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="1.0"/>
+      <text x="845.0" y="550.0" fill="#F8FAFC" font-size="10" font-weight="bold">4. Polished Final Product</text>
+      <text x="845.0" y="564.0" fill="#94A3B8" font-size="9">PFP-401 | Loss: -3.0 kg/s (-3.0%)</text>
+      <text x="1145.0" y="558.0" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="end">82.0 kg/s</text>
+    </g>
+  </g>
+</g>
+<g id="telemetry-hud">
+  <rect x="30" y="615.0" width="1140" height="120" rx="8" fill="#0B0F19" stroke="#334155" stroke-width="1.5"/>
+  <text x="45" y="639.0" fill="#94A3B8" font-size="11" font-weight="bold">HORNER OCS REGISTER SPACE TELEMETRY HUD (%R1110..%R1117, %M259..%M260)</text>
+  <g transform="translate(42.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1110</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Stage 1 Feed</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">1000</text>  </g>
+  <g transform="translate(156.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1111</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Stage 2 Effluent</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">925</text>  </g>
+  <g transform="translate(270.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1112</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Stage 3 Distillate</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">850</text>  </g>
+  <g transform="translate(384.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1113</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Stage 4 Product</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">820</text>  </g>
+  <g transform="translate(498.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1114</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Overall Yield</text>    <text x="54.0" y="54" fill="#10B981" font-size="12" font-weight="bold" text-anchor="middle">820</text>  </g>
+  <g transform="translate(612.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1115</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Max Stage Loss</text>    <text x="54.0" y="54" fill="#F59E0B" font-size="12" font-weight="bold" text-anchor="middle">75</text>  </g>
+  <g transform="translate(726.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1116</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Bottleneck Stage</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">Stage 2</text>  </g>
+  <g transform="translate(840.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1117</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Diag Status</text>    <text x="54.0" y="54" fill="#10B981" font-size="12" font-weight="bold" text-anchor="middle">0x0000</text>  </g>
+  <g transform="translate(954.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%M259</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Yield Trip</text>    <text x="54.0" y="54" fill="#10B981" font-size="12" font-weight="bold" text-anchor="middle">NORMAL</text>  </g>
+  <g transform="translate(1068.0, 651.0)">    <rect width="108.0" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%M260</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Canvas Active</text>    <text x="54.0" y="54" fill="#10B981" font-size="12" font-weight="bold" text-anchor="middle">ACTIVE</text>  </g>
+</g>
+</svg>

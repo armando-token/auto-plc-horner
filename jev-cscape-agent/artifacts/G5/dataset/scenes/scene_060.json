@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_060",
+  "file_name": "scene_060.png",
+  "original_source": "artifacts\\G3\\durability_runs\\run_2.png",
+  "split": "train",
+  "scene_type": "general_cscape_editor",
+  "category": "GENERAL",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "72ace42a562a09a3470458002a7c18cd8875f8e1837309785339f727aac2244e",
+  "labels": {
+    "canvas_rect": [
+      124,
+      15,
+      1269,
+      541
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        278
+      ],
+      "canvas_nw": [
+        124,
+        15
+      ],
+      "canvas_se": [
+        1269,
+        541
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

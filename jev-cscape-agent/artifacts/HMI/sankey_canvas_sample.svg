@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <style>
+    .title-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 16px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+    .subtitle-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #94A3B8; }
+    .node-bar { rx: 4px; ry: 4px; cursor: pointer; transition: stroke-width 0.2s; }
+    .node-bar-alert { stroke: #EF4444; stroke-width: 3px; animation: pulse 1.5s infinite; }
+    .node-label-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+    .node-label-cap { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 9.5px; fill: #94A3B8; }
+    .sankey-ribbon { cursor: pointer; transition: fill-opacity 0.2s, stroke-width 0.2s; }
+    .hud-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 12px; font-weight: 700; fill: #38BDF8; letter-spacing: 0.5px; }
+    .hud-subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-value { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+    .hud-code { font-family: monospace; font-size: 10px; fill: #64748B; }
+    .stream-badge-bg { fill: #0B0F19; fill-opacity: 0.95; stroke-width: 1px; rx: 4px; }
+    .stream-badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 10px; font-weight: 700; fill: #F8FAFC; }
+    .stream-badge-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 8.5px; fill: #94A3B8; }
+  </style>
+  <defs>
+    <linearGradient id="ribbon-grad-STR_RAW_FEED" x1="20.0" y1="200.0" x2="70.0" y2="200.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_PREP_FEED" x1="98.0" y1="200.0" x2="260.0" y2="179.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_REACTOR_EFFLUENT" x1="288.0" y1="179.0" x2="460.0" y2="179.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_RECYCLE_SEP" x1="488.0" y1="299.0" x2="388.0" y2="510.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_RECYCLE_RETURN" x1="360.0" y1="510.0" x2="260.0" y2="299.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_CRUDE_OVERHEAD" x1="488.0" y1="179.0" x2="660.0" y2="221.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_HEAVY_BYPRODUCT" x1="488.0" y1="257.0" x2="760.0" y2="360.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_PURIFIED_PRODUCT" x1="688.0" y1="221.0" x2="780.0" y2="200.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="ribbon-grad-STR_OFFGAS_PURGE" x1="688.0" y1="295.4" x2="780.0" y2="295.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.82"/>
+    </linearGradient>
+    <filter id="alert-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Background Backing -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <g id="canvas-header">
+    <text x="32" y="38" class="title-banner">CSCAPE DYNAMIC SANKEY PROCESS MASS &amp; ENERGY STREAM FLOW CANVAS (W159)</text>
+    <text x="32" y="55" class="subtitle-banner">Multi-Stage Mass Continuity &amp; Bézier Flow Distribution | Gate G9 Graphic Screen Engine</text>
+  </g>
+  <g id="sankey-diagram">
+    <g id="node-columns">
+      <line x1="84.0" y1="130" x2="84.0" y2="670" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="84.0" y="125" text-anchor="middle" fill="#64748B" font-size="8.5" font-family="sans-serif" font-weight="600">STAGE 0: FEED</text>
+      <line x1="274.0" y1="130" x2="274.0" y2="670" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="274.0" y="125" text-anchor="middle" fill="#64748B" font-size="8.5" font-family="sans-serif" font-weight="600">STAGE 1: REACTION</text>
+      <line x1="474.0" y1="130" x2="474.0" y2="670" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="474.0" y="125" text-anchor="middle" fill="#64748B" font-size="8.5" font-family="sans-serif" font-weight="600">STAGE 2: SEPARATION</text>
+      <line x1="374.0" y1="130" x2="374.0" y2="670" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="374.0" y="125" text-anchor="middle" fill="#64748B" font-size="8.5" font-family="sans-serif" font-weight="600">STAGE 3: RECYCLE</text>
+      <line x1="674.0" y1="130" x2="674.0" y2="670" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="674.0" y="125" text-anchor="middle" fill="#64748B" font-size="8.5" font-family="sans-serif" font-weight="600">STAGE 4: PRODUCT</text>
+    </g>
+    <g id="flow-ribbons">
+      <path id="ribbon-STR_RAW_FEED" d="M 20.00 200.00 C 45.00 200.00, 45.00 200.00, 70.00 200.00 L 70.00 320.00 C 45.00 320.00, 45.00 320.00, 20.00 320.00 Z" fill="url(#ribbon-grad-STR_RAW_FEED)" fill-opacity="0.95" stroke="#38BDF8" stroke-width="2" class="sankey-ribbon">
+        <title>Raw Feedstock Intake: 100.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_PREP_FEED" d="M 98.00 200.00 C 179.00 200.00, 179.00 179.00, 260.00 179.00 L 260.00 299.00 C 179.00 299.00, 179.00 320.00, 98.00 320.00 Z" fill="url(#ribbon-grad-STR_PREP_FEED)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Prepared Reaction Feed: 100.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_REACTOR_EFFLUENT" d="M 288.00 179.00 C 374.00 179.00, 374.00 179.00, 460.00 179.00 L 460.00 341.00 C 374.00 341.00, 374.00 341.00, 288.00 341.00 Z" fill="url(#ribbon-grad-STR_REACTOR_EFFLUENT)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Reactor Effluent Mixture: 135.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_RECYCLE_SEP" d="M 488.00 299.00 C 438.00 299.00, 438.00 510.00, 388.00 510.00 L 388.00 552.00 C 438.00 552.00, 438.00 341.00, 488.00 341.00 Z" fill="url(#ribbon-grad-STR_RECYCLE_SEP)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Unreacted Vapor Recycle: 35.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_RECYCLE_RETURN" d="M 360.00 510.00 C 310.00 510.00, 310.00 299.00, 260.00 299.00 L 260.00 341.00 C 310.00 341.00, 310.00 552.00, 360.00 552.00 Z" fill="url(#ribbon-grad-STR_RECYCLE_RETURN)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Recycled Reactant Stream: 35.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_CRUDE_OVERHEAD" d="M 488.00 179.00 C 574.00 179.00, 574.00 221.00, 660.00 221.00 L 660.00 299.00 C 574.00 299.00, 574.00 257.00, 488.00 257.00 Z" fill="url(#ribbon-grad-STR_CRUDE_OVERHEAD)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Separated Crude Overhead: 65.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_HEAVY_BYPRODUCT" d="M 488.00 257.00 C 624.00 257.00, 624.00 360.00, 760.00 360.00 L 760.00 402.00 C 624.00 402.00, 624.00 299.00, 488.00 299.00 Z" fill="url(#ribbon-grad-STR_HEAVY_BYPRODUCT)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Heavy Residue &amp; Byproduct: 35.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_PURIFIED_PRODUCT" d="M 688.00 221.00 C 734.00 221.00, 734.00 200.00, 780.00 200.00 L 780.00 274.40 C 734.00 274.40, 734.00 295.40, 688.00 295.40 Z" fill="url(#ribbon-grad-STR_PURIFIED_PRODUCT)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Purified Final Product: 62.0 kg/s</title>
+      </path>
+      <path id="ribbon-STR_OFFGAS_PURGE" d="M 688.00 295.40 C 734.00 295.40, 734.00 295.00, 780.00 295.00 L 780.00 298.60 C 734.00 298.60, 734.00 299.00, 688.00 299.00 Z" fill="url(#ribbon-grad-STR_OFFGAS_PURGE)" fill-opacity="0.78" stroke="none" class="sankey-ribbon">
+        <title>Offgas Purge Loss: 3.0 kg/s</title>
+      </path>
+    </g>
+    <g id="node-bars">
+      <rect id="node-bar-NODE_FEED" x="70.0" y="200.0" width="28.0" height="120.0" rx="5" fill="#10B981" stroke="#0B0F19" stroke-width="1.5" class="node-bar">
+        <title>Feed Preparation Throughput: 100.0 kg/s</title>
+      </rect>
+      <rect id="node-bar-NODE_REACTION" x="260.0" y="179.0" width="28.0" height="162.0" rx="5" fill="#06B6D4" stroke="#0B0F19" stroke-width="1.5" class="node-bar">
+        <title>Reaction Section Throughput: 135.0 kg/s</title>
+      </rect>
+      <rect id="node-bar-NODE_SEPARATION" x="460.0" y="179.0" width="28.0" height="162.0" rx="5" fill="#6366F1" stroke="#0B0F19" stroke-width="1.5" class="node-bar">
+        <title>Separation Train Throughput: 135.0 kg/s</title>
+      </rect>
+      <rect id="node-bar-NODE_RECYCLE" x="360.0" y="510.0" width="28.0" height="42.0" rx="5" fill="#F59E0B" stroke="#0B0F19" stroke-width="1.5" class="node-bar">
+        <title>Recycle System Throughput: 35.0 kg/s</title>
+      </rect>
+      <rect id="node-bar-NODE_PRODUCT" x="660.0" y="221.0" width="28.0" height="78.0" rx="5" fill="#EF4444" stroke="#0B0F19" stroke-width="1.5" class="node-bar">
+        <title>Final Product &amp; Purge Throughput: 65.0 kg/s</title>
+      </rect>
+    </g>
+    <g id="node-badges">
+      <g id="badge-NODE_FEED" class="node-badge-group">
+        <rect x="16.5" y="153.0" width="135.0" height="38.0" rx="6" fill="#0B0F19" fill-opacity="0.95" stroke="#10B981" stroke-width="1.5" class="node-badge"/>
+        <text x="84.0" y="168.0" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Feed Preparation</text>
+        <text x="84.0" y="183.0" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">100.0 kg/s</text>
+      </g>
+      <g id="badge-NODE_REACTION" class="node-badge-group">
+        <rect x="206.5" y="132.0" width="135.0" height="38.0" rx="6" fill="#0B0F19" fill-opacity="0.95" stroke="#06B6D4" stroke-width="1.5" class="node-badge"/>
+        <text x="274.0" y="147.0" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Reaction Section</text>
+        <text x="274.0" y="162.0" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">135.0 kg/s</text>
+      </g>
+      <g id="badge-NODE_SEPARATION" class="node-badge-group">
+        <rect x="406.5" y="132.0" width="135.0" height="38.0" rx="6" fill="#0B0F19" fill-opacity="0.95" stroke="#6366F1" stroke-width="1.5" class="node-badge"/>
+        <text x="474.0" y="147.0" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Separation Train</text>
+        <text x="474.0" y="162.0" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">135.0 kg/s</text>
+      </g>
+      <g id="badge-NODE_RECYCLE" class="node-badge-group">
+        <rect x="306.5" y="559.0" width="135.0" height="38.0" rx="6" fill="#0B0F19" fill-opacity="0.95" stroke="#F59E0B" stroke-width="1.5" class="node-badge"/>
+        <text x="374.0" y="574.0" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Recycle System</text>
+        <text x="374.0" y="589.0" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">35.0 kg/s</text>
+      </g>
+      <g id="badge-NODE_PRODUCT" class="node-badge-group">
+        <rect x="606.5" y="174.0" width="135.0" height="38.0" rx="6" fill="#0B0F19" fill-opacity="0.95" stroke="#EF4444" stroke-width="1.5" class="node-badge"/>
+        <text x="674.0" y="189.0" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Final Product &amp; Purge</text>
+        <text x="674.0" y="204.0" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">65.0 kg/s</text>
+      </g>
+    </g>
+    <g id="stream-badges">
+      <g id="stream-badge-STR_RAW_FEED" class="stream-badge-group">
+        <rect x="4.0" y="247.0" width="82.0" height="26.0" fill="#0B0F19" stroke="#38BDF8" stroke-width="2" class="stream-badge-bg"/>
+        <text x="45.0" y="264.0" text-anchor="middle" class="stream-badge-text">100.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_PREP_FEED" class="stream-badge-group">
+        <rect x="138.0" y="236.5" width="82.0" height="26.0" fill="#0B0F19" stroke="#10B981" stroke-width="1" class="stream-badge-bg"/>
+        <text x="179.0" y="253.5" text-anchor="middle" class="stream-badge-text">100.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_REACTOR_EFFLUENT" class="stream-badge-group">
+        <rect x="333.0" y="247.0" width="82.0" height="26.0" fill="#0B0F19" stroke="#06B6D4" stroke-width="1" class="stream-badge-bg"/>
+        <text x="374.0" y="264.0" text-anchor="middle" class="stream-badge-text">135.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_RECYCLE_SEP" class="stream-badge-group">
+        <rect x="397.0" y="412.5" width="82.0" height="26.0" fill="#0B0F19" stroke="#F59E0B" stroke-width="1" class="stream-badge-bg"/>
+        <text x="438.0" y="429.5" text-anchor="middle" class="stream-badge-text">35.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_RECYCLE_RETURN" class="stream-badge-group">
+        <rect x="269.0" y="412.5" width="82.0" height="26.0" fill="#0B0F19" stroke="#F59E0B" stroke-width="1" class="stream-badge-bg"/>
+        <text x="310.0" y="429.5" text-anchor="middle" class="stream-badge-text">35.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_CRUDE_OVERHEAD" class="stream-badge-group">
+        <rect x="533.0" y="226.0" width="82.0" height="26.0" fill="#0B0F19" stroke="#6366F1" stroke-width="1" class="stream-badge-bg"/>
+        <text x="574.0" y="243.0" text-anchor="middle" class="stream-badge-text">65.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_HEAVY_BYPRODUCT" class="stream-badge-group">
+        <rect x="583.0" y="316.5" width="82.0" height="26.0" fill="#0B0F19" stroke="#6366F1" stroke-width="1" class="stream-badge-bg"/>
+        <text x="624.0" y="333.5" text-anchor="middle" class="stream-badge-text">35.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_PURIFIED_PRODUCT" class="stream-badge-group">
+        <rect x="693.0" y="234.7" width="82.0" height="26.0" fill="#0B0F19" stroke="#10B981" stroke-width="1" class="stream-badge-bg"/>
+        <text x="734.0" y="251.7" text-anchor="middle" class="stream-badge-text">62.0 kg/s</text>
+      </g>
+      <g id="stream-badge-STR_OFFGAS_PURGE" class="stream-badge-group">
+        <rect x="693.0" y="284.0" width="82.0" height="26.0" fill="#0B0F19" stroke="#EF4444" stroke-width="1" class="stream-badge-bg"/>
+        <text x="734.0" y="301.0" text-anchor="middle" class="stream-badge-text">3.0 kg/s</text>
+      </g>
+    </g>
+  </g> <!-- end sankey-diagram -->
+  <g id="flow-balance-metrics-card" class="telemetry-card">
+    <rect x="830.0" y="65.0" width="340.0" height="635.0" rx="8" ry="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="850.0" y="95.0" class="hud-title">PROCESS FLOW BALANCE METRICS</text>
+    <text x="850.0" y="113.0" class="hud-subtitle">Horner OCS Dynamic Sankey Canvas Engine (W159)</text>
+    <line x1="850.0" y1="123.0" x2="1150.0" y2="123.0" stroke="#334155" stroke-width="1"/>
+
+    <!-- Row 1: Total Feed Rate -->
+    <text x="850.0" y="150.0" class="hud-label">TOTAL FEED RATE (%R1200)</text>
+    <text x="1150.0" y="150.0" text-anchor="end" class="hud-value">100.0 kg/s (1000)</text>
+
+    <!-- Row 2: Active Process Stages -->
+    <text x="850.0" y="185.0" class="hud-label">ACTIVE PROCESS STAGES (%R1201)</text>
+    <text x="1150.0" y="185.0" text-anchor="end" class="hud-value">5 Stages</text>
+
+    <!-- Row 3: Recycle Stream Flow -->
+    <text x="850.0" y="220.0" class="hud-label">RECYCLE STREAM FLOW (%R1202)</text>
+    <text x="1150.0" y="220.0" text-anchor="end" class="hud-value">35.0 kg/s (350)</text>
+
+    <!-- Row 4: Product Yield Flow -->
+    <text x="850.0" y="255.0" class="hud-label">PRODUCT YIELD FLOW (%R1203)</text>
+    <text x="1150.0" y="255.0" text-anchor="end" class="hud-value">62.0 kg/s (620)</text>
+
+    <!-- Row 5: Purge Loss Flow -->
+    <text x="850.0" y="290.0" class="hud-label">PURGE LOSS FLOW (%R1204)</text>
+    <text x="1150.0" y="290.0" text-anchor="end" class="hud-value">3.0 kg/s (30)</text>
+
+    <!-- Row 6: Max Stage Imbalance -->
+    <text x="850.0" y="325.0" class="hud-label">MAX STAGE IMBALANCE (%R1205)</text>
+    <text x="1150.0" y="325.0" text-anchor="end" class="hud-value">0.00 % (0)</text>
+
+    <!-- Row 7: Selected Stream Index -->
+    <text x="850.0" y="360.0" class="hud-label">SELECTED STREAM (%R1206)</text>
+    <text x="1150.0" y="360.0" text-anchor="end" class="hud-value">[0] Raw Feedstock In</text>
+
+    <!-- Row 8: Diagnostic Status Code -->
+    <text x="850.0" y="395.0" class="hud-label">DIAGNOSTIC STATUS (%R1207)</text>
+    <text x="1150.0" y="395.0" text-anchor="end" class="hud-value hud-code">0x0000</text>
+
+    <!-- Row 9: Safety Trip Status -->
+    <text x="850.0" y="430.0" class="hud-label">IMBALANCE TRIP COIL (%M280)</text>
+    <text x="1150.0" y="430.0" text-anchor="end" fill="#10B981" font-family="monospace" font-size="11" font-weight="700">NORMAL / CLOSED</text>
+
+    <!-- Row 10: Canvas Active Status -->
+    <text x="850.0" y="465.0" class="hud-label">CANVAS ENGINE ACTIVE (%M281)</text>
+    <text x="1150.0" y="465.0" text-anchor="end" fill="#10B981" font-family="monospace" font-size="11" font-weight="700">ACTIVE (TRUE)</text>
+
+    <!-- Separator Line -->
+    <line x1="850.0" y1="485.0" x2="1150.0" y2="485.0" stroke="#334155" stroke-width="1"/>
+
+    <!-- Process Balance Summary Box -->
+    <rect x="850.0" y="500.0" width="300.0" height="85" rx="6" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+    <text x="865.0" y="523.0" fill="#94A3B8" font-size="9" font-family="sans-serif">OVERALL MASS CONSERVATION</text>
+    <text x="865.0" y="547.0" fill="#38BDF8" font-size="16" font-family="monospace" font-weight="700">100.0% CONSERVED</text>
+    <text x="865.0" y="569.0" fill="#64748B" font-size="8.5" font-family="sans-serif">Inflow (100.0) = Prod (62.0) + Purge (3.0) + Byprod (35.0)</text>
+
+    <!-- WCAG 2.1 AAA Accessibility Scorecard -->
+    <rect x="850.0" y="600.0" width="300.0" height="75" rx="6" fill="#0B0F19" stroke="#10B981" stroke-width="1"/>
+    <text x="865.0" y="620.0" fill="#94A3B8" font-size="9" font-family="sans-serif">WCAG 2.1 AAA CONTRAST RATIO</text>
+    <text x="865.0" y="642.0" fill="#10B981" font-size="15" font-family="monospace" font-weight="700">18.30:1 (TARGET &gt; 18:1)</text>
+    <text x="865.0" y="662.0" fill="#64748B" font-size="8.5" font-family="sans-serif">Decoupled Dark Badge Verified</text>
+  </g>
+  <g id="network-metrics-card" style="display:none;"></g>
+  <g id="telemetry-hud" style="display:none;"></g>
+</svg>

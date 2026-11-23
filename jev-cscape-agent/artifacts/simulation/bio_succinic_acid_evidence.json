@@ -1,0 +1,237 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Bio-succinic acid bacterial fermentation simulation verification passed (9/9 stages passed).",
+  "data": {
+    "work_package": "W284",
+    "stages_passed": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "duration_seconds": 0.05750918388366699,
+    "elapsed_ms": 57.50918388366699,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_bacterial_growth",
+        "check": "initial_state_and_bacterial_growth",
+        "passed": true,
+        "timing_ms": 11.786000104621053,
+        "details": "Inoculation growth verified: X0=2.50 g/L -> X_final=2.5014 g/L, initial mu=0.0509 1/h, sparging %M571=True, base pump %M572=True, trip=0x0000."
+      },
+      {
+        "stage": 2,
+        "name": "glucose_and_co2_consumption_kinetics",
+        "check": "glucose_and_co2_consumption_kinetics",
+        "passed": true,
+        "timing_ms": 11.247199960052967,
+        "details": "Coupled substrate uptake kinetics verified: Glucose S0=45.00 g/L -> S_end=44.9354 g/L, glucose uptake q_s=4.597 g/(L*h), carboxylation CO2 uptake q_CO2=6.782 mM/h, gas-liquid transfer CTR=2400.0 mM/h."
+      },
+      {
+        "stage": 3,
+        "name": "succinic_acid_production_and_yield",
+        "check": "succinic_acid_production_and_yield",
+        "passed": true,
+        "timing_ms": 14.803600031882524,
+        "details": "Succinic acid synthesis verified: P_succ_0=55.00 g/L -> P_succ_end=55.0113 g/L, r_succ=0.801 g/(L*h), yield=20.0%, %R2454=550, %R2457 upper byte=200 (200 = 20.0%)."
+      },
+      {
+        "stage": 4,
+        "name": "organic_acid_byproduct_branching",
+        "check": "organic_acid_byproduct_branching",
+        "passed": true,
+        "timing_ms": 0.25999988429248333,
+        "details": "Metabolic byproduct branching verified: Normal CO2 (80mM): r_succ=0.801, r_by1(acetate/formate)=0.417, r_by2(lactate)=0.115 g/(L*h); Low CO2 (5mM): r_succ dropped to 0.305, r_by2 shunted to 0.269 g/(L*h) (>2x shunt)."
+      },
+      {
+        "stage": 5,
+        "name": "ph_neutralization_and_base_dosing",
+        "check": "ph_neutralization_and_base_dosing",
+        "passed": true,
+        "timing_ms": 13.478900073096156,
+        "details": "pH neutralization dynamics verified: Base pump active: rate=2.18 L/h maintains buffered pH=6.80; pump failure: titration rate=0.00 L/h leads to unneutralized acid accumulation and pH drop to 6.55."
+      },
+      {
+        "stage": 6,
+        "name": "safety_interlocks_and_fault_trips",
+        "check": "safety_interlocks_and_fault_trips",
+        "passed": true,
+        "timing_ms": 2.0280000753700733,
+        "details": "Safety interlocks verified in strict priority: 0xF701 (CO2 starvation), 0xF702 (acidification runaway), 0xF703 (thermal excursion), 0xF704 (contamination lactic spike); all enforce feed/sparge stop (%M571=False, %M572=False) and alarm assertion (%M573=True); priority dominance verified."
+      },
+      {
+        "stage": 7,
+        "name": "carbon_and_mass_conservation_residuals",
+        "check": "carbon_and_mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.5097999237477779,
+        "details": "Strict conservation tracking verified: carbon residual=0.00e+00 kg/s, stoichiometric residual=0.00e+00 kg/s, total mass residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 1.04160001501441,
+        "details": "Horner OCS RegisterTable sync verified: %R2450..%R2456=[370, 150, 450, 800, 550, 120, 25], %R2457=0xC801 (yield x10=200, state=1), coils %M571..%M573=[True, True, False]; fault trip coil interlocks confirmed."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 3.0459000263363123,
+        "details": "BioSuccinicAcidSync POU AST validated with STParser & SecurityGuard; forbidden ladder constructs (contacts ---[ ]---, coils ---( )---, rung delimiters) rejected with LadderForbiddenError."
+      }
+    ],
+    "results": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_bacterial_growth",
+        "check": "initial_state_and_bacterial_growth",
+        "passed": true,
+        "timing_ms": 11.786000104621053,
+        "details": "Inoculation growth verified: X0=2.50 g/L -> X_final=2.5014 g/L, initial mu=0.0509 1/h, sparging %M571=True, base pump %M572=True, trip=0x0000."
+      },
+      {
+        "stage": 2,
+        "name": "glucose_and_co2_consumption_kinetics",
+        "check": "glucose_and_co2_consumption_kinetics",
+        "passed": true,
+        "timing_ms": 11.247199960052967,
+        "details": "Coupled substrate uptake kinetics verified: Glucose S0=45.00 g/L -> S_end=44.9354 g/L, glucose uptake q_s=4.597 g/(L*h), carboxylation CO2 uptake q_CO2=6.782 mM/h, gas-liquid transfer CTR=2400.0 mM/h."
+      },
+      {
+        "stage": 3,
+        "name": "succinic_acid_production_and_yield",
+        "check": "succinic_acid_production_and_yield",
+        "passed": true,
+        "timing_ms": 14.803600031882524,
+        "details": "Succinic acid synthesis verified: P_succ_0=55.00 g/L -> P_succ_end=55.0113 g/L, r_succ=0.801 g/(L*h), yield=20.0%, %R2454=550, %R2457 upper byte=200 (200 = 20.0%)."
+      },
+      {
+        "stage": 4,
+        "name": "organic_acid_byproduct_branching",
+        "check": "organic_acid_byproduct_branching",
+        "passed": true,
+        "timing_ms": 0.25999988429248333,
+        "details": "Metabolic byproduct branching verified: Normal CO2 (80mM): r_succ=0.801, r_by1(acetate/formate)=0.417, r_by2(lactate)=0.115 g/(L*h); Low CO2 (5mM): r_succ dropped to 0.305, r_by2 shunted to 0.269 g/(L*h) (>2x shunt)."
+      },
+      {
+        "stage": 5,
+        "name": "ph_neutralization_and_base_dosing",
+        "check": "ph_neutralization_and_base_dosing",
+        "passed": true,
+        "timing_ms": 13.478900073096156,
+        "details": "pH neutralization dynamics verified: Base pump active: rate=2.18 L/h maintains buffered pH=6.80; pump failure: titration rate=0.00 L/h leads to unneutralized acid accumulation and pH drop to 6.55."
+      },
+      {
+        "stage": 6,
+        "name": "safety_interlocks_and_fault_trips",
+        "check": "safety_interlocks_and_fault_trips",
+        "passed": true,
+        "timing_ms": 2.0280000753700733,
+        "details": "Safety interlocks verified in strict priority: 0xF701 (CO2 starvation), 0xF702 (acidification runaway), 0xF703 (thermal excursion), 0xF704 (contamination lactic spike); all enforce feed/sparge stop (%M571=False, %M572=False) and alarm assertion (%M573=True); priority dominance verified."
+      },
+      {
+        "stage": 7,
+        "name": "carbon_and_mass_conservation_residuals",
+        "check": "carbon_and_mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.5097999237477779,
+        "details": "Strict conservation tracking verified: carbon residual=0.00e+00 kg/s, stoichiometric residual=0.00e+00 kg/s, total mass residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 1.04160001501441,
+        "details": "Horner OCS RegisterTable sync verified: %R2450..%R2456=[370, 150, 450, 800, 550, 120, 25], %R2457=0xC801 (yield x10=200, state=1), coils %M571..%M573=[True, True, False]; fault trip coil interlocks confirmed."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 3.0459000263363123,
+        "details": "BioSuccinicAcidSync POU AST validated with STParser & SecurityGuard; forbidden ladder constructs (contacts ---[ ]---, coils ---( )---, rung delimiters) rejected with LadderForbiddenError."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_bacterial_growth",
+        "check": "initial_state_and_bacterial_growth",
+        "passed": true,
+        "timing_ms": 11.786000104621053,
+        "details": "Inoculation growth verified: X0=2.50 g/L -> X_final=2.5014 g/L, initial mu=0.0509 1/h, sparging %M571=True, base pump %M572=True, trip=0x0000."
+      },
+      {
+        "stage": 2,
+        "name": "glucose_and_co2_consumption_kinetics",
+        "check": "glucose_and_co2_consumption_kinetics",
+        "passed": true,
+        "timing_ms": 11.247199960052967,
+        "details": "Coupled substrate uptake kinetics verified: Glucose S0=45.00 g/L -> S_end=44.9354 g/L, glucose uptake q_s=4.597 g/(L*h), carboxylation CO2 uptake q_CO2=6.782 mM/h, gas-liquid transfer CTR=2400.0 mM/h."
+      },
+      {
+        "stage": 3,
+        "name": "succinic_acid_production_and_yield",
+        "check": "succinic_acid_production_and_yield",
+        "passed": true,
+        "timing_ms": 14.803600031882524,
+        "details": "Succinic acid synthesis verified: P_succ_0=55.00 g/L -> P_succ_end=55.0113 g/L, r_succ=0.801 g/(L*h), yield=20.0%, %R2454=550, %R2457 upper byte=200 (200 = 20.0%)."
+      },
+      {
+        "stage": 4,
+        "name": "organic_acid_byproduct_branching",
+        "check": "organic_acid_byproduct_branching",
+        "passed": true,
+        "timing_ms": 0.25999988429248333,
+        "details": "Metabolic byproduct branching verified: Normal CO2 (80mM): r_succ=0.801, r_by1(acetate/formate)=0.417, r_by2(lactate)=0.115 g/(L*h); Low CO2 (5mM): r_succ dropped to 0.305, r_by2 shunted to 0.269 g/(L*h) (>2x shunt)."
+      },
+      {
+        "stage": 5,
+        "name": "ph_neutralization_and_base_dosing",
+        "check": "ph_neutralization_and_base_dosing",
+        "passed": true,
+        "timing_ms": 13.478900073096156,
+        "details": "pH neutralization dynamics verified: Base pump active: rate=2.18 L/h maintains buffered pH=6.80; pump failure: titration rate=0.00 L/h leads to unneutralized acid accumulation and pH drop to 6.55."
+      },
+      {
+        "stage": 6,
+        "name": "safety_interlocks_and_fault_trips",
+        "check": "safety_interlocks_and_fault_trips",
+        "passed": true,
+        "timing_ms": 2.0280000753700733,
+        "details": "Safety interlocks verified in strict priority: 0xF701 (CO2 starvation), 0xF702 (acidification runaway), 0xF703 (thermal excursion), 0xF704 (contamination lactic spike); all enforce feed/sparge stop (%M571=False, %M572=False) and alarm assertion (%M573=True); priority dominance verified."
+      },
+      {
+        "stage": 7,
+        "name": "carbon_and_mass_conservation_residuals",
+        "check": "carbon_and_mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.5097999237477779,
+        "details": "Strict conservation tracking verified: carbon residual=0.00e+00 kg/s, stoichiometric residual=0.00e+00 kg/s, total mass residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 1.04160001501441,
+        "details": "Horner OCS RegisterTable sync verified: %R2450..%R2456=[370, 150, 450, 800, 550, 120, 25], %R2457=0xC801 (yield x10=200, state=1), coils %M571..%M573=[True, True, False]; fault trip coil interlocks confirmed."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 3.0459000263363123,
+        "details": "BioSuccinicAcidSync POU AST validated with STParser & SecurityGuard; forbidden ladder constructs (contacts ---[ ]---, coils ---( )---, rung delimiters) rejected with LadderForbiddenError."
+      }
+    ]
+  }
+}

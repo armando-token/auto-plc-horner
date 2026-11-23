@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750" style="background-color: #0F172A; font-family: Segoe UI, -apple-system, sans-serif;">
+<defs>
+  <filter id="halo-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="3.5" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+<rect width="1200" height="750" fill="#0F172A"/>
+<g id="canvas-header">
+  <text x="30" y="42" fill="#F8FAFC" font-size="18" font-weight="bold">CSCAPE HMI - DYNAMIC HORIZON CHART MULTI-BAND OFFSET DENSITY CANVAS</text>
+  <text x="30" y="65" fill="#94A3B8" font-size="12">Work Package W144 | Gate G9 Screen Engine / Gate G2 Live GUI | Saito-Few Band Folding</text>
+  <rect x="790" y="28" width="115" height="34" rx="6" fill="#0B0F19" stroke="#334155"/>  <text x="847" y="50" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">BANDS: 3</text>
+  <rect x="915" y="28" width="130" height="34" rx="6" fill="#0B0F19" stroke="#107C41"/>  <text x="980" y="50" fill="#2ECC71" font-size="12" font-weight="bold" text-anchor="middle">0x0000 OK</text>
+  <rect x="1055" y="28" width="115" height="34" rx="6" fill="#0B0F19" stroke="#107C41"/>  <text x="1112" y="50" fill="#2ECC71" font-size="12" font-weight="bold" text-anchor="middle">ACTIVE %M246</text>
+</g>
+<g id="horizon-tracks">
+  <g id="track-channel-0" class="horizon-track">
+    <rect x="30" y="90" width="190" height="120" rx="6" fill="#1E293B" stroke="#334155"/>    <text x="45" y="116" fill="#F8FAFC" font-size="14" font-weight="bold">CH1: CORE TEMP</text>    <text x="45" y="135" fill="#94A3B8" font-size="11">TAG: TIC-101 | °C</text>    <text x="45" y="164" fill="#38BDF8" font-size="20" font-weight="bold">82.5 °C</text>    <text x="45" y="183" fill="#94A3B8" font-size="10">Band Span: 40.0 | Max: 120.0</text>    <rect x="45" y="190" width="80" height="14" rx="3" fill="#107C41"/>    <text x="85" y="201" fill="#F8FAFC" font-size="9" font-weight="bold" text-anchor="middle">NOMINAL</text>
+    <rect x="230.0" y="90" width="940.0" height="120" rx="6" fill="#0B132B" stroke="#334155"/>
+    <clipPath id="track-clip-0">
+      <rect x="230.0" y="90" width="940.0" height="120" rx="6"/>
+    </clipPath>
+    <g clip-path="url(#track-clip-0)">
+      <line x1="230.0" y1="90" x2="230.0" y2="210" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="390.0" y1="90" x2="390.0" y2="210" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="550.0" y1="90" x2="550.0" y2="210" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="710.0" y1="90" x2="710.0" y2="210" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="870.0" y1="90" x2="870.0" y2="210" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="1030.0" y1="90" x2="1030.0" y2="210" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <path id="ch0-pos-band1" d="M 230.0,210.0 L 230.0,90.0 L 250.0,90.0 L 270.0,90.0 L 290.0,90.0 L 310.0,90.0 L 330.0,90.0 L 350.0,90.0 L 370.0,90.0 L 390.0,90.0 L 410.0,90.0 L 430.0,90.0 L 450.0,90.0 L 470.0,90.0 L 490.0,90.0 L 510.0,90.0 L 530.0,90.0 L 550.0,90.0 L 570.0,90.0 L 590.0,90.0 L 610.0,90.0 L 630.0,90.0 L 650.0,90.0 L 670.0,90.0 L 690.0,90.0 L 710.0,90.0 L 730.0,90.0 L 750.0,90.0 L 770.0,90.0 L 790.0,104.0 L 810.0,121.1 L 830.0,136.3 L 850.0,148.9 L 870.0,158.2 L 890.0,163.7 L 910.0,164.7 L 930.0,161.2 L 950.0,153.0 L 970.0,140.5 L 990.0,124.0 L 1010.0,104.1 L 1030.0,90.0 L 1050.0,90.0 L 1070.0,90.0 L 1090.0,90.0 L 1110.0,90.0 L 1130.0,90.0 L 1150.0,90.0 L 1170.0,90.0 L 1170.0,210.0 Z" fill="#00B4D8" fill-opacity="0.95"/>
+      <path id="ch0-pos-band2" d="M 230.0,210.0 L 230.0,114.0 L 250.0,99.9 L 270.0,90.0 L 290.0,90.0 L 310.0,90.0 L 330.0,90.0 L 350.0,90.0 L 370.0,90.0 L 390.0,90.0 L 410.0,90.0 L 430.0,90.0 L 450.0,90.0 L 470.0,90.0 L 490.0,90.0 L 510.0,90.0 L 530.0,90.0 L 550.0,90.7 L 570.0,93.1 L 590.0,96.5 L 610.0,101.3 L 630.0,107.7 L 650.0,116.1 L 670.0,126.7 L 690.0,139.4 L 710.0,154.0 L 730.0,170.4 L 750.0,187.9 L 770.0,206.0 L 790.0,210.0 L 810.0,210.0 L 830.0,210.0 L 850.0,210.0 L 870.0,210.0 L 890.0,210.0 L 910.0,210.0 L 930.0,210.0 L 950.0,210.0 L 970.0,210.0 L 990.0,210.0 L 1010.0,210.0 L 1030.0,201.7 L 1050.0,177.6 L 1070.0,152.9 L 1090.0,128.5 L 1110.0,105.5 L 1130.0,90.0 L 1150.0,90.0 L 1170.0,90.0 L 1170.0,210.0 Z" fill="#0077B6" fill-opacity="0.95"/>
+      <path id="ch0-pos-band3" d="M 230.0,210.0 L 230.0,210.0 L 250.0,210.0 L 270.0,208.6 L 290.0,200.1 L 310.0,194.4 L 330.0,191.2 L 350.0,190.1 L 370.0,190.7 L 390.0,192.4 L 410.0,194.9 L 430.0,197.7 L 450.0,200.4 L 470.0,202.9 L 490.0,205.0 L 510.0,206.9 L 530.0,208.7 L 550.0,210.0 L 570.0,210.0 L 590.0,210.0 L 610.0,210.0 L 630.0,210.0 L 650.0,210.0 L 670.0,210.0 L 690.0,210.0 L 710.0,210.0 L 730.0,210.0 L 750.0,210.0 L 770.0,210.0 L 790.0,210.0 L 810.0,210.0 L 830.0,210.0 L 850.0,210.0 L 870.0,210.0 L 890.0,210.0 L 910.0,210.0 L 930.0,210.0 L 950.0,210.0 L 970.0,210.0 L 990.0,210.0 L 1010.0,210.0 L 1030.0,210.0 L 1050.0,210.0 L 1070.0,210.0 L 1090.0,210.0 L 1110.0,210.0 L 1130.0,204.6 L 1150.0,186.7 L 1170.0,202.5 L 1170.0,210.0 Z" fill="#023E8A" fill-opacity="0.95"/>
+      <line id="baseline-marker-ch0" x1="230.0" y1="210" x2="1170.0" y2="210" stroke="#64748B" stroke-width="1.5"/>
+    </g>
+  </g>
+  <g id="track-channel-1" class="horizon-track">
+    <rect x="30" y="220" width="190" height="120" rx="6" fill="#1E293B" stroke="#334155"/>    <text x="45" y="246" fill="#F8FAFC" font-size="14" font-weight="bold">CH2: LOOP PRESSURE</text>    <text x="45" y="265" fill="#94A3B8" font-size="11">TAG: PIC-102 | bar</text>    <text x="45" y="294" fill="#38BDF8" font-size="20" font-weight="bold">18.5 bar</text>    <text x="45" y="313" fill="#94A3B8" font-size="10">Band Span: 10.0 | Max: 30.0</text>    <rect x="45" y="320" width="80" height="14" rx="3" fill="#107C41"/>    <text x="85" y="331" fill="#F8FAFC" font-size="9" font-weight="bold" text-anchor="middle">NOMINAL</text>
+    <rect x="230.0" y="220" width="940.0" height="120" rx="6" fill="#0B132B" stroke="#334155"/>
+    <clipPath id="track-clip-1">
+      <rect x="230.0" y="220" width="940.0" height="120" rx="6"/>
+    </clipPath>
+    <g clip-path="url(#track-clip-1)">
+      <line x1="230.0" y1="220" x2="230.0" y2="340" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="390.0" y1="220" x2="390.0" y2="340" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="550.0" y1="220" x2="550.0" y2="340" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="710.0" y1="220" x2="710.0" y2="340" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="870.0" y1="220" x2="870.0" y2="340" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="1030.0" y1="220" x2="1030.0" y2="340" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <path id="ch1-pos-band1" d="M 230.0,340.0 L 230.0,220.0 L 250.0,220.0 L 270.0,220.0 L 290.0,220.0 L 310.0,220.0 L 330.0,220.0 L 350.0,220.0 L 370.0,220.0 L 390.0,220.0 L 410.0,220.0 L 430.0,220.0 L 450.0,220.0 L 470.0,220.0 L 490.0,220.0 L 510.0,220.0 L 530.0,220.0 L 550.0,220.0 L 570.0,220.0 L 590.0,220.0 L 610.0,220.0 L 630.0,220.0 L 650.0,221.6 L 670.0,241.7 L 690.0,257.2 L 710.0,265.4 L 730.0,264.0 L 750.0,252.6 L 770.0,231.9 L 790.0,220.0 L 810.0,220.0 L 830.0,220.0 L 850.0,220.0 L 870.0,220.0 L 890.0,220.0 L 910.0,220.0 L 930.0,220.0 L 950.0,220.0 L 970.0,220.0 L 990.0,220.0 L 1010.0,220.0 L 1030.0,220.0 L 1050.0,220.0 L 1070.0,220.0 L 1090.0,220.0 L 1110.0,220.0 L 1130.0,220.0 L 1150.0,220.0 L 1170.0,220.0 L 1170.0,340.0 Z" fill="#00B4D8" fill-opacity="0.95"/>
+      <path id="ch1-pos-band2" d="M 230.0,340.0 L 230.0,268.0 L 250.0,234.3 L 270.0,220.0 L 290.0,220.0 L 310.0,220.0 L 330.0,220.0 L 350.0,220.0 L 370.0,220.0 L 390.0,220.0 L 410.0,220.0 L 430.0,222.6 L 450.0,235.6 L 470.0,244.7 L 490.0,250.4 L 510.0,253.7 L 530.0,256.6 L 550.0,261.3 L 570.0,269.3 L 590.0,281.9 L 610.0,299.1 L 630.0,319.7 L 650.0,340.0 L 670.0,340.0 L 690.0,340.0 L 710.0,340.0 L 730.0,340.0 L 750.0,340.0 L 770.0,340.0 L 790.0,323.7 L 810.0,291.2 L 830.0,257.8 L 850.0,227.2 L 870.0,220.0 L 890.0,220.0 L 910.0,220.0 L 930.0,220.0 L 950.0,220.0 L 970.0,220.0 L 990.0,220.0 L 1010.0,220.0 L 1030.0,222.2 L 1050.0,226.8 L 1070.0,228.9 L 1090.0,229.7 L 1110.0,231.3 L 1130.0,235.7 L 1150.0,245.0 L 1170.0,238.0 L 1170.0,340.0 Z" fill="#0077B6" fill-opacity="0.95"/>
+      <path id="ch1-pos-band3" d="M 230.0,340.0 L 230.0,340.0 L 250.0,340.0 L 270.0,324.3 L 290.0,300.9 L 310.0,286.1 L 330.0,280.8 L 350.0,284.4 L 370.0,295.0 L 390.0,310.1 L 410.0,326.9 L 430.0,340.0 L 450.0,340.0 L 470.0,340.0 L 490.0,340.0 L 510.0,340.0 L 530.0,340.0 L 550.0,340.0 L 570.0,340.0 L 590.0,340.0 L 610.0,340.0 L 630.0,340.0 L 650.0,340.0 L 670.0,340.0 L 690.0,340.0 L 710.0,340.0 L 730.0,340.0 L 750.0,340.0 L 770.0,340.0 L 790.0,340.0 L 810.0,340.0 L 830.0,340.0 L 850.0,340.0 L 870.0,322.4 L 890.0,305.3 L 910.0,296.9 L 930.0,296.4 L 950.0,302.6 L 970.0,312.5 L 990.0,323.9 L 1010.0,334.4 L 1030.0,340.0 L 1050.0,340.0 L 1070.0,340.0 L 1090.0,340.0 L 1110.0,340.0 L 1130.0,340.0 L 1150.0,340.0 L 1170.0,340.0 L 1170.0,340.0 Z" fill="#023E8A" fill-opacity="0.95"/>
+      <line id="baseline-marker-ch1" x1="230.0" y1="340" x2="1170.0" y2="340" stroke="#64748B" stroke-width="1.5"/>
+    </g>
+  </g>
+  <g id="track-channel-2" class="horizon-track">
+    <rect x="30" y="350" width="190" height="120" rx="6" fill="#1E293B" stroke="#334155"/>    <text x="45" y="376" fill="#F8FAFC" font-size="14" font-weight="bold">CH3: COOLANT FLOW</text>    <text x="45" y="395" fill="#94A3B8" font-size="11">TAG: FIC-103 | L/min</text>    <text x="45" y="424" fill="#38BDF8" font-size="20" font-weight="bold">95.0 L/min</text>    <text x="45" y="443" fill="#94A3B8" font-size="10">Band Span: 50.0 | Max: 150.0</text>    <rect x="45" y="450" width="80" height="14" rx="3" fill="#107C41"/>    <text x="85" y="461" fill="#F8FAFC" font-size="9" font-weight="bold" text-anchor="middle">NOMINAL</text>
+    <rect x="230.0" y="350" width="940.0" height="120" rx="6" fill="#0B132B" stroke="#334155"/>
+    <clipPath id="track-clip-2">
+      <rect x="230.0" y="350" width="940.0" height="120" rx="6"/>
+    </clipPath>
+    <g clip-path="url(#track-clip-2)">
+      <line x1="230.0" y1="350" x2="230.0" y2="470" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="390.0" y1="350" x2="390.0" y2="470" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="550.0" y1="350" x2="550.0" y2="470" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="710.0" y1="350" x2="710.0" y2="470" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="870.0" y1="350" x2="870.0" y2="470" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="1030.0" y1="350" x2="1030.0" y2="470" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <path id="ch2-neg-band1" d="M 230.0,470.0 L 230.0,470.0 L 250.0,470.0 L 270.0,470.0 L 290.0,470.0 L 310.0,470.0 L 330.0,470.0 L 350.0,470.0 L 370.0,470.0 L 390.0,470.0 L 410.0,470.0 L 425.9,470.0 L 430.0,402.8 L 450.0,409.7 L 470.0,414.9 L 490.0,417.2 L 510.0,415.9 L 530.0,411.4 L 550.0,404.8 L 554.4,470.0 L 570.0,470.0 L 590.0,470.0 L 610.0,470.0 L 630.0,470.0 L 650.0,470.0 L 670.0,470.0 L 690.0,470.0 L 710.0,470.0 L 730.0,470.0 L 750.0,470.0 L 770.0,470.0 L 790.0,470.0 L 810.0,470.0 L 830.0,470.0 L 850.0,470.0 L 870.0,470.0 L 890.0,470.0 L 910.0,470.0 L 930.0,470.0 L 950.0,470.0 L 970.0,470.0 L 990.0,470.0 L 1010.0,470.0 L 1030.0,470.0 L 1050.0,470.0 L 1070.0,470.0 L 1090.0,470.0 L 1110.0,470.0 L 1130.0,470.0 L 1150.0,470.0 L 1170.0,470.0 L 1170.0,470.0 Z" fill="#F39C12" fill-opacity="0.95"/>
+      <path id="ch2-pos-band1" d="M 230.0,470.0 L 230.0,350.0 L 250.0,350.0 L 270.0,350.0 L 290.0,350.0 L 310.0,350.0 L 330.0,350.0 L 350.0,350.0 L 370.0,350.0 L 390.0,350.0 L 410.0,350.0 L 425.9,470.0 L 430.0,470.0 L 450.0,470.0 L 470.0,470.0 L 490.0,470.0 L 510.0,470.0 L 530.0,470.0 L 550.0,470.0 L 554.4,470.0 L 570.0,350.0 L 590.0,350.0 L 610.0,350.0 L 630.0,350.0 L 650.0,350.0 L 670.0,350.0 L 690.0,355.7 L 710.0,376.5 L 730.0,394.4 L 750.0,408.6 L 770.0,417.9 L 790.0,421.9 L 810.0,420.2 L 830.0,412.9 L 850.0,400.6 L 870.0,384.1 L 890.0,364.3 L 910.0,350.0 L 930.0,350.0 L 950.0,350.0 L 970.0,350.0 L 990.0,350.0 L 1010.0,350.0 L 1030.0,350.0 L 1050.0,350.0 L 1070.0,350.0 L 1090.0,350.0 L 1110.0,350.0 L 1130.0,350.0 L 1150.0,350.0 L 1170.0,350.0 L 1170.0,470.0 Z" fill="#00B4D8" fill-opacity="0.95"/>
+      <path id="ch2-pos-band2" d="M 230.0,470.0 L 230.0,386.0 L 250.0,369.4 L 270.0,355.7 L 290.0,350.0 L 310.0,350.0 L 330.0,350.0 L 350.0,350.0 L 370.0,350.0 L 390.0,350.0 L 410.0,350.0 L 425.9,470.0 L 430.0,470.0 L 450.0,470.0 L 470.0,470.0 L 490.0,470.0 L 510.0,470.0 L 530.0,470.0 L 550.0,470.0 L 554.4,470.0 L 570.0,358.2 L 590.0,372.5 L 610.0,389.7 L 630.0,409.4 L 650.0,431.0 L 670.0,453.5 L 690.0,470.0 L 710.0,470.0 L 730.0,470.0 L 750.0,470.0 L 770.0,470.0 L 790.0,470.0 L 810.0,470.0 L 830.0,470.0 L 850.0,470.0 L 870.0,470.0 L 890.0,470.0 L 910.0,462.5 L 930.0,440.0 L 950.0,417.9 L 970.0,397.3 L 990.0,379.0 L 1010.0,363.5 L 1030.0,351.2 L 1050.0,350.0 L 1070.0,350.0 L 1090.0,350.0 L 1110.0,350.0 L 1130.0,350.0 L 1150.0,350.0 L 1170.0,362.0 L 1170.0,470.0 Z" fill="#0077B6" fill-opacity="0.95"/>
+      <path id="ch2-pos-band3" d="M 230.0,470.0 L 230.0,470.0 L 250.0,470.0 L 270.0,470.0 L 290.0,465.2 L 310.0,457.5 L 330.0,452.3 L 350.0,449.1 L 370.0,447.2 L 390.0,446.4 L 410.0,446.0 L 425.9,470.0 L 430.0,470.0 L 450.0,470.0 L 470.0,470.0 L 490.0,470.0 L 510.0,470.0 L 530.0,470.0 L 550.0,470.0 L 554.4,470.0 L 570.0,470.0 L 590.0,470.0 L 610.0,470.0 L 630.0,470.0 L 650.0,470.0 L 670.0,470.0 L 690.0,470.0 L 710.0,470.0 L 730.0,470.0 L 750.0,470.0 L 770.0,470.0 L 790.0,470.0 L 810.0,470.0 L 830.0,470.0 L 850.0,470.0 L 870.0,470.0 L 890.0,470.0 L 910.0,470.0 L 930.0,470.0 L 950.0,470.0 L 970.0,470.0 L 990.0,470.0 L 1010.0,470.0 L 1030.0,470.0 L 1050.0,461.8 L 1070.0,455.1 L 1090.0,450.8 L 1110.0,448.2 L 1130.0,446.8 L 1150.0,446.2 L 1170.0,470.0 L 1170.0,470.0 Z" fill="#023E8A" fill-opacity="0.95"/>
+      <line id="baseline-marker-ch2" x1="230.0" y1="470" x2="1170.0" y2="470" stroke="#64748B" stroke-width="1.5"/>
+    </g>
+  </g>
+  <g id="track-channel-3" class="horizon-track">
+    <rect x="30" y="480" width="190" height="120" rx="6" fill="#1E293B" stroke="#334155"/>    <text x="45" y="506" fill="#F8FAFC" font-size="14" font-weight="bold">CH4: VIBRATION RMS</text>    <text x="45" y="525" fill="#94A3B8" font-size="11">TAG: VIB-104 | mm/s</text>    <text x="45" y="554" fill="#38BDF8" font-size="20" font-weight="bold">4.2 mm/s</text>    <text x="45" y="573" fill="#94A3B8" font-size="10">Band Span: 5.0 | Max: 15.0</text>    <rect x="45" y="580" width="80" height="14" rx="3" fill="#107C41"/>    <text x="85" y="591" fill="#F8FAFC" font-size="9" font-weight="bold" text-anchor="middle">NOMINAL</text>
+    <rect x="230.0" y="480" width="940.0" height="120" rx="6" fill="#0B132B" stroke="#334155"/>
+    <clipPath id="track-clip-3">
+      <rect x="230.0" y="480" width="940.0" height="120" rx="6"/>
+    </clipPath>
+    <g clip-path="url(#track-clip-3)">
+      <line x1="230.0" y1="480" x2="230.0" y2="600" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="390.0" y1="480" x2="390.0" y2="600" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="550.0" y1="480" x2="550.0" y2="600" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="710.0" y1="480" x2="710.0" y2="600" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="870.0" y1="480" x2="870.0" y2="600" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <line x1="1030.0" y1="480" x2="1030.0" y2="600" stroke="#1E293B" stroke-dasharray="3,3"/>
+      <path id="ch3-pos-band1" d="M 230.0,600.0 L 230.0,487.2 L 250.0,480.0 L 270.0,480.0 L 290.0,480.0 L 310.0,480.0 L 330.0,480.0 L 350.0,480.0 L 370.0,480.0 L 390.0,480.0 L 410.0,480.0 L 430.0,480.0 L 450.0,480.0 L 470.0,480.0 L 490.0,480.0 L 510.0,480.0 L 530.0,480.0 L 550.0,480.0 L 570.0,480.0 L 590.0,480.0 L 610.0,480.0 L 630.0,480.0 L 650.0,480.0 L 670.0,480.0 L 690.0,480.0 L 710.0,480.0 L 730.0,480.0 L 750.0,480.0 L 770.0,484.1 L 790.0,480.0 L 810.0,480.0 L 830.0,480.0 L 850.0,480.0 L 870.0,480.0 L 890.0,480.0 L 910.0,480.0 L 930.0,480.0 L 950.0,480.0 L 970.0,480.0 L 990.0,480.0 L 1010.0,480.0 L 1030.0,481.0 L 1050.0,480.0 L 1070.0,480.0 L 1090.0,480.0 L 1110.0,480.0 L 1130.0,480.0 L 1150.0,480.0 L 1170.0,499.2 L 1170.0,600.0 Z" fill="#00B4D8" fill-opacity="0.95"/>
+      <path id="ch3-pos-band2" d="M 230.0,600.0 L 230.0,600.0 L 250.0,588.0 L 270.0,575.5 L 290.0,569.3 L 310.0,567.4 L 330.0,567.6 L 350.0,568.6 L 370.0,568.8 L 390.0,568.1 L 410.0,567.4 L 430.0,567.8 L 450.0,572.2 L 470.0,582.0 L 490.0,598.1 L 510.0,595.4 L 530.0,580.1 L 550.0,571.2 L 570.0,567.6 L 590.0,567.4 L 610.0,568.1 L 630.0,568.8 L 650.0,568.3 L 670.0,567.6 L 690.0,567.4 L 710.0,569.8 L 730.0,577.0 L 750.0,590.4 L 770.0,600.0 L 790.0,585.8 L 810.0,574.3 L 830.0,568.8 L 850.0,567.1 L 870.0,567.8 L 890.0,568.6 L 910.0,568.8 L 930.0,567.8 L 950.0,567.1 L 970.0,568.3 L 990.0,573.1 L 1010.0,583.9 L 1030.0,600.0 L 1050.0,592.8 L 1070.0,578.4 L 1090.0,570.5 L 1110.0,567.4 L 1130.0,567.4 L 1150.0,568.3 L 1170.0,600.0 L 1170.0,600.0 Z" fill="#0077B6" fill-opacity="0.95"/>
+      <line id="baseline-marker-ch3" x1="230.0" y1="600" x2="1170.0" y2="600" stroke="#64748B" stroke-width="1.5"/>
+    </g>
+  </g>
+</g>
+<g id="time-scrub-cursor">
+  <line class="time-scrub-line" x1="710.0" y1="85" x2="710.0" y2="605" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <rect x="675.0" y="70" width="70" height="18" rx="4" fill="#0B0F19" stroke="#38BDF8"/>  <text x="710.0" y="83" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">T = 24m</text>
+  <circle cx="710.0" cy="90.0" r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1.5"/>  <text x="718.0" y="84.0" fill="#F8FAFC" font-size="11" font-weight="bold">58.7 °C</text>
+  <circle cx="710.0" cy="265.4" r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1.5"/>  <text x="718.0" y="259.4" fill="#F8FAFC" font-size="11" font-weight="bold">6.2 bar</text>
+  <circle cx="710.0" cy="376.5" r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1.5"/>  <text x="718.0" y="370.5" fill="#F8FAFC" font-size="11" font-weight="bold">39.0 L/min</text>
+  <circle cx="710.0" cy="480.0" r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1.5"/>  <text x="718.0" y="474.0" fill="#F8FAFC" font-size="11" font-weight="bold">6.3 mm/s</text>
+</g>
+<g id="telemetry-hud">
+  <rect x="30" y="615" width="1140" height="120" rx="8" fill="#0B0F19" stroke="#334155"/>
+  <text x="45" y="639" fill="#94A3B8" font-size="11" font-weight="bold">HORNER OCS REGISTER SPACE TELEMETRY HUD (%R1050..%R1057, %M245..%M246)</text>
+  <g transform="translate(42, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1050</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">CH1 Core Temp</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">825</text>  </g>
+  <g transform="translate(156, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1051</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">CH2 Loop Press</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">185</text>  </g>
+  <g transform="translate(270, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1052</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">CH3 Coolant Flw</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">950</text>  </g>
+  <g transform="translate(384, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1053</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">CH4 Vib RMS</text>    <text x="54.0" y="54" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="middle">42</text>  </g>
+  <g transform="translate(498, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1054</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Active Bands</text>    <text x="54.0" y="54" fill="#F8FAFC" font-size="12" font-weight="bold" text-anchor="middle">3</text>  </g>
+  <g transform="translate(612, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1055</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Band Height</text>    <text x="54.0" y="54" fill="#F8FAFC" font-size="12" font-weight="bold" text-anchor="middle">120px</text>  </g>
+  <g transform="translate(726, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1056</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Peak Excursion</text>    <text x="54.0" y="54" fill="#F39C12" font-size="12" font-weight="bold" text-anchor="middle">CH1</text>  </g>
+  <g transform="translate(840, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%R1057</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Diagnostic Code</text>    <text x="54.0" y="54" fill="#2ECC71" font-size="12" font-weight="bold" text-anchor="middle">0x0000</text>  </g>
+  <g transform="translate(954, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%M245</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Excursion Trip</text>    <text x="54.0" y="54" fill="#2ECC71" font-size="12" font-weight="bold" text-anchor="middle">CLEARED</text>  </g>
+  <g transform="translate(1068, 651)">    <rect width="108" height="68" rx="4" fill="#1E293B" stroke="#334155"/>    <text x="54.0" y="18" fill="#38BDF8" font-size="10" font-weight="bold" text-anchor="middle">%M246</text>    <text x="54.0" y="34" fill="#94A3B8" font-size="9" text-anchor="middle">Canvas Active</text>    <text x="54.0" y="54" fill="#2ECC71" font-size="12" font-weight="bold" text-anchor="middle">ACTIVE</text>  </g>
+</g>
+</svg>

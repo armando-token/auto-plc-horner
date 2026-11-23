@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feOffset dx="0" dy="2" result="offset"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid-pat" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background & Grid -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <rect width="1200" height="750" fill="url(#grid-pat)"/>
+
+  <!-- Diagnostic Header HUD Banner -->
+  <g id="hud-header">
+    <rect x="30" y="16" width="1140" height="56" rx="8" fill="#0B0F19" opacity="0.94" stroke="#334155" stroke-width="1.5" filter="url(#badge-shadow)"/>
+    <circle cx="54" cy="44" r="8" fill="#F59E0B"/>
+    <text x="74" y="49" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">CSCAPE HMI: DELAUNAY TRIANGULAR MESH TOPOLOGY</text>
+    <text x="680" y="49" font-family="monospace" font-size="12" fill="#94A3B8">NODES: <tspan fill="#38BDF8" font-weight="700">9</tspan> | TRIANGLES: <tspan fill="#38BDF8" font-weight="700">10</tspan> | SLIVERS: <tspan fill="#F59E0B" font-weight="700">2</tspan> | MIN-Q: <tspan fill="#F8FAFC" font-weight="700">6.2%</tspan> | MAX-T: <tspan fill="#EF4444" font-weight="700">96.0°C</tspan></text>
+  </g>
+
+  <!-- Triangles Wireframe and Thermal Elevation -->
+  <g id="delaunay-triangles">
+    <polygon points="350.0,160.0 600.0,220.0 850.0,190.0" fill="#F59E0B" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2.0" stroke-dasharray="6,3"/>
+    <polygon points="350.0,160.0 150.0,180.0 220.0,420.0" fill="#10B981" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="600.0,220.0 350.0,160.0 480.0,390.0" fill="#F59E0B" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="350.0,160.0 220.0,420.0 480.0,390.0" fill="#10B981" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="850.0,190.0 600.0,220.0 720.0,450.0" fill="#F59E0B" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="600.0,220.0 480.0,390.0 720.0,450.0" fill="#F59E0B" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="850.0,190.0 720.0,450.0 980.0,410.0" fill="#10B981" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="480.0,390.0 220.0,420.0 550.0,580.0" fill="#F59E0B" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="720.0,450.0 480.0,390.0 550.0,580.0" fill="#F59E0B" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="980.0,410.0 720.0,450.0 550.0,580.0" fill="#F59E0B" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2.0" stroke-dasharray="6,3"/>
+  </g>
+
+  <!-- Vertex Sensor Nodes -->
+  <g id="sensor-nodes">
+    <circle cx="150.0" cy="180.0" r="5.0" fill="#0284C7" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="350.0" cy="160.0" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="600.0" cy="220.0" r="5.0" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="850.0" cy="190.0" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="220.0" cy="420.0" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="480.0" cy="390.0" r="5.0" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="720.0" cy="450.0" r="5.0" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="980.0" cy="410.0" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="550.0" cy="580.0" r="5.0" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Telemetry Footer Bar -->
+  <g id="telemetry-footer">
+    <rect x="30" y="702" width="1140" height="32" rx="6" fill="#0B0F19" opacity="0.94" stroke="#334155" stroke-width="1" filter="url(#badge-shadow)"/>
+    <text x="50" y="722" font-family="monospace" font-size="11" fill="#64748B">SPEC: W3C SVG 1.1 | ACCESSIBILITY: WCAG 2.1 AAA [19.2:1] | OCS REGS: %R660..%R667 | GRAD-MAX: 34.5 c/m</text>
+    <text x="960" y="722" font-family="monospace" font-size="11" fill="#F59E0B">STATUS: SLIVER_WARNING</text>
+  </g>
+</svg>

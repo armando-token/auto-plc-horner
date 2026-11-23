@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <style>
+      .zone-arc { cursor: pointer; transition: opacity 0.2s; stroke-linejoin: round; }
+      .zone-arc:hover { opacity: 0.85; filter: drop-shadow(0 0 6px #38BDF8); }
+      .chord-ribbon { fill-opacity: 0.65; cursor: pointer; transition: fill-opacity 0.2s; }
+      .chord-ribbon:hover { fill-opacity: 0.90; stroke-width: 2.0; }
+      .flow-arrow { fill: #F8FAFC; stroke: #0B0F19; stroke-width: 1.0; }
+      .badge-container { fill: #0B0F19; stroke: #38BDF8; stroke-width: 1.5; }
+      .badge-title { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+      .badge-val { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #38BDF8; }
+      .badge-sub { font-family: "Segoe UI", Arial, sans-serif; font-size: 10px; fill: #94A3B8; }
+      .hud-title { font-family: "Segoe UI", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+      .hud-sub { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .hud-lbl { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .hud-val { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #F8FAFC; }
+      .zone-lbl { font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; font-weight: 700; fill: #F8FAFC; }
+      .zone-metric { font-family: "Segoe UI", Arial, sans-serif; font-size: 10px; fill: #94A3B8; }
+    </style>
+    <!-- Glow Filter for Active Selection -->
+    <filter id="selection-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <!-- Decoupled Badge Shadow Filter -->
+    <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="grad-ribbon-Feed-Reaction" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Feed-Utilities" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Reaction-Feed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Reaction-Separation" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Separation-Reaction" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Separation-Recovery" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Recovery-Separation" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Recovery-Utilities" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="grad-ribbon-Utilities-Recovery" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Industrial Theme Backing -->
+  <rect width="100%" height="100%" fill="#0F172A"/>
+
+  <!-- Circular Chord Network Diagram -->
+  <g id="chord-network-diagram">
+    <!-- Concentric Inner/Outer Radial Guide Rings -->
+    <circle cx="460.0" cy="385.0" r="230.0" fill="none" stroke="#1E293B" stroke-width="1.0" stroke-dasharray="3,3"/>
+    <circle cx="460.0" cy="385.0" r="270.0" fill="none" stroke="#1E293B" stroke-width="1.0"/>
+    <circle cx="460.0" cy="385.0" r="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <!-- Interaction Flow Ribbons -->
+    <g id="chord-ribbons">
+      <path id="ribbon-Feed-Reaction" class="chord-ribbon" d="M 665.75 282.20 Q 460.00 385.00 578.24 582.28 A 230.00 230.00 0 0 1 321.70 568.77 Q 460.00 385.00 460.00 155.00 A 230.00 230.00 0 0 1 665.75 282.20 Z" fill="url(#grad-ribbon-Feed-Reaction)" stroke="#38BDF8" stroke-width="2.0" filter="url(#selection-glow)"/>
+      <path id="ribbon-Feed-Utilities" class="chord-ribbon" d="M 679.69 316.92 Q 460.00 385.00 382.30 168.52 A 230.00 230.00 0 0 1 407.12 161.16 Q 460.00 385.00 665.75 282.20 A 230.00 230.00 0 0 1 679.69 316.92 Z" fill="url(#grad-ribbon-Feed-Utilities)" stroke="#1E293B" stroke-width="0.5"/>
+      <path id="ribbon-Reaction-Feed" class="chord-ribbon" d="M 324.98 571.20 Q 460.00 385.00 460.00 155.00 A 230.00 230.00 0 0 1 679.69 316.92 Q 460.00 385.00 578.24 582.28 A 230.00 230.00 0 0 1 324.98 571.20 Z" fill="url(#grad-ribbon-Reaction-Feed)" stroke="#1E293B" stroke-width="0.5"/>
+      <path id="ribbon-Reaction-Separation" class="chord-ribbon" d="M 301.55 551.72 Q 460.00 385.00 263.94 264.74 A 230.00 230.00 0 0 1 280.19 241.58 Q 460.00 385.00 324.98 571.20 A 230.00 230.00 0 0 1 301.55 551.72 Z" fill="url(#grad-ribbon-Reaction-Separation)" stroke="#1E293B" stroke-width="0.5"/>
+      <path id="ribbon-Separation-Reaction" class="chord-ribbon" d="M 280.19 241.58 Q 460.00 385.00 321.70 568.77 A 230.00 230.00 0 0 1 301.55 551.72 Q 460.00 385.00 263.94 264.74 A 230.00 230.00 0 0 1 280.19 241.58 Z" fill="url(#grad-ribbon-Separation-Reaction)" stroke="#1E293B" stroke-width="0.5"/>
+      <path id="ribbon-Separation-Recovery" class="chord-ribbon" d="M 288.00 232.30 Q 460.00 385.00 328.64 196.20 A 230.00 230.00 0 0 1 338.78 189.54 Q 460.00 385.00 280.19 241.58 A 230.00 230.00 0 0 1 288.00 232.30 Z" fill="url(#grad-ribbon-Separation-Recovery)" stroke="#1E293B" stroke-width="0.5"/>
+      <path id="ribbon-Recovery-Separation" class="chord-ribbon" d="M 338.78 189.54 Q 460.00 385.00 280.19 241.58 A 230.00 230.00 0 0 1 288.00 232.30 Q 460.00 385.00 328.64 196.20 A 230.00 230.00 0 0 1 338.78 189.54 Z" fill="url(#grad-ribbon-Recovery-Separation)" stroke="#1E293B" stroke-width="0.5"/>
+      <path id="ribbon-Recovery-Utilities" class="chord-ribbon" d="M 348.37 183.91 Q 460.00 385.00 407.12 161.16 A 230.00 230.00 0 0 1 413.67 159.72 Q 460.00 385.00 338.78 189.54 A 230.00 230.00 0 0 1 348.37 183.91 Z" fill="url(#grad-ribbon-Recovery-Utilities)" stroke="#1E293B" stroke-width="0.5"/>
+      <path id="ribbon-Utilities-Recovery" class="chord-ribbon" d="M 413.67 159.72 Q 460.00 385.00 338.78 189.54 A 230.00 230.00 0 0 1 348.37 183.91 Q 460.00 385.00 382.30 168.52 A 230.00 230.00 0 0 1 413.67 159.72 Z" fill="url(#grad-ribbon-Utilities-Recovery)" stroke="#1E293B" stroke-width="0.5"/>
+    </g>
+    <!-- Directional Flow Arrows -->
+    <g id="flow-arrows">
+      <polygon class="flow-arrow" points="478.37,423.52 476.51,413.63 485.16,416.10"/>
+      <polygon class="flow-arrow" points="475.81,296.16 485.83,297.12 481.05,304.75"/>
+      <polygon class="flow-arrow" points="502.50,367.13 503.44,377.15 495.05,373.90"/>
+      <polygon class="flow-arrow" points="371.12,372.11 377.63,379.78 368.89,381.93"/>
+      <polygon class="flow-arrow" points="377.09,420.35 372.41,411.44 381.41,411.26"/>
+      <polygon class="flow-arrow" points="388.32,288.13 390.52,297.95 381.78,295.78"/>
+      <polygon class="flow-arrow" points="372.26,302.40 380.63,296.81 381.75,305.74"/>
+      <polygon class="flow-arrow" points="426.73,269.64 425.04,279.56 417.78,274.24"/>
+      <polygon class="flow-arrow" points="403.47,277.88 413.32,275.81 411.04,284.52"/>
+    </g>
+    <!-- Annular Perimeter Node Arcs -->
+    <g id="zone-perimeter-arcs">
+      <path id="arc-Feed" class="zone-arc" d="M 460.00 115.00 A 270.00 270.00 0 0 1 612.69 607.68 L 590.07 574.69 A 230.00 230.00 0 0 0 460.00 155.00 Z" fill="#10B981" stroke="#1E293B" stroke-width="2.0"/>
+      <text class="zone-lbl" x="738.9" y="298.6" text-anchor="middle" dominant-baseline="middle">Feed</text>
+      <text class="zone-metric" x="752.3" y="294.4" text-anchor="middle" dominant-baseline="middle">722.5 kg/s | 18.5 bar</text>
+      <path id="arc-Reaction" class="zone-arc" d="M 598.81 616.59 A 270.00 270.00 0 0 1 221.66 258.14 L 256.97 276.93 A 230.00 230.00 0 0 0 578.24 582.28 Z" fill="#06B6D4" stroke="#EF4444" stroke-width="2.0"/>
+      <text class="zone-lbl" x="258.8" y="596.7" text-anchor="middle" dominant-baseline="middle">Reaction</text>
+      <text class="zone-metric" x="249.2" y="606.8" text-anchor="middle" dominant-baseline="middle">739.4 kg/s | 35.0 bar</text>
+      <path id="arc-Separation" class="zone-arc" d="M 229.85 243.83 A 270.00 270.00 0 0 1 292.56 173.19 L 317.36 204.57 A 230.00 230.00 0 0 0 263.94 264.74 Z" fill="#F59E0B" stroke="#1E293B" stroke-width="2.0"/>
+      <text class="zone-lbl" x="241.6" y="191.1" text-anchor="middle" dominant-baseline="middle">Separation</text>
+      <text class="zone-metric" x="231.2" y="181.8" text-anchor="middle" dominant-baseline="middle">100.0 kg/s | 12.2 bar</text>
+      <path id="arc-Recovery" class="zone-arc" d="M 305.80 163.37 A 270.00 270.00 0 0 1 353.45 136.91 L 369.23 173.67 A 230.00 230.00 0 0 0 328.64 196.20 Z" fill="#818CF8" stroke="#1E293B" stroke-width="2.0"/>
+      <text class="zone-lbl" x="318.3" y="129.7" text-anchor="middle" dominant-baseline="middle">Recovery</text>
+      <text class="zone-metric" x="311.5" y="117.5" text-anchor="middle" dominant-baseline="middle">57.5 kg/s | 8.4 bar</text>
+      <path id="arc-Utilities" class="zone-arc" d="M 368.79 130.87 A 270.00 270.00 0 0 1 443.52 115.50 L 445.96 155.43 A 230.00 230.00 0 0 0 382.30 168.52 Z" fill="#EC4899" stroke="#1E293B" stroke-width="2.0"/>
+      <text class="zone-lbl" x="401.2" y="99.0" text-anchor="middle" dominant-baseline="middle">Utilities</text>
+      <text class="zone-metric" x="398.4" y="85.3" text-anchor="middle" dominant-baseline="middle">80.6 kg/s | 6.0 bar</text>
+    </g>
+    <!-- Decoupled High-Contrast Badge Popovers (WCAG AAA) -->
+    <g id="badge-popovers">
+      <g id="badge-popover-active" transform="translate(350.0, 340.0)" filter="url(#badge-shadow)">
+        <rect width="220" height="90" rx="6" class="badge-container"/>
+        <text class="badge-title" x="14" y="24">ZONE CORRIDOR TELEMETRY</text>
+        <text class="badge-sub" x="14" y="42">Route: Feed → Reaction</text>
+        <text class="badge-val" x="14" y="60">Flow: 361.2 kg/s (42.5%)</text>
+        <text class="badge-sub" x="14" y="78" fill="#10B981">✓ WCAG AAA Compliant (18.3:1)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right-Hand Multizone Telemetry SCADA HUD Card -->
+  <g id="telemetry-hud-card" transform="translate(790, 50)">
+    <rect width="380" height="650" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <!-- HUD Header -->
+    <text class="hud-title" x="20" y="30">CHORD NETWORK TELEMETRY HUD</text>
+    <text class="hud-sub" x="20" y="48">Multizone Flow Coordination &amp; Safety Canvas (W255)</text>
+    <line x1="20" y1="58" x2="360" y2="58" stroke="#334155" stroke-width="1"/>
+    <text class="hud-sub" x="20" y="80">ZONE TELEMETRY METRICS</text>
+    <text class="hud-sub" x="120" y="80">FLOW</text>
+    <text class="hud-sub" x="200" y="80">PRESS</text>
+    <text class="hud-sub" x="290" y="80">STATUS</text>
+    <rect x="20" y="84" width="340" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="95" r="4" fill="#10B981"/>
+    <text class="hud-val" x="38" y="98">Feed</text>
+    <text class="hud-val" x="120" y="98">722.5 kg/s</text>
+    <text class="hud-val" x="200" y="98">18.5 bar</text>
+    <text class="hud-val" x="290" y="98" fill="#10B981">NORMAL</text>
+    <rect x="20" y="110" width="340" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="121" r="4" fill="#06B6D4"/>
+    <text class="hud-val" x="38" y="124">Reaction</text>
+    <text class="hud-val" x="120" y="124">739.4 kg/s</text>
+    <text class="hud-val" x="200" y="124">35.0 bar</text>
+    <text class="hud-val" x="290" y="124" fill="#EF4444">BOTTLENECK</text>
+    <rect x="20" y="136" width="340" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="147" r="4" fill="#F59E0B"/>
+    <text class="hud-val" x="38" y="150">Separation</text>
+    <text class="hud-val" x="120" y="150">100.0 kg/s</text>
+    <text class="hud-val" x="200" y="150">12.2 bar</text>
+    <text class="hud-val" x="290" y="150" fill="#10B981">NORMAL</text>
+    <rect x="20" y="162" width="340" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="173" r="4" fill="#818CF8"/>
+    <text class="hud-val" x="38" y="176">Recovery</text>
+    <text class="hud-val" x="120" y="176">57.5 kg/s</text>
+    <text class="hud-val" x="200" y="176">8.4 bar</text>
+    <text class="hud-val" x="290" y="176" fill="#10B981">NORMAL</text>
+    <rect x="20" y="188" width="340" height="22" rx="3" fill="#0B0F19"/>
+    <circle cx="28" cy="199" r="4" fill="#EC4899"/>
+    <text class="hud-val" x="38" y="202">Utilities</text>
+    <text class="hud-val" x="120" y="202">80.6 kg/s</text>
+    <text class="hud-val" x="200" y="202">6.0 bar</text>
+    <text class="hud-val" x="290" y="202" fill="#10B981">NORMAL</text>
+    <line x1="20" y1="228" x2="360" y2="228" stroke="#334155" stroke-width="1"/>
+    <text class="hud-sub" x="20" y="238">SELECTED CHORD CORRIDOR</text>
+    <rect x="20" y="246" width="340" height="42" rx="4" fill="#0B0F19" stroke="#38BDF8" stroke-width="1"/>
+    <text class="hud-lbl" x="30" y="263">CONNECTION:</text>
+    <text class="hud-val" x="120" y="263">Feed → Reaction</text>
+    <text class="hud-lbl" x="30" y="278">BANDWIDTH:</text>
+    <text class="hud-val" x="120" y="278" fill="#38BDF8">361.2 kg/s (42.5%)</text>
+    <line x1="20" y1="296" x2="360" y2="296" stroke="#334155" stroke-width="1"/>
+    <text class="hud-sub" x="20" y="306">HORNER OCS REGISTERS &amp; COILS</text>
+    <text class="hud-sub" x="20" y="324">%R2160</text>
+    <text class="hud-lbl" x="78" y="324">Active Zones Count:</text>
+    <text class="hud-val" x="220" y="324" fill="#F8FAFC">5</text>
+    <text class="hud-sub" x="20" y="342">%R2161</text>
+    <text class="hud-lbl" x="78" y="342">Total Network Flow:</text>
+    <text class="hud-val" x="220" y="342" fill="#F8FAFC">850.0 kg/s (850)</text>
+    <text class="hud-sub" x="20" y="360">%R2162</text>
+    <text class="hud-lbl" x="78" y="360">Max Ribbon Bandwidth:</text>
+    <text class="hud-val" x="220" y="360" fill="#F8FAFC">42.5% (425)</text>
+    <text class="hud-sub" x="20" y="378">%R2163</text>
+    <text class="hud-lbl" x="78" y="378">Flow Asymmetry Index:</text>
+    <text class="hud-val" x="220" y="378" fill="#F8FAFC">12.50% (1250)</text>
+    <text class="hud-sub" x="20" y="396">%R2164</text>
+    <text class="hud-lbl" x="78" y="396">Selected Source Zone:</text>
+    <text class="hud-val" x="220" y="396" fill="#F8FAFC">0 (Feed)</text>
+    <text class="hud-sub" x="20" y="414">%R2165</text>
+    <text class="hud-lbl" x="78" y="414">Selected Target Zone:</text>
+    <text class="hud-val" x="220" y="414" fill="#F8FAFC">1 (Reaction)</text>
+    <text class="hud-sub" x="20" y="432">%R2166</text>
+    <text class="hud-lbl" x="78" y="432">Flow Bottleneck Zone:</text>
+    <text class="hud-val" x="220" y="432" fill="#F8FAFC">1 (Reaction)</text>
+    <text class="hud-sub" x="20" y="450">%R2167</text>
+    <text class="hud-lbl" x="78" y="450">Diagnostic Code:</text>
+    <text class="hud-val" x="220" y="450" fill="#F8FAFC">0x0000</text>
+    <text class="hud-sub" x="20" y="468">%M504</text>
+    <text class="hud-lbl" x="78" y="468">Coil Canvas Healthy:</text>
+    <text class="hud-val" x="220" y="468" fill="#10B981">HEALTHY (1)</text>
+    <text class="hud-sub" x="20" y="486">%M505</text>
+    <text class="hud-lbl" x="78" y="486">Coil Bottleneck Alarm:</text>
+    <text class="hud-val" x="220" y="486" fill="#10B981">NORMAL (0)</text>
+    <line x1="20" y1="504" x2="360" y2="504" stroke="#334155" stroke-width="1"/>
+    <rect x="20" y="512" width="340" height="32" rx="4" fill="#0B0F19" stroke="#10B981" stroke-width="1"/>
+    <text class="hud-val" x="30" y="532" fill="#10B981">✓ WCAG 2.1 AAA COMPLIANT</text>
+    <text class="hud-sub" x="230" y="532">Text 18.3:1 | Graphics &gt; 5.0:1</text>
+  </g>
+</svg>

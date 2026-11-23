@@ -1,0 +1,113 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Cellular / 5G RedCap (W310) stages passed deterministically (PASSED 9/9 stages).",
+  "work_package": "W310",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W310",
+    "gate": "G8",
+    "protocol": "Industrial ODVA CIP Safety Over Cellular / 5G RedCap (Reduced Capability) & IoT NTN Bridge",
+    "standards": [
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3",
+      "3GPP Release 17 / Release 18 RedCap (NR-Light)",
+      "3GPP NTN / IoT Non-Terrestrial Networks"
+    ],
+    "registers": [
+      "%R2710..%R2717",
+      "%M632..%M633"
+    ],
+    "diagnostic_codes": {
+      "0x0000": "OK",
+      "0xEE71": "ERR_RSRP_WEAK_SIGNAL",
+      "0xEE72": "ERR_RSRQ_CHANNEL_QUALITY",
+      "0xEE73": "ERR_DRX_WAKEUP_TIMEOUT",
+      "0xEE74": "ERR_WATCHDOG_COMM_TIMEOUT",
+      "0xEE75": "ERR_DUAL_CRC_SAFETY_FAULT"
+    },
+    "sha256_digests": {
+      "pou_sha256": "5057cc31829b447596b1162b258874e8c0aa457300a0333b5095829a631ccdbf",
+      "stages_sha256": "96abdaec6c57d184545c8fc67d7b24c8b4ba380a0939db481da4c32a0eb9f6f2"
+    },
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python version, OS platform, and core dependencies",
+        "passed": true,
+        "timing_ms": 546.351,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants_and_register_mappings",
+        "check": "Verify connection states, diagnostic codes (0xEE71-0xEE75), register offsets (%R2710..%R2717, %M632..%M633)",
+        "passed": true,
+        "timing_ms": 0.043,
+        "details": "Class IDs (0x39, 0x3A, 0x3B, 0x2F), states (0..4), power modes (1..3), diagnostic codes (0x0000, 0xEE71..0xEE75), and register mappings (%R2710..%R2717, %M632..%M633) verified."
+      },
+      {
+        "stage": 3,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics and corruption detection",
+        "passed": true,
+        "timing_ms": 0.863,
+        "details": "CRC-S1=0xF480, CRC-S2=0xA639. Dual polynomial mathematics, packet serialization round-trip, and EPID hash verified."
+      },
+      {
+        "stage": 4,
+        "name": "cellular_redcap_drx_and_signal_tracking",
+        "check": "Verify cellular RedCap DRX power cycle, RSRP/RSRQ mathematics, and nominal telemetry",
+        "passed": true,
+        "timing_ms": 0.142,
+        "details": "Cellular RedCap kinematics (RTT 20.0ms, duty 1.56%) and nominal tracking (RSRP -85dBm, RSRQ -10dB, DRX 20ms) passed."
+      },
+      {
+        "stage": 5,
+        "name": "rsrp_rsrq_signal_degradation_trips",
+        "check": "Verify RSRP weak signal (< -115 dBm -> 0xEE71) and RSRQ channel quality (< -18.0 dB -> 0xEE72)",
+        "passed": true,
+        "timing_ms": 0.035,
+        "details": "RSRP power drop (-120 dBm -> 0xEE71) and RSRQ degradation (-20 dB -> 0xEE72) successfully tripped and recovered."
+      },
+      {
+        "stage": 6,
+        "name": "safety_interlock_trips_and_fault_recovery",
+        "check": "Verify DRX timeout (0xEE73), watchdog (0xEE74), CRC (0xEE75), and clean recovery",
+        "passed": true,
+        "timing_ms": 2.658,
+        "details": "All fault trips (0xEE73, 0xEE74, 0xEE75) fired exact codes with safe stop asserted and clean recovery."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "check": "Verify RegisterTable reads/writes and bitwise signed masks across %R2710..%R2717 and %M632..%M633",
+        "passed": true,
+        "timing_ms": 0.519,
+        "details": "Bit-exact synchronization and 16-bit signed wrapping verified across %R2710..%R2717 and %M632..%M633."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "check": "Verify ST POU 'CipSafetyRedCapSync' and LadderForbiddenError on ladder syntax",
+        "passed": true,
+        "timing_ms": 1.85,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "check": "Verify multi-cycle ILogicUnit execution (100 cycles) and emit evidence JSON",
+        "passed": true,
+        "timing_ms": 766.547,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 5.0 KB."
+      }
+    ]
+  }
+}

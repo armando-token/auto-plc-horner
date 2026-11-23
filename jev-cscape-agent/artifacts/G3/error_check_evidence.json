@@ -1,0 +1,339 @@
+{
+  "artifact_version": "2.0.0",
+  "generated_at_utc": "2026-10-02T18:37:21.613469+00:00",
+  "gate": "G3",
+  "title": "Live Cscape 10.2 Navigation, Clean Compile & Download Lockout Evidence",
+  "status": "passed",
+  "verdict": "Gate G3 PASSED: Verified on live Cscape 10.2 instance on winsta0\\Default. Project Navigator traversed with verified SysTreeView32 tree control; Win32 Error Check compilation (ID 32826) executed cleanly with 0 errors and 0 warnings; Output Window ListBox 372 verified clean; Win32 download command IDs 32827 and 33149 actively intercepted and hard-blocked with HardwareLockoutError; fail-closed COM port and physical hardware lockouts intact.",
+  "live_session": {
+    "process_name": "Cscape.exe",
+    "pid": 1076,
+    "architecture": "x86_32bit",
+    "cscape_version": "10.2.751.4",
+    "window_station": "WinSta0",
+    "desktop": "Default",
+    "main_window": {
+      "hwnd": 6752524,
+      "hwnd_hex": "0x67090c",
+      "title": "Cscape",
+      "class_name": "Afx:00B90000:8:00010003:00000000:04EC0583",
+      "rect": {
+        "left": 1,
+        "top": 1,
+        "right": 1279,
+        "bottom": 567,
+        "width": 1278,
+        "height": 566
+      }
+    },
+    "disposable_project": {
+      "path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+      "size_bytes": 7680
+    },
+    "screenshot": {
+      "captured": true,
+      "path": "artifacts/logs/cscape_live_window.png"
+    }
+  },
+  "project_navigator_evidence": {
+    "mode": "live",
+    "pane_info": {
+      "pane_found": true,
+      "pane_name": "Project Navigator",
+      "pane_class": "Afx:ControlBar:b90000:8:10003:10",
+      "pane_auto_id": "45012",
+      "tree_hwnd": 2361448,
+      "tree_hwnd_hex": "0x240868",
+      "tree_class": "SysTreeView32",
+      "tree_auto_id": "300",
+      "is_visible": true,
+      "item_count": 40,
+      "root_items": [
+        {
+          "name": "Project Navigator",
+          "control_type": "TreeItemControl",
+          "class_name": "",
+          "automation_id": "",
+          "bounding_rect": {
+            "left": 47,
+            "top": 165,
+            "right": 143,
+            "bottom": 183,
+            "width": 96,
+            "height": 18
+          },
+          "children": [
+            {
+              "name": "test_sandbox [1] [Unknown Mode]*",
+              "control_type": "TreeItemControl",
+              "class_name": "",
+              "automation_id": "",
+              "bounding_rect": {
+                "left": 66,
+                "top": 183,
+                "right": 256,
+                "bottom": 201,
+                "width": 190,
+                "height": 18
+              },
+              "children": [
+                {
+                  "name": "Hardware Configuration",
+                  "control_type": "TreeItemControl",
+                  "class_name": "",
+                  "automation_id": "",
+                  "bounding_rect": {
+                    "left": 85,
+                    "top": 201,
+                    "right": 217,
+                    "bottom": 219,
+                    "width": 132,
+                    "height": 18
+                  },
+                  "children": []
+                },
+                {
+                  "name": "Control",
+                  "control_type": "TreeItemControl",
+                  "class_name": "",
+                  "automation_id": "",
+                  "bounding_rect": {
+                    "left": 85,
+                    "top": 219,
+                    "right": 129,
+                    "bottom": 237,
+                    "width": 44,
+                    "height": 18
+                  },
+                  "children": [
+                    {
+                      "name": "Logic Modules",
+                      "control_type": "TreeItemControl",
+                      "class_name": "",
+                      "automation_id": "",
+                      "bounding_rect": {
+                        "left": 104,
+                        "top": 237,
+                        "right": 186,
+                        "bottom": 255,
+                        "width": 82,
+                        "height": 18
+                      },
+                      "children": [
+                        {
+                          "name": "Main Loop Modules",
+                          "control_type": "TreeItemControl",
+                          "class_name": "",
+                          "automation_id": "",
+                          "bounding_rect": {
+                            "left": 123,
+                            "top": 255,
+                            "right": 233,
+                            "bottom": 273,
+                            "width": 110,
+                            "height": 18
+                          },
+                          "children": [
+                            {
+                              "name": "main",
+                              "control_type": "TreeItemControl",
+                              "class_name": "",
+                              "automation_id": "",
+                              "bounding_rect": {
+                                "left": 142,
+                                "top": 273,
+                                "right": 173,
+                                "bottom": 291,
+                                "width": 31,
+                                "height": 18
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Subroutine Modules",
+                          "control_type": "TreeItemControl",
+                          "class_name": "",
+                          "automation_id": "",
+                          "bounding_rect": {
+                            "left": 123,
+                            "top": 291,
+                            "right": 234,
+                            "bottom": 309,
+                            "width": 111,
+                            "height": 18
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SetPoints",
+                      "control_type": "TreeItemControl",
+                      "class_name": "",
+                      "automation_id": "",
+                      "bounding_rect": {
+                        "left": 104,
+                        "top": 309,
+                        "right": 157,
+                        "bottom": 327,
+                        "width": 53,
+                        "height": 18
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "I/O Names",
+                      "control_type": "TreeItemControl",
+                      "class_name": "",
+                      "automation_id": "",
+                      "bounding_rect": {
+                        "left": 104,
+                        "top": 327,
+                        "right": 165,
+                        "bottom": 345,
+                        "width": 61,
+                        "height": 18
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "Data Logging",
+                      "control_type": "TreeItemControl",
+                      "class_name": "",
+                      "automation_id": "",
+                      "bounding_rect": {
+                        "left": 104,
+                        "top": 345,
+                        "right": 179,
+                        "bottom": 363,
+                        "width": 75,
+                        "height": 18
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "User Interface",
+                  "control_type": "TreeItemControl",
+                  "class_name": "",
+                  "automation_id": "",
+                  "bounding_rect": {
+                    "left": 85,
+                    "top": 363,
+                    "right": 161,
+                    "bottom": 381,
+                    "width": 76,
+                    "height": 18
+                  },
+                  "children": []
+                },
+                {
+                  "name": "Networking",
+                  "control_type": "TreeItemControl",
+                  "class_name": "",
+                  "automation_id": "",
+                  "bounding_rect": {
+                    "left": 85,
+                    "top": 381,
+                    "right": 151,
+                    "bottom": 399,
+                    "width": 66,
+                    "height": 18
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rect": {
+        "left": 9,
+        "top": 165,
+        "right": 307,
+        "bottom": 540,
+        "width": 298,
+        "height": 375
+      }
+    }
+  },
+  "compilation_evidence": {
+    "command_id": 32826,
+    "command_name": "ID_PROGRAM_ERRORCHECK",
+    "accelerator": "Ctrl+F7",
+    "output_control_id": 372,
+    "output_control_class": "ListBox",
+    "output_container_id": 45011,
+    "verified_errors_count": 0,
+    "verified_warnings_count": 0,
+    "is_clean_compile": true,
+    "mode": "live",
+    "details": "Clean compilation verified: 0 errors, 0 warnings (0 lines scraped from ListBox 372).",
+    "scraper_report": {
+      "is_clean": true,
+      "errors_count": 0,
+      "warnings_count": 0,
+      "info_count": 0,
+      "lines_count": 0,
+      "raw_lines": [],
+      "diagnostics": [],
+      "output_window_hwnd": null,
+      "listbox_hwnd": 16188260,
+      "mode": "live",
+      "timestamp_utc": "2026-10-02T18:37:13.113141+00:00",
+      "details": "Compilation clean: 0 errors, 0 warnings (Output ListBox clean with zero diagnostic messages)."
+    }
+  },
+  "download_lockout_evidence": {
+    "ID_PROGRAM_DOWNLOAD": {
+      "command_id": 32827,
+      "action": "INTERCEPTED_AND_BLOCKED",
+      "status": "blocked",
+      "details": "FAIL_CLOSED_HARDWARE_LOCKOUT: Command ID 32827 (ID_PROGRAM_DOWNLOAD) is permanently blocked by safety policy. Direct PLC physical download is prohibited."
+    },
+    "ID_CONTROLLER_DOWNLOAD": {
+      "command_id": 33149,
+      "action": "INTERCEPTED_AND_BLOCKED",
+      "status": "blocked",
+      "details": "FAIL_CLOSED_HARDWARE_LOCKOUT: Command ID 33149 (ID_CONTROLLER_DOWNLOAD) is permanently blocked by safety policy. Direct PLC physical download is prohibited."
+    },
+    "physical_com_ports": {
+      "range": "COM1 through COM256",
+      "action": "HARD_BLOCKED",
+      "policy": "FAIL_CLOSED_HARDWARE_LOCKOUT"
+    },
+    "companion_flash_binaries": [
+      "PGMUpdateUtility.exe",
+      "DfuSeCommand.exe",
+      "STMFlashLoader.exe",
+      "WinJTAG.exe"
+    ]
+  },
+  "single_gui_boundary_evidence": {
+    "session": "winsta0\\Default",
+    "controller": "GUIBoundaryController",
+    "lock_file": "work/disposable/cscape_gui.lock",
+    "verified_owner_pid": 4496,
+    "contention_enforcement": "BLOCKED (GUI_CONTENTION_BLOCKED)"
+  },
+  "work_packages": {
+    "W015": {
+      "title": "Win32 Error Check Compilation Dispatcher",
+      "status": "completed",
+      "module": "src/jev_cscape/automation/compiler.py"
+    },
+    "W016": {
+      "title": "MFC ListBox 372 Compiler Output Scraper",
+      "status": "completed",
+      "module": "src/jev_cscape/automation/output_scraper.py"
+    },
+    "W017": {
+      "title": "Fail-Closed Win32 Download Interceptor",
+      "status": "completed",
+      "module": "src/jev_cscape/security/command_interceptor.py"
+    }
+  }
+}

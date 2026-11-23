@@ -1,0 +1,85 @@
+{
+  "artifact": "Project Navigator UIAutomation Inspection Evidence",
+  "work_package": "W014",
+  "gate": "G2",
+  "timestamp_utc": "2026-10-01T22:30:00Z",
+  "status": "success",
+  "inspector_module": "src/jev_cscape/automation/navigator_walker.py",
+  "test_module": "tests/test_navigator_walker.py",
+  "observed_control_evidence": {
+    "cscape_version": "10.2.751.4",
+    "interactive_desktop": "winsta0\\Default",
+    "container_pane": {
+      "name": "Project Navigator",
+      "class_name": "Afx:ControlBar:b90000:8:10003:10",
+      "control_type": "PaneControl",
+      "automation_id": "45012",
+      "bounding_rectangle": {
+        "left": 9,
+        "top": 145,
+        "right": 307,
+        "bottom": 540,
+        "width": 298,
+        "height": 395
+      }
+    },
+    "tree_control": {
+      "name": "",
+      "class_name": "SysTreeView32",
+      "control_type": "TreeControl",
+      "win32_ctrl_id": 300,
+      "automation_id": "300",
+      "bounding_rectangle": {
+        "left": 9,
+        "top": 165,
+        "right": 307,
+        "bottom": 540,
+        "width": 298,
+        "height": 375
+      }
+    },
+    "hierarchical_tree_items": [
+      {
+        "name": "Project Navigator",
+        "control_type": "TreeItemControl",
+        "children": [
+          {
+            "name": "System",
+            "control_type": "TreeItemControl",
+            "children": []
+          },
+          {
+            "name": "Hardware Configuration",
+            "control_type": "TreeItemControl",
+            "children": []
+          },
+          {
+            "name": "Logic",
+            "control_type": "TreeItemControl",
+            "children": [
+              {
+                "name": "Main (ST)",
+                "control_type": "TreeItemControl",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Graphics",
+            "control_type": "TreeItemControl",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "invariants_verified": {
+    "no_invented_automation_ids": true,
+    "observed_evidence_grounded": true,
+    "single_gui_boundary_guarded": true,
+    "fail_closed_when_closed": true,
+    "fail_closed_when_minimized": true,
+    "fail_closed_on_contention": true,
+    "zero_silent_mocks": true
+  }
+}

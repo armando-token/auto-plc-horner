@@ -1,0 +1,74 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Spider Radar Polar Chart verification: 7/7 checks passed.",
+  "data": {
+    "component": "HMI Dynamic Spider / Radar Polar Pentagon Chart (ISA-101 / WCAG AAA)",
+    "tests": [
+      {
+        "check": "Pure_ST_POU_Validation",
+        "pou_name": "SpiderChartRasterizerSync",
+        "passed": true
+      },
+      {
+        "check": "Forbidden_Ladder_Construct_Rejection",
+        "passed": true
+      },
+      {
+        "check": "SVG_XML_WellFormedness",
+        "element_count": 148,
+        "passed": true
+      },
+      {
+        "check": "WCAG_AAA_Contrast_Audit",
+        "contrast_checks": [
+          {
+            "element": "Axis Title vs Canvas (#F8FAFC vs #0B0F19)",
+            "contrast": 18.3,
+            "required": 7.0,
+            "passed": true
+          },
+          {
+            "element": "Scale Label vs Canvas (#94A3B8 vs #0B0F19)",
+            "contrast": 7.47,
+            "required": 7.0,
+            "passed": true
+          },
+          {
+            "element": "Normal Profile vs Canvas (#10B981 vs #0B0F19)",
+            "contrast": 7.55,
+            "required": 7.0,
+            "passed": true
+          },
+          {
+            "element": "Golden Baseline vs Canvas (#38BDF8 vs #0B0F19)",
+            "contrast": 8.94,
+            "required": 7.0,
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "check": "Horner_OCS_Register_Mapping_Sync",
+        "R450_status": 13,
+        "R452_thermal": 862,
+        "R457_health": 876,
+        "passed": true
+      },
+      {
+        "check": "Out_Of_Spec_Alarm_Detection",
+        "passed": true
+      },
+      {
+        "check": "Golden_Overlay_Toggle_Handshake",
+        "passed": true
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R450..%R457",
+      "discrete_coils": "%M105..%M106"
+    },
+    "timestamp": 1790990313.242222
+  }
+}

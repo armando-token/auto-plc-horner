@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 8/8 pneumatic system thermodynamics and OCS register checks passed.",
+  "data": {
+    "timestamp_utc": "2026-10-02T23:59:45.122434+00:00",
+    "tests_run": 8,
+    "tests_passed": 8,
+    "verification_steps": [
+      "Ideal gas dynamic pressure derivative dP/dt verified.",
+      "Subsonic unchoked orifice mass flow calculation verified.",
+      "Choked sonic flow and critical ratio boundary continuity verified.",
+      "Karnopp stiction breakaway threshold and stroke limits [0.0, 1.0] verified.",
+      "Multi-tank pneumatic charging cycle toward supply pressure verified.",
+      "Pressure relief solenoid dump depressurization verified.",
+      "Horner OCS register synchronization (%R180..%R187, %M60..%M62) verified.",
+      "Pure ST boundary integrity confirmed; all 10 forbidden ladder constructs rejected."
+    ],
+    "thermodynamic_constants": {
+      "gamma": 1.4,
+      "r_air_j_kg_k": 287.058,
+      "critical_pressure_ratio": 0.5282817877171742,
+      "ambient_pressure_pa": 101325.0
+    },
+    "register_mapping": {
+      "supply_pressure": "%R180",
+      "tank1_pressure": "%R181",
+      "tank2_pressure": "%R182",
+      "valve1_command": "%R183",
+      "valve1_feedback": "%R184",
+      "inlet_mass_flow": "%R185",
+      "outlet_mass_flow": "%R186",
+      "status_word": "%R187",
+      "enable_coil": "%M60",
+      "relief_solenoid_coil": "%M61",
+      "reset_coil": "%M62"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W259 CIP Safety Over TSN Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W259",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety Over TSN (IEEE 802.1Qbv / IEEE 802.1Qbu)",
+    "work_package": "W259",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object"
+    },
+    "parameters": {
+      "cycle_time_us": 1000,
+      "schedule_offset_us": 250,
+      "nominal_jitter_ns": 45,
+      "guard_band_duration_us": 50
+    },
+    "register_map": {
+      "%R2200": "TSN Gate State (0..4)",
+      "%R2201": "TSN Cycle Time (us)",
+      "%R2202": "Schedule Offset (us)",
+      "%R2203": "Max Time-Sync Jitter (ns)",
+      "%R2204": "Cumulative Preemption Count",
+      "%R2205": "Express Packet Count",
+      "%R2206": "Safety Flow Priority (PCP=7, Safe Class 0x39)",
+      "%R2207": "Safety Diagnostic Code",
+      "%M513": "TSN Schedule Synced Coil",
+      "%M514": "Safety Interlock Tripped Coil"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "IEEE_802_1Qbv_GCL_And_802_1Qbu_Preemption_Framing",
+        "check": "IEEE 802.1Qbv Gate Control List (GCL) & 802.1Qbu Preemption Framing",
+        "passed": true,
+        "timing_ms": 0.696,
+        "details": "802.1Qbv TAS GCL (1000 us cycle, 250 us offset), 802.1Qbu frame preemption, and Dual CRC-S1 (0x5935)/S2 (0x755B) framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 4.192,
+        "details": "POU 'CipSafetyTsnSync' validated with STParser and SecurityGuard, binding %R2200..%R2207 and %M513..%M514."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.057,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_TSN_Safety_Telemetry",
+        "check": "Nominal TSN Safety Telemetry (Cycle 1000us, Offset 250us, Jitter 45ns, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.645,
+        "details": "Nominal Cycle 1000 us, Offset 250 us, Jitter 45 ns, Diagnostic 0x0000, %M513=True, and %M514=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "Schedule_Mismatch_Safe_Stop_Trip",
+        "check": "Schedule Mismatch Safe Stop Trip (0xEE31, %M514)",
+        "passed": true,
+        "timing_ms": 0.808,
+        "details": "802.1Qbv schedule mismatch (packet outside express window) tripped 0xEE31, asserted %M514, de-asserted %M513, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "Jitter_Overrun_And_Clock_Skew_Trip",
+        "check": "Jitter Overrun & Clock Skew Trip (0xEE32, %M514)",
+        "passed": true,
+        "timing_ms": 0.536,
+        "details": "TSN jitter overrun (105 ns >= 100 ns limit) tripped 0xEE32, asserted %M514, de-asserted %M513, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "Guard_Band_Encroachment_Trip",
+        "check": "Guard Band Encroachment Trip (0xEE33, %M514)",
+        "passed": true,
+        "timing_ms": 0.667,
+        "details": "Guard band encroachment (preemptable traffic during guard band) tripped 0xEE33, asserted %M514, de-asserted %M513, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2200..%R2207, %M513..%M514)",
+        "passed": true,
+        "timing_ms": 0.95,
+        "details": "Bit-exact %R2200..%R2207 and %M513..%M514 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 202.1,
+        "details": "100 scan cycles executed without fault or drift, heap growth 0.70 KB (< 100 KB)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "IEEE_802_1Qbv_GCL_And_802_1Qbu_Preemption_Framing",
+        "check": "IEEE 802.1Qbv Gate Control List (GCL) & 802.1Qbu Preemption Framing",
+        "passed": true,
+        "timing_ms": 0.696,
+        "details": "802.1Qbv TAS GCL (1000 us cycle, 250 us offset), 802.1Qbu frame preemption, and Dual CRC-S1 (0x5935)/S2 (0x755B) framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 4.192,
+        "details": "POU 'CipSafetyTsnSync' validated with STParser and SecurityGuard, binding %R2200..%R2207 and %M513..%M514."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.057,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_TSN_Safety_Telemetry",
+        "check": "Nominal TSN Safety Telemetry (Cycle 1000us, Offset 250us, Jitter 45ns, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.645,
+        "details": "Nominal Cycle 1000 us, Offset 250 us, Jitter 45 ns, Diagnostic 0x0000, %M513=True, and %M514=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "Schedule_Mismatch_Safe_Stop_Trip",
+        "check": "Schedule Mismatch Safe Stop Trip (0xEE31, %M514)",
+        "passed": true,
+        "timing_ms": 0.808,
+        "details": "802.1Qbv schedule mismatch (packet outside express window) tripped 0xEE31, asserted %M514, de-asserted %M513, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "Jitter_Overrun_And_Clock_Skew_Trip",
+        "check": "Jitter Overrun & Clock Skew Trip (0xEE32, %M514)",
+        "passed": true,
+        "timing_ms": 0.536,
+        "details": "TSN jitter overrun (105 ns >= 100 ns limit) tripped 0xEE32, asserted %M514, de-asserted %M513, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "Guard_Band_Encroachment_Trip",
+        "check": "Guard Band Encroachment Trip (0xEE33, %M514)",
+        "passed": true,
+        "timing_ms": 0.667,
+        "details": "Guard band encroachment (preemptable traffic during guard band) tripped 0xEE33, asserted %M514, de-asserted %M513, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2200..%R2207, %M513..%M514)",
+        "passed": true,
+        "timing_ms": 0.95,
+        "details": "Bit-exact %R2200..%R2207 and %M513..%M514 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 202.1,
+        "details": "100 scan cycles executed without fault or drift, heap growth 0.70 KB (< 100 KB)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

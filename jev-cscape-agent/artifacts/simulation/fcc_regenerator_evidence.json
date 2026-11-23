@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial FCC Regenerator Two-Phase Hydrodynamics & Coke Combustion ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W146",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial FCC Regenerator ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1070..%R1077 and %M249..%M251 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "Two_Phase_Bubbling_Bed_Hydrodynamics_And_Cyclones",
+        "passed": true,
+        "details": "Hydrodynamics verified: U_mf=1.04 mm/s, U_0=3.03 m/s, d_b=35.0 cm, u_b=4.35 m/s, delta_b=0.550, K_be=0.21 1/s, dP_cyc=45.0 kPa."
+      },
+      {
+        "stage": 3,
+        "check": "Heterogeneous_Coke_Combustion_Kinetics_And_Regeneration",
+        "passed": true,
+        "details": "Kinetics verified: k1(710C)=5.484e-02/s, k2(710C)=1.398e-01/s, Spent coke=1.20 wt%, Regen coke=0.035 wt% (<0.05%), Coke burn rate=12.50 kg/s."
+      },
+      {
+        "stage": 4,
+        "check": "Homogeneous_Freeboard_CO_Afterburning_And_Exothermicity",
+        "passed": true,
+        "details": "CO afterburning verified: Q_afterburn=2029.6 kW -> 12673.8 kW, k3=1.889e+02 m3/(mol*s)."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_High_Order_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: T_bed=711.0\u00b0C, T_fb=735.4\u00b0C, C_coke=0.031 wt%, O2=1.50%, CO=450 ppm."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=0.000e+00 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xAB01, 0xAB02, 0xAB03, 0xAB04) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1070=7100, %R1071=7350, %R1072=450, %R1073=15, %R1074=125, %R1075=8500, %R1076=450, %R1077=0x0000, %M249=True, %M250=False, %M251=False."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Settling_Stability",
+        "passed": true,
+        "details": "Transient response to +50 kg/s spent cat disturbance verified cleanly over 10.0s: T_bed=711.3\u00b0C, T_fb=736.0\u00b0C, Blower permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1070..%R1077",
+      "discrete_coils": "%M249..%M251",
+      "values": {
+        "%R1070": 7100,
+        "%R1071": 7350,
+        "%R1072": 450,
+        "%R1073": 15,
+        "%R1074": 125,
+        "%R1075": 8500,
+        "%R1076": 450,
+        "%R1077": 0,
+        "%M249": true,
+        "%M250": false,
+        "%M251": false
+      }
+    },
+    "timestamp": "2026-10-04T20:32:53Z"
+  }
+}

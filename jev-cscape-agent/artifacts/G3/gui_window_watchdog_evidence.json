@@ -1,0 +1,71 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Cscape GUI Automated Window Health Watchdog & Geometry Forensics verified: Win32 geometry inspection, MFC hierarchy enclosure (MainFrame -> MDIClient -> Canvas), modal dialog sweeper tracking, single-GUI mutex forensics, and pure ST boundary enforcement passed.",
+  "data": {
+    "work_package": "W063",
+    "gate": "G3",
+    "timestamp_utc": "2026-10-02T21:45:31.169351+00:00",
+    "geometry_forensics": {
+      "mainframe_hwnd": "0x1000",
+      "mainframe_health": "healthy",
+      "screen_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "client_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 1904,
+        "bottom": 1041,
+        "width": 1904,
+        "height": 1041
+      },
+      "offscreen_detection_verified": true,
+      "hung_detection_verified": true
+    },
+    "mfc_hierarchy": {
+      "hierarchy_valid": true,
+      "enclosure_check_passed": true,
+      "violations_count": 0,
+      "mdi_enclosed": true,
+      "project_navigator_enclosed": true
+    },
+    "modal_dialog_sweeper": {
+      "active_modal_count": 1,
+      "swept_dialogs": [
+        {
+          "hwnd": 20480,
+          "hwnd_hex": "0x5000",
+          "title": "Tip of the Day",
+          "class_name": "#32770",
+          "dialog_type": "tip_of_the_day",
+          "detected_at_utc": "2026-10-02T21:45:31.169351+00:00",
+          "is_stalled": false,
+          "dwell_time_s": 0.0
+        }
+      ],
+      "stall_timeout_s": 5.0
+    },
+    "single_gui_mutex": {
+      "is_locked": false,
+      "owner_pid": null,
+      "lock_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\cscape_gui.lock",
+      "timestamp_utc": null,
+      "is_stale": false,
+      "is_pid_alive": false,
+      "contention_detected": false
+    },
+    "security_invariants": {
+      "offline_mock_mode": true,
+      "pure_st_enforced": true,
+      "ladder_construct_injection_blocked": true,
+      "com_ports_accessed": 0,
+      "downloads_attempted": 0
+    }
+  }
+}

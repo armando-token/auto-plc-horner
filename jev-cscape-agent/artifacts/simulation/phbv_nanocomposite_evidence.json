@@ -1,0 +1,141 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W296 PHBV Nanocomposite Biosynthesis Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W296",
+    "gate": "G7",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 1.917,
+        "details": "Inoculation growth verified: Biomass increased from 3.00 to 3.21 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "dual_substrate_kinetics",
+        "passed": true,
+        "timing_ms": 0.903,
+        "details": "Dual-substrate kinetics confirmed: S1 (34.48 -> 33.91 g/L), S2 (1.99 -> 1.99 g/L), N (1.48 -> 1.45 g/L)."
+      },
+      {
+        "stage": 3,
+        "name": "phbv_polymer_accumulation",
+        "passed": true,
+        "timing_ms": 2.247,
+        "details": "PHBV biopolymer synthesized and accumulated from 0.52 to 0.55 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "monomer_fraction_and_nanofiller_dispersion",
+        "passed": true,
+        "timing_ms": 1.342,
+        "details": "3HV monomer fraction tuned to 15.4 mol% (target 5.0-30.0 mol%); nanofiller dispersion index dynamic: Phi=0.808."
+      },
+      {
+        "stage": 5,
+        "name": "valerate_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.513,
+        "details": "Valerate toxicity trip 0xF921 asserted on S2 > 5.0 g/L; precursor feed shut off (%M600=False)."
+      },
+      {
+        "stage": 6,
+        "name": "nanofiller_agglomeration_trip",
+        "passed": true,
+        "timing_ms": 0.487,
+        "details": "Nanofiller agglomeration trip 0xF922 asserted on Phi_nano < 0.20; clumping alarm active."
+      },
+      {
+        "stage": 7,
+        "name": "thermal_and_aeration_safety_trips",
+        "passed": true,
+        "timing_ms": 1.467,
+        "details": "Thermal runaway (0xF923), DO starvation (0xF924), and fault hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "name": "elemental_mass_and_carbon_residuals",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "Elemental carbon conservation residual 0.00e+00 < 1e-10 threshold."
+      },
+      {
+        "stage": 9,
+        "name": "horner_ocs_registers_and_pure_st_pou",
+        "passed": true,
+        "timing_ms": 2.296,
+        "details": "Horner OCS register space %R2570..%R2577, coils %M599..%M601, and pure ST validated."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 1.917,
+        "details": "Inoculation growth verified: Biomass increased from 3.00 to 3.21 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "dual_substrate_kinetics",
+        "passed": true,
+        "timing_ms": 0.903,
+        "details": "Dual-substrate kinetics confirmed: S1 (34.48 -> 33.91 g/L), S2 (1.99 -> 1.99 g/L), N (1.48 -> 1.45 g/L)."
+      },
+      {
+        "stage": 3,
+        "name": "phbv_polymer_accumulation",
+        "passed": true,
+        "timing_ms": 2.247,
+        "details": "PHBV biopolymer synthesized and accumulated from 0.52 to 0.55 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "monomer_fraction_and_nanofiller_dispersion",
+        "passed": true,
+        "timing_ms": 1.342,
+        "details": "3HV monomer fraction tuned to 15.4 mol% (target 5.0-30.0 mol%); nanofiller dispersion index dynamic: Phi=0.808."
+      },
+      {
+        "stage": 5,
+        "name": "valerate_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.513,
+        "details": "Valerate toxicity trip 0xF921 asserted on S2 > 5.0 g/L; precursor feed shut off (%M600=False)."
+      },
+      {
+        "stage": 6,
+        "name": "nanofiller_agglomeration_trip",
+        "passed": true,
+        "timing_ms": 0.487,
+        "details": "Nanofiller agglomeration trip 0xF922 asserted on Phi_nano < 0.20; clumping alarm active."
+      },
+      {
+        "stage": 7,
+        "name": "thermal_and_aeration_safety_trips",
+        "passed": true,
+        "timing_ms": 1.467,
+        "details": "Thermal runaway (0xF923), DO starvation (0xF924), and fault hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "name": "elemental_mass_and_carbon_residuals",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "Elemental carbon conservation residual 0.00e+00 < 1e-10 threshold."
+      },
+      {
+        "stage": 9,
+        "name": "horner_ocs_registers_and_pure_st_pou",
+        "passed": true,
+        "timing_ms": 2.296,
+        "details": "Horner OCS register space %R2570..%R2577, coils %M599..%M601, and pure ST validated."
+      }
+    ]
+  }
+}

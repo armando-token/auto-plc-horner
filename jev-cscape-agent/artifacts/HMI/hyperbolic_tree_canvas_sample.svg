@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.95"/>      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.98"/>    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">      <feGaussianBlur stdDeviation="3" result="blur"/>      <feComposite in="SourceGraphic" in2="blur" operator="over"/>    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="#0D1117"/>
+  <!-- Poincaré Unit Disk Boundary (|z| = 1.0) -->
+  <circle cx="500.0" cy="375.0" r="320.0" fill="#0A0E17" stroke="#38BDF8" stroke-width="2.5" stroke-opacity="0.85"/>
+  <circle cx="500.0" cy="375.0" r="121.6" fill="none" stroke="#1E293B" stroke-width="1.0" stroke-dasharray="4,4" opacity="0.6"/>
+  <circle cx="500.0" cy="375.0" r="217.6" fill="none" stroke="#1E293B" stroke-width="1.0" stroke-dasharray="4,4" opacity="0.6"/>
+  <circle cx="500.0" cy="375.0" r="281.6" fill="none" stroke="#1E293B" stroke-width="1.0" stroke-dasharray="4,4" opacity="0.6"/>
+  <!-- Geodesic Arc Edges connecting parent and child nodes -->
+  <path d="M 500.00,375.00 L 578.16,468.15" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 500.00,375.00 L 394.69,435.80" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 500.00,375.00 L 439.20,269.69" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 500.00,375.00 L 593.15,296.84" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 578.16,468.15 A 421.67,421.67 0 0,1 697.21,466.96" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 578.16,468.15 A 421.67,421.67 0 0,0 556.32,585.19" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 394.69,435.80 A 421.67,421.67 0 0,1 375.19,553.25" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 394.69,435.80 A 421.67,421.67 0 0,0 283.23,393.96" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 439.20,269.69 A 480.40,480.40 0 0,1 333.31,235.13" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 439.20,269.69 A 480.40,480.40 0 0,0 462.21,160.71" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 593.15,296.84 A 480.40,480.40 0 0,1 608.80,186.55" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 593.15,296.84 A 480.41,480.41 0 0,0 704.48,300.58" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 697.21,466.96 A 140.67,140.67 0 0,1 774.92,435.95" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 697.21,466.96 A 140.67,140.67 0 0,0 723.41,546.43" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 556.32,585.19 A 140.67,140.67 0 0,1 630.03,624.78" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 556.32,585.19 A 140.67,140.67 0 0,0 512.28,656.33" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 375.19,553.25 A 140.67,140.67 0 0,1 392.24,635.16" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 375.19,553.25 A 140.67,140.67 0 0,0 292.38,565.25" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 283.23,393.96 A 140.67,140.67 0 0,1 231.43,459.68" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 283.23,393.96 A 140.67,140.67 0 0,0 220.81,338.24" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 333.31,235.13 A 157.34,157.34 0 0,1 256.13,234.20" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 333.31,235.13 A 157.34,157.34 0 0,0 318.99,159.28" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 462.21,160.71 A 157.34,157.34 0 0,1 403.69,110.38" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 462.21,160.71 A 157.34,157.34 0 0,0 500.00,93.40" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 608.80,186.55 A 157.34,157.34 0 0,1 596.31,110.38" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 608.80,186.55 A 157.34,157.34 0 0,0 681.01,159.28" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 704.48,300.58 A 157.34,157.34 0 0,1 743.87,234.20" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <path d="M 704.48,300.58 A 157.34,157.34 0 0,0 777.32,326.10" fill="none" stroke="#475569" stroke-width="1.4" opacity="0.7"/>
+  <!-- Hierarchy Tree Nodes -->
+  <circle cx="500.0" cy="375.0" r="15.0" fill="none" stroke="#38BDF8" stroke-width="2.5" filter="url(#glowEffect)"/>
+  <circle cx="500.0" cy="375.0" r="10.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Industrial Refinery Plant (PLANT-REF-01) - Health: 94.9%</title></circle>
+  <text x="500.0" y="361.0" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">PLANT-REF-01</text>
+  <circle cx="578.2" cy="468.2" r="7.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Crude Distillation Area (AREA-01) - Health: 94.5%</title></circle>
+  <text x="578.2" y="457.2" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">AREA-01</text>
+  <circle cx="394.7" cy="435.8" r="7.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Fluid Catalytic Cracking Area (AREA-02) - Health: 94.2%</title></circle>
+  <text x="394.7" y="424.8" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">AREA-02</text>
+  <circle cx="439.2" cy="269.7" r="7.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Continuous Catalytic Reforming Area (AREA-03) - Health: 95.2%</title></circle>
+  <text x="439.2" y="258.7" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">AREA-03</text>
+  <circle cx="593.2" cy="296.8" r="7.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Steam &amp; Power Utilities Area (AREA-04) - Health: 96.2%</title></circle>
+  <text x="593.2" y="285.8" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">AREA-04</text>
+  <circle cx="697.2" cy="467.0" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Atmospheric Distillation Unit (CDU-100) - Health: 95.0%</title></circle>
+  <circle cx="556.3" cy="585.2" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Vacuum Distillation Unit (VDU-200) - Health: 94.0%</title></circle>
+  <circle cx="375.2" cy="553.2" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Riser Reactor &amp; Regenerator (FCC-300) - Health: 93.0%</title></circle>
+  <circle cx="283.2" cy="394.0" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Main Fractionator Column (FCC-350) - Health: 95.5%</title></circle>
+  <circle cx="333.3" cy="235.1" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Feed Preheating Furnaces (REF-400) - Health: 96.0%</title></circle>
+  <circle cx="462.2" cy="160.7" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Multi-Stage Catalytic Bed (REF-450) - Health: 94.5%</title></circle>
+  <circle cx="608.8" cy="186.6" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>High-Pressure Steam Boilers (UTL-500) - Health: 96.0%</title></circle>
+  <circle cx="704.5" cy="300.6" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Co-Gen Turbine Generator (UTL-550) - Health: 96.5%</title></circle>
+  <circle cx="774.9" cy="435.9" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Crude Feed Charge Pumps (P-101A/B) - Health: 94.0%</title></circle>
+  <circle cx="723.4" cy="546.4" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Crude Fractionation Trays (C-101) - Health: 96.0%</title></circle>
+  <circle cx="630.0" cy="624.8" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Steam Ejector Vacuum System (J-201) - Health: 93.0%</title></circle>
+  <circle cx="512.3" cy="656.3" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Vacuum Column Internals (C-201) - Health: 95.0%</title></circle>
+  <circle cx="392.2" cy="635.2" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Riser Feed Injection Nozzles (R-301) - Health: 92.0%</title></circle>
+  <circle cx="292.4" cy="565.2" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Regenerator Air Grid &amp; Cyclones (R-302) - Health: 94.0%</title></circle>
+  <circle cx="231.4" cy="459.7" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Overhead Vapor Condenser (E-351) - Health: 96.0%</title></circle>
+  <circle cx="220.8" cy="338.2" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Clarified Slurry Oil Settler (V-352) - Health: 95.0%</title></circle>
+  <circle cx="256.1" cy="234.2" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Charge Heaters 101/102 (F-401) - Health: 97.0%</title></circle>
+  <circle cx="319.0" cy="159.3" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Feed-Effluent Combined Exchanger (E-401) - Health: 95.0%</title></circle>
+  <circle cx="403.7" cy="110.4" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Reformer Lead Reactors R-1/2 (R-401) - Health: 93.0%</title></circle>
+  <circle cx="500.0" cy="93.4" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Reformer Tail Reactors R-3/4 (R-402) - Health: 96.0%</title></circle>
+  <circle cx="596.3" cy="110.4" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Deaerator &amp; Feedwater Pumps (B-501) - Health: 98.0%</title></circle>
+  <circle cx="681.0" cy="159.3" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Steam Drum &amp; Superheater (B-502) - Health: 94.0%</title></circle>
+  <circle cx="743.9" cy="234.2" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Multi-Stage Steam Turbine (TG-551) - Health: 96.0%</title></circle>
+  <circle cx="777.3" cy="326.1" r="5.0" fill="#10B981" stroke="#FFFFFF" stroke-width="1.2"><title>Surface Condenser &amp; Hotwell (E-552) - Health: 97.0%</title></circle>
+  <!-- Right-Hand SCADA Telemetry HUD Cards -->
+  <rect x="880" y="40" width="280" height="670" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+  <rect x="895" y="55" width="250" height="42" rx="6" fill="#050811" stroke="#334155" stroke-width="1.0"/>
+  <text x="905" y="81" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">W213 POINCARÉ DISK SCADA</text>
+  <text x="900" y="127" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Selected Asset</text>
+  <text x="1140" y="127" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">PLANT-REF-01 (PLANT_ROOT)</text>
+  <text x="900" y="165" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Unit Name</text>
+  <text x="1140" y="165" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">Industrial Refinery Pl</text>
+  <text x="900" y="203" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Health Score</text>
+  <text x="1140" y="203" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">94.9%</text>
+  <text x="900" y="241" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Poincaré Hyperbolic Dist</text>
+  <text x="1140" y="241" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">0.000</text>
+  <text x="900" y="279" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Plant Root Health</text>
+  <text x="1140" y="279" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">94.9%</text>
+  <text x="900" y="317" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Critical Faults (%R1743)</text>
+  <text x="1140" y="317" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">0</text>
+  <text x="900" y="355" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Hierarchy Depth (%R1744)</text>
+  <text x="1140" y="355" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">3</text>
+  <text x="900" y="393" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Total Plant Nodes (%R1745)</text>
+  <text x="1140" y="393" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">29</text>
+  <text x="900" y="431" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Min Health Score (%R1746)</text>
+  <text x="1140" y="431" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">92.0%</text>
+  <text x="900" y="469" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Horner Diagnostic (%R1747)</text>
+  <text x="1140" y="469" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">0x0000</text>
+  <text x="900" y="507" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Fault Trip Coil (%M406)</text>
+  <text x="1140" y="507" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">OFF</text>
+  <text x="900" y="545" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Canvas Engine (%M407)</text>
+  <text x="1140" y="545" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="end">ENABLED</text>
+</svg>

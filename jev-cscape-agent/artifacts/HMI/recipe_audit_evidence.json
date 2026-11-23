@@ -1,0 +1,598 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Recipe audit chain verified (11 blocks, valid=True).",
+  "data": {
+    "audit_summary": {
+      "valid": true,
+      "total_blocks": 11,
+      "root_digest": "9d8b5e17812e7c7ecedb87536eb6c58fe254ffad1ff076f2a2d1995d7b51e1ca",
+      "violations": []
+    },
+    "recipes_tracked": [
+      "WATER_TREATMENT_PROCESS"
+    ],
+    "active_recipes": {
+      "WATER_TREATMENT_PROCESS": "WT_ROLLBACK_NIGHT"
+    },
+    "total_revisions": 4,
+    "blocks": [
+      {
+        "record_index": 0,
+        "timestamp_utc": "2026-10-02T20:52:39.133095+00:00",
+        "operator_id": "SYSTEM",
+        "action": "GENESIS",
+        "recipe_id": "SYSTEM",
+        "revision_id": "0",
+        "state_before": null,
+        "state_after": "ACTIVE",
+        "payload_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "entry_hash": "f2b2c10632e53ec8134b7066712ba4f47b77d104ce634af1ba5ddd6d9dd12216",
+        "signature_hash": null,
+        "diffs": [],
+        "reason": "Genesis initialization of industrial recipe audit ledger."
+      },
+      {
+        "record_index": 1,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "LEAD_PROCESS_ENG",
+        "action": "CREATE_DRAFT",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_LOW_FLOW",
+        "state_before": null,
+        "state_after": "DRAFT",
+        "payload_hash": "bdef8cb668433920561d438830334f47eaeb4f457f7060facc9c23d76d4fb9e2",
+        "prev_hash": "f2b2c10632e53ec8134b7066712ba4f47b77d104ce634af1ba5ddd6d9dd12216",
+        "entry_hash": "905d861f6b067af70acaa292e3269d0ff7e43055c3a91f948a2175304cb10d99",
+        "signature_hash": null,
+        "diffs": [
+          {
+            "parameter_name": "%R101",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 3,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R102",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 35,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R103",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 8000,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R104",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 25,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R105",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 2,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R106",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 20,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R107",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 80,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R108",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 15,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R109",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 7200,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R110",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 1200,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R111",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 1,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          }
+        ],
+        "reason": "Water Treatment Low Flow: Off-peak / overnight low demand operating mode."
+      },
+      {
+        "record_index": 2,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "QA_SUPERVISOR_01",
+        "action": "SIGN_AND_APPROVE",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_LOW_FLOW",
+        "state_before": "DRAFT",
+        "state_after": "APPROVED",
+        "payload_hash": "bdef8cb668433920561d438830334f47eaeb4f457f7060facc9c23d76d4fb9e2",
+        "prev_hash": "905d861f6b067af70acaa292e3269d0ff7e43055c3a91f948a2175304cb10d99",
+        "entry_hash": "7bf63cfbb935f2380725c513479dc683bee3c2b71e87823b477a44c829bf0147",
+        "signature_hash": "1efd3dfc9dcf4a3a7b83a4b19b05ae1a8677a8a25b0ccfb5045a6b0039db6183",
+        "diffs": [],
+        "reason": "Approved with meaning QUALITY_APPROVAL: Approved for production trial"
+      },
+      {
+        "record_index": 3,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "LEAD_PROCESS_ENG",
+        "action": "CREATE_DRAFT",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_NORMAL_FLOW",
+        "state_before": null,
+        "state_after": "DRAFT",
+        "payload_hash": "2030ff7e86f9aa161e6f5f18e698c5865c11a38c2ae76ecf4c7c289b6af98b7d",
+        "prev_hash": "7bf63cfbb935f2380725c513479dc683bee3c2b71e87823b477a44c829bf0147",
+        "entry_hash": "290345fcc42ed34891494cb79dbc3d284883e2fd30e9939a8e23728d159df8ac",
+        "signature_hash": null,
+        "diffs": [
+          {
+            "parameter_name": "%R101",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 8,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R102",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 50,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R103",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 16000,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R104",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 50,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R105",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 5,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R106",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 45,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R107",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 85,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R108",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 20,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R109",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 3600,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R110",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 600,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R111",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 1,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          }
+        ],
+        "reason": "Water Treatment Normal Flow: Standard daytime nominal municipal water treatment mode."
+      },
+      {
+        "record_index": 4,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "QA_SUPERVISOR_01",
+        "action": "SIGN_AND_APPROVE",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_NORMAL_FLOW",
+        "state_before": "DRAFT",
+        "state_after": "APPROVED",
+        "payload_hash": "2030ff7e86f9aa161e6f5f18e698c5865c11a38c2ae76ecf4c7c289b6af98b7d",
+        "prev_hash": "290345fcc42ed34891494cb79dbc3d284883e2fd30e9939a8e23728d159df8ac",
+        "entry_hash": "e99b37085bfc331b3efdc39387b630d3e3b690b4946c68348f16c0d631e8e7df",
+        "signature_hash": "1efd3dfc9dcf4a3a7b83a4b19b05ae1a8677a8a25b0ccfb5045a6b0039db6183",
+        "diffs": [],
+        "reason": "Approved with meaning QUALITY_APPROVAL: Approved for production trial"
+      },
+      {
+        "record_index": 5,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "LEAD_PROCESS_ENG",
+        "action": "CREATE_DRAFT",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_STORM_SURGE",
+        "state_before": null,
+        "state_after": "DRAFT",
+        "payload_hash": "a4ec51c97cb2580134253350f6d4a7913c8ea524016725e9b112e638a09c3e2d",
+        "prev_hash": "e99b37085bfc331b3efdc39387b630d3e3b690b4946c68348f16c0d631e8e7df",
+        "entry_hash": "df624fd41ff646b4d65fc1e0fd73019c475e458f09d2019b85ef927c0460ed28",
+        "signature_hash": null,
+        "diffs": [
+          {
+            "parameter_name": "%R101",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 22,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R102",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 75,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R103",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 31000,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R104",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 95,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R105",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 15,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R106",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 140,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R107",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 95,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R108",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 30,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R109",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 1800,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R110",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 300,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          },
+          {
+            "parameter_name": "%R111",
+            "register_address": null,
+            "old_value": null,
+            "new_value": 1,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "ADDED"
+          }
+        ],
+        "reason": "Storm Surge Batch: High-throughput storm surge emergency batch processing mode."
+      },
+      {
+        "record_index": 6,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "QA_SUPERVISOR_01",
+        "action": "SIGN_AND_APPROVE",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_STORM_SURGE",
+        "state_before": "DRAFT",
+        "state_after": "APPROVED",
+        "payload_hash": "a4ec51c97cb2580134253350f6d4a7913c8ea524016725e9b112e638a09c3e2d",
+        "prev_hash": "df624fd41ff646b4d65fc1e0fd73019c475e458f09d2019b85ef927c0460ed28",
+        "entry_hash": "d16095cbb0e58c20a593f1b8b3df8b0f18a5fb1589bc6dbde9e925201803bc00",
+        "signature_hash": "1efd3dfc9dcf4a3a7b83a4b19b05ae1a8677a8a25b0ccfb5045a6b0039db6183",
+        "diffs": [],
+        "reason": "Approved with meaning QUALITY_APPROVAL: Approved for production trial"
+      },
+      {
+        "record_index": 7,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "CHIEF_OPERATOR",
+        "action": "ACTIVATE",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_NORMAL_FLOW",
+        "state_before": "APPROVED",
+        "state_after": "ACTIVE",
+        "payload_hash": "2030ff7e86f9aa161e6f5f18e698c5865c11a38c2ae76ecf4c7c289b6af98b7d",
+        "prev_hash": "d16095cbb0e58c20a593f1b8b3df8b0f18a5fb1589bc6dbde9e925201803bc00",
+        "entry_hash": "f82a36706bc2566ba1e34a3531f94e0fc2890d466f664705c8ba26094092c234",
+        "signature_hash": null,
+        "diffs": [],
+        "reason": "Scheduled plant run"
+      },
+      {
+        "record_index": 8,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "PLANT_MANAGER",
+        "action": "ROLLBACK_REVISION",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_ROLLBACK_NIGHT",
+        "state_before": null,
+        "state_after": "APPROVED",
+        "payload_hash": "bdef8cb668433920561d438830334f47eaeb4f457f7060facc9c23d76d4fb9e2",
+        "prev_hash": "f82a36706bc2566ba1e34a3531f94e0fc2890d466f664705c8ba26094092c234",
+        "entry_hash": "2d9935aab2de247029e7affb506156a2f514c7cd1384462cfbc5e81d08ff67f7",
+        "signature_hash": "a632004a1f5502d20dc44014f4a102e95a763ccdba7cc16e1ea035b8f9e96277",
+        "diffs": [
+          {
+            "parameter_name": "%R101",
+            "register_address": null,
+            "old_value": 8,
+            "new_value": 3,
+            "delta": -5.0,
+            "percent_delta": -62.5,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R102",
+            "register_address": null,
+            "old_value": 50,
+            "new_value": 35,
+            "delta": -15.0,
+            "percent_delta": -30.0,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R103",
+            "register_address": null,
+            "old_value": 16000,
+            "new_value": 8000,
+            "delta": -8000.0,
+            "percent_delta": -50.0,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R104",
+            "register_address": null,
+            "old_value": 50,
+            "new_value": 25,
+            "delta": -25.0,
+            "percent_delta": -50.0,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R105",
+            "register_address": null,
+            "old_value": 5,
+            "new_value": 2,
+            "delta": -3.0,
+            "percent_delta": -60.0,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R106",
+            "register_address": null,
+            "old_value": 45,
+            "new_value": 20,
+            "delta": -25.0,
+            "percent_delta": -55.55555555555556,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R107",
+            "register_address": null,
+            "old_value": 85,
+            "new_value": 80,
+            "delta": -5.0,
+            "percent_delta": -5.88235294117647,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R108",
+            "register_address": null,
+            "old_value": 20,
+            "new_value": 15,
+            "delta": -5.0,
+            "percent_delta": -25.0,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R109",
+            "register_address": null,
+            "old_value": 3600,
+            "new_value": 7200,
+            "delta": 3600.0,
+            "percent_delta": 100.0,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R110",
+            "register_address": null,
+            "old_value": 600,
+            "new_value": 1200,
+            "delta": 600.0,
+            "percent_delta": 100.0,
+            "diff_type": "MODIFIED"
+          },
+          {
+            "parameter_name": "%R111",
+            "register_address": null,
+            "old_value": 1,
+            "new_value": 1,
+            "delta": null,
+            "percent_delta": null,
+            "diff_type": "UNCHANGED"
+          }
+        ],
+        "reason": "Rollback to historical setpoints of 'WT_LOW_FLOW': Regulatory rollback to prior verified revision"
+      },
+      {
+        "record_index": 9,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "PLANT_MANAGER",
+        "action": "SUPERSEDE_RETIRE",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_NORMAL_FLOW",
+        "state_before": "ACTIVE",
+        "state_after": "RETIRED",
+        "payload_hash": "2030ff7e86f9aa161e6f5f18e698c5865c11a38c2ae76ecf4c7c289b6af98b7d",
+        "prev_hash": "2d9935aab2de247029e7affb506156a2f514c7cd1384462cfbc5e81d08ff67f7",
+        "entry_hash": "4d8d231096fc54552aa1dc05cd450439f2c23ece27eb10fc23370ba36df57930",
+        "signature_hash": null,
+        "diffs": [],
+        "reason": "Superseded by activation of revision 'WT_ROLLBACK_NIGHT'."
+      },
+      {
+        "record_index": 10,
+        "timestamp_utc": "2026-10-02T20:52:39.135177+00:00",
+        "operator_id": "PLANT_MANAGER",
+        "action": "ACTIVATE",
+        "recipe_id": "WATER_TREATMENT_PROCESS",
+        "revision_id": "WT_ROLLBACK_NIGHT",
+        "state_before": "APPROVED",
+        "state_after": "ACTIVE",
+        "payload_hash": "bdef8cb668433920561d438830334f47eaeb4f457f7060facc9c23d76d4fb9e2",
+        "prev_hash": "4d8d231096fc54552aa1dc05cd450439f2c23ece27eb10fc23370ba36df57930",
+        "entry_hash": "9d8b5e17812e7c7ecedb87536eb6c58fe254ffad1ff076f2a2d1995d7b51e1ca",
+        "signature_hash": null,
+        "diffs": [],
+        "reason": "Automated activation of rollback revision 'WT_ROLLBACK_NIGHT'."
+      }
+    ]
+  }
+}

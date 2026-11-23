@@ -1,0 +1,183 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W262 CIP Safety OPC UA Safety Part 15 Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W262",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety Over OPC UA Safety Part 15 / PubSub Safety Interoperability Engine",
+    "work_package": "W262",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x15": "OPC UA Part 15 Safety Profile"
+    },
+    "consumer_id": 101,
+    "provider_id": 202,
+    "nominal_delay_us": 1200,
+    "register_map": {
+      "%R2230": "REG_OPCUA_SAFETY_LINK_STATE (0..4)",
+      "%R2231": "REG_OPCUA_SAFETY_CONSUMER_ID (101)",
+      "%R2232": "REG_OPCUA_SAFETY_PROVIDER_ID (202)",
+      "%R2233": "REG_OPCUA_SAFETY_DELAY_US (1200 us)",
+      "%R2234": "REG_OPCUA_SAFETY_LOST_SPDU_COUNT (nominal 0)",
+      "%R2235": "REG_OPCUA_SAFETY_TX_PACKET_COUNT (nominal 100)",
+      "%R2236": "REG_OPCUA_SAFETY_QUALITY_BITS (nominal 0x0003)",
+      "%R2237": "REG_OPCUA_SAFETY_DIAGNOSTIC_CODE (0x0000 OK, 0xEE41..0xEE43)",
+      "%M520": "COIL_OPCUA_SAFETY_LINK_HEALTHY",
+      "%M521": "COIL_OPCUA_SAFETY_STOP_TRIPPED"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "OPC_UA_Part_15_SPDU_Safety_Profile_And_Framing",
+        "check": "OPC UA Part 15 SPDU Safety Profile & Framing (Dual CRC-S1/S2)",
+        "passed": true,
+        "timing_ms": 0.654,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x15), Dual CRC-S1 (0x5935)/S2 (0x755B), and SPDU framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 4.023,
+        "details": "POU 'CipSafetyOpcUaSync' validated with STParser and SecurityGuard, binding %R2230..%R2237 and %M520..%M521."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.055,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_OPC_UA_Safety_Telemetry",
+        "check": "Nominal OPC UA Safety Telemetry (Delay 1200us, Consumer 101, Provider 202, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.614,
+        "details": "Nominal Delay 1200 us, Consumer 101, Provider 202, Diagnostic 0x0000, %M520=True, %M521=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "SPDU_CRC_Corruption_And_Safe_Stop_Trip",
+        "check": "SPDU CRC Corruption & Safe Stop Trip (0xEE41, %M521)",
+        "passed": true,
+        "timing_ms": 0.7,
+        "details": "SPDU CRC corruption tripped 0xEE41, asserted %M521, de-asserted %M520, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "Safety_Delay_Overrun_Trip",
+        "check": "Safety Delay Overrun Trip (0xEE42, %M521)",
+        "passed": true,
+        "timing_ms": 0.695,
+        "details": "Safety delay overrun (5500 us >= 5000 us limit) tripped 0xEE42, asserted %M521, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "Nonce_Sequence_Mismatch_Trip",
+        "check": "Nonce Sequence Mismatch Trip (0xEE43, %M521)",
+        "passed": true,
+        "timing_ms": 1.473,
+        "details": "Nonce sequence mismatch & replay tripped 0xEE43, asserted %M521, de-asserted %M520, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2230..%R2237, %M520..%M521)",
+        "passed": true,
+        "timing_ms": 0.932,
+        "details": "Bit-exact %R2230..%R2237 and %M520..%M521 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 112.691,
+        "details": "100 scan cycles executed without fault or drift, heap growth 0.93 KB (< 100 KB)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "OPC_UA_Part_15_SPDU_Safety_Profile_And_Framing",
+        "check": "OPC UA Part 15 SPDU Safety Profile & Framing (Dual CRC-S1/S2)",
+        "passed": true,
+        "timing_ms": 0.654,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x15), Dual CRC-S1 (0x5935)/S2 (0x755B), and SPDU framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 4.023,
+        "details": "POU 'CipSafetyOpcUaSync' validated with STParser and SecurityGuard, binding %R2230..%R2237 and %M520..%M521."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.055,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_OPC_UA_Safety_Telemetry",
+        "check": "Nominal OPC UA Safety Telemetry (Delay 1200us, Consumer 101, Provider 202, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.614,
+        "details": "Nominal Delay 1200 us, Consumer 101, Provider 202, Diagnostic 0x0000, %M520=True, %M521=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "SPDU_CRC_Corruption_And_Safe_Stop_Trip",
+        "check": "SPDU CRC Corruption & Safe Stop Trip (0xEE41, %M521)",
+        "passed": true,
+        "timing_ms": 0.7,
+        "details": "SPDU CRC corruption tripped 0xEE41, asserted %M521, de-asserted %M520, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "Safety_Delay_Overrun_Trip",
+        "check": "Safety Delay Overrun Trip (0xEE42, %M521)",
+        "passed": true,
+        "timing_ms": 0.695,
+        "details": "Safety delay overrun (5500 us >= 5000 us limit) tripped 0xEE42, asserted %M521, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "Nonce_Sequence_Mismatch_Trip",
+        "check": "Nonce Sequence Mismatch Trip (0xEE43, %M521)",
+        "passed": true,
+        "timing_ms": 1.473,
+        "details": "Nonce sequence mismatch & replay tripped 0xEE43, asserted %M521, de-asserted %M520, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2230..%R2237, %M520..%M521)",
+        "passed": true,
+        "timing_ms": 0.932,
+        "details": "Bit-exact %R2230..%R2237 and %M520..%M521 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 112.691,
+        "details": "100 scan cycles executed without fault or drift, heap growth 0.93 KB (< 100 KB)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

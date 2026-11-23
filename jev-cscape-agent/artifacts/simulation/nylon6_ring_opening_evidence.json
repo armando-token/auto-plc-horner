@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Nylon 6 ring-opening polymerization 9-stage engineering verification passed successfully.",
+  "data": {
+    "work_package": "W266",
+    "module": "jev_cscape.simulation.nylon6_ring_opening",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "elapsed_ms": 43.39,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Nylon 6 Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "check": "Nylon 6 Chemistry, Activation Energy & Thermochemical Enthalpies",
+        "passed": true,
+        "details": "Thermochemical constants verified: Ep error=4.37e-10 J/mol, DeltaH_rxn=-14.2 kJ/mol, DeltaH_cryst=-180.0 J/g."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "Nylon6RingOpeningSync POU validated with STParser and SecurityGuard; all 11 registers and coils bound."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs, mnemonics) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Steady-State Closed-Loop Convergence (Conv 96.50%, Temp 165.0 \u00b0C, Cryst 42.00%, Mw 45k)",
+        "check": "Nominal Steady-State Closed-Loop Convergence (Conv 96.50%, Temp 165.0 \u00b0C, Cryst 42.00%, Mw 45k)",
+        "passed": true,
+        "details": "Nominal steady-state verified: T=165.0\u00b0C (165.0), Conv=96.50% (96.50%), Cryst=42.00% (42.00%), Mw=45000 Da (45000), Rp=1.85 mol/(L.s) (1.85), MoldFlux=48.0 kW (48.0), [I]=0.085 mol/L (0.085)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (stoichiometric mass, elements C/H/O/N, enthalpy < 1e-10)",
+        "check": "Conservation Laws Verification (stoichiometric mass, elements C/H/O/N, enthalpy < 1e-10)",
+        "passed": true,
+        "details": "Conservation laws verified: stoichiometric mass=0.00e+00 kg/s, elemental=0.00e+00 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Premature Solidification Trip (0xF901, T < 135 \u00b0C or Cryst > 48%)",
+        "check": "Premature Solidification Trip (0xF901, T < 135 \u00b0C or Cryst > 48%)",
+        "passed": true,
+        "details": "0xF901 premature solidification trip verified: %M529 cleared, %M530 cleared, %M531 cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Exotherm Runaway Trip & Emergency Cooling Actuation (0xF902, %M531)",
+        "check": "Exotherm Runaway Trip & Emergency Cooling Actuation (0xF902, %M531)",
+        "passed": true,
+        "details": "0xF902 exotherm runaway trip (> 195 \u00b0C) verified: emergency cooling %M531 asserted, %M529 & %M530 cleared."
+      },
+      {
+        "stage": 8,
+        "name": "Initiator Deactivation (0xF903) & Moisture Poisoning (0xF904) Faults",
+        "check": "Initiator Deactivation (0xF903) & Moisture Poisoning (0xF904) Faults",
+        "passed": true,
+        "details": "0xF903 catalyst deactivation fault (< 0.040 mol/L) and 0xF904 water hydrolysis poisoning fault verified."
+      },
+      {
+        "stage": 9,
+        "name": "Horner OCS Register Synchronization & 100-Cycle Soak Dynamic Stability",
+        "check": "Horner OCS Register Synchronization & 100-Cycle Soak Dynamic Stability",
+        "passed": true,
+        "details": "Registers %R2270..%R2277 and coils %M529..%M531 bit-exact verified; 100 soak cycles stable (T=165.00\u00b0C, Conv=96.50%)."
+      }
+    ]
+  }
+}

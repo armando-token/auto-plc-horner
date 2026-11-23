@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 7/7 Sparkplug B protocol and Horner register checks passed.",
+  "data": {
+    "timestamp_utc": "2026-10-02T23:59:44.660578+00:00",
+    "tests_run": 7,
+    "tests_passed": 7,
+    "verification_steps": [
+      "Varint LEB128 codec verified across standard and 64-bit boundaries.",
+      "IEEE 754 32-bit float and 64-bit double wire encoding verified.",
+      "Canonical Sparkplug B topic formatting and parsing verified for all 8 verbs.",
+      "Metric Protobuf serialization verified across Int16, Float, Bool, String, Null.",
+      "Sequence counter modulo 256 rollover and rebirth sequence verified.",
+      "Horner OCS scan cycle execution and %R270..%R274, %M58..%M59 sync verified.",
+      "Pure ST boundary integrity confirmed; all 10 forbidden ladder constructs rejected."
+    ],
+    "codecs_verified": [
+      "varint_leb128",
+      "ieee754_float32",
+      "ieee754_double64",
+      "length_delimited_string"
+    ],
+    "topics_verified": [
+      "NBIRTH",
+      "NDEATH",
+      "DBIRTH",
+      "DDEATH",
+      "NDATA",
+      "DDATA",
+      "NCMD",
+      "DCMD"
+    ],
+    "register_mapping": {
+      "status_word": "%R270",
+      "sequence_number": "%R271",
+      "cumulative_messages_udint": "%R272:%R273",
+      "last_payload_bytes": "%R274",
+      "enable_coil": "%M58",
+      "rebirth_trigger_coil": "%M59"
+    },
+    "total_messages_generated_in_test": 5
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W228",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Beeswarm Jitter Scatter SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Viewport_Geometry_And_Canvas_Parameter_Verification",
+        "passed": true,
+        "timing_ms": 10.07,
+        "details": "Verified 1200x750 viewport, dark theme (#0D1117/#161B22), radius R=6.0 px, and padding pad=2.0 px (d_min=14.0 px)."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_Structured_Text_POU_Validation",
+        "passed": true,
+        "timing_ms": 2.41,
+        "details": "Verified 'BeeswarmCanvasSync' POU with STParser & SecurityGuard across Horner registers %R1890..%R1897 and %M441..%M442."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.04,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Telemetry_Point_To_Lane_Allocation_And_Circle_Packing_Settlement",
+        "passed": true,
+        "timing_ms": 24.08,
+        "details": "Verified point-to-lane allocation and non-overlapping constraint (|y_i - y_j| >= 14.0 px when |x_i - x_j| < 12.0 px, 0 violations) across 350 points in 4 lanes."
+      },
+      {
+        "stage": 5,
+        "check": "Standalone_W3C_SVG_Vector_Canvas_Generation",
+        "passed": true,
+        "timing_ms": 9.09,
+        "details": "Verified valid W3C SVG 1.1 with WCAG 2.1 AAA contrast (> 18:1), 350 <circle> points, lane panels, dark backing badges, and HUD scorecard -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\beeswarm_canvas_sample.svg."
+      },
+      {
+        "stage": 6,
+        "check": "High_Jitter_Spread_Alarm_Injection",
+        "passed": true,
+        "timing_ms": 17.56,
+        "details": "Verified %M442 alarm assertion when dense cluster causes MaxJitterOffsetPx > 25.0 px (28.5 px), de-assertion on nominal recovery."
+      },
+      {
+        "stage": 7,
+        "check": "Diagnostic_Fault_Handling",
+        "passed": true,
+        "timing_ms": 15.96,
+        "details": "Verified 0xF203 (Radius Singularity R<=0) and 0xF202 (Empty Dataset) with %R1897 latching and nominal reset."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 21.81,
+        "details": "Verified %R1890..%R1897 (350, 350, 145, 62, 8, 4, 6, 0) and %M441..%M442 (True, False) bit-exact with signed/unsigned masking and ILogicUnit scan cycle execution."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycle_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 455.43,
+        "details": "Verified 100 deterministic scan cycles: 0 memory leak (steady 350 points), constant jitter metrics, and zero drift."
+      }
+    ],
+    "metrics": {
+      "total_sample_points_count": 350,
+      "packed_circles_count": 350,
+      "max_jitter_offset_px_scaled": 145,
+      "mean_jitter_offset_px_scaled": 62,
+      "outlier_points_count": 8,
+      "active_process_lanes_count": 4,
+      "circle_radius_px": 6,
+      "excessive_jitter_spread_alarm_active": false,
+      "diagnostic_code": "0x0000",
+      "wcag_badge_contrast": 18.3,
+      "wcag_text_contrast": 18.09
+    }
+  }
+}

@@ -1,0 +1,357 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <!-- Glow Filter for Hotspot Reticle -->
+    <filter id="hotspot-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Industrial Dark Pattern Grid -->
+    <pattern id="mesh-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161B22" stroke-width="1"/>
+    </pattern>
+    <!-- Thermal Heatmap Linear Gradient -->
+    <linearGradient id="thermal-ramp" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="35%" stop-color="#10B981"/>
+      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="750" fill="#0D1117"/>
+  <rect width="1200" height="750" fill="url(#mesh-grid)"/>
+
+  <!-- Header Banner -->
+  <g id="header-banner">
+    <rect x="0" y="0" width="1200" height="65" fill="#161B22" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="32" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="16" font-weight="bold" letter-spacing="1.5">
+      HORNER OCS // DELAUNAY-VORONOI DUAL SCADA CANVAS (W267)
+    </text>
+    <text x="30" y="52" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">
+      W267 | GATE G9/G2 | HORNER %R2280..%R2287, %M532..%M533 | WCAG 2.1 AAA CONTRAST &gt; 18:1
+    </text>
+    <!-- Decoupled Dark Backing Badge for WCAG AAA Compliance -->
+    <rect x="970" y="15" width="200" height="35" rx="4" fill="#050811" stroke="#10B981" stroke-width="1.5"/>
+    <circle cx="988" cy="32" r="5" fill="#10B981"/>
+    <text x="1002" y="36" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="12" font-weight="bold">
+      MESH CONNECTED
+    </text>
+  </g>
+
+  <!-- Plant Sensor Mesh Viewport Frame -->
+  <g id="mesh-viewport">
+    <rect x="40" y="80" width="820" height="630" rx="6" fill="#11161F" stroke="#334155" stroke-width="1.5"/>
+    <text x="55" y="105" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">
+      FURNACE WALL THERMOGRAPHY MESH [50.0..850.0] x [85.0..685.0] px
+    </text>
+  </g>
+
+  <!-- Dual Voronoi Tessellation Cells -->
+  <g id="voronoi-cells">
+    <polygon id="voronoi-cell-1" points="238.8,85.0 242.9,128.8 50.0,270.9 50.0,85.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-2" points="238.8,85.0 460.7,85.0 459.9,121.0 430.0,153.5 340.0,180.9 250.0,137.8 242.9,128.8" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-3" points="459.9,121.0 460.7,85.0 672.1,85.0 667.2,132.7 610.0,176.9 520.0,172.8" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-4" points="761.9,248.5 667.2,132.7 672.1,85.0 850.0,85.0 850.0,286.6" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-5" points="667.4,621.3 850.0,457.0 850.0,685.0 671.9,685.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-6" points="460.0,607.2 550.0,564.1 640.0,591.5 667.4,621.3 671.9,685.0 448.7,685.0 450.2,619.6" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-7" points="280.0,577.2 370.0,564.9 450.2,619.6 448.7,685.0 227.8,685.0 232.1,622.9" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-8" points="50.0,466.6 124.1,497.8 232.1,622.9 227.8,685.0 50.0,685.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-9" points="50.0,325.0 50.0,270.9 242.9,128.8 250.0,137.8 250.0,268.0 69.6,325.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-10" points="280.0,287.0 250.0,268.0 250.0,137.8 340.0,180.9 340.0,268.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-11" points="340.0,180.9 430.0,153.5 430.0,268.0 370.0,287.0 340.0,268.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-12" points="430.0,153.5 459.9,121.0 520.0,172.8 520.0,268.0 460.0,287.0 430.0,268.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-13" points="520.0,172.8 610.0,176.9 610.0,268.0 550.0,287.0 520.0,268.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-14" points="610.0,176.9 667.2,132.7 761.9,248.5 640.0,287.0 610.0,268.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-15" points="250.0,268.0 280.0,287.0 280.0,363.0 250.0,382.0 69.6,325.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-16" points="280.0,287.0 340.0,268.0 370.0,287.0 370.0,363.0 340.0,382.0 280.0,363.0" fill="#F59E0B" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-17" points="370.0,287.0 430.0,268.0 460.0,287.0 460.0,363.0 430.0,382.0 370.0,363.0" fill="#F59E0B" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-18" points="460.0,287.0 520.0,268.0 550.0,287.0 550.0,363.0 520.0,382.0 460.0,363.0" fill="#F59E0B" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-19" points="550.0,287.0 610.0,268.0 640.0,287.0 640.0,363.0 610.0,382.0 550.0,363.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-20" points="761.9,248.5 850.0,286.6 850.0,420.0 820.4,420.0 640.0,363.0 640.0,287.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-21" points="69.6,325.0 250.0,382.0 250.0,458.0 124.1,497.8 50.0,466.6 50.0,325.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-22" points="250.0,382.0 280.0,363.0 340.0,382.0 340.0,458.0 280.0,477.0 250.0,458.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-23" points="340.0,382.0 370.0,363.0 430.0,382.0 430.0,458.0 370.0,477.0 340.0,458.0" fill="#F59E0B" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-24" points="430.0,382.0 460.0,363.0 520.0,382.0 520.0,458.0 460.0,477.0 430.0,458.0" fill="#F59E0B" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-25" points="520.0,382.0 550.0,363.0 610.0,382.0 610.0,458.0 550.0,477.0 520.0,458.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-26" points="610.0,458.0 610.0,382.0 640.0,363.0 820.4,420.0 640.0,477.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-27" points="280.0,477.0 280.0,577.2 232.1,622.9 124.1,497.8 250.0,458.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-28" points="280.0,477.0 340.0,458.0 370.0,477.0 370.0,564.9 280.0,577.2" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-29" points="370.0,564.9 370.0,477.0 430.0,458.0 460.0,477.0 460.0,607.2 450.2,619.6" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-30" points="460.0,477.0 520.0,458.0 550.0,477.0 550.0,564.1 460.0,607.2" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-31" points="640.0,477.0 640.0,591.5 550.0,564.1 550.0,477.0 610.0,458.0" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+    <polygon id="voronoi-cell-32" points="640.0,477.0 820.4,420.0 850.0,420.0 850.0,457.0 667.4,621.3 640.0,591.5" fill="#10B981" fill-opacity="0.28" stroke="#64748B" stroke-width="1.2"/>
+  </g>
+
+  <!-- Delaunay Triangulation Wireframe Edges -->
+  <g id="delaunay-edges">
+    <line x1="350.0" y1="115.0" x2="135.0" y2="135.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="135.0" y1="135.0" x2="205.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="205.0" y1="230.0" x2="350.0" y2="115.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="205.0" y1="230.0" x2="295.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="295.0" y1="230.0" x2="350.0" y2="115.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="295.0" y1="230.0" x2="385.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="385.0" y1="230.0" x2="350.0" y2="115.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="570.0" y1="120.0" x2="350.0" y2="115.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="350.0" y1="115.0" x2="475.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="475.0" y1="230.0" x2="570.0" y2="120.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="385.0" y1="230.0" x2="475.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="475.0" y1="230.0" x2="565.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="565.0" y1="230.0" x2="570.0" y2="120.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="765.0" y1="140.0" x2="570.0" y2="120.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="570.0" y1="120.0" x2="655.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="655.0" y1="230.0" x2="765.0" y2="140.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="565.0" y1="230.0" x2="655.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="205.0" y1="230.0" x2="235.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="235.0" y1="325.0" x2="295.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="295.0" y1="230.0" x2="325.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="325.0" y1="325.0" x2="385.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="235.0" y1="325.0" x2="325.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="385.0" y1="230.0" x2="415.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="415.0" y1="325.0" x2="475.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="325.0" y1="325.0" x2="415.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="475.0" y1="230.0" x2="505.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="505.0" y1="325.0" x2="565.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="415.0" y1="325.0" x2="505.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="565.0" y1="230.0" x2="595.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="595.0" y1="325.0" x2="655.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="505.0" y1="325.0" x2="595.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="775.0" y1="615.0" x2="765.0" y2="140.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="765.0" y1="140.0" x2="685.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="685.0" y1="325.0" x2="775.0" y2="615.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="655.0" y1="230.0" x2="685.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="595.0" y1="325.0" x2="685.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="135.0" y1="135.0" x2="125.0" y2="610.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="125.0" y1="610.0" x2="205.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="205.0" y1="420.0" x2="135.0" y2="135.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="205.0" y1="420.0" x2="205.0" y2="230.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="205.0" y1="420.0" x2="235.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="235.0" y1="325.0" x2="295.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="295.0" y1="420.0" x2="325.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="205.0" y1="420.0" x2="295.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="325.0" y1="325.0" x2="385.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="385.0" y1="420.0" x2="415.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="295.0" y1="420.0" x2="385.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="415.0" y1="325.0" x2="475.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="475.0" y1="420.0" x2="505.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="385.0" y1="420.0" x2="475.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="505.0" y1="325.0" x2="565.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="565.0" y1="420.0" x2="595.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="475.0" y1="420.0" x2="565.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="595.0" y1="325.0" x2="655.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="655.0" y1="420.0" x2="685.0" y2="325.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="565.0" y1="420.0" x2="655.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="125.0" y1="610.0" x2="340.0" y2="625.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="340.0" y1="625.0" x2="235.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="235.0" y1="515.0" x2="125.0" y2="610.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="235.0" y1="515.0" x2="205.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="235.0" y1="515.0" x2="295.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="340.0" y1="625.0" x2="325.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="325.0" y1="515.0" x2="235.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="295.0" y1="420.0" x2="325.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="325.0" y1="515.0" x2="385.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="340.0" y1="625.0" x2="560.0" y2="630.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="560.0" y1="630.0" x2="415.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="415.0" y1="515.0" x2="340.0" y2="625.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="415.0" y1="515.0" x2="325.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="385.0" y1="420.0" x2="415.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="415.0" y1="515.0" x2="475.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="560.0" y1="630.0" x2="505.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="505.0" y1="515.0" x2="415.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="475.0" y1="420.0" x2="505.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="505.0" y1="515.0" x2="565.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="560.0" y1="630.0" x2="595.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="595.0" y1="515.0" x2="505.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="565.0" y1="420.0" x2="595.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="595.0" y1="515.0" x2="655.0" y2="420.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="685.0" y1="325.0" x2="685.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="685.0" y1="515.0" x2="775.0" y2="615.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="655.0" y1="420.0" x2="685.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="560.0" y1="630.0" x2="775.0" y2="615.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="685.0" y1="515.0" x2="560.0" y2="630.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="685.0" y1="515.0" x2="595.0" y2="515.0" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="4,3" opacity="0.6"/>
+  </g>
+
+  <!-- Sensor Nodes & Temperature Badges -->
+  <g id="sensor-nodes">
+    <!-- Sensor Node 1 -->
+    <circle cx="135.0" cy="135.0" r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="143.0" y="139.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-101 (65.0°C)</text>
+    <!-- Sensor Node 2 -->
+    <circle cx="350.0" cy="115.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="358.0" y="119.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-102 (65.5°C)</text>
+    <!-- Sensor Node 3 -->
+    <circle cx="570.0" cy="120.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="578.0" y="124.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-103 (65.3°C)</text>
+    <!-- Sensor Node 4 -->
+    <circle cx="765.0" cy="140.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="773.0" y="144.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-104 (65.0°C)</text>
+    <!-- Sensor Node 5 -->
+    <circle cx="775.0" cy="615.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="783.0" y="619.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-105 (65.0°C)</text>
+    <!-- Sensor Node 6 -->
+    <circle cx="560.0" cy="630.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="568.0" y="634.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-106 (65.5°C)</text>
+    <!-- Sensor Node 7 -->
+    <circle cx="340.0" cy="625.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="348.0" y="629.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-107 (65.8°C)</text>
+    <!-- Sensor Node 8 -->
+    <circle cx="125.0" cy="610.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="133.0" y="614.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-108 (65.0°C)</text>
+    <!-- Sensor Node 9 -->
+    <circle cx="205.0" cy="230.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="213.0" y="234.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-109 (65.6°C)</text>
+    <!-- Sensor Node 10 -->
+    <circle cx="295.0" cy="230.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="303.0" y="234.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-110 (68.8°C)</text>
+    <!-- Sensor Node 11 -->
+    <circle cx="385.0" cy="230.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="393.0" y="234.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-111 (74.2°C)</text>
+    <!-- Sensor Node 12 -->
+    <circle cx="475.0" cy="230.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="483.0" y="234.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-112 (74.2°C)</text>
+    <!-- Sensor Node 13 -->
+    <circle cx="565.0" cy="230.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="573.0" y="234.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-113 (68.8°C)</text>
+    <!-- Sensor Node 14 -->
+    <circle cx="655.0" cy="230.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="663.0" y="234.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-114 (65.6°C)</text>
+    <!-- Sensor Node 15 -->
+    <circle cx="235.0" cy="325.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="243.0" y="329.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-115 (68.7°C)</text>
+    <!-- Sensor Node 16 -->
+    <circle cx="325.0" cy="325.0" r="5" fill="#F59E0B" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="333.0" y="329.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-116 (81.2°C)</text>
+    <!-- Sensor Node 17 -->
+    <circle cx="415.0" cy="325.0" r="5" fill="#F59E0B" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="423.0" y="329.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-117 (94.3°C)</text>
+    <!-- Sensor Node 18 -->
+    <circle cx="505.0" cy="325.0" r="5" fill="#F59E0B" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="513.0" y="329.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-118 (86.8°C)</text>
+    <!-- Sensor Node 19 -->
+    <circle cx="595.0" cy="325.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="603.0" y="329.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-119 (71.7°C)</text>
+    <!-- Sensor Node 20 -->
+    <circle cx="685.0" cy="325.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="693.0" y="329.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-120 (65.8°C)</text>
+    <!-- Sensor Node 21 -->
+    <circle cx="205.0" cy="420.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="213.0" y="424.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-121 (67.0°C)</text>
+    <!-- Sensor Node 22 -->
+    <circle cx="295.0" cy="420.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="303.0" y="424.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-122 (76.8°C)</text>
+    <!-- Sensor Node 23 -->
+    <circle cx="385.0" cy="420.0" r="5" fill="#F59E0B" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="393.0" y="424.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-123 (93.7°C)</text>
+    <!-- Sensor Node 24 -->
+    <circle cx="475.0" cy="420.0" r="5" fill="#F59E0B" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="483.0" y="424.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-124 (93.7°C)</text>
+    <!-- Sensor Node 25 -->
+    <circle cx="565.0" cy="420.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="573.0" y="424.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-125 (76.8°C)</text>
+    <!-- Sensor Node 26 -->
+    <circle cx="655.0" cy="420.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="663.0" y="424.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-126 (67.0°C)</text>
+    <!-- Sensor Node 27 -->
+    <circle cx="235.0" cy="515.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="243.0" y="519.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-127 (66.6°C)</text>
+    <!-- Sensor Node 28 -->
+    <circle cx="325.0" cy="515.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="333.0" y="519.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-128 (72.1°C)</text>
+    <!-- Sensor Node 29 -->
+    <circle cx="415.0" cy="515.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="423.0" y="519.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-129 (77.8°C)</text>
+    <!-- Sensor Node 30 -->
+    <circle cx="505.0" cy="515.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="513.0" y="519.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-130 (74.5°C)</text>
+    <!-- Sensor Node 31 -->
+    <circle cx="595.0" cy="515.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="603.0" y="519.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-131 (67.9°C)</text>
+    <!-- Sensor Node 32 -->
+    <circle cx="685.0" cy="515.0" r="5" fill="#10B981" stroke="#0D1117" stroke-width="1.5"/>
+    <text x="693.0" y="519.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="9" font-weight="bold">TE-132 (65.4°C)</text>
+  </g>
+
+  <!-- Localized Thermal Hotspot Reticle Cursor -->
+  <g id="hotspot-cursor" filter="url(#hotspot-glow)">
+    <circle cx="415.0" cy="325.0" r="16" fill="none" stroke="#F43F5E" stroke-width="2"/>
+    <circle cx="415.0" cy="325.0" r="26" fill="none" stroke="#FB7185" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="393.0" y1="325.0" x2="437.0" y2="325.0" stroke="#F43F5E" stroke-width="1.5"/>
+    <line x1="415.0" y1="303.0" x2="415.0" y2="347.0" stroke="#F43F5E" stroke-width="1.5"/>
+    <!-- Decoupled Badge for Hotspot Label -->
+    <rect x="427.0" y="291.0" width="150" height="24" rx="3" fill="#050811" stroke="#F43F5E" stroke-width="1"/>
+    <text x="433.0" y="307.0" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="10" font-weight="bold">
+      PEAK: 18.9°C/m [94.3°C]
+    </text>
+  </g>
+
+  <!-- Right Sidebar Telemetry & Diagnostic HUD Cards -->
+  <g id="sidebar-hud">
+    <!-- HUD Card 1: Spatial Mesh Topology -->
+    <rect x="880" y="80" width="280" height="150" rx="6" fill="#161B22" stroke="#334155" stroke-width="1.5"/>
+    <rect x="880" y="80" width="280" height="28" rx="6" fill="#1E293B"/>
+    <text x="895" y="99" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="12" font-weight="bold">
+      SPATIAL MESH TOPOLOGY
+    </text>
+    <text x="895" y="130" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Active Sensors (%R2282):</text>
+    <text x="1140" y="130" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">32 / 32</text>
+    <text x="895" y="152" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Delaunay Faces (%R2283):</text>
+    <text x="1140" y="152" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">54</text>
+    <text x="895" y="174" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Dual Voronoi Cells:</text>
+    <text x="1140" y="174" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">32</text>
+    <text x="895" y="196" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Area Variance (%R2284):</text>
+    <text x="1140" y="196" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">44.4 (scaled 444)</text>
+    <text x="895" y="218" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Mesh Connected (%M532):</text>
+    <text x="1140" y="218" text-anchor="end" fill="#10B981" font-family="monospace, sans-serif" font-size="11" font-weight="bold">TRUE</text>
+    <!-- HUD Card 2: Thermal Gradient & Stress -->
+    <rect x="880" y="245" width="280" height="150" rx="6" fill="#161B22" stroke="#334155" stroke-width="1.5"/>
+    <rect x="880" y="245" width="280" height="28" rx="6" fill="#1E293B"/>
+    <text x="895" y="264" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="12" font-weight="bold">
+      THERMAL STRESS &amp; GRADIENT
+    </text>
+    <text x="895" y="295" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Peak Gradient (%R2280):</text>
+    <text x="1140" y="295" text-anchor="end" fill="#10B981" font-family="monospace, sans-serif" font-size="11" font-weight="bold">18.9 °C/m (189)</text>
+    <text x="895" y="317" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Max Stress Cell (%R2281):</text>
+    <text x="1140" y="317" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">Cell #11</text>
+    <text x="895" y="339" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Gradient Alarm Limit:</text>
+    <text x="1140" y="339" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">25.0 °C/m</text>
+    <text x="895" y="361" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Stress Alarm (%M533):</text>
+    <text x="1140" y="361" text-anchor="end" fill="#10B981" font-family="monospace, sans-serif" font-size="11" font-weight="bold">NORMAL</text>
+    <text x="895" y="383" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Status Code (%R2287):</text>
+    <text x="1140" y="383" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">0x0000</text>
+    <!-- HUD Card 3: Barycentric Interpolation Quality -->
+    <rect x="880" y="410" width="280" height="135" rx="6" fill="#161B22" stroke="#334155" stroke-width="1.5"/>
+    <rect x="880" y="410" width="280" height="28" rx="6" fill="#1E293B"/>
+    <text x="895" y="429" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="12" font-weight="bold">
+      BARYCENTRIC INTERPOLATION
+    </text>
+    <text x="895" y="460" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Quality Score (%R2285):</text>
+    <text x="1140" y="460" text-anchor="end" fill="#10B981" font-family="monospace, sans-serif" font-size="11" font-weight="bold">98.5% (985)</text>
+    <text x="895" y="482" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Selected Sensor (%R2286):</text>
+    <text x="1140" y="482" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">#1 (TE-101)</text>
+    <text x="895" y="504" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">Hotspot Pinpoint (X, Y):</text>
+    <text x="1140" y="504" text-anchor="end" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="11" font-weight="bold">(415, 325) px</text>
+    <text x="895" y="526" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="11">WCAG 2.1 AAA Contrast:</text>
+    <text x="1140" y="526" text-anchor="end" fill="#10B981" font-family="monospace, sans-serif" font-size="11" font-weight="bold">&gt; 18:1 (PASS)</text>
+    <!-- HUD Card 4: Heatmap Legend Bar -->
+    <rect x="880" y="560" width="280" height="150" rx="6" fill="#161B22" stroke="#334155" stroke-width="1.5"/>
+    <rect x="880" y="560" width="280" height="28" rx="6" fill="#1E293B"/>
+    <text x="895" y="579" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="12" font-weight="bold">
+      PROCESS HEATMAP LEGEND
+    </text>
+    <!-- Gradient Color Bar -->
+    <rect x="910" y="605" width="220" height="16" rx="3" fill="url(#thermal-ramp)" stroke="#334155" stroke-width="1"/>
+    <text x="910" y="635" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="10">50°C</text>
+    <text x="970" y="635" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="10">75°C</text>
+    <text x="1035" y="635" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="10">95°C</text>
+    <text x="1115" y="635" fill="#CBD5E1" font-family="monospace, sans-serif" font-size="10">120°C</text>
+    <!-- Dual Mesh Symbols -->
+    <line x1="910" y1="660" x2="940" y2="660" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="950" y="663" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="10">Delaunay Edge</text>
+    <line x1="910" y1="685" x2="940" y2="685" stroke="#64748B" stroke-width="2"/>
+    <text x="950" y="688" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="10">Voronoi Boundary</text>
+  </g>
+</svg>

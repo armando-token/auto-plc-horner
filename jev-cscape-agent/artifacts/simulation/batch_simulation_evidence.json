@@ -1,0 +1,101 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Simulation batch coordinator completed 4 scenarios across 7,000 total cycles with 4/4 passing.",
+  "data": {
+    "gate": "G4",
+    "work_package": "W041",
+    "title": "Multi-Scenario Plant Simulation Batch Coordinator",
+    "verdict": "success",
+    "timestamp_utc": "2026-10-02T20:02:02.779841+00:00",
+    "wall_duration_s": 7.1477,
+    "total_cycles_executed": 7000,
+    "total_virtual_time_s": 70.0,
+    "max_workers": 4,
+    "peak_memory_kb": 229.96,
+    "scenarios_passed": 4,
+    "scenarios_failed": 0,
+    "scenarios": [
+      {
+        "name": "Normal Continuous Operation",
+        "scenario_id": "SCENARIO_01_NORMAL",
+        "status": "success",
+        "cycles": 2000,
+        "duration_s": 7.1366,
+        "dt_ms": 10.0,
+        "virtual_time_s": 20.0,
+        "setpoint_pct": 50.0,
+        "final_level1_pct": 49.2473,
+        "final_level2_pct": 37.9122,
+        "tracking_error_pct": 0.7527,
+        "mass_balance_error": 6.394884621840902e-14,
+        "peak_volume_spilled": 0.0,
+        "alarms_triggered": [],
+        "details": "Nominal closed-loop regulation completed with 0.753% tracking error."
+      },
+      {
+        "name": "Low Inflow Supply Drought",
+        "scenario_id": "SCENARIO_02_DROUGHT",
+        "status": "success",
+        "cycles": 1500,
+        "duration_s": 6.0099,
+        "dt_ms": 10.0,
+        "virtual_time_s": 15.0,
+        "setpoint_pct": 35.0,
+        "final_level1_pct": 24.2447,
+        "final_level2_pct": 18.0801,
+        "tracking_error_pct": 10.7553,
+        "mass_balance_error": 6.643574579356937e-13,
+        "peak_volume_spilled": 0.0,
+        "alarms_triggered": [
+          "T1_LOW",
+          "T2_LOW"
+        ],
+        "details": "Drought simulation completed. Plant stable, level1 reached 24.24%."
+      },
+      {
+        "name": "Storm Surge Inflow & Stochastic Disturbance",
+        "scenario_id": "SCENARIO_03_SURGE",
+        "status": "success",
+        "cycles": 2000,
+        "duration_s": 6.7334,
+        "dt_ms": 10.0,
+        "virtual_time_s": 20.0,
+        "setpoint_pct": 50.0,
+        "final_level1_pct": 49.8822,
+        "final_level2_pct": 45.958,
+        "tracking_error_pct": 0.1178,
+        "mass_balance_error": 1.4210854715202004e-14,
+        "peak_volume_spilled": 0.0,
+        "alarms_triggered": [],
+        "details": "Storm surge disturbance rejected. Final tracking error 0.118%."
+      },
+      {
+        "name": "Emergency Shutdown (ESD) & Failsafe Drain",
+        "scenario_id": "SCENARIO_04_ESD",
+        "status": "success",
+        "cycles": 1500,
+        "duration_s": 5.2542,
+        "dt_ms": 10.0,
+        "virtual_time_s": 15.0,
+        "setpoint_pct": 0.0,
+        "final_level1_pct": 19.5023,
+        "final_level2_pct": 47.3622,
+        "tracking_error_pct": 19.5023,
+        "mass_balance_error": 4.263256414560601e-14,
+        "peak_volume_spilled": 0.0,
+        "alarms_triggered": [
+          "ESD_TRIP_ACTIVE"
+        ],
+        "details": "ESD trip triggered at cycle 400. Levels drained safely to L1=19.50%, L2=47.36%."
+      }
+    ],
+    "invariants": {
+      "pure_software_execution": true,
+      "offline_mock_mode": true,
+      "zero_hardware_leakage": true,
+      "mass_conservation_verified": true,
+      "zero_nan_verified": true
+    }
+  }
+}

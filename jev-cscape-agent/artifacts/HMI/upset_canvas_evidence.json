@@ -1,0 +1,76 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "UpSet Matrix Interlocking Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W141",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic UpSet Matrix Multi-Set Interlocking Condition & Alarm Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Security_Guard",
+        "passed": true,
+        "details": "Parsed UpSetCanvasSync with STParser; validated bound registers %R1020..%R1027, %M238..%M239; ladder intercepted."
+      },
+      {
+        "stage": 2,
+        "check": "UpSet_Matrix_Set_Intersection_And_Cardinality_Ranking",
+        "passed": true,
+        "details": "Computed 8 intersections; cardinality and degree ranking algorithms verified."
+      },
+      {
+        "stage": 3,
+        "check": "Primary_Set_Topology_And_Combination_Enumeration",
+        "passed": true,
+        "details": "Verified 5 canonical primary sets (E-Stop, Pressure, Temp, Vibration, Gas) and 8 non-empty intersection combinations."
+      },
+      {
+        "stage": 4,
+        "check": "Process_Safety_Cascade_Trip_Interlock",
+        "passed": true,
+        "details": "Verified 0xA601 cascade trip and %M238 assertion on degree >= 3 or severity >= 80%; nominal deassertion verified."
+      },
+      {
+        "stage": 5,
+        "check": "Cardinality_Excursion_Alarm_And_Render_Fault",
+        "passed": true,
+        "details": "Verified 0xA602 triggers on cardinality > 100 with %M238 assertion; verified 0xA603 render fault latching."
+      },
+      {
+        "stage": 6,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone SVG; XML schema valid; connected dot matrix, horizontal and vertical bars verified."
+      },
+      {
+        "stage": 7,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Graphical boundary contrast 8.49:1 (> 3:1) verified."
+      },
+      {
+        "stage": 8,
+        "check": "Active_Combination_Focus_Highlighting_And_Index_Switching",
+        "passed": true,
+        "details": "Active combination focus switched across 0..7; Horner %R1026 synchronized; SVG focus outline verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scan_Cycle",
+        "passed": true,
+        "details": "%R1020=5 (5 sets), %R1021=55 (55 card), %R1022=8 (8 combs), %R1025=650; %M238=False, %M239=True."
+      }
+    ],
+    "metrics": {
+      "total_primary_sets": 5,
+      "total_combinations": 8,
+      "total_incidents": 240,
+      "wcag_badge_contrast": 18.3,
+      "wcag_theme_contrast": 17.06,
+      "active_combination_index": 7
+    }
+  }
+}

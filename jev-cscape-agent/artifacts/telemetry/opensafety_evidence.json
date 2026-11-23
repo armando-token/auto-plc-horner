@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "OpenSAFETY Transport Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W151",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial OpenSAFETY Over Black Channel Transport Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_IEC_61131_3_ST_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Successfully parsed OpenSafetySync and OpenSafetyBlackChannelSync with 11 variables. Bound registers: %M261, %M262, %R1120, %R1121, %R1122, %R1123, %R1124, %R1125, %R1126, %R1127."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder logic contacts and coils strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "Dual_Subframe_Redundant_Packet_Serialization_And_CRC16",
+        "passed": true,
+        "details": "Dual subframes (P and ~P) serialized (36 bytes) and deserialized bit-for-bit identical."
+      },
+      {
+        "stage": 4,
+        "check": "Strictly_Monotonic_Sequence_Counter_Progression",
+        "passed": true,
+        "details": "Sequential frames 1 -> 2 -> 3 validated monotonically."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_Redundant_Payload_Inversion_And_Bit_Flip_CRC_Trapping",
+        "passed": true,
+        "details": "Corrupted redundant safety payload trapped with 0xB001 (OPENSAFETY_ERR_CRC_MISMATCH), %M262 asserted, %M261 cleared."
+      },
+      {
+        "stage": 6,
+        "check": "Sequence_Counter_Discontinuity_And_Replay_Gap_Rejection",
+        "passed": true,
+        "details": "Replay and sequence gap attacks trapped deterministically with 0xB002 (OPENSAFETY_ERR_SEQUENCE_GAP)."
+      },
+      {
+        "stage": 7,
+        "check": "Transmission_Delay_Surveillance_And_Watchdog_Timeout",
+        "passed": true,
+        "details": "Excessive latency (35,000 us) and silence watchdog (60,000 us) trapped with 0xB003 (OPENSAFETY_ERR_TIMEOUT)."
+      },
+      {
+        "stage": 8,
+        "check": "Safety_Domain_Number_And_Node_Collision_Trapping",
+        "passed": true,
+        "details": "Alien safety domain ID (0x9999) rejected with 0xB004 (OPENSAFETY_ERR_DOMAIN_COLLISION)."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Memory_Space_Integration_And_De_Energization_Latch",
+        "passed": true,
+        "details": "Horner OCS registers (%R1120..%R1127, %M261..%M262) verified across healthy, tripped (0xB004), and operator reset states."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1120..%R1127",
+      "discrete_coils": "%M261..%M262",
+      "values": {
+        "%R1120": 42,
+        "%R1121": 8,
+        "%R1122": 9,
+        "%R1123": 0,
+        "%R1124": 0,
+        "%R1125": 0,
+        "%R1126": 150,
+        "%R1127": 0,
+        "%M261": false,
+        "%M262": false
+      }
+    },
+    "timestamp": "2026-10-04T21:03:36Z"
+  }
+}

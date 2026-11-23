@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W216",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Icicle / Hierarchical Partition Flow SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'IcicleCanvasSync' POU with SecurityGuard & STParser across Horner registers %R1770..%R1777 and %M413..%M414."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "Canonical_5Tier_32Node_Hierarchy_And_Acyclic_Topology",
+        "passed": true,
+        "details": "Verified 32 unit operation nodes across 5 depth tiers (1 root, 4 units, 8 trains, 10 manifolds, 9 transmitters) without cycles."
+      },
+      {
+        "stage": 4,
+        "check": "Mass_Flow_Conservation_And_Imbalance_Fault_Detection",
+        "passed": true,
+        "details": "Verified 125.0 t/h conservation; tripped FlowImbalanceAlarmActive (%M414) and 0xE803 on > 5% imbalance."
+      },
+      {
+        "stage": 5,
+        "check": "Rectangular_Bounds_Calculation_Aspect_Ratio_And_Width_Clamping",
+        "passed": true,
+        "details": "Verified non-overlapping bounds within canvas, minimum width clamping (28px), deformation metric, and 0xE801 overflow catch."
+      },
+      {
+        "stage": 6,
+        "check": "Dynamic_DrillDown_Focus_Zoom_And_Stack_Navigation",
+        "passed": true,
+        "details": "Verified 100% width expansion on drill-down, stack navigation (L0->L1->L2->L1->L0), and 0xE802 overflow handling."
+      },
+      {
+        "stage": 7,
+        "check": "BottomUp_Health_Score_Propagation_And_Degraded_Asset_Tracking",
+        "passed": true,
+        "details": "Verified post-order bottom-up weighted health propagation and critical degraded node trip localization."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_21_AAA_Accessibility_And_Standalone_W3C_SVG_XML_Validation",
+        "passed": true,
+        "details": "Verified decoupled badge contrast (> 18:1), text contrast (> 7:1), and valid XML SVG -> artifacts\\HMI\\icicle_canvas_sample.svg."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_ILogicUnit_Scan_Cycle",
+        "passed": true,
+        "details": "Verified %R1770..%R1777 and %M413..%M414 with PrivilegeMode.SYSTEM and ILogicUnit scan cycle execution."
+      }
+    ]
+  }
+}

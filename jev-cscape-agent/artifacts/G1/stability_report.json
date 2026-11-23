@@ -1,0 +1,23 @@
+{
+  "report_target": "Cscape Automation Stability Benchmark",
+  "timestamp_utc": "2026-10-01T22:08:00Z",
+  "status": "success",
+  "environment": {
+    "os": "Microsoft Windows 11 Enterprise (Build 26200, 64-bit)",
+    "python_version": "3.12.10",
+    "architecture": "x64 host, x86 Cscape 10.2 targets"
+  },
+  "stability_metrics": {
+    "is_hung_app_window_hook_verified": true,
+    "retry_backoff_verified": true,
+    "max_safe_memory_threshold_mb": 1024.0,
+    "monitored_memory_rss_mb": 42.5,
+    "hung_windows_detected": 0,
+    "deadlock_events": 0
+  },
+  "invariants": {
+    "single_gui_agent_boundary": "Enforced; exclusive HWND access on winsta0\\Default",
+    "watchdog_timeout_minutes": 10.0,
+    "fail_closed_on_unresponsive": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "status": "success",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "details": "All 9 deterministic verification stages passed successfully.",
+  "data": {
+    "stages": [
+      {
+        "stage": 1,
+        "check": "POU_ST_Syntax_Validation_And_Anti_Ladder_Check",
+        "passed": true,
+        "details": "POU 'CipEnergyManagementSync' verified clean; 10 registers bound; ladder constructs rejected."
+      },
+      {
+        "stage": 2,
+        "check": "ODVA_Class_0x4E_Energy_Object_Attribute_Resolution",
+        "passed": true,
+        "details": "ODVA Class 0x4E and Class 0x4F attributes resolved deterministically; alarms verified."
+      },
+      {
+        "stage": 3,
+        "check": "Three_Phase_Power_Triangle_Calculation",
+        "passed": true,
+        "details": "Power triangle verified: P=125.0kW, Q=45.0kVAR -> S=132.85kVA, PF=0.9409."
+      },
+      {
+        "stage": 4,
+        "check": "High_Precision_Active_Energy_Integration",
+        "passed": true,
+        "details": "Energy integration verified: 120.0 kW over 1h accumulated 120.000000 kWh (target: 120.000000)."
+      },
+      {
+        "stage": 5,
+        "check": "Power_Quality_THD_Calculation_And_IEEE_519_Checks",
+        "passed": true,
+        "details": "THD harmonic spectrum verified: 3.2% normal (<5%), 9.6% trip (>8%) correctly triggered 0xD102."
+      },
+      {
+        "stage": 6,
+        "check": "Peak_Demand_Threshold_Detection_And_State_Transition",
+        "passed": true,
+        "details": "Peak demand breach (>150kW) asserted trip coil and transitioned to ENERGY_SAVING state."
+      },
+      {
+        "stage": 7,
+        "check": "Register_Table_Synchronization",
+        "passed": true,
+        "details": "Horner OCS memory mapped accurately: %R1510=1250, %R1513=941, Energy=50000kWh, %M352=True."
+      },
+      {
+        "stage": 8,
+        "check": "Discrete_ILogicUnit_100_Cycle_Scan_Simulation",
+        "passed": true,
+        "details": "100-cycle simulation executed smoothly: 1000ms elapsed; energy incremented 0.027778 kWh."
+      },
+      {
+        "stage": 9,
+        "check": "Process_Safety_Interlock_And_Diagnostic_Fault_Trip_Testing",
+        "passed": true,
+        "details": "All 4 diagnostic trips (0xD101..0xD104) verified; register interlocking and reset behavior validated."
+      }
+    ],
+    "standards": [
+      "ODVA CIP Energy Management Specification (Class 0x4E, Class 0x4F)",
+      "IEEE 519 Harmonic Control in Electric Power Systems",
+      "IEC 61131-3 Pure Structured Text ONLY",
+      "Horner OCS Memory Layout (%R1510..%R1517, %M352..%M353)"
+    ],
+    "timestamp": 1791251298.0408485
+  }
+}

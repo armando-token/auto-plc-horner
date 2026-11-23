@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_005",
+  "file_name": "scene_005.png",
+  "original_source": "artifacts\\G8\\g8_bind_roundtrip_canvas.png",
+  "split": "train",
+  "scene_type": "hmi_screen_editor",
+  "category": "HMI",
+  "dimensions": {
+    "width": 922,
+    "height": 172
+  },
+  "sha256": "ec382c9e97ef943f9177a16838f89f0526c049b1b7967316a8b38525bf5a1589",
+  "labels": {
+    "canvas_rect": [
+      260,
+      13,
+      913,
+      141
+    ],
+    "anchors": {
+      "canvas_center": [
+        586,
+        77
+      ],
+      "canvas_nw": [
+        260,
+        13
+      ],
+      "canvas_se": [
+        913,
+        141
+      ],
+      "status_bar_roi": [
+        0,
+        148,
+        922,
+        172
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

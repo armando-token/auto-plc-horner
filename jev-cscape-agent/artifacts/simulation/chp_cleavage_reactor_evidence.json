@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Phenol-Acetone Cumene Hydroperoxide Cleavage Reactor ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W230",
+    "gate": "Gate G7 / G4",
+    "component": "Industrial Phenol-Acetone Cumene Hydroperoxide (CHP) Cleavage Catalytic Reactor ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "ChpCleavageReactorSync POU verified cleanly; bound %R1910..%R1917 and %M445..%M447."
+      },
+      {
+        "stage": 2,
+        "check": "Reaction_Kinetics_And_Arrhenius_Monotonicity",
+        "passed": true,
+        "details": "Kinetics verified: k1(50C)=0.2775, k1(65C)=1.2263, k1(75C)=3.0755, Ea1 error=2.76e-10 J/mol."
+      },
+      {
+        "stage": 3,
+        "check": "Reaction_Enthalpy_Balances_And_Exothermic_Generation",
+        "passed": true,
+        "details": "Enthalpy duties verified: Q1=892.54 kW (-252 kJ/mol), Q2=6.47 kW (-120 kJ/mol), Q3=-3.99 kW (+45 kJ/mol), Total=895.03 kW, uncooled dT/dt=7.6918 \u00b0C/s."
+      },
+      {
+        "stage": 4,
+        "check": "CHP_Residual_Concentration_And_Pre_Alarm_Dynamics",
+        "passed": true,
+        "details": "High CHP residual / temperature pre-alarm %M446 verified without false trips."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Stability",
+        "passed": true,
+        "details": "RK4 solver stable over 5.0s (dt=0.02s): C_chp=0.0500, C_phenol=12.2632, C_acetone=12.2632, T_reactor=65.00 \u00b0C, Conv=99.60%, Sel=98.50%."
+      },
+      {
+        "stage": 6,
+        "check": "Mass_Elemental_And_Enthalpy_Conservation_Residuals",
+        "passed": true,
+        "details": "Residuals verified: mass=2.46e-18 kg/s, elemental=0.00e+00 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xF001..0xF004), quench %M447, and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Emergency_Cleavage_Quench_Actuation_And_Reactor_Quenching",
+        "passed": true,
+        "details": "Emergency quench verified: reaction power quenched to 0.00 kW, temperature cooled to 22.41 \u00b0C."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Memory_Space_Integration_And_Anti_Ladder_Security",
+        "passed": true,
+        "details": "Registers %R1910..%R1917 & %M445..%M447 verified; ladder logic rejected cleanly via SecurityGuard."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1910..%R1917",
+      "discrete_coils": "%M445..%M447",
+      "values": {
+        "%R1910": 650,
+        "%R1911": 15,
+        "%R1912": 9960,
+        "%R1913": 9850,
+        "%R1914": 50,
+        "%R1915": 12000,
+        "%R1916": 250,
+        "%R1917": 0,
+        "%M445": true,
+        "%M446": false,
+        "%M447": false
+      }
+    },
+    "timestamp": "2026-10-06T09:24:36Z"
+  }
+}

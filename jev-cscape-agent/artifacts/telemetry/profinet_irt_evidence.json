@@ -1,0 +1,90 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "9/9 PROFINET IRT verification checks passed deterministically.",
+  "data": {
+    "work_package": "W157",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "PROFINET IO IRT & MRPD Isochronous Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Binding",
+        "passed": true,
+        "details": "Pure ST POU 'ProfinetIrtSync' validated and bound to %R1180..%R1187, %M275..%M276."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder contacts, coils, rungs, and mnemonics intercepted fail-closed with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "PROFINET_IRT_Isochronous_Timing_And_Submicrosecond_Jitter",
+        "passed": true,
+        "details": "Isochronous timing verified across 5 cycles (< 100 ns nominal, phase locked)."
+      },
+      {
+        "stage": 4,
+        "check": "Dynamic_Frame_Packing_Serialization_And_Container_CRC",
+        "passed": true,
+        "details": "DFP 3-subframe container packed (34 bytes) and CRC-16-CCITT validated."
+      },
+      {
+        "stage": 5,
+        "check": "MRPD_Seamless_Ring_Failover_And_Duplicate_Rejection",
+        "passed": true,
+        "details": "MRPD frame duplication rejected 1 duplicate; seamless Port 1 failover verified (0 us packet loss)."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Safety_Trip_0xB601_Phase_Sync_Jitter_Excursion",
+        "passed": true,
+        "details": "Jitter excursion (1250 ns >= 1000 ns) tripped 0xB601, clearing %M275 and asserting %M276."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Trip_0xB602_DFP_Container_CRC_Violation",
+        "passed": true,
+        "details": "Corrupted container frame CRC tripped 0xB602, asserting %M276 and de-energizing %M275."
+      },
+      {
+        "stage": 8,
+        "check": "Process_Safety_Trips_0xB603_And_0xB604_Dual_Ring_And_Watchdog",
+        "passed": true,
+        "details": "Dual ring collapse (0xB603) and 65 ms watchdog timeout (0xB604) deterministically trapped."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "details": "Full register map %R1180..%R1187 and %M275..%M276 verified in healthy operation."
+      }
+    ],
+    "register_map": {
+      "values": {
+        "%R1180": 1000,
+        "%R1181": 45,
+        "%R1182": 3,
+        "%R1183": 34,
+        "%R1184": 0,
+        "%R1185": "0x00FD",
+        "%R1186": 6,
+        "%R1187": "0x0000",
+        "%M275": true,
+        "%M276": false
+      }
+    },
+    "metrics": {
+      "cycle_time_us": 1000,
+      "max_jitter_ns": 1250.0,
+      "dfp_subframes_packed": 3,
+      "dfp_container_bytes": 34,
+      "mrpd_duplicates_rejected": 0,
+      "ring_status_word": "0x00FD"
+    }
+  }
+}

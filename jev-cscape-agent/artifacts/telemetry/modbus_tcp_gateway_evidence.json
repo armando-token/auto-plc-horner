@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Modbus TCP Multi-Client Gateway Engine verified cleanly (9/9 stages passed).",
+  "data": {
+    "work_package": "W175",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Modbus TCP Multi-Client Gateway & Transaction Multiplexer Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed ModbusTcpGatewaySync and alias with 10 registered bindings: ['%M317', '%M318', '%R1360', '%R1361', '%R1362', '%R1363', '%R1364', '%R1365', '%R1366', '%R1367']."
+      },
+      {
+        "stage": 2,
+        "check": "MBAP_Header_Framing_Parsing_And_Protocol_ID_Validation",
+        "passed": true,
+        "details": "MBAP 7-byte framing, protocol ID 0x0000, and ADU serialization/deserialization verified."
+      },
+      {
+        "stage": 3,
+        "check": "Multi_Client_Connection_Pool_Lifecycle_And_16_Capacity",
+        "passed": true,
+        "details": "Pool capacity of 16 clients, disconnect, and reconnect lifecycles verified."
+      },
+      {
+        "stage": 4,
+        "check": "Client_Overflow_Interlock_And_Trip_Assertions",
+        "passed": true,
+        "details": "Client pool overflow above 16 trapped deterministically with 0xC801 and fail-safe coil trips."
+      },
+      {
+        "stage": 5,
+        "check": "Transaction_Multiplexing_And_FIFO_Queue_Dispatching",
+        "passed": true,
+        "details": "FIFO request queue, monotonic transaction ID tracking, and client socket matching verified."
+      },
+      {
+        "stage": 6,
+        "check": "Unit_ID_Gateway_Virtual_Routing",
+        "passed": true,
+        "details": "Virtual routing between local Horner OCS memory image and downstream device holding registers verified."
+      },
+      {
+        "stage": 7,
+        "check": "Latency_Tracking_And_Socket_Timeout_Surveillance",
+        "passed": true,
+        "details": "Nominal round-trip latency (1.5 ms -> 15) and socket timeout (> 50.0 ms -> 0xC802) verified."
+      },
+      {
+        "stage": 8,
+        "check": "Malformed_MBAP_And_Unreachable_Unit_ID_Trapping",
+        "passed": true,
+        "details": "Malformed MBAP frames (0xC803) and unreachable/offline Unit IDs (0xC804) trapped cleanly."
+      },
+      {
+        "stage": 9,
+        "check": "Closed_Loop_Scan_Cycle_And_Operator_Reset_Synchronization",
+        "passed": true,
+        "details": "ILogicUnit scan execution, manual operator reset handshake, and memory synchronization verified."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1360..%R1367",
+      "discrete_coils": "%M317..%M318",
+      "values": {
+        "%R1360": 16,
+        "%R1361": 8,
+        "%R1362": 15,
+        "%R1363": 0,
+        "%R1364": 1,
+        "%R1365": 523,
+        "%R1366": 25861,
+        "%R1367": 0,
+        "%M317": true,
+        "%M318": false
+      }
+    },
+    "timestamp": "2026-10-05T05:52:45Z"
+  }
+}

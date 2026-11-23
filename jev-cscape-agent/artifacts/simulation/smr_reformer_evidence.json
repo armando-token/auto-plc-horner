@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Steam Methane Reforming (SMR) & Water-Gas Shift Multi-Tube Kinetics ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W152",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial SMR Reformer ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1130..%R1137 and %M263..%M265 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "Xu_Froment_Kinetics_And_Thermodynamic_Equilibria",
+        "passed": true,
+        "details": "Kinetics verified: k_1(820C)=3.94e+00, k_2(820C)=3.37e+02, Q_rxn=1186994543.2 kW (endothermic), K_eq1=262.5 bar2, K_eq2=0.989."
+      },
+      {
+        "stage": 3,
+        "check": "Multi_Tube_Reformer_Furnace_Geometry_And_SC_Control",
+        "passed": true,
+        "details": "Multi-tube geometry verified: 280 tubes, A_inner=1121.5 m2, A_outer=1385.4 m2, V_cat=28.6 m3, S/C=3.00 (scaled=300)."
+      },
+      {
+        "stage": 4,
+        "check": "Catalyst_Bed_Temperature_Profile_And_Heat_Flux",
+        "passed": true,
+        "details": "Heat flux verified: Q_tube_to_gas=60563.6 kW, T_tube=865.0\u00b0C > T_gas=820.0\u00b0C."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: T_gas=820.0\u00b0C, T_tube=865.0\u00b0C, P=25.0 bar, Conversion=87.6%, H2 prod=1591.9 Nm3/h."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: elemental_mass_residual=0.000e+00 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xB101, 0xB102, 0xB103, 0xB104) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1130=8500, %R1131=8200, %R1132=250, %R1133=300, %R1134=825, %R1135=15000, %R1136=115, %R1137=0x0000, %M263=True, %M264=False, %M265=False."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Settling_Stability",
+        "passed": true,
+        "details": "Transient response to +10 \u00b0C firebox temp disturbance verified over 10.0s: T_gas=820.1\u00b0C, T_tube=866.8\u00b0C, Permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1130..%R1137",
+      "discrete_coils": "%M263..%M265",
+      "values": {
+        "%R1130": 8500,
+        "%R1131": 8200,
+        "%R1132": 250,
+        "%R1133": 300,
+        "%R1134": 825,
+        "%R1135": 15000,
+        "%R1136": 115,
+        "%R1137": 0,
+        "%M263": true,
+        "%M264": false,
+        "%M265": false
+      }
+    },
+    "timestamp": "2026-10-04T21:03:38Z"
+  }
+}

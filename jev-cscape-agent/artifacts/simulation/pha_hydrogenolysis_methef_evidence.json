@@ -1,0 +1,148 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Work Package W326 Industrial PHA Hydrogenolysis & 2-MeTHF Verification PASSED (9/9 stages).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "data": {
+    "work_package": "W326",
+    "gate": "G7",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_rk4_discretization",
+        "passed": true,
+        "timing_ms": 0.899,
+        "details": "RK4 CSTR hydrogenation verified: C_prec (3.80 -> 3.79 mol/L), C_meth (0.15 -> 0.16 mol/L), Conv=0.2%, Sel=93.9%."
+      },
+      {
+        "stage": 2,
+        "name": "hydrogenation_kinetics_and_temperature_sensitivity",
+        "passed": true,
+        "timing_ms": 0.121,
+        "details": "Arrhenius hydrogenation kinetics verified: r1_hot=0.0290 > nom=0.0110 > cold=0.0042; r2_hot=0.0021 > nom=0.0007 > cold=0.0002."
+      },
+      {
+        "stage": 3,
+        "name": "catalyst_sintering_trip",
+        "passed": true,
+        "timing_ms": 0.239,
+        "details": "Catalyst sintering trip 0xF9C3 verified for activity < 35.0%; emergency quench actuated."
+      },
+      {
+        "stage": 4,
+        "name": "pentanediol_byproduct_spike_safety_trip",
+        "passed": true,
+        "timing_ms": 0.243,
+        "details": "Pentanediol byproduct spike trip 0xF9C4 verified for byproduct yield > 25.0%."
+      },
+      {
+        "stage": 5,
+        "name": "thermal_runaway_safety_trip",
+        "passed": true,
+        "timing_ms": 0.435,
+        "details": "Thermal runaway trip 0xF9C1 verified for both high temperature (> 530 K) and fast rise (> 12.0 K/s)."
+      },
+      {
+        "stage": 6,
+        "name": "overpressure_quench_safety_trip",
+        "passed": true,
+        "timing_ms": 0.223,
+        "details": "Overpressure quench trip 0xF9C2 verified upon P > 50.0 bar; emergency quench actuated."
+      },
+      {
+        "stage": 7,
+        "name": "priority_hierarchy_enforcement",
+        "passed": true,
+        "timing_ms": 0.831,
+        "details": "5-tier fault priority hierarchy (0xF9C1 > 0xF9C2 > 0xF9C3 > 0xF9C4 > 0xF9C5) verified."
+      },
+      {
+        "stage": 8,
+        "name": "continuous_mass_conservation_and_divergence_trip",
+        "passed": true,
+        "timing_ms": 2.314,
+        "details": "Strict continuous C5 carbon backbone mass conservation residual 1.11e-16 < 1e-10; Mass divergence trip 0xF9C5 latched upon residual > 1e-4."
+      },
+      {
+        "stage": 9,
+        "name": "horner_ocs_registers_and_pure_st_pou",
+        "passed": true,
+        "timing_ms": 1.355,
+        "details": "Horner OCS register space %R2870..%R2877, coils %M669..%M671, pure ST POU PHAHydrogenolysisMethefControl, and 9 ladder construct rejections verified."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_rk4_discretization",
+        "passed": true,
+        "timing_ms": 0.899,
+        "details": "RK4 CSTR hydrogenation verified: C_prec (3.80 -> 3.79 mol/L), C_meth (0.15 -> 0.16 mol/L), Conv=0.2%, Sel=93.9%."
+      },
+      {
+        "stage": 2,
+        "name": "hydrogenation_kinetics_and_temperature_sensitivity",
+        "passed": true,
+        "timing_ms": 0.121,
+        "details": "Arrhenius hydrogenation kinetics verified: r1_hot=0.0290 > nom=0.0110 > cold=0.0042; r2_hot=0.0021 > nom=0.0007 > cold=0.0002."
+      },
+      {
+        "stage": 3,
+        "name": "catalyst_sintering_trip",
+        "passed": true,
+        "timing_ms": 0.239,
+        "details": "Catalyst sintering trip 0xF9C3 verified for activity < 35.0%; emergency quench actuated."
+      },
+      {
+        "stage": 4,
+        "name": "pentanediol_byproduct_spike_safety_trip",
+        "passed": true,
+        "timing_ms": 0.243,
+        "details": "Pentanediol byproduct spike trip 0xF9C4 verified for byproduct yield > 25.0%."
+      },
+      {
+        "stage": 5,
+        "name": "thermal_runaway_safety_trip",
+        "passed": true,
+        "timing_ms": 0.435,
+        "details": "Thermal runaway trip 0xF9C1 verified for both high temperature (> 530 K) and fast rise (> 12.0 K/s)."
+      },
+      {
+        "stage": 6,
+        "name": "overpressure_quench_safety_trip",
+        "passed": true,
+        "timing_ms": 0.223,
+        "details": "Overpressure quench trip 0xF9C2 verified upon P > 50.0 bar; emergency quench actuated."
+      },
+      {
+        "stage": 7,
+        "name": "priority_hierarchy_enforcement",
+        "passed": true,
+        "timing_ms": 0.831,
+        "details": "5-tier fault priority hierarchy (0xF9C1 > 0xF9C2 > 0xF9C3 > 0xF9C4 > 0xF9C5) verified."
+      },
+      {
+        "stage": 8,
+        "name": "continuous_mass_conservation_and_divergence_trip",
+        "passed": true,
+        "timing_ms": 2.314,
+        "details": "Strict continuous C5 carbon backbone mass conservation residual 1.11e-16 < 1e-10; Mass divergence trip 0xF9C5 latched upon residual > 1e-4."
+      },
+      {
+        "stage": 9,
+        "name": "horner_ocs_registers_and_pure_st_pou",
+        "passed": true,
+        "timing_ms": 1.355,
+        "details": "Horner OCS register space %R2870..%R2877, coils %M669..%M671, pure ST POU PHAHydrogenolysisMethefControl, and 9 ladder construct rejections verified."
+      }
+    ],
+    "digests": {
+      "pou_sha256": "c7706c007fde197152126500a0904254830e563e5833faca915277cc011ea394",
+      "model_sha256": "97dd25bd559d4fb4104804dc24e19ef2b9d58f9fd0168620886b50712e8e9e7c"
+    },
+    "timestamp_utc": "2026-10-16T18:13:04Z"
+  }
+}

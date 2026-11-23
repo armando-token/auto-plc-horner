@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow-alarm" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background Canvas -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <!-- Grid Mesh -->
+  <g stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="100" y1="80" x2="100" y2="700"/>
+    <line x1="200" y1="80" x2="200" y2="700"/>
+    <line x1="300" y1="80" x2="300" y2="700"/>
+    <line x1="400" y1="80" x2="400" y2="700"/>
+    <line x1="500" y1="80" x2="500" y2="700"/>
+    <line x1="600" y1="80" x2="600" y2="700"/>
+    <line x1="700" y1="80" x2="700" y2="700"/>
+    <line x1="800" y1="80" x2="800" y2="700"/>
+    <line x1="900" y1="80" x2="900" y2="700"/>
+    <line x1="1000" y1="80" x2="1000" y2="700"/>
+    <line x1="1100" y1="80" x2="1100" y2="700"/>
+    <line x1="50" y1="100" x2="1150" y2="100"/>
+    <line x1="50" y1="200" x2="1150" y2="200"/>
+    <line x1="50" y1="300" x2="1150" y2="300"/>
+    <line x1="50" y1="400" x2="1150" y2="400"/>
+    <line x1="50" y1="500" x2="1150" y2="500"/>
+    <line x1="50" y1="600" x2="1150" y2="600"/>
+    <line x1="50" y1="700" x2="1150" y2="700"/>
+  </g>
+  <!-- Diagnostic Header HUD -->
+  <rect x="30" y="20" width="1140" height="52" rx="8" fill="#0B0F19" fill-opacity="0.94" stroke="#334155" stroke-width="1.5"/>
+  <text x="50" y="52" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700">CSCAPE HMI: CONVEX HULL MULTI-CLUSTER SPATIAL ENCLOSURE</text>
+  <text x="680" y="52" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="13">Points: <tspan fill="#38BDF8" font-weight="600">25</tspan> | Clusters: <tspan fill="#34D399" font-weight="600">3</tspan> | Max R_rms: <tspan fill="#FBBF24" font-weight="600">99.2px</tspan> | Min D: <tspan fill="#A78BFA" font-weight="600">398.5px</tspan></text>
+  <!-- Enclosure Boundary: Zone 1: Feed & Conditioning -->
+  <polygon points="164.9,214.6 232.3,164.2 431.3,461.3 181.6,298.8" fill="#3B82F6" fill-opacity="0.18" stroke="#3B82F6" stroke-width="2.5" stroke-linejoin="round" filter="url(#drop-shadow)"/>
+  <polygon points="180.0,220.0 230.0,180.0 420.0,450.0 195.0,290.0" fill="none" stroke="#3B82F6" stroke-width="1.2" stroke-dasharray="5,3" stroke-opacity="0.7"/>
+  <!-- Centroid: Zone 1: Feed & Conditioning -->
+  <circle cx="248.9" cy="265.6" r="4" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+  <line x1="240.9" y1="265.6" x2="256.9" y2="265.6" stroke="#FFFFFF" stroke-width="1.2"/>
+  <line x1="248.9" y1="257.6" x2="248.9" y2="273.6" stroke="#FFFFFF" stroke-width="1.2"/>
+  <!-- Enclosure Boundary: Zone 2: Reaction & Synthesis -->
+  <polygon points="565.1,354.2 643.1,304.3 673.8,342.0 695.9,387.9 680.1,452.4 590.2,452.6" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-width="2.5" stroke-linejoin="round" filter="url(#drop-shadow)"/>
+  <polygon points="580.0,360.0 640.0,320.0 660.0,350.0 680.0,390.0 670.0,440.0 600.0,440.0" fill="none" stroke="#10B981" stroke-width="1.2" stroke-dasharray="5,3" stroke-opacity="0.7"/>
+  <!-- Centroid: Zone 2: Reaction & Synthesis -->
+  <circle cx="635.6" cy="386.2" r="4" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <line x1="627.6" y1="386.2" x2="643.6" y2="386.2" stroke="#FFFFFF" stroke-width="1.2"/>
+  <line x1="635.6" y1="378.2" x2="635.6" y2="394.2" stroke="#FFFFFF" stroke-width="1.2"/>
+  <!-- Enclosure Boundary: Zone 3: Separation & Polishing -->
+  <polygon points="945.1,234.2 1023.1,184.3 1053.8,222.0 1075.9,267.9 1060.1,332.4 970.2,332.6" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round" filter="url(#drop-shadow)"/>
+  <polygon points="960.0,240.0 1020.0,200.0 1040.0,230.0 1060.0,270.0 1050.0,320.0 980.0,320.0" fill="none" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="5,3" stroke-opacity="0.7"/>
+  <!-- Centroid: Zone 3: Separation & Polishing -->
+  <circle cx="1015.6" cy="266.2" r="4" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+  <line x1="1007.6" y1="266.2" x2="1023.6" y2="266.2" stroke="#FFFFFF" stroke-width="1.2"/>
+  <line x1="1015.6" y1="258.2" x2="1015.6" y2="274.2" stroke="#FFFFFF" stroke-width="1.2"/>
+  <circle cx="180.0" cy="220.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="210.0" cy="260.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="250.0" cy="210.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="230.0" cy="180.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="270.0" cy="250.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="195.0" cy="290.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="260.0" cy="290.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="225.0" cy="240.0" r="4.5" fill="#3B82F6" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="420.0" cy="450.0" r="12" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="3,2" filter="url(#glow-alarm)"/>
+  <circle cx="420.0" cy="450.0" r="6.0" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Zone Summary Badge: Zone 1: Feed & Conditioning -->
+  <g transform="translate(168.9, 392.8)">
+    <rect width="170" height="42" rx="6" fill="#05080C" fill-opacity="0.94" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="10" y="18" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700">Zone 1</text>
+    <text x="10" y="34" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="10.5">Area: <tspan fill="#E2E8F0">17225 px²</tspan> | R: <tspan fill="#3B82F6">99.2px</tspan></text>
+  </g>
+  <circle cx="580.0" cy="360.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="620.0" cy="410.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="660.0" cy="350.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="640.0" cy="320.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="680.0" cy="390.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="600.0" cy="440.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="670.0" cy="440.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="635.0" cy="380.0" r="4.5" fill="#10B981" stroke="#0F172A" stroke-width="1.5"/>
+  <!-- Zone Summary Badge: Zone 2: Reaction & Synthesis -->
+  <g transform="translate(555.6, 465.7)">
+    <rect width="170" height="42" rx="6" fill="#05080C" fill-opacity="0.94" stroke="#10B981" stroke-width="1.5"/>
+    <text x="10" y="18" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700">Zone 2</text>
+    <text x="10" y="34" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="10.5">Area: <tspan fill="#E2E8F0">8450 px²</tspan> | R: <tspan fill="#10B981">51.4px</tspan></text>
+  </g>
+  <circle cx="960.0" cy="240.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="1000.0" cy="290.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="1040.0" cy="230.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="1020.0" cy="200.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="1060.0" cy="270.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="980.0" cy="320.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="1050.0" cy="320.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <circle cx="1015.0" cy="260.0" r="4.5" fill="#F59E0B" stroke="#0F172A" stroke-width="1.5"/>
+  <!-- Zone Summary Badge: Zone 3: Separation & Polishing -->
+  <g transform="translate(935.6, 345.7)">
+    <rect width="170" height="42" rx="6" fill="#05080C" fill-opacity="0.94" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="10" y="18" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700">Zone 3</text>
+    <text x="10" y="34" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="10.5">Area: <tspan fill="#E2E8F0">8450 px²</tspan> | R: <tspan fill="#F59E0B">51.4px</tspan></text>
+  </g>
+  <!-- Telemetry Footer Banner -->
+  <rect x="30" y="706" width="1140" height="32" rx="6" fill="#0B0F19" fill-opacity="0.94" stroke="#334155" stroke-width="1"/>
+  <circle cx="50" cy="722" r="5" fill="#EF4444"/>
+  <text x="65" y="726" fill="#F8FAFC" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="600">CRITICAL: 1 PROCESS OUTLIER(S) DETECTED</text>
+  <text x="1040" y="726" fill="#64748B" font-family="Segoe UI, sans-serif" font-size="10.5">WCAG 2.1 AAA [19.2:1]</text>
+</svg>

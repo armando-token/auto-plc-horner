@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_038",
+  "file_name": "scene_038.png",
+  "original_source": "artifacts\\G3\\probe_iec_editor_full.png",
+  "split": "train",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "a52b78df5ec81ed71865ca371a3ff753a29e6067538591e1224041f5e4d9ad19",
+  "labels": {
+    "canvas_rect": [
+      124,
+      15,
+      1269,
+      541
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        278
+      ],
+      "canvas_nw": [
+        124,
+        15
+      ],
+      "canvas_se": [
+        1269,
+        541
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

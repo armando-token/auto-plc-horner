@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Hydrocracking High-Pressure Trickle-Bed Reactor ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W149",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Hydrocracker TBR ODE Simulation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R1100..%R1107 and %M256..%M258 bound; Ladder forbidden enforced."
+      },
+      {
+        "stage": 2,
+        "check": "High_Pressure_Trickle_Bed_Hydrodynamics_And_Mass_Transfer",
+        "passed": true,
+        "details": "Hydrodynamics verified: eps_L=0.235, u_L=14.5 mm/s, u_G=0.189 m/s, dP=13.6 bar, kLa=0.020 1/s."
+      },
+      {
+        "stage": 3,
+        "check": "Exothermic_HDS_And_Hydrocracking_Kinetics",
+        "passed": true,
+        "details": "Kinetics verified: k_hds(400C)=6.80e-01/s, k_crack(400C)=1.07e-02/s, Conversion yield=78.5%, HDS removal=99.90%, Effluent S=15.0 ppm, Q_rxn=15905 kW."
+      },
+      {
+        "stage": 4,
+        "check": "Dual_Bed_Quench_Dynamics_And_Interbed_Mixing",
+        "passed": true,
+        "details": "Quench mixing verified: T_mix(0 kg/s)=395.0\u00b0C, T_mix(8.5 kg/s)=387.3\u00b0C (delta T=7.7\u00b0C), T_mix(15.0 kg/s)=381.6\u00b0C."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_High_Order_RK4_Integration",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: T_bed1=395.0\u00b0C, T_bed2=410.1\u00b0C, P=165.0 bar, Conversion=78.5%, S=15.0 ppm."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=0.000e+00 kg/s (< 1e-10), enthalpy_residual=0.000e+00 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks (0xAE01, 0xAE02, 0xAE03, 0xAE04) and priority hierarchy verified."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1100=3950, %R1101=4100, %R1102=1650, %R1103=1200, %R1104=85, %R1105=785, %R1106=15, %R1107=0x0000, %M256=True, %M257=False, %M258=False."
+      },
+      {
+        "stage": 9,
+        "check": "Dynamic_Disturbance_Response_And_Settling_Stability",
+        "passed": true,
+        "details": "Transient response to +2 \u00b0C feed temp disturbance verified cleanly over 10.0s: T_bed1=395.0\u00b0C, T_bed2=410.2\u00b0C, Permissive=True."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1100..%R1107",
+      "discrete_coils": "%M256..%M258",
+      "values": {
+        "%R1100": 3950,
+        "%R1101": 4100,
+        "%R1102": 1650,
+        "%R1103": 1200,
+        "%R1104": 85,
+        "%R1105": 785,
+        "%R1106": 15,
+        "%R1107": 0,
+        "%M256": true,
+        "%M257": false,
+        "%M258": false
+      }
+    },
+    "timestamp": "2026-10-04T20:49:08Z"
+  }
+}

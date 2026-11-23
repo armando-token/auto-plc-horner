@@ -1,0 +1,143 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Maleic Anhydride Partial Oxidation 9-stage verification passed 9/9 checks.",
+  "data": {
+    "work_package": "W242",
+    "module": "maleic_anhydride_oxidation",
+    "total_checks": 9,
+    "checks_passed": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Partial_Oxidation_Physics_And_Thermochemical_Constants_Verification",
+        "check": "Partial_Oxidation_Physics_And_Thermochemical_Constants_Verification",
+        "passed": true,
+        "details": "Kinetics verified: k1(390C)=1.82, k1(410C)=2.62, k1(430C)=3.68, Ea1 err=4.37e-11 J/mol, Delta_H1=-1260 kJ/mol, Delta_H2=-2870 kJ/mol, nominal hotspot=410.0 \u00b0C, salt=385.0 \u00b0C, P=2.20 bar, O2=18.50%."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "MaleicAnhydrideOxidationSync POU verified cleanly with STParser & SecurityGuard; bound %R2030..%R2037 and %M473..%M475."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=84.50% (~84.50%), selectivity=72.00% (~72.00%), production=2850.0 kg/h (~2850 kg/h), hotspot=410.0 \u00b0C, salt=385.0 \u00b0C."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: mass=4.27e-16 kg/s, elemental=1.20e-16 kg/s, enthalpy=3.64e-12 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_And_Explosive_Limit_Injections",
+        "check": "Thermal_Runaway_And_Explosive_Limit_Injections",
+        "passed": true,
+        "details": "0xF101 hotspot runaway (> 470 \u00b0C) trips %M475 and clears %M473; %M474 pre-alarm asserts above 440 \u00b0C."
+      },
+      {
+        "stage": 7,
+        "name": "Molten_Salt_Loss_And_Catalyst_Selectivity_Injections",
+        "check": "Molten_Salt_Loss_And_Catalyst_Selectivity_Injections",
+        "passed": true,
+        "details": "0xF102 explosive limit violation (> 1.8 vol% with O2 > 15%) asserts %M475; 0xF103 salt temp loss (> 430 \u00b0C) verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers %R2030..%R2037 and %M473..%M475 bit-exact verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf101, s=-3839)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=7.9 KB; hotspot=410.00 \u00b0C, conversion=84.50%, selectivity=72.00%."
+      }
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Partial_Oxidation_Physics_And_Thermochemical_Constants_Verification",
+        "check": "Partial_Oxidation_Physics_And_Thermochemical_Constants_Verification",
+        "passed": true,
+        "details": "Kinetics verified: k1(390C)=1.82, k1(410C)=2.62, k1(430C)=3.68, Ea1 err=4.37e-11 J/mol, Delta_H1=-1260 kJ/mol, Delta_H2=-2870 kJ/mol, nominal hotspot=410.0 \u00b0C, salt=385.0 \u00b0C, P=2.20 bar, O2=18.50%."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "details": "MaleicAnhydrideOxidationSync POU verified cleanly with STParser & SecurityGuard; bound %R2030..%R2037 and %M473..%M475."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=84.50% (~84.50%), selectivity=72.00% (~72.00%), production=2850.0 kg/h (~2850 kg/h), hotspot=410.0 \u00b0C, salt=385.0 \u00b0C."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: mass=4.27e-16 kg/s, elemental=1.20e-16 kg/s, enthalpy=3.64e-12 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_And_Explosive_Limit_Injections",
+        "check": "Thermal_Runaway_And_Explosive_Limit_Injections",
+        "passed": true,
+        "details": "0xF101 hotspot runaway (> 470 \u00b0C) trips %M475 and clears %M473; %M474 pre-alarm asserts above 440 \u00b0C."
+      },
+      {
+        "stage": 7,
+        "name": "Molten_Salt_Loss_And_Catalyst_Selectivity_Injections",
+        "check": "Molten_Salt_Loss_And_Catalyst_Selectivity_Injections",
+        "passed": true,
+        "details": "0xF102 explosive limit violation (> 1.8 vol% with O2 > 15%) asserts %M475; 0xF103 salt temp loss (> 430 \u00b0C) verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers %R2030..%R2037 and %M473..%M475 bit-exact verified (True). Signed/unsigned 16-bit fault sync verified (u=0xf101, s=-3839)."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "check": "Simulation_Soak_100_Cycles_And_Dynamic_Settling_Stability",
+        "passed": true,
+        "details": "100 cycles executed without drift or NaN; memory growth=7.9 KB; hotspot=410.00 \u00b0C, conversion=84.50%, selectivity=72.00%."
+      }
+    ],
+    "timestamp_utc": "2026-10-06T20:15:24Z",
+    "execution_time_ms": 134.06658172607422
+  }
+}

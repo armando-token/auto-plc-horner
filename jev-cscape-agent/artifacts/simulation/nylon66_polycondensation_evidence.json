@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Nylon 6,6 polycondensation 9-stage engineering verification passed successfully.",
+  "data": {
+    "work_package": "W257",
+    "module": "jev_cscape.simulation.nylon66_polycondensation",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "elapsed_ms": 41.67,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Nylon 6,6 Chemistry & Thermochemical Enthalpies",
+        "check": "Nylon 6,6 Chemistry & Thermochemical Enthalpies",
+        "passed": true,
+        "details": "Thermochemical constants verified: Ea error=3.35e-10 J/mol, DeltaH_rxn=-26.0 kJ/mol, DeltaH_vap=1910.0 kJ/kg."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "Nylon66PolycondensationSync POU validated with STParser and SecurityGuard, all 11 registers and coils bound."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs, mnemonics) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Steady-State Convergence (Conversion >= 90.0%, Temp 220.0 \u00b0C, Pressure 18.0 bar)",
+        "check": "Nominal Steady-State Convergence (Conversion >= 90.0%, Temp 220.0 \u00b0C, Pressure 18.0 bar)",
+        "passed": true,
+        "details": "Nominal steady-state verified: T=220.0\u00b0C (220.0), P=18.00 bar (18.00), Conv=92.50% (92.50%), DP=13.3 (13.3), Bleed=820.0 kg/h (820), Ratio=1.000 (1.000), Visc=45.0 Pa.s (45.0)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "check": "Conservation Laws Verification (mass error < 1e-10 kg/s, enthalpy error < 1e-10 kW)",
+        "passed": true,
+        "details": "Conservation laws verified: stoichiometric mass=3.51e-16 kg/s, elemental=0.00e+00 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Overtemp Gelation & Emergency Vent Trip (0xF601, %M510)",
+        "check": "Overtemp Gelation & Emergency Vent Trip (0xF601, %M510)",
+        "passed": true,
+        "details": "0xF601 overtemp (> 245 \u00b0C) and 0xF602 overpressure (> 22.00 bar) trips verified, %M510 open, %M508 cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Overpressure & Stoichiometric Imbalance Injections (0xF602, 0xF603, %M509)",
+        "check": "Overpressure & Stoichiometric Imbalance Injections (0xF602, 0xF603, %M509)",
+        "passed": true,
+        "details": "0xF603 stoichiometric imbalance (< 0.980), 0xF604 condenser fault (< 500 kg/h), and %M509 pre-alarm (< 0.990) verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2180..%R2187, %M508..%M510)",
+        "check": "Horner OCS Register Table Synchronization (%R2180..%R2187, %M508..%M510)",
+        "passed": true,
+        "details": "Registers %R2180..%R2187 and coils %M508..%M510 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed: bounded state (T=220.00\u00b0C, Conv=92.50%), deterministic scan cycles."
+      }
+    ]
+  }
+}

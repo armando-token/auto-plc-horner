@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 750" width="1200" height="750" style="background-color: #0D1117; font-family: monospace;">
+  <defs>
+    <linearGradient id="cellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.04" />
+    </linearGradient>
+  </defs>
+  <!-- Voronoi Tessellation Cells Layer -->
+  <g id="voronoi-cells-layer" class="voronoi-cells">
+    <polygon points="234.1,171.2 0.0,150.8 0.0,0.0 244.6,0.0" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="235.8,174.5 234.1,171.2 244.6,0.0 476.1,0.0 484.2,158.2 482.4,162.0" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="476.1,0.0 720.3,0.0 718.4,161.0 484.2,158.2" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="1200.0,0.0 1200.0,129.7 726.6,174.9 718.4,161.0 720.3,0.0" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="0.0,150.8 234.1,171.2 235.8,174.5 235.6,286.2 0.0,317.5" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="244.1,300.2 235.6,286.2 235.8,174.5 482.4,162.0 484.8,303.6 478.4,314.2" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="726.6,174.9 723.0,303.6 484.8,303.6 482.4,162.0 484.2,158.2 718.4,161.0" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="1200.0,289.4 725.8,308.2 723.0,303.6 726.6,174.9 1200.0,129.7" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="0.0,441.0 0.0,317.5 235.6,286.2 244.1,300.2 237.4,445.3" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="479.5,433.1 475.5,440.8 244.5,457.3 237.4,445.3 244.1,300.2 478.4,314.2" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="478.4,314.2 484.8,303.6 723.0,303.6 725.8,308.2 729.2,425.9 713.8,454.2 479.5,433.1" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="729.2,425.9 725.8,308.2 1200.0,289.4 1200.0,478.7" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="242.4,750.0 0.0,750.0 0.0,441.0 237.4,445.3 244.5,457.3" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="486.5,750.0 242.4,750.0 244.5,457.3 475.5,440.8" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="718.4,750.0 486.5,750.0 475.5,440.8 479.5,433.1 713.8,454.2" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+    <polygon points="718.4,750.0 713.8,454.2 729.2,425.9 1200.0,478.7 1200.0,750.0" fill="url(#cellGrad)" stroke="#64748B" stroke-width="1.2" />
+  </g>
+  <!-- Delaunay Dual Adjacency Graph Layer -->
+  <g id="delaunay-dual-layer" class="delaunay-dual-edges">
+    <line x1="122.8" y1="90.5" x2="354.5" y2="104.7" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="122.8" y1="90.5" x2="110.5" y2="231.5" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="354.5" y1="104.7" x2="607.8" y2="91.7" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="354.5" y1="104.7" x2="110.5" y2="231.5" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="354.5" y1="104.7" x2="360.9" y2="231.9" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="354.5" y1="104.7" x2="606.2" y2="227.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="607.8" y1="91.7" x2="830.6" y2="94.4" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="607.8" y1="91.7" x2="606.2" y2="227.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="830.6" y1="94.4" x2="606.2" y2="227.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="830.6" y1="94.4" x2="844.0" y2="234.3" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="110.5" y1="231.5" x2="360.9" y2="231.9" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="110.5" y1="231.5" x2="129.1" y2="371.7" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="360.9" y1="231.9" x2="606.2" y2="227.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="360.9" y1="231.9" x2="129.1" y2="371.7" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="360.9" y1="231.9" x2="351.9" y2="381.9" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="360.9" y1="231.9" x2="606.1" y2="379.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="606.2" y1="227.6" x2="844.0" y2="234.3" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="606.2" y1="227.6" x2="606.1" y2="379.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="844.0" y1="234.3" x2="606.1" y2="379.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="844.0" y1="234.3" x2="849.5" y2="372.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="129.1" y1="371.7" x2="351.9" y2="381.9" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="129.1" y1="371.7" x2="126.6" y2="514.9" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="351.9" y1="381.9" x2="606.1" y2="379.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="351.9" y1="381.9" x2="126.6" y2="514.9" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="351.9" y1="381.9" x2="361.5" y2="516.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="351.9" y1="381.9" x2="594.6" y2="508.3" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="606.1" y1="379.6" x2="849.5" y2="372.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="606.1" y1="379.6" x2="594.6" y2="508.3" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="606.1" y1="379.6" x2="834.7" y2="504.5" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="849.5" y1="372.6" x2="834.7" y2="504.5" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="126.6" y1="514.9" x2="361.5" y2="516.6" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="361.5" y1="516.6" x2="594.6" y2="508.3" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+    <line x1="594.6" y1="508.3" x2="834.7" y2="504.5" stroke="#0284C7" stroke-width="1.0" stroke-dasharray="3 3" opacity="0.6" />
+  </g>
+  <!-- Spatial Equipment Sensor Sites Layer -->
+  <g id="voronoi-sites-layer" class="voronoi-sites">
+    <circle class="sensor-node" cx="122.8" cy="90.5" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="130.8" y="94.5" fill="#FFFFFF" font-size="9">VS-001 (Z:1004, GH:0uxc5h)</text>
+    <circle class="sensor-node" cx="354.5" cy="104.7" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="362.5" y="108.7" fill="#FFFFFF" font-size="9">VS-002 (Z:6223, GH:4mne2z)</text>
+    <circle class="sensor-node" cx="607.8" cy="91.7" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="615.8" y="95.7" fill="#FFFFFF" font-size="9">VS-003 (Z:17067, GH:hh9ddx)</text>
+    <circle class="sensor-node" cx="830.6" cy="94.4" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="838.6" y="98.4" fill="#FFFFFF" font-size="9">VS-004 (Z:19713, GH:jkwqns)</text>
+    <circle class="sensor-node" cx="110.5" cy="231.5" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="118.5" y="235.5" fill="#FFFFFF" font-size="9">VS-005 (Z:8639, GH:2fjquj)</text>
+    <circle class="sensor-node" cx="360.9" cy="231.9" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="368.9" y="235.9" fill="#FFFFFF" font-size="9">VS-006 (Z:12538, GH:66pz6r)</text>
+    <circle class="sensor-node" cx="606.2" cy="227.6" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="614.2" y="231.6" fill="#FFFFFF" font-size="9">VS-007 (Z:24739, GH:k411zz)</text>
+    <circle class="sensor-node" cx="844.0" cy="234.3" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="852.0" y="238.3" fill="#FFFFFF" font-size="9">VS-008 (Z:26042, GH:md34sf)</text>
+    <circle class="sensor-node" cx="129.1" cy="371.7" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="137.1" y="375.7" fill="#FFFFFF" font-size="9">VS-009 (Z:11245, GH:3pc5u1)</text>
+    <circle class="sensor-node" cx="351.9" cy="381.9" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="359.9" y="385.9" fill="#FFFFFF" font-size="9">VS-010 (Z:36941, GH:d2q0bw)</text>
+    <circle class="sensor-node" cx="606.1" cy="379.6" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="614.1" y="383.6" fill="#FFFFFF" font-size="9">VS-011 (Z:49155, GH:s01jzt)</text>
+    <circle class="sensor-node" cx="849.5" cy="372.6" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="857.5" y="376.6" fill="#FFFFFF" font-size="9">VS-012 (Z:28603, GH:mxfkb7)</text>
+    <circle class="sensor-node" cx="126.6" cy="514.9" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="134.6" y="518.9" fill="#FFFFFF" font-size="9">VS-013 (Z:35311, GH:9j8s7e)</text>
+    <circle class="sensor-node" cx="361.5" cy="516.6" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="369.5" y="520.6" fill="#FFFFFF" font-size="9">VS-014 (Z:39505, GH:dmxywd)</text>
+    <circle class="sensor-node" cx="594.6" cy="508.3" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="602.6" y="512.3" fill="#FFFFFF" font-size="9">VS-015 (Z:40438, GH:evqgug)</text>
+    <circle class="sensor-node" cx="834.7" cy="504.5" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="842.7" y="508.5" fill="#FFFFFF" font-size="9">VS-016 (Z:52644, GH:tmpr0b)</text>
+  </g>
+  <!-- Query Reticle Layer -->
+  <g id="query-reticle-layer" class="query-reticle">
+    <circle cx="600.0" cy="375.0" r="180.0" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="5 3" />
+  </g>
+  <!-- Spatial Hazard Vectors Layer -->
+  <g id="hazard-vectors-layer" class="hazard-vectors">
+  </g>
+  <!-- HUD Telemetry Scorecard -->
+  <g id="scorecard-layer" class="hud-telemetry-scorecard">
+    <rect x="15" y="15" width="560" height="74" rx="6" fill="#05080C" stroke="#334155" stroke-width="1.2" />
+    <text x="25" y="35" fill="#FFFFFF" font-size="11" font-weight="bold">DYNAMIC SPATIAL GEOHASH / VORONOI DIAGRAM SCADA CANVAS [W324]</text>
+    <text x="25" y="55" fill="#CBD5E1" font-size="10">SITES: 16 | CELLS: 16 | MORTON CELLS: 16 | MATCHES: 3</text>
+    <text x="25" y="72" fill="#94A3B8" font-size="9">HAZARDS: 0 | DIAG: 0x0000 | REGS: %R2850..%R2857 | COILS: %M665..%M666</text>
+    <rect x="1020" y="15" width="165" height="28" rx="4" fill="#10B981" />
+    <text x="1103" y="33" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">INDEXING NOMINAL</text>
+  </g>
+</svg>

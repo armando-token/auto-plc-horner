@@ -1,0 +1,59 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9/9 HMI font metrics, text wrapping, and translation checks passed.",
+  "data": {
+    "timestamp_utc": "2026-10-02T23:59:45.557839+00:00",
+    "tests_run": 9,
+    "tests_passed": 9,
+    "verification_steps": [
+      "Character widths and CJK double-width metrics verified across all 5 font presets.",
+      "Left, Center, and Right alignment coordinate calculations verified.",
+      "Word-boundary line wrapping algorithm verified.",
+      "Ellipsis truncation within bounding limits verified.",
+      "Multi-lingual translation lookup and missing-key fallback verified across EN, ES, DE, FR, ZH.",
+      "German and Spanish text expansion container overflow detection verified.",
+      "WCAG 2.1 AA and AAA relative luminance and contrast ratio formulas verified.",
+      "Horner OCS register synchronization (%R280..%R284, %M63..%M64) verified.",
+      "Pure ST boundary integrity confirmed; all 10 forbidden ladder constructs rejected."
+    ],
+    "font_presets": [
+      "6x8 Compact",
+      "8x16 Standard",
+      "12x24 PV Readout",
+      "16x32 Digital",
+      "24x48 Alarm Banner"
+    ],
+    "supported_languages": [
+      "ENGLISH",
+      "SPANISH",
+      "GERMAN",
+      "FRENCH",
+      "CHINESE"
+    ],
+    "catalog_keys": [
+      "NAV_DASHBOARD",
+      "NAV_ALARMS",
+      "NAV_RECIPES",
+      "LBL_TANK_LEVEL",
+      "LBL_PRESSURE",
+      "LBL_TEMPERATURE",
+      "BTN_START",
+      "BTN_STOP",
+      "BTN_RESET",
+      "BTN_ACKNOWLEDGE",
+      "ALM_CRITICAL_HIGH",
+      "ALM_LOW_LEVEL",
+      "ALM_NORMAL"
+    ],
+    "register_mapping": {
+      "active_language_index": "%R280",
+      "status_word": "%R281",
+      "total_rendered_counter": "%R282",
+      "clipped_counter": "%R283",
+      "active_font_preset": "%R284",
+      "enable_coil": "%M63",
+      "language_change_handshake_coil": "%M64"
+    }
+  }
+}

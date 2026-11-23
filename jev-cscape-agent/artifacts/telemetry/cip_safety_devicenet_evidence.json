@@ -1,0 +1,100 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial DeviceNet Safety / CIP Safety Over DeviceNet verified cleanly (9/9 stages passed).",
+  "data": {
+    "work_package": "W205",
+    "gate": "Gate G8 / G4",
+    "component": "Industrial DeviceNet Safety / CIP Safety Over DeviceNet Protocol Engine",
+    "stages_passed": 9,
+    "total_stages": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "SNN_And_TUNID_Architecture_Validation",
+        "passed": true,
+        "duration_ms": 0.003800028935074806,
+        "details": "Verified SNN 20261006aa55 and TUNID 0x0a14 with Originator MAC 10 and Target MAC 20."
+      },
+      {
+        "stage": 2,
+        "name": "Dual_CRC_And_Inverted_Payload_Integrity",
+        "passed": true,
+        "duration_ms": 0.07999991066753864,
+        "details": "Dual CRC verification passed: CRC-S1=0x4f78, CRC-S2=0xb551, Inverted payload intact."
+      },
+      {
+        "stage": 3,
+        "name": "DeviceNet_CAN_Framing_Serialization",
+        "passed": true,
+        "duration_ms": 0.0076999422162771225,
+        "details": "8-byte DeviceNet CAN sub-carrier frame serialized cleanly with 11-bit identifier compatibility."
+      },
+      {
+        "stage": 4,
+        "name": "Ping_Pong_Time_Protocol_And_MTD_Bounding",
+        "passed": true,
+        "duration_ms": 0.14909985475242138,
+        "details": "Ping-pong round trip evaluated: transit delay 1.5 ms strictly bounded under 50.0 ms."
+      },
+      {
+        "stage": 5,
+        "name": "Connection_State_Machine_Lifecycle",
+        "passed": true,
+        "duration_ms": 0.010899966582655907,
+        "details": "Verified state progression: NON_EXISTENT -> CONFIGURING -> WAITING_FOR_TUNID -> SAFETY_RUN."
+      },
+      {
+        "stage": 6,
+        "name": "Black_Channel_Threats_And_Interlock_Trips",
+        "passed": true,
+        "duration_ms": 0.2429999876767397,
+        "details": "Verified 4 distinct safety trips: 0xDD01 CRC, 0xDD03 Watchdog Timeout, 0xDD04 SNN Mismatch, 0xDD05 MTD Exceeded."
+      },
+      {
+        "stage": 7,
+        "name": "ILogicUnit_100_Cycle_Scan_Simulation",
+        "passed": true,
+        "duration_ms": 3.1325998716056347,
+        "details": "Completed 100 closed-loop scan cycles at 10 ms resolution with 100% permissive stability."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "duration_ms": 0.35399990156292915,
+        "details": "Synchronized %R1660..%R1667, %M387=TRUE, %M388=FALSE with PrivilegeMode.SYSTEM."
+      },
+      {
+        "stage": 9,
+        "name": "Pure_ST_AST_And_Anti_Ladder_Guard",
+        "passed": true,
+        "duration_ms": 2.264200011268258,
+        "details": "Pure ST POU verified via STParser; ladder logic construct intercepted with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "metrics": {
+      "connection_state": 3,
+      "configured_epi_ms": 20.0,
+      "observed_transit_delay_ms": 1.5,
+      "safe_sequence_counter": 1,
+      "primary_payload": 777,
+      "complement_payload": 64758,
+      "crc_error_count": 0,
+      "diagnostic_status_code": 0
+    },
+    "register_map": {
+      "%R1660": "SafetyConnectionStateWord",
+      "%R1661": "ConfiguredEpiMsScaled",
+      "%R1662": "ObservedTransitDelayMsScaled",
+      "%R1663": "SafeSequenceCounter",
+      "%R1664": "SafetyPayloadPrimary",
+      "%R1665": "SafetyPayloadComplement",
+      "%R1666": "CrcErrorCounter",
+      "%R1667": "DiagnosticStatusCode",
+      "%M387": "CipDeviceNetSafetyPermissive",
+      "%M388": "CipDeviceNetSafetyFaultTrip"
+    },
+    "timestamp": "2026-10-06T03:56:36Z"
+  }
+}

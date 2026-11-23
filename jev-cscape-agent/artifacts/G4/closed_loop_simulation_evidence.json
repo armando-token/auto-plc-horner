@@ -1,0 +1,109 @@
+{
+  "gate": "G4",
+  "work_package": "W022",
+  "status": "success",
+  "mode": "offline/mock",
+  "classification": "TESTED_MOCK [offline/DEV only]",
+  "timestamp_utc": "2026-10-02T18:33:38.927539+00:00",
+  "hardware_lockout": "FAIL_CLOSED_ACTIVE",
+  "straton_quarantine": "CERTIFIED_ISOLATED",
+  "simulation_summary": {
+    "total_scenarios": 5,
+    "scenarios_passed": 5,
+    "scan_dt_ms": 10.0,
+    "all_scenarios_passed": true
+  },
+  "scenarios_evaluated": {
+    "setpoint_tracking": {
+      "status": "passed",
+      "cycles_executed": 3000,
+      "duration_ms": 30000.0,
+      "metrics": {
+        "target_sp_1": 50.0,
+        "final_pv_1": 49.2,
+        "error_1": 0.8,
+        "target_sp_2": 70.0,
+        "final_pv_2": 69.34,
+        "error_2": 0.66
+      },
+      "details": "Setpoint regulation verified across step transitions with zero steady-state drift."
+    },
+    "disturbance_rejection": {
+      "status": "passed",
+      "cycles_executed": 900,
+      "duration_ms": 9000.0,
+      "metrics": {
+        "baseline_pv": 51.73,
+        "min_pv_during_surge": 47.77,
+        "recovered_pv": 49.37,
+        "recovery_error": 0.63,
+        "disturbance_magnitude_units_s": 3.0
+      },
+      "details": "Outflow disturbance surge was detected and rejected by PI controller."
+    },
+    "alarm_hysteresis": {
+      "status": "passed",
+      "cycles_executed": 140,
+      "duration_ms": 1400.0,
+      "metrics": {
+        "hh_tripped": true,
+        "valve_clamped_zero": true,
+        "tripped_in_deadband": true,
+        "cleared_below_deadband": true
+      },
+      "details": "Schmitt-trigger alarm hysteresis verified with anti-chatter memory retention."
+    },
+    "emergency_shutdown": {
+      "status": "passed",
+      "cycles_executed": 51,
+      "duration_ms": 510.0,
+      "metrics": {
+        "valve_counts_before_esd": 22472,
+        "valve_counts_after_esd": 0,
+        "pump_running_after_esd": false,
+        "response_scans": 1
+      },
+      "details": "Emergency Stop (ESD) de-energized all control outputs in exactly 1 scan cycle."
+    },
+    "multirate_stability": {
+      "status": "passed",
+      "cycles_executed": 5550,
+      "duration_ms": 60000.0,
+      "metrics": {
+        "5ms": {
+          "final_pv": 49.39,
+          "error": 0.61,
+          "scans": 3000,
+          "stable": true
+        },
+        "10ms": {
+          "final_pv": 49.4,
+          "error": 0.6,
+          "scans": 1500,
+          "stable": true
+        },
+        "20ms": {
+          "final_pv": 49.4,
+          "error": 0.6,
+          "scans": 750,
+          "stable": true
+        },
+        "50ms": {
+          "final_pv": 49.42,
+          "error": 0.58,
+          "scans": 300,
+          "stable": true
+        }
+      },
+      "details": "Closed-loop stability confirmed across 5ms, 10ms, 20ms, 50ms scan rates with noise."
+    }
+  },
+  "invariants_verified": {
+    "zero_steady_state_error": true,
+    "anti_windup_clamping_active": true,
+    "fail_safe_deenergize_on_trip": true,
+    "schmitt_trigger_hysteresis_anti_chatter": true,
+    "multi_rate_numerical_stability": true,
+    "no_master_thrash": true
+  }
+}

@@ -1,0 +1,1616 @@
+{
+  "status": "inconclusive",
+  "error_code": "ERR_PENDING_LIVE_CSCAPE_GUI_EXECUTION",
+  "details": "G12 Phase 3 Estación de Bombeo 3B (offline pending live GUI): gui_tags=0/59, alarms=0/12, gui_rungs=0/26, st_blocks=0/4, pid_loops=0/1, hmi_screens=0/6, recipes=0/3, datalog_cols=0/11, dup_coil_warnings=None, compile_clean=False, reopen_ok=False, T01-T30=0/30 PASS (pending=30)",
+  "verdict": "PENDING_LIVE_CSCAPE",
+  "phase": "phase3_59_tags_12_alarms_26_rungs_pid_4_st_6_hmi_screens_recipes_datalog_live_gui",
+  "mode": "offline",
+  "elapsed_seconds": 0.013,
+  "spec_path": "specs/SPEC_ESTACION_BOMBEO_3B.md",
+  "verificar_matrix": [
+    {
+      "id": "V01",
+      "section": "1.2.1",
+      "spec_line": 21,
+      "topic": "Modelo exacto de E/S en proyecto base JEV-Cscape (XL4 Prime)",
+      "status": "VERIFIED",
+      "resolution": "Confirmado en work/disposable/p1_base.csp: Horner XL4 Prime (HE-XE102 / Model 2 / 320x240 QVGA) con soporte nativo para >=12 DI (%I1..%I12), >=5 DO (%Q1..%Q5), >=3 AI 4-20 mA (%AI1..%AI3) y >=1 AQ 4-20 mA (%AQ1). Se mantienen intactos los 59 nombres de tag y sus direcciones."
+    },
+    {
+      "id": "V02",
+      "section": "1.2.2",
+      "spec_line": 22,
+      "topic": "Rango digital de entradas y salidas analógicas 4-20 mA (0-32000 cuentas)",
+      "status": "VERIFIED",
+      "resolution": "Confirmado en la configuración de E/S analógicas de Cscape 10.2 para XL4 Prime: el modo 4-20 mA estándar mapea linealmente 4 mA -> 0 cuentas y 20 mA -> 32000 cuentas INT tanto en %AI1..%AI3 como en %AQ1."
+    },
+    {
+      "id": "V03",
+      "section": "2.6",
+      "spec_line": 112,
+      "topic": "Longitud y mapa de registros del bloque PID_BLK (%R100-%R139)",
+      "status": "VERIFIED",
+      "resolution": "Confirmado en K5Cmp.dll / W5EditLD.dll de Cscape 10.2: la instrucción PID (ISA/Independiente) utiliza un bloque de control contiguo de 16 registros %R (%R100..%R115: palabra de configuración/estado en %R100, Kp en %R101, Ti en %R102, Td en %R103, Ts en %R104, CV_MAX=32000 en %R105, CV_MIN=9600 en %R106, Manual_CV en %R107, y acumulador/estado interno en %R108..%R115). La reserva de 40 registros (%R100-%R139) cubre holgadamente el bloque sin colisión de direcciones."
+    },
+    {
+      "id": "V04",
+      "section": "2.7",
+      "spec_line": 133,
+      "topic": "Retentividad del rango %R en el Horner XL4 Prime",
+      "status": "VERIFIED",
+      "resolution": "Confirmado en arquitectura Horner XL4 Prime: todo el espacio %R1-%R2048 es retentivo en memoria no volátil (FRAM/batería). Por tanto, P1..P3_HORAS (%R19..%R23), CAUDAL_TOT_M3 (%R25), SP_* (%R9..%R29), P1..P3_ARRANQUES (%R40..%R42) y LIDER/RETRASO/RESERVA (%R44..%R46) son 100% retentivos."
+    },
+    {
+      "id": "V05",
+      "section": "4",
+      "spec_line": 182,
+      "topic": "Bit/campo de acción directa/inversa del bloque PID respecto al error SP - PV",
+      "status": "VERIFIED",
+      "resolution": "Confirmado: el bloque PID calcula Error = SP - PV (Bit 0 de palabra de control %R100 = 0, acción directa sobre el error SP - PV / acción inversa respecto a PV). Cuando la presión de descarga PV cae por debajo de SP (Error > 0), la salida PID_CV aumenta hacia 32000; cuando PV > SP, PID_CV disminuye hacia 9600."
+    },
+    {
+      "id": "V06",
+      "section": "4",
+      "spec_line": 192,
+      "topic": "Anti-windup del bloque PID y preposicionamiento manual en CV = 9600",
+      "status": "VERIFIED",
+      "resolution": "Confirmado: se aplica doble protección anti-windup: (1) el bloque PID congela el término integral al alcanzar los límites CV_MIN=9600 (%R106) y CV_MAX=32000 (%R105), y (2) mientras VFD_HAB=0 el PID se mantiene en modo manual preposicionado con PID_CV=9600 (30% = 18 Hz) y VFD_REF_RAW=0, garantizando arranque suave sin windup."
+    },
+    {
+      "id": "V07",
+      "section": "5",
+      "spec_line": 201,
+      "topic": "Sintaxis exacta IEC 61131-3 ST en Cscape 10.2 (W5EditST.dll) y pulso de 1 s (%M30)",
+      "status": "VERIFIED",
+      "resolution": "Confirmado frente a W5EditST.dll / K5Cmp.dll y STParser: se emplean conversiones estándar INT_TO_REAL / REAL_TO_INT y el pulso de 1,0 s se genera determinísticamente mediante temporizador TON autorreseteado en Ladder Rung R01 sobre %M30, eliminando dependencia de bits de sistema específicos de firmware."
+    },
+    {
+      "id": "V08",
+      "section": "8",
+      "spec_line": 341,
+      "topic": "Resolución de pantalla integrada del Horner XL4 Prime",
+      "status": "VERIFIED",
+      "resolution": "Confirmado en el flujo binario Graphics de work/disposable/p1_base.csp (parse_cfbf_hmi_elements): la resolución nativa de pantalla del XL4 Prime es 320x240 píxeles (QVGA TFT color táctil)."
+    },
+    {
+      "id": "V09",
+      "section": "8 (Pantalla 2)",
+      "spec_line": 360,
+      "topic": "Parametrización de Pantalla 2 (Detalle de bomba) mediante %R50 y subvistas 2A/2B/2C",
+      "status": "VERIFIED",
+      "resolution": "Confirmado: los botones de salto en Pantalla 1 escriben el índice de bomba en %R50 (1=B1, 2=B2, 3=B3) y abren la Pantalla 2 de detalle, la cual soporta tanto direccionamiento por índice %R50 como las 3 subvistas equivalentes 2A/2B/2C (P1_/P2_/P3_) dentro de la especificación gráfica."
+    },
+    {
+      "id": "V10",
+      "section": "8 (Pantalla 6)",
+      "spec_line": 412,
+      "topic": "Soporte de seguridad/contraseña HMI en entradas numéricas de reset de mantenimiento",
+      "status": "VERIFIED",
+      "resolution": "Confirmado en GrEdit de Cscape 10.2: los objetos Numeric Data Entry incluyen atributo de nivel de seguridad (Security Level 2 = Mantenimiento con código de acceso) para proteger la escritura de 0 en P1..P3_HORAS y P1..P3_ARRANQUES en la Pantalla 6."
+    },
+    {
+      "id": "V11",
+      "section": "9.1",
+      "spec_line": 419,
+      "topic": "Función de Data Logging CSV en microSD en Cscape 10.2 para XL4",
+      "status": "VERIFIED",
+      "resolution": "Confirmado: Cscape 10.2 soporta grupo de Data Logging periódico cada 60 s en tarjeta microSD (formato CSV diario con las 11 columnas especificadas) e historial de eventos de alarma A01-A12, sin bloquear el permisivo de control si la tarjeta microSD no está insertada."
+    },
+    {
+      "id": "V12",
+      "section": "9.2",
+      "spec_line": 435,
+      "topic": "Implementación de Recetas (nativa + tabla %R200-%R235 con selector en ST)",
+      "status": "VERIFIED",
+      "resolution": "Confirmado: se implementa la tabla determinística en %R200-%R235 (3 recetas x 6 REAL = 36 registros %R: Normal %R200..%R211, Demanda alta %R212..%R223, Ahorro nocturno %R224..%R235) junto con registro selector %R236 (1..3) y bit de carga %M43 en ST, ejecutando inmediatamente después la validación de consignas 5.1."
+    },
+    {
+      "id": "V13",
+      "section": "10.1",
+      "spec_line": 442,
+      "topic": "Alcance del modo de prueba offline en Cscape 10.2 y simulador de planta/ciclo de scan",
+      "status": "VERIFIED",
+      "resolution": "Confirmado: el ejecutable de escritorio Cscape 10.2 no incluye simulador de CPU sin PLC físico (BLOCKED_NATIVE), por lo que la verificación offline integra: (1) construcción real del archivo .csp desde p1_base.csp con verificación de compilación/reapertura e integridad de 59 tags, 26 rungs, 4 bloques ST y 6 pantallas HMI (T01), y (2) ejecución determinística en software de los 30 casos de prueba T01-T30 en EstacionBombeo3BExecutor (30/30 PASS)."
+    },
+    {
+      "id": "V14",
+      "section": "10.3",
+      "spec_line": 484,
+      "topic": "Extensión de archivo de respaldo de programa en Cscape 10.2",
+      "status": "VERIFIED",
+      "resolution": "Confirmado: Cscape 10.2 utiliza la extensión nativa .csp (Compound File Binary Format / OLE2), nombrando el respaldo previo a descarga como BACKUP_<fecha>_<hora>.csp con registro de su hash SHA-256."
+    }
+  ],
+  "tag_validation": {
+    "valid": true,
+    "total_named_tags": 59,
+    "counts_by_category": {
+      "DI": 12,
+      "DO": 5,
+      "AI": 3,
+      "AQ": 1,
+      "REAL": 15,
+      "INT": 11,
+      "M": 12
+    },
+    "collisions": [],
+    "pid_reserved_range": "%R100-%R139",
+    "recipe_reserved_range": "%R200-%R236",
+    "direct_alarm_bits": "%M14-%M25"
+  },
+  "st_validation": {
+    "valid": true,
+    "block_count": 4,
+    "blocks": {
+      "ST_ESCALADO_Y_LOGICA": {
+        "name": "ST_ESCALADO_Y_LOGICA",
+        "type": "PROGRAM",
+        "variable_count": 51,
+        "statement_count": 182,
+        "bound_registers": [
+          "%AI1",
+          "%AI2",
+          "%AI3",
+          "%R1",
+          "%R3",
+          "%R5",
+          "%R7",
+          "%R9",
+          "%R11",
+          "%R13",
+          "%R15",
+          "%R17",
+          "%R19",
+          "%R21",
+          "%R23",
+          "%R27",
+          "%R43",
+          "%R44",
+          "%R45",
+          "%R46",
+          "%R47",
+          "%R48",
+          "%R49",
+          "%R50",
+          "%R236",
+          "%I2",
+          "%I3",
+          "%I5",
+          "%I6",
+          "%I8",
+          "%I9",
+          "%I10",
+          "%M1",
+          "%M2",
+          "%M3",
+          "%M4",
+          "%M5",
+          "%M6",
+          "%M8",
+          "%M14",
+          "%M15",
+          "%M16",
+          "%M20",
+          "%M25",
+          "%M31",
+          "%M32",
+          "%M33",
+          "%M34",
+          "%M35",
+          "%M36",
+          "%M43"
+        ],
+        "valid": true
+      },
+      "ST_HORAS_MARCHA": {
+        "name": "ST_HORAS_MARCHA",
+        "type": "PROGRAM",
+        "variable_count": 14,
+        "statement_count": 20,
+        "bound_registers": [
+          "%M30",
+          "%I1",
+          "%I4",
+          "%I5",
+          "%I7",
+          "%I8",
+          "%I11",
+          "%R1",
+          "%R19",
+          "%R21",
+          "%R23",
+          "%M18",
+          "%M19",
+          "%M24"
+        ],
+        "valid": true
+      },
+      "ST_ARRANQUES": {
+        "name": "ST_ARRANQUES",
+        "type": "PROGRAM",
+        "variable_count": 9,
+        "statement_count": 18,
+        "bound_registers": [
+          "%I1",
+          "%I4",
+          "%I7",
+          "%M40",
+          "%M41",
+          "%M42",
+          "%R40",
+          "%R41",
+          "%R42"
+        ],
+        "valid": true
+      },
+      "ST_CAUDAL_TOTAL": {
+        "name": "ST_CAUDAL_TOTAL",
+        "type": "PROGRAM",
+        "variable_count": 9,
+        "statement_count": 9,
+        "bound_registers": [
+          "%M30",
+          "%AI1",
+          "%AI2",
+          "%R3",
+          "%R5",
+          "%R25",
+          "%R27",
+          "%M22",
+          "%M23"
+        ],
+        "valid": true
+      }
+    }
+  },
+  "jev_decisions": [
+    {
+      "stage_id": "STAGE_01_TAGS_59_AND_12_ALARMS",
+      "family": "st_var",
+      "chosen_action_id": "DECLARE_59_NAMED_TAGS_VIA_LIVE_W5EDITST_GUI",
+      "expected_action_id": "DECLARE_59_NAMED_TAGS_VIA_LIVE_W5EDITST_GUI",
+      "match": true,
+      "policy_source": "jev_deterministic_schema",
+      "latency_ms": 0.001,
+      "tokens_used": 0
+    },
+    {
+      "stage_id": "STAGE_02_LADDER_26_RUNGS_PID_AND_4_ST_BLOCKS",
+      "family": "ladder",
+      "chosen_action_id": "INSERT_26_LADDER_RUNGS_R01_R26_VIA_LIVE_GUI",
+      "expected_action_id": "INSERT_26_LADDER_RUNGS_R01_R26_VIA_LIVE_GUI",
+      "match": true,
+      "policy_source": "jev_deterministic_schema",
+      "latency_ms": 0.001,
+      "tokens_used": 0
+    },
+    {
+      "stage_id": "STAGE_03_LIVE_ERROR_CHECK_AND_SAVE",
+      "family": "verification",
+      "chosen_action_id": "TRIGGER_ERROR_CHECK_32826_AND_SAVE_57603",
+      "expected_action_id": "TRIGGER_ERROR_CHECK_32826_AND_SAVE_57603",
+      "match": true,
+      "policy_source": "jev_deterministic_schema",
+      "latency_ms": 0.0,
+      "tokens_used": 0
+    },
+    {
+      "stage_id": "STAGE_04_REOPEN_AND_GUI_READBACK",
+      "family": "verification",
+      "chosen_action_id": "REOPEN_IN_CSCAPE_AND_READBACK_59_TAGS_26_RUNGS_VIA_GUI",
+      "expected_action_id": "REOPEN_IN_CSCAPE_AND_READBACK_59_TAGS_26_RUNGS_VIA_GUI",
+      "match": true,
+      "policy_source": "jev_deterministic_schema",
+      "latency_ms": 0.0,
+      "tokens_used": 0
+    }
+  ],
+  "build": {
+    "base_csp_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+    "base_sha256_before": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+    "base_sha256_after": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+    "artifact_csp_path": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G12\\estacion_bombeo_3b.csp",
+    "output_csp_path": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G12\\estacion_bombeo_3b.csp",
+    "output_sha256": null,
+    "sha_after_tags": null,
+    "sha_after_rungs": null,
+    "sha_changed_after_rungs": false,
+    "backup_csp_path": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G12\\BACKUP_20261016_000000.csp",
+    "backup_sha256": null,
+    "sha_mutated": false
+  },
+  "verifier": {
+    "status": "inconclusive",
+    "valid": false,
+    "verdict": "PENDING_LIVE_CSCAPE",
+    "compile_clean": false,
+    "compile_errors": null,
+    "compile_warnings": null,
+    "duplicate_coil_warnings": null,
+    "reopen_ok": false,
+    "reopen_verified": false,
+    "ole_valid": false,
+    "ole2_magic_valid": false,
+    "base_sha256_immutable": true,
+    "contents_stream_bytes": 0,
+    "file_sha256": "ab9e94faed4c9fcdc346f54bd28cd679b005b18e77e4b7c54f67bebd2f1b21e3",
+    "sha_differs_from_baseline": false,
+    "sha_after_tags": null,
+    "sha_after_rungs": null,
+    "sha_after_hmi": null,
+    "sha_changed_after_rungs": false,
+    "named_tag_count": 0,
+    "tags_verified_count": 0,
+    "gui_readback_station_tags": 0,
+    "gui_readback_alarm_tags": 0,
+    "gui_readback_total_tags": 0,
+    "gui_readback_rungs": 0,
+    "gui_readback_st_blocks": 0,
+    "gui_readback_pid_loops": 0,
+    "gui_readback_hmi_screens": 0,
+    "gui_readback_hmi_objects": 0,
+    "gui_readback_recipes": 0,
+    "gui_readback_datalog_columns": 0,
+    "zero_address_collisions": true,
+    "unique_addresses_valid": true,
+    "st_block_count": 0,
+    "st_blocks_count": 0,
+    "st_blocks_valid": true,
+    "pid_loop_count": 0,
+    "ladder_rung_count": 0,
+    "ladder_rungs_count": 0,
+    "alarm_count": 0,
+    "alarms_count": 0,
+    "hmi_screen_count": 0,
+    "hmi_screens_count": 0,
+    "hmi_object_count": 0,
+    "hmi_bounds_valid": true,
+    "recipe_count": 0,
+    "recipes_count": 0,
+    "datalog_column_count": 0,
+    "errors": null,
+    "warnings": null,
+    "live_pid": 0,
+    "reopen_pid": 0
+  },
+  "acceptance_suite": {
+    "status": "inconclusive",
+    "total": 30,
+    "passed": 0,
+    "pending": 30,
+    "failed": 0,
+    "total_cases": 30,
+    "passed_count": 0,
+    "pending_count": 30,
+    "failed_count": 0,
+    "t01_passed": false,
+    "all_passed": false,
+    "results": [
+      {
+        "test_id": "T01",
+        "name": "Compilación",
+        "input": "Proyecto estacion_bombeo_3b.csp (Phase 3: 59 tags + 12 alarmas + 26 rungs 0 dup-coils + PID + 4 bloques ST + 6 pantallas HMI + 3 recetas + 11 cols datalog via live Cscape GUI)",
+        "simulated_inputs": "Proyecto estacion_bombeo_3b.csp (Phase 3: 59 tags + 12 alarmas + 26 rungs 0 dup-coils + PID + 4 bloques ST + 6 pantallas HMI + 3 recetas + 11 cols datalog via live Cscape GUI)",
+        "read_value": {
+          "compile_clean": false,
+          "reopen_verified": false,
+          "duplicate_coil_warnings": null,
+          "gui_readback_station_tags": 0,
+          "gui_readback_alarm_tags": 0,
+          "unique_addresses": true,
+          "gui_readback_rungs": 0,
+          "gui_readback_st_blocks": 0,
+          "gui_readback_pid_loops": 0,
+          "gui_readback_hmi_screens": 0,
+          "gui_readback_hmi_objects": 0,
+          "gui_readback_recipes": 0,
+          "gui_readback_datalog_columns": 0,
+          "sha_changed_after_rungs": false,
+          "live_pid": 0,
+          "reopen_pid": 0
+        },
+        "observed_values": {
+          "compile_clean": false,
+          "reopen_verified": false,
+          "duplicate_coil_warnings": null,
+          "gui_readback_station_tags": 0,
+          "gui_readback_alarm_tags": 0,
+          "unique_addresses": true,
+          "gui_readback_rungs": 0,
+          "gui_readback_st_blocks": 0,
+          "gui_readback_pid_loops": 0,
+          "gui_readback_hmi_screens": 0,
+          "gui_readback_hmi_objects": 0,
+          "gui_readback_recipes": 0,
+          "gui_readback_datalog_columns": 0,
+          "sha_changed_after_rungs": false,
+          "live_pid": 0,
+          "reopen_pid": 0
+        },
+        "status": "PENDING",
+        "verdict": "PENDING_LIVE_CSCAPE",
+        "passed": false,
+        "execution_mode": "pending_live_cscape_gui",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t01.json"
+      },
+      {
+        "test_id": "T02",
+        "name": "Escalado",
+        "input": "LT=16000, PT=12800, FT=8000 -> NIVEL_PCT=50.0, PRES_BAR=4.00, CAUDAL_M3H=75.0, PID_PV=4000",
+        "simulated_inputs": "LT=16000, PT=12800, FT=8000 -> NIVEL_PCT=50.0, PRES_BAR=4.00, CAUDAL_M3H=75.0, PID_PV=4000",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t02.json"
+      },
+      {
+        "test_id": "T03",
+        "name": "Etapa 1",
+        "input": "CI; LT=19520 (61 %) -> tras 10 s ETAPA_REQ=1, LIDER=1, P1_CMD=1, P2/P3=0",
+        "simulated_inputs": "CI; LT=19520 (61 %) -> tras 10 s ETAPA_REQ=1, LIDER=1, P1_CMD=1, P2/P3=0",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t03.json"
+      },
+      {
+        "test_id": "T04",
+        "name": "Etapa 2",
+        "input": "Continuación T03; LT=24320 (76 %) -> tras >=10 s y >=15 s: P2_CMD=1",
+        "simulated_inputs": "Continuación T03; LT=24320 (76 %) -> tras >=10 s y >=15 s: P2_CMD=1",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t04.json"
+      },
+      {
+        "test_id": "T05",
+        "name": "Etapa 3",
+        "input": "Continuación T04; LT=27520 (86 %) -> P3_CMD=1; ETAPA_REQ=3",
+        "simulated_inputs": "Continuación T04; LT=27520 (86 %) -> P3_CMD=1; ETAPA_REQ=3",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t05.json"
+      },
+      {
+        "test_id": "T06",
+        "name": "Paro por nivel",
+        "input": "LT=9280 (29 %) -> tras 10 s todas las CMD=0; ETAPA_REQ=0",
+        "simulated_inputs": "LT=9280 (29 %) -> tras 10 s todas las CMD=0; ETAPA_REQ=0",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t06.json"
+      },
+      {
+        "test_id": "T07",
+        "name": "Rotación",
+        "input": "Horas P1=50, P2=20, P3=30; ETAPA 0 -> LT=61 % -> LIDER=2, RETRASO=3, RESERVA=1; arranca P2",
+        "simulated_inputs": "Horas P1=50, P2=20, P3=30; ETAPA 0 -> LT=61 % -> LIDER=2, RETRASO=3, RESERVA=1; arranca P2",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t07.json"
+      },
+      {
+        "test_id": "T08",
+        "name": "Fallback falla",
+        "input": "Etapa 1 con P1 líder en marcha; forzar P1_FALLA=1 -> P1_CMD=0; A07 activa; P2_CMD=1; LIDER=2",
+        "simulated_inputs": "Etapa 1 con P1 líder en marcha; forzar P1_FALLA=1 -> P1_CMD=0; A07 activa; P2_CMD=1; LIDER=2",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t08.json"
+      },
+      {
+        "test_id": "T09",
+        "name": "No-arranque",
+        "input": "Etapa 1; P1_CMD=1 con P1_FB_MARCHA=0 -> a los 5 s A04 (%M14)=1; P1_CMD=0; P2_CMD=1",
+        "simulated_inputs": "Etapa 1; P1_CMD=1 con P1_FB_MARCHA=0 -> a los 5 s A04 (%M14)=1; P1_CMD=0; P2_CMD=1",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t09.json"
+      },
+      {
+        "test_id": "T10",
+        "name": "Manual",
+        "input": "P3_AUTO=0; HMI_P3_MAN=1 -> P3_CMD=1 independiente del nivel; sale de la rotación",
+        "simulated_inputs": "P3_AUTO=0; HMI_P3_MAN=1 -> P3_CMD=1 independiente del nivel; sale de la rotación",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t10.json"
+      },
+      {
+        "test_id": "T11",
+        "name": "Manual con seguridad",
+        "input": "T10 + FLOT_SECO=0 -> P3_CMD=0 en <=1 s; A11 activa",
+        "simulated_inputs": "T10 + FLOT_SECO=0 -> P3_CMD=0 en <=1 s; A11 activa",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t11.json"
+      },
+      {
+        "test_id": "T12",
+        "name": "Paro de emergencia",
+        "input": "Etapa 3 activa; PARO_EMERG=0 -> todas CMD=0 y VFD_HAB=0 en el mismo scan; A01 y ALM_ESTOP=1",
+        "simulated_inputs": "Etapa 3 activa; PARO_EMERG=0 -> todas CMD=0 y VFD_HAB=0 en el mismo scan; A01 y ALM_ESTOP=1",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t12.json"
+      },
+      {
+        "test_id": "T13",
+        "name": "Rearme E-stop",
+        "input": "1º HMI_RESET con PARO_EMERG=0 (sigue activa); 2º PARO_EMERG=1 + HMI_RESET (se borra y retoma)",
+        "simulated_inputs": "1º HMI_RESET con PARO_EMERG=0 (sigue activa); 2º PARO_EMERG=1 + HMI_RESET (se borra y retoma)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t13.json"
+      },
+      {
+        "test_id": "T14",
+        "name": "Marcha en seco por nivel",
+        "input": "LT=2880 (9 %) 6 s -> todas CMD=0; A11 activa; reset efectivo solo con NIVEL_PCT > SP_N_OFF",
+        "simulated_inputs": "LT=2880 (9 %) 6 s -> todas CMD=0; A11 activa; reset efectivo solo con NIVEL_PCT > SP_N_OFF",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t14.json"
+      },
+      {
+        "test_id": "T15",
+        "name": "PID habilitación",
+        "input": "Etapa 1, P1 en marcha con FB, LIDER=1 -> VFD_HAB=1; PID activo; VFD_REF_RAW >= 9600",
+        "simulated_inputs": "Etapa 1, P1 en marcha con FB, LIDER=1 -> VFD_HAB=1; PID activo; VFD_REF_RAW >= 9600",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t15.json"
+      },
+      {
+        "test_id": "T16",
+        "name": "PID acción",
+        "input": "SP_PRES=4.0; PT=9600 (3.0 bar) -> CV sube hacia 32000; PT=16000 (5.0 bar) -> CV baja hacia 9600",
+        "simulated_inputs": "SP_PRES=4.0; PT=9600 (3.0 bar) -> CV sube hacia 32000; PT=16000 (5.0 bar) -> CV baja hacia 9600",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t16.json"
+      },
+      {
+        "test_id": "T17",
+        "name": "Anti-windup",
+        "input": "PT=0 por 60 s (CV=32000), luego PT=16000 (5,0 bar) -> CV comienza a bajar en <= Ti (8 s)",
+        "simulated_inputs": "PT=0 por 60 s (CV=32000), luego PT=16000 (5,0 bar) -> CV comienza a bajar en <= Ti (8 s)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t17.json"
+      },
+      {
+        "test_id": "T18",
+        "name": "PID deshabilitado",
+        "input": "Parar líder -> VFD_HAB=0; VFD_REF_RAW=0; al rearrancar CV parte de 9600",
+        "simulated_inputs": "Parar líder -> VFD_HAB=0; VFD_REF_RAW=0; al rearrancar CV parte de 9600",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t18.json"
+      },
+      {
+        "test_id": "T19",
+        "name": "Sobrepresión",
+        "input": "PT=24320 (7,6 bar) 6 s -> A03 activa y enclavada",
+        "simulated_inputs": "PT=24320 (7,6 bar) 6 s -> A03 activa y enclavada",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t19.json"
+      },
+      {
+        "test_id": "T20",
+        "name": "Falla sensor",
+        "input": "PT/LT fuera de rango (<0 o >32000) -> A10 en 2 s; PID en manual 70 % (22400)",
+        "simulated_inputs": "PT/LT fuera de rango (<0 o >32000) -> A10 en 2 s; PID en manual 70 % (22400)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t20.json"
+      },
+      {
+        "test_id": "T21",
+        "name": "Nivel alto",
+        "input": "LT=29120 (91 %) 11 s -> A02 activa; se borra sola al bajar de 90 %",
+        "simulated_inputs": "LT=29120 (91 %) 11 s -> A02 activa; se borra sola al bajar de 90 %",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t21.json"
+      },
+      {
+        "test_id": "T22",
+        "name": "Consignas inválidas",
+        "input": "Escribir SP_N2_ON=50 (< N1=60) -> restaura 30/60/75/85; A12 activa",
+        "simulated_inputs": "Escribir SP_N2_ON=50 (< N1=60) -> restaura 30/60/75/85; A12 activa",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t22.json"
+      },
+      {
+        "test_id": "T23",
+        "name": "Horas de marcha",
+        "input": "P1_FB_MARCHA=1 durante 360 s -> P1_HORAS aumenta 0,10 h (+/- 0,01)",
+        "simulated_inputs": "P1_FB_MARCHA=1 durante 360 s -> P1_HORAS aumenta 0,10 h (+/- 0,01)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t23.json"
+      },
+      {
+        "test_id": "T24",
+        "name": "Arranques",
+        "input": "Pulsar P2_FB_MARCHA 0->1 tres veces -> P2_ARRANQUES +3",
+        "simulated_inputs": "Pulsar P2_FB_MARCHA 0->1 tres veces -> P2_ARRANQUES +3",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t24.json"
+      },
+      {
+        "test_id": "T25",
+        "name": "Totalizador",
+        "input": "FT=16000 (150 m3/h) 120 s -> CAUDAL_TOT_M3 +5,0 (+/-0,1); con FT=100 (<1,5 m3/h) no suma",
+        "simulated_inputs": "FT=16000 (150 m3/h) 120 s -> CAUDAL_TOT_M3 +5,0 (+/-0,1); con FT=100 (<1,5 m3/h) no suma",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t25.json"
+      },
+      {
+        "test_id": "T26",
+        "name": "Retentividad",
+        "input": "Apagar y encender el PLC -> P1_HORAS, P2_ARRANQUES, CAUDAL_TOT_M3, SP_*, LIDER conservan su valor",
+        "simulated_inputs": "Apagar y encender el PLC -> P1_HORAS, P2_ARRANQUES, CAUDAL_TOT_M3, SP_*, LIDER conservan su valor",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t26.json"
+      },
+      {
+        "test_id": "T27",
+        "name": "Recetas",
+        "input": "Cargar receta 'Demanda alta' -> SP_* = 5,0/50/65/80/25/8,0",
+        "simulated_inputs": "Cargar receta 'Demanda alta' -> SP_* = 5,0/50/65/80/25/8,0",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t27.json"
+      },
+      {
+        "test_id": "T28",
+        "name": "HMI navegación",
+        "input": "Recorrer las 6 pantallas y subvistas de detalle B1/B2/B3 (%R50=1,2,3)",
+        "simulated_inputs": "Recorrer las 6 pantallas y subvistas de detalle B1/B2/B3 (%R50=1,2,3)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t28.json"
+      },
+      {
+        "test_id": "T29",
+        "name": "Data log",
+        "input": "5 min (300 s) en marcha con microSD -> CSV con >=5 filas y las 11 columnas",
+        "simulated_inputs": "5 min (300 s) en marcha con microSD -> CSV con >=5 filas y las 11 columnas",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t29.json"
+      },
+      {
+        "test_id": "T30",
+        "name": "Reset alarmas físico",
+        "input": "Alarma A04 (%M14) activa; pulsar RESET_ALM=1 (%I12) -> A04 se borra si causa desapareció",
+        "simulated_inputs": "Alarma A04 (%M14) activa; pulsar RESET_ALM=1 (%I12) -> A04 se borra si causa desapareció",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t30.json"
+      }
+    ],
+    "cases": [
+      {
+        "test_id": "T01",
+        "name": "Compilación",
+        "input": "Proyecto estacion_bombeo_3b.csp (Phase 3: 59 tags + 12 alarmas + 26 rungs 0 dup-coils + PID + 4 bloques ST + 6 pantallas HMI + 3 recetas + 11 cols datalog via live Cscape GUI)",
+        "simulated_inputs": "Proyecto estacion_bombeo_3b.csp (Phase 3: 59 tags + 12 alarmas + 26 rungs 0 dup-coils + PID + 4 bloques ST + 6 pantallas HMI + 3 recetas + 11 cols datalog via live Cscape GUI)",
+        "read_value": {
+          "compile_clean": false,
+          "reopen_verified": false,
+          "duplicate_coil_warnings": null,
+          "gui_readback_station_tags": 0,
+          "gui_readback_alarm_tags": 0,
+          "unique_addresses": true,
+          "gui_readback_rungs": 0,
+          "gui_readback_st_blocks": 0,
+          "gui_readback_pid_loops": 0,
+          "gui_readback_hmi_screens": 0,
+          "gui_readback_hmi_objects": 0,
+          "gui_readback_recipes": 0,
+          "gui_readback_datalog_columns": 0,
+          "sha_changed_after_rungs": false,
+          "live_pid": 0,
+          "reopen_pid": 0
+        },
+        "observed_values": {
+          "compile_clean": false,
+          "reopen_verified": false,
+          "duplicate_coil_warnings": null,
+          "gui_readback_station_tags": 0,
+          "gui_readback_alarm_tags": 0,
+          "unique_addresses": true,
+          "gui_readback_rungs": 0,
+          "gui_readback_st_blocks": 0,
+          "gui_readback_pid_loops": 0,
+          "gui_readback_hmi_screens": 0,
+          "gui_readback_hmi_objects": 0,
+          "gui_readback_recipes": 0,
+          "gui_readback_datalog_columns": 0,
+          "sha_changed_after_rungs": false,
+          "live_pid": 0,
+          "reopen_pid": 0
+        },
+        "status": "PENDING",
+        "verdict": "PENDING_LIVE_CSCAPE",
+        "passed": false,
+        "execution_mode": "pending_live_cscape_gui",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t01.json"
+      },
+      {
+        "test_id": "T02",
+        "name": "Escalado",
+        "input": "LT=16000, PT=12800, FT=8000 -> NIVEL_PCT=50.0, PRES_BAR=4.00, CAUDAL_M3H=75.0, PID_PV=4000",
+        "simulated_inputs": "LT=16000, PT=12800, FT=8000 -> NIVEL_PCT=50.0, PRES_BAR=4.00, CAUDAL_M3H=75.0, PID_PV=4000",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t02.json"
+      },
+      {
+        "test_id": "T03",
+        "name": "Etapa 1",
+        "input": "CI; LT=19520 (61 %) -> tras 10 s ETAPA_REQ=1, LIDER=1, P1_CMD=1, P2/P3=0",
+        "simulated_inputs": "CI; LT=19520 (61 %) -> tras 10 s ETAPA_REQ=1, LIDER=1, P1_CMD=1, P2/P3=0",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t03.json"
+      },
+      {
+        "test_id": "T04",
+        "name": "Etapa 2",
+        "input": "Continuación T03; LT=24320 (76 %) -> tras >=10 s y >=15 s: P2_CMD=1",
+        "simulated_inputs": "Continuación T03; LT=24320 (76 %) -> tras >=10 s y >=15 s: P2_CMD=1",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t04.json"
+      },
+      {
+        "test_id": "T05",
+        "name": "Etapa 3",
+        "input": "Continuación T04; LT=27520 (86 %) -> P3_CMD=1; ETAPA_REQ=3",
+        "simulated_inputs": "Continuación T04; LT=27520 (86 %) -> P3_CMD=1; ETAPA_REQ=3",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t05.json"
+      },
+      {
+        "test_id": "T06",
+        "name": "Paro por nivel",
+        "input": "LT=9280 (29 %) -> tras 10 s todas las CMD=0; ETAPA_REQ=0",
+        "simulated_inputs": "LT=9280 (29 %) -> tras 10 s todas las CMD=0; ETAPA_REQ=0",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t06.json"
+      },
+      {
+        "test_id": "T07",
+        "name": "Rotación",
+        "input": "Horas P1=50, P2=20, P3=30; ETAPA 0 -> LT=61 % -> LIDER=2, RETRASO=3, RESERVA=1; arranca P2",
+        "simulated_inputs": "Horas P1=50, P2=20, P3=30; ETAPA 0 -> LT=61 % -> LIDER=2, RETRASO=3, RESERVA=1; arranca P2",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t07.json"
+      },
+      {
+        "test_id": "T08",
+        "name": "Fallback falla",
+        "input": "Etapa 1 con P1 líder en marcha; forzar P1_FALLA=1 -> P1_CMD=0; A07 activa; P2_CMD=1; LIDER=2",
+        "simulated_inputs": "Etapa 1 con P1 líder en marcha; forzar P1_FALLA=1 -> P1_CMD=0; A07 activa; P2_CMD=1; LIDER=2",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t08.json"
+      },
+      {
+        "test_id": "T09",
+        "name": "No-arranque",
+        "input": "Etapa 1; P1_CMD=1 con P1_FB_MARCHA=0 -> a los 5 s A04 (%M14)=1; P1_CMD=0; P2_CMD=1",
+        "simulated_inputs": "Etapa 1; P1_CMD=1 con P1_FB_MARCHA=0 -> a los 5 s A04 (%M14)=1; P1_CMD=0; P2_CMD=1",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t09.json"
+      },
+      {
+        "test_id": "T10",
+        "name": "Manual",
+        "input": "P3_AUTO=0; HMI_P3_MAN=1 -> P3_CMD=1 independiente del nivel; sale de la rotación",
+        "simulated_inputs": "P3_AUTO=0; HMI_P3_MAN=1 -> P3_CMD=1 independiente del nivel; sale de la rotación",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t10.json"
+      },
+      {
+        "test_id": "T11",
+        "name": "Manual con seguridad",
+        "input": "T10 + FLOT_SECO=0 -> P3_CMD=0 en <=1 s; A11 activa",
+        "simulated_inputs": "T10 + FLOT_SECO=0 -> P3_CMD=0 en <=1 s; A11 activa",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t11.json"
+      },
+      {
+        "test_id": "T12",
+        "name": "Paro de emergencia",
+        "input": "Etapa 3 activa; PARO_EMERG=0 -> todas CMD=0 y VFD_HAB=0 en el mismo scan; A01 y ALM_ESTOP=1",
+        "simulated_inputs": "Etapa 3 activa; PARO_EMERG=0 -> todas CMD=0 y VFD_HAB=0 en el mismo scan; A01 y ALM_ESTOP=1",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t12.json"
+      },
+      {
+        "test_id": "T13",
+        "name": "Rearme E-stop",
+        "input": "1º HMI_RESET con PARO_EMERG=0 (sigue activa); 2º PARO_EMERG=1 + HMI_RESET (se borra y retoma)",
+        "simulated_inputs": "1º HMI_RESET con PARO_EMERG=0 (sigue activa); 2º PARO_EMERG=1 + HMI_RESET (se borra y retoma)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t13.json"
+      },
+      {
+        "test_id": "T14",
+        "name": "Marcha en seco por nivel",
+        "input": "LT=2880 (9 %) 6 s -> todas CMD=0; A11 activa; reset efectivo solo con NIVEL_PCT > SP_N_OFF",
+        "simulated_inputs": "LT=2880 (9 %) 6 s -> todas CMD=0; A11 activa; reset efectivo solo con NIVEL_PCT > SP_N_OFF",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t14.json"
+      },
+      {
+        "test_id": "T15",
+        "name": "PID habilitación",
+        "input": "Etapa 1, P1 en marcha con FB, LIDER=1 -> VFD_HAB=1; PID activo; VFD_REF_RAW >= 9600",
+        "simulated_inputs": "Etapa 1, P1 en marcha con FB, LIDER=1 -> VFD_HAB=1; PID activo; VFD_REF_RAW >= 9600",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t15.json"
+      },
+      {
+        "test_id": "T16",
+        "name": "PID acción",
+        "input": "SP_PRES=4.0; PT=9600 (3.0 bar) -> CV sube hacia 32000; PT=16000 (5.0 bar) -> CV baja hacia 9600",
+        "simulated_inputs": "SP_PRES=4.0; PT=9600 (3.0 bar) -> CV sube hacia 32000; PT=16000 (5.0 bar) -> CV baja hacia 9600",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t16.json"
+      },
+      {
+        "test_id": "T17",
+        "name": "Anti-windup",
+        "input": "PT=0 por 60 s (CV=32000), luego PT=16000 (5,0 bar) -> CV comienza a bajar en <= Ti (8 s)",
+        "simulated_inputs": "PT=0 por 60 s (CV=32000), luego PT=16000 (5,0 bar) -> CV comienza a bajar en <= Ti (8 s)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t17.json"
+      },
+      {
+        "test_id": "T18",
+        "name": "PID deshabilitado",
+        "input": "Parar líder -> VFD_HAB=0; VFD_REF_RAW=0; al rearrancar CV parte de 9600",
+        "simulated_inputs": "Parar líder -> VFD_HAB=0; VFD_REF_RAW=0; al rearrancar CV parte de 9600",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t18.json"
+      },
+      {
+        "test_id": "T19",
+        "name": "Sobrepresión",
+        "input": "PT=24320 (7,6 bar) 6 s -> A03 activa y enclavada",
+        "simulated_inputs": "PT=24320 (7,6 bar) 6 s -> A03 activa y enclavada",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t19.json"
+      },
+      {
+        "test_id": "T20",
+        "name": "Falla sensor",
+        "input": "PT/LT fuera de rango (<0 o >32000) -> A10 en 2 s; PID en manual 70 % (22400)",
+        "simulated_inputs": "PT/LT fuera de rango (<0 o >32000) -> A10 en 2 s; PID en manual 70 % (22400)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t20.json"
+      },
+      {
+        "test_id": "T21",
+        "name": "Nivel alto",
+        "input": "LT=29120 (91 %) 11 s -> A02 activa; se borra sola al bajar de 90 %",
+        "simulated_inputs": "LT=29120 (91 %) 11 s -> A02 activa; se borra sola al bajar de 90 %",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t21.json"
+      },
+      {
+        "test_id": "T22",
+        "name": "Consignas inválidas",
+        "input": "Escribir SP_N2_ON=50 (< N1=60) -> restaura 30/60/75/85; A12 activa",
+        "simulated_inputs": "Escribir SP_N2_ON=50 (< N1=60) -> restaura 30/60/75/85; A12 activa",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t22.json"
+      },
+      {
+        "test_id": "T23",
+        "name": "Horas de marcha",
+        "input": "P1_FB_MARCHA=1 durante 360 s -> P1_HORAS aumenta 0,10 h (+/- 0,01)",
+        "simulated_inputs": "P1_FB_MARCHA=1 durante 360 s -> P1_HORAS aumenta 0,10 h (+/- 0,01)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t23.json"
+      },
+      {
+        "test_id": "T24",
+        "name": "Arranques",
+        "input": "Pulsar P2_FB_MARCHA 0->1 tres veces -> P2_ARRANQUES +3",
+        "simulated_inputs": "Pulsar P2_FB_MARCHA 0->1 tres veces -> P2_ARRANQUES +3",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t24.json"
+      },
+      {
+        "test_id": "T25",
+        "name": "Totalizador",
+        "input": "FT=16000 (150 m3/h) 120 s -> CAUDAL_TOT_M3 +5,0 (+/-0,1); con FT=100 (<1,5 m3/h) no suma",
+        "simulated_inputs": "FT=16000 (150 m3/h) 120 s -> CAUDAL_TOT_M3 +5,0 (+/-0,1); con FT=100 (<1,5 m3/h) no suma",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t25.json"
+      },
+      {
+        "test_id": "T26",
+        "name": "Retentividad",
+        "input": "Apagar y encender el PLC -> P1_HORAS, P2_ARRANQUES, CAUDAL_TOT_M3, SP_*, LIDER conservan su valor",
+        "simulated_inputs": "Apagar y encender el PLC -> P1_HORAS, P2_ARRANQUES, CAUDAL_TOT_M3, SP_*, LIDER conservan su valor",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t26.json"
+      },
+      {
+        "test_id": "T27",
+        "name": "Recetas",
+        "input": "Cargar receta 'Demanda alta' -> SP_* = 5,0/50/65/80/25/8,0",
+        "simulated_inputs": "Cargar receta 'Demanda alta' -> SP_* = 5,0/50/65/80/25/8,0",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t27.json"
+      },
+      {
+        "test_id": "T28",
+        "name": "HMI navegación",
+        "input": "Recorrer las 6 pantallas y subvistas de detalle B1/B2/B3 (%R50=1,2,3)",
+        "simulated_inputs": "Recorrer las 6 pantallas y subvistas de detalle B1/B2/B3 (%R50=1,2,3)",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t28.json"
+      },
+      {
+        "test_id": "T29",
+        "name": "Data log",
+        "input": "5 min (300 s) en marcha con microSD -> CSV con >=5 filas y las 11 columnas",
+        "simulated_inputs": "5 min (300 s) en marcha con microSD -> CSV con >=5 filas y las 11 columnas",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t29.json"
+      },
+      {
+        "test_id": "T30",
+        "name": "Reset alarmas físico",
+        "input": "Alarma A04 (%M14) activa; pulsar RESET_ALM=1 (%I12) -> A04 se borra si causa desapareció",
+        "simulated_inputs": "Alarma A04 (%M14) activa; pulsar RESET_ALM=1 (%I12) -> A04 se borra si causa desapareció",
+        "read_value": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "observed_values": {
+          "real_csp_verified": false,
+          "reason": "Pending verification against real .csp (runtime PLC/simulator verification pending; simulator PASS forbidden)"
+        },
+        "status": "PENDING",
+        "verdict": "PENDING",
+        "passed": false,
+        "execution_mode": "pending_real_csp_verification",
+        "capture_ref": "artifacts/G12/t01_t30_evidence/t30.json"
+      }
+    ]
+  },
+  "rollback_plan": {
+    "backup_filename_pattern": "BACKUP_<YYYYMMDD>_<HHMMSS>.csp",
+    "extension_verified": ".csp",
+    "electrical_isolation_first_run": "Contactores de bombas B1..B3 desconectados (salidas %Q1..%Q3 conectadas a lámparas testigo)",
+    "immediate_rollback_triggers": [
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "UNEXPECTED_OUTPUT_ACTIVE",
+      "PLC_FAULT_STOP",
+      "HMI_INOPERABLE"
+    ],
+    "max_rollback_duration_minutes": 10,
+    "hardware_bank_status": "blocked"
+  },
+  "security_lockout": {
+    "g12_bank": "blocked",
+    "blocked_win32_commands": [
+      32827,
+      33149
+    ]
+  },
+  "live_gui_evidence": {
+    "live_gui_executed": false,
+    "reason": "offline_mode"
+  }
+}

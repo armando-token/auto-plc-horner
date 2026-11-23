@@ -1,0 +1,145 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W277 CIP Safety Over Ethernet-APL Redundant Trunks Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W277",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "work_package": "W277",
+    "gate": "G8",
+    "protocol": "ODVA CIP Safety Over Ethernet-APL Redundant Trunks (10BASE-T1L / 2-WISE Intrinsically Safe)",
+    "stages": [
+      {
+        "stage": 1,
+        "name": "enums_and_constants",
+        "passed": true,
+        "timing_ms": 0.015,
+        "details": "Verified registers %R2380..%R2387, coils %M555..%M556, and enums."
+      },
+      {
+        "stage": 2,
+        "name": "dual_safety_crc_calculation",
+        "passed": true,
+        "timing_ms": 0.356,
+        "details": "CRC-S1 & CRC-S2 calculations and mutation detection verified."
+      },
+      {
+        "stage": 3,
+        "name": "pure_st_anti_ladder_guard",
+        "passed": true,
+        "timing_ms": 3.761,
+        "details": "Pure ST POU verified; ladder logic rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "nominal_dual_tracking",
+        "passed": true,
+        "timing_ms": 0.255,
+        "details": "Nominal dual tracking operation verified with register sync."
+      },
+      {
+        "stage": 5,
+        "name": "trunk_a_droop_failover",
+        "passed": true,
+        "timing_ms": 0.33,
+        "details": "Trunk A droop (< 9600 mV) triggers bumpless failover to Trunk B with 0xEC01."
+      },
+      {
+        "stage": 6,
+        "name": "trunk_b_droop_failover",
+        "passed": true,
+        "timing_ms": 0.325,
+        "details": "Trunk B droop triggers failover to Trunk A with 0xEC02."
+      },
+      {
+        "stage": 7,
+        "name": "dual_trunk_trip_shutdown",
+        "passed": true,
+        "timing_ms": 0.316,
+        "details": "Dual trunk failure trips TRIP_SHUTDOWN with 0xEC03."
+      },
+      {
+        "stage": 8,
+        "name": "switchover_timeout_detection",
+        "passed": true,
+        "timing_ms": 0.323,
+        "details": "Switchover latency > 2500 us trips 0xEC04 SWITCHOVER_TIMEOUT."
+      },
+      {
+        "stage": 9,
+        "name": "split_brain_sync_loss_and_scan",
+        "passed": true,
+        "timing_ms": 14.509,
+        "details": "Split-brain sync loss and 100-cycle soak scan verified."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "enums_and_constants",
+        "passed": true,
+        "timing_ms": 0.015,
+        "details": "Verified registers %R2380..%R2387, coils %M555..%M556, and enums."
+      },
+      {
+        "stage": 2,
+        "name": "dual_safety_crc_calculation",
+        "passed": true,
+        "timing_ms": 0.356,
+        "details": "CRC-S1 & CRC-S2 calculations and mutation detection verified."
+      },
+      {
+        "stage": 3,
+        "name": "pure_st_anti_ladder_guard",
+        "passed": true,
+        "timing_ms": 3.761,
+        "details": "Pure ST POU verified; ladder logic rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "nominal_dual_tracking",
+        "passed": true,
+        "timing_ms": 0.255,
+        "details": "Nominal dual tracking operation verified with register sync."
+      },
+      {
+        "stage": 5,
+        "name": "trunk_a_droop_failover",
+        "passed": true,
+        "timing_ms": 0.33,
+        "details": "Trunk A droop (< 9600 mV) triggers bumpless failover to Trunk B with 0xEC01."
+      },
+      {
+        "stage": 6,
+        "name": "trunk_b_droop_failover",
+        "passed": true,
+        "timing_ms": 0.325,
+        "details": "Trunk B droop triggers failover to Trunk A with 0xEC02."
+      },
+      {
+        "stage": 7,
+        "name": "dual_trunk_trip_shutdown",
+        "passed": true,
+        "timing_ms": 0.316,
+        "details": "Dual trunk failure trips TRIP_SHUTDOWN with 0xEC03."
+      },
+      {
+        "stage": 8,
+        "name": "switchover_timeout_detection",
+        "passed": true,
+        "timing_ms": 0.323,
+        "details": "Switchover latency > 2500 us trips 0xEC04 SWITCHOVER_TIMEOUT."
+      },
+      {
+        "stage": 9,
+        "name": "split_brain_sync_loss_and_scan",
+        "passed": true,
+        "timing_ms": 14.509,
+        "details": "Split-brain sync loss and 100-cycle soak scan verified."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

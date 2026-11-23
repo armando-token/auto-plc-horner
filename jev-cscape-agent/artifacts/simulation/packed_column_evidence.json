@@ -1,0 +1,51 @@
+{
+  "work_package": "W074",
+  "gate": "G7",
+  "model": "Counter-Current Packed Absorption Column Mass Transfer ODE",
+  "timestamp_utc": "2026-10-03T00:34:44.808878+00:00",
+  "overall_status": "success",
+  "registers": {
+    "%R350": 5000,
+    "%R351": 185,
+    "%R352": 9630,
+    "%R353": 1200,
+    "%R354": 8500,
+    "%R355": 67,
+    "%R356": 655,
+    "%R357": 97,
+    "%M81": true,
+    "%M82": true,
+    "%M83": false
+  },
+  "checks": {
+    "two_film_and_vant_hoff": {
+      "status": "passed",
+      "henry_m_at_25c": 0.8,
+      "henry_m_at_50c": 1.7455,
+      "k_og_a_at_25c": 0.0214
+    },
+    "gpdc_flooding_hydraulics": {
+      "status": "passed",
+      "superficial_gas_velocity_m_s": 1.2025,
+      "flooding_gas_velocity_m_s": 1.835,
+      "flooding_percentage": 65.53,
+      "differential_pressure_mbar": 6.73
+    },
+    "scrubbing_removal_efficiency": {
+      "status": "passed",
+      "inflow_ppm": 500.0,
+      "outlet_ppm": 18.5,
+      "removal_efficiency_pct": 96.3
+    },
+    "auto_solvent_optimization": {
+      "status": "passed",
+      "optimized_liquid_flow_l_min": 120.0,
+      "auto_mode_active": true
+    },
+    "alarm_latching_and_reset": {
+      "status": "passed",
+      "alarm_latched_on_high_gas": true,
+      "alarm_cleared_on_reset": true
+    }
+  }
+}

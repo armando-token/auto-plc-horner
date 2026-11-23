@@ -1,0 +1,237 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "PHBV copolymer biosynthesis simulation verification passed (9/9 stages passed).",
+  "data": {
+    "work_package": "W281",
+    "stages_passed": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "duration_seconds": 0.15331387519836426,
+    "elapsed_ms": 153.31387519836426,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_biomass_growth",
+        "check": "initial_state_and_biomass_growth",
+        "passed": true,
+        "timing_ms": 14.086100040003657,
+        "details": "Phase 1 inoculant growth verified: X0=2.50 g/L -> X_final=2.50 g/L, mu_growth=0.2500 1/h, %M564=False (False), %M565=True (True)."
+      },
+      {
+        "stage": 2,
+        "name": "substrate_glucose_depletion_kinetics",
+        "check": "substrate_glucose_depletion_kinetics",
+        "passed": true,
+        "timing_ms": 35.91530001722276,
+        "details": "Glucose consumption kinetics verified: S_start=15.00 g/L -> S_end=15.00 g/L, polymer synthesis rate r_p=0.629 g/(L*h), oxygen uptake OUR=4456.1 % sat/h."
+      },
+      {
+        "stage": 3,
+        "name": "nitrogen_exhaustion_and_polymer_induction",
+        "check": "nitrogen_exhaustion_and_polymer_induction",
+        "passed": true,
+        "timing_ms": 21.124699851498008,
+        "details": "Phase transition verified: Phase 1 %M564=False (False) -> Phase 2 %M564=True (True), polymer synthesis r_p=1.100 g/(L*h)."
+      },
+      {
+        "stage": 4,
+        "name": "valerate_precursor_dosing_and_hv_molar_fraction",
+        "check": "valerate_precursor_dosing_and_hv_molar_fraction",
+        "passed": true,
+        "timing_ms": 0.7025999948382378,
+        "details": "Precursor dosing verified: S_v=0.0 g/L -> HV=0.0 mol%; S_v=2.5 g/L -> HV=15.5 mol%, %R2426=155 (155 = 15.5 mol%)."
+      },
+      {
+        "stage": 5,
+        "name": "dissolved_oxygen_limitation_and_aeration_response",
+        "check": "dissolved_oxygen_limitation_and_aeration_response",
+        "passed": true,
+        "timing_ms": 76.06029999442399,
+        "details": "Aeration dynamics verified: baseline OTR=7800.0 %/h, OUR=7798.2 %/h, Kla=120.0 1/h; low Kla=30: DO dropped to 31.8%; high Kla=200: DO restored to 30.6%."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_and_acidification_fault_trips",
+        "check": "thermal_and_acidification_fault_trips",
+        "passed": true,
+        "timing_ms": 2.4387999437749386,
+        "details": "Safety interlocks verified: 0xF601 (DO starvation), 0xF602 (precursor overconc), 0xF603 (thermal runaway), 0xF604 (contamination); all enforce feed pump stop (%M565=False) and alarm (%M566=True)."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_and_elemental_residual_verification",
+        "check": "mass_conservation_and_elemental_residual_verification",
+        "passed": true,
+        "timing_ms": 0.5297998432070017,
+        "details": "Mass conservation verified: carbon residual=0.00e+00 kg/s, stoichiometric residual=0.00e+00 kg/s, total residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.7068000268191099,
+        "details": "Horner OCS register sync verified: %R2420..%R2427 = [300, 350, 150, 25, 350, 550, 155, 5122], coils %M564..%M566 = [True, True, False]."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 3.0420999974012375,
+        "details": "PhbvBiosynthesisSync POU AST validated with STParser & SecurityGuard; forbidden ladder constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      }
+    ],
+    "results": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_biomass_growth",
+        "check": "initial_state_and_biomass_growth",
+        "passed": true,
+        "timing_ms": 14.086100040003657,
+        "details": "Phase 1 inoculant growth verified: X0=2.50 g/L -> X_final=2.50 g/L, mu_growth=0.2500 1/h, %M564=False (False), %M565=True (True)."
+      },
+      {
+        "stage": 2,
+        "name": "substrate_glucose_depletion_kinetics",
+        "check": "substrate_glucose_depletion_kinetics",
+        "passed": true,
+        "timing_ms": 35.91530001722276,
+        "details": "Glucose consumption kinetics verified: S_start=15.00 g/L -> S_end=15.00 g/L, polymer synthesis rate r_p=0.629 g/(L*h), oxygen uptake OUR=4456.1 % sat/h."
+      },
+      {
+        "stage": 3,
+        "name": "nitrogen_exhaustion_and_polymer_induction",
+        "check": "nitrogen_exhaustion_and_polymer_induction",
+        "passed": true,
+        "timing_ms": 21.124699851498008,
+        "details": "Phase transition verified: Phase 1 %M564=False (False) -> Phase 2 %M564=True (True), polymer synthesis r_p=1.100 g/(L*h)."
+      },
+      {
+        "stage": 4,
+        "name": "valerate_precursor_dosing_and_hv_molar_fraction",
+        "check": "valerate_precursor_dosing_and_hv_molar_fraction",
+        "passed": true,
+        "timing_ms": 0.7025999948382378,
+        "details": "Precursor dosing verified: S_v=0.0 g/L -> HV=0.0 mol%; S_v=2.5 g/L -> HV=15.5 mol%, %R2426=155 (155 = 15.5 mol%)."
+      },
+      {
+        "stage": 5,
+        "name": "dissolved_oxygen_limitation_and_aeration_response",
+        "check": "dissolved_oxygen_limitation_and_aeration_response",
+        "passed": true,
+        "timing_ms": 76.06029999442399,
+        "details": "Aeration dynamics verified: baseline OTR=7800.0 %/h, OUR=7798.2 %/h, Kla=120.0 1/h; low Kla=30: DO dropped to 31.8%; high Kla=200: DO restored to 30.6%."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_and_acidification_fault_trips",
+        "check": "thermal_and_acidification_fault_trips",
+        "passed": true,
+        "timing_ms": 2.4387999437749386,
+        "details": "Safety interlocks verified: 0xF601 (DO starvation), 0xF602 (precursor overconc), 0xF603 (thermal runaway), 0xF604 (contamination); all enforce feed pump stop (%M565=False) and alarm (%M566=True)."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_and_elemental_residual_verification",
+        "check": "mass_conservation_and_elemental_residual_verification",
+        "passed": true,
+        "timing_ms": 0.5297998432070017,
+        "details": "Mass conservation verified: carbon residual=0.00e+00 kg/s, stoichiometric residual=0.00e+00 kg/s, total residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.7068000268191099,
+        "details": "Horner OCS register sync verified: %R2420..%R2427 = [300, 350, 150, 25, 350, 550, 155, 5122], coils %M564..%M566 = [True, True, False]."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 3.0420999974012375,
+        "details": "PhbvBiosynthesisSync POU AST validated with STParser & SecurityGuard; forbidden ladder constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_biomass_growth",
+        "check": "initial_state_and_biomass_growth",
+        "passed": true,
+        "timing_ms": 14.086100040003657,
+        "details": "Phase 1 inoculant growth verified: X0=2.50 g/L -> X_final=2.50 g/L, mu_growth=0.2500 1/h, %M564=False (False), %M565=True (True)."
+      },
+      {
+        "stage": 2,
+        "name": "substrate_glucose_depletion_kinetics",
+        "check": "substrate_glucose_depletion_kinetics",
+        "passed": true,
+        "timing_ms": 35.91530001722276,
+        "details": "Glucose consumption kinetics verified: S_start=15.00 g/L -> S_end=15.00 g/L, polymer synthesis rate r_p=0.629 g/(L*h), oxygen uptake OUR=4456.1 % sat/h."
+      },
+      {
+        "stage": 3,
+        "name": "nitrogen_exhaustion_and_polymer_induction",
+        "check": "nitrogen_exhaustion_and_polymer_induction",
+        "passed": true,
+        "timing_ms": 21.124699851498008,
+        "details": "Phase transition verified: Phase 1 %M564=False (False) -> Phase 2 %M564=True (True), polymer synthesis r_p=1.100 g/(L*h)."
+      },
+      {
+        "stage": 4,
+        "name": "valerate_precursor_dosing_and_hv_molar_fraction",
+        "check": "valerate_precursor_dosing_and_hv_molar_fraction",
+        "passed": true,
+        "timing_ms": 0.7025999948382378,
+        "details": "Precursor dosing verified: S_v=0.0 g/L -> HV=0.0 mol%; S_v=2.5 g/L -> HV=15.5 mol%, %R2426=155 (155 = 15.5 mol%)."
+      },
+      {
+        "stage": 5,
+        "name": "dissolved_oxygen_limitation_and_aeration_response",
+        "check": "dissolved_oxygen_limitation_and_aeration_response",
+        "passed": true,
+        "timing_ms": 76.06029999442399,
+        "details": "Aeration dynamics verified: baseline OTR=7800.0 %/h, OUR=7798.2 %/h, Kla=120.0 1/h; low Kla=30: DO dropped to 31.8%; high Kla=200: DO restored to 30.6%."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_and_acidification_fault_trips",
+        "check": "thermal_and_acidification_fault_trips",
+        "passed": true,
+        "timing_ms": 2.4387999437749386,
+        "details": "Safety interlocks verified: 0xF601 (DO starvation), 0xF602 (precursor overconc), 0xF603 (thermal runaway), 0xF604 (contamination); all enforce feed pump stop (%M565=False) and alarm (%M566=True)."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_and_elemental_residual_verification",
+        "check": "mass_conservation_and_elemental_residual_verification",
+        "passed": true,
+        "timing_ms": 0.5297998432070017,
+        "details": "Mass conservation verified: carbon residual=0.00e+00 kg/s, stoichiometric residual=0.00e+00 kg/s, total residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "check": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.7068000268191099,
+        "details": "Horner OCS register sync verified: %R2420..%R2427 = [300, 350, 150, 25, 350, 550, 155, 5122], coils %M564..%M566 = [True, True, False]."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 3.0420999974012375,
+        "details": "PhbvBiosynthesisSync POU AST validated with STParser & SecurityGuard; forbidden ladder constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      }
+    ]
+  }
+}

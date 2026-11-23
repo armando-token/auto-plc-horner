@@ -1,0 +1,180 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W250 CIP Safety Safe Feedback Interface (SFI) Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W250",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety Safe Feedback Interface (SFI)",
+    "work_package": "W250",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x2C": "CIP Safety Feedback / Encoder Object"
+    },
+    "register_map": {
+      "%R2110": "SFI Device State",
+      "%R2111": "Actual Safe Position (mm)",
+      "%R2112": "Actual Safe Velocity (mm/s)",
+      "%R2113": "Actual Safe Acceleration (mm/s^2)",
+      "%R2114": "Slip Tolerance Window (mm)",
+      "%R2115": "Position Slip Discrepancy (mm)",
+      "%R2116": "Overspeed Limit (mm/s)",
+      "%R2117": "Diagnostic Status Code",
+      "%M492": "SFI Feedback Healthy Coil",
+      "%M493": "Safe Stop Tripped Coil"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.049,
+        "details": "Class IDs (0x39/0x3A/0x2C), %R2110..%R2117 & %M492..%M493 registers, signed/unsigned DiagnosticCode with '0xHEX (NAME)' format."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 5.161,
+        "details": "POU 'CipSafetySfiSync' verified with STParser and bound to %R2110..%R2117 and %M492..%M493."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.039,
+        "details": "Rejected 6/6 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Dual_Channel_Safe_Feedback_Configuration_And_Motion_Limits",
+        "check": "Dual_Channel_Safe_Feedback_Configuration_And_Motion_Limits",
+        "passed": true,
+        "timing_ms": 0.222,
+        "details": "Primary Sin/Cos, Secondary EnDat, nominal position 5000mm, velocity 250mm/s, SLS 800mm/s, slip tolerance 15mm."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "check": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "passed": true,
+        "timing_ms": 0.325,
+        "details": "CRC-S1 (0x5935) & CRC-S2 (0x755B) single-bit mutation detection confirmed, tripping 0xEE01 on corruption."
+      },
+      {
+        "stage": 6,
+        "name": "Dual_Encoder_Slip_Discrepancy_Monitoring",
+        "check": "Dual_Encoder_Slip_Discrepancy_Monitoring",
+        "passed": true,
+        "timing_ms": 0.418,
+        "details": "Dual encoder slip discrepancy 20mm > 15mm for 45ms tripped 0xEE03, asserted %M493, and updated %R2115."
+      },
+      {
+        "stage": 7,
+        "name": "Safe_Motion_Function_Surveillance",
+        "check": "Safe_Motion_Function_Surveillance",
+        "passed": true,
+        "timing_ms": 1.409,
+        "details": "SLS overspeed 900mm/s (0xEE04), SLP position violation 50mm (0xEE05), and sensor hardware fault (0xEE06) verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 1.301,
+        "details": "Bit-exact %R2110..%R2117 and %M492..%M493 synchronization verified under SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 1516.815,
+        "details": "100 scan cycles executed without fault, heap growth 1.05 KB (< 100 KB)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.049,
+        "details": "Class IDs (0x39/0x3A/0x2C), %R2110..%R2117 & %M492..%M493 registers, signed/unsigned DiagnosticCode with '0xHEX (NAME)' format."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 5.161,
+        "details": "POU 'CipSafetySfiSync' verified with STParser and bound to %R2110..%R2117 and %M492..%M493."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.039,
+        "details": "Rejected 6/6 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Dual_Channel_Safe_Feedback_Configuration_And_Motion_Limits",
+        "check": "Dual_Channel_Safe_Feedback_Configuration_And_Motion_Limits",
+        "passed": true,
+        "timing_ms": 0.222,
+        "details": "Primary Sin/Cos, Secondary EnDat, nominal position 5000mm, velocity 250mm/s, SLS 800mm/s, slip tolerance 15mm."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "check": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "passed": true,
+        "timing_ms": 0.325,
+        "details": "CRC-S1 (0x5935) & CRC-S2 (0x755B) single-bit mutation detection confirmed, tripping 0xEE01 on corruption."
+      },
+      {
+        "stage": 6,
+        "name": "Dual_Encoder_Slip_Discrepancy_Monitoring",
+        "check": "Dual_Encoder_Slip_Discrepancy_Monitoring",
+        "passed": true,
+        "timing_ms": 0.418,
+        "details": "Dual encoder slip discrepancy 20mm > 15mm for 45ms tripped 0xEE03, asserted %M493, and updated %R2115."
+      },
+      {
+        "stage": 7,
+        "name": "Safe_Motion_Function_Surveillance",
+        "check": "Safe_Motion_Function_Surveillance",
+        "passed": true,
+        "timing_ms": 1.409,
+        "details": "SLS overspeed 900mm/s (0xEE04), SLP position violation 50mm (0xEE05), and sensor hardware fault (0xEE06) verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 1.301,
+        "details": "Bit-exact %R2110..%R2117 and %M492..%M493 synchronization verified under SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 1516.815,
+        "details": "100 scan cycles executed without fault, heap growth 1.05 KB (< 100 KB)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

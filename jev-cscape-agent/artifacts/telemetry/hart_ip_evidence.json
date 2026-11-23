@@ -1,0 +1,87 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "HART-IP Master Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W118",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial HART-IP Protocol Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed POU 'HartIPMasterSync', verified bindings %R790..%R797 and %M184..%M185 with zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "HART_IP_Packet_Framing_Header_Serialization_And_Validation",
+        "passed": true,
+        "details": "Verified 8-byte header binary packing, sequence number 105, and payload round-trip."
+      },
+      {
+        "stage": 3,
+        "check": "HART_Token_And_Burst_PDU_Parser_Delimiter_And_LRC_Checksum",
+        "passed": true,
+        "details": "Validated STX/ACK delimiters, 1-byte vs 5-byte addressing, and strict LRC XOR checksum rejection."
+      },
+      {
+        "stage": 4,
+        "check": "HART_Command_Payload_Decoding_And_Engineering_Unit_Scaling",
+        "passed": true,
+        "details": "Decoded Cmd 1 (PV=1254, 125.4 EU) & Cmd 3 (PV=2500, LoopCurrent=1650/16.50mA, SV=755/75.5EU)."
+      },
+      {
+        "stage": 5,
+        "check": "Multi_Drop_Device_Session_Management_And_Capacity_Limits",
+        "passed": true,
+        "details": "Managed 16 concurrent sessions, rejected device 17, cleanly removed session (count 15)."
+      },
+      {
+        "stage": 6,
+        "check": "Keep_Alive_Heartbeat_Watchdog_And_Loss_Trip_0x8F04",
+        "passed": true,
+        "details": "Inactivity past 5.0s triggered KEEPALIVE_LOSS_TRIP (%M185=TRUE, code 0x8F04)."
+      },
+      {
+        "stage": 7,
+        "check": "Communication_Error_Diagnostics_Timeout_Checksum_SeqFault",
+        "passed": true,
+        "details": "Correctly isolated sequence faults (code 0x8F03) and LRC checksum corruptions (code 0x8F02)."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Discrete_Coils",
+        "passed": true,
+        "details": "Verified %R790=0x0003, %R793=885, %R794=1200, %R795=420, %M184=TRUE, %M185=FALSE."
+      },
+      {
+        "stage": 9,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts, coils, and mnemonics strictly intercepted with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "metrics": {
+      "max_devices": 16,
+      "default_port": 5094,
+      "keep_alive_timeout_s": 10.0,
+      "total_packets_transferred": 2
+    },
+    "register_map": {
+      "status_word": "%R790",
+      "active_sessions_count": "%R791",
+      "last_command_executed": "%R792",
+      "primary_variable_pv_scaled": "%R793",
+      "loop_current_ma_scaled": "%R794",
+      "secondary_variable_sv_scaled": "%R795",
+      "sequence_number_counter": "%R796",
+      "diagnostic_event_code": "%R797",
+      "session_active_coil": "%M184",
+      "fault_trip_coil": "%M185"
+    },
+    "timestamp": "2026-10-04T03:16:25Z"
+  }
+}

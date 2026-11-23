@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Ethernet POWERLINK Managing Node (MN) Poll Response Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W148",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Ethernet POWERLINK Managing Node (MN) Poll Response Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Validated POUs 'PowerlinkMnSync' and 'EthernetPowerlinkSync' with bound registers %R1090..%R1097 and %M254..%M255."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts, coils, and mnemonics strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "Managing_Node_NMT_State_Machine_Progression_And_Safety",
+        "passed": true,
+        "details": "NMT 7-state machine traversed 0->1->2->3->4->5->6; illegal jumps rejected; %R1090 verified."
+      },
+      {
+        "stage": 4,
+        "check": "Start_Of_Cycle_SoC_Telegram_Generation_And_Precision_Timing",
+        "passed": true,
+        "details": "SoC broadcast telegram serialized (38 B) with CRC32 and sub-microsecond timestamp."
+      },
+      {
+        "stage": 5,
+        "check": "Isochronous_PReq_PRes_Cyclic_Exchange_With_Multiple_CNs",
+        "passed": true,
+        "details": "5 cycles executed across 4 CNs: 20 PReq / 20 PRes exchanged cleanly; %M254=TRUE."
+      },
+      {
+        "stage": 6,
+        "check": "Controlled_Node_Timeout_And_Loss_Of_Life_Trip_0xAD01",
+        "passed": true,
+        "details": "CN 3 dropped after 3 consecutive missed PRes; diagnostic 0xAD01 set; %M255 tripped; %M254 cleared."
+      },
+      {
+        "stage": 7,
+        "check": "Sub_Microsecond_SoC_Clock_Jitter_Surveillance_0xAD02",
+        "passed": true,
+        "details": "Jitter excursion 135 ns triggered 0xAD02; restored cleanly at 25 ns; %R1093 tracked."
+      },
+      {
+        "stage": 8,
+        "check": "Asynchronous_Period_Slot_Management_And_Overrun_0xAD03",
+        "passed": true,
+        "details": "Async payload 140 us triggered 0xAD03 ASYNC_OVERRUN (>100 us slot); restored cleanly at 40 us."
+      },
+      {
+        "stage": 9,
+        "check": "Managing_Node_Fault_Permissive_Lockout_0xAD04_And_Recovery",
+        "passed": true,
+        "details": "Managing Node fault triggered 0xAD04 and cleared %M254; restored cleanly upon reset_safety()."
+      }
+    ],
+    "metrics": {
+      "speed_bps": 100000000,
+      "cycle_time_us": 500,
+      "soc_jitter_ns": 20,
+      "async_slot_time_us": 100,
+      "preq_counter": 56,
+      "pres_counter": 53,
+      "active_cn_count": 4,
+      "configured_cns": 4
+    },
+    "register_map": {
+      "managing_node_state": "%R1090",
+      "active_controlled_node_count": "%R1091",
+      "cycle_time_microseconds": "%R1092",
+      "soc_jitter_nanoseconds": "%R1093",
+      "poll_request_counter": "%R1094",
+      "poll_response_counter": "%R1095",
+      "asynchronous_slot_time_microseconds": "%R1096",
+      "diagnostic_status_code": "%R1097",
+      "powerlink_mn_permissive_coil": "%M254",
+      "controlled_node_loss_trip_coil": "%M255"
+    },
+    "timestamp": "2026-10-04T20:47:21Z"
+  }
+}

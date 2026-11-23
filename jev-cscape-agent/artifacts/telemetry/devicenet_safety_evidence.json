@@ -1,0 +1,94 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial DeviceNet / CANopen Safety Physical Layer & Master Bridge Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W142",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial DeviceNet / CANopen Safety Physical Layer & Master Bridge Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Validated Pure ST POUs 'DeviceNetSafetySync' and 'CanopenSafetySync' with %R1030..%R1037 and %M240..%M241."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Logic_Interception_Guard",
+        "passed": true,
+        "details": "Successfully intercepted and rejected 5 forbidden ladder logic constructs."
+      },
+      {
+        "stage": 3,
+        "check": "CAN_Physical_Layer_Baud_Timing_And_Bit_Stuffing",
+        "passed": true,
+        "details": "Verified baud timing (125k=8us, 250k=4us, 500k=2us), bit-stuffing (7 stuffed bits), and unstuffing."
+      },
+      {
+        "stage": 4,
+        "check": "CAN_Error_Counters_And_Bus_Off_Transition_0xA703",
+        "passed": true,
+        "details": "Verified TEC state machine: ERROR_ACTIVE -> ERROR_PASSIVE -> BUS_OFF (>255) triggering 0xA703."
+      },
+      {
+        "stage": 5,
+        "check": "DeviceNet_MAC_Scanner_And_Duplicate_MAC_Detection_0xA704",
+        "passed": true,
+        "details": "Polled MAC IDs (0..63), verified %R1030 node count (3 nodes), and intercepted Duplicate MAC ID 0xA704."
+      },
+      {
+        "stage": 6,
+        "check": "SNN_Verification_And_Monotonic_Sequence_Integrity",
+        "passed": true,
+        "details": "Verified 6-byte SNN matching and blocked rogue SNN packets and stale replay sequence numbers."
+      },
+      {
+        "stage": 7,
+        "check": "Redundant_Inverted_Payload_Dual_CRC_Integrity_0xA702",
+        "passed": true,
+        "details": "Detected bitwise inversion corruptions P vs ~P and dual CRC-16 mismatches with 0xA702 trip."
+      },
+      {
+        "stage": 8,
+        "check": "EPI_Watchdog_Timer_Expiry_And_Process_Safety_0xA701",
+        "passed": true,
+        "details": "Asserted EPI watchdog trip (> 60ms) asserting %M241, clearing %M240, zeroing %R1033/%R1034, and raising 0xA701."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Full_Register_Space_Sync_And_Fault_Recovery",
+        "passed": true,
+        "details": "Operator reset restored master operation, synchronized all %R1030..%R1037 and %M240..%M241 registers."
+      }
+    ],
+    "metrics": {
+      "master_mac_id": 0,
+      "supported_baud_rates": [
+        125000,
+        250000,
+        500000
+      ],
+      "default_epi_ms": 20.0,
+      "epi_timeout_ms": 60.0,
+      "max_reaction_time_ms": 20.0,
+      "max_nodes": 64,
+      "snn": "0x7b14"
+    },
+    "register_map": {
+      "%R1030": "StatusWord / ActiveNodeCount",
+      "%R1031": "SafetyNetworkNumberWord",
+      "%R1032": "SafetyScanCycleCounter",
+      "%R1033": "PrimarySafetyDataScaled",
+      "%R1034": "SecondarySafetyDataScaled",
+      "%R1035": "CanBusErrorPassiveCounter",
+      "%R1036": "CanopenSdoTransactionCounter",
+      "%R1037": "DiagnosticStatusCode",
+      "%M240": "DeviceNetMasterActive",
+      "%M241": "SafetyConnectionTimeoutTrip"
+    },
+    "timestamp": "2026-10-04T20:24:21Z"
+  }
+}

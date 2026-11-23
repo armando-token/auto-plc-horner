@@ -1,0 +1,72 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Statistical Process Control verification completed: 6/6 assertions passed in 0.63 ms.",
+  "data": {
+    "all_passed": true,
+    "duration_ms": 0.6330001633614302,
+    "assertions": [
+      {
+        "check": "in_control_process_capability",
+        "passed": true,
+        "details": "In-control: Cp=3.3315, Cpk=3.3057, Mean=49.95, Violations=False"
+      },
+      {
+        "check": "western_electric_rule1_beyond_3sigma",
+        "passed": true,
+        "details": "Rule 1: outlier=57.0 > UCL=52.31, triggered=True"
+      },
+      {
+        "check": "western_electric_rule2_zone_a",
+        "passed": true,
+        "details": "Rule 2 triggered: True"
+      },
+      {
+        "check": "western_electric_rule4_mean_shift",
+        "passed": true,
+        "details": "Rule 4 mean shift triggered: True"
+      },
+      {
+        "check": "degraded_process_capability",
+        "passed": true,
+        "details": "Shifted: Cpk=0.5382, k=0.75"
+      },
+      {
+        "check": "horner_register_synchronization",
+        "passed": true,
+        "details": "Registers: R210(Cp*100)=215, R211(Cpk*100)=54, R212(Mean*10)=545, M25=False, M28=False"
+      }
+    ],
+    "final_metrics": {
+      "sample_count": 30,
+      "mean": 54.5,
+      "std_dev_within": 0.9290102943463523,
+      "std_dev_overall": 0.6643638388299173,
+      "last_value": 55.3,
+      "control_limits": {
+        "cl": 54.5,
+        "ucl": 57.28703088303906,
+        "lcl": 51.71296911696094,
+        "mr_cl": 1.0482758620689618,
+        "mr_ucl": 3.424193103448264
+      },
+      "violations": {
+        "rule1_beyond_3sigma": false,
+        "rule2_zone_a": false,
+        "rule3_zone_b": false,
+        "rule4_mean_shift": false,
+        "any_violation": false
+      },
+      "capability": {
+        "cp": 2.1528,
+        "cpk": 0.5382,
+        "pp": 3.0104,
+        "ppk": 0.7526,
+        "centering_factor_k": 0.75,
+        "is_capable_133": false,
+        "is_capable_167": false
+      },
+      "timestamp": 1790975181.5132687
+    }
+  }
+}

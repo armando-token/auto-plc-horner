@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_044",
+  "file_name": "scene_044.png",
+  "original_source": "artifacts\\G3\\edit_roundtrip_steps\\run_2_startup_main_disabled_1791873998.png",
+  "split": "train",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 1280,
+    "height": 780
+  },
+  "sha256": "28002ab0bf69694924193f6378515d418df3ce5acc5f7f5ecad5e1e18aaee9e4",
+  "labels": {
+    "canvas_rect": [
+      51,
+      28,
+      1271,
+      745
+    ],
+    "anchors": {
+      "canvas_center": [
+        661,
+        386
+      ],
+      "canvas_nw": [
+        51,
+        28
+      ],
+      "canvas_se": [
+        1271,
+        745
+      ],
+      "status_bar_roi": [
+        0,
+        756,
+        1280,
+        780
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": "1*",
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

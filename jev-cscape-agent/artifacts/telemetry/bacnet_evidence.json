@@ -1,0 +1,54 @@
+{
+  "work_package": "W076",
+  "gate": "G8",
+  "component": "Industrial BACnet/IP Telemetry Protocol Engine & APDU Server",
+  "timestamp_utc": "2026-10-03T00:47:13.872371+00:00",
+  "overall_status": "success",
+  "registers": {
+    "%R370": 15,
+    "%R371": 2,
+    "%R372": 6,
+    "%R373": 5,
+    "%R374": 8840,
+    "%R375": 1,
+    "%M86": true,
+    "%M87": false
+  },
+  "checks": {
+    "bvll_npdu_framing": {
+      "status": "passed",
+      "bvll_type": "0x81",
+      "bvll_function": "ORIGINAL_UNICAST_NPDU",
+      "npdu_version": 1,
+      "expecting_reply": true,
+      "dnet": 101
+    },
+    "read_property_service": {
+      "status": "passed",
+      "invoke_id": 1,
+      "service_choice": "READ_PROPERTY",
+      "response_byte_length": 23
+    },
+    "cov_subscription_and_triggers": {
+      "status": "passed",
+      "subscription_count": 1,
+      "initial_trigger": true,
+      "sub_deadband_suppressed": true,
+      "deadband_exceeded_triggered": true
+    },
+    "cov_notification_wire": {
+      "status": "passed",
+      "bvll_broadcast": "ORIGINAL_BROADCAST_NPDU",
+      "subscriber_process_id": 5,
+      "monitored_object": "BACnetObjectID(object_type=<BACnetObjectType.ANALOG_INPUT: 0>, instance=0)",
+      "reported_pv": 72.5
+    },
+    "register_table_synchronization": {
+      "status": "passed",
+      "r370_status_word": 15,
+      "r374_scaled_pv": 8840,
+      "r375_bi_pv": 1,
+      "m86_enable": true
+    }
+  }
+}

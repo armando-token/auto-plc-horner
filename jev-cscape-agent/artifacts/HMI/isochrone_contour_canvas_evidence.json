@@ -1,0 +1,92 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Dynamic Isochrone Contour Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W270",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Isochrone Contour Canvas & Evacuation Time Arrival SCADA Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Grid_Eikonal_Equation_And_Arrival_Time_Monotonicity",
+        "passed": true,
+        "duration_ms": 5.297000054270029,
+        "details": "Verified 32x24 grid Eikonal solver, T(8,6)=0s, radial monotonicity verified, ||nabla T|| approx s consistency checked, max arrival time=300.4s."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "duration_ms": 0.7930002175271511,
+        "details": "Parsed POU 'IsochroneContourCanvasSync'; verified bindings %R2310..%R2317 and %M539..%M540."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "duration_ms": 0.04159985110163689,
+        "details": "Rejected 6/6 forbidden ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Concentric_Isochrone_Contour_Band_Extraction_And_Area_Monotonicity",
+        "passed": true,
+        "duration_ms": 4.36889985576272,
+        "details": "Extracted 6 concentric bands; verified strict cumulative area monotonicity [10512m\u00b2 < ... < 110592m\u00b2] and SVG boundary path synthesis."
+      },
+      {
+        "stage": 5,
+        "check": "WCAG_AAA_Color_Contrast_Compliance",
+        "passed": true,
+        "duration_ms": 0.023900065571069717,
+        "details": "Decoupled badge contrast 19.15:1 (>= 18:1 AAA); Primary text contrast 18.92:1 (>= 7:1 AAA)."
+      },
+      {
+        "stage": 6,
+        "check": "Propagation_Stall_And_Grid_Discontinuity_Fault_Injections",
+        "passed": true,
+        "duration_ms": 9.187899995595217,
+        "details": "Verified 0x7A01 (Propagation Stall) with %M540 assertion, 0x7A02 (Grid Discontinuity) with %M540 assertion, and clean return to nominal 0x0000."
+      },
+      {
+        "stage": 7,
+        "check": "Facility_Zone_Selection_And_Dynamic_Evacuation_Safety_Score_Tracking",
+        "passed": true,
+        "duration_ms": 196.68229995295405,
+        "details": "Verified 4 facility zones dynamic selection and safety score tracking: Zone 1=75, Zone 2=62, Zone 3=68, Zone 4=85."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization_And_ILogicUnit_Scan",
+        "passed": true,
+        "duration_ms": 7.19909998588264,
+        "details": "%R2310=32, %R2311=24, %R2312=6, %R2313=300, %R2314=0, %R2315=1, %R2316=75, %R2317=0; %M539=True, %M540=False verified."
+      },
+      {
+        "stage": 9,
+        "check": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "passed": true,
+        "duration_ms": 7.766399998217821,
+        "details": "Synthesized valid standalone W3C SVG 1.1 with visual grounding fallback metadata; exported to 'C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\isochrone_contour_canvas_sample.svg'."
+      }
+    ],
+    "metrics": {
+      "grid_resolution_width": 32,
+      "grid_resolution_height": 24,
+      "active_isoline_bands_count": 6,
+      "max_arrival_time_sec": 300.42,
+      "min_arrival_time_sec": 0.0,
+      "selected_facility_zone": 1,
+      "selected_zone_name": "Reactor Hall A",
+      "evacuation_safety_score": 75,
+      "diagnostic_status_code": "0x0000",
+      "isochrone_canvas_active": true,
+      "hazard_alarm_active": false,
+      "wcag_badge_contrast": 19.15,
+      "wcag_text_contrast": 18.92
+    }
+  }
+}

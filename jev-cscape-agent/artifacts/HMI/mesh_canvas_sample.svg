@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 750" width="1200" height="750" style="background-color: #0D1117; font-family: monospace;">
+  <defs>
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+  <!-- Delaunay Triangulation Wireframe Layer -->
+  <g id="mesh-wireframe-layer" class="mesh-triangles">
+    <polygon points="122.8,90.5 274.5,104.7 447.8,91.7" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+    <polygon points="274.5,104.7 122.8,90.5 126.2,227.6" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="447.8,91.7 590.6,94.4 750.5,94.0" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+    <polygon points="447.8,91.7 274.5,104.7 284.0,234.3" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="447.8,91.7 284.0,234.3 449.1,234.2" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="590.6,94.4 447.8,91.7 449.1,234.2" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="126.2,227.6 122.8,90.5 123.0,514.7" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+    <polygon points="274.5,104.7 126.2,227.6 284.0,234.3" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="284.0,234.3 126.2,227.6 126.6,377.4" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="126.6,377.4 126.2,227.6 123.0,514.7" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+    <polygon points="284.0,234.3 126.6,377.4 281.5,379.1" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="449.1,234.2 284.0,234.3 434.6,370.8" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="590.6,94.4 449.1,234.2 591.9,244.4" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="284.0,234.3 281.5,379.1 434.6,370.8" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="449.1,234.2 434.6,370.8 594.7,367.0" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="591.9,244.4 449.1,234.2 594.7,367.0" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="447.8,91.7 750.5,94.0 920.9,94.4" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+    <polygon points="750.5,94.0 590.6,94.4 591.9,244.4" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="920.9,94.4 750.5,94.0 766.1,242.1" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="750.5,94.0 591.9,244.4 766.1,242.1" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="920.9,94.4 766.1,242.1 929.5,235.1" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="766.1,242.1 591.9,244.4 594.7,367.0" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="766.1,242.1 594.7,367.0 762.7,372.3" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="929.5,235.1 766.1,242.1 914.2,370.3" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="766.1,242.1 762.7,372.3 914.2,370.3" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="929.5,235.1 914.2,370.3 915.4,506.7" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+    <polygon points="281.5,379.1 126.6,377.4 284.6,505.8" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="126.6,377.4 123.0,514.7 284.6,505.8" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="284.6,505.8 123.0,514.7 449.8,515.3" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+    <polygon points="434.6,370.8 281.5,379.1 284.6,505.8" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="434.6,370.8 284.6,505.8 449.8,515.3" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="594.7,367.0 434.6,370.8 449.8,515.3" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="594.7,367.0 449.8,515.3 603.7,519.4" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="762.7,372.3 594.7,367.0 754.6,503.1" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="594.7,367.0 603.7,519.4 754.6,503.1" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="914.2,370.3 762.7,372.3 915.4,506.7" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="762.7,372.3 754.6,503.1 915.4,506.7" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.0" />
+    <polygon points="754.6,503.1 603.7,519.4 915.4,506.7" fill="url(#meshGrad)" stroke="#F59E0B" stroke-width="1.0" stroke-dasharray="4 2" />
+  </g>
+  <!-- Morton-Indexed Sensor Nodes Layer -->
+  <g id="morton-nodes-layer" class="morton-nodes">
+    <circle class="sensor-node" cx="122.8" cy="90.5" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="130.8" y="94.5" fill="#FFFFFF" font-size="9">SN-001 (Z:1004)</text>
+    <circle class="sensor-node" cx="274.5" cy="104.7" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="282.5" y="108.7" fill="#FFFFFF" font-size="9">SN-002 (Z:3406)</text>
+    <circle class="sensor-node" cx="447.8" cy="91.7" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="455.8" y="95.7" fill="#FFFFFF" font-size="9">SN-003 (Z:5119)</text>
+    <circle class="sensor-node" cx="590.6" cy="94.4" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="598.6" y="98.4" fill="#FFFFFF" font-size="9">SN-004 (Z:7505)</text>
+    <circle class="sensor-node" cx="750.5" cy="94.0" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="758.5" y="98.0" fill="#FFFFFF" font-size="9">SN-005 (Z:19456)</text>
+    <circle class="sensor-node" cx="920.9" cy="94.4" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="928.9" y="98.4" fill="#FFFFFF" font-size="9">SN-006 (Z:22544)</text>
+    <circle class="sensor-node" cx="126.2" cy="227.6" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="134.2" y="231.6" fill="#FFFFFF" font-size="9">SN-007 (Z:8678)</text>
+    <circle class="sensor-node" cx="284.0" cy="234.3" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="292.0" y="238.3" fill="#FFFFFF" font-size="9">SN-008 (Z:9722)</text>
+    <circle class="sensor-node" cx="449.1" cy="234.2" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="457.1" y="238.2" fill="#FFFFFF" font-size="9">SN-009 (Z:12799)</text>
+    <circle class="sensor-node" cx="591.9" cy="244.4" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="599.9" y="248.4" fill="#FFFFFF" font-size="9">SN-010 (Z:14174)</text>
+    <circle class="sensor-node" cx="766.1" cy="242.1" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="774.1" y="246.1" fill="#FFFFFF" font-size="9">SN-011 (Z:26125)</text>
+    <circle class="sensor-node" cx="929.5" cy="235.1" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="937.5" y="239.1" fill="#FFFFFF" font-size="9">SN-012 (Z:29204)</text>
+    <circle class="sensor-node" cx="126.6" cy="377.4" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="134.6" y="381.4" fill="#FFFFFF" font-size="9">SN-013 (Z:33093)</text>
+    <circle class="sensor-node" cx="281.5" cy="379.1" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="289.5" y="383.1" fill="#FFFFFF" font-size="9">SN-014 (Z:34130)</text>
+    <circle class="sensor-node" cx="434.6" cy="370.8" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="442.6" y="374.8" fill="#FFFFFF" font-size="9">SN-015 (Z:15352)</text>
+    <circle class="sensor-node" cx="594.7" cy="367.0" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="602.7" y="371.0" fill="#FFFFFF" font-size="9">SN-016 (Z:16374)</text>
+    <circle class="sensor-node" cx="762.7" cy="372.3" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="770.7" y="376.3" fill="#FFFFFF" font-size="9">SN-017 (Z:28334)</text>
+    <circle class="sensor-node" cx="914.2" cy="370.3" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="922.2" y="374.3" fill="#FFFFFF" font-size="9">SN-018 (Z:31405)</text>
+    <circle class="sensor-node" cx="123.0" cy="514.7" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="131.0" y="518.7" fill="#FFFFFF" font-size="9">SN-019 (Z:35310)</text>
+    <circle class="sensor-node" cx="284.6" cy="505.8" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="292.6" y="509.8" fill="#FFFFFF" font-size="9">SN-020 (Z:36336)</text>
+    <circle class="sensor-node" cx="449.8" cy="515.3" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="457.8" y="519.3" fill="#FFFFFF" font-size="9">SN-021 (Z:39423)</text>
+    <circle class="sensor-node" cx="603.7" cy="519.4" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="611.7" y="523.4" fill="#FFFFFF" font-size="9">SN-022 (Z:51714)</text>
+    <circle class="sensor-node" cx="754.6" cy="503.1" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="762.6" y="507.1" fill="#FFFFFF" font-size="9">SN-023 (Z:52362)</text>
+    <circle class="sensor-node" cx="915.4" cy="506.7" r="6.0" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5" />
+    <text x="923.4" y="510.7" fill="#FFFFFF" font-size="9">SN-024 (Z:55461)</text>
+  </g>
+  <!-- Query Reticle & Spatial Hazard Vectors -->
+  <g id="query-reticle-layer" class="query-reticle">
+    <circle cx="600.0" cy="375.0" r="180.0" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="5 3" />
+  </g>
+  <!-- HUD Telemetry Scorecard -->
+  <g id="scorecard-layer" class="hud-telemetry-scorecard">
+    <rect x="15" y="15" width="540" height="74" rx="6" fill="#05080C" stroke="#334155" stroke-width="1.2" />
+    <text x="25" y="35" fill="#FFFFFF" font-size="11" font-weight="bold">DYNAMIC SPATIAL DELAUNAY MESH &amp; MORTON SCADA CANVAS [W321]</text>
+    <text x="25" y="55" fill="#CBD5E1" font-size="10">NODES: 24 | TRIANGLES: 38 | MORTON CELLS: 62 | MATCHES: 5</text>
+    <text x="25" y="72" fill="#94A3B8" font-size="9">HAZARDS: 0 | DIAG: 0x0000 | REGS: %R2820..%R2827 | COILS: %M658..%M659</text>
+    <rect x="1020" y="15" width="165" height="28" rx="4" fill="#10B981" />
+    <text x="1103" y="33" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">INDEXING NOMINAL</text>
+  </g>
+</svg>

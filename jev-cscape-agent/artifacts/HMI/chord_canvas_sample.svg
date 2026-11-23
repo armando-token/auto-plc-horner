@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <style>
+    .title-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 14px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.5px; }
+    .subtitle-banner { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #94A3B8; }
+    .node-arc { stroke: #0B0F19; stroke-width: 1.5; cursor: pointer; transition: opacity 0.2s; }
+    .node-badge { stroke-width: 1.5; }
+    .node-label-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+    .node-label-cap { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 9.5px; fill: #94A3B8; }
+    .chord-ribbon { cursor: pointer; transition: fill-opacity 0.2s; }
+    .hud-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 12px; font-weight: 700; fill: #38BDF8; letter-spacing: 0.5px; }
+    .hud-subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #94A3B8; }
+    .hud-value { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+    .hud-code { font-family: monospace; font-size: 10px; fill: #64748B; }
+    .anomaly-alert-halo { animation: pulse 2s infinite ease-in-out; }
+  </style>
+  <defs>    <linearGradient id="ribbon-grad-SG->CRK" x1="762.6" y1="436.7" x2="552.6" y2="630.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-SG->CRK" x1="762.6" y1="436.7" x2="552.6" y2="630.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-SG->HDT" x1="736.3" y1="506.3" x2="278.8" y2="442.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-SG->HDT" x1="736.3" y1="506.3" x2="278.8" y2="442.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-CRK->HDT" x1="468.6" y1="627.6" x2="272.2" y2="374.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-CRK->HDT" x1="468.6" y1="627.6" x2="272.2" y2="374.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-CRK->FRC" x1="383.0" y1="591.7" x2="382.9" y2="178.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-CRK->FRC" x1="383.0" y1="591.7" x2="382.9" y2="178.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-HDT->FRC" x1="302.4" y1="266.0" x2="456.3" y2="145.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-HDT->FRC" x1="302.4" y1="266.0" x2="456.3" y2="145.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-FRC->TNK" x1="533.0" y1="137.3" x2="704.8" y2="219.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-FRC->TNK" x1="533.0" y1="137.3" x2="704.8" y2="219.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-FRC->CRK" x1="601.1" y1="150.6" x2="311.7" y2="519.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-FRC->CRK" x1="601.1" y1="150.6" x2="311.7" y2="519.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-FRC->SG" x1="642.7" y1="169.5" x2="713.6" y2="540.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-FRC->SG" x1="642.7" y1="169.5" x2="713.6" y2="540.0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.80"/>
+    </linearGradient>    <linearGradient id="ribbon-grad-TNK->SG" x1="758.5" y1="316.9" x2="658.9" y2="590.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="grad-TNK->SG" x1="758.5" y1="316.9" x2="658.9" y2="590.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.80"/>
+    </linearGradient>    <filter id="alert-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>  </defs>
+  <!-- Background Backing -->
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <g id="canvas-header">
+    <text x="32" y="38" class="title-banner">CSCAPE DYNAMIC CHORD DIAGRAM // MULTI-NODE INTERCONNECTION FLOW (W153)</text>
+    <text x="32" y="55" class="subtitle-banner">Plant Unit Capacity Partitioning &amp; Smooth Cubic Bézier Transfer Ribbons | Gate G9 Graphic Screen Engine</text>
+  </g>
+  <g id="chord-diagram">
+    <g id="chord-ribbons">
+      <path d="M 768.00 385.00 A 248.00 248.00 0 0 1 746.48 486.05 C 621.92 430.47 554.49 491.14 596.64 620.86 A 248.00 248.00 0 0 1 507.53 632.69 C 514.39 496.46 631.60 385.00 768.00 385.00 Z" fill="url(#ribbon-grad-SG->CRK)" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5" class="chord-ribbon">
+        <title>HP Steam &amp; Dilution: 46.0 kg/s</title>
+      </path>      <path d="M 746.48 486.05 A 248.00 248.00 0 0 1 724.38 525.47 C 611.97 448.21 414.32 420.87 285.16 464.72 A 248.00 248.00 0 0 1 274.54 420.41 C 409.54 400.93 621.92 430.47 746.48 486.05 Z" fill="url(#ribbon-grad-SG->HDT)" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5" class="chord-ribbon">
+        <title>Stripping Steam: 20.0 kg/s</title>
+      </path>      <path d="M 507.53 632.69 A 248.00 248.00 0 0 1 430.97 616.47 C 479.93 489.16 409.54 400.93 274.54 420.41 A 248.00 248.00 0 0 1 278.24 329.74 C 411.21 360.13 514.39 496.46 507.53 632.69 Z" fill="url(#ribbon-grad-CRK->HDT)" fill-opacity="0.35" stroke="none" class="chord-ribbon">
+        <title>Gas Oil Feed: 40.0 kg/s</title>
+      </path>      <path d="M 430.97 616.47 A 248.00 248.00 0 0 1 341.58 557.25 C 439.71 462.51 444.60 302.72 352.45 202.16 A 248.00 248.00 0 0 1 416.66 159.55 C 473.50 283.55 479.93 489.16 430.97 616.47 Z" fill="url(#ribbon-grad-CRK->FRC)" fill-opacity="0.35" stroke="none" class="chord-ribbon">
+        <title>Cracked Vapor Overhead: 55.0 kg/s</title>
+      </path>      <path d="M 278.24 329.74 A 248.00 248.00 0 0 1 343.11 211.17 C 440.40 306.78 473.50 283.55 416.66 159.55 A 248.00 248.00 0 0 1 497.85 137.99 C 510.03 273.85 411.21 360.13 278.24 329.74 Z" fill="url(#ribbon-grad-HDT->FRC)" fill-opacity="0.35" stroke="none" class="chord-ribbon">
+        <title>Desulfurized Distillate: 60.0 kg/s</title>
+      </path>      <path d="M 497.85 137.99 A 248.00 248.00 0 0 1 567.85 141.66 C 541.53 275.50 584.41 293.86 663.13 182.47 A 248.00 248.00 0 0 1 737.17 265.24 C 617.73 331.11 510.03 273.85 497.85 137.99 Z" fill="url(#ribbon-grad-FRC->TNK)" fill-opacity="0.35" stroke="none" class="chord-ribbon">
+        <title>Finished Product Fuel: 50.0 kg/s</title>
+      </path>      <path d="M 567.85 141.66 A 248.00 248.00 0 0 1 632.78 164.13 C 570.75 285.61 439.71 462.51 341.58 557.25 A 248.00 248.00 0 0 1 289.66 476.90 C 416.34 426.35 541.53 275.50 567.85 141.66 Z" fill="url(#ribbon-grad-FRC->CRK)" fill-opacity="0.35" stroke="none" class="chord-ribbon">
+        <title>Heavy Recycle Bottoms: 49.0 kg/s</title>
+      </path>      <path d="M 632.78 164.13 A 248.00 248.00 0 0 1 652.34 175.26 C 579.55 290.62 611.97 448.21 724.38 525.47 A 248.00 248.00 0 0 1 701.78 553.70 C 601.80 460.92 570.75 285.61 632.78 164.13 Z" fill="url(#ribbon-grad-FRC->SG)" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5" class="chord-ribbon">
+        <title>Blowdown Condensate: 16.0 kg/s</title>
+      </path>      <path d="M 737.17 265.24 A 248.00 248.00 0 0 1 767.66 372.02 C 631.45 379.16 601.80 460.92 701.78 553.70 A 248.00 248.00 0 0 1 608.88 616.53 C 559.99 489.19 617.73 331.11 737.17 265.24 Z" fill="url(#ribbon-grad-TNK->SG)" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5" class="chord-ribbon">
+        <title>Boiler Feedwater Return: 50.0 kg/s</title>
+      </path>    </g>
+    <g id="node-arcs">
+      <path d="M 800.00 385.00 A 280.00 280.00 0 0 1 620.34 646.40 L 608.88 616.53 A 248.00 248.00 0 0 0 768.00 385.00 Z" fill="#10B981" stroke="#38BDF8" stroke-width="3.0" class="chord-node active-focus">
+        <title>Steam Gen Capacity: 120.0 kg/s</title>
+      </path>      <path d="M 606.52 651.30 A 280.00 280.00 0 0 1 259.93 488.76 L 289.66 476.90 A 248.00 248.00 0 0 0 596.64 620.86 Z" fill="#06B6D4" stroke="#0B0F19" stroke-width="1.5" class="chord-node node-arc">
+        <title>Cracker Capacity: 150.0 kg/s</title>
+      </path>      <path d="M 254.86 475.00 A 280.00 280.00 0 0 1 320.29 188.75 L 343.11 211.17 A 248.00 248.00 0 0 0 285.16 464.72 Z" fill="#6366F1" stroke="#0B0F19" stroke-width="1.5" class="chord-node node-arc">
+        <title>Hydrotreater Capacity: 110.0 kg/s</title>
+      </path>      <path d="M 330.83 178.56 A 280.00 280.00 0 0 1 669.41 148.20 L 652.34 175.26 A 248.00 248.00 0 0 0 352.45 202.16 Z" fill="#F59E0B" stroke="#0B0F19" stroke-width="1.5" class="chord-node node-arc">
+        <title>Fractionator Capacity: 130.0 kg/s</title>
+      </path>      <path d="M 681.60 156.34 A 280.00 280.00 0 0 1 799.62 370.35 L 767.66 372.02 A 248.00 248.00 0 0 0 663.13 182.47 Z" fill="#EF4444" stroke="#0B0F19" stroke-width="1.5" class="chord-node node-arc">
+        <title>Tank Farm Capacity: 90.0 kg/s</title>
+      </path>    </g>
+    <g id="node-badges">
+      <g id="badge-STEAM_GEN" class="node-badge-group">
+        <rect x="725.4" y="545.0" width="110.0" height="38.0" rx="6" ry="6" fill="#0B0F19" fill-opacity="0.94" stroke="#10B981" stroke-width="1.5" class="node-badge capacity-badge"/>
+        <text x="780.4" y="560.0" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Steam Gen</text>
+        <text x="780.4" y="575.0" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">120.0 kg/s</text>
+      </g>      <g id="badge-CRACKER" class="node-badge-group">
+        <rect x="330.8" y="652.1" width="110.0" height="38.0" rx="6" ry="6" fill="#0B0F19" fill-opacity="0.94" stroke="#06B6D4" stroke-width="1.5" class="node-badge capacity-badge"/>
+        <text x="385.8" y="667.1" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Cracker</text>
+        <text x="385.8" y="682.1" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">150.0 kg/s</text>
+      </g>      <g id="badge-HYDROTREATER" class="node-badge-group">
+        <rect x="156.9" y="295.6" width="110.0" height="38.0" rx="6" ry="6" fill="#0B0F19" fill-opacity="0.94" stroke="#6366F1" stroke-width="1.5" class="node-badge capacity-badge"/>
+        <text x="211.9" y="310.6" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Hydrotreater</text>
+        <text x="211.9" y="325.6" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">110.0 kg/s</text>
+      </g>      <g id="badge-FRACTIONATOR" class="node-badge-group">
+        <rect x="436.8" y="51.3" width="110.0" height="38.0" rx="6" ry="6" fill="#0B0F19" fill-opacity="0.94" stroke="#F59E0B" stroke-width="1.5" class="node-badge capacity-badge"/>
+        <text x="491.8" y="66.3" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Fractionator</text>
+        <text x="491.8" y="81.3" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">130.0 kg/s</text>
+      </g>      <g id="badge-TANK_FARM" class="node-badge-group">
+        <rect x="741.7" y="213.4" width="110.0" height="38.0" rx="6" ry="6" fill="#0B0F19" fill-opacity="0.94" stroke="#EF4444" stroke-width="1.5" class="node-badge capacity-badge"/>
+        <text x="796.7" y="228.4" text-anchor="middle" dominant-baseline="middle" class="node-label-title">Tank Farm</text>
+        <text x="796.7" y="243.4" text-anchor="middle" dominant-baseline="middle" class="node-label-cap">90.0 kg/s</text>
+      </g>    </g>
+    <g id="center-hub">
+      <circle cx="520.0" cy="385.0" r="50" fill="#0B0F19" fill-opacity="0.95" stroke="#334155" stroke-width="2"/>
+      <text x="520.0" y="373.0" text-anchor="middle" fill="#94A3B8" font-size="9" font-weight="600" font-family="sans-serif">TOTAL FLOW</text>
+      <text x="520.0" y="393.0" text-anchor="middle" fill="#38BDF8" font-size="16" font-weight="700" font-family="monospace">386.0</text>
+      <text x="520.0" y="408.0" text-anchor="middle" fill="#64748B" font-size="9" font-family="sans-serif">kg/s</text>
+    </g>
+  </g> <!-- end chord-diagram -->
+  <g id="network-metrics-card" class="telemetry-card">
+    <rect x="830.0" y="65.0" width="340.0" height="635.0" rx="8" ry="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="850.0" y="95.0" class="hud-title">NETWORK FLOW METRICS</text>
+    <text x="850.0" y="113.0" class="hud-subtitle">Horner OCS Multi-Node SCADA Interconnection</text>
+    <line x1="850.0" y1="123.0" x2="1150.0" y2="123.0" stroke="#334155" stroke-width="1"/>
+
+    <!-- Row 1: Node Count -->
+    <text x="850.0" y="150.0" class="hud-label">PLANT NODE COUNT (%R1140)</text>
+    <text x="1150.0" y="150.0" text-anchor="end" class="hud-value">5 Units</text>
+
+    <!-- Row 2: Total Interconnection Flow -->
+    <text x="850.0" y="185.0" class="hud-label">TOTAL NETWORK FLOW (%R1141)</text>
+    <text x="1150.0" y="185.0" text-anchor="end" class="hud-value">386.0 kg/s (3860)</text>
+
+    <!-- Row 3: Selected Node Focus -->
+    <text x="850.0" y="220.0" class="hud-label">SELECTED UNIT FOCUS (%R1142)</text>
+    <text x="1150.0" y="220.0" text-anchor="end" class="hud-value">[0] Steam Gen</text>
+
+    <!-- Row 4: Top Interconnection Flow -->
+    <text x="850.0" y="255.0" class="hud-label">PEAK TRANSFER FLOW (%R1143)</text>
+    <text x="1150.0" y="255.0" text-anchor="end" class="hud-value">60.0 kg/s (600)</text>
+
+    <!-- Row 5: Peak Source & Target -->
+    <text x="850.0" y="290.0" class="hud-label">PEAK CONDUIT (SRC %R1144 -&gt; TGT %R1145)</text>
+    <text x="1150.0" y="290.0" text-anchor="end" class="hud-value">Node 2 -&gt; Node 3</text>
+
+    <!-- Row 6: Nodal Flow Imbalance -->
+    <text x="850.0" y="325.0" class="hud-label">MAX FLOW IMBALANCE (%R1146)</text>
+    <text x="1150.0" y="325.0" text-anchor="end" class="hud-value">0.0 % (0)</text>
+
+    <!-- Row 7: Diagnostic Status Code -->
+    <text x="850.0" y="360.0" class="hud-label">DIAGNOSTIC STATUS (%R1147)</text>
+    <text x="1150.0" y="360.0" text-anchor="end" class="hud-value">0x0000</text>
+
+    <!-- Row 8: Interconnection Imbalance Trip Coil -->
+    <text x="850.0" y="395.0" class="hud-label">IMBALANCE TRIP COIL (%M266)</text>
+    <text x="1150.0" y="395.0" text-anchor="end" font-weight="700" fill="#10B981" font-family="monospace">NORMAL / CLOSED</text>
+
+    <!-- Row 9: Canvas Active Coil -->
+    <text x="850.0" y="430.0" class="hud-label">CANVAS ENGINE ACTIVE (%M267)</text>
+    <text x="1150.0" y="430.0" text-anchor="end" font-weight="700" fill="#10B981" font-family="monospace">TRUE</text>
+
+    <!-- Separator -->
+    <line x1="850.0" y1="450.0" x2="1150.0" y2="450.0" stroke="#334155" stroke-width="1"/>
+
+    <!-- WCAG Contrast Summary -->
+    <text x="850.0" y="475.0" class="hud-label">WCAG 2.1 AAA CONTRAST COMPLIANCE</text>
+    <text x="850.0" y="495.0" fill="#F8FAFC" font-size="10.5" font-family="sans-serif">Decoupled Badges: <tspan font-weight="700" fill="#38BDF8">18.30:1</tspan> (&gt; 18:1)</text>
+    <text x="850.0" y="515.0" fill="#F8FAFC" font-size="10.5" font-family="sans-serif">Text Backing: <tspan font-weight="700" fill="#10B981">17.06:1</tspan> (&gt; 7:1)</text>
+    <text x="850.0" y="535.0" fill="#F8FAFC" font-size="10.5" font-family="sans-serif">SCADA Glyphs: <tspan font-weight="700" fill="#10B981">7.04:1</tspan> (&gt; 3:1)</text>
+  </g> <!-- end network-metrics-card -->
+  <g id="telemetry-hud" class="hud-footer">
+    <rect x="20" y="705" width="1160" height="32" rx="4" fill="#0B0F19" fill-opacity="0.95" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="725" fill="#94A3B8" font-size="10.5" font-family="monospace">HORNER OCS REGISTER SPACE: %R1140..%R1147 (INTERCONNECTION FLOW) | %M266 (IMBALANCE TRIP) | %M267 (CANVAS ACTIVE)</text>
+  </g>
+</svg>

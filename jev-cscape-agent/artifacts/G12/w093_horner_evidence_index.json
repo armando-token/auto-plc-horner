@@ -1,0 +1,161 @@
+{
+  "work_package": "W093",
+  "generated_at_utc": "2026-10-20T02:59:20.856891+00:00",
+  "status": "success",
+  "architecture_layers": [
+    "J-Layer (Jerarqu\u00eda)",
+    "E-Layer (Ejecuci\u00f3n)",
+    "V-Layer (Validaci\u00f3n)"
+  ],
+  "certified_families": [
+    "st_var (G3/G6/G11)",
+    "ladder (G7/G8/G11)",
+    "hmi (G8/G11)"
+  ],
+  "gate_evidence_index": [
+    {
+      "gate": "G0-G4",
+      "artifact_path": "artifacts/gate_report.json",
+      "size_bytes": 21871,
+      "sha256": "e68584ff69c82c844b63d8f7a3d0d82b1efdc80378838c4cd6a40dacf645d0ae",
+      "certified_summary": "G0-G4 PE headers, DLL exports, flash lockout & gate ledger"
+    },
+    {
+      "gate": "G1",
+      "artifact_path": "artifacts/G1/channel_matrix.json",
+      "size_bytes": 2483,
+      "sha256": "ef0ad4106b58afa114e2a87cd55cb790da32f327d556eb83422050da76a78254",
+      "certified_summary": "Synthetic successes eliminated; 4-state contract & channel matrix"
+    },
+    {
+      "gate": "G2",
+      "artifact_path": "artifacts/G2/navigator_inspection.json",
+      "size_bytes": 2286,
+      "sha256": "63c02b8227cd4448c4caf7af4651bd0821485780bc554b0aedfbe5c7e8b4f5d1",
+      "certified_summary": "Live winsta0\\Default Cscape Project Navigator hierarchy mapped"
+    },
+    {
+      "gate": "G2",
+      "artifact_path": "artifacts/G2/single_gui_boundary_evidence.json",
+      "size_bytes": 757,
+      "sha256": "b2af1c000d93e0374d707add3cc3f1acae3f1ed1fbd85bb0d509a11ab6417275",
+      "certified_summary": "Single-GUI handle ownership boundary verified"
+    },
+    {
+      "gate": "G3",
+      "artifact_path": "artifacts/G3/g3_campaign_summary.json",
+      "size_bytes": 8378,
+      "sha256": "5f0b001b95d74844710939cb87a6184bf559b530bb9bac794a866ae823b253ce",
+      "certified_summary": "Clean Error Check (32826) & durability runs verified"
+    },
+    {
+      "gate": "G3",
+      "artifact_path": "artifacts/G3/error_check_evidence.json",
+      "size_bytes": 12122,
+      "sha256": "7967faf573c128eb1717853e29d34654cc73cb5464f645f3e60a59258775739f",
+      "certified_summary": "Compiler Output Window (45011 / ListBox 372) 0 errors, 0 warnings"
+    },
+    {
+      "gate": "G4",
+      "artifact_path": "artifacts/G4/g4_campaign_summary.json",
+      "size_bytes": 31091,
+      "sha256": "2f62804a255b02867afbf5ef39a9618e176822b32c9e41bf60b0ace7b0fea4eb",
+      "certified_summary": "Closed-loop plant simulation & live TypeSafe SystemOne reasoning"
+    },
+    {
+      "gate": "G5",
+      "artifact_path": "artifacts/G5/delivery_manifest.json",
+      "size_bytes": 176247,
+      "sha256": "5f18c15f3e8ce9c4b0f772985c5fd6f65907c21a50fe09e853fce6807afee799",
+      "certified_summary": "Cryptographic delivery manifest & air-gapped bundle signoff"
+    },
+    {
+      "gate": "G5",
+      "artifact_path": "artifacts/G5/g5_live_campaign_summary.json",
+      "size_bytes": 8817,
+      "sha256": "4352bbc6d86aeefed7b863ed5a3d1e4ce8e15af5b11ac95567b22996b17e13b0",
+      "certified_summary": "Gate G5 live verification summary"
+    },
+    {
+      "gate": "G6",
+      "artifact_path": "artifacts/G6/g6_acceptance_evidence.json",
+      "size_bytes": 30881,
+      "sha256": "c59feb2f0c5f9708b299ee6591b91be88250c51912fc6e69c88a81f967666d4b",
+      "certified_summary": "ST variable declaration (10/10 positive + negative controls)"
+    },
+    {
+      "gate": "G7",
+      "artifact_path": "artifacts/G7/g7_acceptance_summary.json",
+      "size_bytes": 36403,
+      "sha256": "ec4ade178b1f5bca372737ba0d5044487630e1b5bdb55b28d70cb5e361d1de8b",
+      "certified_summary": "Ladder logic live placement: 19/20 (95.0% >= 85%)"
+    },
+    {
+      "gate": "G8",
+      "artifact_path": "artifacts/G8/g8_campaign_summary.json",
+      "size_bytes": 16457,
+      "sha256": "2a525f5bbe19394c16cbd484e41535386b42441c4269a0998261e053f7a59327",
+      "certified_summary": "HMI screen object placement campaign: 20/20 (100.0%)"
+    },
+    {
+      "gate": "G9",
+      "artifact_path": "artifacts/G9/g9_campaign_summary.json",
+      "size_bytes": 71754,
+      "sha256": "1e361d5082458ca9c9942bccd60e7f5f9dcaedf1bbae458c90051e4903c76b00",
+      "certified_summary": "End-to-end 10 parameterized workflows (0 failed, Task 06 pending guard)"
+    },
+    {
+      "gate": "G10",
+      "artifact_path": "artifacts/G10/g10_campaign_summary.json",
+      "size_bytes": 67193,
+      "sha256": "5744f6639d5ac9f34318676dd5a93f17ef6b973c1ed3f9d474a9290ec44ed20a",
+      "certified_summary": "28 fault scenarios: 16/16 (100%) recoverable, 12/12 unrecoverable"
+    },
+    {
+      "gate": "G11",
+      "artifact_path": "artifacts/G11/g11_results.json",
+      "size_bytes": 599622,
+      "sha256": "f79cd35f0eac3c094de594d0fd1fa52bd667c53885e714bd21a36c7a96b3759d",
+      "certified_summary": "229/229 (100%) 4.0h W088 endurance + 269/270 benchmark (270/270 verified)"
+    },
+    {
+      "gate": "G11",
+      "artifact_path": "artifacts/G11/g11_acceptance.txt",
+      "size_bytes": 9604,
+      "sha256": "c8f78fa336fca4127ea8203028c830896e0b20dfadbdc3daaedbe9479c3983f1",
+      "certified_summary": "OVERALL GATE G11 ACCEPTANCE VERDICT: PASS"
+    }
+  ],
+  "horner_collaboration_questions": [
+    {
+      "id": "Q1_HEADLESS_CLI_COMPILER",
+      "topic": "Headless CLI Compiler & Syntax Verification Switch (K5Cmp.dll / Cscape.exe)",
+      "summary": "Expose non-interactive CLI compile flag or K5Cmp.dll C-ABI entrypoint to run syntax/compile checks without an interactive winsta0\\Default GUI session."
+    },
+    {
+      "id": "Q2_W5EDITST_PROGRAMMATIC_API",
+      "topic": "Programmatic Text & AST Access for W5EditST.dll",
+      "summary": "Document internal Win32 messages or COM interfaces to read/write W5EditSt POU buffers and Dialog 108 variable tables directly in memory."
+    },
+    {
+      "id": "Q3_CFBF_CSP_STREAM_SCHEMA",
+      "topic": "Official Specification for .csp CFBF / OLE2 Stream Layout & Checksums",
+      "summary": "Share internal stream structure and CRC rules for .csp/.cpj containers to enable offline semantic diffing and validation."
+    },
+    {
+      "id": "Q4_GREDIT_HMI_OBJECT_BINDING",
+      "topic": "Deterministic HMI Object Property Automation in GrEdit",
+      "summary": "Provide command IDs or XML/CSV screen object import/export hooks in GrEdit to instantiate and bind HMI widgets without modal dialog timing hazards."
+    },
+    {
+      "id": "Q5_ST_TO_LADDER_INTEROP",
+      "topic": "Roadmap for Native IEC 61131-3 ST <-> Ladder Interoperability",
+      "summary": "Clarify roadmap for PLCopen XML import/export or intermediate IL/FBD cross-compilation in Cscape 10.x/11.x (currently BLOCKED_NATIVE)."
+    },
+    {
+      "id": "Q6_UIAUTOMATION_ACCESSIBILITY",
+      "topic": "UIAutomation Accessibility Metadata for SysTreeView32 & Dockable Panes",
+      "summary": "Populate standard AutomationId and ValuePattern providers across Project Navigator (45010), Output Window (45011), and W5EditLD rung grids."
+    }
+  ]
+}

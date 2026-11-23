@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial Multi-Stage Reverse Osmosis (RO) Desalination ODE Simulation verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W131",
+    "gate": "Gate G7 Plant Modeling / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial Multi-Stage Reverse Osmosis ODE Simulator",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "Pure ST POU verified; %R920..%R927 and %M214..%M216 bound into AST."
+      },
+      {
+        "stage": 2,
+        "check": "Kedem_Katchalsky_And_Solution_Diffusion_Hydrodynamics",
+        "passed": true,
+        "details": "Membrane transport verified: J_w(15C)=15.7 < J_w(25C)=20.0 < J_w(35C)=24.8 LMH; Van 't Hoff Pi(32g/L)=2497.5 kPa, Pi(64g/L)=4995.0 kPa."
+      },
+      {
+        "stage": 3,
+        "check": "Film_Theory_Concentration_Polarization_Dynamics",
+        "passed": true,
+        "details": "Concentration polarization verified: Gamma(10LMH)=1.087 < Gamma(20LMH)=1.181 < Gamma(30LMH)=1.284; low crossflow vel elevates Gamma=1.357."
+      },
+      {
+        "stage": 4,
+        "check": "Multi_Stage_Membrane_Element_Mass_Balances",
+        "passed": true,
+        "details": "Two-stage balances verified: Recovery=76.0%, Rejection=99.25%, Q_perm=1520.0 L/h, Q_conc=480.0 L/h, C_perm=240.0 ppm."
+      },
+      {
+        "stage": 5,
+        "check": "High_Order_RK4_With_Adaptive_Substepping",
+        "passed": true,
+        "details": "RK4 integrator stable: P_feed=5500.0 kPa, J_w=19.9 LMH, C_perm=240.5 ppm, Gamma=1.18."
+      },
+      {
+        "stage": 6,
+        "check": "Dual_Stoichiometric_Mass_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation verified: volumetric residual=0.000e+00 m3/s (< 1e-10), solute mass residual=0.000e+00 kg/s (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "High_Pressure_Burst_Trip_And_Pump_Lockout",
+        "passed": true,
+        "details": "High pressure burst safety verified: %M214 cleared=True, %R927=0x9C01, HP pump permissive disabled."
+      },
+      {
+        "stage": 8,
+        "check": "Critical_Fouling_Trip_And_Automated_Flush_Cycle",
+        "passed": true,
+        "details": "Fouling & flush interlocks verified: %M215 asserted (0x9C02)=True, %M216 flush asserted (0x9C04)=True."
+      },
+      {
+        "stage": 9,
+        "check": "Permeate_Salinity_Excursion_Register_Sync_And_Anti_Ladder",
+        "passed": true,
+        "details": "Registers synced: %R920=55000, %R921=15106, %R922=4894, %R923=32000, %R924=240, %R925=118, %R926=2336, %R927=0x0000; Salinity excursion 0x9C03=True; Anti-ladder rejection asserted."
+      }
+    ],
+    "metrics": {
+      "feed_pressure_kpa": 5500.0,
+      "permeate_flow_l_h": 1510.6311867236082,
+      "concentrate_flow_l_h": 489.36881327639185,
+      "feed_tds_ppm": 32000.0,
+      "permeate_tds_ppm": 240.45425188447433,
+      "polarization_factor": 1.180313650721789,
+      "net_driving_pressure_kpa": 233.60053300828804,
+      "water_recovery_pct": 75.53155933618041,
+      "salt_rejection_pct": 99.24784238706816,
+      "volumetric_flow_residual_m3_s": 0.0,
+      "solute_mass_balance_residual_kg_s": 3.469446951953614e-18
+    },
+    "register_map": {
+      "analog_registers": "%R920..%R927",
+      "discrete_coils": "%M214..%M216"
+    },
+    "timestamp": "2026-10-04T19:18:53Z"
+  }
+}

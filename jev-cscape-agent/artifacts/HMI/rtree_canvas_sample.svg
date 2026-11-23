@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+    <rect width="1200" height="750" fill="#0D1117" />
+    <rect class="rtree-mbr-depth-1" x="100.0" y="100.0" width="850.0" height="550.0" fill="#10B981" fill-opacity="0.04" stroke="#10B981" stroke-width="2.0" stroke-dasharray="6 3" /><rect class="rtree-mbr-depth-0" x="100.0" y="100.0" width="250.0" height="300.0" fill="#38BDF8" fill-opacity="0.04" stroke="#38BDF8" stroke-width="1.2"  /><rect class="rtree-mbr-depth-0" x="800.0" y="500.0" width="150.0" height="150.0" fill="#38BDF8" fill-opacity="0.04" stroke="#38BDF8" stroke-width="1.2"  /><rect class="rtree-mbr-depth-0" x="400.0" y="400.0" width="150.0" height="150.0" fill="#38BDF8" fill-opacity="0.04" stroke="#38BDF8" stroke-width="1.2"  />
+    
+    
+    <!-- Query Window Reticle Overlay -->
+    <g id="query-window-reticle" class="query-reticle">
+        <rect x="750.0" y="450.0" width="250.0" height="250.0"
+              fill="#06B6D4" fill-opacity="0.12" stroke="#06B6D4" stroke-width="2.0" stroke-dasharray="4 2" />
+        <text x="756.0" y="464.0" fill="#06B6D4"
+              font-family="monospace" font-size="10" font-weight="bold">QUERY WINDOW (2 MATCHES)</text>
+    </g>
+        
+    <g id="rtree-obj-1" class="scada-object"><rect x="100.0" y="100.0" width="100.0" height="100.0" rx="4" fill="#10B981" fill-opacity="0.75" stroke="#059669" stroke-width="1.6" /><text x="150.0" y="154.0" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">TANK_A</text></g><g id="rtree-obj-2" class="scada-object"><rect x="250.0" y="150.0" width="100.0" height="100.0" rx="4" fill="#10B981" fill-opacity="0.75" stroke="#059669" stroke-width="1.6" /><text x="300.0" y="204.0" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">PUMP_B</text></g><g id="rtree-obj-3" class="scada-object"><rect x="120.0" y="300.0" width="100.0" height="100.0" rx="4" fill="#10B981" fill-opacity="0.75" stroke="#059669" stroke-width="1.6" /><text x="170.0" y="354.0" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">VALVE_C</text></g><g id="rtree-obj-4" class="scada-object"><rect x="800.0" y="500.0" width="100.0" height="100.0" rx="4" fill="#10B981" fill-opacity="0.75" stroke="#059669" stroke-width="1.6" /><text x="850.0" y="554.0" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">REACTOR_D</text></g><g id="rtree-obj-5" class="scada-object"><rect x="850.0" y="550.0" width="100.0" height="100.0" rx="4" fill="#10B981" fill-opacity="0.75" stroke="#059669" stroke-width="1.6" /><text x="900.0" y="604.0" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">COOLER_E</text></g><g id="rtree-obj-6" class="scada-object"><rect x="400.0" y="400.0" width="100.0" height="100.0" rx="4" fill="#F59E0B" fill-opacity="0.75" stroke="#D97706" stroke-width="1.6" /><text x="450.0" y="454.0" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">BOILER_6</text></g><g id="rtree-obj-7" class="scada-object"><rect x="450.0" y="450.0" width="100.0" height="100.0" rx="4" fill="#F59E0B" fill-opacity="0.75" stroke="#D97706" stroke-width="1.6" /><text x="500.0" y="504.0" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">STEAM_7</text></g>
+    
+    <!-- Decoupled High-Contrast HUD Telemetry Scorecard -->
+    <g id="hud-telemetry-scorecard">
+        <rect x="24" y="20" width="1152" height="85" rx="8" fill="#05080C" stroke="#334155" stroke-width="1.2" />
+        <text x="40" y="46" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="bold">HORNER OCS SPATIAL R-TREE CANVAS (W297)</text>
+        <text x="40" y="68" fill="#CBD5E1" font-family="monospace" font-size="11">POU: RTreeCanvasSync | OBJECTS: 7 | DEPTH: 1/12 | MATCHES: 2 | SELECTED: #5 | AREA: 4675x100px^2 | HAZARD: 30.0px (VIOLATIONS: 0)</text>
+        <text x="40" y="88" fill="#94A3B8" font-family="monospace" font-size="10">%R2580=7 | %R2581=1 | %R2582=2 | %R2583=5 | %R2584=4675 | %R2585=300 | %R2586=0 | %R2587=0x0000 | %M602=1 | %M603=0</text>
+
+        <!-- Status Pill Box -->
+        <rect x="830" y="30" width="330" height="40" rx="6" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-width="1.5" />
+        <text x="995" y="55" fill="#10B981" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">NORMAL OPERATION</text>
+    </g>
+    
+</svg>

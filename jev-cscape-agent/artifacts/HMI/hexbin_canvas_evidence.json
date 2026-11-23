@@ -1,0 +1,81 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Deterministic verification: 9/9 stages passed.",
+  "data": {
+    "work_package": "W225",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Hexagonal Binning Heatmap & Density Scatter SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Grammar_AST_Validation",
+        "passed": true,
+        "details": "Verified 'HexbinCanvasSync' and 'HexbinHeatmapScadaSync' POUs with SecurityGuard & STParser across Horner registers %R1860..%R1867 and %M434..%M435."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Interception",
+        "passed": true,
+        "details": "Rejected 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 3,
+        "check": "2D_Regular_Hexagonal_Tessellation_Geometry_And_Quantization",
+        "passed": true,
+        "details": "Verified regular hex tessellation (R=22.0 px, apothem r_in=19.05 px), pointy/flat axial quantization, and 6-vertex polygon geometry."
+      },
+      {
+        "stage": 4,
+        "check": "Point_Distribution_Density_Aggregation_And_Canonical_Telemetry",
+        "passed": true,
+        "details": "Verified canonical distribution: 500 points across 48 bins, Max=42, Mean=10.4, Peak at (45.0, 28.0) scaled (450, 280)."
+      },
+      {
+        "stage": 5,
+        "check": "Density_Scaling_Modes_And_Perceptual_Color_Gradients",
+        "passed": true,
+        "details": "Verified Linear vs Logarithmic density normalization curves and Cool-to-Warm, Magma, and Plasma multi-stop perceptual gradient synthesis."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Safety_Interlocks_High_Density_Cluster_Alarm",
+        "passed": true,
+        "details": "Verified %M435 assertion when MaxHexBinDensity > 35, de-assertion when density <= 35, and nominal recovery."
+      },
+      {
+        "stage": 7,
+        "check": "Diagnostic_Fault_Injection_Singularity_Empty_And_Overflow_Faults",
+        "passed": true,
+        "details": "Verified 0xF101 (Tessellation Singularity), 0xF102 (Empty Dataset), 0xF103 (Density Overflow), and 0xF104 (SVG Render Fault) with %R1867 latching and nominal reset."
+      },
+      {
+        "stage": 8,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Layout",
+        "passed": true,
+        "details": "Verified standalone W3C SVG 1.1 with WCAG 2.1 AAA contrast (> 18:1), 48 <polygon> hex bins, reticle crosshairs, HUD scorecard, and colorbar legend -> artifacts\\HMI\\hexbin_canvas_sample.svg."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_ILogicUnit_Scan_Cycle",
+        "passed": true,
+        "details": "Verified %R1860..%R1867 (48, 500, 42, 104, 450, 280, 22, 0) and %M434..%M435 (True, True) with PrivilegeMode.SYSTEM and discrete ILogicUnit scan cycle execution."
+      }
+    ],
+    "metrics": {
+      "total_active_hex_bins_count": 48,
+      "total_sample_points_count": 500,
+      "max_hex_bin_density_count": 42,
+      "mean_hex_bin_density_scaled": 104,
+      "peak_density_hex_x_scaled": 450,
+      "peak_density_hex_y_scaled": 280,
+      "hex_tessellation_radius_px": 22,
+      "high_density_cluster_alarm_active": true,
+      "diagnostic_code": "0x0000",
+      "wcag_badge_contrast": 18.3,
+      "wcag_text_contrast": 18.09
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "EtherCAT SubDevice Protocol Adapter verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W088",
+    "gate": "Gate G8 / G4",
+    "component": "Industrial EtherCAT SubDevice Protocol Telemetry Adapter",
+    "vendor_id": "0x00000059 (Horner APG)",
+    "product_code": "0x00000102",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R490..%R495 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "ESM_State_Machine_Sequential_Transitions",
+        "passed": true,
+        "details": "Sequential state transitions Init -> PreOp -> SafeOp -> Op succeeded cleanly."
+      },
+      {
+        "stage": 3,
+        "check": "ESM_Illegal_Transition_Rejection_And_AL_Code",
+        "passed": true,
+        "details": "Illegal skip transition Init -> Op rejected with AL status code 0x0011."
+      },
+      {
+        "stage": 4,
+        "check": "CoE_SDO_Upload_Horner_Vendor_Identity",
+        "passed": true,
+        "details": "SDO expedited upload read Vendor ID 0x00000059 (Horner APG)."
+      },
+      {
+        "stage": 5,
+        "check": "CoE_SDO_Download_Expedited_Write",
+        "passed": true,
+        "details": "SDO download wrote 0x1234 to 0x6000:01 and synced to %R492 (4660)."
+      },
+      {
+        "stage": 6,
+        "check": "CoE_SDO_Abort_Code_Exception_Trapping",
+        "passed": true,
+        "details": "Invalid object access generated SDO Abort 0x06020000."
+      },
+      {
+        "stage": 7,
+        "check": "FMMU_Cyclic_LRW_Process_Data_Exchange_WKC",
+        "passed": true,
+        "details": "LRW process datagram exchanged inputs and outputs with WKC increment +3 (expected 3)."
+      },
+      {
+        "stage": 8,
+        "check": "Distributed_Clocks_Sub_Microsecond_Jitter",
+        "passed": true,
+        "details": "DC clock jitter measured 120 ns (< 1000 ns threshold) and logged to %R494."
+      },
+      {
+        "stage": 9,
+        "check": "Fault_Trip_And_M115_Reset_Handshake",
+        "passed": true,
+        "details": "Jitter alarm tripped %R490 Bit 6 and %M115 reset handshake restored normal operation."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R490..%R495",
+      "discrete_coils": "%M114..%M115",
+      "values": {
+        "%R490": 435,
+        "%R491": 8,
+        "%R492": -21555,
+        "%R493": -4351,
+        "%R494": 0,
+        "%R495": 259,
+        "%M114": true,
+        "%M115": false
+      }
+    },
+    "timestamp": "2026-10-03T01:49:46Z"
+  }
+}

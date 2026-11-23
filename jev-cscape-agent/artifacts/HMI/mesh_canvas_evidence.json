@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W321 Delaunay Mesh & Morton Canvas Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W321",
+    "gate": "G9",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment_and_platform_check",
+        "passed": true,
+        "timing_ms": 0.009,
+        "details": "Python 3.12.10 on win32; jev_cscape simulation, parser, and W321 modules verified."
+      },
+      {
+        "stage": 2,
+        "name": "mesh_constants_and_register_mappings",
+        "passed": true,
+        "timing_ms": 0.006,
+        "details": "Horner OCS %R2820..%R2827, %M658..%M659, diagnostic codes 0x0000/0x8420/0x8421, and status bits verified."
+      },
+      {
+        "stage": 3,
+        "name": "pure_python_mesh_delaunay_triangulation",
+        "passed": true,
+        "timing_ms": 0.5,
+        "details": "Bowyer-Watson Delaunay triangulation (5 triangles), empty-circumcircle criterion, quality factor rho, and barycentric interpolation verified."
+      },
+      {
+        "stage": 4,
+        "name": "morton_zorder_spatial_mesh_indexing",
+        "passed": true,
+        "timing_ms": 4.549,
+        "details": "Morton Z-order curve bit interleaving bijection, 2D continuous-to-discrete mapping, and spatial sorting verified."
+      },
+      {
+        "stage": 5,
+        "name": "spatial_proximity_hazard_and_collision_trip",
+        "passed": true,
+        "timing_ms": 5.939,
+        "details": "Spatial proximity collision trip, coil %M659 alarm latch, 0x8420 diagnostic emission, and nominal reset verified."
+      },
+      {
+        "stage": 6,
+        "name": "register_table_synchronization_and_signed_masks",
+        "passed": true,
+        "timing_ms": 4.458,
+        "details": "Horner OCS %R2820..%R2827 and %M658..%M659 synchronized; signed 16-bit masks and 0x8420 verified."
+      },
+      {
+        "stage": 7,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "passed": true,
+        "timing_ms": 1.183,
+        "details": "Pure ST POU 'MeshCanvasSync' AST validated; ladder contacts, coils, rungs, and mnemonics strictly rejected."
+      },
+      {
+        "stage": 8,
+        "name": "svg_scada_canvas_rasterization_and_wcag_contrast",
+        "passed": true,
+        "timing_ms": 4.914,
+        "details": "W3C SVG 1.1 generated with Delaunay mesh polygons; WCAG AAA contrast ratio verified (20.07:1 >= 18:1)."
+      },
+      {
+        "stage": 9,
+        "name": "multi_cycle_simulation_soak_and_evidence_emission",
+        "passed": true,
+        "timing_ms": 1.988,
+        "details": "Multi-cycle closed loop scan (5 cycles) and deterministic cryptographic evidence manifest generated."
+      }
+    ],
+    "svg_sample_path": "artifacts/HMI/mesh_canvas_sample.svg",
+    "svg_sha256": "c574b1b81b0b45b8918a97fcf9add7bb8da9da98e562d02be1757a897b5b1a01",
+    "evidence_sha256": "cc212a111eb456dea896354d59d13f4aa1400ec9a742c604b8957b8d34a84a1b"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "EtherNet/IP & CIP Protocol Telemetry Adapter verified cleanly (6/6 checks passed).",
+  "data": {
+    "work_package": "W079",
+    "gate": "Gate G8 / G4",
+    "checks_passed": 6,
+    "total_checks": 6,
+    "vendor_id": "0x0059 (Horner Electric)",
+    "product_name": "HE-EXL1E2",
+    "product_code": 102,
+    "revision": "10.2",
+    "input_assembly_size_bytes": 32,
+    "output_assembly_size_bytes": 16,
+    "registered_session_handle": "0x00020001",
+    "registers": {
+      "%R400": 23,
+      "%R401": 1,
+      "%R402": 3,
+      "%R403": 3,
+      "%R404": 77,
+      "%R405": 0,
+      "%M93": true,
+      "%M94": false
+    },
+    "timestamp": "2026-10-03T01:02:23Z"
+  }
+}

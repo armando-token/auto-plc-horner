@@ -1,0 +1,58 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Adaptive Gain PID Self-Tuner & Loop Decoupler verified: RLS parameter estimation, Cohen-Coon tuning, 2D bilinear gain scheduling, MIMO feedforward decoupling, and Horner OCS register space synchronization (%R160..%R169, %M48..%M50) passed.",
+  "data": {
+    "work_package": "W059",
+    "gate": "G7",
+    "timestamp_utc": "2026-10-02T21:29:41.657451+00:00",
+    "parameter_estimator": {
+      "method": "Recursive Least Squares (RLS) with Exponential Forgetting",
+      "forgetting_factor": 0.985,
+      "covariance_trace": 1.0195,
+      "samples_processed": 102,
+      "identified_process_k": 0.0216,
+      "identified_tau_s": 2.5115
+    },
+    "tuning_engine": {
+      "method": "COHEN_COON",
+      "adapted_kp": 25.0,
+      "adapted_ti_s": 1.1374,
+      "adapted_td_s": 0.1755,
+      "safety_bounds": {
+        "kp_limits": [
+          0.05,
+          25.0
+        ],
+        "ti_limits_s": [
+          0.2,
+          600.0
+        ],
+        "td_limits_s": [
+          0.0,
+          60.0
+        ]
+      }
+    },
+    "feedforward_decoupler": {
+      "d21_gain": 0.42,
+      "d12_gain": -0.015,
+      "decoupler_active": true
+    },
+    "horner_ocs_register_map": {
+      "%R160": "Adapted Kp * 100",
+      "%R161": "Adapted Ti * 10 (tenths of sec)",
+      "%R162": "Adapted Td * 10 (tenths of sec)",
+      "%R163": "Identified Process Gain K * 100",
+      "%R164": "Identified Time Constant Tau * 10",
+      "%R165": "Status Word Bitmask (RLS, PE, Adaptation, Decoupler)",
+      "%R166": "Feedforward Valve Offset Counts",
+      "%R167": "Feedforward Heater Offset Counts",
+      "%R168": "Decoupling Gain D21 * 100",
+      "%R169": "Decoupling Gain D12 * 10000",
+      "%M48": "Enable Adaptation Coil",
+      "%M49": "Enable Decoupler Coil",
+      "%M50": "Reset Tuner Coil"
+    }
+  }
+}

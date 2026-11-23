@@ -1,0 +1,157 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Safety Multi-Point Target & Originator Engine (W214) verified cleanly (9/9 stages passed).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "data": {
+    "work_package": "W214",
+    "standards": [
+      "ODVA CIP Networks Library Volume 5 (CIP Safety)",
+      "Class 0x39 (Safety Supervisor Object)",
+      "Class 0x3A (Safety Validator Object)",
+      "Class 0x3B (Safety Connection Object)",
+      "IEC 61784-3-2 / IEC 61508 SIL 3",
+      "IEC 61131-3 Structured Text"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Validation_And_Anti_Ladder_Security_Guard",
+        "passed": true,
+        "details": "Pure IEC 61131-3 ST validated; all 10 registers bound; ladder constructs intercepted."
+      },
+      {
+        "stage": 2,
+        "check": "Safety_Network_Number_TUNID_OUNID_And_Signature_Enforcement",
+        "passed": true,
+        "details": "SNN formatting/parsing, TUNID/OUNID matching, and rogue SNN signature rejection verified."
+      },
+      {
+        "stage": 3,
+        "check": "Dual_Channel_Diversified_Architecture_And_Payload_Cross_Comparison",
+        "passed": true,
+        "details": "Channel A / Channel B complement verified; bit-flip discrepancy triggered 0xE602 fault."
+      },
+      {
+        "stage": 4,
+        "check": "Dual_Safety_Checksum_CRC_S1_And_CRC_S2_Calculation_And_Corruption_Trip",
+        "passed": true,
+        "details": "CRC-S1 and inverted CRC-S2 verified; single-bit CRC corruption caused 0xE603 fault."
+      },
+      {
+        "stage": 5,
+        "check": "Expected_Packet_Interval_EPI_Watchdog_Timer_And_Timeout_Detection",
+        "passed": true,
+        "details": "EPI watchdog silence monitored; 60.0 ms expiration tripped 0xE601 into SAFE_STATE."
+      },
+      {
+        "stage": 6,
+        "check": "Ping_Request_Ping_Response_Heartbeat_Handshake_And_Latency_Metrics",
+        "passed": true,
+        "details": "Ping-pong round-trip measured; mean/max latencies calculated and scaled x10 ms."
+      },
+      {
+        "stage": 7,
+        "check": "Packet_Repetition_Detection_And_Sequence_Number_Monotonicity",
+        "passed": true,
+        "details": "Monotonic 16-bit sequence progression verified; replayed sequence number 11 rejected."
+      },
+      {
+        "stage": 8,
+        "check": "Multi_Point_Dual_Mode_8_Connection_State_Machine_Lifecycle",
+        "passed": true,
+        "details": "8 concurrent safety connections provisioned across Originator/Target; HEALTHY, DEGRADED, and FAULTED states confirmed."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Safety_Interlocks",
+        "passed": true,
+        "details": "Horner OCS %R1750..%R1757 and %M408..%M409 synced; 0xE603 trip and operator reset verified."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_Validation_And_Anti_Ladder_Security_Guard",
+        "passed": true,
+        "details": "Pure IEC 61131-3 ST validated; all 10 registers bound; ladder constructs intercepted."
+      },
+      {
+        "stage": 2,
+        "check": "Safety_Network_Number_TUNID_OUNID_And_Signature_Enforcement",
+        "passed": true,
+        "details": "SNN formatting/parsing, TUNID/OUNID matching, and rogue SNN signature rejection verified."
+      },
+      {
+        "stage": 3,
+        "check": "Dual_Channel_Diversified_Architecture_And_Payload_Cross_Comparison",
+        "passed": true,
+        "details": "Channel A / Channel B complement verified; bit-flip discrepancy triggered 0xE602 fault."
+      },
+      {
+        "stage": 4,
+        "check": "Dual_Safety_Checksum_CRC_S1_And_CRC_S2_Calculation_And_Corruption_Trip",
+        "passed": true,
+        "details": "CRC-S1 and inverted CRC-S2 verified; single-bit CRC corruption caused 0xE603 fault."
+      },
+      {
+        "stage": 5,
+        "check": "Expected_Packet_Interval_EPI_Watchdog_Timer_And_Timeout_Detection",
+        "passed": true,
+        "details": "EPI watchdog silence monitored; 60.0 ms expiration tripped 0xE601 into SAFE_STATE."
+      },
+      {
+        "stage": 6,
+        "check": "Ping_Request_Ping_Response_Heartbeat_Handshake_And_Latency_Metrics",
+        "passed": true,
+        "details": "Ping-pong round-trip measured; mean/max latencies calculated and scaled x10 ms."
+      },
+      {
+        "stage": 7,
+        "check": "Packet_Repetition_Detection_And_Sequence_Number_Monotonicity",
+        "passed": true,
+        "details": "Monotonic 16-bit sequence progression verified; replayed sequence number 11 rejected."
+      },
+      {
+        "stage": 8,
+        "check": "Multi_Point_Dual_Mode_8_Connection_State_Machine_Lifecycle",
+        "passed": true,
+        "details": "8 concurrent safety connections provisioned across Originator/Target; HEALTHY, DEGRADED, and FAULTED states confirmed."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Safety_Interlocks",
+        "passed": true,
+        "details": "Horner OCS %R1750..%R1757 and %M408..%M409 synced; 0xE603 trip and operator reset verified."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "register_map": {
+      "%R1750": "OperationalMode",
+      "%R1751": "ActiveSafetyConnectionCount",
+      "%R1752": "MeanSafetyLatencyMsScaled",
+      "%R1753": "MaxSafetyLatencyMsScaled",
+      "%R1754": "ConsecutiveErrorCount",
+      "%R1755": "ActiveFaultMask",
+      "%R1756": "NetworkSafetyState",
+      "%R1757": "DiagnosticStatusCode",
+      "%M408": "CipSafetyMultiPointActive",
+      "%M409": "SafetyTripFaultActive"
+    },
+    "registers": {
+      "%R1750": 3,
+      "%R1751": 4,
+      "%R1752": 125,
+      "%R1753": 180,
+      "%R1754": 0,
+      "%R1755": 0,
+      "%R1756": 1,
+      "%R1757": 0,
+      "%M408": true,
+      "%M409": false
+    },
+    "timestamp": "2026-10-06T06:57:42Z"
+  }
+}

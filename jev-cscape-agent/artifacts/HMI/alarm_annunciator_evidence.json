@@ -1,0 +1,76 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "SCADA Alarm Annunciator and Multi-Tone Audio Synthesizer verified: ISA-18.1 Sequence A & M state machine verified, pure-Python 44.1kHz 16-bit PCM synthesizer generated 4 standard alarm sound profiles, and Horner register table (%M30..%M33, %R220..%R225, %AQ3) synchronized cleanly.",
+  "data": {
+    "work_package": "W056",
+    "gate": "G9",
+    "timestamp_utc": "2026-10-02T21:17:05.323360+00:00",
+    "audio_synthesis": {
+      "sample_rate_hz": 44100,
+      "bit_depth": 16,
+      "channels": 1,
+      "encoding": "Linear PCM (RIFF/WAVE)",
+      "synthesis_time_ms": 109.47,
+      "profiles_synthesized": [
+        {
+          "priority": "CRITICAL",
+          "waveform": "800Hz / 1000Hz Warble Klaxon",
+          "duration_sec": 1.0,
+          "bytes": 88244
+        },
+        {
+          "priority": "HIGH",
+          "waveform": "1200Hz Intermittent Pulsed Tone",
+          "duration_sec": 1.0,
+          "bytes": 88244
+        },
+        {
+          "priority": "MEDIUM",
+          "waveform": "659Hz / 523Hz Sequential Chime",
+          "duration_sec": 0.7,
+          "bytes": 61782
+        },
+        {
+          "priority": "INFO",
+          "waveform": "440Hz Decayed Ping",
+          "duration_sec": 0.35,
+          "bytes": 30912
+        }
+      ],
+      "wav_artifact_path": "C:/HornerAI/jev-cscape-agent/artifacts/HMI/critical_alarm_sample.wav",
+      "wav_file_size_bytes": 88244
+    },
+    "annunciator_sequences": {
+      "standards_verified": [
+        "ANSI/ISA-18.1 Sequence A",
+        "ANSI/ISA-18.1 Sequence M"
+      ],
+      "total_points_configured": 8,
+      "operator_actions_tested": [
+        "ALARM_TRIP",
+        "SILENCE",
+        "ACKNOWLEDGE",
+        "RESET",
+        "LAMP_TEST"
+      ],
+      "lamp_modes_verified": [
+        "OFF",
+        "FAST_FLASH_2HZ",
+        "SLOW_FLASH_0.5HZ",
+        "STEADY"
+      ]
+    },
+    "horner_ocs_register_map": {
+      "%M30": "Operator Silence Pushbutton",
+      "%M31": "Operator Acknowledge Pushbutton",
+      "%M32": "Operator Reset Pushbutton",
+      "%M33": "Operator Lamp Test Pushbutton",
+      "%R220": "Master Annunciator State Bitfield & Unack Count",
+      "%AQ3": "Master Acoustic Horn Volume Command (0..32000)",
+      "%R221": "Trip Status Bitmask",
+      "%R222": "Lamp Illumination Bitmask",
+      "%R223": "Acknowledged Status Bitmask"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+(* Pure IEC 61131-3 Structured Text for G9_TASK_02 *)
+PROGRAM G9_TASK_02_Control
+VAR
+    T1_LEVEL_PV AT %R121 : REAL := 0.0;
+    TANK_01_SETPOINT AT %R122 : REAL := 750.0;
+    TANK_01_LOW_SP AT %R123 : REAL := 200.0;
+    TANK_01_HIGH_SP AT %R124 : REAL := 950.0;
+    SYS_AUTO_MODE AT %M61 : BOOL := TRUE;
+    SYS_ESTOP_ACTIVE AT %I15 : BOOL := FALSE;
+    T1_INLET_BOOST AT %Q15 : BOOL := FALSE;
+    T1_RAPID_DRAIN AT %Q16 : BOOL := FALSE;
+    T1_HIGH_PUMP AT %Q17 : BOOL := FALSE;
+    ton_delay : TON;
+END_VAR
+
+(* Safety & Permissive *)
+IF NOT SYS_ESTOP_ACTIVE AND SYS_AUTO_MODE THEN
+    (* Level regulation *)
+    IF T1_LEVEL_PV < TANK_01_SETPOINT THEN
+        T1_INLET_BOOST := TRUE;
+    ELSIF T1_LEVEL_PV >= TANK_01_HIGH_SP THEN
+        T1_INLET_BOOST := FALSE;
+    END_IF;
+
+    (* Low level pump protection *)
+    IF T1_LEVEL_PV <= TANK_01_LOW_SP THEN
+        T1_HIGH_PUMP := FALSE;
+    ELSE
+        T1_HIGH_PUMP := TRUE;
+    END_IF;
+ELSE
+    T1_INLET_BOOST := FALSE;
+    T1_HIGH_PUMP := FALSE;
+    T1_RAPID_DRAIN := FALSE;
+END_IF;
+
+ton_delay(IN := T1_INLET_BOOST, PT := T#3s);
+END_PROGRAM

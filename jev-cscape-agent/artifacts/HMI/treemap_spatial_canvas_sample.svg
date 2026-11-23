@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" version="1.1">
+  <defs>
+    <style type="text/css">
+      .hud-title { font-family: monospace, sans-serif; font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+      .hud-label { font-family: -apple-system, sans-serif; font-size: 9px; font-weight: 600; fill: #CBD5E1; text-transform: uppercase; }
+      .hud-val { font-family: monospace, sans-serif; font-size: 12px; font-weight: 700; fill: #06B6D4; }
+      .area-title { font-family: -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #FFFFFF; }
+      .unit-tag { font-family: monospace, sans-serif; font-size: 10px; font-weight: 700; fill: #FFFFFF; }
+      .unit-name { font-family: -apple-system, sans-serif; font-size: 9px; font-weight: 600; fill: #FFFFFF; }
+      .unit-metric { font-family: monospace, sans-serif; font-size: 9px; font-weight: 500; fill: #CBD5E1; }
+    </style>
+    <linearGradient id="hud-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#0B0F19"/>
+  <!-- SCORECARD HUD HEADER BANNER -->
+  <g id="interactive-hud">
+    <rect x="24.0" y="12.0" width="1152.0" height="64.0" rx="6" ry="6" fill="url(#hud-grad)" stroke="#21262D" stroke-width="1.5"/>
+    <text x="40.0" y="36.0" class="hud-title">CSCAPE SCADA // TREEMAP SPATIAL ASSET CANVAS (W261)</text>
+    <text x="40.0" y="56.0" class="hud-label">PLANT ROOT</text>
+    <rect x="384.0" y="28.0" width="140" height="32" rx="4" fill="#050811" stroke="#10B981" stroke-width="1.2"/>
+    <text x="396.0" y="48.0" font-family="monospace" font-size="10" font-weight="700" fill="#FFFFFF">ACTIVE | NOMINAL</text>
+    <rect x="538.0" y="24.0" width="98" height="40" rx="3" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+    <text x="544.0" y="38.0" class="hud-label">TOTAL NODES (%R2220)</text>
+    <text x="544.0" y="56.0" class="hud-val" fill="#FFFFFF">21</text>
+    <rect x="642.0" y="24.0" width="98" height="40" rx="3" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+    <text x="648.0" y="38.0" class="hud-label">ZOOM LEVEL (%R2221)</text>
+    <text x="648.0" y="56.0" class="hud-val" fill="#06B6D4">TIER 0</text>
+    <rect x="746.0" y="24.0" width="98" height="40" rx="3" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+    <text x="752.0" y="38.0" class="hud-label">ACTIVE NODE (%R2222)</text>
+    <text x="752.0" y="56.0" class="hud-val" fill="#06B6D4">ID #1</text>
+    <rect x="850.0" y="24.0" width="98" height="40" rx="3" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+    <text x="856.0" y="38.0" class="hud-label">WORST ASPECT (%R2223)</text>
+    <text x="856.0" y="56.0" class="hud-val" fill="#10B981">2.23:1</text>
+    <rect x="954.0" y="24.0" width="98" height="40" rx="3" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+    <text x="960.0" y="38.0" class="hud-label">TOTAL WEIGHT (%R2224)</text>
+    <text x="960.0" y="56.0" class="hud-val" fill="#F59E0B">12,000 kg/h</text>
+    <rect x="1058.0" y="24.0" width="98" height="40" rx="3" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+    <text x="1064.0" y="38.0" class="hud-label">OVERALL HEALTH (%R2226)</text>
+    <text x="1064.0" y="56.0" class="hud-val" fill="#10B981">96.40%</text>
+  </g>
+  <!-- SPATIAL TREEMAP LAYOUT VIEWPORT -->
+  <g id="treemap-viewport">
+    <g id="tile-AREA_ALK" class="treemap-spatial-tile" data-asset-id="AREA_ALK" data-tier="1" data-bbox="24.0,88.0,595.2,355.1" data-aspect-ratio="1.68">
+      <rect x="24.0" y="88.0" width="595.2" height="355.1" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.2"/>
+      <rect x="24.0" y="88.0" width="595.2" height="24.0" rx="4" ry="4" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+      <text x="32.0" y="104.0" class="area-title">Alkylation &amp; HF Treater [3,200 kg/h]</text>
+      <g id="unit-UNIT_R101" class="treemap-spatial-tile" data-asset-id="UNIT_R101" data-tier="2" data-bbox="28.0,112.0,220.2,327.1" data-aspect-ratio="1.49">
+        <rect x="28.0" y="112.0" width="220.2" height="327.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="32.0" y="116.0" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="36.0" y="126.0" class="unit-tag">R-101</text>
+        <text x="34.0" y="140.0" class="unit-name">Acid Contactor Reactor R</text>
+        <text x="34.0" y="152.0" class="unit-metric">1,200 kg/h | 98.0%</text>
+      </g>
+      <g id="unit-UNIT_C102" class="treemap-spatial-tile" data-asset-id="UNIT_C102" data-tier="2" data-bbox="248.2,112.0,201.8,327.1" data-aspect-ratio="1.62">
+        <rect x="248.2" y="112.0" width="201.8" height="327.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="252.2" y="116.0" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="256.2" y="126.0" class="unit-tag">C-102</text>
+        <text x="254.2" y="140.0" class="unit-name">Isobutane Fractionator C</text>
+        <text x="254.2" y="152.0" class="unit-metric">1,100 kg/h | 96.0%</text>
+      </g>
+      <g id="unit-UNIT_E103" class="treemap-spatial-tile" data-asset-id="UNIT_E103" data-tier="2" data-bbox="450.0,112.0,165.2,327.1" data-aspect-ratio="1.98">
+        <rect x="450.0" y="112.0" width="165.2" height="327.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="454.0" y="116.0" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="458.0" y="126.0" class="unit-tag">E-103</text>
+        <text x="456.0" y="140.0" class="unit-name">Acid Settler Cooler E-10</text>
+        <text x="456.0" y="152.0" class="unit-metric">900 kg/h | 95.5%</text>
+      </g>
+    </g>
+    <g id="tile-AREA_CCR" class="treemap-spatial-tile" data-asset-id="AREA_CCR" data-tier="1" data-bbox="619.2,88.0,556.8,332.1" data-aspect-ratio="1.68">
+      <rect x="619.2" y="88.0" width="556.8" height="332.1" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.2"/>
+      <rect x="619.2" y="88.0" width="556.8" height="24.0" rx="4" ry="4" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+      <text x="627.2" y="104.0" class="area-title">Catalytic Reforming CCR [2,800 kg/h]</text>
+      <g id="unit-UNIT_H201" class="treemap-spatial-tile" data-asset-id="UNIT_H201" data-tier="2" data-bbox="623.2,112.0,205.8,304.1" data-aspect-ratio="1.48">
+        <rect x="623.2" y="112.0" width="205.8" height="304.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="627.2" y="116.0" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="631.2" y="126.0" class="unit-tag">H-201</text>
+        <text x="629.2" y="140.0" class="unit-name">Reformer Charge Heater H</text>
+        <text x="629.2" y="152.0" class="unit-metric">1,050 kg/h | 97.0%</text>
+      </g>
+      <g id="unit-UNIT_R202" class="treemap-spatial-tile" data-asset-id="UNIT_R202" data-tier="2" data-bbox="829.0,112.0,196.0,304.1" data-aspect-ratio="1.55">
+        <rect x="829.0" y="112.0" width="196.0" height="304.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="833.0" y="116.0" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="837.0" y="126.0" class="unit-tag">R-202</text>
+        <text x="835.0" y="140.0" class="unit-name">Radial Multi-Bed Reactor</text>
+        <text x="835.0" y="152.0" class="unit-metric">1,000 kg/h | 98.5%</text>
+      </g>
+      <g id="unit-UNIT_K203" class="treemap-spatial-tile" data-asset-id="UNIT_K203" data-tier="2" data-bbox="1025.0,112.0,147.0,304.1" data-aspect-ratio="2.07">
+        <rect x="1025.0" y="112.0" width="147.0" height="304.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="1029.0" y="116.0" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="1033.0" y="126.0" class="unit-tag">K-203</text>
+        <text x="1031.0" y="140.0" class="unit-name">Hydrogen Recycle Compres</text>
+        <text x="1031.0" y="152.0" class="unit-metric">750 kg/h | 96.0%</text>
+      </g>
+    </g>
+    <g id="tile-AREA_FCC" class="treemap-spatial-tile" data-asset-id="AREA_FCC" data-tier="1" data-bbox="24.0,443.1,595.2,332.9" data-aspect-ratio="1.79">
+      <rect x="24.0" y="443.1" width="595.2" height="332.9" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.2"/>
+      <rect x="24.0" y="443.1" width="595.2" height="24.0" rx="4" ry="4" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+      <text x="32.0" y="459.1" class="area-title">Fluid Catalytic Cracking [3,000 kg/h]</text>
+      <g id="unit-UNIT_R301" class="treemap-spatial-tile" data-asset-id="UNIT_R301" data-tier="2" data-bbox="28.0,467.1,244.7,304.9" data-aspect-ratio="1.25">
+        <rect x="28.0" y="467.1" width="244.7" height="304.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="32.0" y="471.1" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="36.0" y="481.1" class="unit-tag">R-301</text>
+        <text x="34.0" y="495.1" class="unit-name">Riser Reaction Section R</text>
+        <text x="34.0" y="507.1" class="unit-metric">1,250 kg/h | 95.0%</text>
+      </g>
+      <g id="unit-UNIT_V302" class="treemap-spatial-tile" data-asset-id="UNIT_V302" data-tier="2" data-bbox="272.7,467.1,205.5,304.9" data-aspect-ratio="1.48">
+        <rect x="272.7" y="467.1" width="205.5" height="304.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="276.7" y="471.1" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="280.7" y="481.1" class="unit-tag">V-302</text>
+        <text x="278.7" y="495.1" class="unit-name">Regenerator Vessel V-302</text>
+        <text x="278.7" y="507.1" class="unit-metric">1,050 kg/h | 94.5%</text>
+      </g>
+      <g id="unit-UNIT_C303" class="treemap-spatial-tile" data-asset-id="UNIT_C303" data-tier="2" data-bbox="478.2,467.1,137.0,304.9" data-aspect-ratio="2.23">
+        <rect x="478.2" y="467.1" width="137.0" height="304.9" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="482.2" y="471.1" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="486.2" y="481.1" class="unit-tag">C-303</text>
+        <text x="484.2" y="495.1" class="unit-name">Main Fractionator Column</text>
+        <text x="484.2" y="507.1" class="unit-metric">700 kg/h | 95.0%</text>
+      </g>
+    </g>
+    <g id="tile-AREA_SRU" class="treemap-spatial-tile" data-asset-id="AREA_SRU" data-tier="1" data-bbox="619.2,420.1,278.4,355.9" data-aspect-ratio="1.28">
+      <rect x="619.2" y="420.1" width="278.4" height="355.9" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.2"/>
+      <rect x="619.2" y="420.1" width="278.4" height="24.0" rx="4" ry="4" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+      <text x="627.2" y="436.1" class="area-title">Sulfur Recovery Unit SRU [1,500 kg/h]</text>
+      <g id="unit-UNIT_F401" class="treemap-spatial-tile" data-asset-id="UNIT_F401" data-tier="2" data-bbox="623.2,444.1,270.4,142.1" data-aspect-ratio="1.90">
+        <rect x="623.2" y="444.1" width="270.4" height="142.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="627.2" y="448.1" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="631.2" y="458.1" class="unit-tag">F-401</text>
+        <text x="629.2" y="472.1" class="unit-name">Claus Thermal Stage Furn</text>
+        <text x="629.2" y="484.1" class="unit-metric">650 kg/h | 99.0%</text>
+      </g>
+      <g id="unit-UNIT_R402" class="treemap-spatial-tile" data-asset-id="UNIT_R402" data-tier="2" data-bbox="623.2,586.2,159.1,185.8" data-aspect-ratio="1.17">
+        <rect x="623.2" y="586.2" width="159.1" height="185.8" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="627.2" y="590.2" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="631.2" y="600.2" class="unit-tag">R-402</text>
+        <text x="629.2" y="614.2" class="unit-name">Selective Catalytic Reac</text>
+        <text x="629.2" y="626.2" class="unit-metric">500 kg/h | 98.0%</text>
+      </g>
+      <g id="unit-UNIT_T403" class="treemap-spatial-tile" data-asset-id="UNIT_T403" data-tier="2" data-bbox="782.3,586.2,111.3,185.8" data-aspect-ratio="1.67">
+        <rect x="782.3" y="586.2" width="111.3" height="185.8" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="786.3" y="590.2" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="790.3" y="600.2" class="unit-tag">T-403</text>
+        <text x="788.3" y="614.2" class="unit-name">Tail Gas Scrubber Column</text>
+        <text x="788.3" y="626.2" class="unit-metric">350 kg/h | 97.5%</text>
+      </g>
+    </g>
+    <g id="tile-AREA_UTL" class="treemap-spatial-tile" data-asset-id="AREA_UTL" data-tier="1" data-bbox="897.6,420.1,278.4,355.9" data-aspect-ratio="1.28">
+      <rect x="897.6" y="420.1" width="278.4" height="355.9" rx="4" ry="4" fill="#161B22" stroke="#21262D" stroke-width="1.2"/>
+      <rect x="897.6" y="420.1" width="278.4" height="24.0" rx="4" ry="4" fill="#050811" stroke="#21262D" stroke-width="0.8"/>
+      <text x="905.6" y="436.1" class="area-title">Utilities &amp; Cogeneration [1,500 kg/h]</text>
+      <g id="unit-UNIT_B501" class="treemap-spatial-tile" data-asset-id="UNIT_B501" data-tier="2" data-bbox="901.6,444.1,270.4,142.1" data-aspect-ratio="1.90">
+        <rect x="901.6" y="444.1" width="270.4" height="142.1" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="905.6" y="448.1" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="909.6" y="458.1" class="unit-tag">B-501</text>
+        <text x="907.6" y="472.1" class="unit-name">High-Pressure Steam Boil</text>
+        <text x="907.6" y="484.1" class="unit-metric">650 kg/h | 96.0%</text>
+      </g>
+      <g id="unit-UNIT_TG502" class="treemap-spatial-tile" data-asset-id="UNIT_TG502" data-tier="2" data-bbox="901.6,586.2,175.0,185.8" data-aspect-ratio="1.06">
+        <rect x="901.6" y="586.2" width="175.0" height="185.8" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="905.6" y="590.2" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="909.6" y="600.2" class="unit-tag">TG-502</text>
+        <text x="907.6" y="614.2" class="unit-name">Cogeneration Turbogenera</text>
+        <text x="907.6" y="626.2" class="unit-metric">550 kg/h | 95.0%</text>
+      </g>
+      <g id="unit-UNIT_CT503" class="treemap-spatial-tile" data-asset-id="UNIT_CT503" data-tier="2" data-bbox="1076.6,586.2,95.4,185.8" data-aspect-ratio="1.95">
+        <rect x="1076.6" y="586.2" width="95.4" height="185.8" rx="3" ry="3" fill="#10B981" fill-opacity="0.25" stroke="#21262D" stroke-width="1.0"/>
+        <rect x="1080.6" y="590.2" width="48" height="14" rx="2" fill="#050811" stroke="#10B981" stroke-width="0.8"/>
+        <text x="1084.6" y="600.2" class="unit-tag">CT-503</text>
+        <text x="1082.6" y="614.2" class="unit-name">Cooling Tower Array CT-5</text>
+        <text x="1082.6" y="626.2" class="unit-metric">300 kg/h | 95.5%</text>
+      </g>
+    </g>
+  </g>
+</svg>

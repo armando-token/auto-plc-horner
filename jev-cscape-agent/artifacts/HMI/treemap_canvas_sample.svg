@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="anomaly-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="hud-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.94"/>
+    </linearGradient>
+    <style type="text/css">
+      .hud-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 13px; font-weight: bold; fill: #F8FAFC; }
+      .hud-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; font-weight: 500; fill: #94A3B8; text-transform: uppercase; }
+      .hud-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 12px; font-weight: 700; fill: #38BDF8; }
+      .unit-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; font-weight: 700; fill: #E2E8F0; }
+      .sub-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 9px; font-weight: 600; fill: #94A3B8; }
+      .leaf-id { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 11px; font-weight: 700; fill: #F8FAFC; }
+      .leaf-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 9px; font-weight: 600; fill: #E2E8F0; }
+    </style>
+  </defs>
+  <rect width="1200" height="750" fill="#0F172A"/>
+  <!-- DIAGNOSTIC HUD HEADER BANNER -->
+  <g id="diagnostic-hud">
+    <rect x="20.0" y="12.0" width="1160.0" height="64.0" rx="6" ry="6" fill="url(#hud-bg)" stroke="#334155" stroke-width="1.5"/>
+    <text x="36.0" y="36.0" class="hud-title">CSCAPE SQUARIFIED TREEMAP // RESOURCE &amp; THERMAL ALLOCATION ENGINE</text>
+    <rect x="36.0" y="46.0" width="112" height="18" rx="3" fill="#047857" fill-opacity="0.3" stroke="#10B981" stroke-width="1"/>
+    <text x="42.0" y="59.0" font-family="monospace" font-size="9" font-weight="700" fill="#34D399">ACTIVE | OPTIMAL</text>
+    <text x="380.0" y="36.0" class="hud-label">TOTAL RESOURCE</text>
+    <text x="380.0" y="56.0" class="hud-val" fill="#38BDF8">1,640.0 kW</text>
+    <text x="490.0" y="36.0" class="hud-label">LEAF NODES</text>
+    <text x="490.0" y="56.0" class="hud-val" fill="#F8FAFC">16</text>
+    <text x="600.0" y="36.0" class="hud-label">MEAN ASPECT</text>
+    <text x="600.0" y="56.0" class="hud-val" fill="#34D399">1.65</text>
+    <text x="710.0" y="36.0" class="hud-label">PEAK CONSUMER</text>
+    <text x="710.0" y="56.0" class="hud-val" fill="#FBBF24">K-301 (190 kW)</text>
+    <text x="820.0" y="36.0" class="hud-label">MAX THERMAL</text>
+    <text x="820.0" y="56.0" class="hud-val" fill="#EF4444">98.5 °C</text>
+    <text x="930.0" y="36.0" class="hud-label">OVERLOAD ALARM</text>
+    <text x="930.0" y="56.0" class="hud-val" fill="#EF4444">ALARM TRIP</text>
+    <text x="1040.0" y="36.0" class="hud-label">IMBALANCE TRIP</text>
+    <text x="1040.0" y="56.0" class="hud-val" fill="#10B981">NORMAL</text>
+  </g>
+  <!-- MULTI-LEVEL SQUARIFIED TREEMAP CANVAS -->
+  <g id="treemap-canvas">
+    <g id="unit-UNIT_CRACKING">
+      <rect x="20.0" y="86.0" width="367.8" height="650.0" rx="4" ry="4" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+      <rect x="20.0" y="86.0" width="367.8" height="24.0" rx="4" ry="4" fill="#1E293B" stroke="#475569" stroke-width="0.8"/>
+      <text x="28.0" y="102.0" class="unit-title">Cracking &amp; Pyrolysis Unit A [520 kW]</text>
+      <g id="sub-SUB_FURNACE_A">
+        <rect x="23.0" y="113.0" width="361.8" height="369.6" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="23.0" y="113.0" width="361.8" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="29.0" y="125.0" class="sub-title">Furnace Bank A (310 kW)</text>
+        <g id="eq-F-101">
+          <rect x="25.0" y="133.0" width="184.7" height="347.6" rx="3" ry="3" fill="#EF4A40" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="26.0" y="134.0" width="182.7" height="345.6" rx="3" ry="3" fill="none" stroke="#EF4444" stroke-width="3" stroke-dasharray="8,4" filter="url(#anomaly-glow)">
+            <animate attributeName="stroke-opacity" values="1.0;0.25;1.0" dur="1.2s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="47.3" y="285.8" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="117.3" y="299.8" text-anchor="middle" class="leaf-id">F-101</text>
+          <text x="117.3" y="313.8" text-anchor="middle" class="leaf-meta">160kW | 98°C !</text>
+        </g>
+        <g id="eq-F-102">
+          <rect x="209.7" y="133.0" width="173.1" height="347.6" rx="3" ry="3" fill="#F48819" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="226.2" y="285.8" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="296.2" y="299.8" text-anchor="middle" class="leaf-id">F-102</text>
+          <text x="296.2" y="313.8" text-anchor="middle" class="leaf-meta">150kW | 82°C</text>
+        </g>
+      </g>
+      <g id="sub-SUB_QUENCH">
+        <rect x="23.0" y="482.6" width="361.8" height="250.4" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="23.0" y="482.6" width="361.8" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="29.0" y="494.6" class="sub-title">Quench &amp; Heat Recovery (210 kW)</text>
+        <g id="eq-P-101A">
+          <rect x="25.0" y="502.6" width="204.5" height="228.4" rx="3" ry="3" fill="#48A3B2" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="57.2" y="595.8" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="127.2" y="609.8" text-anchor="middle" class="leaf-id">P-101A</text>
+          <text x="127.2" y="623.8" text-anchor="middle" class="leaf-meta">120kW | 55°C</text>
+        </g>
+        <g id="eq-E-102">
+          <rect x="229.5" y="502.6" width="153.3" height="228.4" rx="3" ry="3" fill="#0EA9D3" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="236.1" y="595.8" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="306.1" y="609.8" text-anchor="middle" class="leaf-id">E-102</text>
+          <text x="306.1" y="623.8" text-anchor="middle" class="leaf-meta">90kW | 42°C</text>
+        </g>
+      </g>
+    </g>
+    <g id="unit-UNIT_FRACTIONATION">
+      <rect x="387.8" y="438.4" width="587.1" height="297.6" rx="4" ry="4" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+      <rect x="387.8" y="438.4" width="587.1" height="24.0" rx="4" ry="4" fill="#1E293B" stroke="#475569" stroke-width="0.8"/>
+      <text x="395.8" y="454.4" class="unit-title">Fractionation Train B [380 kW]</text>
+      <g id="sub-SUB_DEETHANIZER">
+        <rect x="390.8" y="465.4" width="336.4" height="267.6" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="390.8" y="465.4" width="336.4" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="396.8" y="477.4" class="sub-title">Deethanizer Column (220 kW)</text>
+        <g id="eq-E-201">
+          <rect x="392.8" y="485.4" width="196.4" height="245.6" rx="3" ry="3" fill="#F49610" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="421.0" y="587.2" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="491.0" y="601.2" text-anchor="middle" class="leaf-id">E-201</text>
+          <text x="491.0" y="615.2" text-anchor="middle" class="leaf-meta">130kW | 78°C</text>
+        </g>
+        <g id="eq-P-202A">
+          <rect x="589.2" y="485.4" width="136.0" height="245.6" rx="3" ry="3" fill="#0EA5E9" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="593.2" y="587.2" width="128.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="657.2" y="601.2" text-anchor="middle" class="leaf-id">P-202A</text>
+          <text x="657.2" y="615.2" text-anchor="middle" class="leaf-meta">90kW | 48°C</text>
+        </g>
+      </g>
+      <g id="sub-SUB_DEPROPANIZER">
+        <rect x="727.2" y="465.4" width="244.7" height="267.6" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="727.2" y="465.4" width="244.7" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="733.2" y="477.4" class="sub-title">Depropanizer Train (160 kW)</text>
+        <g id="eq-P-205">
+          <rect x="729.2" y="485.4" width="240.7" height="145.8" rx="3" ry="3" fill="#2FA4C9" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="779.5" y="537.3" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="849.5" y="551.3" text-anchor="middle" class="leaf-id">P-205</text>
+          <text x="849.5" y="565.3" text-anchor="middle" class="leaf-meta">95kW | 52°C</text>
+        </g>
+        <g id="eq-K-203">
+          <rect x="729.2" y="631.2" width="240.7" height="99.8" rx="3" ry="3" fill="#0FACC4" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="779.5" y="660.1" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="849.5" y="674.1" text-anchor="middle" class="leaf-id">K-203</text>
+          <text x="849.5" y="688.1" text-anchor="middle" class="leaf-meta">65kW | 38°C</text>
+        </g>
+      </g>
+    </g>
+    <g id="unit-UNIT_COMPRESSION">
+      <rect x="387.8" y="86.0" width="587.1" height="352.4" rx="4" ry="4" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+      <rect x="387.8" y="86.0" width="587.1" height="24.0" rx="4" ry="4" fill="#1E293B" stroke="#475569" stroke-width="0.8"/>
+      <text x="395.8" y="102.0" class="unit-title">Gas Compression Unit C [450 kW]</text>
+      <g id="sub-SUB_CRACKED_GAS">
+        <rect x="390.8" y="113.0" width="374.5" height="322.4" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="390.8" y="113.0" width="374.5" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="396.8" y="125.0" class="sub-title">Cracked Gas Train (290 kW)</text>
+        <g id="eq-K-301">
+          <rect x="392.8" y="133.0" width="242.7" height="300.4" rx="3" ry="3" fill="#F16231" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="444.2" y="262.2" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="514.2" y="276.2" text-anchor="middle" class="leaf-id">K-301</text>
+          <text x="514.2" y="290.2" text-anchor="middle" class="leaf-meta">190kW | 92°C</text>
+        </g>
+        <g id="eq-P-303">
+          <rect x="635.5" y="133.0" width="127.7" height="300.4" rx="3" ry="3" fill="#79A282" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="639.5" y="262.2" width="119.7" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="699.4" y="276.2" text-anchor="middle" class="leaf-id">P-303</text>
+          <text x="699.4" y="290.2" text-anchor="middle" class="leaf-meta">100kW | 61°C</text>
+        </g>
+      </g>
+      <g id="sub-SUB_CHILLING">
+        <rect x="765.3" y="113.0" width="206.6" height="322.4" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="765.3" y="113.0" width="206.6" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="771.3" y="125.0" class="sub-title">Refrigeration Loop (160 kW)</text>
+        <g id="eq-C-302">
+          <rect x="767.3" y="133.0" width="202.6" height="197.1" rx="3" ry="3" fill="#0FAEB9" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="798.6" y="210.6" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="868.6" y="224.6" text-anchor="middle" class="leaf-id">C-302</text>
+          <text x="868.6" y="238.6" text-anchor="middle" class="leaf-meta">105kW | 35°C</text>
+        </g>
+        <g id="eq-P-304">
+          <rect x="767.3" y="330.1" width="202.6" height="103.3" rx="3" ry="3" fill="#0FB0AE" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="798.6" y="360.8" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="868.6" y="374.8" text-anchor="middle" class="leaf-id">P-304</text>
+          <text x="868.6" y="388.8" text-anchor="middle" class="leaf-meta">55kW | 32°C</text>
+        </g>
+      </g>
+    </g>
+    <g id="unit-UNIT_UTILITIES">
+      <rect x="974.9" y="86.0" width="205.1" height="650.0" rx="4" ry="4" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+      <rect x="974.9" y="86.0" width="205.1" height="24.0" rx="4" ry="4" fill="#1E293B" stroke="#475569" stroke-width="0.8"/>
+      <text x="982.9" y="102.0" class="unit-title">Utilities &amp; Steam Unit D [290 kW]</text>
+      <g id="sub-SUB_FEEDWATER">
+        <rect x="977.9" y="113.0" width="199.1" height="363.4" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="977.9" y="113.0" width="199.1" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="983.9" y="125.0" class="sub-title">Boiler Feedwater Skid (170 kW)</text>
+        <g id="eq-P-401A">
+          <rect x="979.9" y="133.0" width="195.1" height="220.9" rx="3" ry="3" fill="#A2A05A" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="1007.4" y="222.5" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="1077.4" y="236.5" text-anchor="middle" class="leaf-id">P-401A</text>
+          <text x="1077.4" y="250.5" text-anchor="middle" class="leaf-meta">110kW | 66°C</text>
+        </g>
+        <g id="eq-P-402">
+          <rect x="979.9" y="353.9" width="195.1" height="120.5" rx="3" ry="3" fill="#0EA8DA" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="1007.4" y="393.2" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="1077.4" y="407.2" text-anchor="middle" class="leaf-id">P-402</text>
+          <text x="1077.4" y="421.2" text-anchor="middle" class="leaf-meta">60kW | 44°C</text>
+        </g>
+      </g>
+      <g id="sub-SUB_COOLING">
+        <rect x="977.9" y="476.4" width="199.1" height="256.6" rx="3" ry="3" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+        <rect x="977.9" y="476.4" width="199.1" height="18.0" rx="2" ry="2" fill="#1E293B" fill-opacity="0.9" stroke="#475569" stroke-width="0.5"/>
+        <text x="983.9" y="488.4" class="sub-title">Cooling Water Circulation (120 kW)</text>
+        <g id="eq-CT-401">
+          <rect x="979.9" y="496.4" width="195.1" height="136.8" rx="3" ry="3" fill="#0FB3A2" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="1007.4" y="543.9" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="1077.4" y="557.9" text-anchor="middle" class="leaf-id">CT-401</text>
+          <text x="1077.4" y="571.9" text-anchor="middle" class="leaf-meta">70kW | 29°C</text>
+        </g>
+        <g id="eq-P-404">
+          <rect x="979.9" y="633.3" width="195.1" height="97.7" rx="3" ry="3" fill="#10B597" fill-opacity="0.85" stroke="#1E293B" stroke-width="1"/>
+          <rect x="1007.4" y="661.1" width="140.0" height="42.0" rx="4" ry="4" fill="#0B0F19" fill-opacity="0.92" stroke="#334155" stroke-width="1"/>
+          <text x="1077.4" y="675.1" text-anchor="middle" class="leaf-id">P-404</text>
+          <text x="1077.4" y="689.1" text-anchor="middle" class="leaf-meta">50kW | 26°C</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

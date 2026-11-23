@@ -1,0 +1,88 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "ISA100.11a Protocol Engine & Wireless Mesh Manager verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W130",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial ISA100.11a (IEC 62734) Protocol Engine & Wireless Mesh Manager",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed POUs 'ISA100ManagerSync' and 'ISA100NetworkSync', verified bindings %R910..%R917 and %M212..%M213 with zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts, coils, and mnemonics strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "TDMA_Timeslot_Superframe_Slotted_And_Slow_Hopping",
+        "passed": true,
+        "details": "Verified slotted hopping (ch_0=11, ch_5_3=19), slow-hopping pattern of 16 channels, and collision guard."
+      },
+      {
+        "stage": 4,
+        "check": "Security_Manager_Join_Handshake_And_AES_CCM_MIC",
+        "passed": true,
+        "details": "Assigned short address 0x0002, negotiated 128-bit key, verified CCM* MIC and tamper rejection."
+      },
+      {
+        "stage": 5,
+        "check": "UAP_Object_Model_AI_DI_Concentrator_Encoding_Decoding",
+        "passed": true,
+        "details": "Decoded AI PV=125.4, DI state=True, Concentrator (2 AI, 2 DI channels)."
+      },
+      {
+        "stage": 6,
+        "check": "Multi_Hop_Mesh_Routing_Table_And_Path_Redundancy",
+        "passed": true,
+        "details": "Verified 2-hop route [4, 2, 1], spatial redundancy (True), and avg RSSI (-70.0 dBm)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Trips_0x9B01_0x9B02_0x9B03_0x9B04_And_Coils",
+        "passed": true,
+        "details": "Verified 0x9B01 Sync Timeout (%M213=TRUE, %M212=FALSE), 0x9B02 MIC Alarm, and 0x9B04 Node Disconnect."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scaled_Units",
+        "passed": true,
+        "details": "Verified %R910=0x0007, %R911=1, %R912=3, %R913=1254 (PV x10), %M212=TRUE, %M213=FALSE."
+      },
+      {
+        "stage": 9,
+        "check": "Network_Manager_Simulation_Cycle_And_Fault_Recovery_Pipeline",
+        "passed": true,
+        "details": "Simulated TDMA cycles, engaged 0x9B01 timeout trip (%M213=TRUE), recovered cleanly (%M212=TRUE, %M213=FALSE, %R917=0x0000)."
+      }
+    ],
+    "metrics": {
+      "max_nodes": 32,
+      "timeslot_duration_ms": 10,
+      "num_channels": 16,
+      "default_superframe_slots": 100,
+      "default_watchdog_timeout_s": 30.0
+    },
+    "register_map": {
+      "status_word": "%R910",
+      "active_nodes_count": "%R911",
+      "last_executed_object_service": "%R912",
+      "primary_variable_pv_scaled": "%R913",
+      "secondary_variable_sv_scaled": "%R914",
+      "average_mesh_rssi": "%R915",
+      "packet_counter": "%R916",
+      "diagnostic_event_code": "%R917",
+      "network_active_coil": "%M212",
+      "fault_trip_coil": "%M213"
+    },
+    "timestamp": "2026-10-04T19:19:50Z"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Sparkplug B Store-and-Forward Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W094",
+    "gate": "Gate G8 / G4",
+    "component": "Industrial MQTT Sparkplug B Historical Store-and-Forward (SpB SF) & Replay Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "IEC 61131-3 syntax verified, %R550..%R557 bound, ladder constructs strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Offline_Store_Spool_FIFO_Ingestion",
+        "passed": true,
+        "details": "Stored 150 messages in spool FIFO with original timestamps under disconnected state."
+      },
+      {
+        "stage": 3,
+        "check": "High_Water_Warning_And_Capacity_Threshold",
+        "passed": true,
+        "details": "Buffer capacity reached 80%: asserted coil %M129 and Bit 4 of %R557."
+      },
+      {
+        "stage": 4,
+        "check": "Spool_Buffer_Hard_Saturation_And_Drop_Policy",
+        "passed": true,
+        "details": "Buffer capped at 100%: dropped 50 overflow records with ERR_SPOOL_OVERFLOW."
+      },
+      {
+        "stage": 5,
+        "check": "Network_Restoration_And_Session_Handshake",
+        "passed": true,
+        "details": "Reconnected: bdSeq=1, seq reset and advanced to 2, entered DRAINING_REPLAY."
+      },
+      {
+        "stage": 6,
+        "check": "Throttled_Replay_And_Historical_Flagging",
+        "passed": true,
+        "details": "Drained 50 messages throttled; validated Metric.is_historical=True in Protobuf binary wire format."
+      },
+      {
+        "stage": 7,
+        "check": "Dynamic_Drain_Time_Estimation_And_Convergence",
+        "passed": true,
+        "details": "Estimated drain time matched exactly (19s -> 0s) and converged to 0 with empty buffer."
+      },
+      {
+        "stage": 8,
+        "check": "Sequence_Number_Continuity_And_Rollover",
+        "passed": true,
+        "details": "Replayed 1000 historical packets with strict in-band seq modulo-256 rollover (final seq=234)."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "details": "Registers synced: %R550=0, %R551=0%, %R555=1000 replayed, %R557=0x0043, %M129=False."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R550..%R557",
+      "discrete_coils": "%M128..%M129",
+      "values": {
+        "%R550": 0,
+        "%R551": 0,
+        "%R552": 50,
+        "%R553": 0,
+        "%R554": 50,
+        "%R555": 1000,
+        "%R556": 0,
+        "%R557": 67,
+        "%M128": true,
+        "%M129": false
+      }
+    },
+    "timestamp": "2026-10-03T02:16:36Z"
+  }
+}

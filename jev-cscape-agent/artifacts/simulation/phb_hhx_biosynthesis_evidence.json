@@ -1,0 +1,141 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W287 PHB-HHx Biosynthesis Verification PASSED (9/9 stages).",
+  "data": {
+    "work_package": "W287",
+    "gate": "G7",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 1.158,
+        "details": "Inoculation growth verified: Biomass increased from 2.00 to 2.15 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "coupled_substrate_kinetics",
+        "passed": true,
+        "timing_ms": 0.829,
+        "details": "Coupled consumption of carbon substrate and nitrogen confirmed."
+      },
+      {
+        "stage": 3,
+        "name": "polymer_synthesis_and_accumulation",
+        "passed": true,
+        "timing_ms": 1.675,
+        "details": "PHB-HHx polymer synthesized from 0.50 to 0.50 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "tunable_3hhx_mol_fraction",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "3-hydroxyhexanoate fraction tuned at 12.3 mol% within target 5-20 mol% range."
+      },
+      {
+        "stage": 5,
+        "name": "precursor_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.309,
+        "details": "Precursor toxicity trip 0xF801 asserted, dosing shut off."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_excursion_trip",
+        "passed": true,
+        "timing_ms": 0.293,
+        "details": "Thermal excursion trip 0xF803 asserted upon temperature > 36\u00b0C."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.0,
+        "details": "Elemental mass residual 1.14e-13 < 1e-10 threshold."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.181,
+        "details": "Horner OCS register space %R2480..%R2487 and %M578..%M580 synchronized bit-exact."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 2.691,
+        "details": "PhbHhxBiosynthesisSync pure ST AST validated; ladder contacts rejected."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "initial_state_and_growth",
+        "passed": true,
+        "timing_ms": 1.158,
+        "details": "Inoculation growth verified: Biomass increased from 2.00 to 2.15 g/L."
+      },
+      {
+        "stage": 2,
+        "name": "coupled_substrate_kinetics",
+        "passed": true,
+        "timing_ms": 0.829,
+        "details": "Coupled consumption of carbon substrate and nitrogen confirmed."
+      },
+      {
+        "stage": 3,
+        "name": "polymer_synthesis_and_accumulation",
+        "passed": true,
+        "timing_ms": 1.675,
+        "details": "PHB-HHx polymer synthesized from 0.50 to 0.50 g/L."
+      },
+      {
+        "stage": 4,
+        "name": "tunable_3hhx_mol_fraction",
+        "passed": true,
+        "timing_ms": 0.001,
+        "details": "3-hydroxyhexanoate fraction tuned at 12.3 mol% within target 5-20 mol% range."
+      },
+      {
+        "stage": 5,
+        "name": "precursor_toxicity_trip",
+        "passed": true,
+        "timing_ms": 0.309,
+        "details": "Precursor toxicity trip 0xF801 asserted, dosing shut off."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_excursion_trip",
+        "passed": true,
+        "timing_ms": 0.293,
+        "details": "Thermal excursion trip 0xF803 asserted upon temperature > 36\u00b0C."
+      },
+      {
+        "stage": 7,
+        "name": "mass_conservation_residuals",
+        "passed": true,
+        "timing_ms": 0.0,
+        "details": "Elemental mass residual 1.14e-13 < 1e-10 threshold."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_sync",
+        "passed": true,
+        "timing_ms": 0.181,
+        "details": "Horner OCS register space %R2480..%R2487 and %M578..%M580 synchronized bit-exact."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "passed": true,
+        "timing_ms": 2.691,
+        "details": "PhbHhxBiosynthesisSync pure ST AST validated; ladder contacts rejected."
+      }
+    ]
+  }
+}

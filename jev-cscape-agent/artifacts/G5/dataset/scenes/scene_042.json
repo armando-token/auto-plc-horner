@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_042",
+  "file_name": "scene_042.png",
+  "original_source": "artifacts\\G3\\edit_roundtrip_steps\\pre_action_guard_main_disabled_1791695464.png",
+  "split": "reserved",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "519be73730252376d27918ea17c01d8b38dac39f9b86a440b8b9fabc3d8bbcfb",
+  "labels": {
+    "canvas_rect": [
+      124,
+      10,
+      1269,
+      541
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        275
+      ],
+      "canvas_nw": [
+        124,
+        10
+      ],
+      "canvas_se": [
+        1269,
+        541
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

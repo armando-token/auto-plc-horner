@@ -1,0 +1,804 @@
+﻿================================================================================
+GATE G12 - W091 REAL CLEAN-INSTALL OFFLINE VERIFICATION LOG
+Timestamp UTC : 2026-10-16T19:01:14Z
+Source Repo   : C:\HornerAI\jev-cscape-agent
+Clean Clone   : C:\HornerAI\g12_clean_install
+Git HEAD      : 78cb88d79134e3656cb5cc113810bb04ce805c69
+.env Present  : False (MUST BE False)
+================================================================================
+
+--- [STEP 1] scripts/g12_clean_install.ps1 ---
+======================================================================
+ JEV Cscape Agent - Gate G12 (W091) Clean-Install & Checksum Verifier 
+ Repo Root : C:\HornerAI\g12_clean_install
+ Mode      : CLEAN-INSTALL + VERIFY
+======================================================================
+[1/5] Python Runtime: 3.12.10 (64bit)
+[2/5] Lockfiles verified: requirements.lock.txt & DEPENDENCIES.lock.json (0 git remotes)
+[3/5] Creating virtual environment at .venv and installing pinned lockfile...
+Requirement already satisfied: annotated-types==0.8.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 1)) (0.8.0)
+Requirement already satisfied: anyio==4.15.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 2)) (4.15.0)
+Requirement already satisfied: attrs==26.1.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 3)) (26.1.0)
+Requirement already satisfied: cffi==2.1.1 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 4)) (2.1.1)
+Requirement already satisfied: click==8.5.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 5)) (8.5.0)
+Requirement already satisfied: colorama==0.4.6 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 6)) (0.4.6)
+Requirement already satisfied: comtypes==1.4.16 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 7)) (1.4.16)
+Requirement already satisfied: coverage==7.16.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 8)) (7.16.0)
+Requirement already satisfied: cryptography==50.0.1 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 9)) (50.0.1)
+Requirement already satisfied: h11==0.16.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 10)) (0.16.0)
+Requirement already satisfied: httpcore2==2.12.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 11)) (2.12.0)
+Requirement already satisfied: httpx2==2.12.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 12)) (2.12.0)
+Requirement already satisfied: idna==3.19 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 13)) (3.19)
+Requirement already satisfied: iniconfig==2.3.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 14)) (2.3.0)
+Requirement already satisfied: jsonschema==4.26.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 15)) (4.26.0)
+Requirement already satisfied: jsonschema-specifications==2025.9.1 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 16)) (2025.9.1)
+Requirement already satisfied: mcp==2.1.1 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 17)) (2.1.1)
+Requirement already satisfied: mcp-types==2.1.1 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 18)) (2.1.1)
+Requirement already satisfied: olefile==0.47 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 19)) (0.47)
+Requirement already satisfied: opentelemetry-api==1.44.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 20)) (1.44.0)
+Requirement already satisfied: packaging==26.3 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 21)) (26.3)
+Requirement already satisfied: pefile==2024.8.26 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 22)) (2024.8.26)
+Requirement already satisfied: pillow==12.3.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 23)) (12.3.0)
+Requirement already satisfied: pluggy==1.6.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 24)) (1.6.0)
+Requirement already satisfied: psutil==7.2.2 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 25)) (7.2.2)
+Requirement already satisfied: pycparser==3.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 26)) (3.0)
+Requirement already satisfied: pydantic==2.13.5 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 27)) (2.13.5)
+Requirement already satisfied: pydantic_core==2.46.5 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 28)) (2.46.5)
+Requirement already satisfied: Pygments==2.21.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 29)) (2.21.0)
+Requirement already satisfied: PyJWT==2.13.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 30)) (2.13.0)
+Requirement already satisfied: pytest==9.1.1 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 31)) (9.1.1)
+Requirement already satisfied: pytest-asyncio==1.4.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 32)) (1.4.0)
+Requirement already satisfied: pytest-cov==7.1.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 33)) (7.1.0)
+Requirement already satisfied: python-multipart==0.0.32 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 34)) (0.0.32)
+Requirement already satisfied: pywin32==312 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 35)) (312)
+Requirement already satisfied: pywinauto==0.6.9 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 36)) (0.6.9)
+Requirement already satisfied: referencing==0.37.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 37)) (0.37.0)
+Requirement already satisfied: rpds-py==2026.6.3 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 38)) (2026.6.3)
+Requirement already satisfied: six==1.17.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 39)) (1.17.0)
+Requirement already satisfied: sse-starlette==3.4.10 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 40)) (3.4.10)
+Requirement already satisfied: starlette==1.6.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 41)) (1.6.0)
+Requirement already satisfied: truststore==0.10.4 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 42)) (0.10.4)
+Requirement already satisfied: typing-inspection==0.4.4 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 43)) (0.4.4)
+Requirement already satisfied: typing_extensions==4.16.0 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 44)) (4.16.0)
+Requirement already satisfied: uiautomation==2.0.29 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 45)) (2.0.29)
+Requirement already satisfied: uvicorn==0.52.4 in c:\hornerai\g12_clean_install\.venv\lib\site-packages (from -r C:\HornerAI\g12_clean_install\requirements.lock.txt (line 46)) (0.52.4)
+powershell : 
+At line:13 char:1
++ powershell -ExecutionPolicy Bypass -File C:\HornerAI\g12_clean_instal ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\HornerAI\g12_clean_install\.venv\Scripts\python.exe -m pip install --upgrade pip
+      Python executable              : C:\HornerAI\g12_clean_install\.venv\Scripts\python.exe
+      Direct locked packages matched : 16/16
+      Total pinned packages matched  : 46/46
+      requirements.lock.txt raw SHA  : 586e889c2404070e269e9d2432a024db5ef8a8ad58615b899557746968cd675e
+      requirements.lock.txt norm SHA : 0bd63d6eab27f817e7c2b060a8c3f9fe4a7093836c87e544688e341ea0a3121f
+      pip freeze normalized SHA-256  : 0bd63d6eab27f817e7c2b060a8c3f9fe4a7093836c87e544688e341ea0a3121f
+      pip freeze == lockfile match   : True
+[4/5] Native Baseline Project Verified: work/disposable/p1_base.csp (SHA-256: 5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881)
+[5/5] Verifying external Horner Cscape 10.2 PE SHA-256 checksums (read-only, no GUI launch)...
+      [OK] Cscape.exe (17663488 bytes) -> 4b82560db103b4f26a9163bee3ae29439712c1c69ccaac11d0e898e51dcde405
+      [OK] W5EditST.dll (4174544 bytes) -> 67c7aca5634fb706a0f3f6637de282d7b5e52f7d451c78996d27b4979043e745
+      [OK] W5EditLD.dll (5082832 bytes) -> 45dd5b31379173feabf3801cbf1fc98e9f1e19c9a74ca76c28f4814196bb41ec
+      [OK] K5Cmp.dll (5231824 bytes) -> 423f4005626dbe0a6f1a04f6871fd5f4c5e726d614ec636f9a54af2027f88b2e
+      [OK] K5MW.dll (4033232 bytes) -> e62ca003be9ff8a7a84f2dd3e48318094341fd3055497fd6e46e4a61f25362ba
+      [OK] K5CBM.dll (3401424 bytes) -> 0c9b24926e5db1a9d807c9572e2bacc91b99d36bdd0425379620b7e04f7bb801
+======================================================================
+ W091 VERIFICATION RESULT: PASS (Proprietary Redistributed: FALSE)    
+======================================================================
+
+--- [STEP 2] Python Version & pip freeze Hash vs requirements.lock.txt Hash ---
+Python Executable          : C:\HornerAI\g12_clean_install\.venv\Scripts\python.exe
+Python Version             : 3.12.10 (64bit)
+requirements.lock.txt Raw  : 586e889c2404070e269e9d2432a024db5ef8a8ad58615b899557746968cd675e
+requirements.lock.txt Norm : 13c3929316cae5c55d542c4f71e3962fabf57a7c5fe14c2999e0eba752ca77e4 (46 packages)
+pip freeze Normalized Hash : 13c3929316cae5c55d542c4f71e3962fabf57a7c5fe14c2999e0eba752ca77e4 (46 packages)
+pip freeze == Lockfile     : True
+
+--- [STEP 3] G11 Offline Acceptance Verifier (scripts/g11_acceptance.py) ---
+================================================================================================
+GATE G11 OFFLINE READ-ONLY ACCEPTANCE REPORT (W084-W090)
+================================================================================================
+Results JSON Path       : C:\HornerAI\g12_clean_install\artifacts\G11\g11_results.json
+Checkpoint JSON Path    : C:\HornerAI\g12_clean_install\artifacts\G11\g11_endurance_checkpoint.json (exists=True)
+Campaign Log Path       : C:\HornerAI\g12_clean_install\artifacts\logs\g11_campaign.log (exists=True)
+Campaign Timestamp UTC  : 2026-10-16T05:11:11.878126+00:00
+Execution Mode          : live (endurance_only=True)
+Top-Level 4-State Status: status=success, error_code=None
+Recorded Duration (s)   : 14421.916s (4.01h)
+
+================================================================================================
+1. PER FAMILY + POLICY BENCHMARK SUCCESS / FAIL COUNTS
+================================================================================================
+1A. Trials Recorded in artifacts/G11/g11_results.json (n=229 live trials):
+Family     | Policy                | Total |  Pass |  Fail |    Rate | Wilson 95% CI     |    p50 ms |    p95 ms
+------------------------------------------------------------------------------------------------
+ladder     | jev_full              |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   61686.2 |   66548.7
+ladder     | rule_baseline         |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   61538.8 |   68045.3
+ladder     | llm_choice_baseline   |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   61938.8 |   70078.5
+hmi        | jev_full              |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   72291.5 |   99733.6
+hmi        | rule_baseline         |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   79993.2 |  108955.2
+hmi        | llm_choice_baseline   |    25 |    25 |     0 | 100.00% | [0.8668, 1.0000]  |   72533.6 |  103320.1
+st_var     | jev_full              |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   49475.3 |   57911.2
+st_var     | rule_baseline         |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   48630.5 |   57690.7
+st_var     | llm_choice_baseline   |    26 |    26 |     0 | 100.00% | [0.8713, 1.0000]  |   48565.7 |   57154.4
+------------------------------------------------------------------------------------------------
+TOTAL      | ALL_POLICIES          |   229 |   229 |     0 | 100.00% | [0.9835, 1.0000] |   61818.7 |   89285.0
+
+Per-Family Subtotals (artifacts/G11/g11_results.json):
+  - ladder  : 76/76 passed (100.00%), failed=0
+  - hmi     : 75/75 passed (100.00%), failed=0
+  - st_var  : 78/78 passed (100.00%), failed=0
+Per-Policy Subtotals (artifacts/G11/g11_results.json):
+  - jev_full             : 76/76 passed (100.00%), failed=0
+  - rule_baseline        : 76/76 passed (100.00%), failed=0
+  - llm_choice_baseline  : 77/77 passed (100.00%), failed=0
+
+1B. Full 270-Trial W084-W087 Benchmark Suite (30x3x3 in artifacts/logs/g11_campaign.log + copies/):
+Family     | Policy                | Total |  Pass |  Fail |    Rate | Notes
+------------------------------------------------------------------------------------------------
+ladder     | jev_full              |    30 |    29 |     1 |  96.67% | LADDER_19__jev_full fixed in f218227 & verified PASS in W088
+ladder     | rule_baseline         |    30 |    30 |     0 | 100.00% | 30/30 clean
+ladder     | llm_choice_baseline   |    30 |    30 |     0 | 100.00% | 30/30 clean
+hmi        | jev_full              |    30 |    30 |     0 | 100.00% | 30/30 clean
+hmi        | rule_baseline         |    30 |    30 |     0 | 100.00% | 30/30 clean
+hmi        | llm_choice_baseline   |    30 |    30 |     0 | 100.00% | 30/30 clean
+st_var     | jev_full              |    30 |    30 |     0 | 100.00% | 30/30 clean
+st_var     | rule_baseline         |    30 |    30 |     0 | 100.00% | 30/30 clean
+st_var     | llm_choice_baseline   |    30 |    30 |     0 | 100.00% | 30/30 clean
+------------------------------------------------------------------------------------------------
+TOTAL      | ALL_POLICIES          |   270 |   269 |     1 |  99.63% | 269/270 pre-f218227; 270/270 unique tasks verified across campaign
+
+================================================================================================
+2. W088 ENDURANCE WORKER SUMMARY (TRIAL COUNT, STATUS, FAILURES, DUPLICATES)
+================================================================================================
+Configured Endurance Horizon : 4.00 hours (14400.0s)
+Actual Endurance Elapsed     : 14415.929s (4.0044 hours)
+Halted By Horizon            : True (HORIZON_REACHED: elapsed_s=14415.93 >= max_duration_s=14400.00)
+Halted By Budget             : False
+Controlled Cscape Restarts   : 22 (interval=every 10 trials)
+W088 Endurance Trial Count   : 229 completed (remaining_queue=41, bounded_queue=270)
+W088 Status Counts (4-State) :
+  - success      : 229
+  - failed       : 0
+  - blocked      : 0
+  - inconclusive : 0
+W088 Endurance Failures List : [] (count=0)
+Prior 270-Benchmark Failures : ['G11_W084_LADDER_19__jev_full'] (count=1; healed in commit f218227 & verified PASS in W088 endurance as ENDURANCE_G11_W084_LADDER_19__jev_full)
+Duplicate Trial IDs (JSON)   : [] (unique=229/229, duplicates=0)
+Duplicate Trial IDs (Ckpt)   : [] (unique=229/229, duplicates=0)
+
+================================================================================================
+3. CORRUPTION CHECKS (SHA / REOPEN / COMPILE_CLEAN / CFBF)
+================================================================================================
+Baseline p1_base.csp Intact        : True (SHA-256=5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881)
+Pre-Reset SHA Matches Baseline     : 229/229
+Before-Edit SHA Matches Baseline   : 229/229
+Post-Save SHA Mutated (Non-Trivial): 229/229
+On-Disk .csp SHA Matches JSON      : 229/229
+On-Disk .csp OLE2/CFBF Reopen OK   : 229/229
+Cscape Error Check compile_clean   : 229/229 (100.00%)
+CFBF Binary Oracle cfbf_verified   : 229/229 (100.00%)
+Corrupted / Unreadable Trial Files : [] (count=0)
+Benchmark 270 On-Disk .csp Check   : files=270/270, sha_mutated=270/270, ole_cfbf_reopen_ok=270/270
+Safety & Scope Invariants          : zero_out_of_scope_writes=True, zero_blind_retries=True, zero_false_completions=True, zero_synthetic_results=True
+
+================================================================================================
+4. TOTALS: COST / TOKENS / API_CALLS
+================================================================================================
+4A. Totals in artifacts/G11/g11_results.json (n=229 trials):
+  - Total Cost (USD)     : $0.351280 (w088_endurance.spent_usd=$0.351280, cap=$25.000000)
+  - Total Input Tokens   : 130,623
+  - Total Output Tokens  : 25,895
+  - Total Tokens Used    : 156,518 (w088_endurance.total_tokens_used=156,518, cap=2,000,000)
+  - Total API Calls Made : 153 (w088_endurance.api_calls_made=153, HTTP_200=153, cap=1,000)
+
+Per-Policy Token / Cost / API Call Breakdown (artifacts/G11/g11_results.json):
+  - jev_full             : trials= 76, api_calls= 76, in_tokens= 76,551, out_tokens=19,709, total_tokens= 96,260, cost_usd=$0.233075
+  - rule_baseline        : trials= 76, api_calls=  0, in_tokens=      0, out_tokens=     0, total_tokens=      0, cost_usd=$0.000000
+  - llm_choice_baseline  : trials= 77, api_calls= 77, in_tokens= 54,072, out_tokens= 6,186, total_tokens= 60,258, cost_usd=$0.118205
+
+4B. 270-Trial W084-W087 Benchmark Phase Totals (from artifacts/logs/g11_campaign.log):
+  - Benchmark Trials     : 270 (269 passed, 1 pre-f218227 fail)
+  - Benchmark API Calls  : 180 (HTTP 200)
+  - Benchmark Tokens     : 184,414
+  - Benchmark Cost (USD) : $0.414160
+4C. Combined Live Campaign Totals (270 Benchmark + 229 Endurance = 499 Live Cscape Trials):
+  - Combined Live Trials : 499
+  - Combined API Calls   : 333
+  - Combined Tokens      : 340,932
+  - Combined Cost (USD)  : $0.765440
+
+================================================================================================
+5. PASS / FAIL VERDICT VS MEGAPLAN G11 CRITERIA (W084-W090)
+================================================================================================
+  [PASS] W084 Reserved 30x3 Disjoint Task Suite (90 unseen tasks) | total_tasks=90, disjoint=True, violations=0
+  [PASS] W085 Rule & LLM-Choice Baselines on Same Observer        | same_observer_verified=True, policies=3
+  [PASS] W086 Per-Stage Latency & Real HTTP Token/Cost Telemetry  | api_calls=153 (HTTP 200), tokens=156,518, cost=$0.351280
+  [PASS] W087 Balanced Schedule & Deterministic Project Reset     | base_p1_intact=True, pre_reset_sha_ok=229/229
+  [PASS] W088 Endurance Worker (Queue, Cap, Restarts, Checkpoint) | trials=229/229 PASS, restarts=22, horizon_reached=True
+  [PASS] W088 Corruption & Integrity (SHA, OLE2 Reopen, Compile)  | sha_match=229/229, reopen=229/229, compile_clean=229/229
+  [PASS] W089 Non-Parametric Median/p95 & 95% CIs Reported        | overall p50=61818.7ms, p95=89285.0ms, success_ci95=[0.9835, 1.0]
+  [PASS] W090 Zero Synthetic Results & Safety/Scope Invariants    | out_of_scope=0, blind_retries=0, false_completions=0, synthetic=0
+================================================================================================
+OVERALL GATE G11 ACCEPTANCE VERDICT: PASS
+================================================================================================
+
+--- [STEP 4] G12 Offline Release Verifier (scripts/g12_release_campaign.py) ---
+========================================================================================
+ GATE G12 OFFLINE ACCEPTANCE & CLOSURE REPORT (W091-W094 + W098 | G12_bank=blocked)
+========================================================================================
+Report Path          : artifacts/G12/g12_release_report.json
+Campaign Status      : success
+G12 Hardware Bank    : blocked (No physical PLC; W095-W097 fail-closed)
+Live Cscape Launched : False (Strictly Offline Mode)
+
+1. WORK PACKAGE DISPOSITION (W091-W098)
+----------------------------------------------------------------------------------------
+  W091 Clean-Install, Lockfile & Checksums : SUCCESS  (16 pkgs locked, Redistributed=False)
+  W092 User Package Docs (docs/G12/)       : SUCCESS  (8 files verified, 4.0h vs 24h limitation documented)
+  W093 Horner Technical Dossier & Index    : SUCCESS  (16 G0-G11 artifacts hashed, 6 Horner questions)
+  W094 Security, License & Coherence Audit : SUCCESS  (1709 tracked files scanned, 0 secrets, 0 .env commits)
+  W095 Physical PLC Bench Preparation      : BLOCKED  (POL-G12-COMMISSIONING-LOCKOUT)
+  W096 Physical PLC Controlled Download    : BLOCKED  (POL-G12-COMMISSIONING-LOCKOUT)
+  W097 Physical PLC Bench Teardown         : BLOCKED  (POL-G12-COMMISSIONING-LOCKOUT)
+  W098 Offline Closure & v2 Backlog        : SUCCESS  (6 prioritized v2 items)
+
+2. W094 SECURITY, PRIVACY & COHERENCE CHECKS
+----------------------------------------------------------------------------------------
+  [PASS] gitignore_blocks_env
+  [PASS] zero_tracked_env_files
+  [PASS] zero_env_commits_in_git_history
+  [PASS] zero_leaked_api_keys_in_tracked_files
+  [PASS] zero_tracked_proprietary_binaries
+  [PASS] zero_git_remotes_configured
+  [PASS] all_licenses_permissive
+  [PASS] g7_pass_19_of_20
+  [PASS] g8_pass_20_of_20
+  [PASS] g9_8_passed_1_pending_1_negative_handled
+  [PASS] g10_recoverable_16_of_16
+  [PASS] g11_benchmark_270_verified
+  [PASS] g11_endurance_229_of_229_4h_honest
+  [PASS] g11_acceptance_verdict_pass
+
+3. PRIORITIZED V2 ENGINEERING BACKLOG (W098)
+----------------------------------------------------------------------------------------
+  [P1] V2-P1-HEADLESS-COMPILER: Headless Cscape CLI / K5Cmp.dll Direct Harness
+  [P2] V2-P2-ENDURANCE-24H: Full 24-Hour Unattended Endurance Soak (W088-24H)
+  [P3] V2-P3-MULTI-RUNG-LADDER: Multi-Rung & Parallel Branch Ladder Synthesis
+  [P4] V2-P4-HMI-REGISTER-BINDING: Full HMI Register & Tag Binding inside GrEdit Dialogs
+  [P5] V2-P5-CFBF-OFFLINE-DIFF: Semantic Offline .csp CFBF Stream Differ & Validator
+  [P6] V2-P6-SUPERVISED-PLC-BENCH: Supervised Physical OCS Hardware Bench (W095-W097)
+
+========================================================================================
+ OVERALL GATE G12 OFFLINE ACCEPTANCE VERDICT: PASS (G12_bank=blocked)
+========================================================================================
+
+--- [STEP 5] Full Offline Pytest Suite (.venv\Scripts\python.exe -m pytest -q) ---
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\HornerAI\g12_clean_install
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.0, asyncio-1.4.0, cov-7.1.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 15109 items
+
+tests\test_acoustic_resonance.py .........                               [  0%]
+tests\test_acrylonitrile_reactor.py .................................... [  0%]
+............................                                             [  0%]
+tests\test_adaptive_tuner.py ..........                                  [  0%]
+tests\test_alarm_annunciator.py ........                                 [  0%]
+tests\test_alarming.py ......................................            [  0%]
+tests\test_alkylation_acid.py .......................................... [  1%]
+...                                                                      [  1%]
+tests\test_alpha_shape_canvas.py ....................................... [  1%]
+.....                                                                    [  1%]
+tests\test_anaerobic_digester.py ......................................  [  1%]
+tests\test_annunciator_matrix.py ........................                [  1%]
+tests\test_as_interface.py ............................................. [  2%]
+...                                                                      [  2%]
+tests\test_asi.py ............                                           [  2%]
+tests\test_bacnet.py .........................                           [  2%]
+tests\test_batch_phase_engine.py .........                               [  2%]
+tests\test_beckmann_rearrangement.py ................................... [  2%]
+.............................................                            [  3%]
+tests\test_beeswarm_canvas.py .......................................... [  3%]
+........................................................................ [  3%]
+                                                                         [  3%]
+tests\test_bio_succinic_acid.py ........................................ [  4%]
+.........................................                                [  4%]
+tests\test_box_whisker_canvas.py .............................           [  4%]
+tests\test_bpa_condensation.py ......................................... [  4%]
+...........                                                              [  4%]
+tests\test_bpa_reactor.py .............................................. [  5%]
+..........                                                               [  5%]
+tests\test_bundle_verification.py .......                                [  5%]
+tests\test_calciner.py ......................................            [  5%]
+tests\test_canopen_devicenet.py ....................                     [  5%]
+tests\test_caprolactam_fluidized_bed.py ................................ [  5%]
+........................................................................ [  6%]
+.....................                                                    [  6%]
+tests\test_cartesian_heatmap.py ...............                          [  6%]
+tests\test_cascade_model.py ............................                 [  6%]
+tests\test_cclink.py ....................................                [  6%]
+tests\test_cclink_basic.py .............................                 [  7%]
+tests\test_ccr_reformer.py ..................................            [  7%]
+tests\test_ccr_reforming_reactor.py .................................... [  7%]
+..............                                                           [  7%]
+tests\test_channel_matrix.py ....                                        [  7%]
+tests\test_chernoff_avatar.py ...........                                [  7%]
+tests\test_chernoff_canvas.py .............                              [  7%]
+tests\test_chord_canvas.py .......................                       [  8%]
+tests\test_chord_flux_canvas.py ........................................ [  8%]
+........................................................................ [  8%]
+.............                                                            [  8%]
+tests\test_chord_matrix_canvas.py ...................................... [  9%]
+..                                                                       [  9%]
+tests\test_chord_network_canvas.py ..................................... [  9%]
+...................................................                      [  9%]
+tests\test_chp_cleavage_reactor.py ..................................... [  9%]
+........................................................................ [ 10%]
+................                                                         [ 10%]
+tests\test_cip_dlr.py .................................................. [ 10%]
+...........................                                              [ 11%]
+tests\test_cip_energy.py ............................................... [ 11%]
+..............                                                           [ 11%]
+tests\test_cip_energy_mgmt.py .......................................... [ 11%]
+...........................................................              [ 12%]
+tests\test_cip_explicit_messaging.py ................................... [ 12%]
+.....                                                                    [ 12%]
+tests\test_cip_modbus_gateway.py ....................................... [ 12%]
+.........................................................                [ 13%]
+tests\test_cip_motion.py ...............................                 [ 13%]
+tests\test_cip_quickconnect.py ......................................... [ 13%]
+...........................                                              [ 13%]
+tests\test_cip_redundancy.py ........................................... [ 13%]
+................................                                         [ 14%]
+tests\test_cip_safety.py .....................................           [ 14%]
+tests\test_cip_safety_5g_urllc.py ...................................... [ 14%]
+..........................                                               [ 14%]
+tests\test_cip_safety_apl.py ........................................... [ 15%]
+.........................................                                [ 15%]
+tests\test_cip_safety_apl_barrier.py ................................... [ 15%]
+......................................................                   [ 16%]
+tests\test_cip_safety_apl_daisy_chain.py ............................... [ 16%]
+................................                                         [ 16%]
+tests\test_cip_safety_apl_multidrop.py ................................. [ 16%]
+.............................................................            [ 17%]
+tests\test_cip_safety_apl_power.py ..................................... [ 17%]
+..............                                                           [ 17%]
+tests\test_cip_safety_apl_redundant.py ................................. [ 17%]
+..........................................                               [ 17%]
+tests\test_cip_safety_apl_ring.py ...................................... [ 18%]
+......................................................                   [ 18%]
+tests\test_cip_safety_apl_star.py ...................................... [ 18%]
+.............                                                            [ 18%]
+tests\test_cip_safety_apl_switch.py .................................... [ 19%]
+......................................................................   [ 19%]
+tests\test_cip_safety_apl_tdr.py ....................................... [ 19%]
+.........................................                                [ 20%]
+tests\test_cip_safety_daisy_chain.py ................................... [ 20%]
+........................................................................ [ 20%]
+........                                                                 [ 20%]
+tests\test_cip_safety_devicenet.py ..................................... [ 21%]
+...................................                                      [ 21%]
+tests\test_cip_safety_guard.py ......................................... [ 21%]
+........................................................................ [ 22%]
+...                                                                      [ 22%]
+tests\test_cip_safety_guard_io.py ...................................... [ 22%]
+........................................................................ [ 22%]
+............                                                             [ 22%]
+tests\test_cip_safety_iolink.py ........................................ [ 23%]
+.........................................                                [ 23%]
+tests\test_cip_safety_multicast.py ..................................... [ 23%]
+........................................................................ [ 24%]
+.............                                                            [ 24%]
+tests\test_cip_safety_multipoint.py .................................... [ 24%]
+.................                                                        [ 24%]
+tests\test_cip_safety_opcua.py ......................................... [ 24%]
+..............                                                           [ 24%]
+tests\test_cip_safety_podl_fault.py .................................... [ 25%]
+.................................................................        [ 25%]
+tests\test_cip_safety_point.py ......................................... [ 25%]
+....................................................................     [ 26%]
+tests\test_cip_safety_profisafe.py ..................................... [ 26%]
+...........................................                              [ 26%]
+tests\test_cip_safety_redcap.py ........................................ [ 27%]
+........................................................................ [ 27%]
+..                                                                       [ 27%]
+tests\test_cip_safety_ring.py .......................................... [ 27%]
+...........................................................              [ 28%]
+tests\test_cip_safety_router.py ........................................ [ 28%]
+...................................................................      [ 28%]
+tests\test_cip_safety_satellite.py ..................................... [ 29%]
+.................................................                        [ 29%]
+tests\test_cip_safety_sfi.py .....................................       [ 29%]
+tests\test_cip_safety_spe.py ........................................... [ 30%]
+................................                                         [ 30%]
+tests\test_cip_safety_spe_hybrid.py .................................... [ 30%]
+..................................                                       [ 30%]
+tests\test_cip_safety_sync.py .......................................... [ 31%]
+........................................................................ [ 31%]
+.........                                                                [ 31%]
+tests\test_cip_safety_tsn.py ........................................... [ 31%]
+..................                                                       [ 31%]
+tests\test_cip_safety_wifi6.py ......................................... [ 32%]
+..............................                                           [ 32%]
+tests\test_cip_safety_wireless.py ...................................... [ 32%]
+.........................................................                [ 33%]
+tests\test_cip_safety_wireless_mesh.py ................................. [ 33%]
+..................................................                       [ 33%]
+tests\test_cip_security.py ............................................. [ 33%]
+............                                                             [ 34%]
+tests\test_cip_security_rbac.py ........................................ [ 34%]
+.....................                                                    [ 34%]
+tests\test_cip_sync_gptp.py ............................................ [ 34%]
+...................                                                      [ 34%]
+tests\test_cip_sync_ptp.py ............................................. [ 35%]
+..........................                                               [ 35%]
+tests\test_cip_sync_transparent_clock.py ............................... [ 35%]
+................................................................         [ 35%]
+tests\test_cli.py ....................................                   [ 36%]
+tests\test_cli_benchmark.py ......                                       [ 36%]
+tests\test_cli_soak.py ..                                                [ 36%]
+tests\test_closed_loop_verification.py ..............                    [ 36%]
+tests\test_command_interceptor.py .....                                  [ 36%]
+tests\test_commissioning_lockout.py ...............                      [ 36%]
+tests\test_compiler.py ....                                              [ 36%]
+tests\test_contour_canvas.py ........................................... [ 36%]
+...............                                                          [ 36%]
+tests\test_contour_surface_canvas.py ................................... [ 37%]
+........................................................................ [ 37%]
+.............                                                            [ 37%]
+tests\test_contract_validator.py .........                               [ 37%]
+tests\test_contracts.py ......                                           [ 37%]
+tests\test_convex_hull_canvas.py ....................................... [ 38%]
+..............................                                           [ 38%]
+tests\test_crystallizer.py ..........                                    [ 38%]
+tests\test_cscape_canvas_session.py ....                                 [ 38%]
+tests\test_cumene_alkylation.py ........................................ [ 38%]
+...............................................................          [ 38%]
+tests\test_cumene_hydroperoxide_cleavage.py ............................ [ 39%]
+............                                                             [ 39%]
+tests\test_cumene_reactor.py ........................................... [ 39%]
+................................                                         [ 39%]
+tests\test_cvt_canvas.py .........................                       [ 39%]
+tests\test_data_table.py ...................                             [ 40%]
+tests\test_delaunay_dual_canvas.py ..................................... [ 40%]
+........                                                                 [ 40%]
+tests\test_delaunay_mesh.py ...........                                  [ 40%]
+tests\test_delaunay_voronoi_canvas.py .................................. [ 40%]
+......                                                                   [ 40%]
+tests\test_delayed_coker.py ....................................         [ 40%]
+tests\test_dendrogram_canvas.py ........................................ [ 41%]
+..............................                                           [ 41%]
+tests\test_devicenet.py ....................................             [ 41%]
+tests\test_devicenet_safety.py ......................................... [ 41%]
+.......                                                                  [ 41%]
+tests\test_diagnostic_classifier.py ..........                           [ 41%]
+tests\test_dialog_sweeper.py ......                                      [ 42%]
+tests\test_distillation.py .............                                 [ 42%]
+tests\test_dnp3.py ......................                                [ 42%]
+tests\test_eg_hydration_reactor.py ..................................... [ 42%]
+................................................                         [ 42%]
+tests\test_enocean_ip.py .............................................   [ 43%]
+tests\test_ethercat.py ..................                                [ 43%]
+tests\test_ethercat_slave.py ........................................... [ 43%]
+....                                                                     [ 43%]
+tests\test_ethernet_ip.py ..........................                     [ 43%]
+tests\test_ethylene_oxide_reactor.py ................................... [ 43%]
+........................................                                 [ 44%]
+tests\test_evaporator.py ..........                                      [ 44%]
+tests\test_fastmcp_parity.py ...................                         [ 44%]
+tests\test_fcc_regenerator.py .......................................... [ 44%]
+.......                                                                  [ 44%]
+tests\test_fcc_regenerator_combustion.py ............................... [ 44%]
+...................                                                      [ 45%]
+tests\test_fcc_riser.py .......................................          [ 45%]
+tests\test_fgd_absorber.py ...................................           [ 45%]
+tests\test_fieldbus.py ...................................               [ 45%]
+tests\test_flame_contour_canvas.py ..................................... [ 46%]
+...                                                                      [ 46%]
+tests\test_fluidized_bed.py ................                             [ 46%]
+tests\test_font_metrics.py ..............                                [ 46%]
+tests\test_force_directed_canvas.py .................................... [ 46%]
+...........................                                              [ 46%]
+tests\test_foundation_fieldbus_las.py .................................. [ 46%]
+.......                                                                  [ 46%]
+tests\test_frequency_analysis.py .......                                 [ 46%]
+tests\test_funnel_canvas.py .....................                        [ 47%]
+tests\test_funnel_pipeline_canvas.py ................................... [ 47%]
+........................................................................ [ 47%]
+.........................                                                [ 47%]
+tests\test_g10_campaign.py ...............                               [ 48%]
+tests\test_g11_campaign.py .............                                 [ 48%]
+tests\test_g12_release.py ......                                         [ 48%]
+tests\test_g5_live_campaign.py ...............                           [ 48%]
+tests\test_g5_vision.py ...................                              [ 48%]
+tests\test_g6_acceptance.py ...                                          [ 48%]
+tests\test_g6_query_audit.py .....................                       [ 48%]
+tests\test_g7_acceptance.py ........                                     [ 48%]
+tests\test_g7_campaign.py ..........                                     [ 48%]
+tests\test_g7_ladder_roundtrip.py ...................................... [ 48%]
+....                                                                     [ 49%]
+tests\test_g7_negative.py .....                                          [ 49%]
+tests\test_g7_probe_safety.py .........                                  [ 49%]
+tests\test_g8_acceptance.py ........................                     [ 49%]
+tests\test_g8_bind_roundtrip.py ...........                              [ 49%]
+tests\test_g8_campaign.py ........................                       [ 49%]
+tests\test_g8_probe_hmi.py ....................                          [ 49%]
+tests\test_g9_campaign.py ........................................       [ 49%]
+tests\test_gate_g11_audit.py ...........                                 [ 49%]
+tests\test_geohash_canvas.py ........................................... [ 50%]
+.........................................................                [ 50%]
+tests\test_gtl_ft_reactor.py ........................................... [ 50%]
+...............                                                          [ 51%]
+tests\test_gui_controller.py ...                                         [ 51%]
+tests\test_gui_window_watchdog.py .............                          [ 51%]
+tests\test_h3_canvas.py ................................................ [ 51%]
+................................................                         [ 51%]
+tests\test_hart_ip.py ...................................                [ 51%]
+tests\test_hart_ip_gateway.py ..................................         [ 52%]
+tests\test_hda_reactor.py ..................................             [ 52%]
+tests\test_hexbin_canvas.py ............................................ [ 52%]
+....................................................                     [ 53%]
+tests\test_hilbert_canvas.py ........................................... [ 53%]
+.......                                                                  [ 53%]
+tests\test_historical_logger.py ............                             [ 53%]
+tests\test_hmi_models.py .............................                   [ 53%]
+tests\test_hmi_navigation.py ....................                        [ 53%]
+tests\test_hmi_recipes.py ...................                            [ 53%]
+tests\test_hmi_renderer.py ......                                        [ 53%]
+tests\test_hmi_session.py .......                                        [ 54%]
+tests\test_hmi_svg_audit.py .................                            [ 54%]
+tests\test_horizon_canvas.py ...................                         [ 54%]
+tests\test_horizon_wavelet_canvas.py ................................... [ 54%]
+.........................                                                [ 54%]
+tests\test_hydrocracker_quench.py ...................................... [ 54%]
+.....                                                                    [ 54%]
+tests\test_hydrocracker_tbr.py ......................................... [ 55%]
+....                                                                     [ 55%]
+tests\test_hydrocyclone.py ............................................  [ 55%]
+tests\test_hydroisomerization.py ....................................... [ 55%]
+.                                                                        [ 55%]
+tests\test_hyperbolic_tree_canvas.py ................................... [ 56%]
+......................................                                   [ 56%]
+tests\test_icicle_canvas.py ............................................ [ 56%]
+................................                                         [ 56%]
+tests\test_iec104.py ..........................                          [ 56%]
+tests\test_interval_tree_canvas.py ..................................... [ 57%]
+............................                                             [ 57%]
+tests\test_io_link.py ..........                                         [ 57%]
+tests\test_iolink_safety.py ...................................          [ 57%]
+tests\test_iolink_wireless.py .......................................... [ 57%]
+..........                                                               [ 58%]
+tests\test_isa100_11a.py ............................................... [ 58%]
+..........                                                               [ 58%]
+tests\test_isochrone_contour_canvas.py ................................. [ 58%]
+......                                                                   [ 58%]
+tests\test_jev_policy.py ....                                            [ 58%]
+tests\test_ka_oxidation_reactor.py ..................................... [ 58%]
+.............................................                            [ 59%]
+tests\test_kdtree_canvas.py ......................................       [ 59%]
+tests\test_knx_ip.py .............................................       [ 59%]
+tests\test_lifecycle.py ..                                               [ 59%]
+tests\test_maleic_anhydride_oxidation.py ............................... [ 59%]
+.............                                                            [ 60%]
+tests\test_maleic_anhydride_reactor.py ................................. [ 60%]
+......................................                                   [ 60%]
+tests\test_manifest.py ................................................. [ 60%]
+........................................................................ [ 61%]
+........................................................................ [ 61%]
+.................................                                        [ 62%]
+tests\test_marching_tetrahedra.py .............                          [ 62%]
+tests\test_marimekko_canvas.py .................                         [ 62%]
+tests\test_mbr_fouling.py ............................................   [ 62%]
+tests\test_mcl_pha_biosynthesis.py ..................................... [ 62%]
+.............                                                            [ 62%]
+tests\test_medial_axis_canvas.py ....................................... [ 63%]
+.........................                                                [ 63%]
+tests\test_mesh_canvas.py .............................................. [ 63%]
+....................................................                     [ 63%]
+tests\test_modbus_client.py ...........                                  [ 64%]
+tests\test_modbus_firewall.py ................                           [ 64%]
+tests\test_modbus_fuzzer.py .........                                    [ 64%]
+tests\test_modbus_rtu_rs485.py .......................................   [ 64%]
+tests\test_modbus_stack.py ...............                               [ 64%]
+tests\test_modbus_tcp_gateway.py ....................................... [ 64%]
+.....                                                                    [ 64%]
+tests\test_molten_salt_tes.py .......................................... [ 65%]
+.                                                                        [ 65%]
+tests\test_mpc_controller.py ..........                                  [ 65%]
+tests\test_multiple_effect_evaporator.py ............................... [ 65%]
+................                                                         [ 65%]
+tests\test_naphtha_hds.py ................................               [ 65%]
+tests\test_navigation_map.py ....                                        [ 65%]
+tests\test_navigator_walker.py .....                                     [ 65%]
+tests\test_nightingale_rose.py ........                                  [ 65%]
+tests\test_nylon66_polycondensation.py ................................. [ 66%]
+...................................................................      [ 66%]
+tests\test_nylon6_ring_opening.py ...................................... [ 66%]
+.......................................                                  [ 66%]
+tests\test_opc_da_bridge.py ............................................ [ 67%]
+.                                                                        [ 67%]
+tests\test_opcua_nodes.py .........                                      [ 67%]
+tests\test_opensafety.py ....................................            [ 67%]
+tests\test_output_scraper.py ............                                [ 67%]
+tests\test_p1_selection.py ....                                          [ 67%]
+tests\test_p3hb_4hb_biosynthesis.py .................................... [ 67%]
+...............                                                          [ 68%]
+tests\test_packed_column.py .....................                        [ 68%]
+tests\test_parallel_canvas.py .........................                  [ 68%]
+tests\test_parallel_coordinate_plotter.py ...........                    [ 68%]
+tests\test_parallel_coordinates_canvas.py .............................. [ 68%]
+........................................................................ [ 69%]
+..............                                                           [ 69%]
+tests\test_pbat_polycondensation.py .................................... [ 69%]
+..................................                                       [ 69%]
+tests\test_pbs_polycondensation.py ..................................... [ 69%]
+..............................                                           [ 70%]
+tests\test_pet_esterification.py ....................................... [ 70%]
+.........................................................                [ 70%]
+tests\test_pet_polycondensation.py ..................................... [ 70%]
+.....................................................................    [ 71%]
+tests\test_pfr_reactor.py ....................                           [ 71%]
+tests\test_ph_neutralization.py ....................                     [ 71%]
+tests\test_pha_biopolymer_fermentation.py .............................. [ 71%]
+..........................                                               [ 72%]
+tests\test_pha_depolymerization.py ..................................... [ 72%]
+........................................                                 [ 72%]
+tests\test_pha_gasification.py ......................................... [ 72%]
+...........................................                              [ 73%]
+tests\test_pha_hydrogenation_bdo.py .................................... [ 73%]
+...........................................................              [ 73%]
+tests\test_pha_hydrogenolysis.py ....................................... [ 73%]
+................................                                         [ 74%]
+tests\test_pha_hydrogenolysis_gbl.py ................................... [ 74%]
+..................................................................       [ 74%]
+tests\test_pha_hydrogenolysis_methef.py ................................ [ 75%]
+..........................................                               [ 75%]
+tests\test_pha_hydrogenolysis_thf.py ................................... [ 75%]
+....................................................................     [ 76%]
+tests\test_pha_succinic_esterification.py .............................. [ 76%]
+............................................................             [ 76%]
+tests\test_pha_supercritical_extraction.py ............................. [ 76%]
+.........................................                                [ 77%]
+tests\test_pha_thermolysis.py .......................................... [ 77%]
+........................................                                 [ 77%]
+tests\test_phb_hhx_biosynthesis.py ..................................... [ 77%]
+.....................                                                    [ 78%]
+tests\test_phbv_biosynthesis.py ........................................ [ 78%]
+...............                                                          [ 78%]
+tests\test_phbv_nanocomposite.py ....................................... [ 78%]
+............                                                             [ 78%]
+tests\test_phthalic_anhydride_reactor.py ............................... [ 78%]
+.....................................................                    [ 79%]
+tests\test_pilot_demonstration.py ........                               [ 79%]
+tests\test_plant_model.py ...............................                [ 79%]
+tests\test_pmma_polymerization.py ...................................... [ 79%]
+...............................................................          [ 80%]
+tests\test_pneumatic_system.py ............                              [ 80%]
+tests\test_poincare_canvas.py ..................                         [ 80%]
+tests\test_poincare_multiscale_canvas.py ...........................     [ 80%]
+tests\test_poisson_disk_canvas.py ...................................    [ 80%]
+tests\test_polar_spectral_canvas.py .........................            [ 80%]
+tests\test_polycarbonate_transesterification.py ........................ [ 81%]
+........................................................................ [ 81%]
+.......                                                                  [ 81%]
+tests\test_pom_polymerization.py ....................................... [ 81%]
+...............                                                          [ 82%]
+tests\test_powerlink_mn.py ........................                      [ 82%]
+tests\test_process_anomaly.py .....                                      [ 82%]
+tests\test_profinet.py .............                                     [ 82%]
+tests\test_profinet_irt.py ..................................            [ 82%]
+tests\test_pta_oxidation_reactor.py .................................... [ 82%]
+........................................                                 [ 83%]
+tests\test_pump_cavitation.py ..........                                 [ 83%]
+tests\test_pyrolysis.py .......................................          [ 83%]
+tests\test_quadkey_canvas.py ........................................... [ 83%]
+.............................................                            [ 83%]
+tests\test_quadtree_canvas.py .......................................... [ 84%]
+............................                                             [ 84%]
+tests\test_radar_canvas.py .........................                     [ 84%]
+tests\test_radial_tree_canvas.py ....................................... [ 84%]
+...............................                                          [ 85%]
+tests\test_recipe_audit.py .........                                     [ 85%]
+tests\test_register_table.py ........................                    [ 85%]
+tests\test_reverse_osmosis.py .......................................... [ 85%]
+.                                                                        [ 85%]
+tests\test_ridge_canvas.py ..................                            [ 85%]
+tests\test_rotary_kiln.py .............................................  [ 85%]
+tests\test_rtree_canvas.py ..........................................    [ 86%]
+tests\test_s2_canvas.py ................................................ [ 86%]
+.......................................                                  [ 86%]
+tests\test_sankey_canvas.py ........................                     [ 86%]
+tests\test_sankey_flow.py ................                               [ 87%]
+tests\test_scaling_bridge.py ........................                    [ 87%]
+tests\test_security.py ...............                                   [ 87%]
+tests\test_sensor_calibration.py .........                               [ 87%]
+tests\test_sercos.py ...........................................         [ 87%]
+tests\test_sercos3_ring.py ............................................. [ 87%]
+..                                                                       [ 87%]
+tests\test_sfc_engine.py ..........                                      [ 88%]
+tests\test_shell_and_tube.py .............                               [ 88%]
+tests\test_simulation_batch.py ......                                    [ 88%]
+tests\test_simulation_engine.py ........................................ [ 88%]
+                                                                         [ 88%]
+tests\test_slurry_column.py ..........                                   [ 88%]
+tests\test_smr_reformer.py ........................                      [ 88%]
+tests\test_soak_verifier.py ...........                                  [ 88%]
+tests\test_sparkplug_b.py ............                                   [ 88%]
+tests\test_sparkplug_dynamic.py ................                         [ 88%]
+tests\test_sparkplug_store_forward.py ...........                        [ 88%]
+tests\test_spc_profiler.py .........                                     [ 89%]
+tests\test_spider_radar.py .........                                     [ 89%]
+tests\test_spray_dryer.py ...................                            [ 89%]
+tests\test_st_parser.py ................                                 [ 89%]
+tests\test_stability.py .....                                            [ 89%]
+tests\test_standard_blocks.py ............                               [ 89%]
+tests\test_steam_cracker_furnace.py .................................... [ 89%]
+...........                                                              [ 89%]
+tests\test_stream_waterfall_canvas.py .................................. [ 89%]
+..........                                                               [ 90%]
+tests\test_streamgraph_canvas.py ........                                [ 90%]
+tests\test_streamline_advection_canvas.py .............................. [ 90%]
+..........                                                               [ 90%]
+tests\test_streamline_canvas.py ...........                              [ 90%]
+tests\test_styrene_dehydrogenation.py .................................. [ 90%]
+........................................................................ [ 91%]
+.................                                                        [ 91%]
+tests\test_sunburst_canvas.py ....................................       [ 91%]
+tests\test_sunburst_partition_canvas.py ................................ [ 91%]
+........................................................................ [ 92%]
+..................                                                       [ 92%]
+tests\test_sunburst_radial_canvas.py ................................... [ 92%]
+........................................................................ [ 93%]
+..........................                                               [ 93%]
+tests\test_supercritical_co2.py ........................................ [ 93%]
+....                                                                     [ 93%]
+tests\test_symbol_matrix.py .......................                      [ 93%]
+tests\test_syslog_event.py ..............                                [ 93%]
+tests\test_ternary_canvas.py ........                                    [ 93%]
+tests\test_ternary_phase_canvas.py ..................................... [ 94%]
+........................................................................ [ 94%]
+.......................                                                  [ 94%]
+tests\test_ternary_phase_diagram_canvas.py ............................. [ 94%]
+                                                                         [ 94%]
+tests\test_thermal_model.py .........                                    [ 94%]
+tests\test_three_phase_separator.py ............                         [ 94%]
+tests\test_treemap_canvas.py ...........                                 [ 95%]
+tests\test_treemap_hierarchical_canvas.py .............................. [ 95%]
+........................................................................ [ 95%]
+..............................                                           [ 95%]
+tests\test_treemap_spatial_canvas.py ................................... [ 96%]
+.................................                                        [ 96%]
+tests\test_trellis_canvas.py .................................           [ 96%]
+tests\test_trend_chart.py .........                                      [ 96%]
+tests\test_upset_canvas.py ...................                           [ 96%]
+tests\test_vcm_pyrolysis.py ............................................ [ 97%]
+........................................................................ [ 97%]
+................                                                         [ 97%]
+tests\test_vcm_thermal_cracker.py ...................................... [ 97%]
+................................................                         [ 98%]
+tests\test_vector_gauge.py ....................                          [ 98%]
+tests\test_visual_grounding.py ..........................                [ 98%]
+tests\test_voronoi_canvas.py ........................................... [ 98%]
+.................................................................        [ 99%]
+tests\test_voronoi_partition.py ..........                               [ 99%]
+tests\test_wind_rose_canvas.py ......................................... [ 99%]
+............                                                             [ 99%]
+tests\test_wireless_hart.py ............................................ [ 99%]
+.......                                                                  [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\pywinauto\__init__.py:80
+  C:\HornerAI\g12_clean_install\.venv\Lib\site-packages\pywinauto\__init__.py:80: UserWarning: Revert to STA COM threading mode
+    warnings.warn("Revert to STA COM threading mode", UserWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================ 15109 passed, 1 warning in 423.72s (0:07:03) =================
+PYTEST_EXIT_CODE=0

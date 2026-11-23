@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+<defs>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="3" result="blur" />
+    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+  </filter>
+  <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#161B22" />
+    <stop offset="100%" stop-color="#0D1117" />
+  </linearGradient>
+</defs>
+<rect width="1200" height="750" fill="#0B0F19" />
+<rect x="20" y="16" width="1160" height="58" rx="8" fill="url(#headerGrad)" stroke="#21262D" stroke-width="1.5" />
+<text x="36" y="42" font-family="monospace" font-size="16" font-weight="bold" fill="#FFFFFF">CSCAPE HMI DYNAMIC SUNBURST PARTITION MULTILEVEL HIERARCHY CANVAS</text>
+<text x="36" y="60" font-family="monospace" font-size="11" fill="#8B949E">Wave W252 | 3 Concentric Tiers | OCS %R2130..%R2137 | %M497..%M498</text>
+<g transform="translate(520, 24)"><rect width="102" height="42" rx="4" fill="#050811" stroke="#21262D" stroke-width="1" /><text x="51" y="16" font-family="monospace" font-size="9" fill="#8B949E" text-anchor="middle">CANVAS</text><text x="51" y="33" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981" text-anchor="middle">ACTIVE</text></g>
+<g transform="translate(628, 24)"><rect width="102" height="42" rx="4" fill="#050811" stroke="#21262D" stroke-width="1" /><text x="51" y="16" font-family="monospace" font-size="9" fill="#8B949E" text-anchor="middle">LOAD</text><text x="51" y="33" font-family="monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4,250 kW</text></g>
+<g transform="translate(736, 24)"><rect width="102" height="42" rx="4" fill="#050811" stroke="#21262D" stroke-width="1" /><text x="51" y="16" font-family="monospace" font-size="9" fill="#8B949E" text-anchor="middle">MAX SHARE</text><text x="51" y="33" font-family="monospace" font-size="11" font-weight="bold" fill="#38BDF8" text-anchor="middle">28.50%</text></g>
+<g transform="translate(844, 24)"><rect width="102" height="42" rx="4" fill="#050811" stroke="#21262D" stroke-width="1" /><text x="51" y="16" font-family="monospace" font-size="9" fill="#8B949E" text-anchor="middle">EFFICIENCY</text><text x="51" y="33" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981" text-anchor="middle">88.40%</text></g>
+<g transform="translate(952, 24)"><rect width="102" height="42" rx="4" fill="#050811" stroke="#21262D" stroke-width="1" /><text x="51" y="16" font-family="monospace" font-size="9" fill="#8B949E" text-anchor="middle">ALARM</text><text x="51" y="33" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981" text-anchor="middle">NOMINAL</text></g>
+<g transform="translate(1060, 24)"><rect width="102" height="42" rx="4" fill="#050811" stroke="#21262D" stroke-width="1" /><text x="51" y="16" font-family="monospace" font-size="9" fill="#8B949E" text-anchor="middle">DIAG</text><text x="51" y="33" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981" text-anchor="middle">0x0000</text></g>
+<rect x="20.0" y="86.0" width="1160.0" height="644.0" rx="8" fill="#161B22" stroke="#21262D" stroke-width="1.5" />
+<circle cx="600.0" cy="408.0" r="70.0" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+<circle cx="600.0" cy="408.0" r="140.0" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+<circle cx="600.0" cy="408.0" r="150.0" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+<circle cx="600.0" cy="408.0" r="220.0" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+<circle cx="600.0" cy="408.0" r="230.0" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+<circle cx="600.0" cy="408.0" r="300.0" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+<path d="M 601.12 268.00 A 140.00 140.00 0 0 1 683.19 520.60 L 641.60 464.30 A 70.00 70.00 0 0 0 600.56 338.00 Z" fill="#EF4444" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Synthesis | Tier 1 | 1,700.0 kW (40.00%)</title></path>
+<text x="699.9" y="375.6" font-family="monospace" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Synthesis</text>
+<path d="M 681.38 521.92 A 140.00 140.00 0 0 1 467.20 452.33 L 533.60 430.16 A 70.00 70.00 0 0 0 640.69 464.96 Z" fill="#059669" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Separation | Tier 1 | 1,275.0 kW (30.00%)</title></path>
+<text x="567.6" y="507.9" font-family="monospace" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Separation</text>
+<path d="M 466.51 450.20 A 140.00 140.00 0 0 1 598.88 268.00 L 599.44 338.00 A 70.00 70.00 0 0 0 533.26 429.10 Z" fill="#D97706" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Utilities | Tier 1 | 1,275.0 kW (30.00%)</title></path>
+<text x="515.1" y="346.3" font-family="monospace" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Utilities</text>
+<path d="M 601.76 188.01 A 220.00 220.00 0 0 1 730.73 584.94 L 689.14 528.64 A 150.00 150.00 0 0 0 601.20 258.00 Z" fill="#EF4444" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Reactors | Tier 2 | 1,700.0 kW (40.00%)</title></path>
+<text x="775.9" y="350.8" font-family="monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Reactors</text>
+<path d="M 727.88 587.01 A 220.00 220.00 0 0 1 391.32 477.66 L 457.72 455.49 A 150.00 150.00 0 0 0 687.19 530.05 Z" fill="#10B981" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Distillation | Tier 2 | 1,275.0 kW (30.00%)</title></path>
+<text x="542.8" y="583.9" font-family="monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Distillation</text>
+<path d="M 390.23 474.31 A 220.00 220.00 0 0 1 458.42 239.61 L 503.46 293.19 A 150.00 150.00 0 0 0 456.98 453.21 Z" fill="#F59E0B" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Boilers | Tier 2 | 807.5 kW (19.00%)</title></path>
+<text x="422.3" y="356.4" font-family="monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Boilers</text>
+<path d="M 461.13 237.37 A 220.00 220.00 0 0 1 598.24 188.01 L 598.80 258.00 A 150.00 150.00 0 0 0 505.31 291.66 Z" fill="#8B5CF6" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Chillers | Tier 2 | 467.5 kW (11.00%)</title></path>
+<text x="537.3" y="233.9" font-family="monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Chillers</text>
+<path d="M 602.40 108.01 A 300.00 300.00 0 0 1 796.59 181.39 L 750.72 234.26 A 230.00 230.00 0 0 0 601.84 178.01 Z" fill="#38BDF8" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Feed Pumps | Tier 3 | 488.8 kW (11.50%)</title></path>
+<text x="693.7" y="160.1" font-family="monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Feed Pumps</text>
+<path d="M 800.19 184.56 A 300.00 300.00 0 0 1 778.27 649.29 L 736.67 592.99 A 230.00 230.00 0 0 0 753.48 236.70 Z" fill="#7DD3FC" fill-opacity="0.85" stroke="#38BDF8" stroke-width="3.0" filter="url(#glow)"><title>Compressors | Tier 3 | 1,211.2 kW (28.50%)</title></path>
+<text x="864.7" y="420.5" font-family="monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Compressors</text>
+<path d="M 774.39 652.11 A 300.00 300.00 0 0 1 602.40 707.99 L 601.84 637.99 A 230.00 230.00 0 0 0 733.70 595.15 Z" fill="#34D399" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Reflux Pumps | Tier 3 | 425.0 kW (10.00%)</title></path>
+<text x="681.9" y="660.0" font-family="monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Reflux Pumps</text>
+<path d="M 597.60 707.99 A 300.00 300.00 0 0 1 315.43 502.98 L 381.83 480.82 A 230.00 230.00 0 0 0 598.16 637.99 Z" fill="#6EE7B7" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Reboilers | Tier 3 | 850.0 kW (20.00%)</title></path>
+<text x="444.2" y="622.4" font-family="monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Reboilers</text>
+<path d="M 313.95 498.42 A 300.00 300.00 0 0 1 320.19 299.80 L 385.48 325.04 A 230.00 230.00 0 0 0 380.70 477.32 Z" fill="#FBBF24" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Boiler Feed Pumps | Tier 3 | 467.5 kW (11.00%)</title></path>
+<text x="335.1" y="399.7" font-family="monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Boiler Fee..</text>
+<path d="M 321.96 295.33 A 300.00 300.00 0 0 1 406.93 178.38 L 451.98 231.96 A 230.00 230.00 0 0 0 386.84 321.62 Z" fill="#FCD34D" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Draft Fans | Tier 3 | 340.0 kW (8.00%)</title></path>
+<text x="385.6" y="252.2" font-family="monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Draft Fans</text>
+<path d="M 410.63 175.32 A 300.00 300.00 0 0 1 597.60 108.01 L 598.16 178.01 A 230.00 230.00 0 0 0 454.81 229.61 Z" fill="#A78BFA" fill-opacity="0.85" stroke="#0B0F19" stroke-width="1.5"><title>Refrigerant Compressors | Tier 3 | 467.5 kW (11.00%)</title></path>
+<text x="510.2" y="158.7" font-family="monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" pointer-events="none">Refrigeran..</text>
+<circle cx="600.0" cy="408.0" r="66" fill="#050811" stroke="#38BDF8" stroke-width="2" />
+<text x="600.0" y="386.0" font-family="monospace" font-size="9" fill="#8B949E" text-anchor="middle">TOTAL POWER</text>
+<text x="600.0" y="408.0" font-family="monospace" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4,250 kW</text>
+<text x="600.0" y="426.0" font-family="monospace" font-size="10" fill="#10B981" text-anchor="middle">Eff: 88.4%</text>
+<text x="600.0" y="442.0" font-family="monospace" font-size="9" font-weight="bold" fill="#38BDF8" text-anchor="middle">NORMAL</text>
+<g transform="translate(36, 102)">
+<rect width="210" height="240" rx="6" fill="#050811" stroke="#21262D" stroke-width="1.5" />
+<text x="16" y="24" font-family="monospace" font-size="12" font-weight="bold" fill="#38BDF8">HIERARCHY TIERS</text>
+<line x1="16" y1="32" x2="194" y2="32" stroke="#21262D" stroke-width="1" />
+<text x="16" y="52" font-family="monospace" font-size="10" fill="#8B949E">Tier 1: Plant Areas (3)</text>
+<text x="26" y="68" font-family="monospace" font-size="9" fill="#0284C7">* Synthesis (40.0%)</text>
+<text x="26" y="82" font-family="monospace" font-size="9" fill="#059669">* Separation (30.0%)</text>
+<text x="26" y="96" font-family="monospace" font-size="9" fill="#D97706">* Utilities (30.0%)</text>
+<text x="16" y="118" font-family="monospace" font-size="10" fill="#8B949E">Tier 2: Unit Operations (4)</text>
+<text x="26" y="134" font-family="monospace" font-size="9" fill="#FFFFFF">* Reactors, Distillation</text>
+<text x="26" y="148" font-family="monospace" font-size="9" fill="#FFFFFF">* Boilers, Chillers</text>
+<text x="16" y="170" font-family="monospace" font-size="10" fill="#8B949E">Tier 3: Sub-Equipment (7)</text>
+<text x="26" y="186" font-family="monospace" font-size="9" fill="#FFFFFF">* Pumps, Compressors,</text>
+<text x="26" y="200" font-family="monospace" font-size="9" fill="#FFFFFF">  Reboilers, Draft Fans</text>
+<text x="16" y="224" font-family="monospace" font-size="10" font-weight="bold" fill="#10B981">Active Sectors: 14/14</text>
+</g>
+<g transform="translate(954, 102)">
+<rect width="210" height="240" rx="6" fill="#050811" stroke="#21262D" stroke-width="1.5" />
+<text x="16" y="24" font-family="monospace" font-size="12" font-weight="bold" fill="#38BDF8">SELECTED NODE HUD</text>
+<line x1="16" y1="32" x2="194" y2="32" stroke="#21262D" stroke-width="1" />
+<text x="16" y="52" font-family="monospace" font-size="10" fill="#8B949E">Node Name:</text>
+<text x="16" y="68" font-family="monospace" font-size="12" font-weight="bold" fill="#FFFFFF">Compressors</text>
+<text x="16" y="90" font-family="monospace" font-size="10" fill="#8B949E">Hierarchy Level:</text>
+<text x="16" y="106" font-family="monospace" font-size="11" fill="#FFFFFF">Tier 3</text>
+<text x="16" y="128" font-family="monospace" font-size="10" fill="#8B949E">Power Consumption:</text>
+<text x="16" y="144" font-family="monospace" font-size="12" font-weight="bold" fill="#38BDF8">1,211.2 kW</text>
+<text x="16" y="166" font-family="monospace" font-size="10" fill="#8B949E">Plant Load Share:</text>
+<text x="16" y="182" font-family="monospace" font-size="12" font-weight="bold" fill="#10B981">28.50%</text>
+<text x="16" y="204" font-family="monospace" font-size="10" fill="#8B949E">Thermal Efficiency:</text>
+<text x="16" y="220" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981">87.20%</text>
+</g>
+<rect x="36" y="694" width="1128" height="26" rx="4" fill="#050811" stroke="#21262D" stroke-width="1" />
+<text x="48" y="711" font-family="monospace" font-size="9" fill="#8B949E">JEV CSCAPE WAVE W252 | PURE IEC 61131-3 ST: SunburstPartitionCanvasSync | FAIL-CLOSED HARDWARE SAFETY GUARD ACTIVE</text>
+<text x="1152" y="711" font-family="monospace" font-size="9" font-weight="bold" fill="#38BDF8" text-anchor="end">WCAG 2.1 AAA COMPLIANT</text>
+</svg>

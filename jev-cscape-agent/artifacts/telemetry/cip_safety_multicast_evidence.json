@@ -1,0 +1,179 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9/9 CIP Safety Multicast protocol stages PASSED deterministically.",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W241",
+    "protocol": "ODVA CIP Safety Volume 5 (Multicast Producer-Consumer)",
+    "classes": [
+      57,
+      58,
+      59
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Class 0x39..0x3B, 10ms EPI / 30ms watchdog, and 0xEB01..0xEB06 signed/unsigned equality verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 3.804,
+        "details": "POU 'CipSafetyMulticastSync' verified with STParser and bound to %R2020..%R2027 and %M471..%M472."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.032,
+        "details": "Successfully intercepted all 4/4 ladder logic patterns with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Multicast_Consumer_Configuration_And_Registration",
+        "check": "Multicast_Consumer_Configuration_And_Registration",
+        "passed": true,
+        "timing_ms": 0.039,
+        "details": "4 registered safety consumers (Robot Cell, Conveyor Line, Gantry Crane, Palletizer) verified with 99.85% health index."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "check": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "passed": true,
+        "timing_ms": 0.37,
+        "details": "Dual-channel complement parity valid, CRC-S1 (poly 0x5935) & CRC-S2 (poly 0x755B) verified, corruptions detected."
+      },
+      {
+        "stage": 6,
+        "name": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "check": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.044,
+        "details": "EPI watchdog elapsed past 30 ms, latching 0xEB02 timeout fault and asserting %M472 safe state."
+      },
+      {
+        "stage": 7,
+        "name": "Consumer_Desynchronization_And_Node_Dropout_Surveillance",
+        "check": "Consumer_Desynchronization_And_Node_Dropout_Surveillance",
+        "passed": true,
+        "timing_ms": 0.264,
+        "details": "ACK gap tripped 0xEB04 with %R2024 index, consumer dropout tripped 0xEB05, and group corruption tripped 0xEB06."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 92.098,
+        "details": "Registers %R2020..%R2027 and coils %M471..%M472 synchronized bit-exact with SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 56.692,
+        "details": "100 continuous soak cycles passed; registers %R2020..%R2027 and %M471..%M472 maintained bounded and healthy."
+      }
+    ],
+    "register_map": {
+      "%R2020": "REG_CONSUMER_NODES_COUNT",
+      "%R2021": "REG_MULTICAST_HEALTH_INDEX_SCALED",
+      "%R2022": "REG_PRODUCER_SEQUENCE_NUMBER",
+      "%R2023": "REG_MULTICAST_PACKETS_SCALED",
+      "%R2024": "REG_ACTIVE_DESYNC_CONSUMER_INDEX",
+      "%R2025": "REG_MULTICAST_TOPOLOGY_STATUS_BITS",
+      "%R2026": "REG_SELECTED_MONITORED_CONSUMER",
+      "%R2027": "REG_DIAGNOSTIC_STATUS_CODE",
+      "%M471": "COIL_SAFETY_MULTICAST_ACTIVE",
+      "%M472": "COIL_SAFETY_MULTICAST_FAULT_ACTIVE"
+    },
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Class 0x39..0x3B, 10ms EPI / 30ms watchdog, and 0xEB01..0xEB06 signed/unsigned equality verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 3.804,
+        "details": "POU 'CipSafetyMulticastSync' verified with STParser and bound to %R2020..%R2027 and %M471..%M472."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.032,
+        "details": "Successfully intercepted all 4/4 ladder logic patterns with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Multicast_Consumer_Configuration_And_Registration",
+        "check": "Multicast_Consumer_Configuration_And_Registration",
+        "passed": true,
+        "timing_ms": 0.039,
+        "details": "4 registered safety consumers (Robot Cell, Conveyor Line, Gantry Crane, Palletizer) verified with 99.85% health index."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "check": "Dual_Channel_Parity_And_Crc_Checksum_Verification",
+        "passed": true,
+        "timing_ms": 0.37,
+        "details": "Dual-channel complement parity valid, CRC-S1 (poly 0x5935) & CRC-S2 (poly 0x755B) verified, corruptions detected."
+      },
+      {
+        "stage": 6,
+        "name": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "check": "Epi_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.044,
+        "details": "EPI watchdog elapsed past 30 ms, latching 0xEB02 timeout fault and asserting %M472 safe state."
+      },
+      {
+        "stage": 7,
+        "name": "Consumer_Desynchronization_And_Node_Dropout_Surveillance",
+        "check": "Consumer_Desynchronization_And_Node_Dropout_Surveillance",
+        "passed": true,
+        "timing_ms": 0.264,
+        "details": "ACK gap tripped 0xEB04 with %R2024 index, consumer dropout tripped 0xEB05, and group corruption tripped 0xEB06."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 92.098,
+        "details": "Registers %R2020..%R2027 and coils %M471..%M472 synchronized bit-exact with SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 56.692,
+        "details": "100 continuous soak cycles passed; registers %R2020..%R2027 and %M471..%M472 maintained bounded and healthy."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

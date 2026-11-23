@@ -1,0 +1,468 @@
+{
+  "work_package": "W008",
+  "status": "success",
+  "sandbox_project": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\test_sandbox.csp",
+  "file_size_bytes": 13824,
+  "cscape_inspection": {
+    "processes_count": 1,
+    "pids": [
+      16300
+    ],
+    "main_window": {
+      "hwnd": 4785000,
+      "hwnd_hex": "0x490368",
+      "pid": 16300,
+      "title": "Cscape",
+      "class_name": "Afx:00B90000:8:00010003:00000000:001204EF",
+      "is_visible": true,
+      "rect": {
+        "left": 1,
+        "top": 1,
+        "right": 1279,
+        "bottom": 567,
+        "width": 1278,
+        "height": 566
+      }
+    },
+    "all_windows": [
+      {
+        "hwnd": 4327596,
+        "hwnd_hex": "0x4208ac",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 919696,
+        "hwnd_hex": "0xe0890",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 9569882,
+        "hwnd_hex": "0x92065a",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 2885446,
+        "hwnd_hex": "0x2c0746",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 1574896,
+        "hwnd_hex": "0x1807f0",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 1443786,
+        "hwnd_hex": "0x1607ca",
+        "pid": 16300,
+        "title": "",
+        "class_name": "W5EditTLTooltip",
+        "is_visible": false,
+        "rect": {
+          "left": 20,
+          "top": 20,
+          "right": 120,
+          "bottom": 40,
+          "width": 100,
+          "height": 20
+        }
+      },
+      {
+        "hwnd": 1771424,
+        "hwnd_hex": "0x1b07a0",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 1312652,
+        "hwnd_hex": "0x14078c",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 1443672,
+        "hwnd_hex": "0x160758",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 1312634,
+        "hwnd_hex": "0x14077a",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 1246408,
+        "hwnd_hex": "0x1304c8",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 525162,
+        "hwnd_hex": "0x8036a",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 58983616,
+        "hwnd_hex": "0x38404c0",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 852806,
+        "hwnd_hex": "0xd0346",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 26018938,
+        "hwnd_hex": "0x18d047a",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 23069740,
+        "hwnd_hex": "0x160042c",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 4785000,
+        "hwnd_hex": "0x490368",
+        "pid": 16300,
+        "title": "Cscape",
+        "class_name": "Afx:00B90000:8:00010003:00000000:001204EF",
+        "is_visible": true,
+        "rect": {
+          "left": 1,
+          "top": 1,
+          "right": 1279,
+          "bottom": 567,
+          "width": 1278,
+          "height": 566
+        }
+      },
+      {
+        "hwnd": 918406,
+        "hwnd_hex": "0xe0386",
+        "pid": 16300,
+        "title": "",
+        "class_name": "tooltips_class32",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 4195486,
+        "hwnd_hex": "0x40049e",
+        "pid": 16300,
+        "title": "DDE Server Window",
+        "class_name": "OleDdeWndClass",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 11535480,
+        "hwnd_hex": "0xb00478",
+        "pid": 16300,
+        "title": "GDI+ Window (Cscape.exe)",
+        "class_name": "GDI+ Hook Window Class",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 1,
+          "bottom": 1,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "hwnd": 3540004,
+        "hwnd_hex": "0x360424",
+        "pid": 16300,
+        "title": "",
+        "class_name": "K5MWPROMPT",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 136,
+          "bottom": 100,
+          "width": 136,
+          "height": 100
+        }
+      },
+      {
+        "hwnd": 3474308,
+        "hwnd_hex": "0x350384",
+        "pid": 16300,
+        "title": "",
+        "class_name": "K5CMPBB",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 136,
+          "bottom": 100,
+          "width": 136,
+          "height": 100
+        }
+      },
+      {
+        "hwnd": 854148,
+        "hwnd_hex": "0xd0884",
+        "pid": 16300,
+        "title": "",
+        "class_name": "CicLoaderWndClass",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 136,
+          "bottom": 39,
+          "width": 136,
+          "height": 39
+        }
+      },
+      {
+        "hwnd": 1050784,
+        "hwnd_hex": "0x1008a0",
+        "pid": 16300,
+        "title": "CiceroUIWndFrame",
+        "class_name": "CiceroUIWndFrame",
+        "is_visible": false,
+        "rect": {
+          "left": 1172,
+          "top": 0,
+          "right": 1172,
+          "bottom": 6,
+          "width": 0,
+          "height": 6
+        }
+      },
+      {
+        "hwnd": 919646,
+        "hwnd_hex": "0xe085e",
+        "pid": 16300,
+        "title": "MSCTFIME UI",
+        "class_name": "MSCTFIME UI",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 459752,
+        "hwnd_hex": "0x703e8",
+        "pid": 16300,
+        "title": "Default IME",
+        "class_name": "IME",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "hwnd": 1574028,
+        "hwnd_hex": "0x18048c",
+        "pid": 16300,
+        "title": "Default IME",
+        "class_name": "IME",
+        "is_visible": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ],
+    "modal_dialogs": [],
+    "is_visible": true,
+    "desktop_session": {
+      "window_station": "WinSta0",
+      "desktop": "Default"
+    }
+  }
+}

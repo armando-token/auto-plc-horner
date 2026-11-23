@@ -1,0 +1,40 @@
+# profiles/supervisor-profile.yaml - Cscape GUI Supervisor Profile
+# STRICT DIRECTIVE: ZERO SECRETS IN GIT.
+
+supervisor_metadata:
+  profile_name: "cscape-gui-supervisor"
+  version: "1.0.0"
+  description: "Configuration profile for Single GUI Automation Agent and watchdog supervisor"
+
+execution_boundary:
+  exclusive_gui_ownership: true
+  window_station: "WinSta0"
+  desktop_name: "Default"
+  max_concurrent_gui_agents: 1
+
+watchdog_policy:
+  command_timeout_seconds: 600 # 10-minute watchdog limit
+  poll_interval_seconds: 2.0
+  hung_window_detection: true
+  hung_timeout_seconds: 15.0
+
+modal_dialog_sweeper:
+  enabled: true
+  scan_frequency_hz: 2
+  target_dialog_classes:
+    - "#32770"
+  known_dialog_titles:
+    - "Tip of the Day"
+    - "Cscape"
+    - "Allow access"
+  auto_dismiss_policy:
+    tip_of_the_day: "DISMISS_OK"
+    failed_to_save: "FAIL_CLOSED_RETRY_STAGING"
+    unknown_modal: "LOG_AND_EVALUATE"
+
+safety_lockout:
+  intercept_win32_downloads: true
+  blocked_command_ids:
+    - 32827 # ID_PROGRAM_DOWNLOAD
+    - 33149 # ID_CONTROLLER_DOWNLOAD
+  block_companion_flash_binaries: true

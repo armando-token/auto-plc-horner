@@ -1,0 +1,154 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Security Protocol Engine (W193) verified cleanly (9/9 stages passed).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "data": {
+    "work_package": "W193",
+    "standards": [
+      "ODVA CIP Security Specification (Volume 8: EtherNet/IP Security Profile)",
+      "TLS 1.3 (RFC 8446) / DTLS 1.2 (RFC 6347)",
+      "IEC 61131-3 Structured Text"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "check": "POU_ST_Syntax_Validation_And_Anti_Ladder_Check",
+        "passed": true,
+        "details": "POU 'CipSecurityTrustSync' validated with bound registers: ['%M359', '%M360', '%R1540', '%R1541', '%R1542', '%R1543', '%R1544', '%R1545', '%R1546', '%R1547']. Ladder logic intercepted."
+      },
+      {
+        "stage": 2,
+        "check": "CIP_Security_And_Certificate_Management_Object_Attribute_Resolution",
+        "passed": true,
+        "details": "Class 0x5D (11 attributes) and Class 0x5E (8 attributes) resolved and verified cleanly."
+      },
+      {
+        "stage": 3,
+        "check": "X509_Certificate_Hierarchy_And_Trust_Chain_Validation",
+        "passed": true,
+        "details": "Root CA, SAN matching, CRL revocation, and validity expiration validated with 0xD101/0xD102."
+      },
+      {
+        "stage": 4,
+        "check": "Cryptographic_Cipher_Suite_Negotiation_TLS13_DTLS12",
+        "passed": true,
+        "details": "TLS 1.3, DTLS 1.2, and cipher mismatch trip (0xD104) verified."
+      },
+      {
+        "stage": 5,
+        "check": "Sliding_Window_Anti_Replay_Attack_Packet_Rejection",
+        "passed": true,
+        "details": "64-packet sliding window verified: duplicates, out-of-window, and replay trip 0xD103 confirmed."
+      },
+      {
+        "stage": 6,
+        "check": "Key_Exchange_Latency_Measurement_And_Session_Caching",
+        "passed": true,
+        "details": "Handshake derived 128-bit session key; latency=3.5ms (scaled=35)."
+      },
+      {
+        "stage": 7,
+        "check": "Register_Table_Synchronization_R1540_R1547_M359_M360",
+        "passed": true,
+        "details": "Horner OCS registers validated with PrivilegeMode.SYSTEM: state=2, cipher=0x1301, latency=35, diag=0x0000."
+      },
+      {
+        "stage": 8,
+        "check": "Discrete_ILogicUnit_100_Cycle_Scan_Simulation",
+        "passed": true,
+        "details": "100 scan cycles executed smoothly; total elapsed simulation time=1000.0ms."
+      },
+      {
+        "stage": 9,
+        "check": "Process_Safety_Interlock_And_Security_Tamper_Trips",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xD101..0xD104 trips and operator reset handshake confirmed."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "check": "POU_ST_Syntax_Validation_And_Anti_Ladder_Check",
+        "passed": true,
+        "details": "POU 'CipSecurityTrustSync' validated with bound registers: ['%M359', '%M360', '%R1540', '%R1541', '%R1542', '%R1543', '%R1544', '%R1545', '%R1546', '%R1547']. Ladder logic intercepted."
+      },
+      {
+        "stage": 2,
+        "check": "CIP_Security_And_Certificate_Management_Object_Attribute_Resolution",
+        "passed": true,
+        "details": "Class 0x5D (11 attributes) and Class 0x5E (8 attributes) resolved and verified cleanly."
+      },
+      {
+        "stage": 3,
+        "check": "X509_Certificate_Hierarchy_And_Trust_Chain_Validation",
+        "passed": true,
+        "details": "Root CA, SAN matching, CRL revocation, and validity expiration validated with 0xD101/0xD102."
+      },
+      {
+        "stage": 4,
+        "check": "Cryptographic_Cipher_Suite_Negotiation_TLS13_DTLS12",
+        "passed": true,
+        "details": "TLS 1.3, DTLS 1.2, and cipher mismatch trip (0xD104) verified."
+      },
+      {
+        "stage": 5,
+        "check": "Sliding_Window_Anti_Replay_Attack_Packet_Rejection",
+        "passed": true,
+        "details": "64-packet sliding window verified: duplicates, out-of-window, and replay trip 0xD103 confirmed."
+      },
+      {
+        "stage": 6,
+        "check": "Key_Exchange_Latency_Measurement_And_Session_Caching",
+        "passed": true,
+        "details": "Handshake derived 128-bit session key; latency=3.5ms (scaled=35)."
+      },
+      {
+        "stage": 7,
+        "check": "Register_Table_Synchronization_R1540_R1547_M359_M360",
+        "passed": true,
+        "details": "Horner OCS registers validated with PrivilegeMode.SYSTEM: state=2, cipher=0x1301, latency=35, diag=0x0000."
+      },
+      {
+        "stage": 8,
+        "check": "Discrete_ILogicUnit_100_Cycle_Scan_Simulation",
+        "passed": true,
+        "details": "100 scan cycles executed smoothly; total elapsed simulation time=1000.0ms."
+      },
+      {
+        "stage": 9,
+        "check": "Process_Safety_Interlock_And_Security_Tamper_Trips",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xD101..0xD104 trips and operator reset handshake confirmed."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "register_map": {
+      "%R1540": "SecurityProfileState",
+      "%R1541": "ActiveTlsSessionCount",
+      "%R1542": "CipherSuiteIdentifier",
+      "%R1543": "CertificateValidityDaysRemaining",
+      "%R1544": "FailedHandshakeCounter",
+      "%R1545": "ReplayAttackDropCounter",
+      "%R1546": "SecurityKeyExchangeLatencyMsScaled",
+      "%R1547": "DiagnosticStatusCode",
+      "%M359": "CipSecurityAuthenticated",
+      "%M360": "SecurityTamperAlert"
+    },
+    "registers": {
+      "%R1540": 2,
+      "%R1541": 1,
+      "%R1542": 4865,
+      "%R1543": 57,
+      "%R1544": 1,
+      "%R1545": 1,
+      "%R1546": 35,
+      "%R1547": 0,
+      "%M359": true,
+      "%M360": false
+    },
+    "timestamp": "2026-10-06T02:09:38Z"
+  }
+}

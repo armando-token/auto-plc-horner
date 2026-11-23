@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.95"/>      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.98"/>    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">      <feGaussianBlur stdDeviation="3" result="blur"/>      <feComposite in="SourceGraphic" in2="blur" operator="over"/>    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="#0D1117"/>
+  <g class="guide-rings" opacity="0.6">
+    <circle cx="500.00" cy="375.00" r="110.00" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <text x="614.00" y="371.00" fill="#94A3B8" font-family="monospace" font-size="9">L1 (R=110)</text>
+    <circle cx="500.00" cy="375.00" r="210.00" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <text x="714.00" y="371.00" fill="#94A3B8" font-family="monospace" font-size="9">L2 (R=210)</text>
+    <circle cx="500.00" cy="375.00" r="310.00" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <text x="814.00" y="371.00" fill="#94A3B8" font-family="monospace" font-size="9">L3 (R=310)</text>
+  </g>
+  <g class="tree-edges">
+    <path d="M 500.00,375.00 C 527.22,402.22 554.45,429.45 577.78,452.78" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 500.00,375.00 C 472.78,402.22 445.55,429.45 422.22,452.78" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 500.00,375.00 C 472.78,347.78 445.55,320.55 422.22,297.22" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 500.00,375.00 C 527.22,347.78 554.45,320.55 577.78,297.22" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 577.78,452.78 C 613.14,488.14 647.82,436.23 694.01,455.36" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 577.78,452.78 C 613.14,488.14 561.23,522.82 580.36,569.01" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 422.22,452.78 C 386.86,488.14 438.77,522.82 419.64,569.01" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 422.22,452.78 C 386.86,488.14 352.18,436.23 305.99,455.36" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 422.22,297.22 C 386.86,261.86 352.18,313.77 305.99,294.64" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 422.22,297.22 C 386.86,261.86 438.77,227.18 419.64,180.99" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 577.78,297.22 C 613.14,261.86 561.23,227.18 580.36,180.99" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 577.78,297.22 C 613.14,261.86 647.82,313.77 694.01,294.64" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 694.01,455.36 C 740.21,474.50 755.00,425.72 804.04,435.48" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 694.01,455.36 C 740.21,474.50 716.18,519.45 757.76,547.23" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 580.36,569.01 C 599.50,615.21 644.45,591.18 672.23,632.76" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 580.36,569.01 C 599.50,615.21 550.72,630.00 560.48,679.04" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 419.64,569.01 C 400.50,615.21 449.28,630.00 439.52,679.04" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 419.64,569.01 C 400.50,615.21 355.55,591.18 327.77,632.76" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 305.99,455.36 C 259.79,474.50 283.82,519.45 242.24,547.23" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 305.99,455.36 C 259.79,474.50 245.00,425.72 195.96,435.48" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 305.99,294.64 C 259.79,275.50 245.00,324.28 195.96,314.52" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 305.99,294.64 C 259.79,275.50 283.82,230.55 242.24,202.77" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 419.64,180.99 C 400.50,134.79 355.55,158.82 327.77,117.24" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 419.64,180.99 C 400.50,134.79 449.28,120.00 439.52,70.96" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 580.36,180.99 C 599.50,134.79 550.72,120.00 560.48,70.96" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 580.36,180.99 C 599.50,134.79 644.45,158.82 672.23,117.24" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 694.01,294.64 C 740.21,275.50 716.18,230.55 757.76,202.77" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+    <path d="M 694.01,294.64 C 740.21,275.50 755.00,324.28 804.04,314.52" fill="none" stroke="#475569" stroke-width="1.2" stroke-opacity="0.55"/>
+  </g>
+  <g class="tree-nodes">
+    <circle cx="500.00" cy="375.00" r="22.00" fill="none" stroke="#38BDF8" stroke-width="2.5" filter="url(#glowEffect)"/>
+    <circle id="node-PLANT_ROOT" cx="500.00" cy="375.00" r="16.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="500.00" y="403.00" text-anchor="middle" fill="#F8FAFC" font-family="sans-serif" font-size="9" font-weight="bold">PLANT-REF-01</text>
+    <circle id="node-AREA_CRUDE" cx="577.78" cy="452.78" r="11.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="577.78" y="475.78" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">AREA-01</text>
+    <circle id="node-AREA_FCC" cx="422.22" cy="452.78" r="11.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="422.22" y="475.78" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">AREA-02</text>
+    <circle id="node-AREA_REFORM" cx="422.22" cy="297.22" r="11.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="422.22" y="320.22" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">AREA-03</text>
+    <circle id="node-AREA_UTILITY" cx="577.78" cy="297.22" r="11.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="577.78" y="320.22" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">AREA-04</text>
+    <circle id="node-UNIT_CDU" cx="694.01" cy="455.36" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="694.01" y="475.36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">CDU-100</text>
+    <circle id="node-UNIT_VDU" cx="580.36" cy="569.01" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="580.36" y="589.01" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">VDU-200</text>
+    <circle id="node-UNIT_RISER" cx="419.64" cy="569.01" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="419.64" y="589.01" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">FCC-300</text>
+    <circle id="node-UNIT_FRAC" cx="305.99" cy="455.36" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="305.99" y="475.36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">FCC-350</text>
+    <circle id="node-UNIT_PREHEAT" cx="305.99" cy="294.64" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="305.99" y="314.64" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">REF-400</text>
+    <circle id="node-UNIT_REACTORS" cx="419.64" cy="180.99" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="419.64" y="200.99" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">REF-450</text>
+    <circle id="node-UNIT_BOILER" cx="580.36" cy="180.99" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="580.36" y="200.99" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">UTL-500</text>
+    <circle id="node-UNIT_TURBINE" cx="694.01" cy="294.64" r="8.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <text x="694.01" y="314.64" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="9" font-weight="normal">UTL-550</text>
+    <circle id="node-SS_CDU_PUMP" cx="804.04" cy="435.48" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_CDU_COL" cx="757.76" cy="547.23" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_VDU_EJECT" cx="672.23" cy="632.76" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_VDU_COL" cx="560.48" cy="679.04" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_FCC_RISER" cx="439.52" cy="679.04" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_FCC_REGEN" cx="327.77" cy="632.76" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_FCC_OHD" cx="242.24" cy="547.23" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_FCC_SLURRY" cx="195.96" cy="435.48" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_REF_FURN" cx="195.96" cy="314.52" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_REF_EXCH" cx="242.24" cy="202.77" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_REF_R1R2" cx="327.77" cy="117.24" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_REF_R3R4" cx="439.52" cy="70.96" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_BOIL_FEED" cx="560.48" cy="70.96" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_BOIL_DRUM" cx="672.23" cy="117.24" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_TURB_GEN" cx="757.76" cy="202.77" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+    <circle id="node-SS_TURB_COND" cx="804.04" cy="314.52" r="6.00" fill="#10B981" stroke="#047857" stroke-width="2.0"/>
+  </g>
+  <g class="hud-telemetry">
+    <rect x="920.00" y="35.00" width="250.00" height="360.00" rx="8" ry="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+    <text x="936.00" y="61.00" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">RADIAL TREE SCADA</text>
+    <text x="936.00" y="77.00" fill="#94A3B8" font-family="sans-serif" font-size="9">Hierarchical Dependency Graph (W207)</text>
+    <rect x="936.00" y="89.00" width="218.00" height="24.00" rx="4" ry="4" fill="#050811" stroke="#1E293B" stroke-width="1.0"/>
+    <text x="946.00" y="105.00" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">ROOT HEALTH: 94.9%</text>
+    <text x="936.00" y="134.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Selected Node:</text>
+    <text x="1154.00" y="134.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">PLANT_ROOT (PLANT-REF-01)</text>
+    <text x="936.00" y="156.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Node Health:</text>
+    <text x="1154.00" y="156.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">94.9% [NOMINAL]</text>
+    <text x="936.00" y="178.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Node Depth:</text>
+    <text x="1154.00" y="178.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">Level 0</text>
+    <text x="936.00" y="200.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Critical Faults:</text>
+    <text x="1154.00" y="200.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">0</text>
+    <text x="936.00" y="222.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Total Tree Nodes:</text>
+    <text x="1154.00" y="222.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">29</text>
+    <text x="936.00" y="244.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Max Tree Depth:</text>
+    <text x="1154.00" y="244.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">3 Levels</text>
+    <text x="936.00" y="266.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Min Health Score:</text>
+    <text x="1154.00" y="266.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">92.0%</text>
+    <text x="936.00" y="288.00" fill="#94A3B8" font-family="sans-serif" font-size="10">Diagnostic Code:</text>
+    <text x="1154.00" y="288.00" text-anchor="end" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="bold">0x0000</text>
+    <circle cx="944.00" y="318.00" r="6" fill="#10B981" stroke="#334155" stroke-width="1.5"/>
+    <text x="958.00" y="322.00" fill="#10B981" font-family="sans-serif" font-size="10" font-weight="bold">ALL SYSTEMS NOMINAL</text>
+  </g>
+</svg>

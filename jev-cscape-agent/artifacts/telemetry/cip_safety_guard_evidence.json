@@ -1,0 +1,182 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Safety SNN Multi-Target Guard Engine (W226) verified cleanly (9/9 stages passed).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "data": {
+    "work_package": "W226",
+    "standards": [
+      "ODVA CIP Networks Library Volume 5 (CIP Safety)",
+      "Class 0x39 (Safety Supervisor Object)",
+      "Class 0x3A (Safety Validator Object)",
+      "Class 0x3B (Safety Connection Object)",
+      "IEC 61784-3 Table 1 (Black Channel Mitigations)",
+      "IEC 61508 / IEC 62061 SIL 3",
+      "IEC 61131-3 Structured Text"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.027,
+        "details": "Class 0x39, 0x3A, 0x3B, SNN (6 octets), SCID (0x20261006), max 8 targets, nominal EPI 20ms verified."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 2.469,
+        "details": "POU 'CipSafetyGuardSync' validated clean with STParser & SecurityGuard; all 10 registers bound."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.018,
+        "details": "Anti-ladder security guard intercepted 3/3 prohibited ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Multi_Target_Connection_Binding_And_SNN_Signature_Validation",
+        "passed": true,
+        "timing_ms": 0.195,
+        "details": "8 targets bound with distinct TUNIDs (100..107) and matching SNN; healthy OPERATIONAL state verified."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_Channel_Diversified_Payload_Cross_Comparison_And_CRC_S_Validation",
+        "passed": true,
+        "timing_ms": 0.29,
+        "details": "Channel A / Channel B complement parity and CRC-S1/CRC-S2 verified; 0xE703 discrepancy fault caught."
+      },
+      {
+        "stage": 6,
+        "check": "EPI_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.659,
+        "details": "Silence monitored; exceeding 60.0 ms watchdog injected 0xE702 and asserted %M437 safe state."
+      },
+      {
+        "stage": 7,
+        "check": "SNN_Signature_And_CRC_S_Fault_Injections",
+        "passed": true,
+        "timing_ms": 0.904,
+        "details": "0xE701 SNN mismatch and 0xE704 CRC corruption injected; %M437 safe state asserted on both."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 0.868,
+        "details": "Bit-exact synchronization of %R1870..%R1877 and %M436..%M437 verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycles_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 95.532,
+        "details": "100 deterministic scan cycles completed cleanly. Heap growth: 3.67 KB (< 100 KB), Peak cycle latency: 7.10 ms (< 50 ms), Mean cycle latency: 0.94 ms."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.027,
+        "details": "Class 0x39, 0x3A, 0x3B, SNN (6 octets), SCID (0x20261006), max 8 targets, nominal EPI 20ms verified."
+      },
+      {
+        "stage": 2,
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 2.469,
+        "details": "POU 'CipSafetyGuardSync' validated clean with STParser & SecurityGuard; all 10 registers bound."
+      },
+      {
+        "stage": 3,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.018,
+        "details": "Anti-ladder security guard intercepted 3/3 prohibited ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "check": "Multi_Target_Connection_Binding_And_SNN_Signature_Validation",
+        "passed": true,
+        "timing_ms": 0.195,
+        "details": "8 targets bound with distinct TUNIDs (100..107) and matching SNN; healthy OPERATIONAL state verified."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_Channel_Diversified_Payload_Cross_Comparison_And_CRC_S_Validation",
+        "passed": true,
+        "timing_ms": 0.29,
+        "details": "Channel A / Channel B complement parity and CRC-S1/CRC-S2 verified; 0xE703 discrepancy fault caught."
+      },
+      {
+        "stage": 6,
+        "check": "EPI_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "timing_ms": 0.659,
+        "details": "Silence monitored; exceeding 60.0 ms watchdog injected 0xE702 and asserted %M437 safe state."
+      },
+      {
+        "stage": 7,
+        "check": "SNN_Signature_And_CRC_S_Fault_Injections",
+        "passed": true,
+        "timing_ms": 0.904,
+        "details": "0xE701 SNN mismatch and 0xE704 CRC corruption injected; %M437 safe state asserted on both."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "timing_ms": 0.868,
+        "details": "Bit-exact synchronization of %R1870..%R1877 and %M436..%M437 verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "check": "Simulation_Soak_100_Cycles_And_Memory_Boundedness",
+        "passed": true,
+        "timing_ms": 95.532,
+        "details": "100 deterministic scan cycles completed cleanly. Heap growth: 3.67 KB (< 100 KB), Peak cycle latency: 7.10 ms (< 50 ms), Mean cycle latency: 0.94 ms."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "register_map": {
+      "%R1870": "ActiveSafetyTargetCount",
+      "%R1871": "MonitoredSafetyPayloadWords",
+      "%R1872": "MaxSafetyLatencyMsScaled",
+      "%R1873": "MeanSafetyLatencyMsScaled",
+      "%R1874": "ConsecutiveSafetyFaultCount",
+      "%R1875": "ActiveTargetFaultBitmask",
+      "%R1876": "SafetyNetworkOperationalState",
+      "%R1877": "DiagnosticStatusCode",
+      "%M436": "CipSafetyGuardActive",
+      "%M437": "SafetyTripSafeStateEngaged"
+    },
+    "registers": {
+      "%R1870": 8,
+      "%R1871": 20,
+      "%R1872": 0,
+      "%R1873": 0,
+      "%R1874": 0,
+      "%R1875": 0,
+      "%R1876": 1,
+      "%R1877": 0,
+      "%M436": true,
+      "%M437": false
+    },
+    "metrics": {
+      "heap_growth_kb": 3.67,
+      "peak_cycle_latency_ms": 7.101,
+      "mean_cycle_latency_ms": 0.941,
+      "total_soak_cycles": 100
+    },
+    "timestamp": "2026-10-16T18:07:04Z"
+  }
+}

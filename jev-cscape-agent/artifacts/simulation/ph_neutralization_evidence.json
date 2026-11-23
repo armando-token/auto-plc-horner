@@ -1,0 +1,45 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "pH neutralization ODE verification: 5/5 checks passed.",
+  "data": {
+    "simulation": "Non-Linear Chemical Reactor pH Neutralization Titration CSTR ODE",
+    "tests": [
+      {
+        "check": "Pure_ST_POU_Validation",
+        "pou_name": "W071_pHNeutralizationTitration",
+        "passed": true
+      },
+      {
+        "check": "Equivalence_Point_Precision",
+        "expected_ph": 7.0,
+        "actual_ph": 7.0,
+        "passed": true
+      },
+      {
+        "check": "Dynamic_Titration_Neutralization",
+        "initial_ph": 2.3,
+        "final_ph": 9.27,
+        "reached_neutral": true,
+        "status_word": 230,
+        "passed": true
+      },
+      {
+        "check": "Nonlinear_Process_Gain_Ratio",
+        "gain_ph7": 2171472.4,
+        "gain_ph2": 43.4,
+        "ratio": 50000.0,
+        "passed": true
+      },
+      {
+        "check": "Alarm_Reset_Handshake",
+        "passed": true
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R320..%R327",
+      "discrete_coils": "%M74..%M76"
+    },
+    "timestamp": 1790986806.9056597
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "exported_at": "2026-10-02T19:26:37.605808+00:00",
+  "active_record_id": null,
+  "definitions": {
+    "WATER_TREATMENT_PROCESS": {
+      "recipe_id": "WATER_TREATMENT_PROCESS",
+      "recipe_name": "Water Treatment Plant Process Setpoints",
+      "description": "Industrial process setpoints and batch parameters for Horner OCS automated water treatment facility.",
+      "version": "1.0.0",
+      "parameters": [
+        {
+          "name": "inflow_setpoint",
+          "register_address": "%R101",
+          "data_type": "REAL",
+          "min_value": 0.0,
+          "max_value": 30.0,
+          "default_value": 8.5,
+          "engineering_units": "m3/h",
+          "description": "Inlet raw water flow rate setpoint"
+        },
+        {
+          "name": "tank_level_target",
+          "register_address": "%R103",
+          "data_type": "REAL",
+          "min_value": 10.0,
+          "max_value": 95.0,
+          "default_value": 50.0,
+          "engineering_units": "%",
+          "description": "Buffer tank regulated liquid level target"
+        },
+        {
+          "name": "pump_speed_setpoint",
+          "register_address": "%R105",
+          "data_type": "INT",
+          "min_value": 0.0,
+          "max_value": 32000.0,
+          "default_value": 16000.0,
+          "engineering_units": "counts",
+          "description": "Main discharge pump VFD analog speed command (0..32000 counts)"
+        },
+        {
+          "name": "discharge_valve_pos",
+          "register_address": "%R106",
+          "data_type": "REAL",
+          "min_value": 0.0,
+          "max_value": 100.0,
+          "default_value": 50.0,
+          "engineering_units": "%",
+          "description": "Modulating discharge valve position setpoint"
+        },
+        {
+          "name": "chemical_dose_ppm",
+          "register_address": "%R108",
+          "data_type": "REAL",
+          "min_value": 0.5,
+          "max_value": 25.0,
+          "default_value": 5.0,
+          "engineering_units": "ppm",
+          "description": "Disinfectant / chlorine dosing target concentration"
+        },
+        {
+          "name": "coagulant_dose_ml_min",
+          "register_address": "%R110",
+          "data_type": "REAL",
+          "min_value": 5.0,
+          "max_value": 200.0,
+          "default_value": 45.0,
+          "engineering_units": "mL/min",
+          "description": "Coagulant polymer dosing rate for flocculation"
+        },
+        {
+          "name": "hi_level_alarm_limit",
+          "register_address": "%R112",
+          "data_type": "REAL",
+          "min_value": 60.0,
+          "max_value": 98.0,
+          "default_value": 85.0,
+          "engineering_units": "%",
+          "description": "High liquid level warning alarm trip threshold"
+        },
+        {
+          "name": "lo_level_alarm_limit",
+          "register_address": "%R114",
+          "data_type": "REAL",
+          "min_value": 5.0,
+          "max_value": 40.0,
+          "default_value": 20.0,
+          "engineering_units": "%",
+          "description": "Low liquid level warning alarm trip threshold"
+        },
+        {
+          "name": "filter_backwash_interval_s",
+          "register_address": "%R116",
+          "data_type": "DINT",
+          "min_value": 300.0,
+          "max_value": 86400.0,
+          "default_value": 3600.0,
+          "engineering_units": "s",
+          "description": "Automatic media filter backwash sequence trigger interval"
+        },
+        {
+          "name": "batch_cycle_time_s",
+          "register_address": "%R118",
+          "data_type": "INT",
+          "min_value": 30.0,
+          "max_value": 7200.0,
+          "default_value": 600.0,
+          "engineering_units": "s",
+          "description": "Duration of batch cycle sequence in seconds"
+        },
+        {
+          "name": "auto_mode_enable",
+          "register_address": "%R120",
+          "data_type": "BOOL",
+          "min_value": 0.0,
+          "max_value": 1.0,
+          "default_value": 1.0,
+          "engineering_units": "bool",
+          "description": "Master supervisory autonomous recipe execution enable flag"
+        }
+      ]
+    }
+  },
+  "records": {
+    "WT_LOW_FLOW": {
+      "record_id": "WT_LOW_FLOW",
+      "recipe_id": "WATER_TREATMENT_PROCESS",
+      "values": {
+        "inflow_setpoint": 3.5,
+        "tank_level_target": 35.0,
+        "pump_speed_setpoint": 8000,
+        "discharge_valve_pos": 25.0,
+        "chemical_dose_ppm": 2.5,
+        "coagulant_dose_ml_min": 20.0,
+        "hi_level_alarm_limit": 80.0,
+        "lo_level_alarm_limit": 15.0,
+        "filter_backwash_interval_s": 7200,
+        "batch_cycle_time_s": 1200,
+        "auto_mode_enable": true
+      },
+      "description": "Water Treatment Low Flow: Off-peak / overnight low demand operating mode.",
+      "created_at": null,
+      "updated_at": null
+    },
+    "WT_NORMAL_FLOW": {
+      "record_id": "WT_NORMAL_FLOW",
+      "recipe_id": "WATER_TREATMENT_PROCESS",
+      "values": {
+        "inflow_setpoint": 8.5,
+        "tank_level_target": 50.0,
+        "pump_speed_setpoint": 16000,
+        "discharge_valve_pos": 50.0,
+        "chemical_dose_ppm": 5.0,
+        "coagulant_dose_ml_min": 45.0,
+        "hi_level_alarm_limit": 85.0,
+        "lo_level_alarm_limit": 20.0,
+        "filter_backwash_interval_s": 3600,
+        "batch_cycle_time_s": 600,
+        "auto_mode_enable": true
+      },
+      "description": "Water Treatment Normal Flow: Standard daytime nominal municipal water treatment mode.",
+      "created_at": null,
+      "updated_at": null
+    },
+    "WT_STORM_SURGE": {
+      "record_id": "WT_STORM_SURGE",
+      "recipe_id": "WATER_TREATMENT_PROCESS",
+      "values": {
+        "inflow_setpoint": 22.0,
+        "tank_level_target": 75.0,
+        "pump_speed_setpoint": 31000,
+        "discharge_valve_pos": 95.0,
+        "chemical_dose_ppm": 15.0,
+        "coagulant_dose_ml_min": 140.0,
+        "hi_level_alarm_limit": 95.0,
+        "lo_level_alarm_limit": 30.0,
+        "filter_backwash_interval_s": 1800,
+        "batch_cycle_time_s": 300,
+        "auto_mode_enable": true
+      },
+      "description": "Storm Surge Batch: High-throughput storm surge emergency batch processing mode.",
+      "created_at": null,
+      "updated_at": null
+    }
+  }
+}

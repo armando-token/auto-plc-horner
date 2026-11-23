@@ -1,0 +1,80 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Polar / Radar Multi-Axis Spectral Signature SCADA Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W186",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Polar / Radar Multi-Axis Spectral Signature SCADA Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Security_Guard",
+        "passed": true,
+        "details": "Parsed PolarSpectralSignatureCanvasSync and SpectralSignatureRadarHmiSync with STParser; validated bound registers %R1470..%R1477, %M343..%M344; ladder intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 2,
+        "check": "Eight_Axis_Polar_Radar_Spider_Geometry_And_Spoke_Layout",
+        "passed": true,
+        "details": "Verified 8 orthogonal spectral diagnostic axes at pi/4 increments; top spoke at (420.0, 175.0) and right spoke at (650.0, 405.0)."
+      },
+      {
+        "stage": 3,
+        "check": "Concentric_Polar_Grid_Rings_And_ISO_10816_Limits",
+        "passed": true,
+        "details": "Verified 4 concentric polar rings (25%, 50%, 75%, 100% ISO 10816 limits) and 8-vertex octagonal web boundary."
+      },
+      {
+        "stage": 4,
+        "check": "Polygon_Synthesis_With_Smooth_Bezier_Splines_And_Linear_Fills",
+        "passed": true,
+        "details": "Synthesized 8-vertex closed linear polygon boundary points and C1-continuous cubic B\u00e9zier spline (M...C...Z)."
+      },
+      {
+        "stage": 5,
+        "check": "Dual_State_Baseline_Signature_Vs_Live_Vibration_Signature",
+        "passed": true,
+        "details": "Verified dual-state representation: Golden baseline signature (dashed cyan #06B6D4) vs live vibration signature with radiant glow filter."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Safety_Interlocks_And_Diagnostics",
+        "passed": true,
+        "details": "Verified 0xD301 critical resonance trip (%M343), 0xD302 bearing demod warning, 0xD303 render fault, and clean nominal restoration."
+      },
+      {
+        "stage": 7,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone W3C SVG 1.1; XML valid; dark theme backing, machine train selector, and right-hand ISO 10816 machinery health HUD card verified."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Theme text 17.06:1 (> 7:1), Graphical SCADA colors (7.35:1..7.04:1 > 3:1) verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scan_Cycle",
+        "passed": true,
+        "details": "%R1470=425, %R1471=742, %R1472=0, %R1473=20, %R1474=38, %R1475=815, %R1476=895, %R1477=0; %M343=False, %M344=True."
+      }
+    ],
+    "metrics": {
+      "overall_vibration_rms": 4.25,
+      "max_spectral_axis_score_pct": 74.2,
+      "selected_machine_index": 0,
+      "peak_harmonic_order": 2.0,
+      "bearing_crest_factor": 3.8,
+      "spectral_entropy_score_pct": 81.5,
+      "machinery_health_score_pct": 89.5,
+      "diagnostic_status_code": "0x0000",
+      "wcag_badge_contrast": 18.3,
+      "wcag_theme_contrast": 17.06
+    }
+  }
+}

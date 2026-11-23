@@ -1,0 +1,210 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "PHA biopolymer fermentation simulation verification passed (9/9 stages passed).",
+  "data": {
+    "work_package": "W272",
+    "stages_passed": 9,
+    "passed_stages": 9,
+    "total_stages": 9,
+    "checks_passed": 9,
+    "total_checks": 9,
+    "duration_seconds": 0.061483144760131836,
+    "elapsed_ms": 61.483144760131836,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Biochemical Constants, Monod Kinetics & Aeration Baseline",
+        "check": "Biochemical Constants, Monod Kinetics & Aeration Baseline",
+        "passed": true,
+        "details": "Biochemical parameters verified: MW_glucose=180.156 g/mol, MW_PHB=86.090 g/mol, nominal mu=0.1800 1/h (0.180), q_p=0.2880 1/h (0.288), Kla=150.0 1/h (150.0)."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "PhaBiopolymerFermentationSync POU verified cleanly with STParser & SecurityGuard; STVariable address_binding validated for %R2330..%R2337 and %M543..%M545."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Fed-Batch Steady-State Convergence (X=42.5, P=68.0, S=12.0, N=0.15, DO=35.0%, V=105.0 L)",
+        "check": "Nominal Fed-Batch Steady-State Convergence (X=42.5, P=68.0, S=12.0, N=0.15, DO=35.0%, V=105.0 L)",
+        "passed": true,
+        "details": "Nominal baseline verified: Biomass X=42.5 g/L (42.5), PHA P=68.0 g/L (68.0), Glucose S=12.0 g/L (12.0), Nitrogen N=0.15 g/L (0.15), DO=35.0% (35.0%), Volume V=105.0 L (105.0 L), mu=0.180 1/h (0.180)."
+      },
+      {
+        "stage": 5,
+        "name": "Dual Stoichiometric Mass Balance Conservation Residuals (< 1e-10 kg/s)",
+        "check": "Dual Stoichiometric Mass Balance Conservation Residuals (< 1e-10 kg/s)",
+        "passed": true,
+        "details": "Conservation laws verified: total mass residual=0.00e+00 kg/s, carbon mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Dissolved Oxygen Depletion Trip & Oxygen Transfer Interlock (0xFB01, %M545)",
+        "check": "Dissolved Oxygen Depletion Trip & Oxygen Transfer Interlock (0xFB01, %M545)",
+        "passed": true,
+        "details": "0xFB01 dissolved oxygen depletion trip (< 10.0%) verified, %M545 oxygen depletion tripped asserted, %M543 fermenter active cleared, %M544 accumulation cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Substrate Exhaustion (0xFB02), Vessel Overfill (0xFB03) & Nitrogen Overfeed (0xFB04)",
+        "check": "Substrate Exhaustion (0xFB02), Vessel Overfill (0xFB03) & Nitrogen Overfeed (0xFB04)",
+        "passed": true,
+        "details": "0xFB02 substrate starvation (< 2.0 g/L), 0xFB03 vessel overfill (> 140.0 L), and 0xFB04 nitrogen accumulation inhibition (> 1.00 g/L) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2330..%R2337, %M543..%M545)",
+        "check": "Horner OCS Register Table Synchronization (%R2330..%R2337, %M543..%M545)",
+        "passed": true,
+        "details": "Registers %R2330..%R2337 and coils %M543..%M545 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final X=42.50 g/L, P=68.00 g/L, V=105.01 L, DO=35.00%, residuals < 1e-10."
+      }
+    ],
+    "results": [
+      {
+        "stage": 1,
+        "name": "Biochemical Constants, Monod Kinetics & Aeration Baseline",
+        "check": "Biochemical Constants, Monod Kinetics & Aeration Baseline",
+        "passed": true,
+        "details": "Biochemical parameters verified: MW_glucose=180.156 g/mol, MW_PHB=86.090 g/mol, nominal mu=0.1800 1/h (0.180), q_p=0.2880 1/h (0.288), Kla=150.0 1/h (150.0)."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "PhaBiopolymerFermentationSync POU verified cleanly with STParser & SecurityGuard; STVariable address_binding validated for %R2330..%R2337 and %M543..%M545."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Fed-Batch Steady-State Convergence (X=42.5, P=68.0, S=12.0, N=0.15, DO=35.0%, V=105.0 L)",
+        "check": "Nominal Fed-Batch Steady-State Convergence (X=42.5, P=68.0, S=12.0, N=0.15, DO=35.0%, V=105.0 L)",
+        "passed": true,
+        "details": "Nominal baseline verified: Biomass X=42.5 g/L (42.5), PHA P=68.0 g/L (68.0), Glucose S=12.0 g/L (12.0), Nitrogen N=0.15 g/L (0.15), DO=35.0% (35.0%), Volume V=105.0 L (105.0 L), mu=0.180 1/h (0.180)."
+      },
+      {
+        "stage": 5,
+        "name": "Dual Stoichiometric Mass Balance Conservation Residuals (< 1e-10 kg/s)",
+        "check": "Dual Stoichiometric Mass Balance Conservation Residuals (< 1e-10 kg/s)",
+        "passed": true,
+        "details": "Conservation laws verified: total mass residual=0.00e+00 kg/s, carbon mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Dissolved Oxygen Depletion Trip & Oxygen Transfer Interlock (0xFB01, %M545)",
+        "check": "Dissolved Oxygen Depletion Trip & Oxygen Transfer Interlock (0xFB01, %M545)",
+        "passed": true,
+        "details": "0xFB01 dissolved oxygen depletion trip (< 10.0%) verified, %M545 oxygen depletion tripped asserted, %M543 fermenter active cleared, %M544 accumulation cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Substrate Exhaustion (0xFB02), Vessel Overfill (0xFB03) & Nitrogen Overfeed (0xFB04)",
+        "check": "Substrate Exhaustion (0xFB02), Vessel Overfill (0xFB03) & Nitrogen Overfeed (0xFB04)",
+        "passed": true,
+        "details": "0xFB02 substrate starvation (< 2.0 g/L), 0xFB03 vessel overfill (> 140.0 L), and 0xFB04 nitrogen accumulation inhibition (> 1.00 g/L) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2330..%R2337, %M543..%M545)",
+        "check": "Horner OCS Register Table Synchronization (%R2330..%R2337, %M543..%M545)",
+        "passed": true,
+        "details": "Registers %R2330..%R2337 and coils %M543..%M545 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final X=42.50 g/L, P=68.00 g/L, V=105.01 L, DO=35.00%, residuals < 1e-10."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Biochemical Constants, Monod Kinetics & Aeration Baseline",
+        "check": "Biochemical Constants, Monod Kinetics & Aeration Baseline",
+        "passed": true,
+        "details": "Biochemical parameters verified: MW_glucose=180.156 g/mol, MW_PHB=86.090 g/mol, nominal mu=0.1800 1/h (0.180), q_p=0.2880 1/h (0.288), Kla=150.0 1/h (150.0)."
+      },
+      {
+        "stage": 2,
+        "name": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "details": "PhaBiopolymerFermentationSync POU verified cleanly with STParser & SecurityGuard; STVariable address_binding validated for %R2330..%R2337 and %M543..%M545."
+      },
+      {
+        "stage": 3,
+        "name": "Anti-Ladder Security Guard Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal Fed-Batch Steady-State Convergence (X=42.5, P=68.0, S=12.0, N=0.15, DO=35.0%, V=105.0 L)",
+        "check": "Nominal Fed-Batch Steady-State Convergence (X=42.5, P=68.0, S=12.0, N=0.15, DO=35.0%, V=105.0 L)",
+        "passed": true,
+        "details": "Nominal baseline verified: Biomass X=42.5 g/L (42.5), PHA P=68.0 g/L (68.0), Glucose S=12.0 g/L (12.0), Nitrogen N=0.15 g/L (0.15), DO=35.0% (35.0%), Volume V=105.0 L (105.0 L), mu=0.180 1/h (0.180)."
+      },
+      {
+        "stage": 5,
+        "name": "Dual Stoichiometric Mass Balance Conservation Residuals (< 1e-10 kg/s)",
+        "check": "Dual Stoichiometric Mass Balance Conservation Residuals (< 1e-10 kg/s)",
+        "passed": true,
+        "details": "Conservation laws verified: total mass residual=0.00e+00 kg/s, carbon mass residual=0.00e+00 kg/s, elemental residual=0.00e+00 kg/s (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Dissolved Oxygen Depletion Trip & Oxygen Transfer Interlock (0xFB01, %M545)",
+        "check": "Dissolved Oxygen Depletion Trip & Oxygen Transfer Interlock (0xFB01, %M545)",
+        "passed": true,
+        "details": "0xFB01 dissolved oxygen depletion trip (< 10.0%) verified, %M545 oxygen depletion tripped asserted, %M543 fermenter active cleared, %M544 accumulation cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Substrate Exhaustion (0xFB02), Vessel Overfill (0xFB03) & Nitrogen Overfeed (0xFB04)",
+        "check": "Substrate Exhaustion (0xFB02), Vessel Overfill (0xFB03) & Nitrogen Overfeed (0xFB04)",
+        "passed": true,
+        "details": "0xFB02 substrate starvation (< 2.0 g/L), 0xFB03 vessel overfill (> 140.0 L), and 0xFB04 nitrogen accumulation inhibition (> 1.00 g/L) verified deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "Horner OCS Register Table Synchronization (%R2330..%R2337, %M543..%M545)",
+        "check": "Horner OCS Register Table Synchronization (%R2330..%R2337, %M543..%M545)",
+        "passed": true,
+        "details": "Registers %R2330..%R2337 and coils %M543..%M545 bit-exact verified with signed/unsigned masking."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "check": "Simulation Soak 100 Cycles & Dynamic Settling Stability",
+        "passed": true,
+        "details": "100 cycles executed smoothly: final X=42.50 g/L, P=68.00 g/L, V=105.01 L, DO=35.00%, residuals < 1e-10."
+      }
+    ]
+  }
+}

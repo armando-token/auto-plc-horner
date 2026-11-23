@@ -1,0 +1,119 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "W261 Treemap Spatial Canvas verification passed all 9/9 deterministic stages.",
+  "data": {
+    "work_package": "W261",
+    "gate": "Gate G9 / Gate G2",
+    "component": "Cscape HMI Dynamic Treemap Spatial Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Asset_Hierarchy_Tree_And_Bounding_Box_Spatial_Partitioning",
+        "check": "Asset_Hierarchy_Tree_And_Bounding_Box_Spatial_Partitioning",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.43690018355846405,
+        "details": "Verified 21 asset nodes, depth 3, strictly non-overlapping bounding boxes and spatial containment."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 16.1466000135988,
+        "details": "Validated 'TreemapSpatialCanvasSync' POU across Horner registers %R2220..%R2227 and coils %M518..%M519."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.03560003824532032,
+        "details": "Rejected all 6/6 forbidden ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Squarified_Layout_Aspect_Ratio_Optimization",
+        "check": "Squarified_Layout_Aspect_Ratio_Optimization",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.46769995242357254,
+        "details": "Verified squarified layout aspect ratio optimization: worst ratio 2.23:1 strictly < 3.0 ceiling."
+      },
+      {
+        "stage": 5,
+        "name": "WCAG_AAA_Color_Contrast_Compliance",
+        "check": "WCAG_AAA_Color_Contrast_Compliance",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 0.05429983139038086,
+        "details": "Verified decoupled badge contrast 20.01:1 (>= 18:1), secondary text 13.48:1 (>= 7:1), and graphic contrast 5.09:1 (>= 3:1)."
+      },
+      {
+        "stage": 6,
+        "name": "Invalid_Hierarchy_And_Degeneration_Fault_Injections",
+        "check": "Invalid_Hierarchy_And_Degeneration_Fault_Injections",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 51.810799865052104,
+        "details": "Verified 0x0000 OK baseline, 0x7701 INVALID_HIERARCHY trip (%M519 asserted), 0x7702 DEGENERATION trip, and nominal recoveries."
+      },
+      {
+        "stage": 7,
+        "name": "Interactive_Drilldown_Zoom_And_Nested_Level_Filtering",
+        "check": "Interactive_Drilldown_Zoom_And_Nested_Level_Filtering",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.038899878039956,
+        "details": "Verified drilldown zoom (Level 0 -> 1), dynamic breadcrumb HUD update, nested level depth filtering, and zoom restoration."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner_OCS_Register_Table_Synchronization",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 1.1175998952239752,
+        "details": "Synchronized %R2220=21, %R2221=0, %R2222=1, %R2223=223, %R2224=1200, %R2225=0, %R2226=9640, %R2227=0, %M518=True, %M519=False."
+      },
+      {
+        "stage": 9,
+        "name": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "check": "Visual_Grounding_Fallback_And_High_Res_SVG_Export",
+        "passed": true,
+        "status": "passed",
+        "timing_ms": 2.8562000952661037,
+        "details": "Generated high-res W3C SVG 1.1 (16042 chars) with visual grounding metadata -> C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\treemap_spatial_canvas_sample.svg."
+      }
+    ],
+    "registers": {
+      "%R2220": 21,
+      "%R2221": 0,
+      "%R2222": 1,
+      "%R2223": 223,
+      "%R2224": 1200,
+      "%R2225": 0,
+      "%R2226": 9640,
+      "%R2227": 0,
+      "%M518": true,
+      "%M519": false
+    },
+    "metrics": {
+      "worst_aspect_ratio": 2.225354411783171,
+      "aspect_ratio_ceiling": 3.0,
+      "total_asset_nodes": 21,
+      "badge_contrast_ratio": 20.01,
+      "text_contrast_ratio": 13.48,
+      "min_graphic_contrast_ratio": 5.09
+    },
+    "artifacts": {
+      "evidence_json": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\treemap_spatial_canvas_evidence.json",
+      "sample_svg": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\HMI\\treemap_spatial_canvas_sample.svg"
+    }
+  }
+}

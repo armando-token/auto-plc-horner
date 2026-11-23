@@ -1,0 +1,66 @@
+{
+  "work_package": "W081",
+  "title": "Cscape HMI Dynamic Multi-State Graphic Annunciator Matrix & Alarm Panel Rasterizer",
+  "gates": [
+    "G9",
+    "G2"
+  ],
+  "timestamp": "2026-10-03T01:06:52.578856+00:00",
+  "overall_status": "success",
+  "checks": {
+    "isa181_sequence_m_lifecycle": {
+      "status": "passed",
+      "trip_fast_flash": true,
+      "operator_ack_steady": true,
+      "clear_ringback_slow_flash": true,
+      "silence_reset_normal": true
+    },
+    "first_out_cascade_capture": {
+      "status": "passed",
+      "latched_first_out_index": 4,
+      "expected_first_out_index": 4,
+      "non_initial_first_out_flag": false
+    },
+    "typography_word_wrap": {
+      "status": "passed",
+      "line_count": 2,
+      "lines": [
+        "FEED PUMP BEARING",
+        "HIGH TEMP"
+      ]
+    },
+    "svg_rendering_and_xml_validity": {
+      "status": "passed",
+      "svg_bytes": 25384,
+      "root_tag": "{http://www.w3.org/2000/svg}svg",
+      "viewbox": "0 0 800 480",
+      "redundant_glyphs_present": true
+    },
+    "horner_register_table_sync": {
+      "status": "passed",
+      "status_word_hex": "0xf",
+      "total_active_count": 2,
+      "unack_count": 2,
+      "first_out_tile_idx": 0,
+      "tile0_state_code": 1,
+      "tile4_state_code": 1
+    },
+    "pure_st_ast_validation": {
+      "status": "passed",
+      "pou_name": "W081_AnnunciatorEngine",
+      "pou_type": "PROGRAM",
+      "bound_registers_count": 10,
+      "statements_count": 64
+    }
+  },
+  "specification": {
+    "matrix_layout": "4 columns x 3 rows (12 annunciator tiles)",
+    "viewbox": "800x480",
+    "tile_dimensions": "178px x 100px",
+    "contrast_standard": "WCAG 2.1 AAA",
+    "sequence_standards": [
+      "ISA-18.1 Sequence M",
+      "ISA-18.1 Sequence A"
+    ]
+  }
+}

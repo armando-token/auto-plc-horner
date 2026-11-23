@@ -1,0 +1,155 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Sync Transparent Clock Engine (W211) verified cleanly (9/9 stages passed).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "data": {
+    "work_package": "W211",
+    "standards": [
+      "IEEE 1588-2019 (PTPv2.1)",
+      "IEEE 802.1AS-2020",
+      "ODVA CIP Sync Profile (Class 0x43)",
+      "IEC 61131-3 Structured Text"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "check": "POU_ST_Syntax_Validation_And_Anti_Ladder_Check",
+        "passed": true,
+        "details": "IEC 61131-3 POU 'CipSyncTransparentClockSync' verified cleanly; bound 10 registers; ladder rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Clock_Modes_And_4_Port_State_Machine",
+        "passed": true,
+        "details": "Clock modes (0=OC, 1=BC, 2=E2E_TC, 3=P2P_TC) and 4-port state machine validated (4 active ports)."
+      },
+      {
+        "stage": 3,
+        "check": "End_To_End_Transparent_Clock_Bridge_Forwarding_And_Residence_Time",
+        "passed": true,
+        "details": "E2E TC forwarded 3 packets; residence time=350ns; correctionField=88473600 (1350ns)."
+      },
+      {
+        "stage": 4,
+        "check": "Peer_To_Peer_Transparent_Clock_And_Peer_Delay_Addition",
+        "passed": true,
+        "details": "P2P TC verified: peer link delay=1450ns, total correction=117964800 (1800ns), Delay_Req blocked."
+      },
+      {
+        "stage": 5,
+        "check": "Sub_Nanosecond_Correction_Field_Accumulation_And_Fixed_Point_Scaling",
+        "passed": true,
+        "details": "Sub-ns correction: res=22953984 units, rate_ratio=115 units, DINT low=-6072, high=1."
+      },
+      {
+        "stage": 6,
+        "check": "Syntonization_Rate_Ratio_Estimation_Across_Master_Intervals",
+        "passed": true,
+        "details": "Syntonization tracking: rate_ratio=1.000001500, offset=1.500 ppm, %R1725 scaled=15."
+      },
+      {
+        "stage": 7,
+        "check": "Horner_OCS_Register_Table_Mapping_R1720_R1727_M401_M402",
+        "passed": true,
+        "details": "Horner OCS registers verified: %R1720=2, %R1721=4, %R1722=350ns, corr=45000ns, %R1725=15, %M401=True."
+      },
+      {
+        "stage": 8,
+        "check": "Discrete_ILogicUnit_100_Cycle_Scan_Simulation",
+        "passed": true,
+        "details": "100 scan cycles completed cleanly; simulation elapsed=1000.0ms."
+      },
+      {
+        "stage": 9,
+        "check": "Process_Safety_Interlocks_Diagnostics_And_Fault_Trips",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xE301..0xE304 diagnostic fault trips and operator reset confirmed."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "check": "POU_ST_Syntax_Validation_And_Anti_Ladder_Check",
+        "passed": true,
+        "details": "IEC 61131-3 POU 'CipSyncTransparentClockSync' verified cleanly; bound 10 registers; ladder rejected."
+      },
+      {
+        "stage": 2,
+        "check": "Clock_Modes_And_4_Port_State_Machine",
+        "passed": true,
+        "details": "Clock modes (0=OC, 1=BC, 2=E2E_TC, 3=P2P_TC) and 4-port state machine validated (4 active ports)."
+      },
+      {
+        "stage": 3,
+        "check": "End_To_End_Transparent_Clock_Bridge_Forwarding_And_Residence_Time",
+        "passed": true,
+        "details": "E2E TC forwarded 3 packets; residence time=350ns; correctionField=88473600 (1350ns)."
+      },
+      {
+        "stage": 4,
+        "check": "Peer_To_Peer_Transparent_Clock_And_Peer_Delay_Addition",
+        "passed": true,
+        "details": "P2P TC verified: peer link delay=1450ns, total correction=117964800 (1800ns), Delay_Req blocked."
+      },
+      {
+        "stage": 5,
+        "check": "Sub_Nanosecond_Correction_Field_Accumulation_And_Fixed_Point_Scaling",
+        "passed": true,
+        "details": "Sub-ns correction: res=22953984 units, rate_ratio=115 units, DINT low=-6072, high=1."
+      },
+      {
+        "stage": 6,
+        "check": "Syntonization_Rate_Ratio_Estimation_Across_Master_Intervals",
+        "passed": true,
+        "details": "Syntonization tracking: rate_ratio=1.000001500, offset=1.500 ppm, %R1725 scaled=15."
+      },
+      {
+        "stage": 7,
+        "check": "Horner_OCS_Register_Table_Mapping_R1720_R1727_M401_M402",
+        "passed": true,
+        "details": "Horner OCS registers verified: %R1720=2, %R1721=4, %R1722=350ns, corr=45000ns, %R1725=15, %M401=True."
+      },
+      {
+        "stage": 8,
+        "check": "Discrete_ILogicUnit_100_Cycle_Scan_Simulation",
+        "passed": true,
+        "details": "100 scan cycles completed cleanly; simulation elapsed=1000.0ms."
+      },
+      {
+        "stage": 9,
+        "check": "Process_Safety_Interlocks_Diagnostics_And_Fault_Trips",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xE301..0xE304 diagnostic fault trips and operator reset confirmed."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "register_map": {
+      "%R1720": "ClockTypeMode",
+      "%R1721": "ActivePortCount",
+      "%R1722": "MeanResidenceTimeNsScaled",
+      "%R1723": "TotalCorrectionFieldNsLow",
+      "%R1724": "TotalCorrectionFieldNsHigh",
+      "%R1725": "SyntonizationRateRatioPpmScaled",
+      "%R1726": "ClockDomainNumber",
+      "%R1727": "DiagnosticStatusCode",
+      "%M401": "TransparentClockActive",
+      "%M402": "ClockAsymmetryFaultTrip"
+    },
+    "registers": {
+      "%R1720": 2,
+      "%R1721": 4,
+      "%R1722": 350,
+      "%R1723": 0,
+      "%R1724": 0,
+      "%R1725": 650,
+      "%R1726": 0,
+      "%R1727": 0,
+      "%M401": true,
+      "%M402": false
+    },
+    "timestamp": "2026-10-06T06:25:16Z"
+  }
+}

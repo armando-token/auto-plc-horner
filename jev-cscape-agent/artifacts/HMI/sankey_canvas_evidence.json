@@ -1,0 +1,80 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Dynamic Sankey Process Mass & Energy Stream Flow Distribution Canvas verification passed cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W159",
+    "gate": "Gate G9 / G2",
+    "component": "Cscape HMI Dynamic Sankey Process Mass & Energy Stream Flow Distribution Canvas",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Security_Guard",
+        "passed": true,
+        "details": "Parsed SankeyCanvasSync and ProcessFlowSankeyHmiSync with STParser; validated bound registers %R1200..%R1207, %M280..%M281; ladder intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 2,
+        "check": "Industrial_5_Stage_Nodes_Geometry_And_Mass_Conservation",
+        "passed": true,
+        "details": "Verified 5 multi-stage nodes (Feed 100.0 kg/s, Reaction 135.0 kg/s, Separation 135.0 kg/s, Recycle 35.0 kg/s, Product & Purge 65.0 kg/s); continuous nodal mass conservation |In - Out| < 1e-4."
+      },
+      {
+        "stage": 3,
+        "check": "Smooth_Horizontal_Cubic_Bezier_Ribbon_Synthesis",
+        "passed": true,
+        "details": "Synthesized 9 horizontal cubic B\u00e9zier flow ribbons with variable ribbon width strictly proportional to stream mass flow rate; horizontal tangent continuity verified."
+      },
+      {
+        "stage": 4,
+        "check": "High_Contrast_SCADA_Palette_Assignment",
+        "passed": true,
+        "details": "Verified SCADA palette: Feed (#10B981 Emerald), Reaction (#06B6D4 Cyan), Separation (#6366F1 Indigo), Recycle (#F59E0B Amber), Product & Purge (#EF4444 Crimson)."
+      },
+      {
+        "stage": 5,
+        "check": "Process_Safety_Flow_Imbalance_Trip_Interlock",
+        "passed": true,
+        "details": "Verified 0xB801 flow imbalance trip and %M280 coil assertion when nodal flow imbalance exceeds 2.0% (injected 2.50% -> %R1205=250)."
+      },
+      {
+        "stage": 6,
+        "check": "Diagnostic_Faults_Energy_Inversion_And_Render_Fault",
+        "passed": true,
+        "details": "Verified 0xB802 energy inversion fault, 0xB803 render fault latching, and clean nominal restoration."
+      },
+      {
+        "stage": 7,
+        "check": "Standalone_W3C_SVG_XML_Validation_And_Canvas_Rendering",
+        "passed": true,
+        "details": "Rendered 1200x750 standalone W3C SVG 1.1; XML valid; dark theme backing, node columns, vertical node bars, gradient ribbons, stream badges, and metrics card verified."
+      },
+      {
+        "stage": 8,
+        "check": "WCAG_21_AAA_Accessibility_And_Contrast_Checks",
+        "passed": true,
+        "details": "Decoupled badge contrast 18.30:1 (> 18:1), Theme text 17.06:1 (> 7:1), Graphical SCADA colors (7.04:1..8.31:1 > 3:1) verified."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Space_Synchronization_And_Scan_Cycle",
+        "passed": true,
+        "details": "%R1200=1000, %R1201=5, %R1202=350, %R1203=620, %R1204=30, %R1205=0, %R1206=0, %R1207=0; %M280=False, %M281=True; discrete scan cycle verified."
+      }
+    ],
+    "metrics": {
+      "num_nodes": 5,
+      "num_streams": 9,
+      "total_feed_rate_kg_s": 100.0,
+      "recycle_stream_flow_kg_s": 35.0,
+      "product_yield_flow_kg_s": 62.0,
+      "purge_loss_flow_kg_s": 3.0,
+      "max_stage_imbalance_pct": 0.0,
+      "wcag_badge_contrast": 18.3,
+      "wcag_theme_contrast": 17.06,
+      "selected_stream_index": 0
+    }
+  }
+}

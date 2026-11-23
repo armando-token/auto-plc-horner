@@ -1,0 +1,58 @@
+{
+  "gate": "G5",
+  "work_package": "W024",
+  "status": "success",
+  "mode": "offline/mock",
+  "classification": "FINAL_SIGNOFF_PASSED",
+  "timestamp_utc": "2026-10-16T21:34:28.277914+00:00",
+  "repository_root": "C:/HornerAI/jev-cscape-agent",
+  "total_stages": 6,
+  "stages_passed": 6,
+  "stages": {
+    "environment": {
+      "stage": "environment",
+      "status": "passed",
+      "platform": "win32",
+      "python_version": "3.12.10",
+      "details": "Python 3.12.10 verified on platform win32."
+    },
+    "hardware_lockout": {
+      "stage": "hardware_lockout",
+      "status": "passed",
+      "lockouts_tested": 11,
+      "lockouts_enforced": 11,
+      "details": "Fail-closed safety guard intercepted all restricted ports, binaries, switches, and Win32 commands."
+    },
+    "straton_quarantine": {
+      "stage": "straton_quarantine",
+      "status": "passed",
+      "violations": [],
+      "details": "Zero Copa-Data Straton runtime references found across src/ tree."
+    },
+    "manifest_integrity": {
+      "stage": "manifest_integrity",
+      "status": "passed",
+      "manifest_path": "C:/HornerAI/jev-cscape-agent/artifacts/G5/delivery_manifest.json",
+      "error_count": 0,
+      "errors": [],
+      "details": "All registered deliverable hashes matched on-disk SHA-256 digests bit-for-bit."
+    },
+    "simulation_smoke": {
+      "stage": "simulation_smoke",
+      "status": "passed",
+      "scans_executed": 100,
+      "virtual_time_ms": 1000.0,
+      "final_level_pv": 44.49,
+      "engine_state": "RUNNING",
+      "details": "100-cycle in-memory closed-loop scan completed with zero faults and bounded state."
+    },
+    "ops_consistency": {
+      "stage": "ops_consistency",
+      "status": "passed",
+      "work_packages_tracked": 331,
+      "gates_tracked": 13,
+      "details": "Operational ledger confirmed consistent with 331 work packages across 13 gates."
+    }
+  },
+  "verdict": "Gate G5 PASSED: Full cryptographic delivery manifest verified bit-for-bit; fail-closed hardware lockout certified active; Copa-Data Straton K5 certified isolated; pure-software closed-loop plant simulation verified without faults; all gates G0..G5 passed."
+}

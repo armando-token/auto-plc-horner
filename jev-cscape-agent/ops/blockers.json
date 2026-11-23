@@ -1,0 +1,37 @@
+{
+  "ledger_version": "1.0.0",
+  "updated_at_utc": "2026-10-01T21:00:00Z",
+  "active_blockers": [
+    {
+      "id": "BLK-001",
+      "code": "credential_missing",
+      "target": "jev_provider",
+      "description": "Environment variable 'JEV_API_KEY' is not configured. Jev agent will operate in local rule-based mock mode until credentials are provided.",
+      "severity": "medium",
+      "status": "active",
+      "mitigation": "Set $env:JEV_API_KEY in session environment when remote JEV inference is required.",
+      "blocks_milestone": false
+    },
+    {
+      "id": "BLK-002",
+      "code": "hardware_download_lockout",
+      "target": "physical_plc",
+      "description": "Fail-closed safety policy strictly prohibits automated communication or download to physical PLC controllers.",
+      "severity": "critical",
+      "status": "permanent_invariant",
+      "mitigation": "Manual commissioning procedure via physical USB/MicroSD only.",
+      "blocks_milestone": false
+    },
+    {
+      "id": "BLK-003",
+      "code": "st_to_ld_conversion_blocked",
+      "target": "cscape_ide",
+      "description": "Horner Cscape 10.2 IDE lacks native menus, commands, or DLL exports for ST-to-Ladder conversion.",
+      "severity": "architectural_limit",
+      "status": "permanent_invariant",
+      "mitigation": "Documented as BLOCKED_NATIVE: DOCUMENT_ONLY. Pure ST logic and external ASCII/JSON AST representations maintained.",
+      "blocks_milestone": false
+    }
+  ],
+  "resolved_blockers": []
+}

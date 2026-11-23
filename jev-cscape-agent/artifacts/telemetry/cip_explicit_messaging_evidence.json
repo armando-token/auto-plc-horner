@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Industrial EtherNet/IP Explicit Messaging & CIP Object Dictionary Engine verified cleanly (9/9 stages passed).",
+  "data": {
+    "work_package": "W172",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial EtherNet/IP Explicit Messaging Connected/Unconnected Message Manager (UCMM) & CIP Object Dictionary Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Anti_Ladder_Guard",
+        "passed": true,
+        "details": "Pure ST POUs parsed (%R1330..%R1337, %M310..%M311) and ladder syntax strictly rejected."
+      },
+      {
+        "stage": 2,
+        "check": "EPath_Logical_Segment_Parsing_8Bit_And_16Bit",
+        "passed": true,
+        "details": "8-bit and 16-bit EPATH encoding/decoding matched ODVA logical segment specification."
+      },
+      {
+        "stage": 3,
+        "check": "Encapsulation_And_UCMM_Port_44818_Session_Lifecycle",
+        "passed": true,
+        "details": "Session registration, command routing, and unregistration verified; %R1330 synchronized."
+      },
+      {
+        "stage": 4,
+        "check": "Connected_Explicit_Messaging_Transport_Class_3",
+        "passed": true,
+        "details": "Forward_Open (0x54) established Class 3 connection, Send_Unit_Data answered, and Forward_Close terminated cleanly."
+      },
+      {
+        "stage": 5,
+        "check": "Core_CIP_Object_Dictionary_Identity_TCPIP_EthernetLink",
+        "passed": true,
+        "details": "Identity (0x01), TCP/IP (0xF5), and Ethernet Link (0xF6) objects queried successfully; %R1336 updated."
+      },
+      {
+        "stage": 6,
+        "check": "Assembly_Object_Data_Access_Get_Set",
+        "passed": true,
+        "details": "Instance 100 read-only enforced; Instance 101 setpoints written and read back cleanly."
+      },
+      {
+        "stage": 7,
+        "check": "Fragmentation_And_Reassembly_Engine",
+        "passed": true,
+        "details": "1200-byte payload cleanly fragmented into 6 chunks and reassembled; malformed fragments trapped."
+      },
+      {
+        "stage": 8,
+        "check": "Process_Safety_Interlocks_And_Diagnostics_0xC501_To_0xC504",
+        "passed": true,
+        "details": "All 4 diagnostic event codes (0xC501..0xC504) asserted %M311 and de-asserted %M310 deterministically."
+      },
+      {
+        "stage": 9,
+        "check": "Scan_Cycle_Simulation_And_Register_Synchronization",
+        "passed": true,
+        "details": "ILogicUnit scan cycles executed; %R1330..%R1337 and %M310..%M311 synchronized with PrivilegeMode.SYSTEM."
+      }
+    ],
+    "register_map": {
+      "analog_registers": "%R1330..%R1337",
+      "discrete_coils": "%M310..%M311",
+      "values": {
+        "%R1330": 3,
+        "%R1331": 0,
+        "%R1332": 9,
+        "%R1333": 250,
+        "%R1334": 4,
+        "%R1335": 17032,
+        "%R1336": 3588,
+        "%R1337": 0,
+        "%M310": true,
+        "%M311": false
+      }
+    },
+    "timestamp": "2026-10-05T05:39:31Z"
+  }
+}

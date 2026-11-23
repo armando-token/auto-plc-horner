@@ -1,0 +1,112 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "CIP Safety Dual-Port Daisy-Chain Engine W232 verification: 12/12 stages passed cleanly.",
+  "total_stages": 12,
+  "stages_passed": 12,
+  "passed_stages": 12,
+  "data": {
+    "work_package": "W232",
+    "passed_stages": 12,
+    "stages_passed": 12,
+    "total_stages": 12,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "details": "Class 0x39..0x3B, dual-port line topology, 10ms EPI/30ms watchdog, 2000us jitter limit, and 0xE901..0xE906 signed/unsigned equality verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "details": "POU 'CipSafetyDaisyChainSync' validated clean with STParser & SecurityGuard; all 10 registers bound."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Anti-ladder security guard intercepted 3/3 prohibited ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Daisy_Chain_Topology_State_Transitions",
+        "check": "Daisy_Chain_Topology_State_Transitions",
+        "passed": true,
+        "details": "Transitions DISCONNECTED (0) -> PORT1_ONLY (1) -> PORT2_ONLY (2) -> DUAL_PORT_BRIDGED (3) verified."
+      },
+      {
+        "stage": 5,
+        "name": "Ingress_Egress_Safety_Forwarding_And_Counter_Accounting",
+        "check": "Ingress_Egress_Safety_Forwarding_And_Counter_Accounting",
+        "passed": true,
+        "details": "Port 1 -> Port 2 downstream and Port 2 -> Port 1 upstream forwarding with payload mirroring (%R1931, %R1932, %R1936) verified."
+      },
+      {
+        "stage": 6,
+        "name": "Dual_Channel_Diversified_Payload_Cross_Comparison_And_Dual_CRC_S_Validation",
+        "check": "Dual_Channel_Diversified_Payload_Cross_Comparison_And_Dual_CRC_S_Validation",
+        "passed": true,
+        "details": "Channel A / Channel B complement parity and CRC-S1/CRC-S2 verified; 0xE903 discrepancy fault caught."
+      },
+      {
+        "stage": 7,
+        "name": "Forwarding_Jitter_Surveillance_And_Overrun_Fault_Injection",
+        "check": "Forwarding_Jitter_Surveillance_And_Overrun_Fault_Injection",
+        "passed": true,
+        "details": "Nominal 850 us forwarding delay accepted; delay > 2000 us tripped 0xE906 FORWARDING_JITTER_OVERRUN."
+      },
+      {
+        "stage": 8,
+        "name": "EPI_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "check": "EPI_Watchdog_Surveillance_And_Timeout_Fault_Injection",
+        "passed": true,
+        "details": "Silence monitored; exceeding 30.0 ms watchdog tripped 0xE902 and asserted %M451 safe state."
+      },
+      {
+        "stage": 9,
+        "name": "SNN_Signature_And_CRC_S_Fault_Injections",
+        "check": "SNN_Signature_And_CRC_S_Fault_Injections",
+        "passed": true,
+        "details": "0xE901 SNN mismatch and 0xE904 CRC corruption injected; %M451 safe state asserted, clean recovery verified."
+      },
+      {
+        "stage": 10,
+        "name": "Daisy_Chain_Link_Break_Handling_And_Fault_Injection",
+        "check": "Daisy_Chain_Link_Break_Handling_And_Fault_Injection",
+        "passed": true,
+        "details": "Port 1 link break injected 0xE905 DAISY_CHAIN_LINK_BREAK; safe state clamped and restored cleanly."
+      },
+      {
+        "stage": 11,
+        "name": "Horner_OCS_Memory_Space_Register_Synchronization",
+        "check": "Horner_OCS_Memory_Space_Register_Synchronization",
+        "passed": true,
+        "details": "Registers %R1930..%R1937 and coils %M450..%M451 mapped and verified with SYSTEM privilege."
+      },
+      {
+        "stage": 12,
+        "name": "ILogicUnit_Compliance_And_Cyclic_Scan_Simulation",
+        "check": "ILogicUnit_Compliance_And_Cyclic_Scan_Simulation",
+        "passed": true,
+        "details": "ILogicUnit lifecycle (scan_step, execute, reset) simulated across 50 cycles with healthy bridge state."
+      }
+    ],
+    "register_map": {
+      "%R1930": "DaisyChainTopologyState",
+      "%R1931": "UpstreamPacketsForwardedCount",
+      "%R1932": "DownstreamPacketsForwardedCount",
+      "%R1933": "MeasuredBridgeJitterUsScaled",
+      "%R1934": "MaxBridgeJitterUsScaled",
+      "%R1935": "DaisyChainConsecutiveFaultCount",
+      "%R1936": "MonitoredSafetyPayloadWord",
+      "%R1937": "DiagnosticStatusCode",
+      "%M450": "CipSafetyDaisyChainActive",
+      "%M451": "DaisyChainTripSafeStateEngaged"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "KNXnet/IP Master Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W121",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial KNX/IP Net'n'Node Protocol Engine",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed POU 'KnxIPMasterSync', verified bindings %R820..%R827 and %M191..%M192 with zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts, coils, and mnemonics strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "KNXnet_IP_Header_Serialization_And_Framing_Error_Guards",
+        "passed": true,
+        "details": "Verified 6-byte header roundtrip and strict rejection of illegal header lengths and versions."
+      },
+      {
+        "stage": 4,
+        "check": "CEMI_L_Data_Encoding_And_DPT_Payload_Scaling",
+        "passed": true,
+        "details": "Verified DPT 1.001 (True), DPT 5.001 (75.69%), and DPT 9.001 (21.5\u00b0C)."
+      },
+      {
+        "stage": 5,
+        "check": "Multi_Endpoint_Tunneling_Session_Management_And_Limits",
+        "passed": true,
+        "details": "Managed 16 concurrent tunnels, rejected 17th endpoint, cleanly closed channel (count 15)."
+      },
+      {
+        "stage": 6,
+        "check": "Process_Safety_Trip_0x9201_Session_Timeout",
+        "passed": true,
+        "details": "Watchdog timeout asserted %M192=TRUE, deasserted %M191=FALSE, diagnostic code 0x9201."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Alarms_0x9202_0x9203_0x9204",
+        "passed": true,
+        "details": "Verified framing error (0x9202), sequence error (0x9203), and DPT overflow (0x9204)."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Space_Synchronization",
+        "passed": true,
+        "details": "Verified %R820=0x0007, %R821=1, %R823=1, %R824=8550, %R825=224, %M191=True."
+      },
+      {
+        "stage": 9,
+        "check": "End_To_End_Pipeline_And_Fault_Recovery",
+        "passed": true,
+        "details": "Engine tripped on timeout and recovered cleanly after reset_fault_trip()."
+      }
+    ],
+    "metrics": {
+      "max_endpoints": 16,
+      "default_port": 3671,
+      "watchdog_timeout_s": 10.0
+    },
+    "register_map": {
+      "status_word": "%R820",
+      "active_endpoints_count": "%R821",
+      "last_service_type": "%R822",
+      "dpt1_switch_state": "%R823",
+      "dpt5_scaling_scaled": "%R824",
+      "dpt9_temperature_scaled": "%R825",
+      "sequence_counter": "%R826",
+      "diagnostic_event_code": "%R827",
+      "session_active_coil": "%M191",
+      "fault_trip_coil": "%M192"
+    },
+    "timestamp": "2026-10-04T03:25:56Z"
+  }
+}

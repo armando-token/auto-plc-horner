@@ -1,0 +1,143 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Caprolactam Fluidized Bed Rearrangement 9-stage verification passed 9/9 checks.",
+  "data": {
+    "work_package": "W239",
+    "module": "caprolactam_fluidized_bed",
+    "total_checks": 9,
+    "checks_passed": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Reactor_Physics_And_Thermochemical_Constants",
+        "check": "Reactor_Physics_And_Thermochemical_Constants",
+        "passed": true,
+        "details": "Kinetics verified: k1(330C)=48.16, k1(350C)=73.00, k1(370C)=107.83, Ea1 err=1.02e-10 J/mol, Delta_H1=-160 kJ/mol, nominal 350.0 \u00b0C, 1.20 bar, u_g=0.45 m/s, activity=98.20%."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "CaprolactamFluidizedBedSync POU verified cleanly with STParser & SecurityGuard; bound %R2000..%R2007 and %M466..%M468."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=99.40% (~99.40%), selectivity=96.50% (~96.50%), production=3500.0 kg/h (~3500 kg/h)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: mass=1.00e-16 kg/s, elemental=1.34e-16 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_And_Overpressure_Safety_Injections",
+        "check": "Thermal_Runaway_And_Overpressure_Safety_Injections",
+        "passed": true,
+        "details": "0xF001 thermal runaway (> 380 \u00b0C) and overpressure (> 2.50 bar) injections verified; %M468 asserted, %M466 cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Defluidization_Collapse_And_Catalyst_Coking_Selectivity_Injections",
+        "check": "Defluidization_Collapse_And_Catalyst_Coking_Selectivity_Injections",
+        "passed": true,
+        "details": "0xF002 defluidization (< 0.15 m/s), 0xF003 coking (< 0.85), 0xF004 selectivity (< 90.0%), and %M467 pre-alarm verified."
+      },
+      {
+        "stage": 8,
+        "name": "Process_Safety_Interlocks_And_Strict_Priority_Hierarchy",
+        "check": "Process_Safety_Interlocks_And_Strict_Priority_Hierarchy",
+        "passed": true,
+        "details": "Strict priority hierarchy verified: P1=True, P2=True, P3=True, P4=True, P5_OK=True."
+      },
+      {
+        "stage": 9,
+        "name": "Horner_OCS_Memory_Space_Integration_And_Soak_Stability",
+        "check": "Horner_OCS_Memory_Space_Integration_And_Soak_Stability",
+        "passed": true,
+        "details": "Registers %R2000..%R2007 and coils %M466..%M468 bit-exact verified (True). 100 cycles executed without drift or NaN; memory growth=7.9 KB."
+      }
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Reactor_Physics_And_Thermochemical_Constants",
+        "check": "Reactor_Physics_And_Thermochemical_Constants",
+        "passed": true,
+        "details": "Kinetics verified: k1(330C)=48.16, k1(350C)=73.00, k1(370C)=107.83, Ea1 err=1.02e-10 J/mol, Delta_H1=-160 kJ/mol, nominal 350.0 \u00b0C, 1.20 bar, u_g=0.45 m/s, activity=98.20%."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "check": "Pure_ST_POU_And_AST_Symbol_Binding",
+        "passed": true,
+        "details": "CaprolactamFluidizedBedSync POU verified cleanly with STParser & SecurityGuard; bound %R2000..%R2007 and %M466..%M468."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Ladder logic constructs (contacts, coils, rungs) rejected with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "check": "Nominal_Steady_State_Closed_Loop_Convergence",
+        "passed": true,
+        "details": "Nominal steady-state verified: conversion=99.40% (~99.40%), selectivity=96.50% (~96.50%), production=3500.0 kg/h (~3500 kg/h)."
+      },
+      {
+        "stage": 5,
+        "name": "Conservation_Laws_Verification",
+        "check": "Conservation_Laws_Verification",
+        "passed": true,
+        "details": "Conservation laws verified: mass=1.00e-16 kg/s, elemental=1.34e-16 kg/s, enthalpy=0.00e+00 kW (< 1e-10 threshold)."
+      },
+      {
+        "stage": 6,
+        "name": "Thermal_Runaway_And_Overpressure_Safety_Injections",
+        "check": "Thermal_Runaway_And_Overpressure_Safety_Injections",
+        "passed": true,
+        "details": "0xF001 thermal runaway (> 380 \u00b0C) and overpressure (> 2.50 bar) injections verified; %M468 asserted, %M466 cleared."
+      },
+      {
+        "stage": 7,
+        "name": "Defluidization_Collapse_And_Catalyst_Coking_Selectivity_Injections",
+        "check": "Defluidization_Collapse_And_Catalyst_Coking_Selectivity_Injections",
+        "passed": true,
+        "details": "0xF002 defluidization (< 0.15 m/s), 0xF003 coking (< 0.85), 0xF004 selectivity (< 90.0%), and %M467 pre-alarm verified."
+      },
+      {
+        "stage": 8,
+        "name": "Process_Safety_Interlocks_And_Strict_Priority_Hierarchy",
+        "check": "Process_Safety_Interlocks_And_Strict_Priority_Hierarchy",
+        "passed": true,
+        "details": "Strict priority hierarchy verified: P1=True, P2=True, P3=True, P4=True, P5_OK=True."
+      },
+      {
+        "stage": 9,
+        "name": "Horner_OCS_Memory_Space_Integration_And_Soak_Stability",
+        "check": "Horner_OCS_Memory_Space_Integration_And_Soak_Stability",
+        "passed": true,
+        "details": "Registers %R2000..%R2007 and coils %M466..%M468 bit-exact verified (True). 100 cycles executed without drift or NaN; memory growth=7.9 KB."
+      }
+    ],
+    "timestamp_utc": "2026-10-06T19:49:31Z",
+    "execution_time_ms": 168.54333877563477
+  }
+}

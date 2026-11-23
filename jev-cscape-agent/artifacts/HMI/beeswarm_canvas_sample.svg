@@ -1,0 +1,1207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <style>
+      .scada-title { font-family: "Segoe UI", Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #F8FAFC; }
+      .scada-sub { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .hud-title { font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #06B6D4; letter-spacing: 0.5px; }
+      .hud-label { font-family: "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .hud-val { font-family: "Consolas", monospace; font-size: 12px; font-weight: 700; fill: #F8FAFC; }
+      .badge-text { font-family: "Consolas", monospace; font-size: 10px; font-weight: 700; fill: #F8FAFC; }
+      .lane-label { font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; font-weight: 700; fill: #F8FAFC; }
+      .outlier-halo { stroke: #EF4444; stroke-width: 1.5; fill: none; opacity: 0.85; stroke-dasharray: 3 2; }
+    </style>
+    <filter id="hud-card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="750" fill="#0D1117"/>
+
+  <!-- Header Banner -->
+  <g id="header-banner">
+    <text x="35" y="38" class="scada-title">CSCAPE HMI DYNAMIC BEESWARM JITTER SCADA CANVAS</text>
+    <text x="35" y="58" class="scada-sub">Work Package: W228 (Gate G9 / G2) | Horner OCS Telemetry Distribution &amp; Non-Overlapping Circle Packing</text>
+    <!-- System Status Badges -->
+    <rect x="740" y="22" width="130" height="26" rx="4" fill="#0B0F19" stroke="#10B981" stroke-width="1"/>
+    <circle cx="755" cy="35" r="5" fill="#10B981"/>
+    <text x="768" y="39" class="badge-text" fill="#F8FAFC">CANVAS ACTIVE</text>
+    <rect x="880" y="22" width="180" height="26" rx="4" fill="#0B0F19" stroke="#10B981" stroke-width="1"/>
+    <circle cx="895" cy="35" r="5" fill="#10B981"/>
+    <text x="908" y="39" class="badge-text" fill="#F8FAFC">NORMAL JITTER SPREAD</text>
+    <rect x="1070" y="22" width="95" height="26" rx="4" fill="#0B0F19" stroke="#06B6D4" stroke-width="1"/>
+    <text x="1080" y="39" class="badge-text" fill="#06B6D4">DIAG: 0x0000</text>
+  </g>
+
+  <!-- Plot Area Frame -->
+  <g id="plot-frame">
+    <rect x="140.0" y="80.0" width="700.0" height="580.0" rx="6" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+  </g>
+
+  <!-- Process Lanes & Baselines -->
+  <g id="process-lanes">
+    <line x1="140.0" y1="152.5" x2="840.0" y2="152.5" stroke="#4B5563" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+    <!-- Lane Badge Feed -->
+    <rect x="20.0" y="138.5" width="110" height="28" rx="4" fill="#0B0F19" stroke="#3B82F6" stroke-width="1.5"/>
+    <circle cx="35.0" cy="152.5" r="4" fill="#3B82F6"/>
+    <text x="46.0" y="156.5" class="lane-label" fill="#F8FAFC">FEED</text>
+    <line x1="140.0" y1="225.0" x2="840.0" y2="225.0" stroke="#21262D" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <line x1="140.0" y1="297.5" x2="840.0" y2="297.5" stroke="#4B5563" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+    <!-- Lane Badge Reactor -->
+    <rect x="20.0" y="283.5" width="110" height="28" rx="4" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.5"/>
+    <circle cx="35.0" cy="297.5" r="4" fill="#F59E0B"/>
+    <text x="46.0" y="301.5" class="lane-label" fill="#F8FAFC">REACTOR</text>
+    <line x1="140.0" y1="370.0" x2="840.0" y2="370.0" stroke="#21262D" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <line x1="140.0" y1="442.5" x2="840.0" y2="442.5" stroke="#4B5563" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+    <!-- Lane Badge Separation -->
+    <rect x="20.0" y="428.5" width="110" height="28" rx="4" fill="#0B0F19" stroke="#06B6D4" stroke-width="1.5"/>
+    <circle cx="35.0" cy="442.5" r="4" fill="#06B6D4"/>
+    <text x="46.0" y="446.5" class="lane-label" fill="#F8FAFC">SEPARATION</text>
+    <line x1="140.0" y1="515.0" x2="840.0" y2="515.0" stroke="#21262D" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <line x1="140.0" y1="587.5" x2="840.0" y2="587.5" stroke="#4B5563" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+    <!-- Lane Badge Product -->
+    <rect x="20.0" y="573.5" width="110" height="28" rx="4" fill="#0B0F19" stroke="#10B981" stroke-width="1.5"/>
+    <circle cx="35.0" cy="587.5" r="4" fill="#10B981"/>
+    <text x="46.0" y="591.5" class="lane-label" fill="#F8FAFC">PRODUCT</text>
+  </g>
+
+  <!-- Beeswarm Non-Overlapping Packed Circles -->
+  <g id="beeswarm-circles">
+    <circle id="PT_FEED_B000" cx="150.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B000 | Val: -30.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B001" cx="165.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B001 | Val: 80.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B002" cx="180.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B002 | Val: 81.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B003" cx="195.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B003 | Val: 82.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B004" cx="210.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B004 | Val: 83.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B005" cx="225.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B005 | Val: 84.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B006" cx="240.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B006 | Val: 84.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B007" cx="255.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B007 | Val: 85.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B008" cx="270.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B008 | Val: 86.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B009" cx="285.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B009 | Val: 87.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B010" cx="300.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B010 | Val: 88.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B011" cx="315.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B011 | Val: 88.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B012" cx="330.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B012 | Val: 89.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B013" cx="345.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B013 | Val: 90.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B014" cx="360.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B014 | Val: 91.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B015" cx="375.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B015 | Val: 92.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B016" cx="390.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B016 | Val: 92.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B017" cx="405.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B017 | Val: 93.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B018" cx="420.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B018 | Val: 94.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B019" cx="435.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B019 | Val: 95.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B020" cx="450.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B020 | Val: 96.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B021" cx="465.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B021 | Val: 96.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B022" cx="480.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B022 | Val: 97.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B023" cx="495.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B023 | Val: 98.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B024" cx="510.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B024 | Val: 99.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B025" cx="525.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B025 | Val: 100.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B026" cx="540.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B026 | Val: 100.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B027" cx="555.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B027 | Val: 101.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B028" cx="570.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B028 | Val: 102.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B029" cx="585.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B029 | Val: 103.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B030" cx="600.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B030 | Val: 104.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B031" cx="615.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B031 | Val: 104.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B032" cx="630.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B032 | Val: 105.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B033" cx="645.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B033 | Val: 106.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B034" cx="660.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B034 | Val: 107.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B035" cx="675.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B035 | Val: 108.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B036" cx="690.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B036 | Val: 108.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B037" cx="705.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B037 | Val: 109.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B038" cx="720.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B038 | Val: 110.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B039" cx="735.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B039 | Val: 111.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B040" cx="750.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B040 | Val: 112.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B041" cx="765.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B041 | Val: 112.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B042" cx="780.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B042 | Val: 113.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B043" cx="795.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B043 | Val: 114.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B044" cx="810.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B044 | Val: 115.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B045" cx="825.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B045 | Val: 116.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B046" cx="840.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B046 | Val: 116.8 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B047" cx="855.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B047 | Val: 117.6 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B048" cx="870.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B048 | Val: 118.4 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B049" cx="885.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B049 | Val: 119.2 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_B050" cx="900.0" cy="152.5" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_B050 | Val: 190.0 | Lane: Feed | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_FEED_D000" cx="157.5" cy="167.0" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D000 | Val: 85.0 | Lane: Feed | Jitter: +14.5px</title>
+    </circle>
+    <circle id="PT_FEED_D001" cx="172.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D001 | Val: 85.8 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D002" cx="187.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D002 | Val: 86.6 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D003" cx="202.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D003 | Val: 87.4 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D004" cx="217.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D004 | Val: 88.2 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D005" cx="232.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D005 | Val: 89.0 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D006" cx="247.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D006 | Val: 89.7 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D007" cx="262.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D007 | Val: 90.5 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D008" cx="277.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D008 | Val: 91.3 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D009" cx="292.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D009 | Val: 92.1 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D010" cx="307.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D010 | Val: 92.9 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D011" cx="322.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D011 | Val: 93.7 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D012" cx="337.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D012 | Val: 94.5 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D013" cx="352.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D013 | Val: 95.3 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D014" cx="367.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D014 | Val: 96.0 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D015" cx="382.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D015 | Val: 96.8 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D016" cx="397.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D016 | Val: 97.6 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D017" cx="412.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D017 | Val: 98.4 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D018" cx="427.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D018 | Val: 99.2 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D019" cx="442.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D019 | Val: 100.0 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D020" cx="457.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D020 | Val: 100.8 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D021" cx="472.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D021 | Val: 101.6 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D022" cx="487.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D022 | Val: 102.4 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D023" cx="502.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D023 | Val: 103.2 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D024" cx="517.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D024 | Val: 104.0 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D025" cx="532.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D025 | Val: 104.7 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D026" cx="547.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D026 | Val: 105.5 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D027" cx="562.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D027 | Val: 106.3 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D028" cx="577.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D028 | Val: 107.1 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D029" cx="592.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D029 | Val: 107.9 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D030" cx="607.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D030 | Val: 108.7 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D031" cx="622.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D031 | Val: 109.5 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D032" cx="637.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D032 | Val: 110.3 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D033" cx="652.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D033 | Val: 111.0 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D034" cx="667.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D034 | Val: 111.8 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D035" cx="682.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D035 | Val: 112.6 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D036" cx="697.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D036 | Val: 113.4 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D037" cx="712.5" cy="138.2" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D037 | Val: 114.2 | Lane: Feed | Jitter: -14.3px</title>
+    </circle>
+    <circle id="PT_FEED_D038" cx="727.5" cy="166.8" r="6.0" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1.2" opacity="0.92">
+      <title>PT_FEED_D038 | Val: 115.0 | Lane: Feed | Jitter: +14.3px</title>
+    </circle>
+    <circle id="PT_REACTOR_B000" cx="150.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B000 | Val: -30.0 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B001" cx="165.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B001 | Val: 80.8 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B002" cx="180.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B002 | Val: 81.5 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B003" cx="195.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B003 | Val: 82.3 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B004" cx="210.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B004 | Val: 83.0 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B005" cx="225.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B005 | Val: 83.8 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B006" cx="240.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B006 | Val: 84.5 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B007" cx="255.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B007 | Val: 85.3 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B008" cx="270.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B008 | Val: 86.0 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B009" cx="285.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B009 | Val: 86.8 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B010" cx="300.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B010 | Val: 87.5 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B011" cx="315.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B011 | Val: 88.3 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B012" cx="330.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B012 | Val: 89.1 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B013" cx="345.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B013 | Val: 89.8 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B014" cx="360.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B014 | Val: 90.6 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B015" cx="375.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B015 | Val: 91.3 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B016" cx="390.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B016 | Val: 92.1 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B017" cx="405.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B017 | Val: 92.8 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B018" cx="420.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B018 | Val: 93.6 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B019" cx="435.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B019 | Val: 94.3 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B020" cx="450.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B020 | Val: 95.1 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B021" cx="465.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B021 | Val: 95.8 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B022" cx="480.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B022 | Val: 96.6 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B023" cx="495.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B023 | Val: 97.4 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B024" cx="510.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B024 | Val: 98.1 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B025" cx="525.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B025 | Val: 98.9 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B026" cx="540.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B026 | Val: 99.6 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B027" cx="555.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B027 | Val: 100.4 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B028" cx="570.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B028 | Val: 101.1 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B029" cx="585.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B029 | Val: 101.9 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B030" cx="600.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B030 | Val: 102.6 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B031" cx="615.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B031 | Val: 103.4 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B032" cx="630.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B032 | Val: 104.2 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B033" cx="645.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B033 | Val: 104.9 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B034" cx="660.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B034 | Val: 105.7 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B035" cx="675.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B035 | Val: 106.4 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B036" cx="690.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B036 | Val: 107.2 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B037" cx="705.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B037 | Val: 107.9 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B038" cx="720.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B038 | Val: 108.7 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B039" cx="735.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B039 | Val: 109.4 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B040" cx="750.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B040 | Val: 110.2 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B041" cx="765.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B041 | Val: 110.9 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B042" cx="780.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B042 | Val: 111.7 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B043" cx="795.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B043 | Val: 112.5 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B044" cx="810.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B044 | Val: 113.2 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B045" cx="825.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B045 | Val: 114.0 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B046" cx="840.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B046 | Val: 114.7 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B047" cx="855.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B047 | Val: 115.5 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B048" cx="870.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B048 | Val: 116.2 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B049" cx="885.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B049 | Val: 117.0 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B050" cx="900.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B050 | Val: 117.7 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B051" cx="915.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B051 | Val: 118.5 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B052" cx="930.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B052 | Val: 119.2 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_B053" cx="945.0" cy="297.5" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_B053 | Val: 190.0 | Lane: Reactor | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_REACTOR_D000" cx="157.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D000 | Val: 85.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D001" cx="172.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D001 | Val: 85.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D002" cx="187.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D002 | Val: 86.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D003" cx="202.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D003 | Val: 87.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D004" cx="217.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D004 | Val: 88.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D005" cx="232.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D005 | Val: 88.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D006" cx="247.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D006 | Val: 89.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D007" cx="262.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D007 | Val: 90.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D008" cx="277.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D008 | Val: 91.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D009" cx="292.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D009 | Val: 91.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D010" cx="307.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D010 | Val: 92.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D011" cx="322.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D011 | Val: 93.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D012" cx="337.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D012 | Val: 94.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D013" cx="352.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D013 | Val: 94.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D014" cx="367.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D014 | Val: 95.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D015" cx="382.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D015 | Val: 96.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D016" cx="397.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D016 | Val: 97.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D017" cx="412.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D017 | Val: 97.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D018" cx="427.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D018 | Val: 98.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D019" cx="442.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D019 | Val: 99.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D020" cx="457.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D020 | Val: 100.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D021" cx="472.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D021 | Val: 100.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D022" cx="487.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D022 | Val: 101.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D023" cx="502.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D023 | Val: 102.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D024" cx="517.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D024 | Val: 103.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D025" cx="532.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D025 | Val: 103.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D026" cx="547.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D026 | Val: 104.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D027" cx="562.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D027 | Val: 105.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D028" cx="577.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D028 | Val: 106.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D029" cx="592.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D029 | Val: 106.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D030" cx="607.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D030 | Val: 107.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D031" cx="622.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D031 | Val: 108.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D032" cx="637.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D032 | Val: 109.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D033" cx="652.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D033 | Val: 109.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D034" cx="667.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D034 | Val: 110.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D035" cx="682.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D035 | Val: 111.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D036" cx="697.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D036 | Val: 112.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D037" cx="712.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D037 | Val: 112.8 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D038" cx="727.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D038 | Val: 113.5 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D039" cx="742.5" cy="283.1" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D039 | Val: 114.2 | Lane: Reactor | Jitter: -14.4px</title>
+    </circle>
+    <circle id="PT_REACTOR_D040" cx="757.5" cy="311.9" r="6.0" fill="#F59E0B" stroke="#D97706" stroke-width="1.2" opacity="0.92">
+      <title>PT_REACTOR_D040 | Val: 115.0 | Lane: Reactor | Jitter: +14.4px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B000" cx="150.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B000 | Val: -30.0 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B001" cx="165.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B001 | Val: 80.8 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B002" cx="180.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B002 | Val: 81.7 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B003" cx="195.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B003 | Val: 82.5 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B004" cx="210.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B004 | Val: 83.4 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B005" cx="225.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B005 | Val: 84.3 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B006" cx="240.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B006 | Val: 85.1 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B007" cx="255.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B007 | Val: 86.0 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B008" cx="270.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B008 | Val: 86.8 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B009" cx="285.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B009 | Val: 87.7 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B010" cx="300.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B010 | Val: 88.5 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B011" cx="315.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B011 | Val: 89.4 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B012" cx="330.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B012 | Val: 90.2 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B013" cx="345.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B013 | Val: 91.1 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B014" cx="360.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B014 | Val: 91.9 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B015" cx="375.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B015 | Val: 92.8 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B016" cx="390.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B016 | Val: 93.6 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B017" cx="405.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B017 | Val: 94.5 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B018" cx="420.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B018 | Val: 95.3 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B019" cx="435.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B019 | Val: 96.2 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B020" cx="450.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B020 | Val: 97.0 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B021" cx="465.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B021 | Val: 97.9 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B022" cx="480.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B022 | Val: 98.7 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B023" cx="495.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B023 | Val: 99.6 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B024" cx="510.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B024 | Val: 100.4 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B025" cx="525.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B025 | Val: 101.3 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B026" cx="540.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B026 | Val: 102.1 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B027" cx="555.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B027 | Val: 103.0 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B028" cx="570.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B028 | Val: 103.8 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B029" cx="585.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B029 | Val: 104.7 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B030" cx="600.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B030 | Val: 105.5 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B031" cx="615.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B031 | Val: 106.4 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B032" cx="630.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B032 | Val: 107.2 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B033" cx="645.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B033 | Val: 108.1 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B034" cx="660.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B034 | Val: 108.9 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B035" cx="675.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B035 | Val: 109.8 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B036" cx="690.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B036 | Val: 110.6 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B037" cx="705.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B037 | Val: 111.5 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B038" cx="720.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B038 | Val: 112.3 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B039" cx="735.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B039 | Val: 113.2 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B040" cx="750.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B040 | Val: 114.0 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B041" cx="765.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B041 | Val: 114.9 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B042" cx="780.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B042 | Val: 115.7 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B043" cx="795.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B043 | Val: 116.6 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B044" cx="810.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B044 | Val: 117.5 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B045" cx="825.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B045 | Val: 118.3 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B046" cx="840.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B046 | Val: 119.2 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_B047" cx="855.0" cy="442.5" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_B047 | Val: 190.0 | Lane: Separation | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D000" cx="157.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D000 | Val: 85.0 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D001" cx="172.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D001 | Val: 85.8 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D002" cx="187.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D002 | Val: 86.7 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D003" cx="202.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D003 | Val: 87.5 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D004" cx="217.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D004 | Val: 88.3 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D005" cx="232.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D005 | Val: 89.2 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D006" cx="247.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D006 | Val: 90.0 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D007" cx="262.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D007 | Val: 90.8 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D008" cx="277.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D008 | Val: 91.7 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D009" cx="292.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D009 | Val: 92.5 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D010" cx="307.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D010 | Val: 93.3 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D011" cx="322.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D011 | Val: 94.2 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D012" cx="337.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D012 | Val: 95.0 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D013" cx="352.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D013 | Val: 95.8 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D014" cx="367.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D014 | Val: 96.7 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D015" cx="382.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D015 | Val: 97.5 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D016" cx="397.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D016 | Val: 98.3 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D017" cx="412.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D017 | Val: 99.2 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D018" cx="427.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D018 | Val: 100.0 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D019" cx="442.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D019 | Val: 100.8 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D020" cx="457.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D020 | Val: 101.7 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D021" cx="472.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D021 | Val: 102.5 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D022" cx="487.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D022 | Val: 103.3 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D023" cx="502.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D023 | Val: 104.2 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D024" cx="517.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D024 | Val: 105.0 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D025" cx="532.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D025 | Val: 105.8 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D026" cx="547.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D026 | Val: 106.7 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D027" cx="562.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D027 | Val: 107.5 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D028" cx="577.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D028 | Val: 108.3 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D029" cx="592.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D029 | Val: 109.2 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D030" cx="607.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D030 | Val: 110.0 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D031" cx="622.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D031 | Val: 110.8 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D032" cx="637.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D032 | Val: 111.7 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D033" cx="652.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D033 | Val: 112.5 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D034" cx="667.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D034 | Val: 113.3 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D035" cx="682.5" cy="428.3" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D035 | Val: 114.2 | Lane: Separation | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_SEPARATION_D036" cx="697.5" cy="456.7" r="6.0" fill="#06B6D4" stroke="#0891B2" stroke-width="1.2" opacity="0.92">
+      <title>PT_SEPARATION_D036 | Val: 115.0 | Lane: Separation | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B000" cx="150.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B000 | Val: -30.0 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B001" cx="165.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B001 | Val: 80.9 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B002" cx="180.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B002 | Val: 81.8 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B003" cx="195.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B003 | Val: 82.7 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B004" cx="210.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B004 | Val: 83.6 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B005" cx="225.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B005 | Val: 84.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B006" cx="240.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B006 | Val: 85.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B007" cx="255.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B007 | Val: 86.4 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B008" cx="270.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B008 | Val: 87.3 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B009" cx="285.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B009 | Val: 88.2 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B010" cx="300.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B010 | Val: 89.1 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B011" cx="315.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B011 | Val: 90.0 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B012" cx="330.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B012 | Val: 90.9 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B013" cx="345.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B013 | Val: 91.8 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B014" cx="360.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B014 | Val: 92.7 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B015" cx="375.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B015 | Val: 93.6 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B016" cx="390.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B016 | Val: 94.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B017" cx="405.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B017 | Val: 95.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B018" cx="420.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B018 | Val: 96.4 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B019" cx="435.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B019 | Val: 97.3 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B020" cx="450.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B020 | Val: 98.2 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B021" cx="465.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B021 | Val: 99.1 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B022" cx="480.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B022 | Val: 100.0 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B023" cx="495.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B023 | Val: 100.9 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B024" cx="510.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B024 | Val: 101.8 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B025" cx="525.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B025 | Val: 102.7 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B026" cx="540.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B026 | Val: 103.6 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B027" cx="555.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B027 | Val: 104.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B028" cx="570.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B028 | Val: 105.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B029" cx="585.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B029 | Val: 106.4 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B030" cx="600.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B030 | Val: 107.3 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B031" cx="615.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B031 | Val: 108.2 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B032" cx="630.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B032 | Val: 109.1 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B033" cx="645.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B033 | Val: 110.0 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B034" cx="660.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B034 | Val: 110.9 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B035" cx="675.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B035 | Val: 111.8 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B036" cx="690.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B036 | Val: 112.7 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B037" cx="705.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B037 | Val: 113.6 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B038" cx="720.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B038 | Val: 114.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B039" cx="735.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B039 | Val: 115.5 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B040" cx="750.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B040 | Val: 116.4 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B041" cx="765.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B041 | Val: 117.3 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B042" cx="780.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B042 | Val: 118.2 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B043" cx="795.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B043 | Val: 119.1 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_B044" cx="810.0" cy="587.5" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_B044 | Val: 190.0 | Lane: Product | Jitter: +0.0px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D000" cx="157.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D000 | Val: 85.0 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D001" cx="172.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D001 | Val: 85.9 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D002" cx="187.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D002 | Val: 86.8 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D003" cx="202.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D003 | Val: 87.7 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D004" cx="217.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D004 | Val: 88.5 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D005" cx="232.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D005 | Val: 89.4 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D006" cx="247.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D006 | Val: 90.3 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D007" cx="262.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D007 | Val: 91.2 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D008" cx="277.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D008 | Val: 92.1 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D009" cx="292.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D009 | Val: 92.9 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D010" cx="307.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D010 | Val: 93.8 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D011" cx="322.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D011 | Val: 94.7 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D012" cx="337.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D012 | Val: 95.6 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D013" cx="352.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D013 | Val: 96.5 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D014" cx="367.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D014 | Val: 97.3 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D015" cx="382.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D015 | Val: 98.2 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D016" cx="397.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D016 | Val: 99.1 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D017" cx="412.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D017 | Val: 100.0 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D018" cx="427.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D018 | Val: 100.9 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D019" cx="442.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D019 | Val: 101.8 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D020" cx="457.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D020 | Val: 102.7 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D021" cx="472.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D021 | Val: 103.5 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D022" cx="487.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D022 | Val: 104.4 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D023" cx="502.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D023 | Val: 105.3 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D024" cx="517.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D024 | Val: 106.2 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D025" cx="532.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D025 | Val: 107.1 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D026" cx="547.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D026 | Val: 107.9 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D027" cx="562.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D027 | Val: 108.8 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D028" cx="577.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D028 | Val: 109.7 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D029" cx="592.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D029 | Val: 110.6 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D030" cx="607.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D030 | Val: 111.5 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D031" cx="622.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D031 | Val: 112.3 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D032" cx="637.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D032 | Val: 113.2 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D033" cx="652.5" cy="573.3" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D033 | Val: 114.1 | Lane: Product | Jitter: -14.2px</title>
+    </circle>
+    <circle id="PT_PRODUCT_D034" cx="667.5" cy="601.7" r="6.0" fill="#10B981" stroke="#059669" stroke-width="1.2" opacity="0.92">
+      <title>PT_PRODUCT_D034 | Val: 115.0 | Lane: Product | Jitter: +14.2px</title>
+    </circle>
+  </g>
+
+  <!-- Outlier Fences & Warning Callouts -->
+  <g id="outliers-layer">
+    <!-- Outlier PT_FEED_B000 -->
+    <circle cx="150.0" cy="152.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Outlier PT_FEED_B050 -->
+    <circle cx="900.0" cy="152.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Outlier PT_REACTOR_B000 -->
+    <circle cx="150.0" cy="297.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Outlier PT_REACTOR_B053 -->
+    <circle cx="945.0" cy="297.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Outlier PT_SEPARATION_B000 -->
+    <circle cx="150.0" cy="442.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Outlier PT_SEPARATION_B047 -->
+    <circle cx="855.0" cy="442.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Outlier PT_PRODUCT_B000 -->
+    <circle cx="150.0" cy="587.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Outlier PT_PRODUCT_B044 -->
+    <circle cx="810.0" cy="587.5" r="11" class="outlier-halo">
+      <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Telemetry HUD Scorecard -->
+  <g id="telemetry-hud" filter="url(#hud-card-shadow)">
+    <rect x="860" y="80.0" width="310" height="580.0" rx="6" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+    <text x="880" y="112.0" class="hud-title">HORNER OCS TELEMETRY HUD</text>
+    <line x1="880" y1="124.0" x2="1150" y2="124.0" stroke="#21262D" stroke-width="1"/>
+    <text x="880" y="152.0" class="hud-label">Total Telemetry Points (%R1890):</text>
+    <text x="1150" y="152.0" class="hud-val" text-anchor="end" fill="#F8FAFC">350</text>
+    <text x="880" y="178.0" class="hud-label">Packed Circles Count (%R1891):</text>
+    <text x="1150" y="178.0" class="hud-val" text-anchor="end" fill="#F8FAFC">350</text>
+    <text x="880" y="204.0" class="hud-label">Max Jitter Spread (%R1892):</text>
+    <text x="1150" y="204.0" class="hud-val" text-anchor="end" fill="#F8FAFC">14.5 px (145)</text>
+    <text x="880" y="230.0" class="hud-label">Mean Jitter Offset (%R1893):</text>
+    <text x="1150" y="230.0" class="hud-val" text-anchor="end" fill="#F8FAFC">6.2 px (62)</text>
+    <text x="880" y="256.0" class="hud-label">Outlier Count Tukey (%R1894):</text>
+    <text x="1150" y="256.0" class="hud-val" text-anchor="end" fill="#F8FAFC">8</text>
+    <text x="880" y="282.0" class="hud-label">Active Process Lanes (%R1895):</text>
+    <text x="1150" y="282.0" class="hud-val" text-anchor="end" fill="#F8FAFC">4</text>
+    <text x="880" y="308.0" class="hud-label">Circle Packing Radius (%R1896):</text>
+    <text x="1150" y="308.0" class="hud-val" text-anchor="end" fill="#F8FAFC">6 px</text>
+    <text x="880" y="334.0" class="hud-label">Diagnostic Status Code (%R1897):</text>
+    <text x="1150" y="334.0" class="hud-val" text-anchor="end" fill="#06B6D4">0x0000</text>
+    <text x="880" y="360.0" class="hud-label">Canvas Engine Active (%M441):</text>
+    <text x="1150" y="360.0" class="hud-val" text-anchor="end" fill="#F8FAFC">TRUE</text>
+    <text x="880" y="386.0" class="hud-label">Excess Jitter Alarm (%M442):</text>
+    <text x="1150" y="386.0" class="hud-val" text-anchor="end" fill="#F8FAFC">CLEAR (&lt;=25px)</text>
+    <line x1="880" y1="422.0" x2="1150" y2="422.0" stroke="#21262D" stroke-width="1"/>
+    <text x="880" y="446.0" class="hud-title">PROCESS LANE BREAKDOWN</text>
+    <circle cx="886" cy="466.0" r="5" fill="#3B82F6"/>
+    <text x="898" y="470.0" class="badge-text" fill="#F8FAFC">Feed:</text>
+    <text x="1150" y="470.0" class="hud-val" text-anchor="end">90 pts | Max: 14.5px | Outs: 2</text>
+    <circle cx="886" cy="488.0" r="5" fill="#F59E0B"/>
+    <text x="898" y="492.0" class="badge-text" fill="#F8FAFC">Reactor:</text>
+    <text x="1150" y="492.0" class="hud-val" text-anchor="end">95 pts | Max: 14.4px | Outs: 2</text>
+    <circle cx="886" cy="510.0" r="5" fill="#06B6D4"/>
+    <text x="898" y="514.0" class="badge-text" fill="#F8FAFC">Separation:</text>
+    <text x="1150" y="514.0" class="hud-val" text-anchor="end">85 pts | Max: 14.2px | Outs: 2</text>
+    <circle cx="886" cy="532.0" r="5" fill="#10B981"/>
+    <text x="898" y="536.0" class="badge-text" fill="#F8FAFC">Product:</text>
+    <text x="1150" y="536.0" class="hud-val" text-anchor="end">80 pts | Max: 14.2px | Outs: 2</text>
+  </g>
+
+</svg>

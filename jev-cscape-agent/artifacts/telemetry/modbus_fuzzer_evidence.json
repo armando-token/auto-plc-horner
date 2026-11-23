@@ -1,0 +1,175 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Modbus protocol resilience harness verified 49 deterministic attack vectors and 1000 stochastic mutations with 0 crashes.",
+  "data": {
+    "work_package": "W055",
+    "gate": "G8",
+    "timestamp_utc": "2026-10-02T21:15:29.658506+00:00",
+    "invariants_enforced": [
+      "INV-G12-001 (Fail-Closed Default State)",
+      "INV-G12-002 (Physical Port Lockout: zero COM ports or socket bindings)",
+      "Deterministic Exception Returns (0x01 ILLEGAL_FC, 0x02 ILLEGAL_ADDR, 0x03 ILLEGAL_VAL)",
+      "Zero Memory Leaks & Zero Unhandled Exceptions"
+    ],
+    "deterministic_suite": {
+      "total_vectors": 49,
+      "passed_vectors": 49,
+      "pass_rate_percent": 100.0,
+      "categories": {
+        "TRUNCATED_FRAME": {
+          "total": 7,
+          "passed": 7,
+          "safely_handled": 7
+        },
+        "CORRUPTED_CRC": {
+          "total": 5,
+          "passed": 5,
+          "safely_handled": 5
+        },
+        "INVALID_MBAP": {
+          "total": 2,
+          "passed": 2,
+          "safely_handled": 2
+        },
+        "ILLEGAL_FUNCTION": {
+          "total": 13,
+          "passed": 13,
+          "safely_handled": 13
+        },
+        "INVALID_ADDRESS": {
+          "total": 9,
+          "passed": 9,
+          "safely_handled": 9
+        },
+        "INVALID_QUANTITY": {
+          "total": 8,
+          "passed": 8,
+          "safely_handled": 8
+        },
+        "MALFORMED_PAYLOAD": {
+          "total": 5,
+          "passed": 5,
+          "safely_handled": 5
+        }
+      },
+      "sample_results": [
+        {
+          "id": "FUZZ_RTU_TRUNC_0B",
+          "name": "RTU empty payload (0 bytes)",
+          "category": "TRUNCATED_FRAME",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 6.0
+        },
+        {
+          "id": "FUZZ_RTU_TRUNC_1B",
+          "name": "RTU 1-byte unit ID only",
+          "category": "TRUNCATED_FRAME",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 3.5
+        },
+        {
+          "id": "FUZZ_RTU_TRUNC_2B",
+          "name": "RTU 2-byte unit ID + FC",
+          "category": "TRUNCATED_FRAME",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 1.8
+        },
+        {
+          "id": "FUZZ_RTU_TRUNC_3B",
+          "name": "RTU 3-byte truncated frame",
+          "category": "TRUNCATED_FRAME",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 1.4
+        },
+        {
+          "id": "FUZZ_TCP_TRUNC_0B",
+          "name": "TCP empty payload (0 bytes)",
+          "category": "TRUNCATED_FRAME",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 2.5
+        },
+        {
+          "id": "FUZZ_TCP_TRUNC_4B",
+          "name": "TCP partial MBAP header (4 bytes)",
+          "category": "TRUNCATED_FRAME",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 1.8
+        },
+        {
+          "id": "FUZZ_TCP_TRUNC_7B",
+          "name": "TCP full MBAP header without PDU (7 bytes)",
+          "category": "TRUNCATED_FRAME",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 1.3
+        },
+        {
+          "id": "FUZZ_CRC_INVERTED",
+          "name": "RTU CRC-16 inverted bitwise",
+          "category": "CORRUPTED_CRC",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 15.5
+        },
+        {
+          "id": "FUZZ_CRC_BIT_FLIP",
+          "name": "RTU CRC-16 single-bit flipped",
+          "category": "CORRUPTED_CRC",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 8.7
+        },
+        {
+          "id": "FUZZ_CRC_ALL_ZEROES",
+          "name": "RTU CRC-16 zeroed",
+          "category": "CORRUPTED_CRC",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 7.6
+        },
+        {
+          "id": "FUZZ_CRC_ALL_ONES",
+          "name": "RTU CRC-16 all ones (0xFFFF)",
+          "category": "CORRUPTED_CRC",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 7.3
+        },
+        {
+          "id": "FUZZ_CRC_ENDIAN_SWAP",
+          "name": "RTU CRC-16 endian-swapped",
+          "category": "CORRUPTED_CRC",
+          "passed": true,
+          "response_type": "value_error_caught",
+          "exception_code": null,
+          "latency_us": 7.1
+        }
+      ]
+    },
+    "stochastic_campaign": {
+      "mutations_tested": 1000,
+      "unhandled_crashes": 0,
+      "is_safe": true,
+      "elapsed_time_sec": 0.0206,
+      "throughput_vectors_per_sec": 48582.8
+    }
+  }
+}

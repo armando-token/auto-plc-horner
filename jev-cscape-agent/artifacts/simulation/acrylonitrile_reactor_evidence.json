@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Acrylonitrile Reactor 9-stage verification passed 9/9 checks.",
+  "data": {
+    "work_package": "W194",
+    "module": "acrylonitrile_reactor",
+    "total_checks": 9,
+    "checks_passed": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Horner_Symbol_Bindings",
+        "passed": true,
+        "details": "AST parsed=True, registers bound=True (11 registers verified)."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Blocked 5/5 forbidden ladder logic fragments with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "Sohio_Ammoxidation_And_Side_Reaction_Kinetics",
+        "passed": true,
+        "details": "Reaction enthalpies verified: Delta H1=-515.0 kJ/mol, Delta H2=-545.0 kJ/mol, Delta H3=-940.0 kJ/mol, Delta H4=-1926.0 kJ/mol. Combustion acceleration ratio=2.201 > ammoxidation=1.614."
+      },
+      {
+        "stage": 4,
+        "check": "Fluidized_Bed_Two_Phase_Hydrodynamics",
+        "passed": true,
+        "details": "Hydrodynamics verified: u_g=0.595 m/s > u_mf=0.035 m/s (True), voidage eps_eq=0.679 in [0.45, 0.75], interchange K_be=1.71 1/s."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "passed": true,
+        "details": "RK4 integration verified over 5.0s: C_C3H6=0.0609, C_NH3=0.2414, C_AN=2.2470, C_HCN=0.5374, T_bed=444.8\u00b0C, eps_bed=0.678."
+      },
+      {
+        "stage": 6,
+        "check": "Stoichiometric_Mass_And_Enthalpy_Conservation_Residuals",
+        "passed": true,
+        "details": "Conservation residuals verified: mass_residual=9.517e-14 kg/s (< 1e-10), elemental_residual=9.517e-14 kg/s (< 1e-10), enthalpy_residual=1.000e-12 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Interlocks_And_Strict_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety interlocks verified: 0xD201=True, 0xD202=True, 0xD203=True, 0xD204=True, Priority=True."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Memory_Space_Integration",
+        "passed": true,
+        "details": "Registers verified: %R1550=1250, %R1551=115, %R1552=4450, %R1553=815, %R1554=978, %R1555=24500, %R1556=620, %R1557=0x0000, %M361=True, %M362=False, %M363=False."
+      },
+      {
+        "stage": 9,
+        "check": "Emergency_Steam_Quench_Dynamic_Suppression",
+        "passed": true,
+        "details": "Emergency steam quench verified: Excursion at 483.0\u00b0C tripped 0xD201 (True), cooled to 449.8\u00b0C (< 465.0\u00b0C) over 6.0s."
+      }
+    ],
+    "timestamp_utc": "2026-10-06T02:09:44Z"
+  }
+}

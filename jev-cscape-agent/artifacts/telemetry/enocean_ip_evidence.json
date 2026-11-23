@@ -1,0 +1,87 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "EnOcean IP Gateway & Wireless Telemetry Bridge verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W124",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial EnOcean IP Gateway & Wireless Telemetry Bridge",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Bindings",
+        "passed": true,
+        "details": "Parsed POU 'EnOceanIPGatewaySync', verified bindings %R850..%R857 and %M198..%M199 with zero ladder constructs."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Construct_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Ladder contacts, coils, and mnemonics strictly intercepted with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "ESP3_Packet_Framing_Serialization_And_CRC8_Poly_0x07",
+        "passed": true,
+        "details": "Framing verified for all 5 core ESP3 packet types (ERP1, RESPONSE, SUB_TEL, EVENT, COMMAND) and CRC8 poly 0x07 (0x70)."
+      },
+      {
+        "stage": 4,
+        "check": "EEP_A5_02_05_Temperature_Sensor_Linear_Scaling",
+        "passed": true,
+        "details": "Decoded A5-02-05: Min=0.0\u00b0C, Mid=20.08\u00b0C, Max=40.0\u00b0C (0..40\u00b0C range)."
+      },
+      {
+        "stage": 5,
+        "check": "EEP_A5_04_01_Temperature_And_Relative_Humidity_Decoding",
+        "passed": true,
+        "details": "Decoded A5-04-01: 20.0\u00b0C / 50.0% RH and Max 40.0\u00b0C / 100.0% RH."
+      },
+      {
+        "stage": 6,
+        "check": "EEP_F6_02_01_Rocker_And_D5_00_01_Reed_Contact_Decoding",
+        "passed": true,
+        "details": "Decoded Rocker (RELEASED, BUTTON_AI, BUTTON_BO) and Reed Contact (Closed/Open) states."
+      },
+      {
+        "stage": 7,
+        "check": "Multi_Sensor_Tracking_Table_And_Capacity_Limit",
+        "passed": true,
+        "details": "Managed 32 concurrent wireless sensor nodes with RSSI tracking; rejected 33rd registration."
+      },
+      {
+        "stage": 8,
+        "check": "Process_Safety_Interlocks_And_Diagnostic_Alarms",
+        "passed": true,
+        "details": "Verified 0x9501 Inactivity Trip (%M199=TRUE, %M198=FALSE), 0x9502 CRC8H Alarm, 0x9503 CRC8D Alarm, 0x9504 Offline Trip."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Register_Sync_And_Fault_Recovery_Pipeline",
+        "passed": true,
+        "details": "Verified %R850=0x0007, %R851=1, %R854=214 (x10 \u00b0C), %R855=552 (x10 %RH), and clean fault recovery."
+      }
+    ],
+    "metrics": {
+      "max_sensors": 32,
+      "sync_byte": "0x55",
+      "crc8_polynomial": "0x7",
+      "default_watchdog_timeout_s": 30.0
+    },
+    "register_map": {
+      "status_word": "%R850",
+      "active_sensors_count": "%R851",
+      "last_packet_type": "%R852",
+      "rocker_contact_state": "%R853",
+      "last_temperature_scaled": "%R854",
+      "last_humidity_scaled": "%R855",
+      "telegram_count": "%R856",
+      "diagnostic_event_code": "%R857",
+      "gateway_active_coil": "%M198",
+      "fault_trip_coil": "%M199"
+    },
+    "timestamp": "2026-10-04T18:51:46Z"
+  }
+}

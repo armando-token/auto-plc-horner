@@ -1,0 +1,60 @@
+# Python environment & cache
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+*.egg
+
+# Secrets, credentials, private tokens
+*.env
+*.env.*
+!.env.example
+*.secret
+*.key
+*.pem
+*.token
+credentials.json
+secrets.yaml
+
+# Large captures & memory dumps
+*.dmp
+*.hprof
+*.raw
+*.mp4
+*.avi
+captures/raw/
+recordings/
+
+# Temporary work directories & disposable artifacts
+work/disposable/*
+!work/disposable/.gitkeep
+!work/disposable/p1_base.csp
+!work/disposable/test_sandbox.csp
+!work/disposable/copies/
+work/disposable/copies/*
+!work/disposable/copies/g7_ladder_roundtrip.csp
+work/staging/*
+tmp/
+temp/
+artifacts/**/g7_acceptance_dryrun_summary.json
+artifacts/**/g7_smoke_summary.json
+artifacts/**/acceptance_runs/
+artifacts/**/acceptance_runs/*
+
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,50 @@
+{
+  "scene_id": "scene_045",
+  "file_name": "scene_045.png",
+  "original_source": "artifacts\\G3\\edit_roundtrip_steps\\startup_guard_main_disabled_1791574777.png",
+  "split": "reserved",
+  "scene_type": "iec_variable_editor",
+  "category": "IEC_AND_WINDOW",
+  "dimensions": {
+    "width": 1278,
+    "height": 566
+  },
+  "sha256": "c8b88076d3f0158572848a9d9861761e742d7840ecdc237ecd05621562aac0a5",
+  "labels": {
+    "canvas_rect": [
+      124,
+      28,
+      1269,
+      460
+    ],
+    "anchors": {
+      "canvas_center": [
+        696,
+        244
+      ],
+      "canvas_nw": [
+        124,
+        28
+      ],
+      "canvas_se": [
+        1269,
+        460
+      ],
+      "status_bar_roi": [
+        0,
+        542,
+        1278,
+        566
+      ]
+    },
+    "status_bar_metrics": {
+      "objects": null,
+      "screen": null,
+      "zoom": null,
+      "coords": null
+    },
+    "ocr_tokens": {
+      "sample_canvas_tokens": []
+    }
+  }
+}

@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0B0F15"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="#0D1117"/>
+  <g class="grid-lines" stroke="#21262D" stroke-width="0.8">
+    <line x1="60" y1="60" x2="60" y2="740"/>
+    <line x1="120" y1="60" x2="120" y2="740"/>
+    <line x1="180" y1="60" x2="180" y2="740"/>
+    <line x1="240" y1="60" x2="240" y2="740"/>
+    <line x1="300" y1="60" x2="300" y2="740"/>
+    <line x1="360" y1="60" x2="360" y2="740"/>
+    <line x1="420" y1="60" x2="420" y2="740"/>
+    <line x1="480" y1="60" x2="480" y2="740"/>
+    <line x1="540" y1="60" x2="540" y2="740"/>
+    <line x1="600" y1="60" x2="600" y2="740"/>
+    <line x1="660" y1="60" x2="660" y2="740"/>
+    <line x1="720" y1="60" x2="720" y2="740"/>
+    <line x1="780" y1="60" x2="780" y2="740"/>
+    <line x1="60" y1="60" x2="820" y2="60"/>
+    <line x1="60" y1="120" x2="820" y2="120"/>
+    <line x1="60" y1="180" x2="820" y2="180"/>
+    <line x1="60" y1="240" x2="820" y2="240"/>
+    <line x1="60" y1="300" x2="820" y2="300"/>
+    <line x1="60" y1="360" x2="820" y2="360"/>
+    <line x1="60" y1="420" x2="820" y2="420"/>
+    <line x1="60" y1="480" x2="820" y2="480"/>
+    <line x1="60" y1="540" x2="820" y2="540"/>
+    <line x1="60" y1="600" x2="820" y2="600"/>
+    <line x1="60" y1="660" x2="820" y2="660"/>
+    <line x1="60" y1="720" x2="820" y2="720"/>
+  </g>
+  <g class="network-edges">
+    <line class="network-edge" x1="360.1" y1="320.1" x2="519.9" y2="320.1" stroke="#38444D" stroke-width="2.0" opacity="0.8"/>
+    <line class="network-edge" x1="360.1" y1="320.1" x2="440.0" y2="240.2" stroke="#38444D" stroke-width="2.0" opacity="0.8"/>
+    <line class="network-edge" x1="519.9" y1="320.1" x2="440.0" y2="240.2" stroke="#38444D" stroke-width="2.0" opacity="0.8"/>
+    <line class="network-edge" x1="360.1" y1="320.1" x2="440.0" y2="479.8" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="519.9" y1="320.1" x2="440.0" y2="479.8" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="240.2" x2="440.0" y2="479.8" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="240.2" x2="239.8" y2="220.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="240.2" x2="300.2" y2="159.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="240.2" x2="579.8" y2="159.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="240.2" x2="640.2" y2="220.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="479.8" x2="239.8" y2="459.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="479.8" x2="300.2" y2="540.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="479.8" x2="579.8" y2="540.1" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="440.0" y1="479.8" x2="640.1" y2="460.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="220.2" x2="300.2" y2="159.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="159.9" x2="579.8" y2="159.9" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="579.8" y1="159.9" x2="640.2" y2="220.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.2" y1="220.2" x2="640.1" y2="460.2" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.1" y1="460.2" x2="579.8" y2="540.1" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="579.8" y1="540.1" x2="300.2" y2="540.2" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="540.2" x2="239.8" y2="459.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="459.9" x2="239.8" y2="220.2" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="220.2" x2="159.6" y2="139.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="220.2" x2="199.7" y2="99.7" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="159.9" x2="319.8" y2="89.6" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="159.9" x2="379.9" y2="79.6" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="579.8" y1="159.9" x2="500.1" y2="79.6" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="579.8" y1="159.9" x2="560.2" y2="89.6" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.2" y1="220.2" x2="680.3" y2="99.7" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.2" y1="220.2" x2="720.4" y2="139.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="459.9" x2="159.7" y2="560.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="540.2" x2="319.9" y2="620.4" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="579.8" y1="540.1" x2="560.1" y2="620.4" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.1" y1="460.2" x2="720.3" y2="560.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="220.2" x2="119.7" y2="259.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="220.2" x2="119.7" y2="320.0" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="239.8" y1="459.9" x2="120.0" y2="380.3" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="159.9" x2="259.9" y2="60.0" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="159.9" x2="439.8" y2="60.0" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="579.8" y1="159.9" x2="620.3" y2="60.0" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.2" y1="220.2" x2="760.2" y2="259.7" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.2" y1="220.2" x2="760.3" y2="320.0" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.1" y1="460.2" x2="760.3" y2="380.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="640.1" y1="460.2" x2="620.1" y2="680.3" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="579.8" y1="540.1" x2="440.2" y2="680.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="300.2" y1="540.2" x2="259.7" y2="679.9" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="119.7" y1="259.9" x2="119.7" y2="320.0" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="120.0" y1="380.3" x2="259.7" y2="679.9" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="259.9" y1="60.0" x2="439.8" y2="60.0" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="620.3" y1="60.0" x2="760.2" y2="259.7" stroke="#F85149" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="760.3" y1="320.0" x2="760.3" y2="380.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+    <line class="network-edge" x1="620.1" y1="680.3" x2="440.2" y2="680.2" stroke="#38444D" stroke-width="1.2" opacity="0.8"/>
+  </g>
+  <g class="network-nodes">
+    <g class="node-group" data-node-id="SUB_138KV_BUS_A" data-tier="0"><circle cx="360.1" cy="320.1" r="22.0" fill="none" stroke="#58A6FF" stroke-width="2.5" opacity="0.9"/><circle class="network-node" cx="360.1" cy="320.1" r="16.0" fill="#F0883E" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="360.1" y="347.1" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SUB-BUS-A</text></g>
+    <g class="node-group" data-node-id="SUB_138KV_BUS_B" data-tier="0"><circle class="network-node" cx="519.9" cy="320.1" r="16.0" fill="#F0883E" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="519.9" y="347.1" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SUB-BUS-B</text></g>
+    <g class="node-group" data-node-id="SUB_4160V_SWGR" data-tier="0"><circle class="network-node" cx="440.0" cy="240.2" r="16.0" fill="#F0883E" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="440.0" y="267.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SUB-SWGR-1</text></g>
+    <g class="node-group" data-node-id="SUB_480V_MCC" data-tier="0"><circle class="network-node" cx="440.0" cy="479.8" r="16.0" fill="#F0883E" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="440.0" y="506.8" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SUB-MCC-1</text></g>
+    <g class="node-group" data-node-id="DCS_CRK_01" data-tier="1"><circle class="network-node" cx="239.8" cy="220.2" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="239.8" y="244.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-CRK-1</text></g>
+    <g class="node-group" data-node-id="DCS_DIST_02" data-tier="1"><circle class="network-node" cx="300.2" cy="159.9" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="300.2" y="183.9" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-DST-2</text></g>
+    <g class="node-group" data-node-id="DCS_POLY_03" data-tier="1"><circle class="network-node" cx="579.8" cy="159.9" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="579.8" y="183.9" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-PLY-3</text></g>
+    <g class="node-group" data-node-id="DCS_UTIL_04" data-tier="1"><circle class="network-node" cx="640.2" cy="220.2" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="640.2" y="244.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-UTL-4</text></g>
+    <g class="node-group" data-node-id="DCS_FEED_05" data-tier="1"><circle class="network-node" cx="239.8" cy="459.9" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="239.8" y="483.9" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-FED-5</text></g>
+    <g class="node-group" data-node-id="DCS_REAC_06" data-tier="1"><circle class="network-node" cx="300.2" cy="540.2" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="300.2" y="564.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-REA-6</text></g>
+    <g class="node-group" data-node-id="DCS_SEP_07" data-tier="1"><circle class="network-node" cx="579.8" cy="540.1" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="579.8" y="564.1" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-SEP-7</text></g>
+    <g class="node-group" data-node-id="DCS_REC_08" data-tier="1"><circle class="network-node" cx="640.1" cy="460.2" r="13.0" fill="#58A6FF" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="640.1" y="484.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">DCS-REC-8</text></g>
+    <g class="node-group" data-node-id="RIO_F101" data-tier="2"><circle class="network-node" cx="159.6" cy="139.9" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="159.6" y="160.9" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-F101</text></g>
+    <g class="node-group" data-node-id="RIO_F102" data-tier="2"><circle class="network-node" cx="199.7" cy="99.7" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="199.7" y="120.7" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-F102</text></g>
+    <g class="node-group" data-node-id="RIO_D201" data-tier="2"><circle class="network-node" cx="319.8" cy="89.6" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="319.8" y="110.6" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-D201</text></g>
+    <g class="node-group" data-node-id="RIO_D202" data-tier="2"><circle class="network-node" cx="379.9" cy="79.6" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="379.9" y="100.6" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-D202</text></g>
+    <g class="node-group" data-node-id="RIO_P301" data-tier="2"><circle class="network-node" cx="500.1" cy="79.6" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="500.1" y="100.6" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-P301</text></g>
+    <g class="node-group" data-node-id="RIO_P302" data-tier="2"><circle class="network-node" cx="560.2" cy="89.6" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="560.2" y="110.6" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-P302</text></g>
+    <g class="node-group" data-node-id="RIO_U401" data-tier="2"><circle class="network-node" cx="680.3" cy="99.7" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="680.3" y="120.7" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-U401</text></g>
+    <g class="node-group" data-node-id="RIO_U402" data-tier="2"><circle class="network-node" cx="720.4" cy="139.9" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="720.4" y="160.9" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-U402</text></g>
+    <g class="node-group" data-node-id="RIO_F501" data-tier="2"><circle class="network-node" cx="159.7" cy="560.2" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="159.7" y="581.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-F501</text></g>
+    <g class="node-group" data-node-id="RIO_R601" data-tier="2"><circle class="network-node" cx="319.9" cy="620.4" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="319.9" y="641.4" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-R601</text></g>
+    <g class="node-group" data-node-id="RIO_S701" data-tier="2"><circle class="network-node" cx="560.1" cy="620.4" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="560.1" y="641.4" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-S701</text></g>
+    <g class="node-group" data-node-id="RIO_C801" data-tier="2"><circle class="network-node" cx="720.3" cy="560.2" r="10.0" fill="#3FB950" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="720.3" y="581.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">RIO-C801</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_301" data-tier="3"><circle class="network-node" cx="119.7" cy="259.9" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="119.7" y="282.4" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-301</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_302" data-tier="3"><circle class="network-node" cx="119.7" cy="320.0" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="119.7" y="342.5" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-302</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_303" data-tier="3"><circle class="network-node" cx="120.0" cy="380.3" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="120.0" y="402.8" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-303</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_304" data-tier="3"><circle class="network-node" cx="259.9" cy="60.0" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="259.9" y="82.5" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-304</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_305" data-tier="3"><circle class="network-node" cx="439.8" cy="60.0" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="439.8" y="82.5" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-305</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_306" data-tier="3"><circle class="network-node" cx="620.3" cy="60.0" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="620.3" y="82.5" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-306</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_307" data-tier="3"><circle class="network-node" cx="760.2" cy="259.7" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="760.2" y="282.2" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-307</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_308" data-tier="3"><circle class="network-node" cx="760.3" cy="320.0" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="760.3" y="342.5" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-308</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_309" data-tier="3"><circle class="network-node" cx="760.3" cy="380.2" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="760.3" y="402.7" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-309</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_310" data-tier="3"><circle class="network-node" cx="620.1" cy="680.3" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="620.1" y="702.8" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-310</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_311" data-tier="3"><circle class="network-node" cx="440.2" cy="680.2" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="440.2" y="702.7" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-311</text></g>
+    <g class="node-group" data-node-id="SIS_ESD_312" data-tier="3"><circle class="network-node" cx="259.7" cy="679.9" r="11.5" fill="#FF7B72" stroke="#FFFFFF" stroke-width="1.2" filter="url(#glow)"/><text x="259.7" y="702.4" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="8.5">SIS-ESD-312</text></g>
+  </g>
+  <g class="telemetry-hud-card" transform="translate(850, 60)">
+    <rect width="320" height="680" rx="8" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold">HORNER OCS TELEMETRY (W258)</text>
+    <text x="20" y="52" fill="#A0AEC0" font-family="sans-serif" font-size="10">Force-Directed Plant Network SCADA</text>
+    <text x="20" y="80" fill="#A0AEC0" font-family="sans-serif" font-size="9">Total Node Count (%R2190):</text>
+    <text x="300" y="80" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">36</text>
+    <text x="20" y="102" fill="#A0AEC0" font-family="sans-serif" font-size="9">Total Edge Links (%R2191):</text>
+    <text x="300" y="102" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">52</text>
+    <text x="20" y="124" fill="#A0AEC0" font-family="sans-serif" font-size="9">Kinetic Energy scaled (%R2192):</text>
+    <text x="300" y="124" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">1 (x10)</text>
+    <text x="20" y="146" fill="#A0AEC0" font-family="sans-serif" font-size="9">Selected Node Index (%R2193):</text>
+    <text x="300" y="146" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">#1</text>
+    <text x="20" y="168" fill="#A0AEC0" font-family="sans-serif" font-size="9">Selected Degree (%R2194):</text>
+    <text x="300" y="168" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">3 links</text>
+    <text x="20" y="190" fill="#A0AEC0" font-family="sans-serif" font-size="9">Clustering Coeff scaled (%R2195):</text>
+    <text x="300" y="190" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">210</text>
+    <text x="20" y="212" fill="#A0AEC0" font-family="sans-serif" font-size="9">Partition Stress (%R2196):</text>
+    <text x="300" y="212" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">67 %</text>
+    <text x="20" y="234" fill="#A0AEC0" font-family="sans-serif" font-size="9">Diagnostic Status (%R2197):</text>
+    <text x="300" y="234" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">0x0000</text>
+    <text x="20" y="256" fill="#A0AEC0" font-family="sans-serif" font-size="9">Equilibrium (%M511):</text>
+    <text x="300" y="256" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">TRUE (Settled)</text>
+    <text x="20" y="278" fill="#A0AEC0" font-family="sans-serif" font-size="9">Instability Alarm (%M512):</text>
+    <text x="300" y="278" text-anchor="end" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="bold">NOMINAL (Clear)</text>
+    <g id="badge-popover" class="badge-popover-active" transform="translate(12, 310)">
+      <rect width="296" height="130" rx="6" fill="#050811" stroke="#58A6FF" stroke-width="1.2"/>
+      <text x="14" y="24" fill="#58A6FF" font-family="sans-serif" font-size="10" font-weight="bold" letter-spacing="1">SELECTED NODE BADGE</text>
+      <text x="14" y="44" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold">138kV Substation Bus A</text>
+      <text x="14" y="62" fill="#A0AEC0" font-family="sans-serif" font-size="9">Tier: Power Substation Core (0)</text>
+      <text x="14" y="78" fill="#A0AEC0" font-family="sans-serif" font-size="9">Tag: SUB-BUS-A | Index: #1</text>
+      <text x="14" y="94" fill="#A0AEC0" font-family="sans-serif" font-size="9">Degree: 3 links | Status: NOMINAL</text>
+      <text x="14" y="110" fill="#A0AEC0" font-family="sans-serif" font-size="9">Coordinates: (360.1, 320.1)</text>
+    </g>
+    <g class="topology-legend" transform="translate(12, 456)">
+      <rect width="296" height="100" rx="6" fill="#0B0F15" stroke="#30363D" stroke-width="1.0"/>
+      <text x="14" y="20" fill="#A0AEC0" font-family="sans-serif" font-size="9" font-weight="bold" letter-spacing="1">TIER HIERARCHY LEGEND</text>
+      <circle cx="20" cy="35" r="5" fill="#F0883E"/>
+      <text x="32" y="38" fill="#A0AEC0" font-family="sans-serif" font-size="8.5">Tier 0: Substation Power Core (4 nodes)</text>
+      <circle cx="20" cy="51" r="5" fill="#58A6FF"/>
+      <text x="32" y="54" fill="#A0AEC0" font-family="sans-serif" font-size="8.5">Tier 1: DCS Controllers (8 nodes)</text>
+      <circle cx="20" cy="67" r="5" fill="#3FB950"/>
+      <text x="32" y="70" fill="#A0AEC0" font-family="sans-serif" font-size="8.5">Tier 2: Field Remote I/O (12 nodes)</text>
+      <circle cx="20" cy="83" r="5" fill="#FF7B72"/>
+      <text x="32" y="86" fill="#A0AEC0" font-family="sans-serif" font-size="8.5">Tier 3: Safety SIS ESD (12 nodes)</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,187 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over Ethernet-APL Field Switch Diagnostics Protocol Engine (W322) stages passed deterministically (PASSED 9/9 stages).",
+  "work_package": "W322",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W322",
+    "gate": "G8",
+    "protocol": "Industrial ODVA CIP Safety Over Ethernet-APL Field Switch Diagnostics Protocol Engine (IEEE 802.3cg / IEC 60079-47 / IEC 61784-3-2)",
+    "standards": [
+      "ODVA CIP Safety Volume 5",
+      "IEEE 802.3cg-2019 10BASE-T1L",
+      "IEC 60079-47 2-WISE",
+      "IEC 61784-3-2",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2830..%R2837",
+      "%M660..%M661"
+    ],
+    "diagnostic_codes": {
+      "0x0000": "OK",
+      "0xEEB1": "ERR_TRUNK_POWER_DEGRADED",
+      "0xEEB2": "ERR_SPUR_PORT_FAULT",
+      "0xEEB3": "ERR_SWITCH_THERMAL_OVERHEAT",
+      "0xEEB4": "ERR_DUAL_CRC_SAFETY_FAULT",
+      "0xEEB5": "ERR_PORT_BABBLING_IDIOT"
+    },
+    "sha256_digests": {
+      "pou_sha256": "5312c9ba5d7c3b76d3fc58694742d1b33d84c5521252e141c6a827149bac52df",
+      "stages_sha256": "b41b49e8dfed8e6f4cfec5e13a62c7692b9a5ff2e53afb65c52ba5b73a6a7683"
+    },
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python runtime, OS platform, and core telemetry dependencies",
+        "passed": true,
+        "timing_ms": 143.937,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants_and_register_mappings",
+        "check": "Verify Field Switch diagnostic codes (0xEEB1-0xEEB5), register offsets (%R2830..%R2837), coils (%M660..%M661)",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Class IDs (0x39, 0x3A, 0x3B, 0x4B), registers %R2830..%R2837, coils %M660..%M661, and diagnostic codes (0x0000, 0xEEB1..0xEEB5) verified bit-exact."
+      },
+      {
+        "stage": 3,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics, bit-flip detection, and frame integrity",
+        "passed": true,
+        "timing_ms": 1.286,
+        "details": "CRC-S1=0xEF65, CRC-S2=0x7058. Dual polynomial mathematics, 1-bit mutation sensitivity, and packet serialization round-trip verified."
+      },
+      {
+        "stage": 4,
+        "name": "apl_switch_trunk_and_spur_port_telemetry",
+        "check": "Verify IEEE 802.3cg trunk power delivery (50V/800mA), 8-spur-port telemetry, and packet transmission",
+        "passed": true,
+        "timing_ms": 0.37,
+        "details": "Field switch nominal telemetry verified; operating at 40000 mW across 8 healthy spur ports."
+      },
+      {
+        "stage": 5,
+        "name": "trunk_voltage_and_spur_fault_trips",
+        "check": "Verify trunk degraded trip (0xEEB1) and spur port fault trip (0xEEB2) asserting fail-safe state and recovery",
+        "passed": true,
+        "timing_ms": 0.066,
+        "details": "Trunk degraded voltage (0xEEB1) and spur overload/short-circuit (0xEEB2) safety trips properly forced fail-safe state."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_overheat_and_babbling_diagnostics",
+        "check": "Verify switch thermal overheat fault (0xEEB3), babbling idiot fault (0xEEB5), and CRC safety trip (0xEEB4)",
+        "passed": true,
+        "timing_ms": 0.185,
+        "details": "Thermal overheat (0xEEB3), babbling idiot (0xEEB5), and CRC mismatch (0xEEB4) verified with safe recovery."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "check": "Verify RegisterTable reads/writes, signed/unsigned masking across %R2830..%R2837 and coils %M660..%M661",
+        "passed": true,
+        "timing_ms": 1.259,
+        "details": "Bit-exact synchronization and 16-bit signed masking verified across %R2830..%R2837 and coils %M660..%M661."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "check": "Verify pure IEC 61131-3 ST POU 'CipSafetyAplSwitchSync' and strict rejection of ladder logic constructs",
+        "passed": true,
+        "timing_ms": 2.997,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "check": "Verify multi-cycle ILogicUnit scan execution (100 cycles), zero memory leaks, and emit evidence JSON",
+        "passed": true,
+        "timing_ms": 1188.989,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 5.4 KB."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "environment",
+        "check": "Verify Python runtime, OS platform, and core telemetry dependencies",
+        "passed": true,
+        "timing_ms": 143.937,
+        "details": "Python 3.12.10 on Windows-11-10.0.26200-SP0. Dependencies verified: True."
+      },
+      {
+        "stage": 2,
+        "name": "protocol_constants_and_register_mappings",
+        "check": "Verify Field Switch diagnostic codes (0xEEB1-0xEEB5), register offsets (%R2830..%R2837), coils (%M660..%M661)",
+        "passed": true,
+        "timing_ms": 0.05,
+        "details": "Class IDs (0x39, 0x3A, 0x3B, 0x4B), registers %R2830..%R2837, coils %M660..%M661, and diagnostic codes (0x0000, 0xEEB1..0xEEB5) verified bit-exact."
+      },
+      {
+        "stage": 3,
+        "name": "odva_cip_safety_dual_crc_mathematics",
+        "check": "Verify dual CRC-S1 (poly 0x5935) and CRC-S2 (poly 0x755B) mathematics, bit-flip detection, and frame integrity",
+        "passed": true,
+        "timing_ms": 1.286,
+        "details": "CRC-S1=0xEF65, CRC-S2=0x7058. Dual polynomial mathematics, 1-bit mutation sensitivity, and packet serialization round-trip verified."
+      },
+      {
+        "stage": 4,
+        "name": "apl_switch_trunk_and_spur_port_telemetry",
+        "check": "Verify IEEE 802.3cg trunk power delivery (50V/800mA), 8-spur-port telemetry, and packet transmission",
+        "passed": true,
+        "timing_ms": 0.37,
+        "details": "Field switch nominal telemetry verified; operating at 40000 mW across 8 healthy spur ports."
+      },
+      {
+        "stage": 5,
+        "name": "trunk_voltage_and_spur_fault_trips",
+        "check": "Verify trunk degraded trip (0xEEB1) and spur port fault trip (0xEEB2) asserting fail-safe state and recovery",
+        "passed": true,
+        "timing_ms": 0.066,
+        "details": "Trunk degraded voltage (0xEEB1) and spur overload/short-circuit (0xEEB2) safety trips properly forced fail-safe state."
+      },
+      {
+        "stage": 6,
+        "name": "thermal_overheat_and_babbling_diagnostics",
+        "check": "Verify switch thermal overheat fault (0xEEB3), babbling idiot fault (0xEEB5), and CRC safety trip (0xEEB4)",
+        "passed": true,
+        "timing_ms": 0.185,
+        "details": "Thermal overheat (0xEEB3), babbling idiot (0xEEB5), and CRC mismatch (0xEEB4) verified with safe recovery."
+      },
+      {
+        "stage": 7,
+        "name": "register_table_synchronization",
+        "check": "Verify RegisterTable reads/writes, signed/unsigned masking across %R2830..%R2837 and coils %M660..%M661",
+        "passed": true,
+        "timing_ms": 1.259,
+        "details": "Bit-exact synchronization and 16-bit signed masking verified across %R2830..%R2837 and coils %M660..%M661."
+      },
+      {
+        "stage": 8,
+        "name": "pure_st_pou_and_anti_ladder_rejection",
+        "check": "Verify pure IEC 61131-3 ST POU 'CipSafetyAplSwitchSync' and strict rejection of ladder logic constructs",
+        "passed": true,
+        "timing_ms": 2.997,
+        "details": "Pure ST POU verified. Rejected 9/9 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 9,
+        "name": "simulation_soak_100_cycles_and_evidence_emission",
+        "check": "Verify multi-cycle ILogicUnit scan execution (100 cycles), zero memory leaks, and emit evidence JSON",
+        "passed": true,
+        "timing_ms": 1188.989,
+        "details": "Executed 100 continuous scan cycles. Zero errors, peak memory: 5.4 KB."
+      }
+    ]
+  }
+}

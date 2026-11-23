@@ -1,0 +1,625 @@
+{
+  "gate": "G8",
+  "task": "GATE_G8_BIND_ROUNDTRIP",
+  "timestamp_utc": "2026-10-12T22:46:15.521050+00:00",
+  "status": "success",
+  "cscape_version": "10.2 (Build 10.2.751.4)",
+  "target_var": "RTC_SEC",
+  "copy_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g8_bind_roundtrip.csp",
+  "initial_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "saved_sha256": "8cf29a9fd419f2974dd998bf861c60076868b6cde001fc6f0871c9d5c4962c5c",
+  "reopened_sha256": "8cf29a9fd419f2974dd998bf861c60076868b6cde001fc6f0871c9d5c4962c5c",
+  "placement": {
+    "placed": true,
+    "target_var": "RTC_SEC",
+    "canvas_coords": [
+      806,
+      259
+    ],
+    "property_dialog_handled": true,
+    "status_bar_text": "  Screen: 1* Zoom: 120% 0, 0 No Obj 1 Objects"
+  },
+  "reopen_verification": {
+    "reopened": true,
+    "screen_editor_active": true,
+    "object_verified": true,
+    "status_bar_text": "  Screen: 1* Zoom: 120% 0, 0 No Obj 1 Objects",
+    "binding_read_back": "RTC_SEC",
+    "reopen_screenshot": "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G8\\g8_reopen_screen_editor.png"
+  },
+  "cfbf_proof": {
+    "file_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g8_bind_roundtrip.csp",
+    "saved_sha256": "8cf29a9fd419f2974dd998bf861c60076868b6cde001fc6f0871c9d5c4962c5c",
+    "initial_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+    "sha_changed": true,
+    "target_var": "RTC_SEC",
+    "target_var_found": true,
+    "base_object_count": 0,
+    "roundtrip_object_count": 1,
+    "delta_object_count": 1,
+    "base_p1_untouched": true,
+    "negative_control": {
+      "file_path": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+      "exists": true,
+      "contents_size": 440769,
+      "graphics_offset": 404861,
+      "screen_id": 1,
+      "screen_width": 320,
+      "screen_height": 240,
+      "object_count": 0,
+      "target_var_found": false,
+      "target_var_offset": -1,
+      "objects": []
+    },
+    "cfbf_delta": {
+      "base_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\p1_base.csp",
+      "roundtrip_file": "C:\\HornerAI\\jev-cscape-agent\\work\\disposable\\copies\\g8_bind_roundtrip.csp",
+      "base_object_count": 0,
+      "roundtrip_object_count": 1,
+      "delta_object_count": 1,
+      "base_target_var_found": false,
+      "roundtrip_target_var_found": true,
+      "new_objects": [
+        {
+          "type": "Numeric Display",
+          "binding": "RTC_SEC",
+          "offset": 245432
+        }
+      ]
+    },
+    "status": "success",
+    "base_p1_sha256": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881"
+  },
+  "dialogs_encountered": [
+    {
+      "hwnd": "0xa90120",
+      "title": "Numeric Data Properties",
+      "timestamp": 1791845233.4347997
+    }
+  ],
+  "screenshots": [
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G8\\g8_placement_numeric_display.png",
+    "C:\\HornerAI\\jev-cscape-agent\\artifacts\\G8\\g8_reopen_screen_editor.png"
+  ],
+  "error": null,
+  "base_p1_sha256_pre": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881",
+  "project_navigator_tree": [
+    "[Project Navigator] (hItem=0x5a78278, parent='Root')",
+    "  [g8_bind_roundtrip [253] [Unknown Mode]*] (hItem=0x13e7abc8, parent='Project Navigator')",
+    "    [Hardware Configuration] (hItem=0x13e7ac28, parent='g8_bind_roundtrip [253] [Unknown Mode]*')",
+    "    [Control] (hItem=0x13e7ac88, parent='g8_bind_roundtrip [253] [Unknown Mode]*')",
+    "      [Logic Modules] (hItem=0x13e7c3c8, parent='Control')",
+    "        [Main Loop Modules] (hItem=0x13e7c608, parent='Logic Modules')",
+    "          [main] (hItem=0x13e7c278, parent='Main Loop Modules')",
+    "        [Subroutine Modules] (hItem=0x13e7c578, parent='Logic Modules')",
+    "        [UDFB Modules] (hItem=0x13e7c428, parent='Logic Modules')",
+    "      [SetPoints] (hItem=0x13e7cc68, parent='Control')",
+    "      [Data Logging] (hItem=0x13e7cc08, parent='Control')",
+    "    [User Interface] (hItem=0x13e7ccf8, parent='g8_bind_roundtrip [253] [Unknown Mode]*')",
+    "      [Screen Thumbnail] (hItem=0x13e7dad8, parent='User Interface')",
+    "      [Main Screen] (hItem=0x13e7d688, parent='User Interface')",
+    "        [Screen 1 (1)] (hItem=0x13e7da18, parent='Main Screen')",
+    "      [Alarms] (hItem=0x13e7d7d8, parent='User Interface')",
+    "      [Audio] (hItem=0x13e7d808, parent='User Interface')",
+    "      [Recipe Database] (hItem=0x13e7e018, parent='User Interface')",
+    "      [Reports] (hItem=0x13e7dbc8, parent='User Interface')",
+    "      [Web] (hItem=0x13e7dfb8, parent='User Interface')",
+    "        [Configure Web Options] (hItem=0x13e7dce8, parent='Web')",
+    "        [Display/Validate License] (hItem=0x13e7e048, parent='Web')",
+    "        [Publish Web Site] (hItem=0x13e7de68, parent='Web')",
+    "        [Browse Web Site] (hItem=0x13e7e0d8, parent='Web')",
+    "        [Publish To Removable Media] (hItem=0x13e7db08, parent='Web')",
+    "      [Users and Security] (hItem=0x13e7de98, parent='User Interface')",
+    "      [Language] (hItem=0x13e7db38, parent='User Interface')",
+    "        [Export Strings] (hItem=0x13e7df58, parent='Language')",
+    "        [Import Strings] (hItem=0x13e7de38, parent='Language')",
+    "        [Language Options] (hItem=0x13e7dda8, parent='Language')",
+    "        [Display Language] (hItem=0x13e7e078, parent='Language')",
+    "    [Networking] (hItem=0x13e7cd88, parent='g8_bind_roundtrip [253] [Unknown Mode]*')",
+    "      [CAN1 Configuration] (hItem=0x13e7cd28, parent='Networking')",
+    "      [CAN 2 Configuration] (hItem=0x13e7d358, parent='Networking')",
+    "      [Protocols] (hItem=0x13e7d8c8, parent='Networking')",
+    "      [GSM] (hItem=0x13e7d448, parent='Networking')",
+    "      [GPRS] (hItem=0x13e7d658, parent='Networking')",
+    "      [SMS] (hItem=0x13e7da78, parent='Networking')",
+    "      [eMail] (hItem=0x13e7d988, parent='Networking')",
+    "      [MQTT] (hItem=0x13e7d568, parent='Networking')",
+    "      [OCS360] (hItem=0x13e7d9b8, parent='Networking')"
+  ],
+  "new_windows": [
+    {
+      "hwnd": 171836476,
+      "hwnd_hex": "0xa3e043c",
+      "class_name": "#32770",
+      "title": "Screen Thumbnails",
+      "parent_hwnd": 171639750,
+      "parent_hwnd_hex": "0xa3b03c6",
+      "control_id": 0,
+      "rect": [
+        355,
+        58,
+        926,
+        511
+      ],
+      "client_rect": [
+        0,
+        0,
+        555,
+        414
+      ],
+      "is_visible": true,
+      "is_enabled": true,
+      "category": "Popup Dialog",
+      "context": "After Screen Thumbnail Activation"
+    },
+    {
+      "hwnd": 174654846,
+      "hwnd_hex": "0xa69057e",
+      "class_name": "ComboLBox",
+      "title": "",
+      "parent_hwnd": 10748614,
+      "parent_hwnd_hex": "0xa402c6",
+      "control_id": 1000,
+      "rect": [
+        0,
+        21,
+        92,
+        101
+      ],
+      "client_rect": [
+        0,
+        0,
+        73,
+        78
+      ],
+      "is_visible": false,
+      "is_enabled": true,
+      "category": "Popup Dialog",
+      "context": "After Screen Thumbnail Activation"
+    },
+    {
+      "hwnd": 2688902,
+      "hwnd_hex": "0x290786",
+      "class_name": "Edit",
+      "title": "Screen 1 (1)",
+      "parent_hwnd": 2361138,
+      "parent_hwnd_hex": "0x240732",
+      "control_id": 1,
+      "rect": [
+        118,
+        416,
+        182,
+        435
+      ],
+      "client_rect": [
+        0,
+        0,
+        64,
+        19
+      ],
+      "is_visible": true,
+      "is_enabled": true,
+      "category": "Dockable Pane",
+      "context": "Wait Loop #1"
+    },
+    {
+      "hwnd": 171902012,
+      "hwnd_hex": "0xa3f043c",
+      "class_name": "AfxFrameOrView140su",
+      "title": "",
+      "parent_hwnd": 3409710,
+      "parent_hwnd_hex": "0x34072e",
+      "control_id": 59649,
+      "rect": [
+        313,
+        171,
+        1269,
+        347
+      ],
+      "client_rect": [
+        0,
+        0,
+        952,
+        172
+      ],
+      "is_visible": true,
+      "is_enabled": true,
+      "category": "Dockable Pane",
+      "context": "Wait Loop #1"
+    },
+    {
+      "hwnd": 96011562,
+      "hwnd_hex": "0x5b9052a",
+      "class_name": "Static",
+      "title": "",
+      "parent_hwnd": 171902012,
+      "parent_hwnd_hex": "0xa3f043c",
+      "control_id": 5006,
+      "rect": [
+        315,
+        173,
+        345,
+        345
+      ],
+      "client_rect": [
+        0,
+        0,
+        30,
+        172
+      ],
+      "is_visible": false,
+      "is_enabled": true,
+      "category": "Dockable Pane",
+      "context": "Wait Loop #1"
+    },
+    {
+      "hwnd": 174720382,
+      "hwnd_hex": "0xa6a057e",
+      "class_name": "HornerAPGTabbedGraphicsEditor",
+      "title": "",
+      "parent_hwnd": 171902012,
+      "parent_hwnd_hex": "0xa3f043c",
+      "control_id": 1150,
+      "rect": [
+        345,
+        173,
+        1267,
+        345
+      ],
+      "client_rect": [
+        0,
+        0,
+        905,
+        172
+      ],
+      "is_visible": true,
+      "is_enabled": true,
+      "category": "Dockable Pane",
+      "context": "Wait Loop #1"
+    },
+    {
+      "hwnd": 225443982,
+      "hwnd_hex": "0xd70008e",
+      "class_name": "msctls_statusbar32",
+      "title": "",
+      "parent_hwnd": 174720382,
+      "parent_hwnd_hex": "0xa6a057e",
+      "control_id": 59393,
+      "rect": [
+        345,
+        326,
+        1250,
+        345
+      ],
+      "client_rect": [
+        0,
+        0,
+        905,
+        19
+      ],
+      "is_visible": true,
+      "is_enabled": true,
+      "category": "Dockable Pane",
+      "context": "Wait Loop #1"
+    },
+    {
+      "hwnd": 5769008,
+      "hwnd_hex": "0x580730",
+      "class_name": "ToolbarWindow32",
+      "title": "",
+      "parent_hwnd": 171902012,
+      "parent_hwnd_hex": "0xa3f043c",
+      "control_id": 585,
+      "rect": [
+        315,
+        173,
+        345,
+        345
+      ],
+      "client_rect": [
+        0,
+        0,
+        24,
+        160
+      ],
+      "is_visible": true,
+      "is_enabled": true,
+      "category": "Dockable Pane",
+      "context": "Wait Loop #1"
+    },
+    {
+      "hwnd": 22415062,
+      "hwnd_hex": "0x15606d6",
+      "class_name": "#32770",
+      "title": "Screen Thumbnails",
+      "parent_hwnd": 3475192,
+      "parent_hwnd_hex": "0x3506f8",
+      "control_id": 0,
+      "rect": [
+        355,
+        58,
+        926,
+        511
+      ],
+      "client_rect": [
+        0,
+        0,
+        555,
+        414
+      ],
+      "is_visible": true,
+      "is_enabled": true,
+      "category": "Popup Dialog",
+      "context": "After Screen Thumbnail Activation"
+    },
+    {
+      "hwnd": 29885364,
+      "hwnd_hex": "0x1c803b4",
+      "class_name": "ComboLBox",
+      "title": "",
+      "parent_hwnd": 10748614,
+      "parent_hwnd_hex": "0xa402c6",
+      "control_id": 1000,
+      "rect": [
+        0,
+        21,
+        92,
+        101
+      ],
+      "client_rect": [
+        0,
+        0,
+        73,
+        78
+      ],
+      "is_visible": false,
+      "is_enabled": true,
+      "category": "Popup Dialog",
+      "context": "After Screen Thumbnail Activation"
+    }
+  ],
+  "screen_thumbnail_dialog_controls": [
+    {
+      "source": "live_window",
+      "hwnd": 10879264,
+      "hwnd_hex": "0xa60120",
+      "parent_hwnd": 171836476,
+      "parent_hwnd_hex": "0xa3e043c",
+      "class_name": "Static",
+      "control_id": 1409,
+      "title": "",
+      "rect": [
+        378,
+        97,
+        908,
+        446
+      ],
+      "client_rect": [
+        0,
+        0,
+        530,
+        349
+      ],
+      "width": 530,
+      "height": 349,
+      "client_width": 530,
+      "client_height": 349,
+      "is_visible": false,
+      "is_enabled": true,
+      "style_hex": "0x40000007",
+      "ex_style_hex": "0x4"
+    },
+    {
+      "source": "live_window",
+      "hwnd": 153093400,
+      "hwnd_hex": "0x9200518",
+      "parent_hwnd": 171836476,
+      "parent_hwnd_hex": "0xa3e043c",
+      "class_name": "Button",
+      "control_id": 1142,
+      "title": "<< Previous",
+      "rect": [
+        389,
+        469,
+        472,
+        492
+      ],
+      "client_rect": [
+        0,
+        0,
+        83,
+        23
+      ],
+      "width": 83,
+      "height": 23,
+      "client_width": 83,
+      "client_height": 23,
+      "is_visible": true,
+      "is_enabled": true,
+      "style_hex": "0x50010001",
+      "ex_style_hex": "0x4"
+    },
+    {
+      "source": "live_window",
+      "hwnd": 2295686,
+      "hwnd_hex": "0x230786",
+      "parent_hwnd": 171836476,
+      "parent_hwnd_hex": "0xa3e043c",
+      "class_name": "Static",
+      "control_id": 1144,
+      "title": "Screens",
+      "rect": [
+        480,
+        474,
+        528,
+        490
+      ],
+      "client_rect": [
+        0,
+        0,
+        48,
+        16
+      ],
+      "width": 48,
+      "height": 16,
+      "client_width": 48,
+      "client_height": 16,
+      "is_visible": true,
+      "is_enabled": true,
+      "style_hex": "0x50020001",
+      "ex_style_hex": "0x4"
+    },
+    {
+      "source": "live_window",
+      "hwnd": 4458222,
+      "hwnd_hex": "0x4406ee",
+      "parent_hwnd": 171836476,
+      "parent_hwnd_hex": "0xa3e043c",
+      "class_name": "Button",
+      "control_id": 1143,
+      "title": "Next >>",
+      "rect": [
+        636,
+        469,
+        726,
+        492
+      ],
+      "client_rect": [
+        0,
+        0,
+        90,
+        23
+      ],
+      "width": 90,
+      "height": 23,
+      "client_width": 90,
+      "client_height": 23,
+      "is_visible": true,
+      "is_enabled": true,
+      "style_hex": "0x50010000",
+      "ex_style_hex": "0x4"
+    },
+    {
+      "source": "live_window",
+      "hwnd": 5637936,
+      "hwnd_hex": "0x560730",
+      "parent_hwnd": 171836476,
+      "parent_hwnd_hex": "0xa3e043c",
+      "class_name": "Button",
+      "control_id": 2,
+      "title": "Cancel",
+      "rect": [
+        735,
+        469,
+        810,
+        492
+      ],
+      "client_rect": [
+        0,
+        0,
+        75,
+        23
+      ],
+      "width": 75,
+      "height": 23,
+      "client_width": 75,
+      "client_height": 23,
+      "is_visible": true,
+      "is_enabled": true,
+      "style_hex": "0x50010000",
+      "ex_style_hex": "0x4"
+    },
+    {
+      "source": "live_window",
+      "hwnd": 225378446,
+      "hwnd_hex": "0xd6f008e",
+      "parent_hwnd": 171836476,
+      "parent_hwnd_hex": "0xa3e043c",
+      "class_name": "Button",
+      "control_id": 1,
+      "title": "OK",
+      "rect": [
+        821,
+        469,
+        892,
+        492
+      ],
+      "client_rect": [
+        0,
+        0,
+        71,
+        23
+      ],
+      "width": 71,
+      "height": 23,
+      "client_width": 71,
+      "client_height": 23,
+      "is_visible": true,
+      "is_enabled": true,
+      "style_hex": "0x50010000",
+      "ex_style_hex": "0x4"
+    },
+    {
+      "source": "live_window",
+      "hwnd": 95880490,
+      "hwnd_hex": "0x5b7052a",
+      "parent_hwnd": 171836476,
+      "parent_hwnd_hex": "0xa3e043c",
+      "class_name": "ComboBox",
+      "control_id": 2487,
+      "title": "",
+      "rect": [
+        531,
+        471,
+        623,
+        492
+      ],
+      "client_rect": [
+        0,
+        0,
+        92,
+        21
+      ],
+      "width": 92,
+      "height": 21,
+      "client_width": 92,
+      "client_height": 21,
+      "is_visible": true,
+      "is_enabled": true,
+      "style_hex": "0x50010202",
+      "ex_style_hex": "0x4"
+    },
+    {
+      "source": "live_window",
+      "hwnd": 153748308,
+      "hwnd_hex": "0x92a0354",
+      "parent_hwnd": 95880490,
+      "parent_hwnd_hex": "0x5b7052a",
+      "class_name": "Edit",
+      "control_id": 1001,
+      "title": "",
+      "rect": [
+        534,
+        474,
+        603,
+        489
+      ],
+      "client_rect": [
+        0,
+        0,
+        69,
+        15
+      ],
+      "width": 69,
+      "height": 15,
+      "client_width": 69,
+      "client_height": 15,
+      "is_visible": true,
+      "is_enabled": true,
+      "style_hex": "0x50000300",
+      "ex_style_hex": "0x0"
+    }
+  ],
+  "sha_preserved_on_reopen": true,
+  "base_p1_sha256_post": "5ab52feeff31fda15301cebf1498dddb25167f8ea8a3640185d511600b5f2881"
+}

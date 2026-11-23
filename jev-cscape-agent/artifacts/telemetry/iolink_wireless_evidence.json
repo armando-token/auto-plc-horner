@@ -1,0 +1,90 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "IO-Link Wireless Real-Time Protocol Engine verified cleanly (9/9 checks passed).",
+  "data": {
+    "work_package": "W133",
+    "gate": "Gate G8 Industrial Protocols / Gate G4 Scan Cycle Simulation",
+    "component": "Industrial IO-Link Wireless (IEC 61131-9 Extension) Protocol Engine & Multi-Track Master",
+    "checks_passed": 9,
+    "total_checks": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Register_Binding",
+        "passed": true,
+        "details": "Parsed POU 'IOLinkWirelessMasterSync' with bound registers: ['%R940', '%R941', '%R942', '%R943', '%R944', '%R945', '%R946', '%R947', '%M219', '%M220']"
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Rejection",
+        "passed": true,
+        "details": "Asserted LadderForbiddenError on contacts, coils, rungs, and mnemonics."
+      },
+      {
+        "stage": 3,
+        "check": "W_Cycle_5ms_Timing_And_Frequency_Hopping_Sequence",
+        "passed": true,
+        "details": "Verified 5ms W-Cycle, 10 subframes (500us each), and track-orthogonal hopping across 80 channels."
+      },
+      {
+        "stage": 4,
+        "check": "Multi_Track_Allocation_And_Coexistence_Blacklisting",
+        "passed": true,
+        "details": "Allocated 40 devices across 5 tracks, asserted capacity limit, blacklisted 63 Wi-Fi channels."
+      },
+      {
+        "stage": 5,
+        "check": "Process_Data_And_On_Request_Data_Framing_And_Scaling",
+        "passed": true,
+        "details": "Encoded/decoded PD (PV=45.6, Scaled=456) and OD ISDU request (Index=0x1000)."
+      },
+      {
+        "stage": 6,
+        "check": "Multi_Device_Telemetry_Aggregation_And_Metrics",
+        "passed": true,
+        "details": "Aggregated telemetry across 40 devices: Avg RSSI=-63.5 dBm, Avg PER=0.00%."
+      },
+      {
+        "stage": 7,
+        "check": "Process_Safety_Trips_0x9E01_0x9E04_And_Horner_Coils",
+        "passed": true,
+        "details": "Verified 0x9E01 Sync Timeout (%M220=TRUE, %M219=FALSE) and 0x9E04 Device Disconnect Trip."
+      },
+      {
+        "stage": 8,
+        "check": "Horner_OCS_Register_Space_Synchronization",
+        "passed": true,
+        "details": "Verified %R940=0x0007, %R941=1, %R942=0x0001, %R943=456, %R944=123."
+      },
+      {
+        "stage": 9,
+        "check": "Scan_Cycle_Simulation_And_Fault_Recovery_Pipeline",
+        "passed": true,
+        "details": "Simulated 20 W-Cycles, tripped 0x9E01 timeout (%M220=TRUE), recovered cleanly (%M219=TRUE, %M220=FALSE, %R947=0x0000)."
+      }
+    ],
+    "metrics": {
+      "max_tracks": 5,
+      "devices_per_track": 8,
+      "max_devices": 40,
+      "w_cycle_duration_ms": 5,
+      "subframes_per_cycle": 10,
+      "num_channels": 80,
+      "default_watchdog_timeout_s": 30.0
+    },
+    "register_map": {
+      "status_word": "%R940",
+      "active_devices_count": "%R941",
+      "active_tracks_mask": "%R942",
+      "primary_variable_pv_scaled": "%R943",
+      "secondary_variable_sv_scaled": "%R944",
+      "average_rssi": "%R945",
+      "w_cycle_counter": "%R946",
+      "diagnostic_event_code": "%R947",
+      "network_active_coil": "%M219",
+      "fault_trip_coil": "%M220"
+    },
+    "timestamp": "2026-10-04T19:37:39Z"
+  }
+}

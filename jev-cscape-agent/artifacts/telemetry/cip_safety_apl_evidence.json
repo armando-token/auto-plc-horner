@@ -1,0 +1,162 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W274 CIP Safety Over Ethernet-APL Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W274",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety Over Ethernet-APL (10BASE-T1L / 2-WISE Intrinsically Safe)",
+    "work_package": "W274",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x3E": "Ethernet-APL Safety Object"
+    },
+    "register_map": {
+      "%R2350": "REG_CIP_SAFETY_APL_STATE (0=SAFE_INIT, 1=SAFE_COMMISSIONING, 2=SAFE_OPERATIONAL, 3=SAFE_FAULT_TRIP)",
+      "%R2351": "REG_CIP_SAFETY_APL_SIGNAL_QUALITY (0..1000 Eye Margin 0.0%..100.0%)",
+      "%R2352": "REG_CIP_SAFETY_APL_LOOP_VOLTAGE_MV (nominal 12000 mV, IS bounds 9600..15000 mV)",
+      "%R2353": "REG_CIP_SAFETY_APL_TX_SEQUENCE (0..65535 rolling)",
+      "%R2354": "REG_CIP_SAFETY_APL_RX_SEQUENCE (0..65535 rolling)",
+      "%R2355": "REG_CIP_SAFETY_APL_CRC_STATUS (Bit0=CRC_S1_OK, Bit1=CRC_S2_OK, 0x0003 nominal)",
+      "%R2356": "REG_CIP_SAFETY_APL_LATENCY_US (nominal 1200 us, max jitter 2500 us)",
+      "%R2357": "REG_CIP_SAFETY_APL_DIAGNOSTIC_CODE (0x0000=OK, 0xEB01=APL_DROOP, 0xEB02=CRC_FAULT, 0xEB03=TIMEOUT, 0xEB04=IS_VIOLATION, 0xEB05=SEQUENCE_GAP)",
+      "%M548": "COIL_CIP_SAFETY_APL_ESTABLISHED (BOOL, True when state == SAFE_OPERATIONAL)",
+      "%M549": "COIL_CIP_SAFETY_APL_TRIPPED (BOOL, True when state == SAFE_FAULT_TRIP)"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Protocol_Constants_Registers_And_Diagnostic_Codes",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Verified register mappings %R2350..%R2357, coils %M548..%M549, and signed/unsigned DiagnosticCode equality."
+      },
+      {
+        "stage": 2,
+        "name": "Safe_CRC_Validation_And_Corruption_Handling",
+        "passed": true,
+        "timing_ms": 0.485,
+        "details": "CRC-S1 (poly 0x5935) & CRC-S2 (poly 0x755B inverted) valid=True, status=3, single-bit mutation detected=True."
+      },
+      {
+        "stage": 3,
+        "name": "Pure_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "timing_ms": 3.687,
+        "details": "Pure ST POU ST_PROGRAM_CIP_SAFETY_APL_SYNC passed SecurityGuard.assert_pure_st_content and STParser(pou_type=POUType.PROGRAM).parse()."
+      },
+      {
+        "stage": 4,
+        "name": "Anti_Ladder_Construct_Rejection",
+        "passed": true,
+        "timing_ms": 0.009,
+        "details": "Ladder logic contacts/coils strictly intercepted with LadderForbiddenError."
+      },
+      {
+        "stage": 5,
+        "name": "State_Transitions_SAFE_INIT_To_SAFE_FAULT_TRIP",
+        "passed": true,
+        "timing_ms": 0.718,
+        "details": "State machine verified: INIT -> COMMISSIONING -> OPERATIONAL -> FAULT_TRIP, with %M548 and %M549 synchronizations."
+      },
+      {
+        "stage": 6,
+        "name": "Intrinsic_Safety_2WISE_Voltage_Monitoring_And_Droop_Trips",
+        "passed": true,
+        "timing_ms": 0.838,
+        "details": "2-WISE loop voltage surveillance: nominal 12.0V verified; droop <9600 mV triggered 0xEB01; overvoltage >15000 mV triggered 0xEB04."
+      },
+      {
+        "stage": 7,
+        "name": "Rolling_Sequence_Tracking_And_Gap_Detection",
+        "passed": true,
+        "timing_ms": 11.835,
+        "details": "Rolling sequence progression confirmed on TX (%R2353) and RX (%R2354); sequence gap triggered 0xEB05 SEQUENCE_GAP."
+      },
+      {
+        "stage": 8,
+        "name": "Latency_Watchdog_And_Jitter_Surveillance",
+        "passed": true,
+        "timing_ms": 1.369,
+        "details": "Latency monitoring verified at 1200 us; jitter > 2500 us and scan timeout triggered 0xEB03 TIMEOUT."
+      },
+      {
+        "stage": 9,
+        "name": "Register_Table_Sync_And_100_Cycle_Soak",
+        "passed": true,
+        "timing_ms": 666.365,
+        "details": "100 scan cycles executed with register sync (%R2350..%R2357, %M548..%M549), heap growth 0.95 KB (< 100 KB limit)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Protocol_Constants_Registers_And_Diagnostic_Codes",
+        "passed": true,
+        "timing_ms": 0.046,
+        "details": "Verified register mappings %R2350..%R2357, coils %M548..%M549, and signed/unsigned DiagnosticCode equality."
+      },
+      {
+        "stage": 2,
+        "name": "Safe_CRC_Validation_And_Corruption_Handling",
+        "passed": true,
+        "timing_ms": 0.485,
+        "details": "CRC-S1 (poly 0x5935) & CRC-S2 (poly 0x755B inverted) valid=True, status=3, single-bit mutation detected=True."
+      },
+      {
+        "stage": 3,
+        "name": "Pure_ST_POU_Validation_With_STParser_And_SecurityGuard",
+        "passed": true,
+        "timing_ms": 3.687,
+        "details": "Pure ST POU ST_PROGRAM_CIP_SAFETY_APL_SYNC passed SecurityGuard.assert_pure_st_content and STParser(pou_type=POUType.PROGRAM).parse()."
+      },
+      {
+        "stage": 4,
+        "name": "Anti_Ladder_Construct_Rejection",
+        "passed": true,
+        "timing_ms": 0.009,
+        "details": "Ladder logic contacts/coils strictly intercepted with LadderForbiddenError."
+      },
+      {
+        "stage": 5,
+        "name": "State_Transitions_SAFE_INIT_To_SAFE_FAULT_TRIP",
+        "passed": true,
+        "timing_ms": 0.718,
+        "details": "State machine verified: INIT -> COMMISSIONING -> OPERATIONAL -> FAULT_TRIP, with %M548 and %M549 synchronizations."
+      },
+      {
+        "stage": 6,
+        "name": "Intrinsic_Safety_2WISE_Voltage_Monitoring_And_Droop_Trips",
+        "passed": true,
+        "timing_ms": 0.838,
+        "details": "2-WISE loop voltage surveillance: nominal 12.0V verified; droop <9600 mV triggered 0xEB01; overvoltage >15000 mV triggered 0xEB04."
+      },
+      {
+        "stage": 7,
+        "name": "Rolling_Sequence_Tracking_And_Gap_Detection",
+        "passed": true,
+        "timing_ms": 11.835,
+        "details": "Rolling sequence progression confirmed on TX (%R2353) and RX (%R2354); sequence gap triggered 0xEB05 SEQUENCE_GAP."
+      },
+      {
+        "stage": 8,
+        "name": "Latency_Watchdog_And_Jitter_Surveillance",
+        "passed": true,
+        "timing_ms": 1.369,
+        "details": "Latency monitoring verified at 1200 us; jitter > 2500 us and scan timeout triggered 0xEB03 TIMEOUT."
+      },
+      {
+        "stage": 9,
+        "name": "Register_Table_Sync_And_100_Cycle_Soak",
+        "passed": true,
+        "timing_ms": 666.365,
+        "details": "100 scan cycles executed with register sync (%R2350..%R2357, %M548..%M549), heap growth 0.95 KB (< 100 KB limit)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

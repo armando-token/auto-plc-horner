@@ -1,0 +1,181 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W247 CIP Safety ArmorBlock Guard I/O Concentrator Verification PASSED (9/9 stages).",
+  "work_package": "W247",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety ArmorBlock Guard I/O Concentrator",
+    "work_package": "W247",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x24": "Safety Discrete I/O Object",
+      "0x25": "Safety Discrete Output Point Object"
+    },
+    "register_map": {
+      "%R2080": "Guard IO Operational State",
+      "%R2081": "Safe Input State Bits",
+      "%R2082": "Safe Output State Bits",
+      "%R2083": "Discrepancy Fault Bits",
+      "%R2084": "Cross Fault / Test Pulse Fault Bits",
+      "%R2085": "Output Readback Fault Bits",
+      "%R2086": "Field Power Voltage (mV)",
+      "%R2087": "Diagnostic Status Code",
+      "%M485": "Guard IO Active Coil",
+      "%M486": "Safe State Tripped Coil"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.022,
+        "details": "Class IDs (0x39/0x3A/0x24), 8 input pairs, 4 output pairs, 500us test pulse, signed/unsigned diagnostic codes."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 2.211,
+        "details": "POU 'CipSafetyGuardIoSync' verified with STParser and bound to %R2080..%R2087 and %M485..%M486."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.029,
+        "details": "Rejected 6/6 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Guard_IO_Channel_Mapping_And_Discrepancy_Monitoring",
+        "check": "Guard_IO_Channel_Mapping_And_Discrepancy_Monitoring",
+        "passed": true,
+        "timing_ms": 0.202,
+        "details": "8 input pairs (0xFF mask), 4 output pairs (0x00 mask), EPI 10ms, watchdog 30ms verified."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "check": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "passed": true,
+        "timing_ms": 0.249,
+        "details": "CRC-S1 (0x5935) & CRC-S2 (0x755B) detected single-bit corruption and tripped 0xED01."
+      },
+      {
+        "stage": 6,
+        "name": "Discrepancy_Timer_Exceeded_And_Safe_State_Assertion",
+        "check": "Discrepancy_Timer_Exceeded_And_Safe_State_Assertion",
+        "passed": true,
+        "timing_ms": 0.27,
+        "details": "Input pair 2 discrepancy timer expired, asserted %R2083 bitmask, and zeroed outputs."
+      },
+      {
+        "stage": 7,
+        "name": "Pulse_Test_Short_Circuit_And_Field_Power_Fault_Injections",
+        "check": "Pulse_Test_Short_Circuit_And_Field_Power_Fault_Injections",
+        "passed": true,
+        "timing_ms": 0.76,
+        "details": "500us test pulse (0xED04), field power loss (0xED05), output readback mismatch (0xED06) verified with resets."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 0.378,
+        "details": "Bit-exact %R2080..%R2087 and %M485..%M486 synchronization verified under SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 232.497,
+        "details": "100 scan cycles executed without fault, heap growth 0.96 KB (< 100 KB)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "Protocol_Architecture_And_Constants_Initialization",
+        "check": "Protocol_Architecture_And_Constants_Initialization",
+        "passed": true,
+        "timing_ms": 0.022,
+        "details": "Class IDs (0x39/0x3A/0x24), 8 input pairs, 4 output pairs, 500us test pulse, signed/unsigned diagnostic codes."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure_IEC_61131_3_ST_POU_Validation",
+        "passed": true,
+        "timing_ms": 2.211,
+        "details": "POU 'CipSafetyGuardIoSync' verified with STParser and bound to %R2080..%R2087 and %M485..%M486."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "timing_ms": 0.029,
+        "details": "Rejected 6/6 ladder constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Guard_IO_Channel_Mapping_And_Discrepancy_Monitoring",
+        "check": "Guard_IO_Channel_Mapping_And_Discrepancy_Monitoring",
+        "passed": true,
+        "timing_ms": 0.202,
+        "details": "8 input pairs (0xFF mask), 4 output pairs (0x00 mask), EPI 10ms, watchdog 30ms verified."
+      },
+      {
+        "stage": 5,
+        "name": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "check": "Dual_CRC_S_Calculation_And_Parity_Integrity",
+        "passed": true,
+        "timing_ms": 0.249,
+        "details": "CRC-S1 (0x5935) & CRC-S2 (0x755B) detected single-bit corruption and tripped 0xED01."
+      },
+      {
+        "stage": 6,
+        "name": "Discrepancy_Timer_Exceeded_And_Safe_State_Assertion",
+        "check": "Discrepancy_Timer_Exceeded_And_Safe_State_Assertion",
+        "passed": true,
+        "timing_ms": 0.27,
+        "details": "Input pair 2 discrepancy timer expired, asserted %R2083 bitmask, and zeroed outputs."
+      },
+      {
+        "stage": 7,
+        "name": "Pulse_Test_Short_Circuit_And_Field_Power_Fault_Injections",
+        "check": "Pulse_Test_Short_Circuit_And_Field_Power_Fault_Injections",
+        "passed": true,
+        "timing_ms": 0.76,
+        "details": "500us test pulse (0xED04), field power loss (0xED05), output readback mismatch (0xED06) verified with resets."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "check": "Horner_OCS_Register_Table_Synchronization_And_Operator_Reset",
+        "passed": true,
+        "timing_ms": 0.378,
+        "details": "Bit-exact %R2080..%R2087 and %M485..%M486 synchronization verified under SYSTEM privilege."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "check": "Simulation_Soak_100_Cycles_And_Heap_Boundedness",
+        "passed": true,
+        "timing_ms": 232.497,
+        "details": "100 scan cycles executed without fault, heap growth 0.96 KB (< 100 KB)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

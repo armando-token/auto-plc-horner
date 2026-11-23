@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" version="1.1">
+  <defs>
+    <radialGradient id="hotspot-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#EF4444" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.0"/>
+    </radialGradient>
+    <style>
+      .isoline-path { stroke-linecap: round; stroke-linejoin: round; }
+      .reticle-pulse { animation: pulse 2.4s infinite ease-in-out; }
+      @keyframes pulse { 0% { r: 10px; opacity: 0.9; } 50% { r: 24px; opacity: 0.2; } 100% { r: 10px; opacity: 0.9; } }
+    </style>
+  </defs>
+
+  <!-- 1. Background Backdrop (#0D1117) -->
+  <rect x="0" y="0" width="1200" height="750" fill="#0D1117"/>
+
+  <!-- 2. Header Banner & SCADA Identity -->
+  <rect id="canvas-header" x="20" y="15" width="1160" height="55" rx="6" fill="#161B22" stroke="#21262D" stroke-width="1.2"/>
+  <text x="36" y="48" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="18" font-weight="700">CSCAPE HMI DYNAMIC CONTOUR PLOT &amp; 2D SCALAR FIELD SCADA CANVAS</text>
+  <rect x="880" y="27" width="120" height="30" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="1"/>
+  <text x="940" y="47" fill="#06B6D4" font-family="Segoe UI, monospace, sans-serif" font-size="12" font-weight="600" text-anchor="middle">W222 / GATE G9</text>
+  <rect x="1010" y="27" width="155" height="30" rx="4" fill="#0B0F19" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1087" y="47" fill="#10B981" font-family="Segoe UI, monospace, sans-serif" font-size="12" font-weight="700" text-anchor="middle">STATUS: 0x0000 OK</text>
+
+  <!-- 3. Main 2D Scalar Field Contour Canvas Container -->
+  <g id="contour-plot-container">
+    <rect x="50.0" y="85.0" width="770.0" height="565.0" rx="6" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+
+    <!-- Subtle Grid Overlay -->
+    <g id="plot-grid-overlay">
+      <line x1="50.00" y1="85.00" x2="50.00" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="50.00" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">0</text>
+      <line x1="149.35" y1="85.00" x2="149.35" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="149.35" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">4</text>
+      <line x1="248.71" y1="85.00" x2="248.71" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="248.71" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">8</text>
+      <line x1="348.06" y1="85.00" x2="348.06" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="348.06" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">12</text>
+      <line x1="447.42" y1="85.00" x2="447.42" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="447.42" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">16</text>
+      <line x1="546.77" y1="85.00" x2="546.77" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="546.77" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">20</text>
+      <line x1="646.13" y1="85.00" x2="646.13" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="646.13" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">24</text>
+      <line x1="745.48" y1="85.00" x2="745.48" y2="650.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="745.48" y="664.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">28</text>
+      <line x1="50.00" y1="85.00" x2="820.00" y2="85.00" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="40.00" y="89.00" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="end">0</text>
+      <line x1="50.00" y1="183.26" x2="820.00" y2="183.26" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="40.00" y="187.26" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="end">4</text>
+      <line x1="50.00" y1="281.52" x2="820.00" y2="281.52" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="40.00" y="285.52" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="end">8</text>
+      <line x1="50.00" y1="379.78" x2="820.00" y2="379.78" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="40.00" y="383.78" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="end">12</text>
+      <line x1="50.00" y1="478.04" x2="820.00" y2="478.04" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="40.00" y="482.04" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="end">16</text>
+      <line x1="50.00" y1="576.30" x2="820.00" y2="576.30" stroke="#1F2937" stroke-width="0.8" stroke-dasharray="2,3"/>
+      <text x="40.00" y="580.30" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="end">20</text>
+    </g>
+
+    <!-- 4. Marching Squares Multi-Level Continuous Isolines (<path d="M... L..."/>) -->
+    <g id="marching-squares-isolines">
+      <path class="isoline-path" id="isoline-level-0" d="M 528.54 625.43 L 546.77 624.23 L 571.61 620.94 L 596.45 615.65 L 621.29 607.77 L 637.28 600.87 L 646.13 597.50 L 670.97 585.25 L 684.93 576.30 L 695.81 569.30 L 717.63 551.74 L 720.65 549.03 L 742.15 527.17 L 745.48 522.94 L 761.05 502.61 L 770.32 485.49 L 774.62 478.04 L 784.84 453.48 L 790.78 428.91 L 793.41 404.35 L 793.12 379.78 L 789.88 355.22 L 783.18 330.65 L 771.93 306.09 L 770.32 303.43 L 757.78 281.52 L 745.48 266.02 L 738.01 256.96 L 720.65 239.80 L 712.06 232.39 L 695.81 219.62 L 676.88 207.83 L 670.97 204.12 L 646.13 191.19 L 624.66 183.26 L 621.29 181.83 L 596.45 173.41 L 571.61 167.76 L 546.77 164.25 L 521.94 162.50 L 497.10 162.35 L 472.26 163.77 L 447.42 166.90 L 422.58 172.08 L 397.74 179.88 L 389.48 183.26 L 372.90 189.12 L 348.06 201.14 L 337.14 207.83 L 323.23 216.22 L 302.18 232.39 L 298.39 235.58 L 276.33 256.96 L 273.55 260.24 L 256.39 281.52 L 248.71 294.62 L 241.68 306.09 L 231.03 330.65 L 224.68 355.22 L 223.87 361.46 L 220.86 379.78 L 220.50 404.35 L 223.82 428.91 L 223.87 429.11 L 229.46 453.48 L 239.13 478.04 L 248.71 494.40 L 253.26 502.61 L 272.07 527.17 L 273.55 528.79 L 296.50 551.74 L 298.39 553.39 L 323.23 572.56 L 329.22 576.30 L 348.06 588.07 L 372.90 599.46 L 376.77 600.87 L 397.74 609.59 L 422.58 616.89 L 447.42 621.74 L 472.26 624.68 L 486.28 625.43 L 497.10 626.25 L 521.94 626.04 L 528.54 625.43 Z" stroke="#1E3A8A" stroke-width="2.5" fill="none"/>
+      <path class="isoline-path" id="isoline-level-1" d="M 581.67 576.30 L 596.45 572.42 L 621.29 563.07 L 642.62 551.74 L 646.13 549.85 L 670.97 533.21 L 678.34 527.17 L 695.81 510.48 L 703.09 502.61 L 720.33 478.04 L 720.65 477.43 L 733.08 453.48 L 740.53 428.91 L 743.82 404.35 L 743.47 379.78 L 739.40 355.22 L 731.00 330.65 L 720.65 311.90 L 717.48 306.09 L 698.61 281.52 L 695.81 278.59 L 672.12 256.96 L 670.97 256.04 L 646.13 238.96 L 633.42 232.39 L 621.29 226.10 L 596.45 216.37 L 571.61 209.84 L 559.72 207.83 L 546.77 205.22 L 521.94 202.65 L 497.10 202.42 L 472.26 204.51 L 454.11 207.83 L 447.42 208.85 L 422.58 214.84 L 397.74 223.85 L 380.66 232.39 L 372.90 236.23 L 348.06 252.11 L 341.81 256.96 L 323.23 273.40 L 315.27 281.52 L 298.39 303.72 L 296.67 306.09 L 283.08 330.65 L 274.99 355.22 L 273.55 363.94 L 270.51 379.78 L 270.09 404.35 L 273.55 426.30 L 273.90 428.91 L 281.08 453.48 L 293.42 478.04 L 298.39 485.20 L 310.92 502.61 L 323.23 515.63 L 335.70 527.17 L 348.06 537.04 L 371.41 551.74 L 372.90 552.65 L 397.74 565.23 L 422.58 573.89 L 432.42 576.30 L 447.42 580.50 L 472.26 584.88 L 497.10 586.85 L 521.94 586.64 L 546.77 584.20 L 571.61 579.30 L 581.67 576.30 Z" stroke="#06B6D3" stroke-width="2.5" fill="none"/>
+      <path class="isoline-path" id="isoline-level-2" d="M 563.05 551.74 L 571.61 549.94 L 596.45 541.91 L 621.29 529.94 L 625.84 527.17 L 646.13 513.72 L 659.35 502.61 L 670.97 490.52 L 681.53 478.04 L 695.81 453.79 L 695.98 453.48 L 705.44 428.91 L 709.62 404.35 L 709.16 379.78 L 704.00 355.22 L 695.81 335.89 L 693.62 330.65 L 677.73 306.09 L 670.97 298.46 L 653.77 281.52 L 646.13 275.33 L 621.29 259.17 L 616.88 256.96 L 596.45 247.11 L 571.61 238.87 L 546.77 233.75 L 533.73 232.39 L 521.94 230.98 L 497.10 230.71 L 479.98 232.39 L 472.26 233.05 L 447.42 237.62 L 422.58 245.18 L 397.74 256.55 L 397.03 256.96 L 372.90 271.61 L 360.31 281.52 L 348.06 293.14 L 336.30 306.09 L 323.23 326.11 L 320.39 330.65 L 310.03 355.22 L 305.01 379.78 L 304.57 404.35 L 308.63 428.91 L 317.83 453.48 L 323.23 462.68 L 332.56 478.04 L 348.06 495.89 L 354.76 502.61 L 372.90 517.40 L 388.29 527.17 L 397.74 532.71 L 422.58 543.79 L 447.42 551.16 L 450.48 551.74 L 472.26 556.28 L 497.10 558.64 L 521.94 558.38 L 546.77 555.48 L 563.05 551.74 Z" stroke="#14B8A4" stroke-width="2.5" fill="none"/>
+      <path class="isoline-path" id="isoline-level-3" d="M 564.35 527.17 L 571.61 525.29 L 596.45 515.40 L 618.38 502.61 L 621.29 500.64 L 646.13 479.04 L 647.10 478.04 L 665.12 453.48 L 670.97 440.34 L 675.91 428.91 L 680.86 404.35 L 680.32 379.78 L 674.21 355.22 L 670.97 348.40 L 662.19 330.65 L 646.13 310.21 L 642.37 306.09 L 621.29 288.44 L 610.47 281.52 L 596.45 273.63 L 571.61 263.65 L 546.77 257.45 L 542.94 256.96 L 521.94 254.10 L 497.10 253.80 L 472.26 256.56 L 470.54 256.96 L 447.42 262.13 L 422.58 271.28 L 403.53 281.52 L 397.74 285.03 L 372.90 304.89 L 371.65 306.09 L 351.94 330.65 L 348.06 338.20 L 339.75 355.22 L 333.75 379.78 L 333.22 404.35 L 338.08 428.91 L 348.06 451.39 L 349.03 453.48 L 366.93 478.04 L 372.90 484.01 L 395.61 502.61 L 397.74 504.07 L 422.58 517.72 L 447.42 526.79 L 449.06 527.17 L 472.26 532.70 L 497.10 535.39 L 521.94 535.09 L 546.77 531.79 L 564.35 527.17 Z" stroke="#17BA7B" stroke-width="2.5" fill="none"/>
+      <path class="isoline-path" id="isoline-level-4" d="M 570.93 502.61 L 571.61 502.38 L 596.45 489.87 L 612.98 478.04 L 621.29 470.30 L 635.92 453.48 L 646.13 434.62 L 648.96 428.91 L 654.75 404.35 L 654.12 379.78 L 646.97 355.22 L 646.13 353.67 L 632.28 330.65 L 621.29 318.77 L 606.67 306.09 L 596.45 299.10 L 571.61 286.72 L 555.20 281.52 L 546.77 279.01 L 521.94 275.16 L 497.10 274.82 L 472.26 277.95 L 459.04 281.52 L 447.42 284.84 L 422.58 296.19 L 407.42 306.09 L 397.74 314.05 L 381.80 330.65 L 372.90 344.82 L 367.06 355.22 L 359.96 379.78 L 359.33 404.35 L 365.08 428.91 L 372.90 444.22 L 378.14 453.48 L 397.74 475.20 L 400.96 478.04 L 422.58 492.81 L 443.49 502.61 L 447.42 504.26 L 472.26 511.12 L 497.10 514.22 L 521.94 513.88 L 546.77 510.06 L 570.93 502.61 Z" stroke="#85CC16" stroke-width="2.5" fill="none"/>
+      <path class="isoline-path" id="isoline-level-5" d="M 573.72 478.04 L 596.45 462.29 L 605.83 453.48 L 621.29 430.91 L 622.46 428.91 L 629.37 404.35 L 628.61 379.78 L 621.29 358.53 L 620.00 355.22 L 601.16 330.65 L 596.45 326.49 L 571.61 310.04 L 562.42 306.09 L 546.77 300.43 L 521.94 295.84 L 497.10 295.43 L 472.26 299.16 L 451.17 306.09 L 447.42 307.54 L 422.58 322.63 L 413.06 330.65 L 397.74 349.73 L 394.09 355.22 L 385.50 379.78 L 384.74 404.35 L 391.70 428.91 L 397.74 438.89 L 408.28 453.48 L 422.58 466.30 L 440.76 478.04 L 447.42 481.48 L 472.26 489.81 L 497.10 493.58 L 521.94 493.16 L 546.77 488.53 L 571.61 479.20 L 573.72 478.04 Z" stroke="#EAB208" stroke-width="2.5" fill="none"/>
+      <path class="isoline-path" id="isoline-level-6" d="M 570.70 453.48 L 571.61 452.82 L 593.84 428.91 L 596.45 422.77 L 602.84 404.35 L 601.90 379.78 L 596.45 366.86 L 590.36 355.22 L 571.61 336.88 L 562.04 330.65 L 546.77 323.52 L 521.94 317.59 L 497.10 317.07 L 472.26 321.88 L 451.58 330.65 L 447.42 333.09 L 423.31 355.22 L 422.58 356.53 L 412.30 379.78 L 411.34 404.35 L 420.16 428.91 L 422.58 432.14 L 443.67 453.48 L 447.42 456.02 L 472.26 467.07 L 497.10 472.07 L 521.94 471.52 L 546.77 465.37 L 570.70 453.48 Z" stroke="#F59A0E" stroke-width="2.5" fill="none"/>
+      <path class="isoline-path" id="isoline-level-7" d="M 556.67 428.91 L 571.61 405.53 L 572.15 404.35 L 571.61 393.90 L 570.63 379.78 L 551.29 355.22 L 546.77 352.18 L 521.94 343.38 L 497.10 342.60 L 472.26 349.75 L 463.31 355.22 L 447.42 373.47 L 443.73 379.78 L 442.41 404.35 L 447.42 414.78 L 457.44 428.91 L 472.26 438.87 L 497.10 446.62 L 521.94 445.77 L 546.77 436.24 L 556.67 428.91 Z" stroke="#EF4444" stroke-width="2.5" fill="none"/>
+    </g>
+
+    <!-- 5. Decoupled Dark Backing Badges along Isolines (WCAG AAA > 18:1) -->
+    <g id="isoline-badges">
+      <g class="contour-badge" transform="translate(497.10, 150.35)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#1E3A8A" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">133.9°C</text>
+      </g>
+      <g class="contour-badge" transform="translate(497.10, 190.42)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#06B6D3" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">147.8°C</text>
+      </g>
+      <g class="contour-badge" transform="translate(497.10, 218.71)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#14B8A4" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">161.7°C</text>
+      </g>
+      <g class="contour-badge" transform="translate(497.10, 241.80)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#17BA7B" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">175.6°C</text>
+      </g>
+      <g class="contour-badge" transform="translate(497.10, 262.82)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#85CC16" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">189.4°C</text>
+      </g>
+      <g class="contour-badge" transform="translate(497.10, 283.43)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#EAB208" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">203.3°C</text>
+      </g>
+      <g class="contour-badge" transform="translate(497.10, 305.07)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#F59A0E" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">217.2°C</text>
+      </g>
+      <g class="contour-badge" transform="translate(497.10, 330.60)">
+        <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#0B0F19" stroke="#EF4444" stroke-width="1.2" opacity="0.95"/>
+        <text x="0" y="4" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">231.1°C</text>
+      </g>
+    </g>
+
+    <!-- 6. Hotspot Reticle Crosshairs & Thermal Peak Telemetry -->
+    <g id="hotspot-reticle" transform="translate(507.03, 394.52)">
+      <circle cx="0" cy="0" r="48" fill="url(#hotspot-glow)"/>
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#EF4444" stroke-width="1.8"/>
+      <circle cx="0" cy="0" r="4" fill="#EF4444"/>
+      <line x1="-36" y1="0" x2="-8" y2="0" stroke="#EF4444" stroke-width="1.6"/>
+      <line x1="8" y1="0" x2="36" y2="0" stroke="#EF4444" stroke-width="1.6"/>
+      <line x1="0" y1="-36" x2="0" y2="-8" stroke="#EF4444" stroke-width="1.6"/>
+      <line x1="0" y1="8" x2="0" y2="36" stroke="#EF4444" stroke-width="1.6"/>
+      <g transform="translate(18, -36)">
+        <rect x="0" y="0" width="180" height="26" rx="4" fill="#0B0F19" stroke="#EF4444" stroke-width="1.5" opacity="0.96"/>
+        <text x="12" y="17" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700">HOTSPOT: (18.4, 12.6) 245.0°C</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 7. Right-Hand HUD Telemetry Card & Horner Registers -->
+  <g id="telemetry-hud">
+    <rect x="850" y="85" width="320" height="385" rx="6" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+    <rect x="850" y="85" width="320" height="38" rx="6" fill="#0B0F19" stroke="#21262D" stroke-width="1"/>
+    <text x="866" y="110" fill="#06B6D4" font-family="Segoe UI, monospace, sans-serif" font-size="13" font-weight="700">PROCESS SCADA TELEMETRY (HORNER OCS)</text>
+
+    <g transform="translate(866, 138)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Grid Resolution</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%R1830..%R1831</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">32x24 Cells</text>
+    </g>
+    <g transform="translate(866, 178)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Active Isolines</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%R1832</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">8 Levels</text>
+    </g>
+    <g transform="translate(866, 218)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Max Field Temp</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%R1833</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#EF4444" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">245.0 °C</text>
+    </g>
+    <g transform="translate(866, 258)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Min Field Temp</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%R1834</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">120.0 °C</text>
+    </g>
+    <g transform="translate(866, 298)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Hotspot Position</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%R1835..%R1836</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#06B6D4" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">(18.4, 12.6)</text>
+    </g>
+    <g transform="translate(866, 338)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Diagnostic Code</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%R1837</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#10B981" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">0x0000</text>
+    </g>
+    <g transform="translate(866, 378)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Contour Active</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%M427</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#10B981" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">TRUE</text>
+    </g>
+    <g transform="translate(866, 418)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Segoe UI, sans-serif" font-size="11">Thermal Alarm</text>
+      <text x="0" y="28" fill="#94A3B8" font-family="monospace" font-size="9">%M428</text>
+      <rect x="145" y="0" width="145" height="32" rx="4" fill="#0B0F19" stroke="#21262D" stroke-width="0.8"/>
+      <text x="217" y="20" fill="#EF4444" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="700" text-anchor="middle">ACTIVE (> 235°C)</text>
+    </g>
+  </g>
+
+  <!-- 8. Bottom-Right Legend & Colormap Card -->
+  <g id="contour-legend">
+    <rect x="850" y="485" width="320" height="165" rx="6" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+    <rect x="850" y="485" width="320" height="34" rx="6" fill="#0B0F19" stroke="#21262D" stroke-width="1"/>
+    <text x="866" y="508" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="12" font-weight="700">ISOLINE GRADIENT &amp; COLORMAP LEGEND</text>
+
+    <g transform="translate(866, 532)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#1E3A8A" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">133.9°C</text>
+    </g>
+    <g transform="translate(866, 558)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#06B6D3" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">147.8°C</text>
+    </g>
+    <g transform="translate(866, 584)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#14B8A4" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">161.7°C</text>
+    </g>
+    <g transform="translate(866, 610)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#17BA7B" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">175.6°C</text>
+    </g>
+    <g transform="translate(1011, 532)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#85CC16" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">189.4°C</text>
+    </g>
+    <g transform="translate(1011, 558)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#EAB208" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">203.3°C</text>
+    </g>
+    <g transform="translate(1011, 584)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#F59A0E" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">217.2°C</text>
+    </g>
+    <g transform="translate(1011, 610)">
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#EF4444" stroke="#F8FAFC" stroke-width="0.5"/>
+      <text x="26" y="14" fill="#F8FAFC" font-family="Segoe UI, monospace, sans-serif" font-size="11" font-weight="600">231.1°C</text>
+    </g>
+  </g>
+
+  <!-- 9. Footer Telemetry & Diagnostic Status Bar -->
+  <rect x="20" y="665" width="1160" height="65" rx="6" fill="#161B22" stroke="#21262D" stroke-width="1.2"/>
+  <text x="36" y="694" fill="#94A3B8" font-family="Segoe UI, monospace, sans-serif" font-size="11">Marching Squares Linear Interpolation Engine active across 32x24 grid cells (768 vertices, 713 cells) | Standalone W3C SVG 1.1 Vector Grounding</text>
+  <text x="36" y="714" fill="#06B6D4" font-family="monospace" font-size="11">Horner OCS Memory: %R1830..%R1837 (Analog Registers), %M427..%M428 (Discrete Coils) | Pure IEC 61131-3 Structured Text Synchronized</text>
+</svg>

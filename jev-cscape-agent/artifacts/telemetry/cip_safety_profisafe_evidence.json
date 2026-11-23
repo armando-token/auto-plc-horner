@@ -1,0 +1,180 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "All 9 Industrial ODVA CIP Safety Over PROFINET / PROFIsafe Gateway Bridge stages passed deterministically (PASSED 9/9 stages).",
+  "stages_passed": 9,
+  "total_stages": 9,
+  "passed_stages": 9,
+  "data": {
+    "work_package": "W301",
+    "gate": "G8",
+    "protocol": "Industrial ODVA CIP Safety Over PROFINET / PROFIsafe Gateway Bridge (IEC 61784-3-2 / IEC 61784-3-3)",
+    "standards": [
+      "ODVA CIP Safety Volume 5",
+      "IEC 61784-3-2",
+      "PI PROFIsafe Profile",
+      "PI PROFIsafe Profile V1/V2",
+      "IEC 61784-3-3",
+      "PROFINET IO Safety Profile",
+      "IEC 61508 SIL 3"
+    ],
+    "registers": [
+      "%R2620..%R2627",
+      "%M611..%M612"
+    ],
+    "checks_passed": 9,
+    "total_checks": 9,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "protocol_constants_registers_and_diagnostics",
+        "check": "Registers (%R2620..%R2627), Coils (%M611..%M612), Diagnostic Codes (0x0000, 0xEE41..0xEE46) and Enums",
+        "passed": true,
+        "timing_ms": 0.014,
+        "details": "All protocol register addresses, discrete coils, 16-bit diagnostic codes, and state enums verified."
+      },
+      {
+        "stage": 2,
+        "name": "dual_safety_crc_calculations",
+        "check": "CIP Safety Dual CRC (0x5935, 0x755B) and PROFIsafe F-CRC (32-bit 0x1EDC6F41, 24-bit 0x5D45)",
+        "passed": true,
+        "timing_ms": 0.124,
+        "details": "CIP CRCs (S1=0x9381, S2=0x2494) and PROFIsafe F-CRCs (32=0x26AA6020, 24=0x4B5D86) passed bit-flip sensitivity."
+      },
+      {
+        "stage": 3,
+        "name": "gateway_state_machine",
+        "check": "Gateway State Transitions (INIT -> CONNECTING -> RUNNING -> SAFETY_TRIP) and Recovery",
+        "passed": true,
+        "timing_ms": 0.726,
+        "details": "Gateway state machine transitions, fail-safe latching, and fault recovery validated."
+      },
+      {
+        "stage": 4,
+        "name": "cip_safety_to_profisafe_translation",
+        "check": "Deterministic Ingress CIP Safety to Egress PROFIsafe Fail-Safe Protocol Translation",
+        "passed": true,
+        "timing_ms": 0.315,
+        "details": "CIP Safety payload converted to PROFIsafe; F-CRC verified; translation latency 350 us."
+      },
+      {
+        "stage": 5,
+        "name": "profisafe_to_cip_safety_translation",
+        "check": "Deterministic Ingress PROFIsafe to Egress CIP Safety Protocol Translation",
+        "passed": true,
+        "timing_ms": 0.346,
+        "details": "PROFIsafe payload converted to CIP Safety; Dual CRC-S1 & CRC-S2 verified; latency 350 us."
+      },
+      {
+        "stage": 6,
+        "name": "safety_crc_fault_interceptions",
+        "check": "Interception of Corrupted CIP Safety CRC (0xEE41) and PROFIsafe F-CRC (0xEE42)",
+        "passed": true,
+        "timing_ms": 0.543,
+        "details": "Mutated CIP CRC-S1 tripped 0xEE41; mutated PROFIsafe F-CRC tripped 0xEE42 into safe state."
+      },
+      {
+        "stage": 7,
+        "name": "latency_watchdog_and_f_status_trips",
+        "check": "Latency Overrun (0xEE43), Watchdog Timeout (0xEE44), F-Status Fault (0xEE45) & SNN Mismatch (0xEE46)",
+        "passed": true,
+        "timing_ms": 1.798,
+        "details": "All four safety integrity trip conditions (latency, watchdog, F-Status, SNN) tripped deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_synchronization",
+        "check": "Bit-Exact Horner OCS Register Space (%R2620..%R2627) and Coils (%M611..%M612)",
+        "passed": true,
+        "timing_ms": 0.615,
+        "details": "%R2620=0x0203, %R2623=350us, %R2624=0x0E03, %R2625=0x0000, %M611=True, %M612=False."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 2.083,
+        "details": "Pure ST POU CipSafetyProfisafeBridgeSync verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "protocol_constants_registers_and_diagnostics",
+        "check": "Registers (%R2620..%R2627), Coils (%M611..%M612), Diagnostic Codes (0x0000, 0xEE41..0xEE46) and Enums",
+        "passed": true,
+        "timing_ms": 0.014,
+        "details": "All protocol register addresses, discrete coils, 16-bit diagnostic codes, and state enums verified."
+      },
+      {
+        "stage": 2,
+        "name": "dual_safety_crc_calculations",
+        "check": "CIP Safety Dual CRC (0x5935, 0x755B) and PROFIsafe F-CRC (32-bit 0x1EDC6F41, 24-bit 0x5D45)",
+        "passed": true,
+        "timing_ms": 0.124,
+        "details": "CIP CRCs (S1=0x9381, S2=0x2494) and PROFIsafe F-CRCs (32=0x26AA6020, 24=0x4B5D86) passed bit-flip sensitivity."
+      },
+      {
+        "stage": 3,
+        "name": "gateway_state_machine",
+        "check": "Gateway State Transitions (INIT -> CONNECTING -> RUNNING -> SAFETY_TRIP) and Recovery",
+        "passed": true,
+        "timing_ms": 0.726,
+        "details": "Gateway state machine transitions, fail-safe latching, and fault recovery validated."
+      },
+      {
+        "stage": 4,
+        "name": "cip_safety_to_profisafe_translation",
+        "check": "Deterministic Ingress CIP Safety to Egress PROFIsafe Fail-Safe Protocol Translation",
+        "passed": true,
+        "timing_ms": 0.315,
+        "details": "CIP Safety payload converted to PROFIsafe; F-CRC verified; translation latency 350 us."
+      },
+      {
+        "stage": 5,
+        "name": "profisafe_to_cip_safety_translation",
+        "check": "Deterministic Ingress PROFIsafe to Egress CIP Safety Protocol Translation",
+        "passed": true,
+        "timing_ms": 0.346,
+        "details": "PROFIsafe payload converted to CIP Safety; Dual CRC-S1 & CRC-S2 verified; latency 350 us."
+      },
+      {
+        "stage": 6,
+        "name": "safety_crc_fault_interceptions",
+        "check": "Interception of Corrupted CIP Safety CRC (0xEE41) and PROFIsafe F-CRC (0xEE42)",
+        "passed": true,
+        "timing_ms": 0.543,
+        "details": "Mutated CIP CRC-S1 tripped 0xEE41; mutated PROFIsafe F-CRC tripped 0xEE42 into safe state."
+      },
+      {
+        "stage": 7,
+        "name": "latency_watchdog_and_f_status_trips",
+        "check": "Latency Overrun (0xEE43), Watchdog Timeout (0xEE44), F-Status Fault (0xEE45) & SNN Mismatch (0xEE46)",
+        "passed": true,
+        "timing_ms": 1.798,
+        "details": "All four safety integrity trip conditions (latency, watchdog, F-Status, SNN) tripped deterministically."
+      },
+      {
+        "stage": 8,
+        "name": "horner_ocs_register_synchronization",
+        "check": "Bit-Exact Horner OCS Register Space (%R2620..%R2627) and Coils (%M611..%M612)",
+        "passed": true,
+        "timing_ms": 0.615,
+        "details": "%R2620=0x0203, %R2623=350us, %R2624=0x0E03, %R2625=0x0000, %M611=True, %M612=False."
+      },
+      {
+        "stage": 9,
+        "name": "pure_st_pou_and_ladder_rejection",
+        "check": "Pure IEC 61131-3 Structured Text POU Validation and Anti-Ladder Construct Rejection",
+        "passed": true,
+        "timing_ms": 2.083,
+        "details": "Pure ST POU CipSafetyProfisafeBridgeSync verified; rejected 9/9 ladder constructs with ERR_LADDER_FORBIDDEN."
+      }
+    ],
+    "sha256_digests": {
+      "pou_sha256": "8626f83e1c65813a54ae8eb31929e638dc411a47a64e158e2f094c84612c5e7a",
+      "stages_sha256": "06f97ad25d3f89f1f0f2f59b02c5da8ea929461cdfc8d8482bb7100a7cf4df46"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "Wave W265 CIP Safety Over SPE IEEE 802.3cg 10BASE-T1L Protocol Engine Verification PASSED (9/9 stages).",
+  "work_package": "W265",
+  "total_stages": 9,
+  "stages_passed": 9,
+  "data": {
+    "protocol": "ODVA CIP Safety Over Single Pair Ethernet (SPE IEEE 802.3cg 10BASE-T1L) Protocol Engine",
+    "work_package": "W265",
+    "classes": {
+      "0x39": "Safety Supervisor Object",
+      "0x3A": "Safety Validator Object",
+      "0x3B": "Safety Connection Object",
+      "0x3D": "SPE 10BASE-T1L Safety Profile"
+    },
+    "snn": "0x1a2b",
+    "loop_resistance_mohm": 1850,
+    "snr_db": 24.5,
+    "epi_us": 2500,
+    "register_map": {
+      "%R2260": "REG_SPE_SAFETY_LINK_STATE (0..4)",
+      "%R2261": "REG_SPE_LOOP_RESISTANCE_MOHM (1850 mOhm)",
+      "%R2262": "REG_SPE_SNR_MARGIN_DB_X10 (245 = 24.5 dB)",
+      "%R2263": "REG_SPE_EPI_US (2500 us)",
+      "%R2264": "REG_SPE_LOST_PACKET_COUNT (nominal 0)",
+      "%R2265": "REG_SPE_TX_PACKET_COUNT (nominal 100)",
+      "%R2266": "REG_SPE_PHY_QUALITY_BITS (nominal 0x0003)",
+      "%R2267": "REG_SPE_SAFETY_DIAGNOSTIC_CODE (0x0000 OK, 0xEE51..0xEE54)",
+      "%M527": "COIL_SPE_SAFETY_LINK_HEALTHY",
+      "%M528": "COIL_SPE_SAFETY_STOP_TRIPPED"
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "name": "IEEE_802_3cg_10BASE_T1L_SPE_Safety_PHY_Profile_And_SNN",
+        "check": "IEEE 802.3cg 10BASE-T1L Single Pair Ethernet Safety PHY Profile & SNN",
+        "passed": true,
+        "timing_ms": 0.53,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x3D), SNN 0x20261007A001, Dual CRC-S1 (0x5935)/S2 (0x755B), and SPE framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 12.628,
+        "details": "POU 'CipSafetySpeSync' validated with STParser and SecurityGuard, binding %R2260..%R2267 and %M527..%M528."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.054,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_SPE_Safety_Telemetry",
+        "check": "Nominal SPE Safety Telemetry (Loop 1850 mOhm, SNR 24.5 dB, EPI 2500 us, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.724,
+        "details": "Loop 1850 mOhm, SNR 24.5 dB (245 in %R2262), EPI 2500 us, Diagnostic 0x0000, %M527=True, %M528=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "PHY_Training_Loss_Trip",
+        "check": "PHY Training Loss Trip (0xEE51, %M528)",
+        "passed": true,
+        "timing_ms": 0.611,
+        "details": "10BASE-T1L PHY training loss tripped 0xEE51, asserted %M528, de-asserted %M527, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "SNR_Margin_Degradation_Trip",
+        "check": "SNR Margin Degradation Trip (0xEE52, %M528)",
+        "passed": true,
+        "timing_ms": 0.598,
+        "details": "SNR margin degradation (8.5 dB < 12.0 dB) tripped 0xEE52, asserted %M528, %R2262=85, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "Safety_Dual_CRC_Corruption_Trip",
+        "check": "Safety Dual-CRC Corruption Trip (0xEE53, %M528)",
+        "passed": true,
+        "timing_ms": 0.575,
+        "details": "Dual-CRC corruption tripped 0xEE53, asserted %M528, de-asserted %M527, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2260..%R2267, %M527..%M528)",
+        "passed": true,
+        "timing_ms": 0.817,
+        "details": "Bit-exact %R2260..%R2267 and %M527..%M528 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 296.423,
+        "details": "100 scan cycles executed without fault or drift, heap growth 0.99 KB (< 100 KB)."
+      }
+    ],
+    "tests": [
+      {
+        "stage": 1,
+        "name": "IEEE_802_3cg_10BASE_T1L_SPE_Safety_PHY_Profile_And_SNN",
+        "check": "IEEE 802.3cg 10BASE-T1L Single Pair Ethernet Safety PHY Profile & SNN",
+        "passed": true,
+        "timing_ms": 0.53,
+        "details": "Class IDs (0x39/0x3A/0x3B/0x3D), SNN 0x20261007A001, Dual CRC-S1 (0x5935)/S2 (0x755B), and SPE framing verified."
+      },
+      {
+        "stage": 2,
+        "name": "Pure_IEC_61131_3_ST_POU_Validation",
+        "check": "Pure IEC 61131-3 ST POU Validation with STParser and SecurityGuard",
+        "passed": true,
+        "timing_ms": 12.628,
+        "details": "POU 'CipSafetySpeSync' validated with STParser and SecurityGuard, binding %R2260..%R2267 and %M527..%M528."
+      },
+      {
+        "stage": 3,
+        "name": "Anti_Ladder_Security_Guard_Interception",
+        "check": "Anti-Ladder Security Guard Interception",
+        "passed": true,
+        "timing_ms": 0.054,
+        "details": "Rejected 9/9 ladder logic constructs with LadderForbiddenError."
+      },
+      {
+        "stage": 4,
+        "name": "Nominal_SPE_Safety_Telemetry",
+        "check": "Nominal SPE Safety Telemetry (Loop 1850 mOhm, SNR 24.5 dB, EPI 2500 us, 0x0000)",
+        "passed": true,
+        "timing_ms": 0.724,
+        "details": "Loop 1850 mOhm, SNR 24.5 dB (245 in %R2262), EPI 2500 us, Diagnostic 0x0000, %M527=True, %M528=False confirmed."
+      },
+      {
+        "stage": 5,
+        "name": "PHY_Training_Loss_Trip",
+        "check": "PHY Training Loss Trip (0xEE51, %M528)",
+        "passed": true,
+        "timing_ms": 0.611,
+        "details": "10BASE-T1L PHY training loss tripped 0xEE51, asserted %M528, de-asserted %M527, recovery verified."
+      },
+      {
+        "stage": 6,
+        "name": "SNR_Margin_Degradation_Trip",
+        "check": "SNR Margin Degradation Trip (0xEE52, %M528)",
+        "passed": true,
+        "timing_ms": 0.598,
+        "details": "SNR margin degradation (8.5 dB < 12.0 dB) tripped 0xEE52, asserted %M528, %R2262=85, recovery verified."
+      },
+      {
+        "stage": 7,
+        "name": "Safety_Dual_CRC_Corruption_Trip",
+        "check": "Safety Dual-CRC Corruption Trip (0xEE53, %M528)",
+        "passed": true,
+        "timing_ms": 0.575,
+        "details": "Dual-CRC corruption tripped 0xEE53, asserted %M528, de-asserted %M527, recovery verified."
+      },
+      {
+        "stage": 8,
+        "name": "Horner_OCS_Register_Table_Synchronization",
+        "check": "Horner OCS Register Table Synchronization (%R2260..%R2267, %M527..%M528)",
+        "passed": true,
+        "timing_ms": 0.817,
+        "details": "Bit-exact %R2260..%R2267 and %M527..%M528 synchronization verified under SYSTEM privilege across trips and reset."
+      },
+      {
+        "stage": 9,
+        "name": "Simulation_Soak_100_Cycles_And_Zero_Drift",
+        "check": "Simulation Soak 100 Cycles & Zero Drift",
+        "passed": true,
+        "timing_ms": 296.423,
+        "details": "100 scan cycles executed without fault or drift, heap growth 0.99 KB (< 100 KB)."
+      }
+    ],
+    "checks_passed": 9,
+    "total_checks": 9
+  }
+}

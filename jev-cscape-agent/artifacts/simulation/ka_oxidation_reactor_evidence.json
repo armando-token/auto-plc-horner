@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "error_code": null,
+  "details": "KA Oxidation Reactor 9-stage verification passed 9/9 checks.",
+  "data": {
+    "work_package": "W212",
+    "module": "ka_oxidation_reactor",
+    "total_checks": 9,
+    "checks_passed": 9,
+    "tests": [
+      {
+        "stage": 1,
+        "check": "Pure_ST_POU_AST_Parsing_And_Horner_Symbol_Bindings",
+        "passed": true,
+        "details": "AST parsed=True, registers bound=True (11 registers verified)."
+      },
+      {
+        "stage": 2,
+        "check": "Anti_Ladder_Security_Guard_Interception",
+        "passed": true,
+        "details": "Blocked 5/5 forbidden ladder logic fragments with ERR_LADDER_FORBIDDEN."
+      },
+      {
+        "stage": 3,
+        "check": "KA_Oxidation_Autoxidation_Decomposition_Kinetics_And_Enthalpies",
+        "passed": true,
+        "details": "Reaction enthalpies verified: Delta H1=-135.0 kJ/mol, Delta H2=-180.0 kJ/mol, Delta H3=-145.0 kJ/mol, Delta H4=-320.0 kJ/mol. Over-oxidation acceleration ratio=2.985 > autoxidation=2.468."
+      },
+      {
+        "stage": 4,
+        "check": "Gas_Liquid_Mass_Transfer_And_Offgas_Oxygen_Safety_Envelope",
+        "passed": true,
+        "details": "Mass transfer verified: O2 absorbed=9.29 mol/s, nominal off-gas O2=1.85 vol% (< 3.5 vol%), alarm limit=2.8 vol%, trip limit=3.5 vol%."
+      },
+      {
+        "stage": 5,
+        "check": "Coupled_6_State_ODE_System_RK4_Integration_Stability",
+        "passed": true,
+        "details": "RK4 stability verified: C_chx=7691.8, C_O2=0.909, C_chhp=60.0, C_K=178.9, C_A=149.1, T=154.9\u00b0C."
+      },
+      {
+        "stage": 6,
+        "check": "Stoichiometric_Elemental_Mass_And_Enthalpy_Conservation_Residuals",
+        "passed": true,
+        "details": "Residuals verified: mass_residual=2.662e-14 kg/s (< 1e-10), elemental_residual=2.617e-14 kg/s (< 1e-10), enthalpy_residual=1.000e-12 kW (< 1e-10)."
+      },
+      {
+        "stage": 7,
+        "check": "Low_Conversion_Regime_And_High_KA_Selectivity_Dynamics",
+        "passed": true,
+        "details": "Regime verified: conversion=4.80% in [3.5%, 5.5%], KA selectivity=84.6% (>= 82.0%), ketone/alcohol ratio=1.20:1."
+      },
+      {
+        "stage": 8,
+        "check": "Process_Safety_Interlocks_And_Strict_Priority_Hierarchy",
+        "passed": true,
+        "details": "Safety diagnostics verified: 0xE401=True, 0xE402=True, 0xE403=True, 0xE404=True, Priority=True."
+      },
+      {
+        "stage": 9,
+        "check": "Horner_OCS_Memory_Space_Integration_And_Emergency_Mitigation",
+        "passed": true,
+        "details": "Registers verified: %R1730=1550, %R1731=105, %R1732=480, %R1733=845, %R1734=120, %R1735=185, %R1736=450, %R1737=0x0, %M403=True, %M404=False, %M405=False. Quench cooled=True."
+      }
+    ],
+    "timestamp_utc": "2026-10-06T06:25:17Z"
+  }
+}
